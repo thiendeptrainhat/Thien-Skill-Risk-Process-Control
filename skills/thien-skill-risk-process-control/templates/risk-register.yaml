@@ -1,0 +1,37 @@
+template: "risk-register"
+schema_version: "1.0.0"
+output_metadata:
+  analysis_layers: []
+  source_references: []
+  data_classification: null
+  assumptions: []
+  confidence: "Unresolved"
+  unresolved_items: []
+  review_status: "Not reviewed"
+
+risks:
+  - risk_id: null
+    process_id: null
+    step_id: null
+    objective_id: null
+    risk_statement: null
+    cause: null
+    event: null
+    impact: null
+    risk_category: null
+    affected_stakeholders: []
+    source: null
+    source_reference: null
+    evidence_ids: []
+    inherent_likelihood: null
+    inherent_impact: null
+    inherent_rating: null
+    rating_methodology: null
+    existing_control_ids: []
+    control_coverage: null
+    residual_exposure: null
+    assumptions: []
+    confidence: "Unresolved"
+    owner: null
+    analysis_layer: null
+    review_status: "Not reviewed"

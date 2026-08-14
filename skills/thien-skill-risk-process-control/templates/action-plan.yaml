@@ -1,0 +1,30 @@
+template: "action-plan"
+schema_version: "1.0.0"
+output_metadata:
+  analysis_layers: []
+  source_references: []
+  data_classification: null
+  assumptions: []
+  confidence: "Unresolved"
+  unresolved_items: []
+  review_status: "Not reviewed"
+
+actions:
+  - action_id: null
+    analysis_layer: null
+    gap_id: null
+    recommendation_id: null
+    action_description: null
+    owner: null
+    accountable_executive: null
+    target_date: null
+    priority: null
+    dependencies: []
+    resources: []
+    success_measure: null
+    evidence_required: []
+    residual_risk_until_complete: null
+    approval_gate: null
+    status: "Draft"
+    confidence: "Unresolved"
+    review_status: "Not reviewed"

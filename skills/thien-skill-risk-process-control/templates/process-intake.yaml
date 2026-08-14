@@ -1,0 +1,40 @@
+template: "process-intake"
+schema_version: "1.0.0"
+output_metadata:
+  analysis_layers: []
+  source_references: []
+  data_classification: null
+  assumptions: []
+  confidence: "Unresolved"
+  unresolved_items: []
+  review_status: "Not reviewed"
+
+record:
+  engagement_id: null
+  requested_mode: null
+  intended_audience: null
+  requested_language: null
+  business_objective: null
+  organization: null
+  entity: null
+  site: null
+  industry: null
+  jurisdiction: null
+  process_name: null
+  process_level: null
+  analysis_layers: []
+  start_boundary: null
+  end_boundary: null
+  in_scope: []
+  out_of_scope: []
+  stakeholders: []
+  systems: []
+  documents: []
+  data_sources: []
+  requested_deliverables: []
+  constraints: []
+  missing_information: []
+  assumptions: []
+  approval_gates: []
+  success_criteria: []
+  review_status: "Not reviewed"

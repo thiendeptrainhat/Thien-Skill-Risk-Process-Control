@@ -1,0 +1,55 @@
+template: "control-register"
+schema_version: "1.0.0"
+output_metadata:
+  analysis_layers: []
+  source_references: []
+  data_classification: null
+  assumptions: []
+  confidence: "Unresolved"
+  unresolved_items: []
+  review_status: "Not reviewed"
+
+control_objectives:
+  - control_objective_id: null
+    objective_statement: null
+    objective_id: null
+    risk_ids: []
+    source_reference: null
+    review_status: "Not reviewed"
+controls:
+  - control_id: null
+    control_name: null
+    control_objective_id: null
+    risk_ids: []
+    process_id: null
+    step_id: null
+    control_description: null
+    control_owner: null
+    performer: null
+    reviewer: null
+    approver: null
+    control_type: null
+    control_nature: null
+    control_scope: null
+    frequency: null
+    trigger: null
+    system: null
+    data_source: null
+    population: null
+    threshold: null
+    precision: null
+    evidence_ids: []
+    retention: null
+    exception_handling: null
+    escalation: null
+    automation_level: null
+    it_dependency: null
+    key_control_status: "To be validated"
+    key_control_rationale: null
+    control_source_id: null
+    design_assessment: "Not assessed"
+    limitations: []
+    analysis_layer: null
+    source_reference: null
+    confidence: "Unresolved"
+    review_status: "Not reviewed"

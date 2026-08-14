@@ -1,0 +1,48 @@
+template: "qa-checklist"
+schema_version: "1.0.0"
+output_metadata:
+  analysis_layers: []
+  source_references: []
+  data_classification: null
+  assumptions: []
+  confidence: "Unresolved"
+  unresolved_items: []
+  review_status: "Not reviewed"
+
+analysis_layers_in_scope: []
+checks:
+  package:
+    skill_frontmatter_valid: false
+    required_files_present: false
+    relative_links_valid: false
+    license_hashes_match: false
+    no_absolute_private_paths: false
+    no_secrets_detected: false
+  process:
+    objective_trigger_boundaries_present: false
+    owner_inputs_outputs_present: false
+    no_orphan_steps: false
+    decision_routes_complete: false
+    layers_not_mixed: false
+  risk_control:
+    risks_follow_cause_event_impact_objective: false
+    controls_are_testable: false
+    key_controls_have_rationale: false
+    no_operating_effectiveness_without_evidence: false
+    external_sources_have_applicability: false
+  rcm_sod_spof:
+    ids_and_relationships_valid: false
+    all_views_preserve_relationships: false
+    potential_and_actual_sod_separated: false
+    spof_assesses_backup_and_capacity: false
+  outputs:
+    source_references_present: false
+    assumptions_and_confidence_visible: false
+    human_approval_gates_visible: false
+    cross_document_tie_out_complete: false
+result:
+  status: "Not run"
+  failed_checks: []
+  limitations: []
+  reviewer: null
+  reviewed_at: null

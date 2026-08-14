@@ -1,0 +1,63 @@
+template: "process-architecture-and-step-register"
+schema_version: "1.0.0"
+output_metadata:
+  analysis_layers: []
+  source_references: []
+  data_classification: null
+  assumptions: []
+  confidence: "Unresolved"
+  unresolved_items: []
+  review_status: "Not reviewed"
+
+process_objects:
+  - process_id: null
+    parent_process_id: null
+    process_level: null
+    process_name: null
+    acronym: null
+    objective: null
+    trigger: null
+    start_boundary: null
+    end_boundary: null
+    customer: []
+    supplier: []
+    inputs: []
+    outputs: []
+    owner: null
+    participants: []
+    systems: []
+    data: []
+    frequency: null
+    volume: null
+    service_level: null
+    risk_ids: []
+    control_ids: []
+    metric_ids: []
+    dependency_ids: []
+    exceptions: []
+    analysis_layer: null
+    source_reference: null
+    confidence: "Unresolved"
+steps:
+  - step_id: null
+    process_id: null
+    sequence: null
+    step_name: null
+    activity_type: null
+    performer: null
+    reviewer: null
+    approver: null
+    system: null
+    input_ids: []
+    output_ids: []
+    decision_routes: []
+    handoff_to: null
+    exception_paths: []
+    sla: null
+    evidence_ids: []
+    risk_ids: []
+    control_ids: []
+    analysis_layer: null
+    confirmation_status: "Unresolved"
+    source_reference: null
+    confidence: "Unresolved"

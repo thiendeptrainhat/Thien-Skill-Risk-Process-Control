@@ -1,0 +1,6 @@
+interface:
+  display_name: "Thien-Skill-Risk-Process-Control"
+  short_description: "Kiến trúc quy trình, rủi ro và kiểm soát"
+  icon_small: "./assets/icon-128.png"
+  icon_large: "./assets/logo-1100.png"
+  default_prompt: "Use $thien-skill-risk-process-control to analyze this process, its risks, controls, gaps, and target state."

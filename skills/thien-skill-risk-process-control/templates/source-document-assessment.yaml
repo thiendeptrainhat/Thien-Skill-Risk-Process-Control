@@ -1,0 +1,61 @@
+template: "source-document-assessment"
+schema_version: "1.0.0"
+output_metadata:
+  analysis_layers: []
+  source_references: []
+  data_classification: null
+  assumptions: []
+  confidence: "Unresolved"
+  unresolved_items: []
+  review_status: "Not reviewed"
+
+source_register:
+  - source_id: null
+    title: null
+    source_type: null
+    document_id: null
+    version: null
+    owner: null
+    approver: null
+    approval_date: null
+    effective_date: null
+    review_date: null
+    superseded_version: null
+    scope: null
+    jurisdiction: null
+    authority_level: null
+    confidentiality: null
+    file_hash: null
+    source_reference: null
+    current_status: "To be validated"
+    confidence: "Unresolved"
+document_assessment:
+  - assessment_id: null
+    source_id: null
+    analysis_layer: "As-Documented"
+    purpose_objective: null
+    scope_quality: null
+    governance_quality: null
+    roles_quality: null
+    process_flow_quality: null
+    control_quality: null
+    evidence_retention_quality: null
+    exceptions_escalation_quality: null
+    systems_data_quality: null
+    monitoring_training_change_quality: null
+    cross_references: []
+    missing_sections: []
+    issues: []
+    review_status: "Not reviewed"
+conflicts:
+  - conflict_id: null
+    source_a: null
+    locator_a: null
+    source_b: null
+    locator_b: null
+    conflict_type: null
+    description: null
+    material_impact: null
+    authority_analysis: null
+    resolution: "Unresolved"
+    owner: null

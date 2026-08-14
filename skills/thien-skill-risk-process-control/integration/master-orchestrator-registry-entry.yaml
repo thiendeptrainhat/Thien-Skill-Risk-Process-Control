@@ -1,0 +1,165 @@
+skill_id: thien-skill-risk-process-control
+skill_name: thien-skill-risk-process-control
+display_name: Thien-Skill-Risk-Process-Control
+version: "1.0.0"
+status: provisional
+owner: Tran Ngoc Thien
+domain: governance-risk-and-control
+subdomains:
+  - business-process-management
+  - process-risk
+  - internal-control
+  - process-governance
+  - process-improvement
+purpose: >-
+  Phân tích, khám phá, trực quan hóa, đánh giá rủi ro và controls, thiết kế
+  Target-State, RCM, RACI, SoD, SPOF, metrics và audit handoff cho quy trình
+  end-to-end mà không thay thế authority phê duyệt, Internal Audit, Legal hoặc
+  specialist kỹ thuật.
+capabilities:
+  - Phân biệt As-Documented, As-Designed, As-Performed và Target-State
+  - Phân tích Policy, Standard, SOP, Procedure, Work Instruction và evidence
+  - Khám phá và lập bản đồ current-state process từ tài liệu, interview, walkthrough và data
+  - Nhận diện process risk, control objective, control, key control, gap và duplication
+  - Xây dựng process architecture L0-L5, SIPOC, workflow, swimlane, Mermaid và BPMN conceptual model
+  - Xây dựng RCM, RACI, SoD, SPOF, KPI, KRI, KCI và process governance
+  - Thiết kế và so sánh các phương án Target-State và process improvement
+  - Diễn giải process-mining deviation và chuẩn bị audit handoff
+trigger_conditions:
+  - Người dùng yêu cầu phân tích hoặc đối chiếu Policy, SOP, Procedure hay process document
+  - Người dùng yêu cầu discovery, process map, swimlane, BPMN hoặc end-to-end design
+  - Người dùng yêu cầu process risk, control objective, control gap, RCM, SoD hoặc SPOF
+  - Người dùng yêu cầu Target-State, process improvement, control rationalization hoặc governance
+  - Người dùng yêu cầu KPI, KRI, KCI, process-mining interpretation hoặc audit test attributes
+non_trigger_conditions:
+  - Chỉ cần phân tích dữ liệu chung mà không có câu hỏi process, risk hoặc control
+  - Chỉ cần legal interpretation, audit opinion, investigation conclusion hoặc technical configuration chuyên sâu
+  - Yêu cầu thực hiện production change, cấp quyền, phát hành tài liệu hoặc phê duyệt thay con người
+  - Runtime skill chưa được xác minh, không tương thích hoặc bị vô hiệu hóa
+supported_engagement_types:
+  - Process Analysis
+  - Process Discovery
+  - Risk and Control Assessment
+  - Target-State Process Design
+  - Process Improvement
+  - RCM and Control Library
+  - SoD and SPOF Assessment
+  - Process Governance
+  - Audit Support
+supported_jurisdictions: []
+requires_current_source_verification: true
+required_inputs:
+  - objective_or_question
+  - scope
+  - applicable_date_or_period
+  - data_classification
+optional_inputs:
+  - requested_analysis_layers
+  - process_or_document_ids
+  - policies_sops_procedures_and_forms
+  - interviews_walkthroughs_and_evidence
+  - system_and_data_context
+  - event_logs_or_transaction_population
+  - risk_appetite_and_control_framework
+  - jurisdiction_and_mandatory_requirements
+  - requested_deliverable_and_format
+  - target_timeline_and_constraints
+output_contract:
+  handoff_policy: optional
+  hard_dependency: false
+  accepts_partial_inputs: true
+  preserve_identifiers_and_provenance: true
+  required_fields:
+    - task_id
+    - scope_and_boundaries
+    - analysis_layers
+    - method
+    - results
+    - source_references
+    - assumptions
+    - confidence
+    - limitations
+    - unresolved_questions
+    - approval_status
+    - quality_status
+  conditional_fields:
+    process_analysis:
+      - objective
+      - trigger
+      - outcome
+      - process_steps
+      - roles
+      - systems_and_data
+      - handoffs_decisions_and_exceptions
+    risk_and_control:
+      - risk_ids
+      - control_objectives
+      - control_ids
+      - gaps_and_rationalization
+    target_state:
+      - options
+      - tradeoffs
+      - recommendation
+      - residual_risk
+      - dependencies
+      - human_approval_gate
+    audit_handoff:
+      - population_definition
+      - testable_attributes
+      - potential_test_procedures
+      - evidence_request
+      - data_reliability_status
+  prohibited_claims:
+    - operating_effectiveness_without_sufficient_test_evidence
+    - legal_or_regulatory_compliance_without_authoritative_current_verification
+    - specialist_execution_without_runtime_evidence
+    - human_approval_or_production_change
+dependencies: []
+conflicting_roles:
+  - maker-and-independent-reviewer
+  - process-designer-and-final-approver
+  - prior-adviser-and-independent-assurer
+  - control-performer-and-control-reviewer-when-independence-is-required
+tools_required: []
+connectors_required: []
+data_sensitivity_supported:
+  - Public
+  - Internal
+  - Confidential
+  - Restricted
+  - Investigation-Restricted
+  - Legal-Sensitive
+  - Personal-Data
+  - Sensitive-Personal-Data
+  - Security-Sensitive
+human_approval_requirements:
+  - Phê duyệt Target-State, Policy, SOP, RCM và thay đổi process chính thức
+  - Thay đổi authority, SoD, role access hoặc production configuration
+  - Bỏ key control, giảm control frequency hoặc chấp nhận control gap và residual risk
+  - Sử dụng draft OE assessment hoặc compliance/legal mapping cho quyết định chính thức; formal conclusion thuộc assurance, Legal hoặc Compliance owner có thẩm quyền
+  - Gửi tài liệu hoặc dữ liệu nhạy cảm ra ngoài organization
+quality_checks:
+  - Xác minh runtime record trước khi route và không suy ra availability từ tên skill
+  - Giữ riêng bốn analysis layers và không suy luận As-Performed chỉ từ tài liệu
+  - Bảo toàn process, risk, control, source và handoff identifiers
+  - Kiểm tra provenance, applicable date, confidence, assumptions và data classification
+  - Đối chiếu Policy, SOP, workflow, RACI, approval matrix, RCM, metrics và audit handoff
+  - Không đánh giá operating effectiveness khi thiếu population, method, evidence hoặc data reliability work
+failure_modes:
+  - skill-not-installed-or-not-runtime-verified
+  - objective-or-scope-unclear
+  - source-version-or-authority-unresolved
+  - insufficient-evidence-for-as-performed
+  - insufficient-data-for-operating-effectiveness
+  - conflicting-documents-or-approval-authority
+  - prohibited-production-or-external-action
+  - specialist-capability-unavailable
+fallback_skill: null
+last_reviewed: "2026-08-13"
+metadata_state: provisional
+runtime_verification:
+  verified: false
+  evidence: >-
+    Registry entry được đóng gói cùng skill như một optional handoff artifact;
+    Master Orchestrator phải xác minh SKILL.md, version, status và runtime path trước khi route.
+  checked_at: null

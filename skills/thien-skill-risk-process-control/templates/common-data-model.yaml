@@ -1,0 +1,143 @@
+schema_name: "thien-process-risk-control-common-data-model"
+schema_version: "1.0.0"
+language_policy: "Follow the user's language; preserve precise English terms."
+analysis_layers:
+  - "As-Documented"
+  - "As-Designed"
+  - "As-Performed"
+  - "Target-State"
+confidence_basis:
+  - "Documented"
+  - "Interview-confirmed"
+  - "Evidence-confirmed"
+  - "Data-confirmed"
+  - "Inferred"
+  - "Unresolved"
+null_semantics:
+  null: "No structured value is available."
+  not_provided: "The source did not provide the value."
+  not_applicable: "The field does not apply; provide a reason when not obvious."
+  to_be_validated: "An assertion exists but lacks sufficient verification."
+  unresolved: "Conflicting or insufficient evidence prevents resolution."
+id_prefixes:
+  business_objective: "OBJ"
+  end_to_end_process: "E2E"
+  process: "PROC"
+  process_step: "STEP"
+  requirement: "REQ"
+  risk: "RSK"
+  control_objective: "COBJ"
+  control: "CTL"
+  evidence: "EVD"
+  test_attribute: "TST"
+  gap: "GAP"
+  recommendation: "REC"
+  action: "ACT"
+  sod_conflict: "SOD"
+  dependency: "DEP"
+  metric: "MET"
+object_types:
+  - "EnterpriseValueChain"
+  - "EndToEndProcess"
+  - "Process"
+  - "Subprocess"
+  - "Activity"
+  - "Task"
+  - "BusinessObjective"
+  - "ProcessObjective"
+  - "Trigger"
+  - "Input"
+  - "Output"
+  - "Stakeholder"
+  - "Customer"
+  - "Supplier"
+  - "Role"
+  - "Responsibility"
+  - "System"
+  - "Application"
+  - "DataObject"
+  - "Document"
+  - "Policy"
+  - "Standard"
+  - "SOP"
+  - "Procedure"
+  - "WorkInstruction"
+  - "Form"
+  - "Evidence"
+  - "Risk"
+  - "ControlObjective"
+  - "Control"
+  - "ControlSource"
+  - "Requirement"
+  - "KPI"
+  - "KRI"
+  - "KCI"
+  - "Decision"
+  - "Approval"
+  - "Exception"
+  - "Escalation"
+  - "Dependency"
+  - "SPOF"
+  - "SoDConflict"
+  - "RCMRelationship"
+  - "ProcessDeviation"
+  - "Gap"
+  - "Recommendation"
+  - "Action"
+  - "Workflow"
+  - "Diagram"
+  - "TestAttribute"
+base_fields:
+  object_id: null
+  object_type: null
+  title: null
+  description: null
+  analysis_layer: null
+  source: null
+  source_reference: null
+  version: null
+  status: "Draft"
+  created_at: null
+  updated_at: null
+  created_by: null
+  reviewed_by: null
+  approved_by: null
+  data_classification: null
+  confidence: "Unresolved"
+  confidence_basis: []
+  assumptions: []
+  unresolved_items: []
+  related_objects: []
+  supporting_evidence: []
+  review_status: "Not reviewed"
+relationship_fields:
+  relationship_id: null
+  from_id: null
+  relationship_type: null
+  to_id: null
+  source_reference: null
+  confidence: "Unresolved"
+  review_status: "Not reviewed"
+required_traceability_chains:
+  objective_to_action:
+    - "BusinessObjective"
+    - "EndToEndProcess"
+    - "Process"
+    - "Subprocess"
+    - "Activity"
+    - "Task"
+    - "Risk"
+    - "ControlObjective"
+    - "Control"
+    - "Evidence"
+    - "TestAttribute"
+    - "Gap"
+    - "Recommendation"
+    - "Action"
+  requirement_to_evidence:
+    - "Requirement"
+    - "Process"
+    - "Risk"
+    - "ControlObjective"
+    - "Control"
+    - "Evidence"

@@ -1,0 +1,34 @@
+schema_version: "1.0"
+release:
+  display_name: "Thien-Skill-Risk-Process-Control"
+  skill_id: "thien-skill-risk-process-control"
+  skill_version: "1.0.0"
+  application_date: "2026-08-13"
+  source_repository:
+    visibility: "private"
+    url: "https://github.com/thiendeptrainhat/Thien-Skill-Risk-Process-Control"
+  license:
+    id: "LicenseRef-Tran-Ngoc-Thien-Skills-2.0"
+    controlling_file: "LICENSE"
+    application_file: "LICENSE-APPLICATION.md"
+    vietnamese_version_prevails: true
+  canonical_source: "skills/thien-skill-risk-process-control"
+  packages:
+    - target: "claude"
+      filename: "Thien-Skill-Risk-Process-Control-v1.0.0-Claude.zip"
+      archive_root: "thien-skill-risk-process-control/"
+      sha256: "9188ed0bc825b23326c00820e183ecbe3c150b8b1dc9f1c5fa9e65aeed38459f"
+    - target: "chatgpt"
+      filename: "Thien-Skill-Risk-Process-Control-v1.0.0-ChatGPT.zip"
+      archive_root: "thien-skill-risk-process-control/"
+      sha256: "c6f7210b627a7950992d1ed0914f51932b5ab5503ebf7a24f9e16765de08efbc"
+    - target: "universal-agents"
+      filename: "Thien-Skill-Risk-Process-Control-v1.0.0-Universal.zip"
+      archive_root: ".agents/skills/thien-skill-risk-process-control/"
+      sha256: "1fc4ef70dacf63d4ee3c3904ed0996e08aecc998e954f9debc94bcb3b1c3d672"
+  verification:
+    structural: "pass"
+    deterministic_case_registry: "pass-104-of-104"
+    behavioral_codex: "executed-28-evidence-incomplete-not-accepted"
+    behavioral_claude: "not-run"
+    archive_integrity: "pass-3-of-3"

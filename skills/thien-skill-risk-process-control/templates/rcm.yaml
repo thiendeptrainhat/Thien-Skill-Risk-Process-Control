@@ -1,0 +1,43 @@
+template: "risk-and-control-matrix"
+schema_version: "1.0.0"
+output_metadata:
+  analysis_layers: []
+  source_references: []
+  data_classification: null
+  assumptions: []
+  confidence: "Unresolved"
+  unresolved_items: []
+  review_status: "Not reviewed"
+
+relationships:
+  - rcm_id: null
+    analysis_layer: null
+    process_id: null
+    process_name: null
+    subprocess_id: null
+    step_id: null
+    objective_id: null
+    business_objective: null
+    process_objective: null
+    risk_id: null
+    control_objective_id: null
+    control_id: null
+    requirement_ids: []
+    evidence_ids: []
+    metric_ids: []
+    gap_ids: []
+    test_attribute_ids: []
+    source_reference: null
+    assumptions: []
+    confidence: "Unresolved"
+    review_status: "Not reviewed"
+view_configuration:
+  available_views:
+    - "risk-centric"
+    - "control-centric"
+    - "process-step"
+    - "requirement-centric"
+    - "audit-test"
+    - "management-action"
+  selected_view: null
+  preserve_all_relationships: true

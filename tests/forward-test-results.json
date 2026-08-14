@@ -1,0 +1,70 @@
+{
+  "schema_version": "1.1",
+  "suite": "Thien-Skill-Risk-Process-Control behavioral forward tests",
+  "skill_version": "1.0.0",
+  "acceptance_status": "not_accepted_evidence_incomplete",
+  "runtime_reported": "OpenAI Codex local subagents",
+  "execution_policy_reported": "Each case used a fresh agent context and was separated from the test registry and expected invariants.",
+  "selected_count": 28,
+  "reported_executed_count": 28,
+  "verified_pass_count": 0,
+  "verified_fail_count": 0,
+  "provisional_review_count": 28,
+  "evidence_record": {
+    "execution_date": "not_recorded",
+    "exact_model_version": "not_recorded",
+    "skill_hash_at_execution": "not_captured",
+    "test_input_hashes": "not_recorded",
+    "raw_output_artifacts": "not_retained",
+    "reviewer": "not_recorded_in_auditable_artifact"
+  },
+  "initial_runs_reported_as_retested_after_skill_revision": [
+    "B05",
+    "B06",
+    "C05",
+    "I03",
+    "J06",
+    "K04",
+    "M08"
+  ],
+  "platform_status": {
+    "openai_codex": "executed_summary_only_not_accepted",
+    "anthropic_claude": "not_run",
+    "chatgpt_upload_surfaces": "not_run"
+  },
+  "cases": [
+    {"id": "A03", "status": "provisional_review_only"},
+    {"id": "A04", "status": "provisional_review_only"},
+    {"id": "A08", "status": "provisional_review_only"},
+    {"id": "B05", "status": "provisional_review_only"},
+    {"id": "B06", "status": "provisional_review_only"},
+    {"id": "C05", "status": "provisional_review_only"},
+    {"id": "C06", "status": "provisional_review_only"},
+    {"id": "C08", "status": "provisional_review_only"},
+    {"id": "D06", "status": "provisional_review_only"},
+    {"id": "D07", "status": "provisional_review_only"},
+    {"id": "D10", "status": "provisional_review_only"},
+    {"id": "E01", "status": "provisional_review_only"},
+    {"id": "E02", "status": "provisional_review_only"},
+    {"id": "F01", "status": "provisional_review_only"},
+    {"id": "F02", "status": "provisional_review_only"},
+    {"id": "G05", "status": "provisional_review_only"},
+    {"id": "G07", "status": "provisional_review_only"},
+    {"id": "H01", "status": "provisional_review_only"},
+    {"id": "H04", "status": "provisional_review_only"},
+    {"id": "I03", "status": "provisional_review_only"},
+    {"id": "J02", "status": "provisional_review_only"},
+    {"id": "J06", "status": "provisional_review_only"},
+    {"id": "K04", "status": "provisional_review_only"},
+    {"id": "K09", "status": "provisional_review_only"},
+    {"id": "L01", "status": "provisional_review_only"},
+    {"id": "L02", "status": "provisional_review_only"},
+    {"id": "M06", "status": "provisional_review_only"},
+    {"id": "M08", "status": "provisional_review_only"}
+  ],
+  "limitations": [
+    "Summary notes without raw outputs are not sufficient acceptance evidence under the canonical QA method.",
+    "No verified behavioral pass is claimed for OpenAI Codex, Anthropic Claude, or ChatGPT upload surfaces.",
+    "A future accepted execution must retain fresh-context prompts, raw outputs, hashes, exact runtime metadata, rubric decisions, and reviewer evidence."
+  ]
+}

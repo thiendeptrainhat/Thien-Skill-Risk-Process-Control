@@ -1,0 +1,54 @@
+template: "target-state-options"
+schema_version: "1.0.0"
+output_metadata:
+  analysis_layers:
+    - "Target-State"
+  source_references: []
+  data_classification: null
+  assumptions: []
+  confidence: "Unresolved"
+  unresolved_items: []
+  review_status: "Not reviewed"
+design_context:
+  analysis_layer: "Target-State"
+  objective_ids: []
+  requirement_ids: []
+  risk_appetite_reference: null
+  volume_complexity: null
+  service_levels: []
+  constraints: []
+  dependencies: []
+option_requirement:
+  material_tradeoff_exists: "To be validated"
+  minimum_option_count: null
+  rationale: null
+candidate_option_profiles:
+  - "Minimum compliant"
+  - "Balanced control and efficiency"
+  - "Leading practice or automation-first"
+options:
+  - option_id: null
+    analysis_layer: "Target-State"
+    option_type: null
+    applicability: "To be validated"
+    description: null
+    benefits: []
+    risks: []
+    cost: null
+    complexity: null
+    technology: []
+    people_impacts: []
+    implementation_time: null
+    residual_exposure: null
+    dependencies: []
+    source_references: []
+    assumptions: []
+    confidence: "Unresolved"
+    review_status: "Not reviewed"
+recommendation:
+  analysis_layer: "Target-State"
+  preferred_option: null
+  rationale: null
+  conditions: []
+  human_approval_required: true
+  review_status: "Not reviewed"
