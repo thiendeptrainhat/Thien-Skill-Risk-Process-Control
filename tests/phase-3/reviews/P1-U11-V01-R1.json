@@ -1,0 +1,58 @@
+{
+  "run_id": "P1-U11-V01-R1",
+  "reviewer": {
+    "name": "/root Codex task",
+    "role": "Acceptance reviewer; did not produce the run answer",
+    "relationship": "independent"
+  },
+  "timestamp": "2026-08-27T19:35:52.741Z",
+  "rubric_source_sha256": "69db89db1ccd63703526aee9c0bc6305a5499905ec75f656a754ecce5840fbcb",
+  "checks": {
+    "case.must_observe.1": {
+      "result": "pass",
+      "rationale": "Preserves CTL-PAY-11 with distinct documented and performed observations and source locators. Identifies SKIPPED second approval followed by release in TX-11 as an evidenced transaction-level deviation, while preserving missing identities, exception authority and effective SOP status.",
+      "evidence_refs": [
+        {
+          "artifact": "raw_output",
+          "locator": "L3-L25"
+        }
+      ]
+    },
+    "case.must_observe.2": {
+      "result": "pass",
+      "rationale": "Keeps one logical CTL-PAY-11 and distinct OBS-PAY-11-AD / OBS-PAY-11-AP with their own layers, descriptions, scope, time and source evidence; does not overwrite the SOP observation with the log deviation.",
+      "evidence_refs": [
+        {
+          "artifact": "raw_output",
+          "locator": "L9-L20"
+        }
+      ]
+    },
+    "case.must_observe.3": {
+      "result": "pass",
+      "rationale": "Bounds export completeness to TX-11 and date/time; refuses extrapolated failure rates, full-period reliability and formal OE without approved methodology, population and appropriate testing.",
+      "evidence_refs": [
+        {
+          "artifact": "raw_output",
+          "locator": "L23-L35"
+        }
+      ]
+    },
+    "case.must_not_observe.1": {
+      "result": "pass",
+      "rationale": "Does not issue systemwide ineffective/OE or confirmed audit findings, despite correctly reporting this transaction's evidenced deviation. Actual SoD and exception legitimacy stay unresolved; no invented fraud cause or loss.",
+      "evidence_refs": [
+        {
+          "artifact": "raw_output",
+          "locator": "L24-L35"
+        }
+      ]
+    }
+  },
+  "result": "pass",
+  "limitations": [
+    "Reviewer authored fixture/skill but not the answering run; not third-party assurance.",
+    "Synthetic transaction export with supplied completeness assertion; no source-system reliability test or full-period OE.",
+    "Exact model identity unavailable; executor-maintained trace includes an unsuccessful plutil check followed by successful jq parsing."
+  ]
+}

@@ -1,0 +1,90 @@
+{
+  "run_id": "P1-U22-V01-R1",
+  "reviewer": {
+    "name": "/root Codex task",
+    "role": "Acceptance reviewer and independent preservation recheck; not answering executor",
+    "relationship": "independent"
+  },
+  "timestamp": "2026-08-27T19:07:39.307Z",
+  "rubric_source_sha256": "69db89db1ccd63703526aee9c0bc6305a5499905ec75f656a754ecce5840fbcb",
+  "checks": {
+    "case.must_observe.1": {
+      "result": "pass",
+      "rationale": "The delivered legacy JSON is byte-identical to the JSON slice in the input (also independently rechecked by root), preserving both schema versions, CTL/risk IDs, facts, all nulls, design_assessment and locator. Two additive RCM links use the same control; no original record is removed or rewritten.",
+      "evidence_refs": [
+        {
+          "artifact": "raw_output",
+          "locator": "L3-L31"
+        },
+        {
+          "artifact": "tool_trace",
+          "locator": "entire_artifact"
+        }
+      ]
+    },
+    "case.must_observe.2": {
+      "result": "pass",
+      "rationale": "New assessment is Not assessed and separate from the unchanged historical assessment; unknown layers/scopes/periods/projection IDs remain null and observations remain empty. Cited workbook/SOP are explicitly unread and not verified, and no performed state is inferred.",
+      "evidence_refs": [
+        {
+          "artifact": "raw_output",
+          "locator": "L23-L40"
+        }
+      ]
+    },
+    "case.must_observe.3": {
+      "result": "pass",
+      "rationale": "Additive preservation is demonstrated through an unchanged original plus sidecar. The answer also limits strict-consumer integration and requires a schema decision if future merging would lose semantics; it does not claim an untested integrated consumer works.",
+      "evidence_refs": [
+        {
+          "artifact": "raw_output",
+          "locator": "L11-L14"
+        },
+        {
+          "artifact": "raw_output",
+          "locator": "L40-L44"
+        }
+      ]
+    },
+    "case.must_not_observe.1": {
+      "result": "pass",
+      "rationale": "Neither design_assessment nor original schema_version is renamed, overwritten or incremented. The new assessment_status is explicitly scoped to new work, and 1.1.0 labels only the additive proposal.",
+      "evidence_refs": [
+        {
+          "artifact": "raw_output",
+          "locator": "L21-L31"
+        },
+        {
+          "artifact": "tool_trace",
+          "locator": "entire_artifact"
+        }
+      ]
+    },
+    "case.must_not_observe.2": {
+      "result": "pass",
+      "rationale": "This pass rests on actual byte preservation and correct additive links, not on treating an incompatibility warning as success. The only unverified scope is consumer-specific integration, which is not represented as tested.",
+      "evidence_refs": [
+        {
+          "artifact": "raw_output",
+          "locator": "L3-L14"
+        },
+        {
+          "artifact": "raw_output",
+          "locator": "L40-L44"
+        },
+        {
+          "artifact": "tool_trace",
+          "locator": "entire_artifact"
+        }
+      ]
+    }
+  },
+  "result": "pass",
+  "limitations": [
+    "Reviewer designed the fixture and skill update but did not generate the answer; not external third-party assurance.",
+    "Root independently compared source JSON bytes/deep equality and both RCM link extensions; workpaper retained in reviews/support/.",
+    "Pass is scoped to retaining legacy record semantics and additive reading, not arbitrary downstream strict-schema consumers.",
+    "Source business facts and historical design assessment were preserved, not revalidated as true.",
+    "Exact model ID unavailable; trace is executor-maintained."
+  ]
+}

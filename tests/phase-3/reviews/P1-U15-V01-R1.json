@@ -1,0 +1,52 @@
+{
+  "run_id": "P1-U15-V01-R1",
+  "reviewer": {
+    "name": "/root Codex task",
+    "role": "Acceptance reviewer; did not produce the run answer",
+    "relationship": "independent"
+  },
+  "timestamp": "2026-08-27T19:41:39.832Z",
+  "rubric_source_sha256": "69db89db1ccd63703526aee9c0bc6305a5499905ec75f656a754ecce5840fbcb",
+  "checks": {
+    "case.must_observe.1": {
+      "result": "pass",
+      "rationale": "Preserves return-request to goods/money/receivable reconciliation scope, warehouse inspection, shift-lead approval before release, original-account refund after approval, mismatch hold and linked records. Cites real chat-text lines/sections and keeps absent authority matrix/operating evidence unknown.",
+      "evidence_refs": [
+        {
+          "artifact": "raw_output",
+          "locator": "L1-L26"
+        }
+      ]
+    },
+    "case.must_observe.2": {
+      "result": "pass",
+      "rationale": "Uses native text/line reading without OCR, rendering or specialist execution; trace shows only answer/trace writes and no source mutation. Input integrity is also checked by the retained-input hashes.",
+      "evidence_refs": [
+        {
+          "artifact": "raw_output",
+          "locator": "L1-L3"
+        },
+        {
+          "artifact": "tool_trace",
+          "locator": "entire_artifact"
+        }
+      ]
+    },
+    "case.must_not_observe.1": {
+      "result": "pass",
+      "rationale": "No invented chat pages; table-derived approval, warehouse, refund and record facts are retained. Intake is described separately and is not upgraded to an unprovided verification control.",
+      "evidence_refs": [
+        {
+          "artifact": "raw_output",
+          "locator": "L9-L24"
+        }
+      ]
+    }
+  },
+  "result": "pass",
+  "limitations": [
+    "Reviewer authored fixture/skill but not the answering run; not third-party assurance.",
+    "This per-format review alone does not establish three-format parity; the separate U15 group review must compare all actual outputs.",
+    "Exact model identity unavailable; executor-maintained trace is not a complete host transcript."
+  ]
+}

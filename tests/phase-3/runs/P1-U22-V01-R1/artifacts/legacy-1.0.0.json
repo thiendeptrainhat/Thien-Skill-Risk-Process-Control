@@ -1,0 +1,27 @@
+{
+  "control_register": {
+    "template": "control-register",
+    "schema_version": "1.0.0",
+    "controls": [{
+      "control_id": "CTL-L001",
+      "control_description": "Preparer matches PO, receipt and invoice before payment.",
+      "risk_ids": ["RSK-L001", "RSK-L002"],
+      "control_objective_id": "COBJ-L001",
+      "analysis_layer": null,
+      "control_owner": null,
+      "design_assessment": "Adequate design per 2025 review; operating effectiveness not assessed.",
+      "source_reference": "Legacy.xlsx:Controls!D7 / SOP-5 section 4.2",
+      "evidence": null,
+      "confidence": "Unresolved",
+      "review_status": "Not reviewed"
+    }]
+  },
+  "rcm": {
+    "template": "rcm",
+    "schema_version": "1.0.0",
+    "rows": [
+      {"risk_id":"RSK-L001","control_id":"CTL-L001","control_description":"Preparer matches PO, receipt and invoice before payment.","design_assessment":"Adequate design per 2025 review; operating effectiveness not assessed.","source_reference":"Legacy.xlsx:Controls!D7 / SOP-5 section 4.2","residual_risk":null},
+      {"risk_id":"RSK-L002","control_id":"CTL-L001","control_description":"Preparer matches PO, receipt and invoice before payment.","design_assessment":"Adequate design per 2025 review; operating effectiveness not assessed.","source_reference":"Legacy.xlsx:Controls!D7 / SOP-5 section 4.2","residual_risk":null}
+    ]
+  }
+}

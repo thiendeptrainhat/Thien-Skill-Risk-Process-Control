@@ -1,0 +1,1 @@
+Phân tích nhóm quy trình dưới đây theo E2E, các điểm giao nhau và kiểm soát dùng chung. Giữ mã định danh để tôi dùng lại ở nhiều view.

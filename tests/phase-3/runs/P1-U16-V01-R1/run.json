@@ -1,0 +1,132 @@
+{
+  "run_id": "P1-U16-V01-R1",
+  "case_id": "P1-U16",
+  "variant_id": "P1-U16-V01",
+  "requirement_ids": [
+    "R04",
+    "X03",
+    "X04",
+    "X05"
+  ],
+  "timestamp": "2026-08-28T02:46:19+07:00",
+  "verification_mode": "model",
+  "execution_status": "executed",
+  "runtime": {
+    "platform": "Codex",
+    "surface": "Codex desktop delegated local runtime",
+    "runtime": "collaboration.spawn_agent",
+    "model": null,
+    "model_identifier_status": "not_available",
+    "fresh_context": true,
+    "capabilities": {
+      "local_file_read": "available",
+      "external_lookup": "prohibited_by_run_policy",
+      "specialist": "authorized_local_document_evidence"
+    },
+    "capability_simulation": false
+  },
+  "authorized_source_scope": "Frozen skill; this fixture; harness; necessary local readers. Public official web only for U06; local Document-Evidence only for U16-V01.",
+  "inputs": [
+    {
+      "fixture_id": "P1-U16-V01:input.pdf",
+      "version": "1",
+      "artifact": {
+        "path": "tests/phase-3/fixtures/P1-U16-V01/input.pdf",
+        "sha256": "9182b8b70c2027a5c81675365c6afd7383e2fbb9fa1cd7498aaf9b02f264714a"
+      }
+    },
+    {
+      "fixture_id": "P1-U16-V01:request.txt",
+      "version": "1",
+      "artifact": {
+        "path": "tests/phase-3/fixtures/P1-U16-V01/request.txt",
+        "sha256": "fdeaf1e1c4372ca64a6cec47af6bcd04fc4c700f9245c5750170e87b7e329399"
+      }
+    },
+    {
+      "fixture_id": "execution-harness",
+      "version": "1",
+      "artifact": {
+        "path": "tests/phase-3/harness.md",
+        "sha256": "a61568a41745238662652693a54ec4d0abfc2af59db082067a8fd8326255fb6e"
+      }
+    }
+  ],
+  "skill_snapshot": {
+    "path": "tests/phase-3/snapshots/round-2/manifest.json",
+    "sha256": "a15ee9c18e5f76ec9711098fe9cf6c6dce6dddf870d7bc528df9a39c23017113"
+  },
+  "raw_prompt": {
+    "path": "tests/phase-3/runs/P1-U16-V01-R1/prompt.txt",
+    "sha256": "46022a4a73ac5573c0205ff63d762035b1b2ddf7d2f886bf684f6743770a2220"
+  },
+  "raw_output": {
+    "path": "tests/phase-3/runs/P1-U16-V01-R1/artifacts/output.md",
+    "sha256": "2ae5d61d8e433bfdb17dfc2b17d0cf5313f1c4254effd15e44c7b91d18e0b783"
+  },
+  "tool_trace": {
+    "path": "tests/phase-3/runs/P1-U16-V01-R1/artifacts/tool-trace.json",
+    "sha256": "8208c22aa74541b043def809ca644563327c9c195873be6ad497d72b16859390"
+  },
+  "execution_record": {
+    "path": "tests/phase-3/runs/P1-U16-V01-R1/execution-record.json",
+    "sha256": "27a1bef8348bf03fc93f2a436e1dfc870f758ab9a81b9eb90fe7f12e2ce0a604"
+  },
+  "review": null,
+  "retest_of": [],
+  "additional_artifacts": [
+    {
+      "path": "tests/phase-3/runs/P1-U16-V01-R1/artifacts/document-evidence/extraction.md",
+      "sha256": "23be1e15d982542983ebdd98ba37804f086002a35048668810d5c9b14fe58135"
+    },
+    {
+      "path": "tests/phase-3/runs/P1-U16-V01-R1/artifacts/document-evidence/human-review.json",
+      "sha256": "fa3b26746ff78a3a4e0ba2256845ffa891ef8390bb5eb79ee182ac18b7833c19"
+    },
+    {
+      "path": "tests/phase-3/runs/P1-U16-V01-R1/artifacts/document-evidence/inspect_pdf.py",
+      "sha256": "4dc58c979ae06adfe57e6464e1c5eef78e09344ff9180ac5e5fa0c24cec353ce"
+    },
+    {
+      "path": "tests/phase-3/runs/P1-U16-V01-R1/artifacts/document-evidence/native-inspection.json",
+      "sha256": "fd56d55bb3335989e0a3a851ccc3d8a8d528291535ced5e38b6ddd300ff0998d"
+    },
+    {
+      "path": "tests/phase-3/runs/P1-U16-V01-R1/artifacts/document-evidence/page-1-180dpi.png",
+      "sha256": "9db8473ada668e58e6ff1908bb99a09bb291b04b43e1017d6e515bdbeeca6ec3"
+    },
+    {
+      "path": "tests/phase-3/runs/P1-U16-V01-R1/artifacts/document-evidence/raw-inventory.json",
+      "sha256": "008b1a94c9396025747316f0748ac09c05389aa18c23cdf9c3c703ff9efa6c63"
+    },
+    {
+      "path": "tests/phase-3/runs/P1-U16-V01-R1/artifacts/document-evidence/tool-trace.json",
+      "sha256": "490514bc66827229c130fb32ff6bdd4cb70e0c253af8d704ba09f280be0dcd84"
+    },
+    {
+      "path": "tests/phase-3/runs/P1-U16-V01-R1/artifacts/document-evidence/working.pdf",
+      "sha256": "9182b8b70c2027a5c81675365c6afd7383e2fbb9fa1cd7498aaf9b02f264714a"
+    },
+    {
+      "path": "tests/phase-3/runs/P1-U16-V01-R1/artifacts/output.md",
+      "sha256": "2ae5d61d8e433bfdb17dfc2b17d0cf5313f1c4254effd15e44c7b91d18e0b783"
+    },
+    {
+      "path": "tests/phase-3/runs/P1-U16-V01-R1/artifacts/specialist-dispatch-tool-call.json",
+      "sha256": "c07039b77c01f03987815ed064c907134b584893d3688dc723a4d0d4d7953aa4"
+    },
+    {
+      "path": "tests/phase-3/runs/P1-U16-V01-R1/artifacts/specialist-dispatch.json",
+      "sha256": "6d31ca922e4b698e1642fd8a981fa31c3ce5ffc9e9c7aa112e4cf85aadb7a465"
+    },
+    {
+      "path": "tests/phase-3/runs/P1-U16-V01-R1/artifacts/tool-trace.json",
+      "sha256": "8208c22aa74541b043def809ca644563327c9c195873be6ad497d72b16859390"
+    }
+  ],
+  "limitations": [
+    "Synthetic business inputs, not real-organization assurance.",
+    "Executor-maintained trace, not a complete exported host transcript.",
+    "Exact model identifier is not exposed by this delegation interface."
+  ]
+}

@@ -1,0 +1,34 @@
+template: "kpi-kri-kci-register"
+schema_version: "1.0.0"
+output_metadata:
+  analysis_layers: []
+  source_references: []
+  data_classification: null
+  assumptions: []
+  confidence: "Unresolved"
+  unresolved_items: []
+  review_status: "Not reviewed"
+
+metrics:
+  - metric_id: null
+    analysis_layer: null
+    metric_type: null
+    metric_name: null
+    objective_id: null
+    risk_ids: []
+    control_ids: []
+    formula: null
+    unit: null
+    data_source: null
+    owner: null
+    frequency: null
+    target: null
+    threshold: null
+    leading_or_lagging: null
+    limitations: []
+    data_quality_checks: []
+    action: null
+    escalation: null
+    source_reference: null
+    confidence: "Unresolved"
+    review_status: "Not reviewed"

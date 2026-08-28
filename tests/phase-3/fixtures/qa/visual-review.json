@@ -1,0 +1,29 @@
+{
+  "report_kind": "fixture_visual_review_not_behavioral_acceptance",
+  "reviewer": "root Codex task",
+  "relationship": "fixture author self-check",
+  "reviewed_on": "2026-08-28",
+  "status": "pass",
+  "method": "Render DOCX with bundled render_docx.py (LibreOffice); render PDFs with pdftoppm; inspect every 1-page PNG using view_image at original resolution.",
+  "artifacts": [
+    {
+      "path": "tests/phase-3/fixtures/qa/docx-page-1.png",
+      "sha256": "165186effe1c4b977ed1696df09885c19d1ef42159d1b60bf5948226c33fc847",
+      "observed": "One page; all paragraphs and the 4-stage table legible; no clipping. Removed default title border in generator then rerendered and reviewed."
+    },
+    {
+      "path": "tests/phase-3/fixtures/qa/pdf-native-page-1.png",
+      "sha256": "489c050f9919d40a54bfd11c1a9f77118446c110c4efc67a2156d50b43a3d789",
+      "observed": "One page; title, table and exceptions/coverage paragraphs legible; no clipping."
+    },
+    {
+      "path": "tests/phase-3/fixtures/qa/pdf-scan-page-1.png",
+      "sha256": "f6ddbd62e9f17015ddecbb01e31dc75f1835469aceba39667ec5b4a8a4da67c4",
+      "observed": "One image-only page; business text/table legible except deliberately obscured approval-role cell. Obscured cell is a synthetic shape, not a recoverable real value."
+    }
+  ],
+  "limitations": [
+    "Visual QA is fixture-author self-check, not independent model-output parity review.",
+    "The scan fixture tests uncertainty handling, not an OCR accuracy benchmark."
+  ]
+}

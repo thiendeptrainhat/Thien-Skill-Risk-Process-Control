@@ -1,0 +1,1 @@
+Perform actual read-only checks of 1.1.0 filenames, checksums, declarations, local documentation links, canonical package metadata, preserved license terms/logo and original 1.0.0 archives/tests. Review bundled provenance and the bounded sensitive-pattern scan separately. Do not install skills or claim this scan proves absence of all sensitive content.

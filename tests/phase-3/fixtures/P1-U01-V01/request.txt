@@ -1,0 +1,1 @@
+Hãy đọc SOP dưới đây, xác định E2E phù hợp và phân tích các rủi ro, kiểm soát hiện tại, kiểm soát nên có và khoảng trống cần làm rõ.

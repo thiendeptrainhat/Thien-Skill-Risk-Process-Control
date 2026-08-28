@@ -1,0 +1,53 @@
+{
+  "run_id": "P1-U12-V01-R1",
+  "reviewer": {
+    "name": "/root Codex task",
+    "role": "Acceptance reviewer; did not produce the run answer",
+    "relationship": "independent"
+  },
+  "timestamp": "2026-08-27T19:37:33.594Z",
+  "rubric_source_sha256": "69db89db1ccd63703526aee9c0bc6305a5499905ec75f656a754ecce5840fbcb",
+  "checks": {
+    "case.must_observe.1": {
+      "result": "pass",
+      "rationale": "Compares payment-obligation objective, duplicate-key coverage/precision, pre-release timing, configuration independence, data/configuration dependencies and exception-review evidence, rather than matching control names.",
+      "evidence_refs": [
+        {
+          "artifact": "raw_output",
+          "locator": "L3-L27"
+        }
+      ]
+    },
+    "case.must_observe.2": {
+      "result": "pass",
+      "rationale": "Treats automated blocking plus exception review as an alternative with conditional coverage: exact-key observations do not establish same-obligation variants or period-wide effectiveness. Requests variant, configuration-change and queue-resolution evidence before concluding equivalence or design gaps.",
+      "evidence_refs": [
+        {
+          "artifact": "raw_output",
+          "locator": "L22-L38"
+        }
+      ]
+    },
+    "case.must_not_observe.1": {
+      "result": "pass",
+      "rationale": "Does not label manual-versus-automated difference a deficiency, mandate duplicate manual review, discard exception review or presume automation superior. Improvement options disclose false-positive/capacity trade-offs and remain draft.",
+      "evidence_refs": [
+        {
+          "artifact": "raw_output",
+          "locator": "L3-L3"
+        },
+        {
+          "artifact": "raw_output",
+          "locator": "L27-L38"
+        }
+      ]
+    }
+  },
+  "result": "pass",
+  "limitations": [
+    "Reviewer authored fixture/skill but not the answering run; not third-party assurance.",
+    "Synthetic configuration/log excerpts, not independently inspected systems or full-period testing.",
+    "Executor disclosed a preparatory filename-only listing of neighboring fixtures before reading the harness; no rubric, other fixture content or history content was reported read. Retained as a protocol limitation, not concealed.",
+    "Exact model identity unavailable; executor-maintained trace is not a complete host transcript."
+  ]
+}

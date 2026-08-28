@@ -1,0 +1,1 @@
+Tư vấn cách định hình end-to-end process cho quy trình này và các rủi ro chính. Tôi chưa chọn thư viện tham chiếu ngành.

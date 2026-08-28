@@ -1,0 +1,60 @@
+{
+  "reviewer": {
+    "name": "/root Codex task",
+    "role": "Acceptance reviewer; did not produce the run answer",
+    "relationship": "independent"
+  },
+  "timestamp": "2026-08-27T20:04:39.074Z",
+  "rubric_source_sha256": "69db89db1ccd63703526aee9c0bc6305a5499905ec75f656a754ecce5840fbcb",
+  "result": "pass",
+  "run_id": "P1-U17-V01-R1",
+  "checks": {
+    "case.must_observe.1": {
+      "result": "pass",
+      "rationale": "Continues native-text analysis through request, diagnosis, quotation acceptance, repair, result check, handover/payment with section locators and clear full-excerpt-only coverage. Missing specialist does not halt the supported work; missing SOP metadata/operating evidence remain unknown.",
+      "evidence_refs": [
+        {
+          "artifact": "raw_output",
+          "locator": "L3-L26"
+        },
+        {
+          "artifact": "raw_output",
+          "locator": "L45-L49"
+        }
+      ]
+    },
+    "case.must_not_observe.1": {
+      "result": "pass",
+      "rationale": "No specialist installation, handoff, OCR or invented recovery is performed or claimed; documented controls, analyst inferences and Target-State proposals remain separate.",
+      "evidence_refs": [
+        {
+          "artifact": "raw_output",
+          "locator": "L39-L49"
+        },
+        {
+          "artifact": "tool_trace",
+          "locator": "entire_artifact"
+        }
+      ]
+    },
+    "variant.must_observe.1": {
+      "result": "pass",
+      "rationale": "Uses the authorized native reader despite the simulated unavailable Document-Evidence profile; the useful process/control analysis is not contingent on specialist presence.",
+      "evidence_refs": [
+        {
+          "artifact": "raw_output",
+          "locator": "L7-L35"
+        },
+        {
+          "artifact": "raw_output",
+          "locator": "L47-L49"
+        }
+      ]
+    }
+  },
+  "limitations": [
+    "Reviewer authored fixture/skill but not the answering run; not third-party assurance.",
+    "Specialist unavailability is a simulated run policy, not a measurement of installed platform capability.",
+    "Exact model identity unavailable; executor-maintained trace retains its syntax-error recovery."
+  ]
+}

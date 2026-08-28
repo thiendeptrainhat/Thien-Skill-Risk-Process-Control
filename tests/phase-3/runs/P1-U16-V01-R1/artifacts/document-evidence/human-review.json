@@ -1,0 +1,90 @@
+{
+  "schema_id": "local.document-evidence-review-queue",
+  "schema_version": "1.0.0",
+  "run_id": "P1-U16-V01-R1-DE",
+  "readiness": "READY_FOR_HUMAN_REVIEW",
+  "human_approval_status": "PENDING",
+  "data_classification": "CONFIDENTIAL_PENDING_OWNER_CLASSIFICATION",
+  "items": [
+    {
+      "document_id": "doc-9182b8b70c2027a5c8167536-0001",
+      "evidence_id": "EV-P1-U16-V01-R1-001",
+      "raw_value": null,
+      "candidate_values": [],
+      "source_page": 1,
+      "risk_level": "UNRATED",
+      "reviewer": null,
+      "review_decision": null,
+      "reviewed_value": null,
+      "review_note": null,
+      "reviewed_at": null,
+      "second_review_required": false,
+      "approval_status": "PENDING",
+      "review_item_id": "DE-HR-01",
+      "object_reference": "DE-F10; DE-T01 row 2, Người thực hiện",
+      "issue_type": "OBSCURED_CRITICAL_ROLE",
+      "source_region": {
+        "description": "Gray striped middle cell of second data row, Duyệt hoàn tiền",
+        "bounding_box": null,
+        "image_reference": "page-1-180dpi.png"
+      },
+      "reason_for_review": "Vai trò duyệt hoàn tiền bị che; không có candidate có thể đọc được.",
+      "decision_impact": "Không chốt vai trò duyệt hoặc SoD từ giá trị chưa đọc được.",
+      "critical_for_intended_use": true,
+      "affected_field_status": "OBSCURED",
+      "expected_action": "Yêu cầu bản rõ/được phép đọc hoặc xác nhận có nguồn từ owner; giữ giá trị gốc và lịch sử sửa."
+    },
+    {
+      "document_id": "doc-9182b8b70c2027a5c8167536-0001",
+      "evidence_id": "EV-P1-U16-V01-R1-001",
+      "raw_value": null,
+      "candidate_values": [],
+      "source_page": 1,
+      "risk_level": "UNRATED",
+      "reviewer": null,
+      "review_decision": null,
+      "reviewed_value": null,
+      "review_note": null,
+      "reviewed_at": null,
+      "second_review_required": false,
+      "approval_status": "PENDING",
+      "review_item_id": "DE-HR-02",
+      "object_reference": "DE-F14..DE-F20; document completeness/version",
+      "issue_type": "NOT_PRESENT_OR_UNKNOWN_CONTEXT",
+      "source_region": {
+        "description": "Entire supplied page",
+        "bounding_box": null,
+        "image_reference": "page-1-180dpi.png"
+      },
+      "reason_for_review": "Chưa rõ phiên bản/phạm vi tài liệu; trên trang không nêu business date, entity, vai trò nhận yêu cầu/hoàn tiền, ngưỡng duyệt hoặc thời hạn lưu.",
+      "decision_impact": "Không dùng metadata hay mã SOP để suy ngày hiệu lực, phiên bản hoặc trách nhiệm.",
+      "expected_action": "Owner xác nhận bản đủ/đúng phạm vi và bổ sung nguồn cần thiết trước triển khai."
+    },
+    {
+      "document_id": "doc-9182b8b70c2027a5c8167536-0001",
+      "evidence_id": "EV-P1-U16-V01-R1-001",
+      "raw_value": null,
+      "candidate_values": [],
+      "source_page": 1,
+      "risk_level": "UNRATED",
+      "reviewer": null,
+      "review_decision": null,
+      "reviewed_value": null,
+      "review_note": null,
+      "reviewed_at": null,
+      "second_review_required": false,
+      "approval_status": "PENDING",
+      "review_item_id": "DE-HR-03",
+      "object_reference": "DE-F00..DE-F21; DE-T01",
+      "issue_type": "HUMAN_SOURCE_REVIEW_PENDING",
+      "source_region": {
+        "description": "Entire supplied page",
+        "bounding_box": null,
+        "image_reference": "page-1-180dpi.png"
+      },
+      "reason_for_review": "Agent đã xem ảnh; chưa có human reviewer, quyết định hoặc phê duyệt được cung cấp.",
+      "decision_impact": "Bản trích đọc chưa được chấp thuận để phát hành hoặc dùng như giá trị đã được người có thẩm quyền xác minh.",
+      "expected_action": "Đối chiếu toàn trang, xác nhận/correct các trường, lưu reviewer và thời điểm thực tế."
+    }
+  ]
+}

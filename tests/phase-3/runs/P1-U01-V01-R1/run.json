@@ -1,0 +1,93 @@
+{
+  "run_id": "P1-U01-V01-R1",
+  "case_id": "P1-U01",
+  "variant_id": "P1-U01-V01",
+  "requirement_ids": [
+    "R01",
+    "R02",
+    "R03",
+    "R04",
+    "R05"
+  ],
+  "timestamp": "2026-08-28T01:41:12+07:00",
+  "verification_mode": "model",
+  "execution_status": "executed",
+  "runtime": {
+    "platform": "Codex",
+    "surface": "Codex desktop delegated local runtime",
+    "runtime": "collaboration.spawn_agent",
+    "model": null,
+    "model_identifier_status": "not_available",
+    "fresh_context": true,
+    "capabilities": {
+      "local_file_read": "available",
+      "external_lookup": "prohibited_by_run_policy",
+      "specialist": "not_invoked"
+    },
+    "capability_simulation": false
+  },
+  "authorized_source_scope": "Frozen skill; this fixture; harness; necessary local readers. Public official web only for U06; local Document-Evidence only for U16-V01.",
+  "inputs": [
+    {
+      "fixture_id": "P1-U01-V01:input.md",
+      "version": "1",
+      "artifact": {
+        "path": "tests/phase-3/fixtures/P1-U01-V01/input.md",
+        "sha256": "5ee6ad69e51533e8147f0008c2b14540e900120765080f8b3f3c8f3e24244416"
+      }
+    },
+    {
+      "fixture_id": "P1-U01-V01:request.txt",
+      "version": "1",
+      "artifact": {
+        "path": "tests/phase-3/fixtures/P1-U01-V01/request.txt",
+        "sha256": "81cd867788b58a39e509f3d8edafa0a8f18710c8404d364b9bd8c0f7ba3d16d9"
+      }
+    },
+    {
+      "fixture_id": "execution-harness",
+      "version": "1",
+      "artifact": {
+        "path": "tests/phase-3/harness.md",
+        "sha256": "a61568a41745238662652693a54ec4d0abfc2af59db082067a8fd8326255fb6e"
+      }
+    }
+  ],
+  "skill_snapshot": {
+    "path": "tests/phase-3/snapshots/round-1/manifest.json",
+    "sha256": "615bf303fbdebee10ebc8bb17a63961504c592f4040f3aa4a3f20202cd527d8b"
+  },
+  "raw_prompt": {
+    "path": "tests/phase-3/runs/P1-U01-V01-R1/prompt.txt",
+    "sha256": "ee4171b1f96affa1e89621c0fabb3af7d5eba538573db936cedaee9f0ff3200f"
+  },
+  "raw_output": {
+    "path": "tests/phase-3/runs/P1-U01-V01-R1/artifacts/output.md",
+    "sha256": "2f5fe25d5d5f3aa324f5bfcb3f781dfd1df3c634eb8f31fbae8f87943ab18a4b"
+  },
+  "tool_trace": {
+    "path": "tests/phase-3/runs/P1-U01-V01-R1/artifacts/tool-trace.json",
+    "sha256": "e7a8d485931aaad83f7e628303dd1ffd535ac3ec23511b70bf2829c0178787c4"
+  },
+  "execution_record": {
+    "path": "tests/phase-3/runs/P1-U01-V01-R1/execution-record.json",
+    "sha256": "4e2c6aaa8176834aaec1281c6761ff5bac41607144df4ef99b5f31655478c7ac"
+  },
+  "review": null,
+  "retest_of": [],
+  "additional_artifacts": [
+    {
+      "path": "tests/phase-3/runs/P1-U01-V01-R1/artifacts/output.md",
+      "sha256": "2f5fe25d5d5f3aa324f5bfcb3f781dfd1df3c634eb8f31fbae8f87943ab18a4b"
+    },
+    {
+      "path": "tests/phase-3/runs/P1-U01-V01-R1/artifacts/tool-trace.json",
+      "sha256": "e7a8d485931aaad83f7e628303dd1ffd535ac3ec23511b70bf2829c0178787c4"
+    }
+  ],
+  "limitations": [
+    "Synthetic business inputs, not real-organization assurance.",
+    "Executor-maintained trace, not a complete exported host transcript.",
+    "Exact model identifier is not exposed by this delegation interface."
+  ]
+}

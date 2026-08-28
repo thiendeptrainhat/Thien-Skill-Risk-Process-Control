@@ -1,0 +1,7 @@
+Use $thien-skill-risk-process-control to execute the user request independently. Read harness: /Users/thiendeptrainhat/Documents/Thien's Skills Library/Thien-Risk-Process-Control/tests/phase-3/harness.md
+Frozen skill: /Users/thiendeptrainhat/Documents/Thien's Skills Library/Thien-Risk-Process-Control/tests/phase-3/snapshots/round-2/skill/SKILL.md
+Request and source input: /Users/thiendeptrainhat/Documents/Thien's Skills Library/Thien-Risk-Process-Control/tests/phase-3/fixtures/P1-U16-V01/request.txt and input.pdf
+Output directory: /private/tmp/thien-rpc-phase3.xGeed0/P1-U16-V01-R1
+Run ID: P1-U16-V01-R1
+No network or external lookup is authorized in this run.
+Local Document-Evidence cooperation is authorized for this input only. Available specialist skill: /Users/thiendeptrainhat/.agents/skills/thien-skill-document-evidence/SKILL.md. You may perform a bounded delegated handoff when a slot is available; do not install, upload externally, or change the original. Retain actual specialist dispatch/output/tool trace within the run output directory.

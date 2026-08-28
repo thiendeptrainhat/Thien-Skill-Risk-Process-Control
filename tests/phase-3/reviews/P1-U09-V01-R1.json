@@ -1,0 +1,56 @@
+{
+  "run_id": "P1-U09-V01-R1",
+  "reviewer": {
+    "name": "/root Codex task",
+    "role": "Acceptance reviewer; did not produce the run answer",
+    "relationship": "independent"
+  },
+  "timestamp": "2026-08-27T19:29:47.489Z",
+  "rubric_source_sha256": "69db89db1ccd63703526aee9c0bc6305a5499905ec75f656a754ecce5840fbcb",
+  "checks": {
+    "case.must_observe.1": {
+      "result": "pass",
+      "rationale": "Chooses supplied v1 for Site A/Q4-2025, not 2026 Site B pilot v2; distinguishes issue date from effective/adoption status. Retains the unresolved effective SOP and missing extension/approval evidence instead of silently resolving the inconsistent citation.",
+      "evidence_refs": [
+        {
+          "artifact": "raw_output",
+          "locator": "L3-L24"
+        },
+        {
+          "artifact": "raw_output",
+          "locator": "L30-L34"
+        }
+      ]
+    },
+    "case.must_observe.2": {
+      "result": "pass",
+      "rationale": "Explicitly distinguishes internally mandatory v1, scope-limited pilot v2 and fictional advisory practice not adopted by Site A. SOP citation is an object of assessment, not authority to replace the baseline.",
+      "evidence_refs": [
+        {
+          "artifact": "raw_output",
+          "locator": "L9-L16"
+        }
+      ]
+    },
+    "case.must_not_observe.1": {
+      "result": "pass",
+      "rationale": "Rejects newest-version-wins, retroactive SOP proof and importing Site B configuration as Site A protection. Advisory guidance is not transformed into law/compliance failure, and no formal OE/actual SoD conclusion is issued.",
+      "evidence_refs": [
+        {
+          "artifact": "raw_output",
+          "locator": "L3-L16"
+        },
+        {
+          "artifact": "raw_output",
+          "locator": "L26-L34"
+        }
+      ]
+    }
+  },
+  "result": "pass",
+  "limitations": [
+    "Reviewer authored fixture/skill but not the answering run; not third-party assurance.",
+    "Uses synthetic supplied excerpts for period/scope reasoning, not live law, publisher or organizational adoption verification.",
+    "Exact model identity unavailable; trace is executor-maintained and includes qualified timestamp formatting recovery."
+  ]
+}

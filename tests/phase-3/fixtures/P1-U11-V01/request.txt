@@ -1,0 +1,1 @@
+Đối chiếu SOP với hồ sơ giao dịch, nêu kiểm soát, sai lệch và giới hạn kết luận. Giữ ID để không mất các ghi nhận khác nhau.

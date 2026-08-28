@@ -1,0 +1,107 @@
+{
+  "decision_scope": "TECHNICAL_INVENTORY_ONLY",
+  "duplicate_groups": [],
+  "package_type": "DOCUMENT_INVENTORY",
+  "records": [
+    {
+      "assumptions": [
+        "Copy role was supplied as WORKING_COPY; this inventory does not establish provenance."
+      ],
+      "classification": {
+        "candidate_types": [],
+        "confidence": {
+          "band": "UNKNOWN",
+          "methodology": "File signature and safe container preflight only.",
+          "score": null,
+          "source": "UNKNOWN"
+        },
+        "document_type": "PDF",
+        "method": "RULE_BASED",
+        "profile_id": null,
+        "profile_version": null,
+        "status": "UNCLASSIFIED"
+      },
+      "content_id": "sha256:9182b8b70c2027a5c81675365c6afd7383e2fbb9fa1cd7498aaf9b02f264714a",
+      "copy_role": "WORKING_COPY",
+      "data_classification": [
+        "UNKNOWN"
+      ],
+      "document_id": "doc-9182b8b70c2027a5c8167536-0001",
+      "evidence_ids": [],
+      "file": {
+        "checksum": {
+          "algorithm": "SHA-256",
+          "computed_at": "UNKNOWN",
+          "digest": "9182b8b70c2027a5c81675365c6afd7383e2fbb9fa1cd7498aaf9b02f264714a",
+          "object_role": "WORKING_COPY"
+        },
+        "declared_mime_type": "application/pdf",
+        "detected_mime_type": "application/pdf",
+        "extension": ".pdf",
+        "original_filename": "input.pdf",
+        "size_bytes": 60623,
+        "source_reference": "input.pdf"
+      },
+      "integrity": {
+        "active_content": {
+          "embedded_files": "NOT_DETECTED",
+          "external_links": "NOT_DETECTED",
+          "javascript": "DETECTED",
+          "macro": "NOT_DETECTED"
+        },
+        "encrypted": false,
+        "extension_mime_status": "MATCH",
+        "issues": [
+          {
+            "description": "Active Content Javascript",
+            "issue_code": "ACTIVE_CONTENT_JAVASCRIPT",
+            "severity": "MEDIUM"
+          }
+        ],
+        "page_completeness_status": "NOT_TESTED",
+        "page_count": {
+          "declared": null,
+          "observed": null
+        },
+        "password_protected": false,
+        "processing_eligibility": "ELIGIBLE_WITH_LIMITATIONS",
+        "read_status": "READABLE"
+      },
+      "limitations": [
+        "PDF active-content findings use bounded byte-pattern inspection and are not malware or forensic validation."
+      ],
+      "package_id": null,
+      "processing": {
+        "adapter_run_ids": [],
+        "native_text_status": "NOT_TESTED",
+        "selected_route": "NOT_EXECUTED",
+        "status": "NOT_EXECUTED"
+      },
+      "record_version": 1,
+      "relationships": [],
+      "review_status": "REQUIRED",
+      "schema_version": "1.0.0",
+      "security_flags": [
+        "ACTIVE_CONTENT_JAVASCRIPT"
+      ]
+    }
+  ],
+  "run_manifest": {
+    "config_sha256": "21629a13c6ec82c0f3a9379587829bf0d060e67769513da2cdc2439dc6b669b1",
+    "deterministic": true,
+    "domain_results_sha256": "7c76211afc797c9e92a460b09ba8f830f82258614de36d835cecd7b4f1113cae",
+    "input_set_sha256": "c9ff9d1deb13d4143c1a65f9777fe8c7a90ed0f3505b18624ed04cd2fa052f78",
+    "run_id": "inventory-d6bcd976f755ed10d43e8890",
+    "source_root_disclosure": "RELATIVE_REFERENCES_ONLY",
+    "timestamp": "NOT_RECORDED_FOR_DETERMINISTIC_OUTPUT",
+    "tool": "thien-document-inventory",
+    "tool_version": "1.0.0"
+  },
+  "schema_version": "1.0.0",
+  "summary": {
+    "document_count": 1,
+    "duplicate_content_group_count": 0,
+    "review_required_count": 1,
+    "unique_content_count": 1
+  }
+}

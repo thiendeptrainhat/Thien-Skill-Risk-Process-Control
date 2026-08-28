@@ -1,0 +1,10 @@
+{
+  "cmd": "python3 -B scripts/build_release.py --write --json",
+  "started_at": "2026-08-27T20:02:01.567Z",
+  "finished_at": "2026-08-27T20:02:02.912Z",
+  "chunk_id": "0930db",
+  "wall_time_seconds": 0.945157209,
+  "exit_code": 0,
+  "original_token_count": 6009,
+  "scope": "Local candidate artifact creation only; publication=created means dist/1.1.0 was created, not external publication."
+}

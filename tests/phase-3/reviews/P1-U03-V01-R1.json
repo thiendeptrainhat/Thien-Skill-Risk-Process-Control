@@ -1,0 +1,61 @@
+{
+  "run_id": "P1-U03-V01-R1",
+  "reviewer": {
+    "name": "/root Codex task",
+    "role": "Acceptance reviewer; did not produce the run answer",
+    "relationship": "independent"
+  },
+  "timestamp": "2026-08-27T19:04:16.844Z",
+  "rubric_source_sha256": "69db89db1ccd63703526aee9c0bc6305a5499905ec75f656a754ecce5840fbcb",
+  "checks": {
+    "case.must_observe.1": {
+      "result": "pass",
+      "rationale": "Four outcome-based E2E boundaries and their overlaps are distinguished; returns/refund/supplier response retain their own closure conditions. RSK-REC-01 connects shared status failure to shipment/returns/refund decisions and the recall objective.",
+      "evidence_refs": [
+        {
+          "artifact": "raw_output",
+          "locator": "L13-L35"
+        },
+        {
+          "artifact": "raw_output",
+          "locator": "L49-L53"
+        }
+      ]
+    },
+    "case.must_observe.2": {
+      "result": "pass",
+      "rationale": "CTL-REC-07 remains one logical identity with three invocation links and separate DOC/A/B observations. BLOCK at shipment case A and REVIEW at refund case B retain date, scope and source; they are not merged or presented as contradictory facts for one case. Reviewed model.json also retains these identities/relationships, consistent with the displayed views.",
+      "evidence_refs": [
+        {
+          "artifact": "raw_output",
+          "locator": "L37-L65"
+        },
+        {
+          "artifact": "raw_output",
+          "locator": "L69-L76"
+        },
+        {
+          "artifact": "tool_trace",
+          "locator": "entire_artifact"
+        }
+      ]
+    },
+    "case.must_not_observe.1": {
+      "result": "pass",
+      "rationale": "The answer structures the group by triggers/outcomes and explicit overlaps, not by departments or a forced exclusive family. It does not invent the larger shipping E2E from a single shipping activity.",
+      "evidence_refs": [
+        {
+          "artifact": "raw_output",
+          "locator": "L3-L35"
+        }
+      ]
+    }
+  },
+  "result": "pass",
+  "limitations": [
+    "Reviewer authored the synthetic fixture and skill update, but is independent of the answering agent; not third-party assurance.",
+    "Supplementary model.json was read in full and compared with narrative; executor-maintained deterministic checks are supporting records, not a separate assurance opinion.",
+    "One synthetic cross-process example cannot establish coverage of all E2E processes.",
+    "Executor-maintained trace is not a complete exported host transcript; exact model identity unavailable."
+  ]
+}

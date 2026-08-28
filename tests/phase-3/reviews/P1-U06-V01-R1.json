@@ -1,0 +1,94 @@
+{
+  "run_id": "P1-U06-V01-R1",
+  "reviewer": {
+    "name": "/root Codex task",
+    "role": "Acceptance reviewer; did not produce the run answer",
+    "relationship": "independent"
+  },
+  "timestamp": "2026-08-27T19:20:22.210Z",
+  "rubric_source_sha256": "69db89db1ccd63703526aee9c0bc6305a5499905ec75f656a754ecce5840fbcb",
+  "checks": {
+    "case.must_observe.1": {
+      "result": "pass",
+      "rationale": "The retained tool trace records actual official-source searches, opens, PDF finds and failures. The answer identifies NIST publishers, exact publication/update versions, dated source checks, control/outcome locators and advisory applicability. Version 5.2.0 metadata is explicitly separated from the older PDF text actually read.",
+      "evidence_refs": [
+        {
+          "artifact": "raw_output",
+          "locator": "L19-L33"
+        },
+        {
+          "artifact": "raw_output",
+          "locator": "L43-L51"
+        },
+        {
+          "artifact": "tool_trace",
+          "locator": "entire_artifact"
+        }
+      ]
+    },
+    "case.must_observe.2": {
+      "result": "pass",
+      "rationale": "NIST is treated as a control catalog/framework of outcomes, not a process taxonomy or a prescribed E2E/vendor blueprint. The E2E name, ordering and implementation details are labelled analyst synthesis; no vendor blueprint is claimed as selected or mandatory. Failed dataset access does not become clause verification.",
+      "evidence_refs": [
+        {
+          "artifact": "raw_output",
+          "locator": "L23-L37"
+        },
+        {
+          "artifact": "raw_output",
+          "locator": "L41-L55"
+        }
+      ]
+    },
+    "case.must_observe.3": {
+      "result": "pass",
+      "rationale": "All retained web queries contain generic NIST/version/access-control topics only, with no SOP text, organizational data or unnecessary fixture identifiers. The supplied input was synthetic and authorized for read-only public research.",
+      "evidence_refs": [
+        {
+          "artifact": "tool_trace",
+          "locator": "entire_artifact"
+        },
+        {
+          "artifact": "raw_output",
+          "locator": "L9-L9"
+        }
+      ]
+    },
+    "case.must_not_observe.1": {
+      "result": "pass",
+      "rationale": "Research is supported by recorded actual tools, source URLs and the named content spans; it is not merely an unsupported statement that research occurred. Retained trace also discloses failed calls and text-reader limitations.",
+      "evidence_refs": [
+        {
+          "artifact": "tool_trace",
+          "locator": "entire_artifact"
+        },
+        {
+          "artifact": "raw_output",
+          "locator": "L19-L33"
+        }
+      ]
+    },
+    "case.must_not_observe.2": {
+      "result": "pass",
+      "rationale": "The answer restricts verified content to selected control/outcome sections, preserves metadata-only and oversized-catalog limits, and separates access, permitted paraphrase/derivative use and redistribution. AI-use basis is the separately checked NIST rights statement, not public access alone or an invented AI-specific license.",
+      "evidence_refs": [
+        {
+          "artifact": "raw_output",
+          "locator": "L25-L33"
+        },
+        {
+          "artifact": "tool_trace",
+          "locator": "entire_artifact"
+        }
+      ]
+    }
+  },
+  "result": "pass",
+  "limitations": [
+    "Reviewer authored the synthetic fixture and skill update but not the answering run; not third-party assurance.",
+    "Trace is executor-maintained, not a complete exported host transcript; source checks are supported by its recorded actual web calls, not an independently replayed crawl.",
+    "Executor initially listed neighboring fixture/snapshot filenames before reading the harness. It reports no other fixture contents, rubric, reviews or history were read; no answer-key contamination is evidenced. This protocol excursion is retained, not erased.",
+    "The lookup claim is limited to selected public NIST passages and this Codex delegated runtime; it does not verify all external libraries, the complete OSCAL 5.2.0 catalog or a paid/login connector.",
+    "No native platform installation, legal compliance, exact model identity or broad AI licensing opinion is established."
+  ]
+}

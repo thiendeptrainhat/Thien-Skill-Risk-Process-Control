@@ -1,0 +1,701 @@
+{
+  "output_metadata": {
+    "title": "Nhóm quy trình thu hồi: E2E, giao điểm và kiểm soát dùng chung",
+    "status": "Draft",
+    "language": "vi",
+    "analysis_layers": [
+      "As-Documented",
+      "As-Performed"
+    ],
+    "source_references": [
+      "SRC-RECALL-03 §1",
+      "SRC-RECALL-03 §2",
+      "SRC-RECALL-03 §3",
+      "SRC-LOG-03: 15/07/2026, case A và case B"
+    ],
+    "data_classification": null,
+    "source_access_and_ai_use_conditions": "DỮ LIỆU TỔNG HỢP; được phép phân tích trong AI.",
+    "assumptions": [],
+    "confidence": "Medium",
+    "confidence_basis": "Một bản tổng hợp nguồn và trích dẫn trace; không có cấu hình hay raw log để xác minh độc lập.",
+    "review_status": "Not reviewed",
+    "id_policy": "Giữ CTL-REC-07 và source IDs nguyên gốc; các ID khác là ID phân tích nội bộ mới. Không đổi ID khi đổi tên hoặc tạo view.",
+    "external_reference_status": "Không tra cứu; không gán mã/version thư viện bên ngoài.",
+    "scope": "Kiến trúc E2E, giao điểm, một logical control và observations theo đúng scope. Không phải RCM chính thức hay kết luận assurance.",
+    "source_warnings": [
+      "Hồ sơ không bao phủ các giao dịch khác.",
+      "Chưa có số liệu tổn thất hoặc phương pháp chấm điểm rủi ro."
+    ],
+    "unresolved_items": [
+      "Owner, version, hiệu lực và authority tài liệu chưa được cung cấp.",
+      "Chưa xác nhận L0–L5 trong kiến trúc doanh nghiệp.",
+      "Chưa biết điều kiện nhận hàng trả có bắt buộc trước khi chấp thuận hoàn tiền hay không.",
+      "Chưa biết caller xử lý BLOCK/REVIEW, override, mất kết nối và việc cưỡng chế thực tế ra sao.",
+      "Không có log tiếp nhận trả hàng; log case B không nêu thời điểm tương đối với phê duyệt."
+    ]
+  },
+  "sources": [
+    {
+      "source_id": "SRC-RECALL-03",
+      "source_type": "Mô tả tổng hợp được cung cấp",
+      "source_location": "/Users/thiendeptrainhat/Documents/Thien's Skills Library/Thien-Risk-Process-Control/tests/phase-3/fixtures/P1-U03-V01/input.md",
+      "content_checked_scope": "§1–§3",
+      "version": null,
+      "effective_date": null,
+      "owner": null,
+      "status": "Not provided",
+      "ai_use_status": "permission_evidenced",
+      "ai_use_basis": "Dòng đầu input.md",
+      "redistribution_status": "Not provided"
+    },
+    {
+      "source_id": "SRC-LOG-03",
+      "source_type": "Trích mô tả trace trong input.md",
+      "source_location": "/Users/thiendeptrainhat/Documents/Thien's Skills Library/Thien-Risk-Process-Control/tests/phase-3/fixtures/P1-U03-V01/input.md",
+      "content_checked_scope": "Hai kết quả dịch vụ ngày 15/07/2026 tại case A/B",
+      "source_date": "2026-07-15",
+      "version": null,
+      "owner": null,
+      "raw_log_available": false,
+      "warning": "Hồ sơ không bao phủ các giao dịch khác.",
+      "ai_use_status": "permission_evidenced",
+      "ai_use_basis": "Dòng đầu input.md",
+      "redistribution_status": "Not provided"
+    }
+  ],
+  "objectives": [
+    {
+      "objective_id": "OBJ-REC-01",
+      "objective_statement": "Xử lý lô cần thu hồi, giải quyết khách hàng và theo dõi hành động nhà cung cấp.",
+      "analysis_layer": "As-Documented",
+      "source_reference": "SRC-RECALL-03 §1",
+      "confidence": "Medium",
+      "confidence_basis": [
+        "Documented"
+      ],
+      "review_status": "Not reviewed"
+    }
+  ],
+  "process_objects": [
+    {
+      "process_id": "E2E-REC-01",
+      "object_type": "EndToEndProcess",
+      "process_name": "Xác nhận thu hồi → giải quyết hồ sơ thu hồi",
+      "name_basis": "Tên nội bộ chuẩn hóa cho phân tích từ boundary được cung cấp; chưa phải tên được tổ chức phê duyệt.",
+      "objective": "Lô được xử lý; khách hàng được giải quyết; hành động nhà cung cấp được theo dõi.",
+      "trigger": "Quality xác nhận lô cần thu hồi",
+      "start_boundary": "Quality xác nhận lô cần thu hồi",
+      "end_boundary": "Lô được xử lý; khách hàng được giải quyết; hành động nhà cung cấp được theo dõi.",
+      "process_level": null,
+      "process_level_status": "To be validated",
+      "parent_process_id": null,
+      "owner": null,
+      "reference_library_id": null,
+      "reference_item_id": null,
+      "analysis_layer": "As-Documented",
+      "source_reference": "SRC-RECALL-03 §1",
+      "confidence": "Medium",
+      "confidence_basis": [
+        "Documented"
+      ],
+      "review_status": "Not reviewed"
+    },
+    {
+      "process_id": "E2E-RET-01",
+      "object_type": "EndToEndProcess",
+      "process_name": "Yêu cầu trả → tiếp nhận/xác định cách xử lý hàng",
+      "name_basis": "Tên nội bộ chuẩn hóa cho phân tích từ boundary được cung cấp; chưa phải tên được tổ chức phê duyệt.",
+      "objective": "Nhận/xác định cách xử lý hàng; không tự bao gồm hoàn tiền.",
+      "trigger": "Yêu cầu trả",
+      "start_boundary": "Yêu cầu trả",
+      "end_boundary": "Nhận/xác định cách xử lý hàng; không tự bao gồm hoàn tiền.",
+      "process_level": null,
+      "process_level_status": "To be validated",
+      "parent_process_id": null,
+      "owner": null,
+      "reference_library_id": null,
+      "reference_item_id": null,
+      "analysis_layer": "As-Documented",
+      "source_reference": "SRC-RECALL-03 §2",
+      "confidence": "Medium",
+      "confidence_basis": [
+        "Documented"
+      ],
+      "review_status": "Not reviewed"
+    },
+    {
+      "process_id": "E2E-REF-01",
+      "object_type": "EndToEndProcess",
+      "process_name": "Yêu cầu hoàn tiền được chấp thuận → đối chiếu tiền và công nợ",
+      "name_basis": "Tên nội bộ chuẩn hóa cho phân tích từ boundary được cung cấp; chưa phải tên được tổ chức phê duyệt.",
+      "objective": "Tiền và sổ công nợ được đối chiếu.",
+      "trigger": "Yêu cầu hoàn tiền được chấp thuận",
+      "start_boundary": "Yêu cầu hoàn tiền được chấp thuận",
+      "end_boundary": "Tiền và sổ công nợ được đối chiếu.",
+      "process_level": null,
+      "process_level_status": "To be validated",
+      "parent_process_id": null,
+      "owner": null,
+      "reference_library_id": null,
+      "reference_item_id": null,
+      "analysis_layer": "As-Documented",
+      "source_reference": "SRC-RECALL-03 §2",
+      "confidence": "Medium",
+      "confidence_basis": [
+        "Documented"
+      ],
+      "review_status": "Not reviewed"
+    },
+    {
+      "process_id": "E2E-SUP-01",
+      "object_type": "EndToEndProcess",
+      "process_name": "Yêu cầu nguyên nhân → chấp thuận phản hồi và hành động",
+      "name_basis": "Tên nội bộ chuẩn hóa cho phân tích từ boundary được cung cấp; chưa phải tên được tổ chức phê duyệt.",
+      "objective": "Phản hồi và hành động được chấp thuận; không đồng nghĩa hành động đã thực hiện xong hoặc hiệu quả đã được xác nhận.",
+      "trigger": "Yêu cầu nhà cung cấp phản hồi nguyên nhân",
+      "start_boundary": "Yêu cầu nhà cung cấp phản hồi nguyên nhân",
+      "end_boundary": "Phản hồi và hành động được chấp thuận; không đồng nghĩa hành động đã thực hiện xong hoặc hiệu quả đã được xác nhận.",
+      "process_level": null,
+      "process_level_status": "To be validated",
+      "parent_process_id": null,
+      "owner": null,
+      "reference_library_id": null,
+      "reference_item_id": null,
+      "analysis_layer": "As-Documented",
+      "source_reference": "SRC-RECALL-03 §1–§2",
+      "confidence": "Medium",
+      "confidence_basis": [
+        "Documented"
+      ],
+      "review_status": "Not reviewed"
+    }
+  ],
+  "steps": [
+    {
+      "step_id": "STEP-REC-NOTIFY",
+      "step_name": "Thông báo khách hàng",
+      "performer": null,
+      "sequence": null,
+      "analysis_layer": "As-Documented",
+      "source_reference": "SRC-RECALL-03 §1",
+      "confidence": "Medium",
+      "confidence_basis": [
+        "Documented"
+      ],
+      "review_status": "Not reviewed"
+    },
+    {
+      "step_id": "STEP-REC-HOLD",
+      "step_name": "Khóa xuất kho",
+      "performer": null,
+      "sequence": null,
+      "analysis_layer": "As-Documented",
+      "source_reference": "SRC-RECALL-03 §1",
+      "confidence": "Medium",
+      "confidence_basis": [
+        "Documented"
+      ],
+      "review_status": "Not reviewed"
+    },
+    {
+      "step_id": "STEP-SHP-CHECK",
+      "step_name": "Gọi CTL-REC-07 tại xuất kho",
+      "performer": null,
+      "sequence": null,
+      "analysis_layer": "As-Documented",
+      "source_reference": "SRC-RECALL-03 §3",
+      "confidence": "Medium",
+      "confidence_basis": [
+        "Documented"
+      ],
+      "review_status": "Not reviewed"
+    },
+    {
+      "step_id": "STEP-RET-CHECK",
+      "step_name": "Gọi CTL-REC-07 tại tiếp nhận trả hàng",
+      "performer": null,
+      "sequence": null,
+      "analysis_layer": "As-Documented",
+      "source_reference": "SRC-RECALL-03 §3",
+      "confidence": "Medium",
+      "confidence_basis": [
+        "Documented"
+      ],
+      "review_status": "Not reviewed"
+    },
+    {
+      "step_id": "STEP-REF-GATE",
+      "step_name": "Gọi CTL-REC-07 trước duyệt hoàn tiền",
+      "performer": null,
+      "sequence": null,
+      "boundary_note": "Cổng đầu vào, nằm trước start boundary đã được chấp thuận của E2E-REF-01.",
+      "analysis_layer": "As-Documented",
+      "source_reference": "SRC-RECALL-03 §2–§3",
+      "confidence": "Medium",
+      "confidence_basis": [
+        "Documented"
+      ],
+      "review_status": "Not reviewed"
+    }
+  ],
+  "control_objectives": [
+    {
+      "control_objective_id": "COBJ-REC-01",
+      "objective_statement": "Quyết định xuất kho, tiếp nhận trả và chấp thuận hoàn tiền nhất quán với đúng mã lô/trạng thái thu hồi.",
+      "objective_id": "OBJ-REC-01",
+      "claim_basis": "Analyst inference từ chức năng dịch vụ được mô tả; cần xác nhận như control objective chính thức.",
+      "analysis_layer": null,
+      "source_reference": "SRC-RECALL-03 §1, §3",
+      "confidence": "Low",
+      "confidence_basis": [
+        "Inferred"
+      ],
+      "review_status": "Not reviewed"
+    }
+  ],
+  "risks": [
+    {
+      "risk_id": "RSK-REC-01",
+      "cause": "Dữ liệu mã lô/trạng thái thu hồi sai, không kịp thời hoặc kết quả kiểm tra không được áp dụng tại điểm quyết định.",
+      "event": "Quyết định xuất kho, tiếp nhận trả hoặc chấp thuận hoàn tiền có thể không phù hợp trạng thái lô.",
+      "impact": "Lô thu hồi có thể tiếp tục lưu thông hoặc khách hàng được xử lý sai, cản trở xử lý lô và giải quyết hồ sơ thu hồi.",
+      "objective_id": "OBJ-REC-01",
+      "claim_basis": "Kịch bản suy luận, không phải sự cố/thiệt hại được quan sát.",
+      "inherent_risk": null,
+      "residual_risk": null,
+      "risk_rating_status": "Not assessed",
+      "loss_amount": null,
+      "analysis_layer": null,
+      "source_reference": "SRC-RECALL-03 §1, §3",
+      "confidence": "Low",
+      "confidence_basis": [
+        "Inferred"
+      ],
+      "review_status": "Not reviewed"
+    }
+  ],
+  "controls": [
+    {
+      "control_id": "CTL-REC-07",
+      "control_name": "Dịch vụ trung tâm kiểm tra mã lô/recall status",
+      "control_description": "Cùng một dịch vụ được gọi tại xuất kho, tiếp nhận trả hàng và trước duyệt hoàn tiền; cùng cấu hình, cùng cơ chế quản lý thay đổi.",
+      "identity_basis": "SRC-RECALL-03 §3 xác nhận cùng dịch vụ/cấu hình/cơ chế quản lý thay đổi; không hợp nhất chỉ vì trùng tên.",
+      "control_owner": null,
+      "performer": null,
+      "system": "Dịch vụ trung tâm, tên hệ thống cụ thể Not provided",
+      "data_source": "Mã lô/recall status; nguồn gốc dữ liệu và quy tắc cập nhật Not provided",
+      "trigger": "Tại ba điểm gọi được mô tả",
+      "population": null,
+      "threshold": null,
+      "precision": null,
+      "exception_handling": null,
+      "escalation": null,
+      "retention": null,
+      "control_nature": null,
+      "control_objective_id": "COBJ-REC-01",
+      "key_control_status": "To be validated",
+      "design_assessment": "Not assessed",
+      "legacy_projection_observation_id": "OBS-REC-07-DOC",
+      "analysis_layer": "As-Documented",
+      "source_reference": "SRC-RECALL-03 §3",
+      "confidence": "Medium",
+      "confidence_basis": [
+        "Documented"
+      ],
+      "review_status": "Not reviewed"
+    }
+  ],
+  "control_observations": [
+    {
+      "control_observation_id": "OBS-REC-07-DOC",
+      "control_id": "CTL-REC-07",
+      "assessed_scope": "Mô tả cùng dịch vụ tại xuất kho, tiếp nhận trả và trước duyệt hoàn tiền",
+      "assessed_period": null,
+      "control_description": "Cùng một dịch vụ kiểm tra mã lô/recall status, cùng cấu hình và cơ chế quản lý thay đổi ở ba điểm gọi.",
+      "claim_basis": "Source document",
+      "design_assessment": "Not assessed",
+      "assessment_status": "Not assessed",
+      "key_control_status": "To be validated",
+      "limitations": [
+        "Không chứng minh thực thi tại mọi giao dịch.",
+        "Chưa có cấu hình để xác nhận riêng lớp As-Designed."
+      ],
+      "analysis_layer": "As-Documented",
+      "source_reference": "SRC-RECALL-03 §3",
+      "confidence": "Medium",
+      "confidence_basis": [
+        "Documented"
+      ],
+      "review_status": "Not reviewed"
+    },
+    {
+      "control_observation_id": "OBS-REC-07-A",
+      "control_id": "CTL-REC-07",
+      "assessed_scope": "Case A, tại xuất kho",
+      "assessed_period": "2026-07-15",
+      "reported_result": "BLOCK",
+      "step_id": "STEP-SHP-CHECK",
+      "claim_basis": "Kết quả trong trích trace được cung cấp; không phải reperformance.",
+      "design_assessment": "Not assessed",
+      "assessment_status": "Not assessed",
+      "key_control_status": "To be validated",
+      "limitations": [
+        "Không chứng minh caller đã thực sự chặn xuất kho hoặc không có override.",
+        "Không đại diện giao dịch khác; raw log không được cung cấp."
+      ],
+      "analysis_layer": "As-Performed",
+      "source_reference": "SRC-LOG-03: 15/07/2026, case A",
+      "confidence": "Medium",
+      "confidence_basis": [
+        "Evidence-confirmed"
+      ],
+      "review_status": "Not reviewed"
+    },
+    {
+      "control_observation_id": "OBS-REC-07-B",
+      "control_id": "CTL-REC-07",
+      "assessed_scope": "Case B, khâu hoàn tiền; điểm và thời điểm chính xác so với duyệt chưa được trace mô tả",
+      "assessed_period": "2026-07-15",
+      "reported_result": "REVIEW",
+      "step_id": null,
+      "candidate_documented_step_id": "STEP-REF-GATE",
+      "candidate_step_mapping_status": "To be validated",
+      "claim_basis": "Kết quả trong trích trace được cung cấp; không dùng §3 để suy ra timing của case này.",
+      "design_assessment": "Not assessed",
+      "assessment_status": "Not assessed",
+      "key_control_status": "To be validated",
+      "limitations": [
+        "Không chứng minh review đã hoàn thành, yêu cầu đã được duyệt hoặc tiền đã chi.",
+        "Không đại diện giao dịch khác; raw log không được cung cấp."
+      ],
+      "analysis_layer": "As-Performed",
+      "source_reference": "SRC-LOG-03: 15/07/2026, case B",
+      "confidence": "Medium",
+      "confidence_basis": [
+        "Evidence-confirmed"
+      ],
+      "review_status": "Not reviewed"
+    }
+  ],
+  "relationships": [
+    {
+      "relationship_id": "MAP-OBJ-REC",
+      "from_id": "OBJ-REC-01",
+      "relationship_type": "is_delivered_by",
+      "to_id": "E2E-REC-01",
+      "relationship_rationale": "Objective và boundary khớp nội dung thu hồi.",
+      "analysis_layer": "As-Documented",
+      "source_reference": "SRC-RECALL-03 §1",
+      "confidence": "Medium",
+      "confidence_basis": [
+        "Documented"
+      ],
+      "review_status": "Not reviewed"
+    },
+    {
+      "relationship_id": "MAP-REC-RET",
+      "from_id": "E2E-REC-01",
+      "relationship_type": "overlaps_via_return_handling",
+      "to_id": "E2E-RET-01",
+      "relationship_rationale": "Luồng trả hỗ trợ xử lý lô thu hồi nhưng có trigger và end boundary riêng.",
+      "analysis_layer": "As-Documented",
+      "source_reference": "SRC-RECALL-03 §1–§2",
+      "confidence": "Medium",
+      "confidence_basis": [
+        "Documented"
+      ],
+      "review_status": "Not reviewed"
+    },
+    {
+      "relationship_id": "MAP-REC-REF",
+      "from_id": "E2E-REC-01",
+      "relationship_type": "overlaps_via_customer_refund",
+      "to_id": "E2E-REF-01",
+      "relationship_rationale": "Hoàn tiền hỗ trợ giải quyết khách hàng; đóng luồng hoàn tiền cần đối chiếu tiền/công nợ.",
+      "analysis_layer": "As-Documented",
+      "source_reference": "SRC-RECALL-03 §1–§2",
+      "confidence": "Medium",
+      "confidence_basis": [
+        "Documented"
+      ],
+      "review_status": "Not reviewed"
+    },
+    {
+      "relationship_id": "MAP-REC-SUP",
+      "from_id": "E2E-REC-01",
+      "relationship_type": "overlaps_via_supplier_response_and_actions",
+      "to_id": "E2E-SUP-01",
+      "relationship_rationale": "Phản hồi/hành động được chấp thuận khác việc hành động được theo dõi; không tự suy ra closure đồng thời.",
+      "analysis_layer": "As-Documented",
+      "source_reference": "SRC-RECALL-03 §1–§2",
+      "confidence": "Medium",
+      "confidence_basis": [
+        "Documented"
+      ],
+      "review_status": "Not reviewed"
+    },
+    {
+      "relationship_id": "MAP-RET-REF-CAND",
+      "from_id": "E2E-RET-01",
+      "relationship_type": "candidate_handoff",
+      "to_id": "E2E-REF-01",
+      "relationship_rationale": "Cần xác nhận chứng từ/điều kiện bàn giao; nguồn chưa nói nhận hàng là điều kiện bắt buộc trước chấp thuận hoàn tiền.",
+      "analysis_layer": null,
+      "source_reference": "SRC-RECALL-03 §1–§2",
+      "confidence": "Low",
+      "confidence_basis": [
+        "Inferred"
+      ],
+      "review_status": "Not reviewed"
+    },
+    {
+      "relationship_id": "MAP-NOTIFY-REC",
+      "from_id": "STEP-REC-NOTIFY",
+      "relationship_type": "is_activity_in",
+      "to_id": "E2E-REC-01",
+      "relationship_rationale": "Hoạt động thông báo trong hồ sơ thu hồi.",
+      "analysis_layer": "As-Documented",
+      "source_reference": "SRC-RECALL-03 §1",
+      "confidence": "Medium",
+      "confidence_basis": [
+        "Documented"
+      ],
+      "review_status": "Not reviewed"
+    },
+    {
+      "relationship_id": "MAP-HOLD-REC",
+      "from_id": "STEP-REC-HOLD",
+      "relationship_type": "is_activity_in",
+      "to_id": "E2E-REC-01",
+      "relationship_rationale": "Khóa xuất kho trong hồ sơ thu hồi; không tự đồng nhất với cơ chế CTL-REC-07.",
+      "analysis_layer": "As-Documented",
+      "source_reference": "SRC-RECALL-03 §1",
+      "confidence": "Medium",
+      "confidence_basis": [
+        "Documented"
+      ],
+      "review_status": "Not reviewed"
+    },
+    {
+      "relationship_id": "MAP-SHP-REC",
+      "from_id": "STEP-SHP-CHECK",
+      "relationship_type": "supports_containment_in",
+      "to_id": "E2E-REC-01",
+      "relationship_rationale": "Điểm chặn xuất kho liên quan thu hồi; boundary E2E giao hàng lớn hơn chưa được cung cấp.",
+      "analysis_layer": "As-Documented",
+      "source_reference": "SRC-RECALL-03 §1, §3",
+      "confidence": "Medium",
+      "confidence_basis": [
+        "Documented"
+      ],
+      "review_status": "Not reviewed"
+    },
+    {
+      "relationship_id": "MAP-RET-RET",
+      "from_id": "STEP-RET-CHECK",
+      "relationship_type": "is_activity_in",
+      "to_id": "E2E-RET-01",
+      "relationship_rationale": "Gọi dịch vụ khi tiếp nhận trả hàng.",
+      "analysis_layer": "As-Documented",
+      "source_reference": "SRC-RECALL-03 §2–§3",
+      "confidence": "Medium",
+      "confidence_basis": [
+        "Documented"
+      ],
+      "review_status": "Not reviewed"
+    },
+    {
+      "relationship_id": "MAP-RET-REC",
+      "from_id": "STEP-RET-CHECK",
+      "relationship_type": "supports",
+      "to_id": "E2E-REC-01",
+      "relationship_rationale": "Cùng điểm kiểm tra tiếp nhận phục vụ xử lý hàng thu hồi.",
+      "analysis_layer": "As-Documented",
+      "source_reference": "SRC-RECALL-03 §1, §3",
+      "confidence": "Medium",
+      "confidence_basis": [
+        "Documented"
+      ],
+      "review_status": "Not reviewed"
+    },
+    {
+      "relationship_id": "MAP-REF-REF",
+      "from_id": "STEP-REF-GATE",
+      "relationship_type": "is_upstream_gate_for",
+      "to_id": "E2E-REF-01",
+      "relationship_rationale": "Kiểm tra trước duyệt; E2E hoàn tiền theo §2 chỉ bắt đầu khi yêu cầu đã được chấp thuận.",
+      "analysis_layer": "As-Documented",
+      "source_reference": "SRC-RECALL-03 §2–§3",
+      "confidence": "Medium",
+      "confidence_basis": [
+        "Documented"
+      ],
+      "review_status": "Not reviewed"
+    },
+    {
+      "relationship_id": "MAP-REF-REC",
+      "from_id": "STEP-REF-GATE",
+      "relationship_type": "supports",
+      "to_id": "E2E-REC-01",
+      "relationship_rationale": "Cổng chấp thuận hoàn tiền liên quan giải quyết khách hàng trong hồ sơ thu hồi.",
+      "analysis_layer": "As-Documented",
+      "source_reference": "SRC-RECALL-03 §1, §3",
+      "confidence": "Medium",
+      "confidence_basis": [
+        "Documented"
+      ],
+      "review_status": "Not reviewed"
+    },
+    {
+      "relationship_id": "MAP-CTL-SHP",
+      "from_id": "CTL-REC-07",
+      "relationship_type": "is_invoked_at",
+      "to_id": "STEP-SHP-CHECK",
+      "relationship_rationale": "Một điểm sử dụng logical control; không phải control mới.",
+      "analysis_layer": "As-Documented",
+      "source_reference": "SRC-RECALL-03 §3",
+      "confidence": "Medium",
+      "confidence_basis": [
+        "Documented"
+      ],
+      "review_status": "Not reviewed"
+    },
+    {
+      "relationship_id": "MAP-CTL-RET",
+      "from_id": "CTL-REC-07",
+      "relationship_type": "is_invoked_at",
+      "to_id": "STEP-RET-CHECK",
+      "relationship_rationale": "Một điểm sử dụng logical control; không phải control mới.",
+      "analysis_layer": "As-Documented",
+      "source_reference": "SRC-RECALL-03 §3",
+      "confidence": "Medium",
+      "confidence_basis": [
+        "Documented"
+      ],
+      "review_status": "Not reviewed"
+    },
+    {
+      "relationship_id": "MAP-CTL-REF",
+      "from_id": "CTL-REC-07",
+      "relationship_type": "is_invoked_at",
+      "to_id": "STEP-REF-GATE",
+      "relationship_rationale": "Một điểm sử dụng logical control; không phải control mới.",
+      "analysis_layer": "As-Documented",
+      "source_reference": "SRC-RECALL-03 §3",
+      "confidence": "Medium",
+      "confidence_basis": [
+        "Documented"
+      ],
+      "review_status": "Not reviewed"
+    },
+    {
+      "relationship_id": "MAP-RSK-OBJ",
+      "from_id": "RSK-REC-01",
+      "relationship_type": "threatens",
+      "to_id": "OBJ-REC-01",
+      "relationship_rationale": "Kịch bản suy luận; chưa phải incident.",
+      "analysis_layer": null,
+      "source_reference": "SRC-RECALL-03 §1, §3",
+      "confidence": "Low",
+      "confidence_basis": [
+        "Inferred"
+      ],
+      "review_status": "Not reviewed"
+    },
+    {
+      "relationship_id": "MAP-COBJ-RSK",
+      "from_id": "COBJ-REC-01",
+      "relationship_type": "addresses",
+      "to_id": "RSK-REC-01",
+      "relationship_rationale": "Control objective suy ra từ chức năng kiểm tra status.",
+      "analysis_layer": null,
+      "source_reference": "SRC-RECALL-03 §1, §3",
+      "confidence": "Low",
+      "confidence_basis": [
+        "Inferred"
+      ],
+      "review_status": "Not reviewed"
+    },
+    {
+      "relationship_id": "MAP-CTL-COBJ",
+      "from_id": "CTL-REC-07",
+      "relationship_type": "provides_theoretical_support_for",
+      "to_id": "COBJ-REC-01",
+      "relationship_rationale": "Có chức năng kiểm tra; mức cưỡng chế và coverage thực tế chưa xác minh.",
+      "analysis_layer": null,
+      "source_reference": "SRC-RECALL-03 §3",
+      "confidence": "Low",
+      "confidence_basis": [
+        "Inferred"
+      ],
+      "review_status": "Not reviewed"
+    },
+    {
+      "relationship_id": "MAP-OBS-DOC",
+      "from_id": "OBS-REC-07-DOC",
+      "relationship_type": "observes",
+      "to_id": "CTL-REC-07",
+      "relationship_rationale": "Mô tả nguồn, không phải evidence vận hành.",
+      "analysis_layer": "As-Documented",
+      "source_reference": "SRC-RECALL-03 §3",
+      "confidence": "Medium",
+      "confidence_basis": [
+        "Documented"
+      ],
+      "review_status": "Not reviewed"
+    },
+    {
+      "relationship_id": "MAP-OBS-A",
+      "from_id": "OBS-REC-07-A",
+      "relationship_type": "observes",
+      "to_id": "CTL-REC-07",
+      "relationship_rationale": "Kết quả BLOCK đúng case và ngày quan sát.",
+      "analysis_layer": "As-Performed",
+      "source_reference": "SRC-LOG-03: 15/07/2026, case A",
+      "confidence": "Medium",
+      "confidence_basis": [
+        "Evidence-confirmed"
+      ],
+      "review_status": "Not reviewed"
+    },
+    {
+      "relationship_id": "MAP-OBS-B",
+      "from_id": "OBS-REC-07-B",
+      "relationship_type": "observes",
+      "to_id": "CTL-REC-07",
+      "relationship_rationale": "Kết quả REVIEW đúng case và ngày quan sát.",
+      "analysis_layer": "As-Performed",
+      "source_reference": "SRC-LOG-03: 15/07/2026, case B",
+      "confidence": "Medium",
+      "confidence_basis": [
+        "Evidence-confirmed"
+      ],
+      "review_status": "Not reviewed"
+    }
+  ],
+  "assessment_limits": {
+    "as_designed": "Chưa có nguồn xác nhận cấu hình độc lập; không tạo observation As-Designed.",
+    "receipt_performed": "Không có observation As-Performed tại tiếp nhận trả hàng.",
+    "operating_effectiveness": {
+      "assessment_status": "Not assessed",
+      "evidence_status": "Insufficient evidence",
+      "scope": "Toàn bộ control và các E2E"
+    },
+    "shared_control_count": 1,
+    "documented_invocation_point_count": 3,
+    "reported_trace_count": 1,
+    "performed_observation_count": 2,
+    "no_claims": [
+      "Không kết luận control failed/compliant/effective.",
+      "Không xác định đây là SPOF chỉ từ tính dùng chung.",
+      "Không có rating, tỷ lệ lỗi hay số tiền tổn thất được ước tính."
+    ],
+    "design_questions": [
+      "Nguồn/phiên bản/trễ cập nhật recall status?",
+      "Caller áp dụng BLOCK/REVIEW và xử lý mất dịch vụ/override thế nào?",
+      "Ai sở hữu dịch vụ, dữ liệu, cấu hình và kiểm soát thay đổi?",
+      "Kiểm tra tính đúng đắn ở cả ba điểm gọi khi cấu hình thay đổi như thế nào?"
+    ],
+    "other_controls": "Chưa có đủ mô tả để xác định thêm control dùng chung; không đồng nghĩa không tồn tại."
+  }
+}

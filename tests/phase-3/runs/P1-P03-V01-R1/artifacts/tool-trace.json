@@ -1,0 +1,3097 @@
+{
+  "schema_version": "1.0",
+  "record_type": "Executor-maintained static release-evidence audit trace; not a complete exported host transcript",
+  "run_id": "P1-P03-V01-R1",
+  "executor": "/root/p1_p03_v01_r1",
+  "verification_mode": "static",
+  "model": null,
+  "model_identifier_status": "not_applicable",
+  "started_at": "2026-08-27T20:14:32Z",
+  "finished_at": "2026-08-27T20:26:07.089Z",
+  "user_timezone": "Asia/Ho_Chi_Minh",
+  "timestamp_note": "started_at is the first actual captured clock checkpoint after initial discovery/instruction reads, not an invented exact dispatch time. Later tool calls have JS Date UTC timestamps. Initial missing timestamps remain null. Final serialization is not recursively logged.",
+  "authorization": {
+    "scope": "Read-only static documentation/evidence audit against P03's four invariants",
+    "write_scope": "/private/tmp/thien-rpc-phase3.xGeed0/P1-P03-V01-R1",
+    "network": "not_used",
+    "installation": "not_performed",
+    "git_mutations": "not_performed",
+    "source_document_fixture_snapshot_edits": "none",
+    "new_behavioral_runs": "none"
+  },
+  "dispatch_clarification": {
+    "received_at": null,
+    "parent": "/root",
+    "condition": "The first dispatch was accidentally truncated in the release-document list.",
+    "clarification": "Parent directed the reviewer to tests/phase-3/runs/P1-P03-V01-R1/dispatch-prompt.txt, which adopted prompt.txt and expressly limited the work to a static evidence review with no source/fixture/doc edits.",
+    "applied": true,
+    "scope_effect": "No task action beyond initial reading relied on the truncated dispatch; complete saved scope governed the audit."
+  },
+  "supplemental_parent_evidence": {
+    "received_at": null,
+    "paths": [
+      "tests/phase-3/static/final-verification-commands.json",
+      "tests/phase-3/static/final-build-idempotence.json"
+    ],
+    "treatment": "Inspected retained actual results only; did not rerun tooling/build suite. Parent stated reviewed release documents had not changed; 71 final input hashes were rechecked unchanged."
+  },
+  "review_contract": {
+    "objective": "Review honest release claims, not every business answer afresh.",
+    "relationship": "peer_review",
+    "depth": "L1_targeted",
+    "profiles": [
+      "evidence_traceability",
+      "report_language_cross_artifact"
+    ],
+    "phase": "initial_review",
+    "control_overlay": "security_privacy_confidentiality",
+    "report_language": "en",
+    "qa_disposition": "ready",
+    "approval_status": "not_requested",
+    "remaining_release_gate": "incomplete before P03 registration",
+    "independence_limit": "Reviewer did not author the five source documents; same-team separate reviewer, not third-party assurance."
+  },
+  "source_files_read": [
+    "INSTALL.md",
+    "README.md",
+    "RELEASE-MANIFEST.yaml",
+    "docs/phase-1/ACCEPTANCE-MATRIX.yaml",
+    "docs/phase-3/PLATFORM-GUIDANCE.md",
+    "docs/phase-3/REPORT.md",
+    "scripts/run_tests.py",
+    "tests/acceptance-report.md",
+    "tests/behavioral-report.md",
+    "tests/phase-3/README.md",
+    "tests/phase-3/acceptance-matrix.json",
+    "tests/phase-3/reviews/P1-P01-V01-R1.json",
+    "tests/phase-3/reviews/P1-P02-V01-R1.json",
+    "tests/phase-3/reviews/P1-U01-V01-R2.json",
+    "tests/phase-3/reviews/P1-U02-V01-R2.json",
+    "tests/phase-3/reviews/P1-U03-V01-R1.json",
+    "tests/phase-3/reviews/P1-U04-V01-R2.json",
+    "tests/phase-3/reviews/P1-U05-V01-R1.json",
+    "tests/phase-3/reviews/P1-U06-V01-R1.json",
+    "tests/phase-3/reviews/P1-U07-V01-R1.json",
+    "tests/phase-3/reviews/P1-U08-V01-R1.json",
+    "tests/phase-3/reviews/P1-U08-V02-R1.json",
+    "tests/phase-3/reviews/P1-U08-V03-R1.json",
+    "tests/phase-3/reviews/P1-U09-V01-R1.json",
+    "tests/phase-3/reviews/P1-U10-V01-R1.json",
+    "tests/phase-3/reviews/P1-U11-V01-R1.json",
+    "tests/phase-3/reviews/P1-U12-V01-R1.json",
+    "tests/phase-3/reviews/P1-U13-V01-R1.json",
+    "tests/phase-3/reviews/P1-U14-V01-R1.json",
+    "tests/phase-3/reviews/P1-U15-V01-R1.json",
+    "tests/phase-3/reviews/P1-U15-V02-R1.json",
+    "tests/phase-3/reviews/P1-U15-V03-R1.json",
+    "tests/phase-3/reviews/P1-U16-V01-R1.json",
+    "tests/phase-3/reviews/P1-U16-V02-R1.json",
+    "tests/phase-3/reviews/P1-U17-V01-R1.json",
+    "tests/phase-3/reviews/P1-U17-V02-R1.json",
+    "tests/phase-3/reviews/P1-U18-V01-R1.json",
+    "tests/phase-3/reviews/P1-U19-V01-R2.json",
+    "tests/phase-3/reviews/P1-U20-V01-R1.json",
+    "tests/phase-3/reviews/P1-U20-V02-R1.json",
+    "tests/phase-3/reviews/P1-U21-V01-R1.json",
+    "tests/phase-3/reviews/P1-U22-V01-R1.json",
+    "tests/phase-3/reviews/group-P1-U15-R1.json",
+    "tests/phase-3/reviews/support/P1-U19-V01-R2-link-recheck.json",
+    "tests/phase-3/reviews/support/P1-U22-V01-R1-preservation-recheck.json",
+    "tests/phase-3/runs/P1-P01-V01-R1/artifacts/output.json",
+    "tests/phase-3/runs/P1-P02-V01-R1/artifacts/output.json",
+    "tests/phase-3/runs/P1-P03-V01-R1/dispatch-prompt.txt",
+    "tests/phase-3/runs/P1-P03-V01-R1/prompt.txt",
+    "tests/phase-3/runs/P1-U06-V01-R1/artifacts/output.md",
+    "tests/phase-3/runs/P1-U06-V01-R1/artifacts/tool-trace.json",
+    "tests/phase-3/runs/P1-U16-V01-R1/artifacts/document-evidence/native-inspection.json",
+    "tests/phase-3/runs/P1-U16-V01-R1/artifacts/document-evidence/tool-trace.json",
+    "tests/phase-3/runs/P1-U16-V01-R1/artifacts/output.md",
+    "tests/phase-3/runs/P1-U16-V01-R1/artifacts/specialist-dispatch-tool-call.json",
+    "tests/phase-3/runs/P1-U16-V01-R1/artifacts/specialist-dispatch.json",
+    "tests/phase-3/runs/P1-U16-V01-R1/artifacts/tool-trace.json",
+    "tests/phase-3/snapshots/round-1/manifest.json",
+    "tests/phase-3/snapshots/round-2/manifest.json",
+    "tests/phase-3/static/bounded-pattern-scan.json",
+    "tests/phase-3/static/canonical-structure.json",
+    "tests/phase-3/static/canonical-yaml.json",
+    "tests/phase-3/static/final-build-idempotence.json",
+    "tests/phase-3/static/final-verification-commands.json",
+    "tests/phase-3/static/fixture-integrity.json",
+    "tests/phase-3/static/legacy-registry.json",
+    "tests/phase-3/static/pre-release-report-review-results.json",
+    "tests/phase-3/static/tooling-tests.txt",
+    "tests/phase-3/tooling/README.md"
+  ],
+  "key_executed_tool_dependencies": [
+    "scripts/run_tests.py",
+    "scripts/phase3_evidence.py",
+    "skills/thien-skill-risk-process-control/scripts/validate_package.py"
+  ],
+  "skill_instruction_sources": [
+    "/Users/thiendeptrainhat/.agents/skills/thien-skill-qa-methodology/SKILL.md",
+    "/Users/thiendeptrainhat/.agents/skills/thien-skill-qa-methodology/references/methodology-core.md",
+    "/Users/thiendeptrainhat/.agents/skills/thien-skill-qa-methodology/references/source-evidence-traceability.md",
+    "/Users/thiendeptrainhat/.agents/skills/thien-skill-qa-methodology/references/report-language-cross-artifact.md",
+    "/Users/thiendeptrainhat/.agents/skills/thien-skill-qa-methodology/references/security-privacy-confidentiality.md",
+    "/Users/thiendeptrainhat/.agents/skills/thien-skill-qa-methodology/checks/check-catalog.yaml",
+    "/Users/thiendeptrainhat/.agents/skills/thien-skill-qa-methodology/templates/artifact-inventory.schema.yaml",
+    "/Users/thiendeptrainhat/.agents/skills/thien-skill-qa-methodology/templates/review-record.schema.yaml",
+    "/Users/thiendeptrainhat/.agents/skills/thien-skill-qa-methodology/templates/qa-disposition-handoff.schema.yaml",
+    "/Users/thiendeptrainhat/.agents/skills/thien-skill-qa-methodology/templates/common-definitions.schema.yaml"
+  ],
+  "mutable_derived_reads": [
+    {
+      "path": "tests/phase-3/evidence-index.json",
+      "read": true,
+      "hashed_receipt_input": false,
+      "reason": "Derived mutable assembly; actual reads retained in events."
+    },
+    {
+      "path": "tests/phase-3/acceptance-results.json",
+      "read": false,
+      "hashed_receipt_input": false,
+      "reason": "Final result will be regenerated after P03; used immutable pre-review result and actual fresh validator stdout."
+    }
+  ],
+  "events": [
+    {
+      "sequence": 1,
+      "tool": "exec_command",
+      "started_at": null,
+      "ended_at": null,
+      "operation": "Initial workspace/file-name discovery",
+      "command": "pwd\nrg --files -g AGENTS.md -g 'dispatch-prompt.txt' -g 'prompt.txt' -g 'README.md' -g 'INSTALL.md' -g 'RELEASE*' -g '!node_modules' -g '!vendor'",
+      "outcome": "Repository identified; filenames only",
+      "timing_note": "Before first captured clock timestamp; exact time not recorded."
+    },
+    {
+      "sequence": 2,
+      "tool": "exec_command",
+      "started_at": null,
+      "ended_at": null,
+      "operation": "Read actual clarified task",
+      "command": "sed -n '1,260p' 'tests/phase-3/runs/P1-P03-V01-R1/dispatch-prompt.txt'\nsed -n '1,240p' 'tests/phase-3/runs/P1-P03-V01-R1/prompt.txt'",
+      "outcome": "Read full saved dispatch and prompt; static audit scope confirmed",
+      "timing_note": "Before first captured clock timestamp; exact time not recorded."
+    },
+    {
+      "sequence": 3,
+      "tool": "exec_command",
+      "started_at": null,
+      "ended_at": "2026-08-27T20:14:32Z",
+      "operation": "Read QA skill, check ancestor AGENTS files and output-directory existence, obtain first actual clock timestamp",
+      "read_paths": [
+        "/Users/thiendeptrainhat/.agents/skills/thien-skill-qa-methodology/SKILL.md"
+      ],
+      "ancestor_checks": [
+        "/AGENTS.md",
+        "/Users/AGENTS.md",
+        "/Users/thiendeptrainhat/AGENTS.md",
+        "/Users/thiendeptrainhat/Documents/AGENTS.md",
+        "/Users/thiendeptrainhat/Documents/Thien's Skills Library/AGENTS.md",
+        "/Users/thiendeptrainhat/Documents/Thien's Skills Library/Thien-Risk-Process-Control/AGENTS.md"
+      ],
+      "outcome": "No ancestor AGENTS content returned. ls reported the assigned temp output directory absent; later apply_patch created it. date -u returned 2026-08-27T20:14:32Z.",
+      "timing_note": "Composite shell command finished at first captured timestamp; its start and individual subcommand times were not captured."
+    },
+    {
+      "sequence": 4,
+      "tool": "exec_command",
+      "started_at": null,
+      "ended_at": null,
+      "operation": "Supplementary QA instruction/reference reads and display-truncation recovery",
+      "read_paths": [
+        "/Users/thiendeptrainhat/.agents/skills/thien-skill-qa-methodology/references/security-privacy-confidentiality.md",
+        "/Users/thiendeptrainhat/.agents/skills/thien-skill-qa-methodology/checks/check-catalog.yaml",
+        "/Users/thiendeptrainhat/.agents/skills/thien-skill-qa-methodology/templates/artifact-inventory.schema.yaml",
+        "/Users/thiendeptrainhat/.agents/skills/thien-skill-qa-methodology/templates/review-record.schema.yaml",
+        "/Users/thiendeptrainhat/.agents/skills/thien-skill-qa-methodology/templates/qa-disposition-handoff.schema.yaml"
+      ],
+      "actual_read_ranges": [
+        "security-privacy-confidentiality.md: 1-300",
+        "check-catalog.yaml: 1-400; 401-800; 801-1200; recovered 340-890, 285-340 and 880-960",
+        "artifact-inventory.schema.yaml: 1-500",
+        "review-record.schema.yaml: 1-500",
+        "qa-disposition-handoff.schema.yaml: 1-500"
+      ],
+      "outcome": "Read required applicable guidance; several aggregate displays were truncated and the missing relevant spans were read again.",
+      "timing_note": "Exact timestamps were not attached to these reads; this is an executor-maintained read list, not a full host transcript."
+    },
+    {
+      "sequence": 5,
+      "tool": "exec_command",
+      "started_at": null,
+      "ended_at": null,
+      "operation": "Line counts and targeted matrix/validator discovery",
+      "read_paths": [
+        "README.md",
+        "INSTALL.md",
+        "RELEASE-MANIFEST.yaml",
+        "docs/phase-3/REPORT.md",
+        "docs/phase-3/PLATFORM-GUIDANCE.md",
+        "tests/phase-3/tooling/README.md",
+        "docs/phase-1/ACCEPTANCE-MATRIX.yaml",
+        "tests/phase-3/acceptance-matrix.json"
+      ],
+      "command_fragments": [
+        "wc -l (the listed documents)",
+        "rg -n 'P03|104|28|validator|validate_evidence|snapshot|legacy' docs/phase-1/ACCEPTANCE-MATRIX.yaml tests/phase-3/acceptance-matrix.json tests/phase-3/tooling/README.md"
+      ],
+      "outcome": "Located four P03 invariants and read-only validator command.",
+      "timing_note": "Exact time not recorded."
+    },
+    {
+      "sequence": 6,
+      "started_at": "2026-08-27T20:14:52.801Z",
+      "ended_at": "2026-08-27T20:14:52.990Z",
+      "tool": "exec_command",
+      "operation": "read_qa_instruction",
+      "path": "/Users/thiendeptrainhat/.agents/skills/thien-skill-qa-methodology/references/methodology-core.md",
+      "exit_code": 0,
+      "outcome": "read"
+    },
+    {
+      "sequence": 7,
+      "started_at": "2026-08-27T20:14:52.990Z",
+      "ended_at": "2026-08-27T20:14:53.163Z",
+      "tool": "exec_command",
+      "operation": "read_qa_instruction",
+      "path": "/Users/thiendeptrainhat/.agents/skills/thien-skill-qa-methodology/references/source-evidence-traceability.md",
+      "exit_code": 0,
+      "outcome": "read"
+    },
+    {
+      "sequence": 8,
+      "started_at": "2026-08-27T20:14:53.163Z",
+      "ended_at": "2026-08-27T20:14:53.342Z",
+      "tool": "exec_command",
+      "operation": "read_qa_instruction",
+      "path": "/Users/thiendeptrainhat/.agents/skills/thien-skill-qa-methodology/references/report-language-cross-artifact.md",
+      "exit_code": 0,
+      "outcome": "read"
+    },
+    {
+      "sequence": 9,
+      "started_at": "2026-08-27T20:14:53.342Z",
+      "ended_at": "2026-08-27T20:14:53.514Z",
+      "tool": "exec_command",
+      "operation": "read_qa_instruction",
+      "path": "/Users/thiendeptrainhat/.agents/skills/thien-skill-qa-methodology/references/security-privacy-confidentiality.md",
+      "exit_code": 0,
+      "outcome": "read"
+    },
+    {
+      "sequence": 10,
+      "started_at": "2026-08-27T20:14:53.514Z",
+      "ended_at": "2026-08-27T20:14:53.686Z",
+      "tool": "exec_command",
+      "operation": "read_qa_instruction",
+      "path": "/Users/thiendeptrainhat/.agents/skills/thien-skill-qa-methodology/checks/check-catalog.yaml",
+      "exit_code": 0,
+      "outcome": "read"
+    },
+    {
+      "sequence": 11,
+      "started_at": "2026-08-27T20:15:55.485Z",
+      "ended_at": "2026-08-27T20:15:55.676Z",
+      "tool": "exec_command",
+      "command": "nl -ba 'README.md'",
+      "exit_code": 0,
+      "read_paths": [
+        "README.md"
+      ],
+      "outcome": "read_complete"
+    },
+    {
+      "sequence": 12,
+      "started_at": "2026-08-27T20:15:55.676Z",
+      "ended_at": "2026-08-27T20:15:55.857Z",
+      "tool": "exec_command",
+      "command": "nl -ba 'INSTALL.md'",
+      "exit_code": 0,
+      "read_paths": [
+        "INSTALL.md"
+      ],
+      "outcome": "read_complete"
+    },
+    {
+      "sequence": 13,
+      "started_at": "2026-08-27T20:15:55.857Z",
+      "ended_at": "2026-08-27T20:15:56.038Z",
+      "tool": "exec_command",
+      "command": "nl -ba 'RELEASE-MANIFEST.yaml'",
+      "exit_code": 0,
+      "read_paths": [
+        "RELEASE-MANIFEST.yaml"
+      ],
+      "outcome": "read_complete"
+    },
+    {
+      "sequence": 14,
+      "started_at": "2026-08-27T20:15:56.038Z",
+      "ended_at": "2026-08-27T20:15:56.216Z",
+      "tool": "exec_command",
+      "command": "nl -ba 'docs/phase-3/REPORT.md'",
+      "exit_code": 0,
+      "read_paths": [
+        "docs/phase-3/REPORT.md"
+      ],
+      "outcome": "read_complete"
+    },
+    {
+      "sequence": 15,
+      "started_at": "2026-08-27T20:15:56.217Z",
+      "ended_at": "2026-08-27T20:15:56.395Z",
+      "tool": "exec_command",
+      "command": "nl -ba 'docs/phase-3/PLATFORM-GUIDANCE.md'",
+      "exit_code": 0,
+      "read_paths": [
+        "docs/phase-3/PLATFORM-GUIDANCE.md"
+      ],
+      "outcome": "read_complete"
+    },
+    {
+      "sequence": 16,
+      "started_at": "2026-08-27T20:15:56.395Z",
+      "ended_at": "2026-08-27T20:15:56.572Z",
+      "tool": "exec_command",
+      "command": "nl -ba 'tests/phase-3/tooling/README.md'",
+      "exit_code": 0,
+      "read_paths": [
+        "tests/phase-3/tooling/README.md"
+      ],
+      "outcome": "read_complete"
+    },
+    {
+      "sequence": 17,
+      "started_at": "2026-08-27T20:15:56.572Z",
+      "ended_at": "2026-08-27T20:15:56.754Z",
+      "tool": "exec_command",
+      "command": "sed -n '425,515p' docs/phase-1/ACCEPTANCE-MATRIX.yaml\nsed -n '679,760p' tests/phase-3/acceptance-matrix.json\nsed -n '775,855p' tests/phase-3/acceptance-matrix.json",
+      "exit_code": 0,
+      "read_paths": [
+        "docs/phase-1/ACCEPTANCE-MATRIX.yaml",
+        "tests/phase-3/acceptance-matrix.json"
+      ],
+      "outcome": "read_P03_and_gate_criteria"
+    },
+    {
+      "sequence": 18,
+      "started_at": "2026-08-27T20:16:04.553Z",
+      "ended_at": "2026-08-27T20:16:04.747Z",
+      "tool": "exec_command",
+      "command": "nl -ba 'INSTALL.md'",
+      "exit_code": 0,
+      "read_paths": [
+        "INSTALL.md"
+      ],
+      "outcome": "reread_after_aggregate_display_truncation"
+    },
+    {
+      "sequence": 19,
+      "started_at": "2026-08-27T20:16:04.747Z",
+      "ended_at": "2026-08-27T20:16:04.928Z",
+      "tool": "exec_command",
+      "command": "nl -ba 'RELEASE-MANIFEST.yaml'",
+      "exit_code": 0,
+      "read_paths": [
+        "RELEASE-MANIFEST.yaml"
+      ],
+      "outcome": "reread_after_aggregate_display_truncation"
+    },
+    {
+      "sequence": 20,
+      "started_at": "2026-08-27T20:16:11.148Z",
+      "ended_at": "2026-08-27T20:16:11.338Z",
+      "tool": "exec_command",
+      "command": "nl -ba 'docs/phase-3/REPORT.md'",
+      "exit_code": 0,
+      "read_paths": [
+        "docs/phase-3/REPORT.md"
+      ],
+      "outcome": "reread_after_aggregate_display_truncation"
+    },
+    {
+      "sequence": 21,
+      "started_at": "2026-08-27T20:16:11.338Z",
+      "ended_at": "2026-08-27T20:16:11.530Z",
+      "tool": "exec_command",
+      "command": "nl -ba 'docs/phase-3/PLATFORM-GUIDANCE.md'",
+      "exit_code": 0,
+      "read_paths": [
+        "docs/phase-3/PLATFORM-GUIDANCE.md"
+      ],
+      "outcome": "reread_after_aggregate_display_truncation"
+    },
+    {
+      "sequence": 22,
+      "started_at": "2026-08-27T20:16:31.131Z",
+      "ended_at": "2026-08-27T20:16:31.326Z",
+      "tool": "exec_command",
+      "command": "command -v jq\nrg --files tests/phase-3/static tests/phase-3/reviews tests/phase-3/runs/P1-P01-V01-R1 tests/phase-3/runs/P1-P02-V01-R1 tests/phase-3/snapshots/round-2 | sort",
+      "exit_code": 0,
+      "outcome": "read_and_discover_evidence"
+    },
+    {
+      "sequence": 23,
+      "started_at": "2026-08-27T20:16:31.327Z",
+      "ended_at": "2026-08-27T20:16:31.520Z",
+      "tool": "exec_command",
+      "command": "jq 'keys' tests/phase-3/static/pre-release-report-review-results.json\njq 'keys' tests/phase-3/evidence-index.json\njq 'keys' tests/phase-3/static/final-verification-commands.json\njq 'keys' tests/phase-3/static/final-build-idempotence.json",
+      "exit_code": 0,
+      "outcome": "read_and_discover_evidence"
+    },
+    {
+      "sequence": 24,
+      "started_at": "2026-08-27T20:16:31.520Z",
+      "ended_at": "2026-08-27T20:16:31.706Z",
+      "tool": "exec_command",
+      "command": "rg -n 'phase3|write.results|validate_phase3|phase3_evidence' scripts/run_tests.py\nsed -n '1,130p' tests/phase-3/README.md",
+      "exit_code": 0,
+      "outcome": "read_and_discover_evidence"
+    },
+    {
+      "sequence": 25,
+      "started_at": "2026-08-27T20:16:53.399Z",
+      "ended_at": "2026-08-27T20:16:53.601Z",
+      "tool": "exec_command",
+      "command": "jq '{generated_at,integrity_status,acceptance_status,error_count,errors,evidence_counts,current_release_gate,legacy_static_registry,per_platform,claims_by_context,group_reviews,limitations}' tests/phase-3/static/pre-release-report-review-results.json",
+      "exit_code": 0,
+      "outcome": "read_primary_evidence_and_readonly_validator_route"
+    },
+    {
+      "sequence": 26,
+      "started_at": "2026-08-27T20:16:53.601Z",
+      "ended_at": "2026-08-27T20:16:53.788Z",
+      "tool": "exec_command",
+      "command": "jq '.' tests/phase-3/runs/P1-P01-V01-R1/artifacts/output.json tests/phase-3/runs/P1-P02-V01-R1/artifacts/output.json\njq '.' tests/phase-3/reviews/P1-P01-V01-R1.json tests/phase-3/reviews/P1-P02-V01-R1.json",
+      "exit_code": 0,
+      "outcome": "read_primary_evidence_and_readonly_validator_route"
+    },
+    {
+      "sequence": 27,
+      "started_at": "2026-08-27T20:16:53.788Z",
+      "ended_at": "2026-08-27T20:16:53.959Z",
+      "tool": "exec_command",
+      "command": "sed -n '410,488p' scripts/run_tests.py",
+      "exit_code": 0,
+      "outcome": "read_primary_evidence_and_readonly_validator_route"
+    },
+    {
+      "sequence": 28,
+      "started_at": "2026-08-27T20:17:07.961Z",
+      "ended_at": "2026-08-27T20:17:08.950Z",
+      "tool": "exec_command",
+      "command": "python3 -B scripts/run_tests.py --phase3 --json",
+      "exit_code": 0,
+      "outcome": "completed",
+      "raw_stdout_characters": 110322,
+      "output_token_count": 27583
+    },
+    {
+      "sequence": 29,
+      "started_at": "2026-08-27T20:17:24.921Z",
+      "ended_at": "2026-08-27T20:17:29.805Z",
+      "tool": "apply_patch",
+      "operation": "retain_parsed_actual_validator_stdout",
+      "path": "/private/tmp/thien-rpc-phase3.xGeed0/P1-P03-V01-R1/validator-output.json",
+      "outcome": "written",
+      "note": "JSON formatting preserved semantically; no fabricated or removed result fields."
+    },
+    {
+      "sequence": 30,
+      "started_at": "2026-08-27T20:17:29.805Z",
+      "ended_at": "2026-08-27T20:17:29.984Z",
+      "tool": "exec_command",
+      "command": "jq '{status,checks,packages,preserved_historical_files,limitations}' tests/phase-3/runs/P1-P01-V01-R1/artifacts/output.json tests/phase-3/runs/P1-P02-V01-R1/artifacts/output.json",
+      "exit_code": 0,
+      "outcome": "read_P01_P02_material_fields"
+    },
+    {
+      "sequence": 31,
+      "started_at": "2026-08-27T20:17:51.830Z",
+      "ended_at": "2026-08-27T20:17:52.029Z",
+      "tool": "exec_command",
+      "command": "jq -s '{reviews:length,status_counts:(group_by(.result)|map({status:.[0].result,count:length})),rows:map({run_id,result,reviewer,check_count:(.checks|length),nonpass_checks:[.checks|to_entries[]|select(.value.result!=\"pass\")],missing_evidence_checks:[.checks|to_entries[]|select((.value.evidence_refs|length)==0)],rubric_source_sha256,limitations})}' tests/phase-3/reviews/P1-U*.json",
+      "exit_code": 0,
+      "outcome": "read_current_review_metadata_checks_and_legacy"
+    },
+    {
+      "sequence": 32,
+      "started_at": "2026-08-27T20:17:52.029Z",
+      "ended_at": "2026-08-27T20:17:52.210Z",
+      "tool": "exec_command",
+      "command": "jq '.' tests/phase-3/reviews/group-P1-U15-R1.json\njq '{schema_version,skill_id,skill_version,source_root,canonical_source,file_count:(.files|length),content_sha256}' tests/phase-3/snapshots/round-2/manifest.json",
+      "exit_code": 0,
+      "outcome": "read_current_review_metadata_checks_and_legacy"
+    },
+    {
+      "sequence": 33,
+      "started_at": "2026-08-27T20:17:52.211Z",
+      "ended_at": "2026-08-27T20:17:52.397Z",
+      "tool": "exec_command",
+      "command": "sed -n '1,115p' tests/acceptance-report.md\nsed -n '1,105p' tests/behavioral-report.md\njq '{status,case_count,expected_case_count,behavioral,error_count}' tests/phase-3/static/legacy-registry.json",
+      "exit_code": 0,
+      "outcome": "read_current_review_metadata_checks_and_legacy"
+    },
+    {
+      "sequence": 34,
+      "started_at": "2026-08-27T20:18:16.188Z",
+      "ended_at": "2026-08-27T20:18:16.385Z",
+      "tool": "exec_command",
+      "command": "jq -c . 'tests/phase-3/static/canonical-structure.json'",
+      "exit_code": 0,
+      "read_paths": [
+        "tests/phase-3/static/canonical-structure.json"
+      ],
+      "outcome": "parsed_static_evidence"
+    },
+    {
+      "sequence": 35,
+      "started_at": "2026-08-27T20:18:16.385Z",
+      "ended_at": "2026-08-27T20:18:16.565Z",
+      "tool": "exec_command",
+      "command": "jq -c . 'tests/phase-3/static/canonical-yaml.json'",
+      "exit_code": 0,
+      "read_paths": [
+        "tests/phase-3/static/canonical-yaml.json"
+      ],
+      "outcome": "parsed_static_evidence"
+    },
+    {
+      "sequence": 36,
+      "started_at": "2026-08-27T20:18:16.565Z",
+      "ended_at": "2026-08-27T20:18:16.743Z",
+      "tool": "exec_command",
+      "command": "jq -c . 'tests/phase-3/static/fixture-integrity.json'",
+      "exit_code": 0,
+      "read_paths": [
+        "tests/phase-3/static/fixture-integrity.json"
+      ],
+      "outcome": "parsed_static_evidence"
+    },
+    {
+      "sequence": 37,
+      "started_at": "2026-08-27T20:18:16.743Z",
+      "ended_at": "2026-08-27T20:18:16.925Z",
+      "tool": "exec_command",
+      "command": "jq -c . 'tests/phase-3/static/final-verification-commands.json'",
+      "exit_code": 0,
+      "read_paths": [
+        "tests/phase-3/static/final-verification-commands.json"
+      ],
+      "outcome": "parsed_static_evidence"
+    },
+    {
+      "sequence": 38,
+      "started_at": "2026-08-27T20:18:16.925Z",
+      "ended_at": "2026-08-27T20:18:17.108Z",
+      "tool": "exec_command",
+      "command": "jq -c . 'tests/phase-3/static/final-build-idempotence.json'",
+      "exit_code": 0,
+      "read_paths": [
+        "tests/phase-3/static/final-build-idempotence.json"
+      ],
+      "outcome": "parsed_static_evidence"
+    },
+    {
+      "sequence": 39,
+      "started_at": "2026-08-27T20:18:17.108Z",
+      "ended_at": "2026-08-27T20:18:17.289Z",
+      "tool": "exec_command",
+      "command": "jq -c . 'tests/phase-3/static/bounded-pattern-scan.json'",
+      "exit_code": 0,
+      "read_paths": [
+        "tests/phase-3/static/bounded-pattern-scan.json"
+      ],
+      "outcome": "parsed_static_evidence"
+    },
+    {
+      "sequence": 40,
+      "started_at": "2026-08-27T20:18:17.289Z",
+      "ended_at": "2026-08-27T20:18:17.467Z",
+      "tool": "exec_command",
+      "command": "jq -c . 'tests/phase-3/reviews/support/P1-U19-V01-R2-link-recheck.json'",
+      "exit_code": 0,
+      "read_paths": [
+        "tests/phase-3/reviews/support/P1-U19-V01-R2-link-recheck.json"
+      ],
+      "outcome": "parsed_static_evidence"
+    },
+    {
+      "sequence": 41,
+      "started_at": "2026-08-27T20:18:17.467Z",
+      "ended_at": "2026-08-27T20:18:17.646Z",
+      "tool": "exec_command",
+      "command": "jq -c . 'tests/phase-3/reviews/support/P1-U22-V01-R1-preservation-recheck.json'",
+      "exit_code": 0,
+      "read_paths": [
+        "tests/phase-3/reviews/support/P1-U22-V01-R1-preservation-recheck.json"
+      ],
+      "outcome": "parsed_static_evidence"
+    },
+    {
+      "sequence": 42,
+      "started_at": "2026-08-27T20:18:45.566Z",
+      "ended_at": "2026-08-27T20:18:45.757Z",
+      "tool": "exec_command",
+      "command": "jq '{schema_version,matrix_source_sha256,run_count:(.runs|length),first_run:.runs[0],group_reviews}' tests/phase-3/evidence-index.json\njq 'keys' tests/phase-3/runs/P1-U06-V01-R1/artifacts/tool-trace.json tests/phase-3/runs/P1-U16-V01-R1/artifacts/tool-trace.json\nwc -l tests/phase-3/runs/P1-U06-V01-R1/artifacts/output.md tests/phase-3/runs/P1-U16-V01-R1/artifacts/output.md",
+      "exit_code": 0,
+      "outcome": "read_mutable_index_summary_and_discover_targeted_raw_evidence",
+      "receipt_excluded_paths": [
+        "tests/phase-3/evidence-index.json"
+      ]
+    },
+    {
+      "sequence": 43,
+      "started_at": "2026-08-27T20:19:07.528Z",
+      "ended_at": "2026-08-27T20:19:07.735Z",
+      "tool": "exec_command",
+      "command": "nl -ba tests/phase-3/runs/P1-U06-V01-R1/artifacts/output.md\njq '{trace_scope,started_at,finished_at,timestamp_note,source_warnings,external_sources,tool_calls,capability_limitations,final_validation}' tests/phase-3/runs/P1-U06-V01-R1/artifacts/tool-trace.json\nnl -ba tests/phase-3/runs/P1-U16-V01-R1/artifacts/output.md\njq '{record_type,started_at,finished_at,timing_note,specialist_execution,source_warnings,capability_limitations,review_status}' tests/phase-3/runs/P1-U16-V01-R1/artifacts/tool-trace.json",
+      "exit_code": 0,
+      "read_paths": [
+        "tests/phase-3/runs/P1-U06-V01-R1/artifacts/output.md",
+        "tests/phase-3/runs/P1-U06-V01-R1/artifacts/tool-trace.json",
+        "tests/phase-3/runs/P1-U16-V01-R1/artifacts/output.md",
+        "tests/phase-3/runs/P1-U16-V01-R1/artifacts/tool-trace.json"
+      ],
+      "outcome": "targeted_live_lookup_handoff_claim_challenge"
+    },
+    {
+      "sequence": 44,
+      "started_at": "2026-08-27T20:19:38.696Z",
+      "ended_at": "2026-08-27T20:19:38.893Z",
+      "tool": "exec_command",
+      "command": "jq -c . tests/phase-3/runs/P1-U06-V01-R1/artifacts/tool-trace.json",
+      "exit_code": 0,
+      "outcome": "parsed_full_U06_trace_and_inspected_web_calls"
+    },
+    {
+      "sequence": 45,
+      "started_at": "2026-08-27T20:19:38.893Z",
+      "ended_at": "2026-08-27T20:19:39.081Z",
+      "tool": "exec_command",
+      "command": "rg --files tests/phase-3/runs/P1-U16-V01-R1/artifacts\njq '{checks}' tests/phase-3/reviews/P1-U06-V01-R1.json tests/phase-3/reviews/P1-U16-V01-R1.json",
+      "exit_code": 0,
+      "outcome": "selected_per_invariant_review_rationales_and_handoff_file_discovery"
+    },
+    {
+      "sequence": 46,
+      "started_at": "2026-08-27T20:20:36.567Z",
+      "ended_at": "2026-08-27T20:20:36.770Z",
+      "tool": "exec_command",
+      "command": "jq '.' tests/phase-3/runs/P1-U16-V01-R1/artifacts/specialist-dispatch-tool-call.json tests/phase-3/runs/P1-U16-V01-R1/artifacts/specialist-dispatch.json\njq 'keys' tests/phase-3/runs/P1-U16-V01-R1/artifacts/document-evidence/tool-trace.json\njq '.' tests/phase-3/runs/P1-U16-V01-R1/artifacts/document-evidence/native-inspection.json",
+      "exit_code": 0,
+      "outcome": "final_targeted_evidence_and_schema_type_read"
+    },
+    {
+      "sequence": 47,
+      "started_at": "2026-08-27T20:20:36.771Z",
+      "ended_at": "2026-08-27T20:20:36.957Z",
+      "tool": "exec_command",
+      "command": "tail -n 6 tests/phase-3/static/tooling-tests.txt\njq '{generated_at,integrity_status,acceptance_status,error_count,evidence_counts,gate:.current_release_gate.status,contexts:[.claims_by_context[]|{context_id,verification_mode,snapshot_hash:.snapshot.content_sha256,current:.snapshot.matches_current_canonical,claims:(.claims|with_entries(.value={status:.value.status,eligible_for_current_release:.value.eligible_for_current_release}))}],missing_variants:[.variant_coverage[]|select(.execution_status==\"not_run\")],legacy:{case_count:.legacy_static_registry.case_count,behavioral:.legacy_static_registry.behavioral}}' tests/phase-3/static/pre-release-report-review-results.json",
+      "exit_code": 0,
+      "outcome": "final_targeted_evidence_and_schema_type_read"
+    },
+    {
+      "sequence": 48,
+      "started_at": "2026-08-27T20:20:36.958Z",
+      "ended_at": "2026-08-27T20:20:37.140Z",
+      "tool": "exec_command",
+      "command": "sed -n '1,200p' /Users/thiendeptrainhat/.agents/skills/thien-skill-qa-methodology/templates/common-definitions.schema.yaml",
+      "exit_code": 0,
+      "outcome": "final_targeted_evidence_and_schema_type_read"
+    },
+    {
+      "sequence": 49,
+      "started_at": "2026-08-27T20:21:36.620Z",
+      "ended_at": "2026-08-27T20:21:36.819Z",
+      "tool": "exec_command",
+      "command": "jq '{methods,coverage,tool_call_count:(.tool_calls|length),unresolved_review_items,network_activity,external_messages,human_approval_status,source_modification,readiness}' tests/phase-3/runs/P1-U16-V01-R1/artifacts/document-evidence/tool-trace.json\njq '{skill_id,skill_version,source_root,canonical_source,file_count:(.files|length)}' tests/phase-3/snapshots/round-1/manifest.json\njq '[.runs[]|select(.verification_mode==\"model\" and .skill_snapshot.path==\"tests/phase-3/snapshots/round-2/manifest.json\")]|{current_model_runs:length,capability_profiles:(group_by(.runtime.capability_simulation)|map({simulated:.[0].runtime.capability_simulation,count:length}))}' tests/phase-3/evidence-index.json",
+      "exit_code": 0,
+      "outcome": "inspect_specialist_trace_history_and_capability_scope",
+      "receipt_excluded_paths": [
+        "tests/phase-3/evidence-index.json"
+      ]
+    },
+    {
+      "sequence": 50,
+      "started_at": "2026-08-27T20:21:52.414Z",
+      "ended_at": "2026-08-27T20:21:52.630Z",
+      "tool": "exec_command",
+      "command": "shasum -a 256 'INSTALL.md' 'README.md' 'RELEASE-MANIFEST.yaml' 'docs/phase-1/ACCEPTANCE-MATRIX.yaml' 'docs/phase-3/PLATFORM-GUIDANCE.md' 'docs/phase-3/REPORT.md' 'scripts/phase3_evidence.py' 'scripts/run_tests.py' 'skills/thien-skill-risk-process-control/scripts/validate_package.py' 'tests/acceptance-report.md' 'tests/behavioral-report.md' 'tests/phase-3/README.md' 'tests/phase-3/acceptance-matrix.json' 'tests/phase-3/reviews/P1-P01-V01-R1.json' 'tests/phase-3/reviews/P1-P02-V01-R1.json' 'tests/phase-3/reviews/P1-U01-V01-R2.json' 'tests/phase-3/reviews/P1-U02-V01-R2.json' 'tests/phase-3/reviews/P1-U03-V01-R1.json' 'tests/phase-3/reviews/P1-U04-V01-R2.json' 'tests/phase-3/reviews/P1-U05-V01-R1.json' 'tests/phase-3/reviews/P1-U06-V01-R1.json' 'tests/phase-3/reviews/P1-U07-V01-R1.json' 'tests/phase-3/reviews/P1-U08-V01-R1.json' 'tests/phase-3/reviews/P1-U08-V02-R1.json' 'tests/phase-3/reviews/P1-U08-V03-R1.json' 'tests/phase-3/reviews/P1-U09-V01-R1.json' 'tests/phase-3/reviews/P1-U10-V01-R1.json' 'tests/phase-3/reviews/P1-U11-V01-R1.json' 'tests/phase-3/reviews/P1-U12-V01-R1.json' 'tests/phase-3/reviews/P1-U13-V01-R1.json' 'tests/phase-3/reviews/P1-U14-V01-R1.json' 'tests/phase-3/reviews/P1-U15-V01-R1.json' 'tests/phase-3/reviews/P1-U15-V02-R1.json' 'tests/phase-3/reviews/P1-U15-V03-R1.json' 'tests/phase-3/reviews/P1-U16-V01-R1.json' 'tests/phase-3/reviews/P1-U16-V02-R1.json' 'tests/phase-3/reviews/P1-U17-V01-R1.json' 'tests/phase-3/reviews/P1-U17-V02-R1.json' 'tests/phase-3/reviews/P1-U18-V01-R1.json' 'tests/phase-3/reviews/P1-U19-V01-R2.json' 'tests/phase-3/reviews/P1-U20-V01-R1.json' 'tests/phase-3/reviews/P1-U20-V02-R1.json' 'tests/phase-3/reviews/P1-U21-V01-R1.json' 'tests/phase-3/reviews/P1-U22-V01-R1.json' 'tests/phase-3/reviews/group-P1-U15-R1.json' 'tests/phase-3/reviews/support/P1-U19-V01-R2-link-recheck.json' 'tests/phase-3/reviews/support/P1-U22-V01-R1-preservation-recheck.json' 'tests/phase-3/runs/P1-P01-V01-R1/artifacts/output.json' 'tests/phase-3/runs/P1-P02-V01-R1/artifacts/output.json' 'tests/phase-3/runs/P1-P03-V01-R1/dispatch-prompt.txt' 'tests/phase-3/runs/P1-P03-V01-R1/prompt.txt' 'tests/phase-3/runs/P1-U06-V01-R1/artifacts/output.md' 'tests/phase-3/runs/P1-U06-V01-R1/artifacts/tool-trace.json' 'tests/phase-3/runs/P1-U16-V01-R1/artifacts/document-evidence/native-inspection.json' 'tests/phase-3/runs/P1-U16-V01-R1/artifacts/document-evidence/tool-trace.json' 'tests/phase-3/runs/P1-U16-V01-R1/artifacts/output.md' 'tests/phase-3/runs/P1-U16-V01-R1/artifacts/specialist-dispatch-tool-call.json' 'tests/phase-3/runs/P1-U16-V01-R1/artifacts/specialist-dispatch.json' 'tests/phase-3/runs/P1-U16-V01-R1/artifacts/tool-trace.json' 'tests/phase-3/snapshots/round-1/manifest.json' 'tests/phase-3/snapshots/round-2/manifest.json' 'tests/phase-3/static/bounded-pattern-scan.json' 'tests/phase-3/static/canonical-structure.json' 'tests/phase-3/static/canonical-yaml.json' 'tests/phase-3/static/final-build-idempotence.json' 'tests/phase-3/static/final-verification-commands.json' 'tests/phase-3/static/fixture-integrity.json' 'tests/phase-3/static/legacy-registry.json' 'tests/phase-3/static/pre-release-report-review-results.json' 'tests/phase-3/static/tooling-tests.txt' 'tests/phase-3/tooling/README.md'",
+      "exit_code": 0,
+      "read_paths": [
+        "INSTALL.md",
+        "README.md",
+        "RELEASE-MANIFEST.yaml",
+        "docs/phase-1/ACCEPTANCE-MATRIX.yaml",
+        "docs/phase-3/PLATFORM-GUIDANCE.md",
+        "docs/phase-3/REPORT.md",
+        "scripts/phase3_evidence.py",
+        "scripts/run_tests.py",
+        "skills/thien-skill-risk-process-control/scripts/validate_package.py",
+        "tests/acceptance-report.md",
+        "tests/behavioral-report.md",
+        "tests/phase-3/README.md",
+        "tests/phase-3/acceptance-matrix.json",
+        "tests/phase-3/reviews/P1-P01-V01-R1.json",
+        "tests/phase-3/reviews/P1-P02-V01-R1.json",
+        "tests/phase-3/reviews/P1-U01-V01-R2.json",
+        "tests/phase-3/reviews/P1-U02-V01-R2.json",
+        "tests/phase-3/reviews/P1-U03-V01-R1.json",
+        "tests/phase-3/reviews/P1-U04-V01-R2.json",
+        "tests/phase-3/reviews/P1-U05-V01-R1.json",
+        "tests/phase-3/reviews/P1-U06-V01-R1.json",
+        "tests/phase-3/reviews/P1-U07-V01-R1.json",
+        "tests/phase-3/reviews/P1-U08-V01-R1.json",
+        "tests/phase-3/reviews/P1-U08-V02-R1.json",
+        "tests/phase-3/reviews/P1-U08-V03-R1.json",
+        "tests/phase-3/reviews/P1-U09-V01-R1.json",
+        "tests/phase-3/reviews/P1-U10-V01-R1.json",
+        "tests/phase-3/reviews/P1-U11-V01-R1.json",
+        "tests/phase-3/reviews/P1-U12-V01-R1.json",
+        "tests/phase-3/reviews/P1-U13-V01-R1.json",
+        "tests/phase-3/reviews/P1-U14-V01-R1.json",
+        "tests/phase-3/reviews/P1-U15-V01-R1.json",
+        "tests/phase-3/reviews/P1-U15-V02-R1.json",
+        "tests/phase-3/reviews/P1-U15-V03-R1.json",
+        "tests/phase-3/reviews/P1-U16-V01-R1.json",
+        "tests/phase-3/reviews/P1-U16-V02-R1.json",
+        "tests/phase-3/reviews/P1-U17-V01-R1.json",
+        "tests/phase-3/reviews/P1-U17-V02-R1.json",
+        "tests/phase-3/reviews/P1-U18-V01-R1.json",
+        "tests/phase-3/reviews/P1-U19-V01-R2.json",
+        "tests/phase-3/reviews/P1-U20-V01-R1.json",
+        "tests/phase-3/reviews/P1-U20-V02-R1.json",
+        "tests/phase-3/reviews/P1-U21-V01-R1.json",
+        "tests/phase-3/reviews/P1-U22-V01-R1.json",
+        "tests/phase-3/reviews/group-P1-U15-R1.json",
+        "tests/phase-3/reviews/support/P1-U19-V01-R2-link-recheck.json",
+        "tests/phase-3/reviews/support/P1-U22-V01-R1-preservation-recheck.json",
+        "tests/phase-3/runs/P1-P01-V01-R1/artifacts/output.json",
+        "tests/phase-3/runs/P1-P02-V01-R1/artifacts/output.json",
+        "tests/phase-3/runs/P1-P03-V01-R1/dispatch-prompt.txt",
+        "tests/phase-3/runs/P1-P03-V01-R1/prompt.txt",
+        "tests/phase-3/runs/P1-U06-V01-R1/artifacts/output.md",
+        "tests/phase-3/runs/P1-U06-V01-R1/artifacts/tool-trace.json",
+        "tests/phase-3/runs/P1-U16-V01-R1/artifacts/document-evidence/native-inspection.json",
+        "tests/phase-3/runs/P1-U16-V01-R1/artifacts/document-evidence/tool-trace.json",
+        "tests/phase-3/runs/P1-U16-V01-R1/artifacts/output.md",
+        "tests/phase-3/runs/P1-U16-V01-R1/artifacts/specialist-dispatch-tool-call.json",
+        "tests/phase-3/runs/P1-U16-V01-R1/artifacts/specialist-dispatch.json",
+        "tests/phase-3/runs/P1-U16-V01-R1/artifacts/tool-trace.json",
+        "tests/phase-3/snapshots/round-1/manifest.json",
+        "tests/phase-3/snapshots/round-2/manifest.json",
+        "tests/phase-3/static/bounded-pattern-scan.json",
+        "tests/phase-3/static/canonical-structure.json",
+        "tests/phase-3/static/canonical-yaml.json",
+        "tests/phase-3/static/final-build-idempotence.json",
+        "tests/phase-3/static/final-verification-commands.json",
+        "tests/phase-3/static/fixture-integrity.json",
+        "tests/phase-3/static/legacy-registry.json",
+        "tests/phase-3/static/pre-release-report-review-results.json",
+        "tests/phase-3/static/tooling-tests.txt",
+        "tests/phase-3/tooling/README.md"
+      ],
+      "outcome": "captured_hashes",
+      "output_lines": 71
+    },
+    {
+      "sequence": 51,
+      "started_at": "2026-08-27T20:21:52.630Z",
+      "ended_at": "2026-08-27T20:21:52.841Z",
+      "tool": "exec_command",
+      "command": "stat -f '%N|%z|%m' 'INSTALL.md' 'README.md' 'RELEASE-MANIFEST.yaml' 'docs/phase-1/ACCEPTANCE-MATRIX.yaml' 'docs/phase-3/PLATFORM-GUIDANCE.md' 'docs/phase-3/REPORT.md' 'scripts/phase3_evidence.py' 'scripts/run_tests.py' 'skills/thien-skill-risk-process-control/scripts/validate_package.py' 'tests/acceptance-report.md' 'tests/behavioral-report.md' 'tests/phase-3/README.md' 'tests/phase-3/acceptance-matrix.json' 'tests/phase-3/reviews/P1-P01-V01-R1.json' 'tests/phase-3/reviews/P1-P02-V01-R1.json' 'tests/phase-3/reviews/P1-U01-V01-R2.json' 'tests/phase-3/reviews/P1-U02-V01-R2.json' 'tests/phase-3/reviews/P1-U03-V01-R1.json' 'tests/phase-3/reviews/P1-U04-V01-R2.json' 'tests/phase-3/reviews/P1-U05-V01-R1.json' 'tests/phase-3/reviews/P1-U06-V01-R1.json' 'tests/phase-3/reviews/P1-U07-V01-R1.json' 'tests/phase-3/reviews/P1-U08-V01-R1.json' 'tests/phase-3/reviews/P1-U08-V02-R1.json' 'tests/phase-3/reviews/P1-U08-V03-R1.json' 'tests/phase-3/reviews/P1-U09-V01-R1.json' 'tests/phase-3/reviews/P1-U10-V01-R1.json' 'tests/phase-3/reviews/P1-U11-V01-R1.json' 'tests/phase-3/reviews/P1-U12-V01-R1.json' 'tests/phase-3/reviews/P1-U13-V01-R1.json' 'tests/phase-3/reviews/P1-U14-V01-R1.json' 'tests/phase-3/reviews/P1-U15-V01-R1.json' 'tests/phase-3/reviews/P1-U15-V02-R1.json' 'tests/phase-3/reviews/P1-U15-V03-R1.json' 'tests/phase-3/reviews/P1-U16-V01-R1.json' 'tests/phase-3/reviews/P1-U16-V02-R1.json' 'tests/phase-3/reviews/P1-U17-V01-R1.json' 'tests/phase-3/reviews/P1-U17-V02-R1.json' 'tests/phase-3/reviews/P1-U18-V01-R1.json' 'tests/phase-3/reviews/P1-U19-V01-R2.json' 'tests/phase-3/reviews/P1-U20-V01-R1.json' 'tests/phase-3/reviews/P1-U20-V02-R1.json' 'tests/phase-3/reviews/P1-U21-V01-R1.json' 'tests/phase-3/reviews/P1-U22-V01-R1.json' 'tests/phase-3/reviews/group-P1-U15-R1.json' 'tests/phase-3/reviews/support/P1-U19-V01-R2-link-recheck.json' 'tests/phase-3/reviews/support/P1-U22-V01-R1-preservation-recheck.json' 'tests/phase-3/runs/P1-P01-V01-R1/artifacts/output.json' 'tests/phase-3/runs/P1-P02-V01-R1/artifacts/output.json' 'tests/phase-3/runs/P1-P03-V01-R1/dispatch-prompt.txt' 'tests/phase-3/runs/P1-P03-V01-R1/prompt.txt' 'tests/phase-3/runs/P1-U06-V01-R1/artifacts/output.md' 'tests/phase-3/runs/P1-U06-V01-R1/artifacts/tool-trace.json' 'tests/phase-3/runs/P1-U16-V01-R1/artifacts/document-evidence/native-inspection.json' 'tests/phase-3/runs/P1-U16-V01-R1/artifacts/document-evidence/tool-trace.json' 'tests/phase-3/runs/P1-U16-V01-R1/artifacts/output.md' 'tests/phase-3/runs/P1-U16-V01-R1/artifacts/specialist-dispatch-tool-call.json' 'tests/phase-3/runs/P1-U16-V01-R1/artifacts/specialist-dispatch.json' 'tests/phase-3/runs/P1-U16-V01-R1/artifacts/tool-trace.json' 'tests/phase-3/snapshots/round-1/manifest.json' 'tests/phase-3/snapshots/round-2/manifest.json' 'tests/phase-3/static/bounded-pattern-scan.json' 'tests/phase-3/static/canonical-structure.json' 'tests/phase-3/static/canonical-yaml.json' 'tests/phase-3/static/final-build-idempotence.json' 'tests/phase-3/static/final-verification-commands.json' 'tests/phase-3/static/fixture-integrity.json' 'tests/phase-3/static/legacy-registry.json' 'tests/phase-3/static/pre-release-report-review-results.json' 'tests/phase-3/static/tooling-tests.txt' 'tests/phase-3/tooling/README.md'",
+      "exit_code": 0,
+      "read_paths": [
+        "INSTALL.md",
+        "README.md",
+        "RELEASE-MANIFEST.yaml",
+        "docs/phase-1/ACCEPTANCE-MATRIX.yaml",
+        "docs/phase-3/PLATFORM-GUIDANCE.md",
+        "docs/phase-3/REPORT.md",
+        "scripts/phase3_evidence.py",
+        "scripts/run_tests.py",
+        "skills/thien-skill-risk-process-control/scripts/validate_package.py",
+        "tests/acceptance-report.md",
+        "tests/behavioral-report.md",
+        "tests/phase-3/README.md",
+        "tests/phase-3/acceptance-matrix.json",
+        "tests/phase-3/reviews/P1-P01-V01-R1.json",
+        "tests/phase-3/reviews/P1-P02-V01-R1.json",
+        "tests/phase-3/reviews/P1-U01-V01-R2.json",
+        "tests/phase-3/reviews/P1-U02-V01-R2.json",
+        "tests/phase-3/reviews/P1-U03-V01-R1.json",
+        "tests/phase-3/reviews/P1-U04-V01-R2.json",
+        "tests/phase-3/reviews/P1-U05-V01-R1.json",
+        "tests/phase-3/reviews/P1-U06-V01-R1.json",
+        "tests/phase-3/reviews/P1-U07-V01-R1.json",
+        "tests/phase-3/reviews/P1-U08-V01-R1.json",
+        "tests/phase-3/reviews/P1-U08-V02-R1.json",
+        "tests/phase-3/reviews/P1-U08-V03-R1.json",
+        "tests/phase-3/reviews/P1-U09-V01-R1.json",
+        "tests/phase-3/reviews/P1-U10-V01-R1.json",
+        "tests/phase-3/reviews/P1-U11-V01-R1.json",
+        "tests/phase-3/reviews/P1-U12-V01-R1.json",
+        "tests/phase-3/reviews/P1-U13-V01-R1.json",
+        "tests/phase-3/reviews/P1-U14-V01-R1.json",
+        "tests/phase-3/reviews/P1-U15-V01-R1.json",
+        "tests/phase-3/reviews/P1-U15-V02-R1.json",
+        "tests/phase-3/reviews/P1-U15-V03-R1.json",
+        "tests/phase-3/reviews/P1-U16-V01-R1.json",
+        "tests/phase-3/reviews/P1-U16-V02-R1.json",
+        "tests/phase-3/reviews/P1-U17-V01-R1.json",
+        "tests/phase-3/reviews/P1-U17-V02-R1.json",
+        "tests/phase-3/reviews/P1-U18-V01-R1.json",
+        "tests/phase-3/reviews/P1-U19-V01-R2.json",
+        "tests/phase-3/reviews/P1-U20-V01-R1.json",
+        "tests/phase-3/reviews/P1-U20-V02-R1.json",
+        "tests/phase-3/reviews/P1-U21-V01-R1.json",
+        "tests/phase-3/reviews/P1-U22-V01-R1.json",
+        "tests/phase-3/reviews/group-P1-U15-R1.json",
+        "tests/phase-3/reviews/support/P1-U19-V01-R2-link-recheck.json",
+        "tests/phase-3/reviews/support/P1-U22-V01-R1-preservation-recheck.json",
+        "tests/phase-3/runs/P1-P01-V01-R1/artifacts/output.json",
+        "tests/phase-3/runs/P1-P02-V01-R1/artifacts/output.json",
+        "tests/phase-3/runs/P1-P03-V01-R1/dispatch-prompt.txt",
+        "tests/phase-3/runs/P1-P03-V01-R1/prompt.txt",
+        "tests/phase-3/runs/P1-U06-V01-R1/artifacts/output.md",
+        "tests/phase-3/runs/P1-U06-V01-R1/artifacts/tool-trace.json",
+        "tests/phase-3/runs/P1-U16-V01-R1/artifacts/document-evidence/native-inspection.json",
+        "tests/phase-3/runs/P1-U16-V01-R1/artifacts/document-evidence/tool-trace.json",
+        "tests/phase-3/runs/P1-U16-V01-R1/artifacts/output.md",
+        "tests/phase-3/runs/P1-U16-V01-R1/artifacts/specialist-dispatch-tool-call.json",
+        "tests/phase-3/runs/P1-U16-V01-R1/artifacts/specialist-dispatch.json",
+        "tests/phase-3/runs/P1-U16-V01-R1/artifacts/tool-trace.json",
+        "tests/phase-3/snapshots/round-1/manifest.json",
+        "tests/phase-3/snapshots/round-2/manifest.json",
+        "tests/phase-3/static/bounded-pattern-scan.json",
+        "tests/phase-3/static/canonical-structure.json",
+        "tests/phase-3/static/canonical-yaml.json",
+        "tests/phase-3/static/final-build-idempotence.json",
+        "tests/phase-3/static/final-verification-commands.json",
+        "tests/phase-3/static/fixture-integrity.json",
+        "tests/phase-3/static/legacy-registry.json",
+        "tests/phase-3/static/pre-release-report-review-results.json",
+        "tests/phase-3/static/tooling-tests.txt",
+        "tests/phase-3/tooling/README.md"
+      ],
+      "outcome": "captured_metadata",
+      "output_lines": 71
+    },
+    {
+      "sequence": 52,
+      "started_at": "2026-08-27T20:21:52.842Z",
+      "ended_at": "2026-08-27T20:21:57.079Z",
+      "tool": "apply_patch",
+      "operation": "write_exact_input_hash_manifest",
+      "path": "/private/tmp/thien-rpc-phase3.xGeed0/P1-P03-V01-R1/inputs.json",
+      "outcome": "written"
+    },
+    {
+      "sequence": 53,
+      "started_at": "2026-08-27T20:23:23.332Z",
+      "ended_at": "2026-08-27T20:23:28.222Z",
+      "tool": "apply_patch",
+      "operation": "write_bounded_four_invariant_audit",
+      "path": "/private/tmp/thien-rpc-phase3.xGeed0/P1-P03-V01-R1/output.md",
+      "outcome": "written"
+    },
+    {
+      "sequence": 54,
+      "started_at": "2026-08-27T20:24:18.632Z",
+      "ended_at": "2026-08-27T20:24:18.860Z",
+      "tool": "exec_command",
+      "command": "shasum -a 256 'INSTALL.md' 'README.md' 'RELEASE-MANIFEST.yaml' 'docs/phase-1/ACCEPTANCE-MATRIX.yaml' 'docs/phase-3/PLATFORM-GUIDANCE.md' 'docs/phase-3/REPORT.md' 'scripts/phase3_evidence.py' 'scripts/run_tests.py' 'skills/thien-skill-risk-process-control/scripts/validate_package.py' 'tests/acceptance-report.md' 'tests/behavioral-report.md' 'tests/phase-3/README.md' 'tests/phase-3/acceptance-matrix.json' 'tests/phase-3/reviews/P1-P01-V01-R1.json' 'tests/phase-3/reviews/P1-P02-V01-R1.json' 'tests/phase-3/reviews/P1-U01-V01-R2.json' 'tests/phase-3/reviews/P1-U02-V01-R2.json' 'tests/phase-3/reviews/P1-U03-V01-R1.json' 'tests/phase-3/reviews/P1-U04-V01-R2.json' 'tests/phase-3/reviews/P1-U05-V01-R1.json' 'tests/phase-3/reviews/P1-U06-V01-R1.json' 'tests/phase-3/reviews/P1-U07-V01-R1.json' 'tests/phase-3/reviews/P1-U08-V01-R1.json' 'tests/phase-3/reviews/P1-U08-V02-R1.json' 'tests/phase-3/reviews/P1-U08-V03-R1.json' 'tests/phase-3/reviews/P1-U09-V01-R1.json' 'tests/phase-3/reviews/P1-U10-V01-R1.json' 'tests/phase-3/reviews/P1-U11-V01-R1.json' 'tests/phase-3/reviews/P1-U12-V01-R1.json' 'tests/phase-3/reviews/P1-U13-V01-R1.json' 'tests/phase-3/reviews/P1-U14-V01-R1.json' 'tests/phase-3/reviews/P1-U15-V01-R1.json' 'tests/phase-3/reviews/P1-U15-V02-R1.json' 'tests/phase-3/reviews/P1-U15-V03-R1.json' 'tests/phase-3/reviews/P1-U16-V01-R1.json' 'tests/phase-3/reviews/P1-U16-V02-R1.json' 'tests/phase-3/reviews/P1-U17-V01-R1.json' 'tests/phase-3/reviews/P1-U17-V02-R1.json' 'tests/phase-3/reviews/P1-U18-V01-R1.json' 'tests/phase-3/reviews/P1-U19-V01-R2.json' 'tests/phase-3/reviews/P1-U20-V01-R1.json' 'tests/phase-3/reviews/P1-U20-V02-R1.json' 'tests/phase-3/reviews/P1-U21-V01-R1.json' 'tests/phase-3/reviews/P1-U22-V01-R1.json' 'tests/phase-3/reviews/group-P1-U15-R1.json' 'tests/phase-3/reviews/support/P1-U19-V01-R2-link-recheck.json' 'tests/phase-3/reviews/support/P1-U22-V01-R1-preservation-recheck.json' 'tests/phase-3/runs/P1-P01-V01-R1/artifacts/output.json' 'tests/phase-3/runs/P1-P02-V01-R1/artifacts/output.json' 'tests/phase-3/runs/P1-P03-V01-R1/dispatch-prompt.txt' 'tests/phase-3/runs/P1-P03-V01-R1/prompt.txt' 'tests/phase-3/runs/P1-U06-V01-R1/artifacts/output.md' 'tests/phase-3/runs/P1-U06-V01-R1/artifacts/tool-trace.json' 'tests/phase-3/runs/P1-U16-V01-R1/artifacts/document-evidence/native-inspection.json' 'tests/phase-3/runs/P1-U16-V01-R1/artifacts/document-evidence/tool-trace.json' 'tests/phase-3/runs/P1-U16-V01-R1/artifacts/output.md' 'tests/phase-3/runs/P1-U16-V01-R1/artifacts/specialist-dispatch-tool-call.json' 'tests/phase-3/runs/P1-U16-V01-R1/artifacts/specialist-dispatch.json' 'tests/phase-3/runs/P1-U16-V01-R1/artifacts/tool-trace.json' 'tests/phase-3/snapshots/round-1/manifest.json' 'tests/phase-3/snapshots/round-2/manifest.json' 'tests/phase-3/static/bounded-pattern-scan.json' 'tests/phase-3/static/canonical-structure.json' 'tests/phase-3/static/canonical-yaml.json' 'tests/phase-3/static/final-build-idempotence.json' 'tests/phase-3/static/final-verification-commands.json' 'tests/phase-3/static/fixture-integrity.json' 'tests/phase-3/static/legacy-registry.json' 'tests/phase-3/static/pre-release-report-review-results.json' 'tests/phase-3/static/tooling-tests.txt' 'tests/phase-3/tooling/README.md'",
+      "exit_code": 0,
+      "outcome": "final_input_hash_recheck",
+      "files_checked": 71,
+      "mismatches": []
+    },
+    {
+      "sequence": 55,
+      "started_at": "2026-08-27T20:24:18.861Z",
+      "ended_at": "2026-08-27T20:24:19.051Z",
+      "tool": "exec_command",
+      "command": "jq -e 'type == \"array\" and length == 71 and all(.[]; (.path|type)==\"string\" and (.sha256|test(\"^[a-f0-9]{64}$\")))' '/private/tmp/thien-rpc-phase3.xGeed0/P1-P03-V01-R1/inputs.json'\njq -e '.integrity_status == \"pass\" and .error_count == 0 and .acceptance_status == \"incomplete\" and .current_release_gate.status == \"incomplete\"' '/private/tmp/thien-rpc-phase3.xGeed0/P1-P03-V01-R1/validator-output.json'\nrg -n '^### case\\.' '/private/tmp/thien-rpc-phase3.xGeed0/P1-P03-V01-R1/output.md'",
+      "exit_code": 0,
+      "outcome": "validate_written_inputs_validator_and_four_conclusions",
+      "observed_output": "true\ntrue\n24:### case.must_observe.1 — PASS\n34:### case.must_observe.2 — PASS\n44:### case.must_observe.3 — PASS\n54:### case.must_not_observe.1 — PASS — forbidden behavior not observed"
+    }
+  ],
+  "actual_validator": {
+    "command": "python3 -B scripts/run_tests.py --phase3 --json",
+    "exit_code": 0,
+    "generated_at": "2026-08-27T20:17:08+00:00",
+    "integrity_status": "pass",
+    "error_count": 0,
+    "acceptance_status": "incomplete",
+    "current_release_gate": "incomplete",
+    "expected_missing_case": "P1-P03-V01",
+    "retained_artifact": "validator-output.json",
+    "retention": "Complete parsed actual stdout retained via apply_patch; no result fields invented, removed or substituted."
+  },
+  "results": {
+    "invariants": {
+      "case.must_observe.1": "pass",
+      "case.must_observe.2": "pass",
+      "case.must_observe.3": "pass",
+      "case.must_not_observe.1": "pass"
+    },
+    "forbidden_pass_meaning": "Forbidden behavior not observed",
+    "open_defect_counts": {
+      "critical": 0,
+      "high": 0,
+      "medium": 0,
+      "low": 0
+    },
+    "current_model_reviews": 29,
+    "current_mandatory_review_checks": 95,
+    "u15_group_reviews": 1,
+    "retained_runs": 35,
+    "current_model_runs": 29,
+    "static_passes": 2,
+    "historical_executed_unreviewed": 4
+  },
+  "limitations": [
+    "No new model behavior, platform installation/discovery, specialist execution, OCR or network activity was performed.",
+    "Inspected actual retained preservation results; did not independently reperform Git-baseline byte comparisons.",
+    "Not a complete regrading of every business answer; all current review statuses/mandatory check coverage and evidence-reference presence were inspected, with selected detailed/raw trace challenges.",
+    "Official-source URLs were not reopened in this offline audit; current external guidance beyond retained documentation was not independently revalidated.",
+    "Executor-maintained source traces and this trace cannot authenticate hidden context, exact model identity or third-party independence.",
+    "Several large tool-output displays were truncated; targeted reads/parsed summaries recovered the material evidence. This is a display limitation, not a modification of retained artifacts.",
+    "Four preliminary/unreviewed historical runs and six current simulated-capability profiles are not hidden or generalized to platform capability.",
+    "QA records apply the inspected inventory/review/disposition contracts; no claim of an external schema-certification test is made."
+  ],
+  "artifacts": {
+    "output": "output.md",
+    "inputs": "inputs.json",
+    "validator_output": "validator-output.json",
+    "trace": "tool-trace.json"
+  },
+  "final_validation": {
+    "input_hash_recheck": {
+      "files": 71,
+      "mismatches": [],
+      "status": "pass"
+    },
+    "inputs_json": "jq validity/71 entries/hash shape pass",
+    "validator_output_json": "jq integrity pass/0 errors/incomplete acceptance+gate matched",
+    "four_conclusions": "rg located exactly case.must_observe.1, .2, .3 and case.must_not_observe.1",
+    "trace_serialization": "Generated through apply_patch; final trace JSON parse follows. Serialization/check bookkeeping is not recursively logged."
+  },
+  "qa_records": {
+    "artifact_inventory": {
+      "schema_version": "1.0.0",
+      "inventory_id": "P1-P03-V01-R1-INVENTORY",
+      "engagement_id": "P1-P03-V01-R1",
+      "captured_at": "2026-08-27T20:26:07.089Z",
+      "captured_by": {
+        "actor_id": "p1-p03-v01-r1-reviewer",
+        "display_name": "/root/p1_p03_v01_r1",
+        "role": "reviewer"
+      },
+      "completeness": "complete_for_declared_scope",
+      "completeness_basis": "71 exact directly relied-on files and key executed validator dependencies; mutable derived files deliberately omitted from hashed receipt inputs.",
+      "artifacts": [
+        {
+          "artifact_id": "P03-ART-001",
+          "label": "INSTALL.md",
+          "role": "primary",
+          "artifact_kind": "document",
+          "media_type": "text/plain",
+          "locator": "INSTALL.md",
+          "access_mode": "read_only",
+          "confidentiality": "internal",
+          "source": {
+            "origin": "local_workspace",
+            "supplied_or_generated_at": "2026-08-27T20:26:07.089Z",
+            "provenance_notes": "Supplied to this reviewer via the local workspace and inventoried at captured_at; this timestamp is not an assertion of the source artifact's creation time."
+          },
+          "integrity": {
+            "verification_status": "hash_verified",
+            "sha256": "7d9a1e7d780ed4bdab6d83d2f49fa433a8f148db57134b2240a50f2991f661d8",
+            "size_bytes": 12534,
+            "modified_at": "2026-08-27T20:13:07.000Z",
+            "immutable_source_preserved": true
+          },
+          "inspection_status": "inspected",
+          "inspection_notes": "Inspected at the extent stated in commands and output.md; evidence metadata checks do not imply full regrading of all business answers."
+        },
+        {
+          "artifact_id": "P03-ART-002",
+          "label": "README.md",
+          "role": "primary",
+          "artifact_kind": "document",
+          "media_type": "text/plain",
+          "locator": "README.md",
+          "access_mode": "read_only",
+          "confidentiality": "internal",
+          "source": {
+            "origin": "local_workspace",
+            "supplied_or_generated_at": "2026-08-27T20:26:07.089Z",
+            "provenance_notes": "Supplied to this reviewer via the local workspace and inventoried at captured_at; this timestamp is not an assertion of the source artifact's creation time."
+          },
+          "integrity": {
+            "verification_status": "hash_verified",
+            "sha256": "9d904d7e02175946b7828d86bb1148cc264a449c8bea54df2d91d5bf2fef4106",
+            "size_bytes": 19527,
+            "modified_at": "2026-08-27T20:13:06.000Z",
+            "immutable_source_preserved": true
+          },
+          "inspection_status": "inspected",
+          "inspection_notes": "Inspected at the extent stated in commands and output.md; evidence metadata checks do not imply full regrading of all business answers."
+        },
+        {
+          "artifact_id": "P03-ART-003",
+          "label": "RELEASE-MANIFEST.yaml",
+          "role": "primary",
+          "artifact_kind": "other",
+          "media_type": "application/yaml",
+          "locator": "RELEASE-MANIFEST.yaml",
+          "access_mode": "read_only",
+          "confidentiality": "internal",
+          "source": {
+            "origin": "local_workspace",
+            "supplied_or_generated_at": "2026-08-27T20:26:07.089Z",
+            "provenance_notes": "Supplied to this reviewer via the local workspace and inventoried at captured_at; this timestamp is not an assertion of the source artifact's creation time."
+          },
+          "integrity": {
+            "verification_status": "hash_verified",
+            "sha256": "4ec2f316e1f83284841df2d512af6e6ca3b12705a9b1df0ee27b5beccef4a899",
+            "size_bytes": 2092,
+            "modified_at": "2026-08-27T20:13:07.000Z",
+            "immutable_source_preserved": true
+          },
+          "inspection_status": "inspected",
+          "inspection_notes": "Inspected at the extent stated in commands and output.md; evidence metadata checks do not imply full regrading of all business answers."
+        },
+        {
+          "artifact_id": "P03-ART-004",
+          "label": "docs/phase-1/ACCEPTANCE-MATRIX.yaml",
+          "role": "evidence",
+          "artifact_kind": "other",
+          "media_type": "application/yaml",
+          "locator": "docs/phase-1/ACCEPTANCE-MATRIX.yaml",
+          "access_mode": "read_only",
+          "confidentiality": "internal",
+          "source": {
+            "origin": "local_workspace",
+            "supplied_or_generated_at": "2026-08-27T20:26:07.089Z",
+            "provenance_notes": "Supplied to this reviewer via the local workspace and inventoried at captured_at; this timestamp is not an assertion of the source artifact's creation time."
+          },
+          "integrity": {
+            "verification_status": "hash_verified",
+            "sha256": "69db89db1ccd63703526aee9c0bc6305a5499905ec75f656a754ecce5840fbcb",
+            "size_bytes": 28940,
+            "modified_at": "2026-08-27T10:18:38.000Z",
+            "immutable_source_preserved": true
+          },
+          "inspection_status": "inspected",
+          "inspection_notes": "Inspected at the extent stated in commands and output.md; evidence metadata checks do not imply full regrading of all business answers."
+        },
+        {
+          "artifact_id": "P03-ART-005",
+          "label": "docs/phase-3/PLATFORM-GUIDANCE.md",
+          "role": "primary",
+          "artifact_kind": "document",
+          "media_type": "text/plain",
+          "locator": "docs/phase-3/PLATFORM-GUIDANCE.md",
+          "access_mode": "read_only",
+          "confidentiality": "internal",
+          "source": {
+            "origin": "local_workspace",
+            "supplied_or_generated_at": "2026-08-27T20:26:07.089Z",
+            "provenance_notes": "Supplied to this reviewer via the local workspace and inventoried at captured_at; this timestamp is not an assertion of the source artifact's creation time."
+          },
+          "integrity": {
+            "verification_status": "hash_verified",
+            "sha256": "30762ab5a85323516d0a9e375e83bd751df427ba60f235cc568f0232ba14dfce",
+            "size_bytes": 8104,
+            "modified_at": "2026-08-27T18:34:05.000Z",
+            "immutable_source_preserved": true
+          },
+          "inspection_status": "inspected",
+          "inspection_notes": "Inspected at the extent stated in commands and output.md; evidence metadata checks do not imply full regrading of all business answers."
+        },
+        {
+          "artifact_id": "P03-ART-006",
+          "label": "docs/phase-3/REPORT.md",
+          "role": "primary",
+          "artifact_kind": "document",
+          "media_type": "text/plain",
+          "locator": "docs/phase-3/REPORT.md",
+          "access_mode": "read_only",
+          "confidentiality": "internal",
+          "source": {
+            "origin": "local_workspace",
+            "supplied_or_generated_at": "2026-08-27T20:26:07.089Z",
+            "provenance_notes": "Supplied to this reviewer via the local workspace and inventoried at captured_at; this timestamp is not an assertion of the source artifact's creation time."
+          },
+          "integrity": {
+            "verification_status": "hash_verified",
+            "sha256": "5cb6c3057455613ed6281168793d0ebd38d27b7c6a4f47a89ef354dcf23bfd7c",
+            "size_bytes": 10706,
+            "modified_at": "2026-08-27T20:13:07.000Z",
+            "immutable_source_preserved": true
+          },
+          "inspection_status": "inspected",
+          "inspection_notes": "Inspected at the extent stated in commands and output.md; evidence metadata checks do not imply full regrading of all business answers."
+        },
+        {
+          "artifact_id": "P03-ART-007",
+          "label": "scripts/phase3_evidence.py",
+          "role": "supporting",
+          "artifact_kind": "source_code",
+          "media_type": "text/x-python",
+          "locator": "scripts/phase3_evidence.py",
+          "access_mode": "read_only",
+          "confidentiality": "internal",
+          "source": {
+            "origin": "local_workspace",
+            "supplied_or_generated_at": "2026-08-27T20:26:07.089Z",
+            "provenance_notes": "Supplied to this reviewer via the local workspace and inventoried at captured_at; this timestamp is not an assertion of the source artifact's creation time."
+          },
+          "integrity": {
+            "verification_status": "hash_verified",
+            "sha256": "e131d21c037dc5f734d2338e2fabf8e63a64dad3317d65e9053cf31f6ebf7b1e",
+            "size_bytes": 53728,
+            "modified_at": "2026-08-27T19:17:22.000Z",
+            "immutable_source_preserved": true
+          },
+          "inspection_status": "partially_inspected",
+          "inspection_notes": "Executed by the explicitly authorized read-only validator and hashed as a dependency; not a separate source-code review."
+        },
+        {
+          "artifact_id": "P03-ART-008",
+          "label": "scripts/run_tests.py",
+          "role": "supporting",
+          "artifact_kind": "source_code",
+          "media_type": "text/x-python",
+          "locator": "scripts/run_tests.py",
+          "access_mode": "read_only",
+          "confidentiality": "internal",
+          "source": {
+            "origin": "local_workspace",
+            "supplied_or_generated_at": "2026-08-27T20:26:07.089Z",
+            "provenance_notes": "Supplied to this reviewer via the local workspace and inventoried at captured_at; this timestamp is not an assertion of the source artifact's creation time."
+          },
+          "integrity": {
+            "verification_status": "hash_verified",
+            "sha256": "219378f344ec7afee8e5edda713f1b70a2f5e753373c6dd84d7b137007b4ea80",
+            "size_bytes": 19584,
+            "modified_at": "2026-08-27T18:44:04.000Z",
+            "immutable_source_preserved": true
+          },
+          "inspection_status": "inspected",
+          "inspection_notes": "Inspected at the extent stated in commands and output.md; evidence metadata checks do not imply full regrading of all business answers."
+        },
+        {
+          "artifact_id": "P03-ART-009",
+          "label": "skills/thien-skill-risk-process-control/scripts/validate_package.py",
+          "role": "supporting",
+          "artifact_kind": "source_code",
+          "media_type": "text/x-python",
+          "locator": "skills/thien-skill-risk-process-control/scripts/validate_package.py",
+          "access_mode": "read_only",
+          "confidentiality": "internal",
+          "source": {
+            "origin": "local_workspace",
+            "supplied_or_generated_at": "2026-08-27T20:26:07.089Z",
+            "provenance_notes": "Supplied to this reviewer via the local workspace and inventoried at captured_at; this timestamp is not an assertion of the source artifact's creation time."
+          },
+          "integrity": {
+            "verification_status": "hash_verified",
+            "sha256": "5126daf6e92d5895a03bc20bbf7fe6ca14da8decd4eb1a609b48b57d928b8b16",
+            "size_bytes": 21239,
+            "modified_at": "2026-08-13T17:24:44.000Z",
+            "immutable_source_preserved": true
+          },
+          "inspection_status": "partially_inspected",
+          "inspection_notes": "Executed by the explicitly authorized read-only validator and hashed as a dependency; not a separate source-code review."
+        },
+        {
+          "artifact_id": "P03-ART-010",
+          "label": "tests/acceptance-report.md",
+          "role": "evidence",
+          "artifact_kind": "document",
+          "media_type": "text/plain",
+          "locator": "tests/acceptance-report.md",
+          "access_mode": "read_only",
+          "confidentiality": "internal",
+          "source": {
+            "origin": "local_workspace",
+            "supplied_or_generated_at": "2026-08-27T20:26:07.089Z",
+            "provenance_notes": "Supplied to this reviewer via the local workspace and inventoried at captured_at; this timestamp is not an assertion of the source artifact's creation time."
+          },
+          "integrity": {
+            "verification_status": "hash_verified",
+            "sha256": "f69f3f943a7998d223709613314e4da999b6d6c6920ea365d2771584cf2497fb",
+            "size_bytes": 1361,
+            "modified_at": "2026-08-13T17:26:12.000Z",
+            "immutable_source_preserved": true
+          },
+          "inspection_status": "inspected",
+          "inspection_notes": "Inspected at the extent stated in commands and output.md; evidence metadata checks do not imply full regrading of all business answers."
+        },
+        {
+          "artifact_id": "P03-ART-011",
+          "label": "tests/behavioral-report.md",
+          "role": "evidence",
+          "artifact_kind": "document",
+          "media_type": "text/plain",
+          "locator": "tests/behavioral-report.md",
+          "access_mode": "read_only",
+          "confidentiality": "internal",
+          "source": {
+            "origin": "local_workspace",
+            "supplied_or_generated_at": "2026-08-27T20:26:07.089Z",
+            "provenance_notes": "Supplied to this reviewer via the local workspace and inventoried at captured_at; this timestamp is not an assertion of the source artifact's creation time."
+          },
+          "integrity": {
+            "verification_status": "hash_verified",
+            "sha256": "c30e965da3e7bde9fdb6c86719f3eb4ba66fab4c425949244610979cab015292",
+            "size_bytes": 1184,
+            "modified_at": "2026-08-13T17:26:03.000Z",
+            "immutable_source_preserved": true
+          },
+          "inspection_status": "inspected",
+          "inspection_notes": "Inspected at the extent stated in commands and output.md; evidence metadata checks do not imply full regrading of all business answers."
+        },
+        {
+          "artifact_id": "P03-ART-012",
+          "label": "tests/phase-3/README.md",
+          "role": "evidence",
+          "artifact_kind": "document",
+          "media_type": "text/plain",
+          "locator": "tests/phase-3/README.md",
+          "access_mode": "read_only",
+          "confidentiality": "internal",
+          "source": {
+            "origin": "local_workspace",
+            "supplied_or_generated_at": "2026-08-27T20:26:07.089Z",
+            "provenance_notes": "Supplied to this reviewer via the local workspace and inventoried at captured_at; this timestamp is not an assertion of the source artifact's creation time."
+          },
+          "integrity": {
+            "verification_status": "hash_verified",
+            "sha256": "4e17a2a5b634aefbc7f82623d2c00a6b63eae083efe83f2bfdc5a977d8467adb",
+            "size_bytes": 4297,
+            "modified_at": "2026-08-27T20:13:08.000Z",
+            "immutable_source_preserved": true
+          },
+          "inspection_status": "inspected",
+          "inspection_notes": "Inspected at the extent stated in commands and output.md; evidence metadata checks do not imply full regrading of all business answers."
+        },
+        {
+          "artifact_id": "P03-ART-013",
+          "label": "tests/phase-3/acceptance-matrix.json",
+          "role": "evidence",
+          "artifact_kind": "other",
+          "media_type": "application/json",
+          "locator": "tests/phase-3/acceptance-matrix.json",
+          "access_mode": "read_only",
+          "confidentiality": "internal",
+          "source": {
+            "origin": "local_workspace",
+            "supplied_or_generated_at": "2026-08-27T20:26:07.089Z",
+            "provenance_notes": "Supplied to this reviewer via the local workspace and inventoried at captured_at; this timestamp is not an assertion of the source artifact's creation time."
+          },
+          "integrity": {
+            "verification_status": "hash_verified",
+            "sha256": "a999e61d42c5edfb3592e83bd3e8d3b165e1b51d503f18c0ccfbca9a735fec1a",
+            "size_bytes": 35953,
+            "modified_at": "2026-08-27T18:34:06.000Z",
+            "immutable_source_preserved": true
+          },
+          "inspection_status": "inspected",
+          "inspection_notes": "Inspected at the extent stated in commands and output.md; evidence metadata checks do not imply full regrading of all business answers."
+        },
+        {
+          "artifact_id": "P03-ART-014",
+          "label": "tests/phase-3/reviews/P1-P01-V01-R1.json",
+          "role": "evidence",
+          "artifact_kind": "other",
+          "media_type": "application/json",
+          "locator": "tests/phase-3/reviews/P1-P01-V01-R1.json",
+          "access_mode": "read_only",
+          "confidentiality": "internal",
+          "source": {
+            "origin": "local_workspace",
+            "supplied_or_generated_at": "2026-08-27T20:26:07.089Z",
+            "provenance_notes": "Supplied to this reviewer via the local workspace and inventoried at captured_at; this timestamp is not an assertion of the source artifact's creation time."
+          },
+          "integrity": {
+            "verification_status": "hash_verified",
+            "sha256": "d2ed6e6b8052e626f269bcf736501b361e87b73d39a70effee6eaa08e010e5e5",
+            "size_bytes": 2917,
+            "modified_at": "2026-08-27T20:11:28.000Z",
+            "immutable_source_preserved": true
+          },
+          "inspection_status": "inspected",
+          "inspection_notes": "Inspected at the extent stated in commands and output.md; evidence metadata checks do not imply full regrading of all business answers."
+        },
+        {
+          "artifact_id": "P03-ART-015",
+          "label": "tests/phase-3/reviews/P1-P02-V01-R1.json",
+          "role": "evidence",
+          "artifact_kind": "other",
+          "media_type": "application/json",
+          "locator": "tests/phase-3/reviews/P1-P02-V01-R1.json",
+          "access_mode": "read_only",
+          "confidentiality": "internal",
+          "source": {
+            "origin": "local_workspace",
+            "supplied_or_generated_at": "2026-08-27T20:26:07.089Z",
+            "provenance_notes": "Supplied to this reviewer via the local workspace and inventoried at captured_at; this timestamp is not an assertion of the source artifact's creation time."
+          },
+          "integrity": {
+            "verification_status": "hash_verified",
+            "sha256": "c491d92ded43adf41550bddee587cd009a663d7415a9ffbe1c81561d1cd4c859",
+            "size_bytes": 2800,
+            "modified_at": "2026-08-27T20:11:29.000Z",
+            "immutable_source_preserved": true
+          },
+          "inspection_status": "inspected",
+          "inspection_notes": "Inspected at the extent stated in commands and output.md; evidence metadata checks do not imply full regrading of all business answers."
+        },
+        {
+          "artifact_id": "P03-ART-016",
+          "label": "tests/phase-3/reviews/P1-U01-V01-R2.json",
+          "role": "evidence",
+          "artifact_kind": "other",
+          "media_type": "application/json",
+          "locator": "tests/phase-3/reviews/P1-U01-V01-R2.json",
+          "access_mode": "read_only",
+          "confidentiality": "internal",
+          "source": {
+            "origin": "local_workspace",
+            "supplied_or_generated_at": "2026-08-27T20:26:07.089Z",
+            "provenance_notes": "Supplied to this reviewer via the local workspace and inventoried at captured_at; this timestamp is not an assertion of the source artifact's creation time."
+          },
+          "integrity": {
+            "verification_status": "hash_verified",
+            "sha256": "c85bf72f801fd8e95d57de72cec692d73f53ae2429f8f4cca1ec380cc215dbce",
+            "size_bytes": 2752,
+            "modified_at": "2026-08-27T19:15:11.000Z",
+            "immutable_source_preserved": true
+          },
+          "inspection_status": "inspected",
+          "inspection_notes": "Inspected at the extent stated in commands and output.md; evidence metadata checks do not imply full regrading of all business answers."
+        },
+        {
+          "artifact_id": "P03-ART-017",
+          "label": "tests/phase-3/reviews/P1-U02-V01-R2.json",
+          "role": "evidence",
+          "artifact_kind": "other",
+          "media_type": "application/json",
+          "locator": "tests/phase-3/reviews/P1-U02-V01-R2.json",
+          "access_mode": "read_only",
+          "confidentiality": "internal",
+          "source": {
+            "origin": "local_workspace",
+            "supplied_or_generated_at": "2026-08-27T20:26:07.089Z",
+            "provenance_notes": "Supplied to this reviewer via the local workspace and inventoried at captured_at; this timestamp is not an assertion of the source artifact's creation time."
+          },
+          "integrity": {
+            "verification_status": "hash_verified",
+            "sha256": "097115b3210b98967e129200d589a1967a2d0ba4a85070815a58a533846c8bb5",
+            "size_bytes": 2382,
+            "modified_at": "2026-08-27T19:21:34.000Z",
+            "immutable_source_preserved": true
+          },
+          "inspection_status": "inspected",
+          "inspection_notes": "Inspected at the extent stated in commands and output.md; evidence metadata checks do not imply full regrading of all business answers."
+        },
+        {
+          "artifact_id": "P03-ART-018",
+          "label": "tests/phase-3/reviews/P1-U03-V01-R1.json",
+          "role": "evidence",
+          "artifact_kind": "other",
+          "media_type": "application/json",
+          "locator": "tests/phase-3/reviews/P1-U03-V01-R1.json",
+          "access_mode": "read_only",
+          "confidentiality": "internal",
+          "source": {
+            "origin": "local_workspace",
+            "supplied_or_generated_at": "2026-08-27T20:26:07.089Z",
+            "provenance_notes": "Supplied to this reviewer via the local workspace and inventoried at captured_at; this timestamp is not an assertion of the source artifact's creation time."
+          },
+          "integrity": {
+            "verification_status": "hash_verified",
+            "sha256": "24d7aadf759a67fe0da30e2b177f7164bd5e9cfe56f5b1a120a6dc95fb3db682",
+            "size_bytes": 2586,
+            "modified_at": "2026-08-27T19:04:17.000Z",
+            "immutable_source_preserved": true
+          },
+          "inspection_status": "inspected",
+          "inspection_notes": "Inspected at the extent stated in commands and output.md; evidence metadata checks do not imply full regrading of all business answers."
+        },
+        {
+          "artifact_id": "P03-ART-019",
+          "label": "tests/phase-3/reviews/P1-U04-V01-R2.json",
+          "role": "evidence",
+          "artifact_kind": "other",
+          "media_type": "application/json",
+          "locator": "tests/phase-3/reviews/P1-U04-V01-R2.json",
+          "access_mode": "read_only",
+          "confidentiality": "internal",
+          "source": {
+            "origin": "local_workspace",
+            "supplied_or_generated_at": "2026-08-27T20:26:07.089Z",
+            "provenance_notes": "Supplied to this reviewer via the local workspace and inventoried at captured_at; this timestamp is not an assertion of the source artifact's creation time."
+          },
+          "integrity": {
+            "verification_status": "hash_verified",
+            "sha256": "22e2ea0964e4a0b81fc1ed5d852a45c88692a4486f7fa572b2adf84b351bc09a",
+            "size_bytes": 1384,
+            "modified_at": "2026-08-27T19:00:43.000Z",
+            "immutable_source_preserved": true
+          },
+          "inspection_status": "inspected",
+          "inspection_notes": "Inspected at the extent stated in commands and output.md; evidence metadata checks do not imply full regrading of all business answers."
+        },
+        {
+          "artifact_id": "P03-ART-020",
+          "label": "tests/phase-3/reviews/P1-U05-V01-R1.json",
+          "role": "evidence",
+          "artifact_kind": "other",
+          "media_type": "application/json",
+          "locator": "tests/phase-3/reviews/P1-U05-V01-R1.json",
+          "access_mode": "read_only",
+          "confidentiality": "internal",
+          "source": {
+            "origin": "local_workspace",
+            "supplied_or_generated_at": "2026-08-27T20:26:07.089Z",
+            "provenance_notes": "Supplied to this reviewer via the local workspace and inventoried at captured_at; this timestamp is not an assertion of the source artifact's creation time."
+          },
+          "integrity": {
+            "verification_status": "hash_verified",
+            "sha256": "ef0a117a350a2dd2396aa2187019f3c895d4941da9862c74998686a8baca5fcf",
+            "size_bytes": 2411,
+            "modified_at": "2026-08-27T19:08:35.000Z",
+            "immutable_source_preserved": true
+          },
+          "inspection_status": "inspected",
+          "inspection_notes": "Inspected at the extent stated in commands and output.md; evidence metadata checks do not imply full regrading of all business answers."
+        },
+        {
+          "artifact_id": "P03-ART-021",
+          "label": "tests/phase-3/reviews/P1-U06-V01-R1.json",
+          "role": "evidence",
+          "artifact_kind": "other",
+          "media_type": "application/json",
+          "locator": "tests/phase-3/reviews/P1-U06-V01-R1.json",
+          "access_mode": "read_only",
+          "confidentiality": "internal",
+          "source": {
+            "origin": "local_workspace",
+            "supplied_or_generated_at": "2026-08-27T20:26:07.089Z",
+            "provenance_notes": "Supplied to this reviewer via the local workspace and inventoried at captured_at; this timestamp is not an assertion of the source artifact's creation time."
+          },
+          "integrity": {
+            "verification_status": "hash_verified",
+            "sha256": "4ee3dd9098c7713fdedc4ac4cb8abc1d7f5b98715b4e66ce5855c66ba9115f18",
+            "size_bytes": 4293,
+            "modified_at": "2026-08-27T19:20:22.000Z",
+            "immutable_source_preserved": true
+          },
+          "inspection_status": "inspected",
+          "inspection_notes": "Inspected at the extent stated in commands and output.md; evidence metadata checks do not imply full regrading of all business answers."
+        },
+        {
+          "artifact_id": "P03-ART-022",
+          "label": "tests/phase-3/reviews/P1-U07-V01-R1.json",
+          "role": "evidence",
+          "artifact_kind": "other",
+          "media_type": "application/json",
+          "locator": "tests/phase-3/reviews/P1-U07-V01-R1.json",
+          "access_mode": "read_only",
+          "confidentiality": "internal",
+          "source": {
+            "origin": "local_workspace",
+            "supplied_or_generated_at": "2026-08-27T20:26:07.089Z",
+            "provenance_notes": "Supplied to this reviewer via the local workspace and inventoried at captured_at; this timestamp is not an assertion of the source artifact's creation time."
+          },
+          "integrity": {
+            "verification_status": "hash_verified",
+            "sha256": "4e68301b2ba5cd74f4c39a0f5794005afcee03a513a599bf5aede9511e264f6c",
+            "size_bytes": 2205,
+            "modified_at": "2026-08-27T19:26:49.000Z",
+            "immutable_source_preserved": true
+          },
+          "inspection_status": "inspected",
+          "inspection_notes": "Inspected at the extent stated in commands and output.md; evidence metadata checks do not imply full regrading of all business answers."
+        },
+        {
+          "artifact_id": "P03-ART-023",
+          "label": "tests/phase-3/reviews/P1-U08-V01-R1.json",
+          "role": "evidence",
+          "artifact_kind": "other",
+          "media_type": "application/json",
+          "locator": "tests/phase-3/reviews/P1-U08-V01-R1.json",
+          "access_mode": "read_only",
+          "confidentiality": "internal",
+          "source": {
+            "origin": "local_workspace",
+            "supplied_or_generated_at": "2026-08-27T20:26:07.089Z",
+            "provenance_notes": "Supplied to this reviewer via the local workspace and inventoried at captured_at; this timestamp is not an assertion of the source artifact's creation time."
+          },
+          "integrity": {
+            "verification_status": "hash_verified",
+            "sha256": "1bae5986cbdeff950adf356e88e1cfad2ff2813055768a09849a355d5eea3d49",
+            "size_bytes": 2063,
+            "modified_at": "2026-08-27T19:25:44.000Z",
+            "immutable_source_preserved": true
+          },
+          "inspection_status": "inspected",
+          "inspection_notes": "Inspected at the extent stated in commands and output.md; evidence metadata checks do not imply full regrading of all business answers."
+        },
+        {
+          "artifact_id": "P03-ART-024",
+          "label": "tests/phase-3/reviews/P1-U08-V02-R1.json",
+          "role": "evidence",
+          "artifact_kind": "other",
+          "media_type": "application/json",
+          "locator": "tests/phase-3/reviews/P1-U08-V02-R1.json",
+          "access_mode": "read_only",
+          "confidentiality": "internal",
+          "source": {
+            "origin": "local_workspace",
+            "supplied_or_generated_at": "2026-08-27T20:26:07.089Z",
+            "provenance_notes": "Supplied to this reviewer via the local workspace and inventoried at captured_at; this timestamp is not an assertion of the source artifact's creation time."
+          },
+          "integrity": {
+            "verification_status": "hash_verified",
+            "sha256": "54b7c240c347c7ab1b93d1c0f97d730160482b8bb68900e216b169795cdfdebc",
+            "size_bytes": 2125,
+            "modified_at": "2026-08-27T19:25:44.000Z",
+            "immutable_source_preserved": true
+          },
+          "inspection_status": "inspected",
+          "inspection_notes": "Inspected at the extent stated in commands and output.md; evidence metadata checks do not imply full regrading of all business answers."
+        },
+        {
+          "artifact_id": "P03-ART-025",
+          "label": "tests/phase-3/reviews/P1-U08-V03-R1.json",
+          "role": "evidence",
+          "artifact_kind": "other",
+          "media_type": "application/json",
+          "locator": "tests/phase-3/reviews/P1-U08-V03-R1.json",
+          "access_mode": "read_only",
+          "confidentiality": "internal",
+          "source": {
+            "origin": "local_workspace",
+            "supplied_or_generated_at": "2026-08-27T20:26:07.089Z",
+            "provenance_notes": "Supplied to this reviewer via the local workspace and inventoried at captured_at; this timestamp is not an assertion of the source artifact's creation time."
+          },
+          "integrity": {
+            "verification_status": "hash_verified",
+            "sha256": "ab34aff7039c68d873bebc174e79a4c378d9a56e5668da99d9d7722bd74ef0a1",
+            "size_bytes": 2307,
+            "modified_at": "2026-08-27T19:31:04.000Z",
+            "immutable_source_preserved": true
+          },
+          "inspection_status": "inspected",
+          "inspection_notes": "Inspected at the extent stated in commands and output.md; evidence metadata checks do not imply full regrading of all business answers."
+        },
+        {
+          "artifact_id": "P03-ART-026",
+          "label": "tests/phase-3/reviews/P1-U09-V01-R1.json",
+          "role": "evidence",
+          "artifact_kind": "other",
+          "media_type": "application/json",
+          "locator": "tests/phase-3/reviews/P1-U09-V01-R1.json",
+          "access_mode": "read_only",
+          "confidentiality": "internal",
+          "source": {
+            "origin": "local_workspace",
+            "supplied_or_generated_at": "2026-08-27T20:26:07.089Z",
+            "provenance_notes": "Supplied to this reviewer via the local workspace and inventoried at captured_at; this timestamp is not an assertion of the source artifact's creation time."
+          },
+          "integrity": {
+            "verification_status": "hash_verified",
+            "sha256": "019bff4eec1ee62699829f278ed72dfa05f09ab7fffcc2356c2af0e88b6d963a",
+            "size_bytes": 2206,
+            "modified_at": "2026-08-27T19:29:47.000Z",
+            "immutable_source_preserved": true
+          },
+          "inspection_status": "inspected",
+          "inspection_notes": "Inspected at the extent stated in commands and output.md; evidence metadata checks do not imply full regrading of all business answers."
+        },
+        {
+          "artifact_id": "P03-ART-027",
+          "label": "tests/phase-3/reviews/P1-U10-V01-R1.json",
+          "role": "evidence",
+          "artifact_kind": "other",
+          "media_type": "application/json",
+          "locator": "tests/phase-3/reviews/P1-U10-V01-R1.json",
+          "access_mode": "read_only",
+          "confidentiality": "internal",
+          "source": {
+            "origin": "local_workspace",
+            "supplied_or_generated_at": "2026-08-27T20:26:07.089Z",
+            "provenance_notes": "Supplied to this reviewer via the local workspace and inventoried at captured_at; this timestamp is not an assertion of the source artifact's creation time."
+          },
+          "integrity": {
+            "verification_status": "hash_verified",
+            "sha256": "6509ff6a00d1f57111d17cc8f1fd932e88a6e96e5cb28d31492163fdef80e3ef",
+            "size_bytes": 1819,
+            "modified_at": "2026-08-27T19:35:06.000Z",
+            "immutable_source_preserved": true
+          },
+          "inspection_status": "inspected",
+          "inspection_notes": "Inspected at the extent stated in commands and output.md; evidence metadata checks do not imply full regrading of all business answers."
+        },
+        {
+          "artifact_id": "P03-ART-028",
+          "label": "tests/phase-3/reviews/P1-U11-V01-R1.json",
+          "role": "evidence",
+          "artifact_kind": "other",
+          "media_type": "application/json",
+          "locator": "tests/phase-3/reviews/P1-U11-V01-R1.json",
+          "access_mode": "read_only",
+          "confidentiality": "internal",
+          "source": {
+            "origin": "local_workspace",
+            "supplied_or_generated_at": "2026-08-27T20:26:07.089Z",
+            "provenance_notes": "Supplied to this reviewer via the local workspace and inventoried at captured_at; this timestamp is not an assertion of the source artifact's creation time."
+          },
+          "integrity": {
+            "verification_status": "hash_verified",
+            "sha256": "796708cf10b658e5c0ee8eb4d67a9c0b58823b80148a4b22a6f36ec29683e229",
+            "size_bytes": 2460,
+            "modified_at": "2026-08-27T19:36:09.000Z",
+            "immutable_source_preserved": true
+          },
+          "inspection_status": "inspected",
+          "inspection_notes": "Inspected at the extent stated in commands and output.md; evidence metadata checks do not imply full regrading of all business answers."
+        },
+        {
+          "artifact_id": "P03-ART-029",
+          "label": "tests/phase-3/reviews/P1-U12-V01-R1.json",
+          "role": "evidence",
+          "artifact_kind": "other",
+          "media_type": "application/json",
+          "locator": "tests/phase-3/reviews/P1-U12-V01-R1.json",
+          "access_mode": "read_only",
+          "confidentiality": "internal",
+          "source": {
+            "origin": "local_workspace",
+            "supplied_or_generated_at": "2026-08-27T20:26:07.089Z",
+            "provenance_notes": "Supplied to this reviewer via the local workspace and inventoried at captured_at; this timestamp is not an assertion of the source artifact's creation time."
+          },
+          "integrity": {
+            "verification_status": "hash_verified",
+            "sha256": "0973cd27bbc416e1f2a9594ab02aeca84f3c17ecc919e33e3e96401c761df242",
+            "size_bytes": 2373,
+            "modified_at": "2026-08-27T19:37:34.000Z",
+            "immutable_source_preserved": true
+          },
+          "inspection_status": "inspected",
+          "inspection_notes": "Inspected at the extent stated in commands and output.md; evidence metadata checks do not imply full regrading of all business answers."
+        },
+        {
+          "artifact_id": "P03-ART-030",
+          "label": "tests/phase-3/reviews/P1-U13-V01-R1.json",
+          "role": "evidence",
+          "artifact_kind": "other",
+          "media_type": "application/json",
+          "locator": "tests/phase-3/reviews/P1-U13-V01-R1.json",
+          "access_mode": "read_only",
+          "confidentiality": "internal",
+          "source": {
+            "origin": "local_workspace",
+            "supplied_or_generated_at": "2026-08-27T20:26:07.089Z",
+            "provenance_notes": "Supplied to this reviewer via the local workspace and inventoried at captured_at; this timestamp is not an assertion of the source artifact's creation time."
+          },
+          "integrity": {
+            "verification_status": "hash_verified",
+            "sha256": "033650e199b1a1cab29dcbd496237754a99fc7d764cd030b0e318071e31f3dc0",
+            "size_bytes": 2590,
+            "modified_at": "2026-08-27T19:38:55.000Z",
+            "immutable_source_preserved": true
+          },
+          "inspection_status": "inspected",
+          "inspection_notes": "Inspected at the extent stated in commands and output.md; evidence metadata checks do not imply full regrading of all business answers."
+        },
+        {
+          "artifact_id": "P03-ART-031",
+          "label": "tests/phase-3/reviews/P1-U14-V01-R1.json",
+          "role": "evidence",
+          "artifact_kind": "other",
+          "media_type": "application/json",
+          "locator": "tests/phase-3/reviews/P1-U14-V01-R1.json",
+          "access_mode": "read_only",
+          "confidentiality": "internal",
+          "source": {
+            "origin": "local_workspace",
+            "supplied_or_generated_at": "2026-08-27T20:26:07.089Z",
+            "provenance_notes": "Supplied to this reviewer via the local workspace and inventoried at captured_at; this timestamp is not an assertion of the source artifact's creation time."
+          },
+          "integrity": {
+            "verification_status": "hash_verified",
+            "sha256": "0f9c54af7a10bb2a085546fe5f202b385831174c79d44bd5e62170ff84a2002b",
+            "size_bytes": 2194,
+            "modified_at": "2026-08-27T19:41:21.000Z",
+            "immutable_source_preserved": true
+          },
+          "inspection_status": "inspected",
+          "inspection_notes": "Inspected at the extent stated in commands and output.md; evidence metadata checks do not imply full regrading of all business answers."
+        },
+        {
+          "artifact_id": "P03-ART-032",
+          "label": "tests/phase-3/reviews/P1-U15-V01-R1.json",
+          "role": "evidence",
+          "artifact_kind": "other",
+          "media_type": "application/json",
+          "locator": "tests/phase-3/reviews/P1-U15-V01-R1.json",
+          "access_mode": "read_only",
+          "confidentiality": "internal",
+          "source": {
+            "origin": "local_workspace",
+            "supplied_or_generated_at": "2026-08-27T20:26:07.089Z",
+            "provenance_notes": "Supplied to this reviewer via the local workspace and inventoried at captured_at; this timestamp is not an assertion of the source artifact's creation time."
+          },
+          "integrity": {
+            "verification_status": "hash_verified",
+            "sha256": "4d860e8360ef6f321ba5f173eaee64ea806c045cf8d5b1f9986e1963967d89d5",
+            "size_bytes": 2111,
+            "modified_at": "2026-08-27T19:41:40.000Z",
+            "immutable_source_preserved": true
+          },
+          "inspection_status": "inspected",
+          "inspection_notes": "Inspected at the extent stated in commands and output.md; evidence metadata checks do not imply full regrading of all business answers."
+        },
+        {
+          "artifact_id": "P03-ART-033",
+          "label": "tests/phase-3/reviews/P1-U15-V02-R1.json",
+          "role": "evidence",
+          "artifact_kind": "other",
+          "media_type": "application/json",
+          "locator": "tests/phase-3/reviews/P1-U15-V02-R1.json",
+          "access_mode": "read_only",
+          "confidentiality": "internal",
+          "source": {
+            "origin": "local_workspace",
+            "supplied_or_generated_at": "2026-08-27T20:26:07.089Z",
+            "provenance_notes": "Supplied to this reviewer via the local workspace and inventoried at captured_at; this timestamp is not an assertion of the source artifact's creation time."
+          },
+          "integrity": {
+            "verification_status": "hash_verified",
+            "sha256": "8dc6c5ea8c548372073647424dbc1217604850b7098a2ef4b49e5cb78253db5e",
+            "size_bytes": 2249,
+            "modified_at": "2026-08-27T19:43:33.000Z",
+            "immutable_source_preserved": true
+          },
+          "inspection_status": "inspected",
+          "inspection_notes": "Inspected at the extent stated in commands and output.md; evidence metadata checks do not imply full regrading of all business answers."
+        },
+        {
+          "artifact_id": "P03-ART-034",
+          "label": "tests/phase-3/reviews/P1-U15-V03-R1.json",
+          "role": "evidence",
+          "artifact_kind": "other",
+          "media_type": "application/json",
+          "locator": "tests/phase-3/reviews/P1-U15-V03-R1.json",
+          "access_mode": "read_only",
+          "confidentiality": "internal",
+          "source": {
+            "origin": "local_workspace",
+            "supplied_or_generated_at": "2026-08-27T20:26:07.089Z",
+            "provenance_notes": "Supplied to this reviewer via the local workspace and inventoried at captured_at; this timestamp is not an assertion of the source artifact's creation time."
+          },
+          "integrity": {
+            "verification_status": "hash_verified",
+            "sha256": "7a359000398ba87f069d91914c9e998b31835923d2ee649348e9c3b896be5802",
+            "size_bytes": 2276,
+            "modified_at": "2026-08-27T19:46:37.000Z",
+            "immutable_source_preserved": true
+          },
+          "inspection_status": "inspected",
+          "inspection_notes": "Inspected at the extent stated in commands and output.md; evidence metadata checks do not imply full regrading of all business answers."
+        },
+        {
+          "artifact_id": "P03-ART-035",
+          "label": "tests/phase-3/reviews/P1-U16-V01-R1.json",
+          "role": "evidence",
+          "artifact_kind": "other",
+          "media_type": "application/json",
+          "locator": "tests/phase-3/reviews/P1-U16-V01-R1.json",
+          "access_mode": "read_only",
+          "confidentiality": "internal",
+          "source": {
+            "origin": "local_workspace",
+            "supplied_or_generated_at": "2026-08-27T20:26:07.089Z",
+            "provenance_notes": "Supplied to this reviewer via the local workspace and inventoried at captured_at; this timestamp is not an assertion of the source artifact's creation time."
+          },
+          "integrity": {
+            "verification_status": "hash_verified",
+            "sha256": "8798c590ff4e81530d0ed606733cf893319d8006d4680cf42c928b803f2f5318",
+            "size_bytes": 4056,
+            "modified_at": "2026-08-27T20:08:59.000Z",
+            "immutable_source_preserved": true
+          },
+          "inspection_status": "inspected",
+          "inspection_notes": "Inspected at the extent stated in commands and output.md; evidence metadata checks do not imply full regrading of all business answers."
+        },
+        {
+          "artifact_id": "P03-ART-036",
+          "label": "tests/phase-3/reviews/P1-U16-V02-R1.json",
+          "role": "evidence",
+          "artifact_kind": "other",
+          "media_type": "application/json",
+          "locator": "tests/phase-3/reviews/P1-U16-V02-R1.json",
+          "access_mode": "read_only",
+          "confidentiality": "internal",
+          "source": {
+            "origin": "local_workspace",
+            "supplied_or_generated_at": "2026-08-27T20:26:07.089Z",
+            "provenance_notes": "Supplied to this reviewer via the local workspace and inventoried at captured_at; this timestamp is not an assertion of the source artifact's creation time."
+          },
+          "integrity": {
+            "verification_status": "hash_verified",
+            "sha256": "88a117072432496f51684af721ec358a54a9a1d25e02758ffc83382f38113b73",
+            "size_bytes": 2805,
+            "modified_at": "2026-08-27T19:52:12.000Z",
+            "immutable_source_preserved": true
+          },
+          "inspection_status": "inspected",
+          "inspection_notes": "Inspected at the extent stated in commands and output.md; evidence metadata checks do not imply full regrading of all business answers."
+        },
+        {
+          "artifact_id": "P03-ART-037",
+          "label": "tests/phase-3/reviews/P1-U17-V01-R1.json",
+          "role": "evidence",
+          "artifact_kind": "other",
+          "media_type": "application/json",
+          "locator": "tests/phase-3/reviews/P1-U17-V01-R1.json",
+          "access_mode": "read_only",
+          "confidentiality": "internal",
+          "source": {
+            "origin": "local_workspace",
+            "supplied_or_generated_at": "2026-08-27T20:26:07.089Z",
+            "provenance_notes": "Supplied to this reviewer via the local workspace and inventoried at captured_at; this timestamp is not an assertion of the source artifact's creation time."
+          },
+          "integrity": {
+            "verification_status": "hash_verified",
+            "sha256": "71089cba58b378a7f8aab5c725efebd2fd2f7541a0ac3b55ff3d02df4b65f111",
+            "size_bytes": 2207,
+            "modified_at": "2026-08-27T20:04:39.000Z",
+            "immutable_source_preserved": true
+          },
+          "inspection_status": "inspected",
+          "inspection_notes": "Inspected at the extent stated in commands and output.md; evidence metadata checks do not imply full regrading of all business answers."
+        },
+        {
+          "artifact_id": "P03-ART-038",
+          "label": "tests/phase-3/reviews/P1-U17-V02-R1.json",
+          "role": "evidence",
+          "artifact_kind": "other",
+          "media_type": "application/json",
+          "locator": "tests/phase-3/reviews/P1-U17-V02-R1.json",
+          "access_mode": "read_only",
+          "confidentiality": "internal",
+          "source": {
+            "origin": "local_workspace",
+            "supplied_or_generated_at": "2026-08-27T20:26:07.089Z",
+            "provenance_notes": "Supplied to this reviewer via the local workspace and inventoried at captured_at; this timestamp is not an assertion of the source artifact's creation time."
+          },
+          "integrity": {
+            "verification_status": "hash_verified",
+            "sha256": "7a8be3c373028c1b877b6e8720fd3aabfcde27adea289debb3153a036b75c15e",
+            "size_bytes": 2113,
+            "modified_at": "2026-08-27T20:04:39.000Z",
+            "immutable_source_preserved": true
+          },
+          "inspection_status": "inspected",
+          "inspection_notes": "Inspected at the extent stated in commands and output.md; evidence metadata checks do not imply full regrading of all business answers."
+        },
+        {
+          "artifact_id": "P03-ART-039",
+          "label": "tests/phase-3/reviews/P1-U18-V01-R1.json",
+          "role": "evidence",
+          "artifact_kind": "other",
+          "media_type": "application/json",
+          "locator": "tests/phase-3/reviews/P1-U18-V01-R1.json",
+          "access_mode": "read_only",
+          "confidentiality": "internal",
+          "source": {
+            "origin": "local_workspace",
+            "supplied_or_generated_at": "2026-08-27T20:26:07.089Z",
+            "provenance_notes": "Supplied to this reviewer via the local workspace and inventoried at captured_at; this timestamp is not an assertion of the source artifact's creation time."
+          },
+          "integrity": {
+            "verification_status": "hash_verified",
+            "sha256": "39daa763ea31599603b0229c6c50c45354f5b3340695e3876d28f8d0486d2689",
+            "size_bytes": 2405,
+            "modified_at": "2026-08-27T20:09:39.000Z",
+            "immutable_source_preserved": true
+          },
+          "inspection_status": "inspected",
+          "inspection_notes": "Inspected at the extent stated in commands and output.md; evidence metadata checks do not imply full regrading of all business answers."
+        },
+        {
+          "artifact_id": "P03-ART-040",
+          "label": "tests/phase-3/reviews/P1-U19-V01-R2.json",
+          "role": "evidence",
+          "artifact_kind": "other",
+          "media_type": "application/json",
+          "locator": "tests/phase-3/reviews/P1-U19-V01-R2.json",
+          "access_mode": "read_only",
+          "confidentiality": "internal",
+          "source": {
+            "origin": "local_workspace",
+            "supplied_or_generated_at": "2026-08-27T20:26:07.089Z",
+            "provenance_notes": "Supplied to this reviewer via the local workspace and inventoried at captured_at; this timestamp is not an assertion of the source artifact's creation time."
+          },
+          "integrity": {
+            "verification_status": "hash_verified",
+            "sha256": "761702a9e6c35272ebc7b412646cdeed86f7dfabedc2e2462e30e5c8d2430575",
+            "size_bytes": 3416,
+            "modified_at": "2026-08-27T19:23:35.000Z",
+            "immutable_source_preserved": true
+          },
+          "inspection_status": "inspected",
+          "inspection_notes": "Inspected at the extent stated in commands and output.md; evidence metadata checks do not imply full regrading of all business answers."
+        },
+        {
+          "artifact_id": "P03-ART-041",
+          "label": "tests/phase-3/reviews/P1-U20-V01-R1.json",
+          "role": "evidence",
+          "artifact_kind": "other",
+          "media_type": "application/json",
+          "locator": "tests/phase-3/reviews/P1-U20-V01-R1.json",
+          "access_mode": "read_only",
+          "confidentiality": "internal",
+          "source": {
+            "origin": "local_workspace",
+            "supplied_or_generated_at": "2026-08-27T20:26:07.089Z",
+            "provenance_notes": "Supplied to this reviewer via the local workspace and inventoried at captured_at; this timestamp is not an assertion of the source artifact's creation time."
+          },
+          "integrity": {
+            "verification_status": "hash_verified",
+            "sha256": "0f835512b4baa152871899fb3a05e14486c95a7135125569a394c41987efa4e4",
+            "size_bytes": 1682,
+            "modified_at": "2026-08-27T19:46:37.000Z",
+            "immutable_source_preserved": true
+          },
+          "inspection_status": "inspected",
+          "inspection_notes": "Inspected at the extent stated in commands and output.md; evidence metadata checks do not imply full regrading of all business answers."
+        },
+        {
+          "artifact_id": "P03-ART-042",
+          "label": "tests/phase-3/reviews/P1-U20-V02-R1.json",
+          "role": "evidence",
+          "artifact_kind": "other",
+          "media_type": "application/json",
+          "locator": "tests/phase-3/reviews/P1-U20-V02-R1.json",
+          "access_mode": "read_only",
+          "confidentiality": "internal",
+          "source": {
+            "origin": "local_workspace",
+            "supplied_or_generated_at": "2026-08-27T20:26:07.089Z",
+            "provenance_notes": "Supplied to this reviewer via the local workspace and inventoried at captured_at; this timestamp is not an assertion of the source artifact's creation time."
+          },
+          "integrity": {
+            "verification_status": "hash_verified",
+            "sha256": "870eff2aed4fc0ecaacc11214bdea7845e6df91e9e520fd681baa2bfc58827bf",
+            "size_bytes": 2039,
+            "modified_at": "2026-08-27T20:08:59.000Z",
+            "immutable_source_preserved": true
+          },
+          "inspection_status": "inspected",
+          "inspection_notes": "Inspected at the extent stated in commands and output.md; evidence metadata checks do not imply full regrading of all business answers."
+        },
+        {
+          "artifact_id": "P03-ART-043",
+          "label": "tests/phase-3/reviews/P1-U21-V01-R1.json",
+          "role": "evidence",
+          "artifact_kind": "other",
+          "media_type": "application/json",
+          "locator": "tests/phase-3/reviews/P1-U21-V01-R1.json",
+          "access_mode": "read_only",
+          "confidentiality": "internal",
+          "source": {
+            "origin": "local_workspace",
+            "supplied_or_generated_at": "2026-08-27T20:26:07.089Z",
+            "provenance_notes": "Supplied to this reviewer via the local workspace and inventoried at captured_at; this timestamp is not an assertion of the source artifact's creation time."
+          },
+          "integrity": {
+            "verification_status": "hash_verified",
+            "sha256": "8f1f109ee02726a3726373ae5072aabe2d714ccedb9ee4c8e4d7236043ce0dac",
+            "size_bytes": 3469,
+            "modified_at": "2026-08-27T19:58:20.000Z",
+            "immutable_source_preserved": true
+          },
+          "inspection_status": "inspected",
+          "inspection_notes": "Inspected at the extent stated in commands and output.md; evidence metadata checks do not imply full regrading of all business answers."
+        },
+        {
+          "artifact_id": "P03-ART-044",
+          "label": "tests/phase-3/reviews/P1-U22-V01-R1.json",
+          "role": "evidence",
+          "artifact_kind": "other",
+          "media_type": "application/json",
+          "locator": "tests/phase-3/reviews/P1-U22-V01-R1.json",
+          "access_mode": "read_only",
+          "confidentiality": "internal",
+          "source": {
+            "origin": "local_workspace",
+            "supplied_or_generated_at": "2026-08-27T20:26:07.089Z",
+            "provenance_notes": "Supplied to this reviewer via the local workspace and inventoried at captured_at; this timestamp is not an assertion of the source artifact's creation time."
+          },
+          "integrity": {
+            "verification_status": "hash_verified",
+            "sha256": "0f413c771bc55ba834ffe80f23cee66db351aa4d82bd4cd626b7a26e4bc89960",
+            "size_bytes": 3704,
+            "modified_at": "2026-08-27T19:07:39.000Z",
+            "immutable_source_preserved": true
+          },
+          "inspection_status": "inspected",
+          "inspection_notes": "Inspected at the extent stated in commands and output.md; evidence metadata checks do not imply full regrading of all business answers."
+        },
+        {
+          "artifact_id": "P03-ART-045",
+          "label": "tests/phase-3/reviews/group-P1-U15-R1.json",
+          "role": "evidence",
+          "artifact_kind": "other",
+          "media_type": "application/json",
+          "locator": "tests/phase-3/reviews/group-P1-U15-R1.json",
+          "access_mode": "read_only",
+          "confidentiality": "internal",
+          "source": {
+            "origin": "local_workspace",
+            "supplied_or_generated_at": "2026-08-27T20:26:07.089Z",
+            "provenance_notes": "Supplied to this reviewer via the local workspace and inventoried at captured_at; this timestamp is not an assertion of the source artifact's creation time."
+          },
+          "integrity": {
+            "verification_status": "hash_verified",
+            "sha256": "c3014abf3781a3a32849a2a9df3e7d3f2c1d0496a09da5d424e3950ef3ab1c00",
+            "size_bytes": 2318,
+            "modified_at": "2026-08-27T19:46:38.000Z",
+            "immutable_source_preserved": true
+          },
+          "inspection_status": "inspected",
+          "inspection_notes": "Inspected at the extent stated in commands and output.md; evidence metadata checks do not imply full regrading of all business answers."
+        },
+        {
+          "artifact_id": "P03-ART-046",
+          "label": "tests/phase-3/reviews/support/P1-U19-V01-R2-link-recheck.json",
+          "role": "evidence",
+          "artifact_kind": "other",
+          "media_type": "application/json",
+          "locator": "tests/phase-3/reviews/support/P1-U19-V01-R2-link-recheck.json",
+          "access_mode": "read_only",
+          "confidentiality": "internal",
+          "source": {
+            "origin": "local_workspace",
+            "supplied_or_generated_at": "2026-08-27T20:26:07.089Z",
+            "provenance_notes": "Supplied to this reviewer via the local workspace and inventoried at captured_at; this timestamp is not an assertion of the source artifact's creation time."
+          },
+          "integrity": {
+            "verification_status": "hash_verified",
+            "sha256": "80af9bcd256a8add02b833d9901c98544635cd53cf1d5e11edc276744ef27458",
+            "size_bytes": 1826,
+            "modified_at": "2026-08-27T19:23:12.000Z",
+            "immutable_source_preserved": true
+          },
+          "inspection_status": "inspected",
+          "inspection_notes": "Inspected at the extent stated in commands and output.md; evidence metadata checks do not imply full regrading of all business answers."
+        },
+        {
+          "artifact_id": "P03-ART-047",
+          "label": "tests/phase-3/reviews/support/P1-U22-V01-R1-preservation-recheck.json",
+          "role": "evidence",
+          "artifact_kind": "other",
+          "media_type": "application/json",
+          "locator": "tests/phase-3/reviews/support/P1-U22-V01-R1-preservation-recheck.json",
+          "access_mode": "read_only",
+          "confidentiality": "internal",
+          "source": {
+            "origin": "local_workspace",
+            "supplied_or_generated_at": "2026-08-27T20:26:07.089Z",
+            "provenance_notes": "Supplied to this reviewer via the local workspace and inventoried at captured_at; this timestamp is not an assertion of the source artifact's creation time."
+          },
+          "integrity": {
+            "verification_status": "hash_verified",
+            "sha256": "0c69f604a50007a1ad90f4e89ec392d39b51bbc669a7797fbcda204cb02d2e25",
+            "size_bytes": 452,
+            "modified_at": "2026-08-27T19:07:40.000Z",
+            "immutable_source_preserved": true
+          },
+          "inspection_status": "inspected",
+          "inspection_notes": "Inspected at the extent stated in commands and output.md; evidence metadata checks do not imply full regrading of all business answers."
+        },
+        {
+          "artifact_id": "P03-ART-048",
+          "label": "tests/phase-3/runs/P1-P01-V01-R1/artifacts/output.json",
+          "role": "evidence",
+          "artifact_kind": "other",
+          "media_type": "application/json",
+          "locator": "tests/phase-3/runs/P1-P01-V01-R1/artifacts/output.json",
+          "access_mode": "read_only",
+          "confidentiality": "internal",
+          "source": {
+            "origin": "local_workspace",
+            "supplied_or_generated_at": "2026-08-27T20:26:07.089Z",
+            "provenance_notes": "Supplied to this reviewer via the local workspace and inventoried at captured_at; this timestamp is not an assertion of the source artifact's creation time."
+          },
+          "integrity": {
+            "verification_status": "hash_verified",
+            "sha256": "c5174f96e12b61f47f0132e9d9f8280413d1d97f8f639acdba03e7842f51ed30",
+            "size_bytes": 9389,
+            "modified_at": "2026-08-27T20:03:16.000Z",
+            "immutable_source_preserved": true
+          },
+          "inspection_status": "inspected",
+          "inspection_notes": "Inspected at the extent stated in commands and output.md; evidence metadata checks do not imply full regrading of all business answers."
+        },
+        {
+          "artifact_id": "P03-ART-049",
+          "label": "tests/phase-3/runs/P1-P02-V01-R1/artifacts/output.json",
+          "role": "evidence",
+          "artifact_kind": "other",
+          "media_type": "application/json",
+          "locator": "tests/phase-3/runs/P1-P02-V01-R1/artifacts/output.json",
+          "access_mode": "read_only",
+          "confidentiality": "internal",
+          "source": {
+            "origin": "local_workspace",
+            "supplied_or_generated_at": "2026-08-27T20:26:07.089Z",
+            "provenance_notes": "Supplied to this reviewer via the local workspace and inventoried at captured_at; this timestamp is not an assertion of the source artifact's creation time."
+          },
+          "integrity": {
+            "verification_status": "hash_verified",
+            "sha256": "80143ed381be3eb8480174c47ce4c59d5227da65881d552002249945b0588f8d",
+            "size_bytes": 9389,
+            "modified_at": "2026-08-27T20:03:20.000Z",
+            "immutable_source_preserved": true
+          },
+          "inspection_status": "inspected",
+          "inspection_notes": "Inspected at the extent stated in commands and output.md; evidence metadata checks do not imply full regrading of all business answers."
+        },
+        {
+          "artifact_id": "P03-ART-050",
+          "label": "tests/phase-3/runs/P1-P03-V01-R1/dispatch-prompt.txt",
+          "role": "evidence",
+          "artifact_kind": "other",
+          "media_type": "text/plain",
+          "locator": "tests/phase-3/runs/P1-P03-V01-R1/dispatch-prompt.txt",
+          "access_mode": "read_only",
+          "confidentiality": "internal",
+          "source": {
+            "origin": "local_workspace",
+            "supplied_or_generated_at": "2026-08-27T20:26:07.089Z",
+            "provenance_notes": "Supplied to this reviewer via the local workspace and inventoried at captured_at; this timestamp is not an assertion of the source artifact's creation time."
+          },
+          "integrity": {
+            "verification_status": "hash_verified",
+            "sha256": "f8324508e6cf74b5a44104879eb0482e26b5b3692071194c5fffe439c3f46ec6",
+            "size_bytes": 2616,
+            "modified_at": "2026-08-27T20:13:47.000Z",
+            "immutable_source_preserved": true
+          },
+          "inspection_status": "inspected",
+          "inspection_notes": "Inspected at the extent stated in commands and output.md; evidence metadata checks do not imply full regrading of all business answers."
+        },
+        {
+          "artifact_id": "P03-ART-051",
+          "label": "tests/phase-3/runs/P1-P03-V01-R1/prompt.txt",
+          "role": "evidence",
+          "artifact_kind": "other",
+          "media_type": "text/plain",
+          "locator": "tests/phase-3/runs/P1-P03-V01-R1/prompt.txt",
+          "access_mode": "read_only",
+          "confidentiality": "internal",
+          "source": {
+            "origin": "local_workspace",
+            "supplied_or_generated_at": "2026-08-27T20:26:07.089Z",
+            "provenance_notes": "Supplied to this reviewer via the local workspace and inventoried at captured_at; this timestamp is not an assertion of the source artifact's creation time."
+          },
+          "integrity": {
+            "verification_status": "hash_verified",
+            "sha256": "715d8e570d299a401873207e81c29e4a95a6e49120605c4a1e85a05282972048",
+            "size_bytes": 399,
+            "modified_at": "2026-08-27T19:49:00.000Z",
+            "immutable_source_preserved": true
+          },
+          "inspection_status": "inspected",
+          "inspection_notes": "Inspected at the extent stated in commands and output.md; evidence metadata checks do not imply full regrading of all business answers."
+        },
+        {
+          "artifact_id": "P03-ART-052",
+          "label": "tests/phase-3/runs/P1-U06-V01-R1/artifacts/output.md",
+          "role": "evidence",
+          "artifact_kind": "document",
+          "media_type": "text/plain",
+          "locator": "tests/phase-3/runs/P1-U06-V01-R1/artifacts/output.md",
+          "access_mode": "read_only",
+          "confidentiality": "internal",
+          "source": {
+            "origin": "local_workspace",
+            "supplied_or_generated_at": "2026-08-27T20:26:07.089Z",
+            "provenance_notes": "Supplied to this reviewer via the local workspace and inventoried at captured_at; this timestamp is not an assertion of the source artifact's creation time."
+          },
+          "integrity": {
+            "verification_status": "hash_verified",
+            "sha256": "4c13f63046d2e8101b9d73b4832ee0a0320ec7da4dc9151bd4fabc2f8cfd3ae3",
+            "size_bytes": 14976,
+            "modified_at": "2026-08-27T19:19:51.000Z",
+            "immutable_source_preserved": true
+          },
+          "inspection_status": "inspected",
+          "inspection_notes": "Inspected at the extent stated in commands and output.md; evidence metadata checks do not imply full regrading of all business answers."
+        },
+        {
+          "artifact_id": "P03-ART-053",
+          "label": "tests/phase-3/runs/P1-U06-V01-R1/artifacts/tool-trace.json",
+          "role": "evidence",
+          "artifact_kind": "other",
+          "media_type": "application/json",
+          "locator": "tests/phase-3/runs/P1-U06-V01-R1/artifacts/tool-trace.json",
+          "access_mode": "read_only",
+          "confidentiality": "internal",
+          "source": {
+            "origin": "local_workspace",
+            "supplied_or_generated_at": "2026-08-27T20:26:07.089Z",
+            "provenance_notes": "Supplied to this reviewer via the local workspace and inventoried at captured_at; this timestamp is not an assertion of the source artifact's creation time."
+          },
+          "integrity": {
+            "verification_status": "hash_verified",
+            "sha256": "3fde4f3e156b61436ab8bb9838cc3663b0fccd46f23fd361525946de629e13c5",
+            "size_bytes": 25308,
+            "modified_at": "2026-08-27T19:19:51.000Z",
+            "immutable_source_preserved": true
+          },
+          "inspection_status": "inspected",
+          "inspection_notes": "Inspected at the extent stated in commands and output.md; evidence metadata checks do not imply full regrading of all business answers."
+        },
+        {
+          "artifact_id": "P03-ART-054",
+          "label": "tests/phase-3/runs/P1-U16-V01-R1/artifacts/document-evidence/native-inspection.json",
+          "role": "evidence",
+          "artifact_kind": "other",
+          "media_type": "application/json",
+          "locator": "tests/phase-3/runs/P1-U16-V01-R1/artifacts/document-evidence/native-inspection.json",
+          "access_mode": "read_only",
+          "confidentiality": "internal",
+          "source": {
+            "origin": "local_workspace",
+            "supplied_or_generated_at": "2026-08-27T20:26:07.089Z",
+            "provenance_notes": "Supplied to this reviewer via the local workspace and inventoried at captured_at; this timestamp is not an assertion of the source artifact's creation time."
+          },
+          "integrity": {
+            "verification_status": "hash_verified",
+            "sha256": "fd56d55bb3335989e0a3a851ccc3d8a8d528291535ced5e38b6ddd300ff0998d",
+            "size_bytes": 1430,
+            "modified_at": "2026-08-27T20:03:57.000Z",
+            "immutable_source_preserved": true
+          },
+          "inspection_status": "inspected",
+          "inspection_notes": "Inspected at the extent stated in commands and output.md; evidence metadata checks do not imply full regrading of all business answers."
+        },
+        {
+          "artifact_id": "P03-ART-055",
+          "label": "tests/phase-3/runs/P1-U16-V01-R1/artifacts/document-evidence/tool-trace.json",
+          "role": "evidence",
+          "artifact_kind": "other",
+          "media_type": "application/json",
+          "locator": "tests/phase-3/runs/P1-U16-V01-R1/artifacts/document-evidence/tool-trace.json",
+          "access_mode": "read_only",
+          "confidentiality": "internal",
+          "source": {
+            "origin": "local_workspace",
+            "supplied_or_generated_at": "2026-08-27T20:26:07.089Z",
+            "provenance_notes": "Supplied to this reviewer via the local workspace and inventoried at captured_at; this timestamp is not an assertion of the source artifact's creation time."
+          },
+          "integrity": {
+            "verification_status": "hash_verified",
+            "sha256": "490514bc66827229c130fb32ff6bdd4cb70e0c253af8d704ba09f280be0dcd84",
+            "size_bytes": 45648,
+            "modified_at": "2026-08-27T20:03:57.000Z",
+            "immutable_source_preserved": true
+          },
+          "inspection_status": "inspected",
+          "inspection_notes": "Inspected at the extent stated in commands and output.md; evidence metadata checks do not imply full regrading of all business answers."
+        },
+        {
+          "artifact_id": "P03-ART-056",
+          "label": "tests/phase-3/runs/P1-U16-V01-R1/artifacts/output.md",
+          "role": "evidence",
+          "artifact_kind": "document",
+          "media_type": "text/plain",
+          "locator": "tests/phase-3/runs/P1-U16-V01-R1/artifacts/output.md",
+          "access_mode": "read_only",
+          "confidentiality": "internal",
+          "source": {
+            "origin": "local_workspace",
+            "supplied_or_generated_at": "2026-08-27T20:26:07.089Z",
+            "provenance_notes": "Supplied to this reviewer via the local workspace and inventoried at captured_at; this timestamp is not an assertion of the source artifact's creation time."
+          },
+          "integrity": {
+            "verification_status": "hash_verified",
+            "sha256": "2ae5d61d8e433bfdb17dfc2b17d0cf5313f1c4254effd15e44c7b91d18e0b783",
+            "size_bytes": 12417,
+            "modified_at": "2026-08-27T20:03:57.000Z",
+            "immutable_source_preserved": true
+          },
+          "inspection_status": "inspected",
+          "inspection_notes": "Inspected at the extent stated in commands and output.md; evidence metadata checks do not imply full regrading of all business answers."
+        },
+        {
+          "artifact_id": "P03-ART-057",
+          "label": "tests/phase-3/runs/P1-U16-V01-R1/artifacts/specialist-dispatch-tool-call.json",
+          "role": "evidence",
+          "artifact_kind": "other",
+          "media_type": "application/json",
+          "locator": "tests/phase-3/runs/P1-U16-V01-R1/artifacts/specialist-dispatch-tool-call.json",
+          "access_mode": "read_only",
+          "confidentiality": "internal",
+          "source": {
+            "origin": "local_workspace",
+            "supplied_or_generated_at": "2026-08-27T20:26:07.089Z",
+            "provenance_notes": "Supplied to this reviewer via the local workspace and inventoried at captured_at; this timestamp is not an assertion of the source artifact's creation time."
+          },
+          "integrity": {
+            "verification_status": "hash_verified",
+            "sha256": "c07039b77c01f03987815ed064c907134b584893d3688dc723a4d0d4d7953aa4",
+            "size_bytes": 3648,
+            "modified_at": "2026-08-27T20:03:57.000Z",
+            "immutable_source_preserved": true
+          },
+          "inspection_status": "inspected",
+          "inspection_notes": "Inspected at the extent stated in commands and output.md; evidence metadata checks do not imply full regrading of all business answers."
+        },
+        {
+          "artifact_id": "P03-ART-058",
+          "label": "tests/phase-3/runs/P1-U16-V01-R1/artifacts/specialist-dispatch.json",
+          "role": "evidence",
+          "artifact_kind": "other",
+          "media_type": "application/json",
+          "locator": "tests/phase-3/runs/P1-U16-V01-R1/artifacts/specialist-dispatch.json",
+          "access_mode": "read_only",
+          "confidentiality": "internal",
+          "source": {
+            "origin": "local_workspace",
+            "supplied_or_generated_at": "2026-08-27T20:26:07.089Z",
+            "provenance_notes": "Supplied to this reviewer via the local workspace and inventoried at captured_at; this timestamp is not an assertion of the source artifact's creation time."
+          },
+          "integrity": {
+            "verification_status": "hash_verified",
+            "sha256": "6d31ca922e4b698e1642fd8a981fa31c3ce5ffc9e9c7aa112e4cf85aadb7a465",
+            "size_bytes": 2386,
+            "modified_at": "2026-08-27T20:03:57.000Z",
+            "immutable_source_preserved": true
+          },
+          "inspection_status": "inspected",
+          "inspection_notes": "Inspected at the extent stated in commands and output.md; evidence metadata checks do not imply full regrading of all business answers."
+        },
+        {
+          "artifact_id": "P03-ART-059",
+          "label": "tests/phase-3/runs/P1-U16-V01-R1/artifacts/tool-trace.json",
+          "role": "evidence",
+          "artifact_kind": "other",
+          "media_type": "application/json",
+          "locator": "tests/phase-3/runs/P1-U16-V01-R1/artifacts/tool-trace.json",
+          "access_mode": "read_only",
+          "confidentiality": "internal",
+          "source": {
+            "origin": "local_workspace",
+            "supplied_or_generated_at": "2026-08-27T20:26:07.089Z",
+            "provenance_notes": "Supplied to this reviewer via the local workspace and inventoried at captured_at; this timestamp is not an assertion of the source artifact's creation time."
+          },
+          "integrity": {
+            "verification_status": "hash_verified",
+            "sha256": "8208c22aa74541b043def809ca644563327c9c195873be6ad497d72b16859390",
+            "size_bytes": 24738,
+            "modified_at": "2026-08-27T20:03:57.000Z",
+            "immutable_source_preserved": true
+          },
+          "inspection_status": "inspected",
+          "inspection_notes": "Inspected at the extent stated in commands and output.md; evidence metadata checks do not imply full regrading of all business answers."
+        },
+        {
+          "artifact_id": "P03-ART-060",
+          "label": "tests/phase-3/snapshots/round-1/manifest.json",
+          "role": "evidence",
+          "artifact_kind": "other",
+          "media_type": "application/json",
+          "locator": "tests/phase-3/snapshots/round-1/manifest.json",
+          "access_mode": "read_only",
+          "confidentiality": "internal",
+          "source": {
+            "origin": "local_workspace",
+            "supplied_or_generated_at": "2026-08-27T20:26:07.089Z",
+            "provenance_notes": "Supplied to this reviewer via the local workspace and inventoried at captured_at; this timestamp is not an assertion of the source artifact's creation time."
+          },
+          "integrity": {
+            "verification_status": "hash_verified",
+            "sha256": "615bf303fbdebee10ebc8bb17a63961504c592f4040f3aa4a3f20202cd527d8b",
+            "size_bytes": 9202,
+            "modified_at": "2026-08-27T18:34:05.000Z",
+            "immutable_source_preserved": true
+          },
+          "inspection_status": "inspected",
+          "inspection_notes": "Inspected at the extent stated in commands and output.md; evidence metadata checks do not imply full regrading of all business answers."
+        },
+        {
+          "artifact_id": "P03-ART-061",
+          "label": "tests/phase-3/snapshots/round-2/manifest.json",
+          "role": "evidence",
+          "artifact_kind": "other",
+          "media_type": "application/json",
+          "locator": "tests/phase-3/snapshots/round-2/manifest.json",
+          "access_mode": "read_only",
+          "confidentiality": "internal",
+          "source": {
+            "origin": "local_workspace",
+            "supplied_or_generated_at": "2026-08-27T20:26:07.089Z",
+            "provenance_notes": "Supplied to this reviewer via the local workspace and inventoried at captured_at; this timestamp is not an assertion of the source artifact's creation time."
+          },
+          "integrity": {
+            "verification_status": "hash_verified",
+            "sha256": "a15ee9c18e5f76ec9711098fe9cf6c6dce6dddf870d7bc528df9a39c23017113",
+            "size_bytes": 9202,
+            "modified_at": "2026-08-27T18:53:10.000Z",
+            "immutable_source_preserved": true
+          },
+          "inspection_status": "inspected",
+          "inspection_notes": "Inspected at the extent stated in commands and output.md; evidence metadata checks do not imply full regrading of all business answers."
+        },
+        {
+          "artifact_id": "P03-ART-062",
+          "label": "tests/phase-3/static/bounded-pattern-scan.json",
+          "role": "evidence",
+          "artifact_kind": "other",
+          "media_type": "application/json",
+          "locator": "tests/phase-3/static/bounded-pattern-scan.json",
+          "access_mode": "read_only",
+          "confidentiality": "internal",
+          "source": {
+            "origin": "local_workspace",
+            "supplied_or_generated_at": "2026-08-27T20:26:07.089Z",
+            "provenance_notes": "Supplied to this reviewer via the local workspace and inventoried at captured_at; this timestamp is not an assertion of the source artifact's creation time."
+          },
+          "integrity": {
+            "verification_status": "hash_verified",
+            "sha256": "e89cfb1c4ba16d3e243a86f54fffd56802714ceb9e79d99576df0a4984ecd6e1",
+            "size_bytes": 631,
+            "modified_at": "2026-08-27T19:47:48.000Z",
+            "immutable_source_preserved": true
+          },
+          "inspection_status": "inspected",
+          "inspection_notes": "Inspected at the extent stated in commands and output.md; evidence metadata checks do not imply full regrading of all business answers."
+        },
+        {
+          "artifact_id": "P03-ART-063",
+          "label": "tests/phase-3/static/canonical-structure.json",
+          "role": "evidence",
+          "artifact_kind": "other",
+          "media_type": "application/json",
+          "locator": "tests/phase-3/static/canonical-structure.json",
+          "access_mode": "read_only",
+          "confidentiality": "internal",
+          "source": {
+            "origin": "local_workspace",
+            "supplied_or_generated_at": "2026-08-27T20:26:07.089Z",
+            "provenance_notes": "Supplied to this reviewer via the local workspace and inventoried at captured_at; this timestamp is not an assertion of the source artifact's creation time."
+          },
+          "integrity": {
+            "verification_status": "hash_verified",
+            "sha256": "a4b0f25357eb7848d0c7c61f0c0bbf4bd76bcc6b4642332b78ec238816c4df6d",
+            "size_bytes": 584,
+            "modified_at": "2026-08-27T19:44:22.000Z",
+            "immutable_source_preserved": true
+          },
+          "inspection_status": "inspected",
+          "inspection_notes": "Inspected at the extent stated in commands and output.md; evidence metadata checks do not imply full regrading of all business answers."
+        },
+        {
+          "artifact_id": "P03-ART-064",
+          "label": "tests/phase-3/static/canonical-yaml.json",
+          "role": "evidence",
+          "artifact_kind": "other",
+          "media_type": "application/json",
+          "locator": "tests/phase-3/static/canonical-yaml.json",
+          "access_mode": "read_only",
+          "confidentiality": "internal",
+          "source": {
+            "origin": "local_workspace",
+            "supplied_or_generated_at": "2026-08-27T20:26:07.089Z",
+            "provenance_notes": "Supplied to this reviewer via the local workspace and inventoried at captured_at; this timestamp is not an assertion of the source artifact's creation time."
+          },
+          "integrity": {
+            "verification_status": "hash_verified",
+            "sha256": "f459913f808e8d022608a368e87b6bde838eaa2cf7665f6c714b66ce4600ab6d",
+            "size_bytes": 99,
+            "modified_at": "2026-08-27T19:44:22.000Z",
+            "immutable_source_preserved": true
+          },
+          "inspection_status": "inspected",
+          "inspection_notes": "Inspected at the extent stated in commands and output.md; evidence metadata checks do not imply full regrading of all business answers."
+        },
+        {
+          "artifact_id": "P03-ART-065",
+          "label": "tests/phase-3/static/final-build-idempotence.json",
+          "role": "evidence",
+          "artifact_kind": "other",
+          "media_type": "application/json",
+          "locator": "tests/phase-3/static/final-build-idempotence.json",
+          "access_mode": "read_only",
+          "confidentiality": "internal",
+          "source": {
+            "origin": "local_workspace",
+            "supplied_or_generated_at": "2026-08-27T20:26:07.089Z",
+            "provenance_notes": "Supplied to this reviewer via the local workspace and inventoried at captured_at; this timestamp is not an assertion of the source artifact's creation time."
+          },
+          "integrity": {
+            "verification_status": "hash_verified",
+            "sha256": "b6a52f4d9bd2fa3f6f6db18c7936827a986ae0aa721c6f6a9a128e9781cb22f6",
+            "size_bytes": 25561,
+            "modified_at": "2026-08-27T20:15:30.000Z",
+            "immutable_source_preserved": true
+          },
+          "inspection_status": "inspected",
+          "inspection_notes": "Inspected at the extent stated in commands and output.md; evidence metadata checks do not imply full regrading of all business answers."
+        },
+        {
+          "artifact_id": "P03-ART-066",
+          "label": "tests/phase-3/static/final-verification-commands.json",
+          "role": "evidence",
+          "artifact_kind": "other",
+          "media_type": "application/json",
+          "locator": "tests/phase-3/static/final-verification-commands.json",
+          "access_mode": "read_only",
+          "confidentiality": "internal",
+          "source": {
+            "origin": "local_workspace",
+            "supplied_or_generated_at": "2026-08-27T20:26:07.089Z",
+            "provenance_notes": "Supplied to this reviewer via the local workspace and inventoried at captured_at; this timestamp is not an assertion of the source artifact's creation time."
+          },
+          "integrity": {
+            "verification_status": "hash_verified",
+            "sha256": "0cd5fedade9b5e0e0852e46a1544b24dd6bc583fa194e82d9c003e1b0f58f201",
+            "size_bytes": 29837,
+            "modified_at": "2026-08-27T20:14:41.000Z",
+            "immutable_source_preserved": true
+          },
+          "inspection_status": "inspected",
+          "inspection_notes": "Inspected at the extent stated in commands and output.md; evidence metadata checks do not imply full regrading of all business answers."
+        },
+        {
+          "artifact_id": "P03-ART-067",
+          "label": "tests/phase-3/static/fixture-integrity.json",
+          "role": "evidence",
+          "artifact_kind": "other",
+          "media_type": "application/json",
+          "locator": "tests/phase-3/static/fixture-integrity.json",
+          "access_mode": "read_only",
+          "confidentiality": "internal",
+          "source": {
+            "origin": "local_workspace",
+            "supplied_or_generated_at": "2026-08-27T20:26:07.089Z",
+            "provenance_notes": "Supplied to this reviewer via the local workspace and inventoried at captured_at; this timestamp is not an assertion of the source artifact's creation time."
+          },
+          "integrity": {
+            "verification_status": "hash_verified",
+            "sha256": "e4392fd320001733d2beacad6addc29a8b9f557e41badfa1cb0f0289296a1fd4",
+            "size_bytes": 4072,
+            "modified_at": "2026-08-27T19:56:38.000Z",
+            "immutable_source_preserved": true
+          },
+          "inspection_status": "inspected",
+          "inspection_notes": "Inspected at the extent stated in commands and output.md; evidence metadata checks do not imply full regrading of all business answers."
+        },
+        {
+          "artifact_id": "P03-ART-068",
+          "label": "tests/phase-3/static/legacy-registry.json",
+          "role": "evidence",
+          "artifact_kind": "other",
+          "media_type": "application/json",
+          "locator": "tests/phase-3/static/legacy-registry.json",
+          "access_mode": "read_only",
+          "confidentiality": "internal",
+          "source": {
+            "origin": "local_workspace",
+            "supplied_or_generated_at": "2026-08-27T20:26:07.089Z",
+            "provenance_notes": "Supplied to this reviewer via the local workspace and inventoried at captured_at; this timestamp is not an assertion of the source artifact's creation time."
+          },
+          "integrity": {
+            "verification_status": "hash_verified",
+            "sha256": "5d944106681ab2fa8127cc52c053281d4efd9fc444d1c254b1fa42d9020411f7",
+            "size_bytes": 12955,
+            "modified_at": "2026-08-27T19:44:22.000Z",
+            "immutable_source_preserved": true
+          },
+          "inspection_status": "inspected",
+          "inspection_notes": "Inspected at the extent stated in commands and output.md; evidence metadata checks do not imply full regrading of all business answers."
+        },
+        {
+          "artifact_id": "P03-ART-069",
+          "label": "tests/phase-3/static/pre-release-report-review-results.json",
+          "role": "evidence",
+          "artifact_kind": "other",
+          "media_type": "application/json",
+          "locator": "tests/phase-3/static/pre-release-report-review-results.json",
+          "access_mode": "read_only",
+          "confidentiality": "internal",
+          "source": {
+            "origin": "local_workspace",
+            "supplied_or_generated_at": "2026-08-27T20:26:07.089Z",
+            "provenance_notes": "Supplied to this reviewer via the local workspace and inventoried at captured_at; this timestamp is not an assertion of the source artifact's creation time."
+          },
+          "integrity": {
+            "verification_status": "hash_verified",
+            "sha256": "d73b6d3cf1f597620af4cdb2bc2fb74e417566ae26326ff86e0456bded2f3bd4",
+            "size_bytes": 110331,
+            "modified_at": "2026-08-27T20:13:09.000Z",
+            "immutable_source_preserved": true
+          },
+          "inspection_status": "inspected",
+          "inspection_notes": "Inspected at the extent stated in commands and output.md; evidence metadata checks do not imply full regrading of all business answers."
+        },
+        {
+          "artifact_id": "P03-ART-070",
+          "label": "tests/phase-3/static/tooling-tests.txt",
+          "role": "evidence",
+          "artifact_kind": "other",
+          "media_type": "text/plain",
+          "locator": "tests/phase-3/static/tooling-tests.txt",
+          "access_mode": "read_only",
+          "confidentiality": "internal",
+          "source": {
+            "origin": "local_workspace",
+            "supplied_or_generated_at": "2026-08-27T20:26:07.089Z",
+            "provenance_notes": "Supplied to this reviewer via the local workspace and inventoried at captured_at; this timestamp is not an assertion of the source artifact's creation time."
+          },
+          "integrity": {
+            "verification_status": "hash_verified",
+            "sha256": "d508c3ca1088fe900e6773aad03d7ea91bfa7f5410c65a96442e5e81249e7aff",
+            "size_bytes": 9932,
+            "modified_at": "2026-08-27T19:44:21.000Z",
+            "immutable_source_preserved": true
+          },
+          "inspection_status": "inspected",
+          "inspection_notes": "Inspected at the extent stated in commands and output.md; evidence metadata checks do not imply full regrading of all business answers."
+        },
+        {
+          "artifact_id": "P03-ART-071",
+          "label": "tests/phase-3/tooling/README.md",
+          "role": "evidence",
+          "artifact_kind": "document",
+          "media_type": "text/plain",
+          "locator": "tests/phase-3/tooling/README.md",
+          "access_mode": "read_only",
+          "confidentiality": "internal",
+          "source": {
+            "origin": "local_workspace",
+            "supplied_or_generated_at": "2026-08-27T20:26:07.089Z",
+            "provenance_notes": "Supplied to this reviewer via the local workspace and inventoried at captured_at; this timestamp is not an assertion of the source artifact's creation time."
+          },
+          "integrity": {
+            "verification_status": "hash_verified",
+            "sha256": "f04ed2cc175884b427d31fe73a7f148b56dbd3c62e598eda5868b6e90b2ff7c5",
+            "size_bytes": 6526,
+            "modified_at": "2026-08-27T19:02:37.000Z",
+            "immutable_source_preserved": true
+          },
+          "inspection_status": "inspected",
+          "inspection_notes": "Inspected at the extent stated in commands and output.md; evidence metadata checks do not imply full regrading of all business answers."
+        }
+      ],
+      "inventory_limitations": [
+        "The validator transitively validates additional receipt/snapshot files; this inventory is not a manually inspected list of every such transitive byte.",
+        "evidence-index.json was read but is mutable and is not a receipt input; acceptance-results.json was not read."
+      ]
+    },
+    "review_record": {
+      "schema_version": "1.0.0",
+      "review_record_id": "P1-P03-V01-R1-REVIEW",
+      "engagement_id": "P1-P03-V01-R1",
+      "plan_id": "P1-P03-V01-R1-PLAN",
+      "created_at": "2026-08-27T20:23:23.332Z",
+      "updated_at": "2026-08-27T20:26:07.089Z",
+      "reviewer": {
+        "actor_id": "p1-p03-v01-r1-reviewer",
+        "display_name": "/root/p1_p03_v01_r1",
+        "role": "reviewer"
+      },
+      "review_relationship": "peer_review",
+      "artifact_ids_reviewed": [
+        "P03-ART-001",
+        "P03-ART-002",
+        "P03-ART-003",
+        "P03-ART-004",
+        "P03-ART-005",
+        "P03-ART-006",
+        "P03-ART-007",
+        "P03-ART-008",
+        "P03-ART-009",
+        "P03-ART-010",
+        "P03-ART-011",
+        "P03-ART-012",
+        "P03-ART-013",
+        "P03-ART-014",
+        "P03-ART-015",
+        "P03-ART-016",
+        "P03-ART-017",
+        "P03-ART-018",
+        "P03-ART-019",
+        "P03-ART-020",
+        "P03-ART-021",
+        "P03-ART-022",
+        "P03-ART-023",
+        "P03-ART-024",
+        "P03-ART-025",
+        "P03-ART-026",
+        "P03-ART-027",
+        "P03-ART-028",
+        "P03-ART-029",
+        "P03-ART-030",
+        "P03-ART-031",
+        "P03-ART-032",
+        "P03-ART-033",
+        "P03-ART-034",
+        "P03-ART-035",
+        "P03-ART-036",
+        "P03-ART-037",
+        "P03-ART-038",
+        "P03-ART-039",
+        "P03-ART-040",
+        "P03-ART-041",
+        "P03-ART-042",
+        "P03-ART-043",
+        "P03-ART-044",
+        "P03-ART-045",
+        "P03-ART-046",
+        "P03-ART-047",
+        "P03-ART-048",
+        "P03-ART-049",
+        "P03-ART-050",
+        "P03-ART-051",
+        "P03-ART-052",
+        "P03-ART-053",
+        "P03-ART-054",
+        "P03-ART-055",
+        "P03-ART-056",
+        "P03-ART-057",
+        "P03-ART-058",
+        "P03-ART-059",
+        "P03-ART-060",
+        "P03-ART-061",
+        "P03-ART-062",
+        "P03-ART-063",
+        "P03-ART-064",
+        "P03-ART-065",
+        "P03-ART-066",
+        "P03-ART-067",
+        "P03-ART-068",
+        "P03-ART-069",
+        "P03-ART-070",
+        "P03-ART-071"
+      ],
+      "check_results": [
+        {
+          "result_id": "P03-MO1",
+          "check_id": "QA-XART-TERMS",
+          "status": "pass",
+          "performed_at": "2026-08-27T20:23:23.332Z",
+          "performed_by": {
+            "actor_id": "p1-p03-v01-r1-reviewer",
+            "display_name": "/root/p1_p03_v01_r1",
+            "role": "reviewer"
+          },
+          "procedure_summary": "P03 case.must_observe.1: reconcile static/package, model and platform claims across all five release-facing documents and retained evidence.",
+          "evidence": [
+            {
+              "evidence_id": "P03-EVD-01",
+              "artifact_id": "P03-ART-006",
+              "locator": "docs/phase-3/REPORT.md",
+              "notes": "L23-L40 and L64-L75"
+            },
+            {
+              "evidence_id": "P03-EVD-02",
+              "artifact_id": "P03-ART-069",
+              "locator": "tests/phase-3/static/pre-release-report-review-results.json",
+              "notes": "claims_by_context; evidence_counts; per_platform"
+            },
+            {
+              "evidence_id": "P03-EVD-03",
+              "artifact_id": "P03-ART-048",
+              "locator": "tests/phase-3/runs/P1-P01-V01-R1/artifacts/output.json",
+              "notes": "packages; limitations"
+            }
+          ]
+        },
+        {
+          "result_id": "P03-MO2",
+          "check_id": "QA-SHARED-LIMITS",
+          "status": "pass",
+          "performed_at": "2026-08-27T20:23:23.332Z",
+          "performed_by": {
+            "actor_id": "p1-p03-v01-r1-reviewer",
+            "display_name": "/root/p1_p03_v01_r1",
+            "role": "reviewer"
+          },
+          "procedure_summary": "P03 case.must_observe.2: check not_run and executed_unreviewed preservation, current snapshot eligibility and expected pending P03 gate.",
+          "evidence": [
+            {
+              "evidence_id": "P03-EVD-04",
+              "artifact_id": "P03-ART-006",
+              "locator": "docs/phase-3/REPORT.md",
+              "notes": "L5, L36, L69-L75, L81-L84"
+            },
+            {
+              "evidence_id": "P03-EVD-05",
+              "artifact_id": "P03-ART-069",
+              "locator": "tests/phase-3/static/pre-release-report-review-results.json",
+              "notes": "runs; variant_coverage; claims_by_context; current_release_gate"
+            }
+          ]
+        },
+        {
+          "result_id": "P03-MO3",
+          "check_id": "QA-XART-TOTAL",
+          "status": "pass",
+          "performed_at": "2026-08-27T20:23:23.332Z",
+          "performed_by": {
+            "actor_id": "p1-p03-v01-r1-reviewer",
+            "display_name": "/root/p1_p03_v01_r1",
+            "role": "reviewer"
+          },
+          "procedure_summary": "P03 case.must_observe.3: reconcile 104 legacy registry/28 provisional summaries against separate current-release counts and retained preservation check.",
+          "evidence": [
+            {
+              "evidence_id": "P03-EVD-06",
+              "artifact_id": "P03-ART-010",
+              "locator": "tests/acceptance-report.md",
+              "notes": "Behavioral status"
+            },
+            {
+              "evidence_id": "P03-EVD-07",
+              "artifact_id": "P03-ART-011",
+              "locator": "tests/behavioral-report.md",
+              "notes": "Summary counts and evidence-incomplete qualification"
+            },
+            {
+              "evidence_id": "P03-EVD-08",
+              "artifact_id": "P03-ART-068",
+              "locator": "tests/phase-3/static/legacy-registry.json",
+              "notes": "case_count; behavioral"
+            },
+            {
+              "evidence_id": "P03-EVD-09",
+              "artifact_id": "P03-ART-049",
+              "locator": "tests/phase-3/runs/P1-P02-V01-R1/artifacts/output.json",
+              "notes": "preserved_historical_files"
+            }
+          ]
+        },
+        {
+          "result_id": "P03-MN1",
+          "check_id": "QA-RPT-CLAIMS",
+          "status": "pass",
+          "performed_at": "2026-08-27T20:23:23.332Z",
+          "performed_by": {
+            "actor_id": "p1-p03-v01-r1-reviewer",
+            "display_name": "/root/p1_p03_v01_r1",
+            "role": "reviewer"
+          },
+          "procedure_summary": "P03 case.must_not_observe.1: inspect for cross-platform/test-specification overclaim, with targeted U06/U16 trace challenge. Pass means forbidden behavior not observed.",
+          "evidence": [
+            {
+              "evidence_id": "P03-EVD-10",
+              "artifact_id": "P03-ART-002",
+              "locator": "README.md",
+              "notes": "L11-L12, L63-L78, L195-L201"
+            },
+            {
+              "evidence_id": "P03-EVD-11",
+              "artifact_id": "P03-ART-001",
+              "locator": "INSTALL.md",
+              "notes": "L3, L34, L86-L112, L174-L176"
+            },
+            {
+              "evidence_id": "P03-EVD-12",
+              "artifact_id": "P03-ART-003",
+              "locator": "RELEASE-MANIFEST.yaml",
+              "notes": "L34-L43"
+            },
+            {
+              "evidence_id": "P03-EVD-13",
+              "artifact_id": "P03-ART-005",
+              "locator": "docs/phase-3/PLATFORM-GUIDANCE.md",
+              "notes": "L6-L9 and L62-L79"
+            },
+            {
+              "evidence_id": "P03-EVD-14",
+              "artifact_id": "P03-ART-053",
+              "locator": "tests/phase-3/runs/P1-U06-V01-R1/artifacts/tool-trace.json",
+              "notes": "tool_calls sequences 14-21"
+            },
+            {
+              "evidence_id": "P03-EVD-15",
+              "artifact_id": "P03-ART-055",
+              "locator": "tests/phase-3/runs/P1-U16-V01-R1/artifacts/document-evidence/tool-trace.json",
+              "notes": "methods; coverage; unresolved_review_items"
+            }
+          ]
+        }
+      ],
+      "findings": [],
+      "record_limitations": [
+        "Bounded four-invariant static documentation/evidence review; no independent regrading of every underlying model answer.",
+        "Same-team peer review, not third-party or organizationally independent assurance.",
+        "Observed release gate remains incomplete before registration and separate root review of P03."
+      ]
+    },
+    "disposition_handoff": {
+      "schema_version": "1.0.0",
+      "disposition_id": "P1-P03-V01-R1-DISPOSITION",
+      "engagement_id": "P1-P03-V01-R1",
+      "review_record_ids": [
+        "P1-P03-V01-R1-REVIEW"
+      ],
+      "issued_at": "2026-08-27T20:26:07.089Z",
+      "issued_by": {
+        "actor_id": "p1-p03-v01-r1-reviewer",
+        "display_name": "/root/p1_p03_v01_r1",
+        "role": "reviewer"
+      },
+      "language_policy": "follow_user_language",
+      "report_language": "en",
+      "scope_summary": "Four P1-P03 release-documentation/evidence assertions only; all five release-facing documents inspected against retained evidence.",
+      "artifacts_covered": [
+        "P03-ART-001",
+        "P03-ART-002",
+        "P03-ART-003",
+        "P03-ART-004",
+        "P03-ART-005",
+        "P03-ART-006",
+        "P03-ART-007",
+        "P03-ART-008",
+        "P03-ART-009",
+        "P03-ART-010",
+        "P03-ART-011",
+        "P03-ART-012",
+        "P03-ART-013",
+        "P03-ART-014",
+        "P03-ART-015",
+        "P03-ART-016",
+        "P03-ART-017",
+        "P03-ART-018",
+        "P03-ART-019",
+        "P03-ART-020",
+        "P03-ART-021",
+        "P03-ART-022",
+        "P03-ART-023",
+        "P03-ART-024",
+        "P03-ART-025",
+        "P03-ART-026",
+        "P03-ART-027",
+        "P03-ART-028",
+        "P03-ART-029",
+        "P03-ART-030",
+        "P03-ART-031",
+        "P03-ART-032",
+        "P03-ART-033",
+        "P03-ART-034",
+        "P03-ART-035",
+        "P03-ART-036",
+        "P03-ART-037",
+        "P03-ART-038",
+        "P03-ART-039",
+        "P03-ART-040",
+        "P03-ART-041",
+        "P03-ART-042",
+        "P03-ART-043",
+        "P03-ART-044",
+        "P03-ART-045",
+        "P03-ART-046",
+        "P03-ART-047",
+        "P03-ART-048",
+        "P03-ART-049",
+        "P03-ART-050",
+        "P03-ART-051",
+        "P03-ART-052",
+        "P03-ART-053",
+        "P03-ART-054",
+        "P03-ART-055",
+        "P03-ART-056",
+        "P03-ART-057",
+        "P03-ART-058",
+        "P03-ART-059",
+        "P03-ART-060",
+        "P03-ART-061",
+        "P03-ART-062",
+        "P03-ART-063",
+        "P03-ART-064",
+        "P03-ART-065",
+        "P03-ART-066",
+        "P03-ART-067",
+        "P03-ART-068",
+        "P03-ART-069",
+        "P03-ART-070",
+        "P03-ART-071"
+      ],
+      "open_defect_counts": {
+        "critical": 0,
+        "high": 0,
+        "medium": 0,
+        "low": 0
+      },
+      "blocking_open_finding_ids": [],
+      "non_blocking_open_finding_ids": [],
+      "qa_disposition": "ready",
+      "disposition_rationale": "No material P03 defect identified. This ready result is limited to the documentation audit, not current_release_gate, platform acceptance, installation, publication or human approval.",
+      "residual_risks": [
+        {
+          "risk_id": "P03-RISK-SCOPE",
+          "description": "Finite synthetic runs, executor-maintained traces and unavailable exact model/hidden-context evidence limit broader reliance.",
+          "likelihood": "unknown",
+          "impact": "unknown",
+          "response": "monitor",
+          "owner": {
+            "actor_id": "root-release-reviewer",
+            "display_name": "/root",
+            "role": "reviewer"
+          },
+          "monitoring_or_mitigation": "Preserve disclosed limitations and do not generalize current scoped evidence to native platforms or universal performance."
+        }
+      ],
+      "handoffs": [
+        {
+          "handoff_id": "P03-HANDOFF-ROOT",
+          "domain": "other",
+          "reason": "Separate root review and registration are required before the derived gate can incorporate P03.",
+          "required_decision_or_output": "Read this audit, issue the real per-invariant root review, retain/register P03 and regenerate acceptance results.",
+          "assigned_to": {
+            "actor_id": "root-release-reviewer",
+            "display_name": "/root",
+            "role": "reviewer"
+          },
+          "status": "pending",
+          "blocks_readiness": false
+        }
+      ],
+      "approval_status": "not_requested",
+      "next_actions": [
+        {
+          "action_id": "P03-ACTION-REGISTER",
+          "action": "Retain the four audit artifacts and complete the separate root review/receipt registration, then report the actual regenerated gate.",
+          "owner": {
+            "actor_id": "root-release-reviewer",
+            "display_name": "/root",
+            "role": "reviewer"
+          },
+          "status": "open"
+        }
+      ],
+      "limitations": [
+        "No native installation, external-source revalidation, new model/specialist run, broad business-answer regrading, Git mutation or publication.",
+        "Documentation QA does not grant human approval or waive release gates."
+      ]
+    }
+  }
+}

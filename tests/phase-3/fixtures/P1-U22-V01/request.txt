@@ -1,0 +1,1 @@
+Đọc output schema 1.0.0 này và lập phần bổ sung để dùng với mô hình mới. Giữ nguyên record gốc, ID, giá trị, null và schema_version của record gốc; nêu phần chưa thể xác nhận.

@@ -1,0 +1,1 @@
+Lập phân tích đầy đủ từ hồ sơ: E2E phù hợp, risks, expected/key controls, current controls, gaps, cải tiến và rủi ro nếu giữ nguyên. Cho bản tóm tắt và dữ liệu có ID truy nguyên để tạo RCM và action view; không cần Word/Excel.

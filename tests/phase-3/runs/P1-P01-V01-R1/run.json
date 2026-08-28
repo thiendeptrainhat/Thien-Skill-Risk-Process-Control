@@ -1,0 +1,153 @@
+{
+  "run_id": "P1-P01-V01-R1",
+  "case_id": "P1-P01",
+  "variant_id": "P1-P01-V01",
+  "requirement_ids": [
+    "X01",
+    "X05"
+  ],
+  "timestamp": "2026-08-27T20:02:27.145Z",
+  "verification_mode": "static",
+  "execution_status": "executed",
+  "runtime": {
+    "platform": "local",
+    "surface": "Local release tooling",
+    "runtime": "Python/Ruby/ZIP read-only checks",
+    "model": null,
+    "model_identifier_status": "not_applicable",
+    "capabilities": {
+      "local_file_read": "available",
+      "zip_inspection": "executed",
+      "network": "not_used",
+      "installation": "not_performed"
+    },
+    "capability_simulation": false
+  },
+  "authorized_source_scope": "Canonical 1.1.0, three local ZIPs and checksums, supplied license/logo provenance, baseline Git objects read-only, release-doc snapshots and bounded pattern-scan output; no installation or publication.",
+  "inputs": [
+    {
+      "fixture_id": "P1-P01:dist/1.1.0/Thien-Skill-Risk-Process-Control-v1.1.0-Claude.zip",
+      "version": "1.1.0",
+      "artifact": {
+        "path": "dist/1.1.0/Thien-Skill-Risk-Process-Control-v1.1.0-Claude.zip",
+        "sha256": "8eadddeb4e54eea40751e95e91e89821476db201666ee56b122a4eb1eb536f0a"
+      }
+    },
+    {
+      "fixture_id": "P1-P01:dist/1.1.0/Thien-Skill-Risk-Process-Control-v1.1.0-ChatGPT.zip",
+      "version": "1.1.0",
+      "artifact": {
+        "path": "dist/1.1.0/Thien-Skill-Risk-Process-Control-v1.1.0-ChatGPT.zip",
+        "sha256": "d793480dc4557da0b2f3af9542b7cb351fe458c9b6690cded5ce69ec50c40c27"
+      }
+    },
+    {
+      "fixture_id": "P1-P01:dist/1.1.0/Thien-Skill-Risk-Process-Control-v1.1.0-Universal.zip",
+      "version": "1.1.0",
+      "artifact": {
+        "path": "dist/1.1.0/Thien-Skill-Risk-Process-Control-v1.1.0-Universal.zip",
+        "sha256": "7ef452ef27abe8c12c44818b3463a11367f4a447ca0ce40cb3422ba8ed04f0af"
+      }
+    },
+    {
+      "fixture_id": "P1-P01:dist/1.1.0/SHA256SUMS",
+      "version": "1.1.0",
+      "artifact": {
+        "path": "dist/1.1.0/SHA256SUMS",
+        "sha256": "38a03ebf0c720248ac16f4bcbd10f044a796c2818f143f6174c4f77c392638bd"
+      }
+    },
+    {
+      "fixture_id": "P1-P01:dist/1.1.0/packaging-report.json",
+      "version": "1.1.0",
+      "artifact": {
+        "path": "dist/1.1.0/packaging-report.json",
+        "sha256": "5475ce48885e63bef6f5a34c23e0c5ff5c5351b0a0a9a15e48df2e7d5b0a12f0"
+      }
+    },
+    {
+      "fixture_id": "P1-P01:tests/phase-3/tooling/inspect_release.py",
+      "version": "1.1.0",
+      "artifact": {
+        "path": "tests/phase-3/tooling/inspect_release.py",
+        "sha256": "b95bdf1e700ac453f7f3be049459c5ce5f2b4bc36fc585a5daedc216ad0aa239"
+      }
+    },
+    {
+      "fixture_id": "P1-P01:tests/phase-3/static/bounded-pattern-scan.json",
+      "version": "1.1.0",
+      "artifact": {
+        "path": "tests/phase-3/static/bounded-pattern-scan.json",
+        "sha256": "e89cfb1c4ba16d3e243a86f54fffd56802714ceb9e79d99576df0a4984ecd6e1"
+      }
+    },
+    {
+      "fixture_id": "P1-P01:skills/thien-skill-risk-process-control/THIRD-PARTY-NOTICES.md",
+      "version": "1.1.0",
+      "artifact": {
+        "path": "skills/thien-skill-risk-process-control/THIRD-PARTY-NOTICES.md",
+        "sha256": "bb584d4a2e42fb39d6e45eb04d257446469186f1199f68a1a893fcf3c3b08c47"
+      }
+    },
+    {
+      "fixture_id": "P1-P01:skills/thien-skill-risk-process-control/assets/PROVENANCE.md",
+      "version": "1.1.0",
+      "artifact": {
+        "path": "skills/thien-skill-risk-process-control/assets/PROVENANCE.md",
+        "sha256": "e8512f7b582e2ee0e0f736f5d3f5d178e6f71d08e222df2c0127fbc761863b32"
+      }
+    },
+    {
+      "fixture_id": "P1-P01:tests/phase-3/runs/P1-P01-V01-R1/artifacts/inputs/RELEASE-MANIFEST.yaml",
+      "version": "1.1.0",
+      "artifact": {
+        "path": "tests/phase-3/runs/P1-P01-V01-R1/artifacts/inputs/RELEASE-MANIFEST.yaml",
+        "sha256": "fe0a952d882d7b719f098d9f57538148b3693aeca5ff6a6ed96d7036930ff80d"
+      }
+    },
+    {
+      "fixture_id": "P1-P01:tests/phase-3/runs/P1-P01-V01-R1/artifacts/inputs/README.md",
+      "version": "1.1.0",
+      "artifact": {
+        "path": "tests/phase-3/runs/P1-P01-V01-R1/artifacts/inputs/README.md",
+        "sha256": "20f6ef91e287ca726cf32f65a69e631c646c6cde6447158771341309dcdf3086"
+      }
+    },
+    {
+      "fixture_id": "P1-P01:tests/phase-3/runs/P1-P01-V01-R1/artifacts/inputs/INSTALL.md",
+      "version": "1.1.0",
+      "artifact": {
+        "path": "tests/phase-3/runs/P1-P01-V01-R1/artifacts/inputs/INSTALL.md",
+        "sha256": "2dacbf2ac3b0d5cf247d0020894917281a338c67886f04648c2c3e6426efcfd2"
+      }
+    }
+  ],
+  "skill_snapshot": {
+    "path": "tests/phase-3/snapshots/round-2/manifest.json",
+    "sha256": "a15ee9c18e5f76ec9711098fe9cf6c6dce6dddf870d7bc528df9a39c23017113"
+  },
+  "raw_prompt": {
+    "path": "tests/phase-3/runs/P1-P01-V01-R1/prompt.txt",
+    "sha256": "1087abf731f19ce7b3330d801642cb3b4c442fccbc5536d59d1a2b706856fe5e"
+  },
+  "raw_output": {
+    "path": "tests/phase-3/runs/P1-P01-V01-R1/artifacts/output.json",
+    "sha256": "c5174f96e12b61f47f0132e9d9f8280413d1d97f8f639acdba03e7842f51ed30"
+  },
+  "tool_trace": {
+    "path": "tests/phase-3/runs/P1-P01-V01-R1/artifacts/tool-trace.json",
+    "sha256": "cb8221ce40738f304ae725d1ea93595b6654796b394442d38b58fdfcad2cabfb"
+  },
+  "execution_record": {
+    "path": "tests/phase-3/runs/P1-P01-V01-R1/execution-record.json",
+    "sha256": "74f2e7f8dcb1d24d283ccb210a4f2d65391465525828f84320fc110a7d3806d5"
+  },
+  "review": null,
+  "retest_of": [],
+  "limitations": [
+    "Actual static content checks, not model behavior or platform installation.",
+    "Root authored the independent-from-builder checker and reviewed its output; this is self-check, not third-party assurance.",
+    "Bounded credential patterns and content provenance review do not establish absence of every secret or legal/malware certification."
+  ]
+}
+

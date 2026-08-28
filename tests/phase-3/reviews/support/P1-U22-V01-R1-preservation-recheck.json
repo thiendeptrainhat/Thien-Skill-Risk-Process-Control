@@ -1,0 +1,15 @@
+{
+  "reviewer": "root independent recheck",
+  "run_id": "P1-U22-V01-R1",
+  "status": "pass",
+  "legacy_json_byte_identical": true,
+  "legacy_json_sha256": "de0b513322896e208b6ca2d8469118be2ce42c8dd3342e34e9fda7774d867392",
+  "legacy_schema_versions": [
+    "1.0.0",
+    "1.0.0"
+  ],
+  "controls": 1,
+  "rcm_rows": 2,
+  "unsupported_observations": 0,
+  "scope": "Preservation and link checks on this fixture only; not universal consumer integration."
+}

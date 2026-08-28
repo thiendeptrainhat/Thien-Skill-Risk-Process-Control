@@ -1,0 +1,16 @@
+python3 -B -c 'import hashlib,json,sys
+from pathlib import Path
+from datetime import datetime,timezone
+root=Path.cwd()
+manifest=root/"tests/phase-3/fixture-manifest.json"
+spec=json.loads(manifest.read_text())
+checks={}
+for item in spec["files"]:
+    p=root/item["path"]
+    checks[item["path"]]=p.is_file() and not p.is_symlink() and p.resolve().is_relative_to(root/"tests/phase-3/fixtures") and hashlib.sha256(p.read_bytes()).hexdigest()==item["sha256"]
+actual={p.relative_to(root).as_posix() for p in (root/"tests/phase-3/fixtures").rglob("*") if p.is_file()}
+inventory_match=actual==set(checks)
+ok=all(checks.values()) and inventory_match
+print(json.dumps({"record_kind":"read_only_frozen_fixture_integrity","timestamp":datetime.now(timezone.utc).isoformat(),"status":"pass" if ok else "fail","manifest_sha256":hashlib.sha256(manifest.read_bytes()).hexdigest(),"file_count":len(checks),"inventory_match":inventory_match,"file_checks":checks,"limitations":["Integrity only; not a new model execution or semantic review."]},ensure_ascii=False,indent=2))
+sys.exit(0 if ok else 1)
+'

@@ -1,0 +1,4063 @@
+{
+  "output_metadata": {
+    "title": "Phân tích quy trình–rủi ro–kiểm soát và dữ liệu RCM/action",
+    "language": "vi",
+    "analysis_layers": [
+      "As-Documented",
+      "As-Performed",
+      "Target-State"
+    ],
+    "as_designed_status": "Not provided",
+    "review_status": "Not reviewed",
+    "status": "Draft",
+    "data_classification": "Dữ liệu tổng hợp, được phép dùng trong phạm vi nguồn nêu",
+    "source_reference": "/Users/thiendeptrainhat/Documents/Thien's Skills Library/Thien-Risk-Process-Control/tests/phase-3/fixtures/P1-U19-V01/input.md:1",
+    "assumptions": [],
+    "confidence": "Medium cho nội dung hồ sơ; Unresolved cho trạng thái xác nhận của B-19",
+    "limitations": [
+      "Chỉ đọc bản tổng hợp native text; không có bản gốc REQ/SOP/checklist/trace/lệnh.",
+      "Không xác minh nguồn ngoài, không truy cập production, không chạy OCR hay specialist.",
+      "EVD-19A/EVD-19B giữ nguyên mâu thuẫn; EVD-19C chỉ chứng minh lệnh đã phát theo mô tả, không chứng minh đã thanh toán/đối chiếu.",
+      "Một trường hợp được cung cấp, không phải full population hoặc mẫu theo phương pháp đã duyệt.",
+      "Không có phương pháp chấm risk, ngân sách, owner/due date cải tiến hay approval key-control designation."
+    ]
+  },
+  "null_policy": {
+    "fact_missing": "Not provided",
+    "assertion_unvalidated": "To be validated",
+    "conflict": "Unresolved",
+    "not_applicable": "Not applicable",
+    "risk_ratings": "Not assessed",
+    "operating_effectiveness_assessment": "Not assessed",
+    "operating_evidence_status": "Insufficient evidence"
+  },
+  "record_defaults": {
+    "review_status": "Not reviewed",
+    "status": "Draft",
+    "assumptions": [],
+    "created_at": "Not provided",
+    "approved_by": "Not provided",
+    "owner": "Not provided",
+    "inherent_rating": "Not assessed",
+    "residual_rating": "Not assessed",
+    "severity": "Not assessed",
+    "priority": "Not assessed"
+  },
+  "source_register": [
+    {
+      "source_id": "SRC-19-INPUT",
+      "title": "Hồ sơ tổng hợp được cung cấp",
+      "source_reference": "/Users/thiendeptrainhat/Documents/Thien's Skills Library/Thien-Risk-Process-Control/tests/phase-3/fixtures/P1-U19-V01/input.md:1",
+      "content_checked_scope": "Toàn bộ input.md, dòng 1–10",
+      "source_status": "Dữ liệu tổng hợp",
+      "version": "Not provided",
+      "owner": "Not provided",
+      "effective_date": "Not provided",
+      "content_verification_status": "content_verified",
+      "verification_scope": "Đã đọc nội dung bản tổng hợp; chưa xác minh bản gốc hoặc hiệu lực tài liệu",
+      "access_status": "available",
+      "ai_use_status": "permission_evidenced",
+      "redistribution_status": "Được phép lưu/tái phân phối trong bộ test, theo dòng 1; không mở rộng ngoài phạm vi này",
+      "rights_locator": "/Users/thiendeptrainhat/Documents/Thien's Skills Library/Thien-Risk-Process-Control/tests/phase-3/fixtures/P1-U19-V01/input.md:1",
+      "source_warning": "DỮ LIỆU TỔNG HỢP; mọi nguồn dưới đây được phép đọc, dùng AI và lưu/tái phân phối trong bộ test.",
+      "confidence": "Medium"
+    },
+    {
+      "source_id": "REQ-19",
+      "title": "Quy định nội bộ",
+      "clause": "§2",
+      "source_reference": "/Users/thiendeptrainhat/Documents/Thien's Skills Library/Thien-Risk-Process-Control/tests/phase-3/fixtures/P1-U19-V01/input.md:4",
+      "source_type": "Organization-specific control",
+      "reference_kind": "contract/internal policy",
+      "source_status": "Được phê duyệt cho hai quy trình, theo hồ sơ",
+      "mandatory_or_advisory": "Mandatory internally theo hồ sơ; không phải nghĩa vụ luật/standard bên ngoài",
+      "applicability": "PROC-19A và PROC-19B theo nội dung cung cấp",
+      "effective_date": "Not provided",
+      "version": "Not provided",
+      "owner": "Not provided",
+      "historical_effective_status": "To be validated cho ngày 10/07/2026",
+      "content_verification_status": "content_verified",
+      "verification_scope": "Chỉ nội dung §2 được trích trong input.md, không xác minh nguồn gốc/currency độc lập",
+      "rights_source_id": "SRC-19-INPUT",
+      "confidence": "Medium"
+    },
+    {
+      "source_id": "SOP-19A",
+      "title": "SOP thay đổi tài khoản nhà cung cấp",
+      "clause": "§3",
+      "source_reference": "/Users/thiendeptrainhat/Documents/Thien's Skills Library/Thien-Risk-Process-Control/tests/phase-3/fixtures/P1-U19-V01/input.md:5",
+      "source_status": "Nội dung SOP được cung cấp; approval/effective status Not provided",
+      "version": "Not provided",
+      "owner": "Not provided",
+      "effective_date": "Not provided",
+      "rights_source_id": "SRC-19-INPUT",
+      "confidence": "Medium"
+    },
+    {
+      "source_id": "SOP-19B",
+      "title": "SOP hóa đơn/thanh toán",
+      "clause": "§4",
+      "source_reference": "/Users/thiendeptrainhat/Documents/Thien's Skills Library/Thien-Risk-Process-Control/tests/phase-3/fixtures/P1-U19-V01/input.md:6",
+      "source_status": "Nội dung SOP được cung cấp; approval/effective status Not provided",
+      "version": "Not provided",
+      "owner": "Not provided",
+      "effective_date": "Not provided",
+      "rights_source_id": "SRC-19-INPUT",
+      "confidence": "Medium"
+    },
+    {
+      "source_id": "EVD-19A",
+      "title": "Checklist ký cho B-19",
+      "source_reference": "/Users/thiendeptrainhat/Documents/Thien's Skills Library/Thien-Risk-Process-Control/tests/phase-3/fixtures/P1-U19-V01/input.md:7",
+      "source_date": "2026-07-10",
+      "raw_status": "VERIFIED",
+      "raw_call_source_field": "Trống",
+      "owner": "Not provided",
+      "version": "Not provided",
+      "rights_source_id": "SRC-19-INPUT",
+      "confidence": "Medium cho mô tả; kết luận xác nhận Unresolved"
+    },
+    {
+      "source_id": "EVD-19B",
+      "title": "Trace trung tâm cho B-19",
+      "source_reference": "/Users/thiendeptrainhat/Documents/Thien's Skills Library/Thien-Risk-Process-Control/tests/phase-3/fixtures/P1-U19-V01/input.md:8",
+      "source_date": "2026-07-10",
+      "raw_status": "PENDING_REVIEW",
+      "relative_time": "Trước phát lệnh",
+      "source_warning": "Chủ nguồn chưa giải thích sự khác nhau.",
+      "owner": "Not provided",
+      "version": "Not provided",
+      "rights_source_id": "SRC-19-INPUT",
+      "confidence": "Medium cho mô tả; kết luận xác nhận Unresolved"
+    },
+    {
+      "source_id": "EVD-19C",
+      "title": "Lệnh TX-19",
+      "source_reference": "/Users/thiendeptrainhat/Documents/Thien's Skills Library/Thien-Risk-Process-Control/tests/phase-3/fixtures/P1-U19-V01/input.md:9",
+      "source_date": "2026-07-10",
+      "raw_status": "Đã phát lệnh",
+      "source_warning": "Đây là một trường hợp được cung cấp, không phải full population.",
+      "owner": "Not provided",
+      "version": "Not provided",
+      "rights_source_id": "SRC-19-INPUT",
+      "confidence": "Medium"
+    }
+  ],
+  "objectives": [
+    {
+      "objective_id": "OBJ-19A",
+      "description": "Chỉ sử dụng tài khoản nhà cung cấp đã được xác nhận.",
+      "analysis_layer": "As-Documented",
+      "source_reference": "/Users/thiendeptrainhat/Documents/Thien's Skills Library/Thien-Risk-Process-Control/tests/phase-3/fixtures/P1-U19-V01/input.md:2",
+      "confidence": "Medium"
+    },
+    {
+      "objective_id": "OBJ-19B",
+      "description": "Trả đúng nghĩa vụ được duyệt.",
+      "analysis_layer": "As-Documented",
+      "source_reference": "/Users/thiendeptrainhat/Documents/Thien's Skills Library/Thien-Risk-Process-Control/tests/phase-3/fixtures/P1-U19-V01/input.md:2",
+      "confidence": "Medium"
+    }
+  ],
+  "processes": [
+    {
+      "process_id": "PROC-19A",
+      "title": "Yêu cầu đổi tài khoản đến phê duyệt/lưu master data",
+      "objective_ids": [
+        "OBJ-19A",
+        "OBJ-19B"
+      ],
+      "direct_objective_ids": [
+        "OBJ-19A"
+      ],
+      "supporting_objective_ids": [
+        "OBJ-19B"
+      ],
+      "analysis_layer": "As-Documented",
+      "trigger": "Nhận yêu cầu đổi tài khoản",
+      "outcome": "Phê duyệt/lưu master data",
+      "process_level": "To be validated",
+      "owner": "Not provided",
+      "inputs": [
+        "Yêu cầu đổi tài khoản"
+      ],
+      "outputs": [
+        "Master data sau xử lý phê duyệt/lưu",
+        "Status theo SOP-19A"
+      ],
+      "systems": [
+        "Dịch vụ CTL-SHARED-19"
+      ],
+      "customer": "Bên sử dụng dữ liệu thanh toán: suy luận, danh tính/role To be validated",
+      "source_reference": [
+        "/Users/thiendeptrainhat/Documents/Thien's Skills Library/Thien-Risk-Process-Control/tests/phase-3/fixtures/P1-U19-V01/input.md:2",
+        "/Users/thiendeptrainhat/Documents/Thien's Skills Library/Thien-Risk-Process-Control/tests/phase-3/fixtures/P1-U19-V01/input.md:3",
+        "/Users/thiendeptrainhat/Documents/Thien's Skills Library/Thien-Risk-Process-Control/tests/phase-3/fixtures/P1-U19-V01/input.md:5"
+      ],
+      "confidence": "Medium"
+    },
+    {
+      "process_id": "PROC-19B",
+      "title": "Hóa đơn đến thanh toán và đối chiếu sổ",
+      "objective_ids": [
+        "OBJ-19A",
+        "OBJ-19B"
+      ],
+      "direct_objective_ids": [
+        "OBJ-19B"
+      ],
+      "supporting_objective_ids": [
+        "OBJ-19A"
+      ],
+      "analysis_layer": "As-Documented",
+      "trigger": "Nhận hóa đơn",
+      "outcome": "Duyệt, trả tiền và đối chiếu sổ",
+      "process_level": "To be validated",
+      "owner": "Not provided",
+      "inputs": [
+        "Hóa đơn",
+        "PO",
+        "Thông tin nhận hàng",
+        "Beneficiary"
+      ],
+      "outputs": [
+        "Lệnh thanh toán",
+        "Thanh toán và đối chiếu sổ theo boundary; chưa có evidence hoàn tất"
+      ],
+      "systems": [
+        "Dịch vụ CTL-SHARED-19"
+      ],
+      "customer": "Bên nhận thanh toán và bên sử dụng sổ kế toán: suy luận, danh tính/role To be validated",
+      "source_reference": [
+        "/Users/thiendeptrainhat/Documents/Thien's Skills Library/Thien-Risk-Process-Control/tests/phase-3/fixtures/P1-U19-V01/input.md:2",
+        "/Users/thiendeptrainhat/Documents/Thien's Skills Library/Thien-Risk-Process-Control/tests/phase-3/fixtures/P1-U19-V01/input.md:3",
+        "/Users/thiendeptrainhat/Documents/Thien's Skills Library/Thien-Risk-Process-Control/tests/phase-3/fixtures/P1-U19-V01/input.md:6"
+      ],
+      "confidence": "Medium"
+    }
+  ],
+  "process_reference_mappings": [
+    {
+      "process_reference_mapping_id": "MAP-19A",
+      "process_id": "PROC-19A",
+      "candidate_family": "Supplier-Onboarding-to-Offboarding / quản trị master data nhà cung cấp",
+      "mapping_role": "Supporting segment",
+      "fit_status": "partial_match",
+      "rationale": "Chỉ có thay đổi tài khoản; chưa có toàn vòng đời nhà cung cấp.",
+      "analysis_layer": "Target-State",
+      "claim_basis": "Analyst classification proposal",
+      "reference_library_id": null,
+      "reference_item_id": null,
+      "process_level": "To be validated",
+      "source_reference": [
+        "/Users/thiendeptrainhat/Documents/Thien's Skills Library/Thien-Risk-Process-Control/tests/phase-3/fixtures/P1-U19-V01/input.md:2",
+        "/Users/thiendeptrainhat/Documents/Thien's Skills Library/Thien-Risk-Process-Control/tests/phase-3/fixtures/P1-U19-V01/input.md:3",
+        "/Users/thiendeptrainhat/Documents/Thien's Skills Library/Thien-Risk-Process-Control/tests/phase-3/fixtures/P1-U19-V01/input.md:5"
+      ],
+      "confidence": "Medium"
+    },
+    {
+      "process_reference_mapping_id": "MAP-19B",
+      "process_id": "PROC-19B",
+      "candidate_family": "Invoice-to-Payment, mở rộng đến đối chiếu sổ",
+      "mapping_role": "Primary",
+      "fit_status": "candidate_match",
+      "rationale": "Trigger hóa đơn và outcome thanh toán/đối chiếu phù hợp phạm vi được cung cấp.",
+      "analysis_layer": "Target-State",
+      "claim_basis": "Analyst classification proposal",
+      "reference_library_id": null,
+      "reference_item_id": null,
+      "process_level": "To be validated",
+      "source_reference": [
+        "/Users/thiendeptrainhat/Documents/Thien's Skills Library/Thien-Risk-Process-Control/tests/phase-3/fixtures/P1-U19-V01/input.md:2",
+        "/Users/thiendeptrainhat/Documents/Thien's Skills Library/Thien-Risk-Process-Control/tests/phase-3/fixtures/P1-U19-V01/input.md:3",
+        "/Users/thiendeptrainhat/Documents/Thien's Skills Library/Thien-Risk-Process-Control/tests/phase-3/fixtures/P1-U19-V01/input.md:6"
+      ],
+      "confidence": "Medium"
+    },
+    {
+      "process_reference_mapping_id": "MAP-19C",
+      "process_ids": [
+        "PROC-19A",
+        "PROC-19B"
+      ],
+      "candidate_family": "Procure-to-Pay",
+      "mapping_role": "Overlap/interface",
+      "fit_status": "partial_match",
+      "rationale": "Shared beneficiary control nối master data và thanh toán; không có đủ upstream mua hàng để tuyên bố đã map toàn bộ Procure-to-Pay.",
+      "analysis_layer": "Target-State",
+      "claim_basis": "Analyst classification proposal",
+      "reference_library_id": null,
+      "reference_item_id": null,
+      "source_reference": [
+        "/Users/thiendeptrainhat/Documents/Thien's Skills Library/Thien-Risk-Process-Control/tests/phase-3/fixtures/P1-U19-V01/input.md:2",
+        "/Users/thiendeptrainhat/Documents/Thien's Skills Library/Thien-Risk-Process-Control/tests/phase-3/fixtures/P1-U19-V01/input.md:3",
+        "/Users/thiendeptrainhat/Documents/Thien's Skills Library/Thien-Risk-Process-Control/tests/phase-3/fixtures/P1-U19-V01/input.md:5",
+        "/Users/thiendeptrainhat/Documents/Thien's Skills Library/Thien-Risk-Process-Control/tests/phase-3/fixtures/P1-U19-V01/input.md:6"
+      ],
+      "confidence": "Medium"
+    }
+  ],
+  "steps": [
+    {
+      "review_status": "Not reviewed",
+      "status": "Draft",
+      "assumptions": [],
+      "analysis_layer": "As-Documented",
+      "confidence": "Medium",
+      "confirmation_status": "Documented",
+      "system": "Not provided",
+      "evidence": "Not provided",
+      "exception_handling": "Not provided",
+      "sla": "Not provided",
+      "step_id": "STEP-19A-01",
+      "process_id": "PROC-19A",
+      "description": "Nhận yêu cầu đổi tài khoản",
+      "performer": "Not provided",
+      "control_ids": [],
+      "source_reference": "/Users/thiendeptrainhat/Documents/Thien's Skills Library/Thien-Risk-Process-Control/tests/phase-3/fixtures/P1-U19-V01/input.md:3"
+    },
+    {
+      "review_status": "Not reviewed",
+      "status": "Draft",
+      "assumptions": [],
+      "analysis_layer": "As-Documented",
+      "confidence": "Medium",
+      "confirmation_status": "Documented",
+      "system": "Not provided",
+      "evidence": "Not provided",
+      "exception_handling": "Not provided",
+      "sla": "Not provided",
+      "step_id": "STEP-19A-02",
+      "process_id": "PROC-19A",
+      "description": "Người cập nhật master data gọi dịch vụ và lưu status",
+      "performer": "Người cập nhật master data",
+      "control_ids": [
+        "CTL-SHARED-19"
+      ],
+      "source_reference": "/Users/thiendeptrainhat/Documents/Thien's Skills Library/Thien-Risk-Process-Control/tests/phase-3/fixtures/P1-U19-V01/input.md:5",
+      "sequence_limitation": "Vị trí chính xác so với phê duyệt/lưu master data Not provided."
+    },
+    {
+      "review_status": "Not reviewed",
+      "status": "Draft",
+      "assumptions": [],
+      "analysis_layer": "As-Documented",
+      "confidence": "Medium",
+      "confirmation_status": "Documented",
+      "system": "Not provided",
+      "evidence": "Not provided",
+      "exception_handling": "Not provided",
+      "sla": "Not provided",
+      "step_id": "STEP-19A-03",
+      "process_id": "PROC-19A",
+      "description": "Phê duyệt/lưu master data",
+      "performer": "Not provided",
+      "control_ids": [],
+      "source_reference": "/Users/thiendeptrainhat/Documents/Thien's Skills Library/Thien-Risk-Process-Control/tests/phase-3/fixtures/P1-U19-V01/input.md:3",
+      "sequence_limitation": "Không suy REQ-19 bắt buộc hoàn tất xác nhận trước lưu master data; mốc bắt buộc được cung cấp là trước lần thanh toán đầu tiên."
+    },
+    {
+      "review_status": "Not reviewed",
+      "status": "Draft",
+      "assumptions": [],
+      "analysis_layer": "As-Documented",
+      "confidence": "Medium",
+      "confirmation_status": "Documented",
+      "system": "Not provided",
+      "evidence": "Not provided",
+      "exception_handling": "Not provided",
+      "sla": "Not provided",
+      "step_id": "STEP-19B-01",
+      "process_id": "PROC-19B",
+      "description": "Nhận hóa đơn; xử lý phê duyệt trong boundary",
+      "performer": "Not provided",
+      "control_ids": [],
+      "source_reference": "/Users/thiendeptrainhat/Documents/Thien's Skills Library/Thien-Risk-Process-Control/tests/phase-3/fixtures/P1-U19-V01/input.md:3",
+      "sequence_limitation": "Cấp duyệt, criteria và thứ tự chi tiết Not provided."
+    },
+    {
+      "review_status": "Not reviewed",
+      "status": "Draft",
+      "assumptions": [],
+      "analysis_layer": "As-Documented",
+      "confidence": "Medium",
+      "confirmation_status": "Documented",
+      "system": "Not provided",
+      "evidence": "Not provided",
+      "exception_handling": "Not provided",
+      "sla": "Not provided",
+      "step_id": "STEP-19B-02",
+      "process_id": "PROC-19B",
+      "description": "Đối chiếu PO/nhận hàng/hóa đơn trước lập lệnh",
+      "performer": "Not provided",
+      "control_ids": [
+        "CTL-19-MATCH"
+      ],
+      "source_reference": "/Users/thiendeptrainhat/Documents/Thien's Skills Library/Thien-Risk-Process-Control/tests/phase-3/fixtures/P1-U19-V01/input.md:6"
+    },
+    {
+      "review_status": "Not reviewed",
+      "status": "Draft",
+      "assumptions": [],
+      "analysis_layer": "As-Documented",
+      "confidence": "Medium",
+      "confirmation_status": "Documented",
+      "system": "Not provided",
+      "evidence": "Not provided",
+      "exception_handling": "Not provided",
+      "sla": "Not provided",
+      "step_id": "STEP-19B-03",
+      "process_id": "PROC-19B",
+      "description": "Lập lệnh",
+      "performer": "Người lập lệnh",
+      "control_ids": [
+        "CTL-19-SOD"
+      ],
+      "source_reference": "/Users/thiendeptrainhat/Documents/Thien's Skills Library/Thien-Risk-Process-Control/tests/phase-3/fixtures/P1-U19-V01/input.md:6"
+    },
+    {
+      "review_status": "Not reviewed",
+      "status": "Draft",
+      "assumptions": [],
+      "analysis_layer": "As-Documented",
+      "confidence": "Medium",
+      "confirmation_status": "Documented",
+      "system": "Not provided",
+      "evidence": "Not provided",
+      "exception_handling": "Not provided",
+      "sla": "Not provided",
+      "step_id": "STEP-19B-04",
+      "process_id": "PROC-19B",
+      "description": "Gọi CTL-SHARED-19 trước phát lệnh",
+      "performer": "Not provided",
+      "control_ids": [
+        "CTL-SHARED-19"
+      ],
+      "source_reference": "/Users/thiendeptrainhat/Documents/Thien's Skills Library/Thien-Risk-Process-Control/tests/phase-3/fixtures/P1-U19-V01/input.md:6",
+      "sequence_limitation": "Chưa biết thứ tự so với lập lệnh, điều kiện chặn, cache/refresh hay override."
+    },
+    {
+      "review_status": "Not reviewed",
+      "status": "Draft",
+      "assumptions": [],
+      "analysis_layer": "As-Documented",
+      "confidence": "Medium",
+      "confirmation_status": "Documented",
+      "system": "Not provided",
+      "evidence": "Not provided",
+      "exception_handling": "Not provided",
+      "sla": "Not provided",
+      "step_id": "STEP-19B-05",
+      "process_id": "PROC-19B",
+      "description": "Phát lệnh bởi người khác người lập",
+      "performer": "Người phát lệnh",
+      "control_ids": [
+        "CTL-19-SOD"
+      ],
+      "source_reference": "/Users/thiendeptrainhat/Documents/Thien's Skills Library/Thien-Risk-Process-Control/tests/phase-3/fixtures/P1-U19-V01/input.md:6"
+    },
+    {
+      "review_status": "Not reviewed",
+      "status": "Draft",
+      "assumptions": [],
+      "analysis_layer": "As-Documented",
+      "confidence": "Medium",
+      "confirmation_status": "Documented",
+      "system": "Not provided",
+      "evidence": "Not provided",
+      "exception_handling": "Not provided",
+      "sla": "Not provided",
+      "step_id": "STEP-19B-06",
+      "process_id": "PROC-19B",
+      "description": "Trả tiền và đối chiếu sổ",
+      "performer": "Not provided",
+      "control_ids": [],
+      "source_reference": "/Users/thiendeptrainhat/Documents/Thien's Skills Library/Thien-Risk-Process-Control/tests/phase-3/fixtures/P1-U19-V01/input.md:3",
+      "sequence_limitation": "Chỉ biết end boundary; không đủ mô tả để tạo control đối chiếu độc lập hiện hành."
+    }
+  ],
+  "step_observations": [
+    {
+      "step_observation_id": "OBS-19-TX",
+      "step_id": "STEP-19B-05",
+      "analysis_layer": "As-Performed",
+      "assessed_scope": "TX-19, một trường hợp",
+      "assessed_period": "2026-07-10",
+      "description": "Lệnh TX-19 đã phát theo EVD-19C; không suy đã trả tiền/đối chiếu hoặc đúng nghĩa vụ.",
+      "source_ids": [
+        "EVD-19C"
+      ],
+      "source_reference": "/Users/thiendeptrainhat/Documents/Thien's Skills Library/Thien-Risk-Process-Control/tests/phase-3/fixtures/P1-U19-V01/input.md:9",
+      "confidence": "Medium",
+      "confirmation_status": "Evidence-confirmed trong phạm vi mô tả nguồn"
+    }
+  ],
+  "requirements": [
+    {
+      "requirement_id": "REQ-19",
+      "source_id": "REQ-19",
+      "clause": "§2",
+      "description": "Xác nhận thay đổi tài khoản bằng kênh độc lập trước lần thanh toán đầu tiên; hồ sơ xác nhận phải có locator.",
+      "process_ids": [
+        "PROC-19A",
+        "PROC-19B"
+      ],
+      "analysis_layer": "As-Documented",
+      "source_reference": "/Users/thiendeptrainhat/Documents/Thien's Skills Library/Thien-Risk-Process-Control/tests/phase-3/fixtures/P1-U19-V01/input.md:4",
+      "mandatory_or_advisory": "Mandatory internally theo hồ sơ",
+      "effective_period": "Not provided",
+      "review_status": "Not reviewed"
+    }
+  ],
+  "risks": [
+    {
+      "review_status": "Not reviewed",
+      "status": "Draft",
+      "assumptions": [],
+      "owner": "Not provided",
+      "inherent_rating": "Not assessed",
+      "residual_rating": "Not assessed",
+      "risk_id": "RSK-19-01",
+      "objective_ids": [
+        "OBJ-19A",
+        "OBJ-19B"
+      ],
+      "process_ids": [
+        "PROC-19A",
+        "PROC-19B"
+      ],
+      "step_ids": [
+        "STEP-19A-02",
+        "STEP-19B-04",
+        "STEP-19B-05"
+      ],
+      "cause": "Nếu tính độc lập/tính hợp lệ của xác nhận chưa được xác lập hoặc trạng thái mâu thuẫn bị dùng làm căn cứ phát lệnh",
+      "event": "Có thể sử dụng hoặc thanh toán tới tài khoản chưa được xác nhận đúng",
+      "impact": "Mất tiền, trả sai người thụ hưởng hoặc không hoàn thành nghĩa vụ được duyệt",
+      "claim_basis": "Inference; không chứng minh TX-19 sai người thụ hưởng hay có gian lận",
+      "analysis_layer": null,
+      "analysis_layer_status": "Risk scenario derived from As-Documented and scoped As-Performed",
+      "source_ids": [
+        "REQ-19",
+        "SOP-19A",
+        "SOP-19B",
+        "EVD-19A",
+        "EVD-19B",
+        "EVD-19C"
+      ],
+      "source_reference": [
+        "/Users/thiendeptrainhat/Documents/Thien's Skills Library/Thien-Risk-Process-Control/tests/phase-3/fixtures/P1-U19-V01/input.md:4",
+        "/Users/thiendeptrainhat/Documents/Thien's Skills Library/Thien-Risk-Process-Control/tests/phase-3/fixtures/P1-U19-V01/input.md:5",
+        "/Users/thiendeptrainhat/Documents/Thien's Skills Library/Thien-Risk-Process-Control/tests/phase-3/fixtures/P1-U19-V01/input.md:6",
+        "/Users/thiendeptrainhat/Documents/Thien's Skills Library/Thien-Risk-Process-Control/tests/phase-3/fixtures/P1-U19-V01/input.md:7",
+        "/Users/thiendeptrainhat/Documents/Thien's Skills Library/Thien-Risk-Process-Control/tests/phase-3/fixtures/P1-U19-V01/input.md:8",
+        "/Users/thiendeptrainhat/Documents/Thien's Skills Library/Thien-Risk-Process-Control/tests/phase-3/fixtures/P1-U19-V01/input.md:9"
+      ],
+      "confidence": "Medium cho scenario; tình trạng B-19 Unresolved",
+      "risk_statement": "Nếu tính độc lập/tính hợp lệ của xác nhận chưa được xác lập hoặc trạng thái mâu thuẫn bị dùng làm căn cứ phát lệnh → Có thể sử dụng hoặc thanh toán tới tài khoản chưa được xác nhận đúng → Mất tiền, trả sai người thụ hưởng hoặc không hoàn thành nghĩa vụ được duyệt → OBJ-19A, OBJ-19B"
+    },
+    {
+      "review_status": "Not reviewed",
+      "status": "Draft",
+      "assumptions": [],
+      "owner": "Not provided",
+      "inherent_rating": "Not assessed",
+      "residual_rating": "Not assessed",
+      "risk_id": "RSK-19-02",
+      "objective_ids": [
+        "OBJ-19B"
+      ],
+      "process_ids": [
+        "PROC-19B"
+      ],
+      "step_ids": [
+        "STEP-19B-01",
+        "STEP-19B-02",
+        "STEP-19B-03",
+        "STEP-19B-05",
+        "STEP-19B-06"
+      ],
+      "cause": "Nếu đối chiếu chứng từ, phê duyệt hoặc tách người lập–phát không được thực hiện đúng",
+      "event": "Có thể phát/chi lệnh không phù hợp nghĩa vụ được duyệt hoặc ghi nhận/đối chiếu sai",
+      "impact": "Thanh toán sai hoặc thừa và sai lệch nghĩa vụ/sổ",
+      "claim_basis": "Conditional inference từ objective/boundary/SOP; không có deviation được cung cấp cho các control này",
+      "analysis_layer": null,
+      "analysis_layer_status": "Risk scenario derived from As-Documented",
+      "source_ids": [
+        "SOP-19B",
+        "SRC-19-INPUT"
+      ],
+      "source_reference": [
+        "/Users/thiendeptrainhat/Documents/Thien's Skills Library/Thien-Risk-Process-Control/tests/phase-3/fixtures/P1-U19-V01/input.md:2",
+        "/Users/thiendeptrainhat/Documents/Thien's Skills Library/Thien-Risk-Process-Control/tests/phase-3/fixtures/P1-U19-V01/input.md:3",
+        "/Users/thiendeptrainhat/Documents/Thien's Skills Library/Thien-Risk-Process-Control/tests/phase-3/fixtures/P1-U19-V01/input.md:6"
+      ],
+      "confidence": "Medium",
+      "risk_statement": "Nếu đối chiếu chứng từ, phê duyệt hoặc tách người lập–phát không được thực hiện đúng → Có thể phát/chi lệnh không phù hợp nghĩa vụ được duyệt hoặc ghi nhận/đối chiếu sai → Thanh toán sai hoặc thừa và sai lệch nghĩa vụ/sổ → OBJ-19B"
+    },
+    {
+      "review_status": "Not reviewed",
+      "status": "Draft",
+      "assumptions": [],
+      "owner": "Not provided",
+      "inherent_rating": "Not assessed",
+      "residual_rating": "Not assessed",
+      "risk_id": "RSK-19-03",
+      "objective_ids": [
+        "OBJ-19A",
+        "OBJ-19B"
+      ],
+      "process_ids": [
+        "PROC-19A",
+        "PROC-19B"
+      ],
+      "step_ids": [
+        "STEP-19A-02",
+        "STEP-19B-04"
+      ],
+      "cause": "Hồ sơ cung cấp có ô nguồn cuộc gọi trống và hai trạng thái chưa được giải thích",
+      "event": "Không truy nguyên được bằng chứng/quyết định xác nhận đúng beneficiary, thời điểm và phiên bản tài khoản",
+      "impact": "Dựa vào xác nhận thiếu căn cứ và không chứng minh được đáp ứng yêu cầu lưu locator",
+      "claim_basis": "Inference từ condition đã mô tả; không kết luận toàn hồ sơ không có bằng chứng hoặc checklist giả",
+      "analysis_layer": null,
+      "analysis_layer_status": "Risk scenario derived from scoped As-Performed",
+      "source_ids": [
+        "REQ-19",
+        "EVD-19A",
+        "EVD-19B"
+      ],
+      "source_reference": [
+        "/Users/thiendeptrainhat/Documents/Thien's Skills Library/Thien-Risk-Process-Control/tests/phase-3/fixtures/P1-U19-V01/input.md:4",
+        "/Users/thiendeptrainhat/Documents/Thien's Skills Library/Thien-Risk-Process-Control/tests/phase-3/fixtures/P1-U19-V01/input.md:7",
+        "/Users/thiendeptrainhat/Documents/Thien's Skills Library/Thien-Risk-Process-Control/tests/phase-3/fixtures/P1-U19-V01/input.md:8"
+      ],
+      "confidence": "Medium",
+      "risk_statement": "Hồ sơ cung cấp có ô nguồn cuộc gọi trống và hai trạng thái chưa được giải thích → Không truy nguyên được bằng chứng/quyết định xác nhận đúng beneficiary, thời điểm và phiên bản tài khoản → Dựa vào xác nhận thiếu căn cứ và không chứng minh được đáp ứng yêu cầu lưu locator → OBJ-19A, OBJ-19B"
+    },
+    {
+      "review_status": "Not reviewed",
+      "status": "Draft",
+      "assumptions": [],
+      "owner": "Not provided",
+      "inherent_rating": "Not assessed",
+      "residual_rating": "Not assessed",
+      "risk_id": "RSK-19-04",
+      "objective_ids": [
+        "OBJ-19A",
+        "OBJ-19B"
+      ],
+      "process_ids": [
+        "PROC-19A",
+        "PROC-19B"
+      ],
+      "step_ids": [
+        "STEP-19A-02",
+        "STEP-19B-04"
+      ],
+      "cause": "Hai điểm gọi phụ thuộc cùng dịch vụ/cấu hình/cơ chế",
+      "event": "Một lỗi trạng thái hoặc gián đoạn có thể tác động đồng thời đến cả hai quy trình",
+      "impact": "Cùng dựa vào xác nhận sai hoặc trì hoãn/đi vòng xử lý thanh toán",
+      "claim_basis": "Common-mode hypothesis; chưa có outage, capacity, backup hoặc tolerance evidence để kết luận SPOF",
+      "analysis_layer": null,
+      "analysis_layer_status": "Risk scenario derived from As-Documented",
+      "source_ids": [
+        "SOP-19A",
+        "SOP-19B"
+      ],
+      "source_reference": [
+        "/Users/thiendeptrainhat/Documents/Thien's Skills Library/Thien-Risk-Process-Control/tests/phase-3/fixtures/P1-U19-V01/input.md:5",
+        "/Users/thiendeptrainhat/Documents/Thien's Skills Library/Thien-Risk-Process-Control/tests/phase-3/fixtures/P1-U19-V01/input.md:6"
+      ],
+      "confidence": "Medium",
+      "risk_statement": "Hai điểm gọi phụ thuộc cùng dịch vụ/cấu hình/cơ chế → Một lỗi trạng thái hoặc gián đoạn có thể tác động đồng thời đến cả hai quy trình → Cùng dựa vào xác nhận sai hoặc trì hoãn/đi vòng xử lý thanh toán → OBJ-19A, OBJ-19B"
+    }
+  ],
+  "control_objectives": [
+    {
+      "control_objective_id": "COBJ-19-01",
+      "objective_ids": [
+        "OBJ-19A",
+        "OBJ-19B"
+      ],
+      "risk_ids": [
+        "RSK-19-01"
+      ],
+      "description": "Thay đổi tài khoản được xác nhận qua kênh độc lập trước lần thanh toán đầu tiên.",
+      "source_ids": [
+        "REQ-19"
+      ],
+      "source_reference": "/Users/thiendeptrainhat/Documents/Thien's Skills Library/Thien-Risk-Process-Control/tests/phase-3/fixtures/P1-U19-V01/input.md:4",
+      "analysis_layer": "As-Documented"
+    },
+    {
+      "control_objective_id": "COBJ-19-02",
+      "objective_ids": [
+        "OBJ-19A",
+        "OBJ-19B"
+      ],
+      "risk_ids": [
+        "RSK-19-03"
+      ],
+      "description": "Hồ sơ xác nhận có locator truy nguyên; quyết định thanh toán có căn cứ xác nhận nhất quán, đúng đối tượng/thời điểm.",
+      "source_ids": [
+        "REQ-19",
+        "EVD-19A",
+        "EVD-19B"
+      ],
+      "source_reference": [
+        "/Users/thiendeptrainhat/Documents/Thien's Skills Library/Thien-Risk-Process-Control/tests/phase-3/fixtures/P1-U19-V01/input.md:4",
+        "/Users/thiendeptrainhat/Documents/Thien's Skills Library/Thien-Risk-Process-Control/tests/phase-3/fixtures/P1-U19-V01/input.md:7",
+        "/Users/thiendeptrainhat/Documents/Thien's Skills Library/Thien-Risk-Process-Control/tests/phase-3/fixtures/P1-U19-V01/input.md:8"
+      ],
+      "analysis_layer": "Target-State",
+      "claim_basis": "Locator là source-derived; chi tiết nhất quán/khóa liên kết là analyst proposal"
+    },
+    {
+      "control_objective_id": "COBJ-19-03",
+      "objective_ids": [
+        "OBJ-19B"
+      ],
+      "risk_ids": [
+        "RSK-19-02"
+      ],
+      "description": "Nghĩa vụ và lệnh khớp hồ sơ được duyệt; người lập không đồng thời là người phát; giao dịch được đối chiếu đến kết quả.",
+      "source_ids": [
+        "SOP-19B",
+        "SRC-19-INPUT"
+      ],
+      "source_reference": [
+        "/Users/thiendeptrainhat/Documents/Thien's Skills Library/Thien-Risk-Process-Control/tests/phase-3/fixtures/P1-U19-V01/input.md:2",
+        "/Users/thiendeptrainhat/Documents/Thien's Skills Library/Thien-Risk-Process-Control/tests/phase-3/fixtures/P1-U19-V01/input.md:3",
+        "/Users/thiendeptrainhat/Documents/Thien's Skills Library/Thien-Risk-Process-Control/tests/phase-3/fixtures/P1-U19-V01/input.md:6"
+      ],
+      "analysis_layer": "Target-State",
+      "claim_basis": "Diễn giải objective/boundary và control được SOP mô tả; chưa bổ sung authority/threshold"
+    },
+    {
+      "control_objective_id": "COBJ-19-04",
+      "objective_ids": [
+        "OBJ-19A",
+        "OBJ-19B"
+      ],
+      "risk_ids": [
+        "RSK-19-04"
+      ],
+      "description": "Dependency dùng chung có trạng thái đáng tin cậy, phát hiện bất nhất và cách xử lý an toàn khi không sẵn sàng.",
+      "source_ids": [
+        "SOP-19A",
+        "SOP-19B"
+      ],
+      "source_reference": [
+        "/Users/thiendeptrainhat/Documents/Thien's Skills Library/Thien-Risk-Process-Control/tests/phase-3/fixtures/P1-U19-V01/input.md:5",
+        "/Users/thiendeptrainhat/Documents/Thien's Skills Library/Thien-Risk-Process-Control/tests/phase-3/fixtures/P1-U19-V01/input.md:6"
+      ],
+      "analysis_layer": "Target-State",
+      "claim_basis": "Analyst proposal; không có baseline resilience bắt buộc"
+    }
+  ],
+  "controls": [
+    {
+      "control_id": "CTL-SHARED-19",
+      "control_name": "Dịch vụ trung tâm xác nhận beneficiary",
+      "identity_basis": "SOP-19B §4 xác nhận cùng control, cùng cấu hình và cơ chế như SOP-19A §3; hai điểm gọi không phải hai control độc lập.",
+      "lifecycle_scope": "Current logical control, with separate proposed enhancement",
+      "process_ids": [
+        "PROC-19A",
+        "PROC-19B"
+      ],
+      "risk_ids": [
+        "RSK-19-01",
+        "RSK-19-03"
+      ],
+      "control_objective_ids": [
+        "COBJ-19-01",
+        "COBJ-19-02"
+      ],
+      "observation_ids": [
+        "OBS-19-DA",
+        "OBS-19-DB",
+        "OBS-19-PA",
+        "OBS-19-PB",
+        "OBS-19-TS"
+      ],
+      "source_reference": [
+        "/Users/thiendeptrainhat/Documents/Thien's Skills Library/Thien-Risk-Process-Control/tests/phase-3/fixtures/P1-U19-V01/input.md:5",
+        "/Users/thiendeptrainhat/Documents/Thien's Skills Library/Thien-Risk-Process-Control/tests/phase-3/fixtures/P1-U19-V01/input.md:6"
+      ],
+      "control_owner": "Not provided",
+      "key_control_status": "Candidate, To be validated; chưa được phê duyệt",
+      "legacy_projection_observation_id": null,
+      "review_status": "Not reviewed",
+      "confidence": "Medium cho identity được mô tả hoặc proposal",
+      "analysis_layer": null,
+      "analysis_layer_status": "Xem observation riêng; canonical identity không hợp nhất nội dung các lớp."
+    },
+    {
+      "control_id": "CTL-19-MATCH",
+      "control_name": "Đối chiếu PO/nhận hàng/hóa đơn trước lập lệnh",
+      "identity_basis": "ID phân tích mới cho control được SOP-19B §4 mô tả.",
+      "lifecycle_scope": "Current As-Documented only",
+      "process_ids": [
+        "PROC-19B"
+      ],
+      "risk_ids": [
+        "RSK-19-02"
+      ],
+      "control_objective_ids": [
+        "COBJ-19-03"
+      ],
+      "observation_ids": [
+        "OBS-19-DM"
+      ],
+      "source_reference": "/Users/thiendeptrainhat/Documents/Thien's Skills Library/Thien-Risk-Process-Control/tests/phase-3/fixtures/P1-U19-V01/input.md:6",
+      "control_owner": "Not provided",
+      "key_control_status": "Not designated; chưa đủ methodology/approval để gọi key",
+      "legacy_projection_observation_id": null,
+      "review_status": "Not reviewed",
+      "confidence": "Medium cho identity được mô tả hoặc proposal",
+      "analysis_layer": null,
+      "analysis_layer_status": "Xem observation riêng; canonical identity không hợp nhất nội dung các lớp."
+    },
+    {
+      "control_id": "CTL-19-SOD",
+      "control_name": "Tách người lập và người phát lệnh",
+      "identity_basis": "ID phân tích mới cho control được SOP-19B §4 mô tả.",
+      "lifecycle_scope": "Current As-Documented only",
+      "process_ids": [
+        "PROC-19B"
+      ],
+      "risk_ids": [
+        "RSK-19-02"
+      ],
+      "control_objective_ids": [
+        "COBJ-19-03"
+      ],
+      "observation_ids": [
+        "OBS-19-DS"
+      ],
+      "source_reference": "/Users/thiendeptrainhat/Documents/Thien's Skills Library/Thien-Risk-Process-Control/tests/phase-3/fixtures/P1-U19-V01/input.md:6",
+      "control_owner": "Not provided",
+      "key_control_status": "Not designated; chưa đủ methodology/approval để gọi key",
+      "legacy_projection_observation_id": null,
+      "review_status": "Not reviewed",
+      "confidence": "Medium cho identity được mô tả hoặc proposal",
+      "analysis_layer": null,
+      "analysis_layer_status": "Xem observation riêng; canonical identity không hợp nhất nội dung các lớp."
+    },
+    {
+      "control_id": "CTL-19-MON",
+      "control_name": "Theo dõi/đối soát bất nhất trạng thái dùng chung",
+      "identity_basis": "Control mới do analyst đề xuất, không có bằng chứng đang tồn tại.",
+      "lifecycle_scope": "Target-State only",
+      "process_ids": [
+        "PROC-19A",
+        "PROC-19B"
+      ],
+      "risk_ids": [
+        "RSK-19-03",
+        "RSK-19-04"
+      ],
+      "control_objective_ids": [
+        "COBJ-19-02",
+        "COBJ-19-04"
+      ],
+      "observation_ids": [
+        "OBS-19-TM"
+      ],
+      "source_reference": [
+        "/Users/thiendeptrainhat/Documents/Thien's Skills Library/Thien-Risk-Process-Control/tests/phase-3/fixtures/P1-U19-V01/input.md:5",
+        "/Users/thiendeptrainhat/Documents/Thien's Skills Library/Thien-Risk-Process-Control/tests/phase-3/fixtures/P1-U19-V01/input.md:6",
+        "/Users/thiendeptrainhat/Documents/Thien's Skills Library/Thien-Risk-Process-Control/tests/phase-3/fixtures/P1-U19-V01/input.md:7",
+        "/Users/thiendeptrainhat/Documents/Thien's Skills Library/Thien-Risk-Process-Control/tests/phase-3/fixtures/P1-U19-V01/input.md:8"
+      ],
+      "control_owner": "Not provided",
+      "key_control_status": "Supporting/monitoring proposal; chưa phê duyệt",
+      "legacy_projection_observation_id": null,
+      "review_status": "Not reviewed",
+      "confidence": "Medium cho identity được mô tả hoặc proposal",
+      "analysis_layer": null,
+      "analysis_layer_status": "Xem observation riêng; canonical identity không hợp nhất nội dung các lớp."
+    }
+  ],
+  "control_observations": [
+    {
+      "review_status": "Not reviewed",
+      "status": "Draft",
+      "assumptions": [],
+      "control_owner": "Not provided",
+      "reviewer": "Not provided",
+      "approver": "Not provided",
+      "population": "Not provided",
+      "threshold": "Not provided",
+      "retention": "Not provided",
+      "exception_handling": "Not provided",
+      "escalation": "Not provided",
+      "control_nature": "To be validated",
+      "automation_level": "To be validated",
+      "key_control_status": "To be validated",
+      "assessment_status": "Not assessed",
+      "evidence_status": "Insufficient evidence",
+      "control_observation_id": "OBS-19-DA",
+      "control_id": "CTL-SHARED-19",
+      "analysis_layer": "As-Documented",
+      "assessed_scope": "PROC-19A, nội dung SOP-19A §3 được cung cấp",
+      "assessed_period": "Not provided",
+      "process_ids": [
+        "PROC-19A"
+      ],
+      "step_ids": [
+        "STEP-19A-02"
+      ],
+      "control_description": "Dịch vụ trung tâm xác nhận beneficiary; người cập nhật master data gọi dịch vụ và lưu status.",
+      "performer": "Người cập nhật master data",
+      "trigger": "Khi xử lý đổi tài khoản theo phạm vi SOP; timing chi tiết Not provided",
+      "system": "Dịch vụ trung tâm, tên sản phẩm Not provided",
+      "data_source": "Beneficiary/status; chi tiết Not provided",
+      "design_assessment": "Hướng tới xác nhận beneficiary nhưng đoạn đọc không mô tả kênh độc lập, locator, eligibility rule, exception/override hoặc authority.",
+      "source_ids": [
+        "SOP-19A"
+      ],
+      "source_reference": "/Users/thiendeptrainhat/Documents/Thien's Skills Library/Thien-Risk-Process-Control/tests/phase-3/fixtures/P1-U19-V01/input.md:5",
+      "evidence_ids": [],
+      "confidence": "Medium",
+      "confirmation_status": "Documented"
+    },
+    {
+      "review_status": "Not reviewed",
+      "status": "Draft",
+      "assumptions": [],
+      "control_owner": "Not provided",
+      "reviewer": "Not provided",
+      "approver": "Not provided",
+      "population": "Not provided",
+      "threshold": "Not provided",
+      "retention": "Not provided",
+      "exception_handling": "Not provided",
+      "escalation": "Not provided",
+      "control_nature": "To be validated",
+      "automation_level": "To be validated",
+      "key_control_status": "To be validated",
+      "assessment_status": "Not assessed",
+      "evidence_status": "Insufficient evidence",
+      "control_observation_id": "OBS-19-DB",
+      "control_id": "CTL-SHARED-19",
+      "analysis_layer": "As-Documented",
+      "assessed_scope": "PROC-19B, nội dung SOP-19B §4 được cung cấp",
+      "assessed_period": "Not provided",
+      "process_ids": [
+        "PROC-19B"
+      ],
+      "step_ids": [
+        "STEP-19B-04"
+      ],
+      "control_description": "Cùng CTL-SHARED-19, cùng cấu hình và cơ chế vận hành, được gọi trước phát lệnh.",
+      "performer": "Not provided",
+      "trigger": "Trước phát lệnh",
+      "system": "Cùng dịch vụ trung tâm CTL-SHARED-19",
+      "data_source": "Beneficiary/status; chi tiết Not provided",
+      "design_assessment": "Có điểm gọi trước phát lệnh; gọi dịch vụ chưa chứng minh xác nhận đã hoàn tất. Điều kiện chặn PENDING_REVIEW và độ mới/đúng phiên bản chưa được mô tả.",
+      "source_ids": [
+        "SOP-19B"
+      ],
+      "source_reference": "/Users/thiendeptrainhat/Documents/Thien's Skills Library/Thien-Risk-Process-Control/tests/phase-3/fixtures/P1-U19-V01/input.md:6",
+      "evidence_ids": [],
+      "confidence": "Medium",
+      "confirmation_status": "Documented"
+    },
+    {
+      "review_status": "Not reviewed",
+      "status": "Draft",
+      "assumptions": [],
+      "control_owner": "Not provided",
+      "reviewer": "Not provided",
+      "approver": "Not provided",
+      "population": "Not provided",
+      "threshold": "Not provided",
+      "retention": "Not provided",
+      "exception_handling": "Not provided",
+      "escalation": "Not provided",
+      "control_nature": "To be validated",
+      "automation_level": "To be validated",
+      "key_control_status": "To be validated",
+      "assessment_status": "Not assessed",
+      "evidence_status": "Insufficient evidence",
+      "control_observation_id": "OBS-19-PA",
+      "control_id": "CTL-SHARED-19",
+      "analysis_layer": "As-Performed",
+      "assessed_scope": "Checklist B-19; chưa xác định được invocation/step cụ thể",
+      "assessed_period": "2026-07-10",
+      "process_ids": [],
+      "step_ids": [],
+      "control_description": "Checklist ký ghi VERIFIED; phần nguồn cuộc gọi để trống.",
+      "raw_status": "VERIFIED",
+      "raw_call_source_field": "Trống",
+      "performer": "Not provided",
+      "trigger": "Not provided",
+      "design_assessment": "Not assessed",
+      "source_ids": [
+        "EVD-19A"
+      ],
+      "source_reference": "/Users/thiendeptrainhat/Documents/Thien's Skills Library/Thien-Risk-Process-Control/tests/phase-3/fixtures/P1-U19-V01/input.md:7",
+      "evidence_ids": [
+        "EVD-19A"
+      ],
+      "confidence": "Medium cho ghi nhận trên hồ sơ; Unresolved cho kết quả xác nhận",
+      "confirmation_status": "Evidence-confirmed chỉ đối với nội dung bản tổng hợp",
+      "limitations": [
+        "Không gán checklist cho điểm gọi A hay B khi chưa có khóa liên kết.",
+        "Không suy VERIFIED chứng minh kênh độc lập hoặc điều kiện trước thanh toán đã đạt."
+      ]
+    },
+    {
+      "review_status": "Not reviewed",
+      "status": "Draft",
+      "assumptions": [],
+      "control_owner": "Not provided",
+      "reviewer": "Not provided",
+      "approver": "Not provided",
+      "population": "Not provided",
+      "threshold": "Not provided",
+      "retention": "Not provided",
+      "exception_handling": "Not provided",
+      "escalation": "Not provided",
+      "control_nature": "To be validated",
+      "automation_level": "To be validated",
+      "key_control_status": "To be validated",
+      "assessment_status": "Not assessed",
+      "evidence_status": "Insufficient evidence",
+      "control_observation_id": "OBS-19-PB",
+      "control_id": "CTL-SHARED-19",
+      "analysis_layer": "As-Performed",
+      "assessed_scope": "Trace trung tâm B-19 ở thời điểm trước phát lệnh; invocation/version cần xác minh",
+      "assessed_period": "2026-07-10",
+      "process_ids": [
+        "PROC-19B"
+      ],
+      "step_ids": [
+        "STEP-19B-04"
+      ],
+      "control_description": "Trace trung tâm ghi PENDING_REVIEW trước phát lệnh; chủ nguồn chưa giải thích khác biệt với checklist.",
+      "raw_status": "PENDING_REVIEW",
+      "performer": "Not provided",
+      "trigger": "Thời điểm trước phát lệnh theo nguồn; chưa có timestamp chi tiết",
+      "design_assessment": "Not assessed",
+      "source_ids": [
+        "EVD-19B"
+      ],
+      "source_reference": "/Users/thiendeptrainhat/Documents/Thien's Skills Library/Thien-Risk-Process-Control/tests/phase-3/fixtures/P1-U19-V01/input.md:8",
+      "evidence_ids": [
+        "EVD-19B"
+      ],
+      "confidence": "Medium cho ghi nhận trên hồ sơ; Unresolved cho kết quả xác nhận",
+      "confirmation_status": "Evidence-confirmed chỉ đối với nội dung bản tổng hợp",
+      "limitations": [
+        "Không tự chọn trace thắng checklist.",
+        "Không suy TX-19 là lần thanh toán đầu tiên hay đã settlement."
+      ]
+    },
+    {
+      "review_status": "Not reviewed",
+      "status": "Draft",
+      "assumptions": [],
+      "control_owner": "Not provided",
+      "reviewer": "Not provided",
+      "approver": "Not provided",
+      "population": "Not provided",
+      "threshold": "Not provided",
+      "retention": "Not provided",
+      "exception_handling": "Not provided",
+      "escalation": "Not provided",
+      "control_nature": "To be validated",
+      "automation_level": "To be validated",
+      "key_control_status": "To be validated",
+      "assessment_status": "Not assessed",
+      "evidence_status": "Insufficient evidence",
+      "control_observation_id": "OBS-19-DM",
+      "control_id": "CTL-19-MATCH",
+      "analysis_layer": "As-Documented",
+      "assessed_scope": "PROC-19B, SOP-19B §4",
+      "assessed_period": "Not provided",
+      "process_ids": [
+        "PROC-19B"
+      ],
+      "step_ids": [
+        "STEP-19B-02"
+      ],
+      "control_description": "Đối chiếu PO/nhận hàng/hóa đơn trước lập lệnh.",
+      "performer": "Not provided",
+      "trigger": "Trước lập lệnh",
+      "data_source": "PO, hồ sơ nhận hàng, hóa đơn",
+      "design_assessment": "Có coverage lý thuyết về căn cứ nghĩa vụ; owner, tiêu chí dung sai, phê duyệt mismatch, evidence và exception chưa được cung cấp.",
+      "source_ids": [
+        "SOP-19B"
+      ],
+      "source_reference": "/Users/thiendeptrainhat/Documents/Thien's Skills Library/Thien-Risk-Process-Control/tests/phase-3/fixtures/P1-U19-V01/input.md:6",
+      "evidence_ids": [],
+      "confidence": "Medium",
+      "confirmation_status": "Documented"
+    },
+    {
+      "review_status": "Not reviewed",
+      "status": "Draft",
+      "assumptions": [],
+      "control_owner": "Not provided",
+      "reviewer": "Not provided",
+      "approver": "Not provided",
+      "population": "Not provided",
+      "threshold": "Not provided",
+      "retention": "Not provided",
+      "exception_handling": "Not provided",
+      "escalation": "Not provided",
+      "control_nature": "To be validated",
+      "automation_level": "To be validated",
+      "key_control_status": "To be validated",
+      "assessment_status": "Not assessed",
+      "evidence_status": "Insufficient evidence",
+      "control_observation_id": "OBS-19-DS",
+      "control_id": "CTL-19-SOD",
+      "analysis_layer": "As-Documented",
+      "assessed_scope": "PROC-19B, SOP-19B §4",
+      "assessed_period": "Not provided",
+      "process_ids": [
+        "PROC-19B"
+      ],
+      "step_ids": [
+        "STEP-19B-03",
+        "STEP-19B-05"
+      ],
+      "control_description": "Người phát lệnh khác người lập.",
+      "performer": "Người lập và người phát lệnh, hai người khác nhau theo SOP",
+      "trigger": "Lập/phát lệnh",
+      "data_source": "Not provided",
+      "design_assessment": "Có phân tách process-role trên tài liệu; chưa có quyền thực tế, user assignment và transaction log. Không kết luận actual SoD conflict hoặc SoD vận hành hiệu quả.",
+      "source_ids": [
+        "SOP-19B"
+      ],
+      "source_reference": "/Users/thiendeptrainhat/Documents/Thien's Skills Library/Thien-Risk-Process-Control/tests/phase-3/fixtures/P1-U19-V01/input.md:6",
+      "evidence_ids": [],
+      "confidence": "Medium",
+      "confirmation_status": "Documented"
+    },
+    {
+      "review_status": "Not reviewed",
+      "status": "Draft",
+      "assumptions": [],
+      "control_owner": "Not provided",
+      "reviewer": "Not provided",
+      "approver": "Not provided",
+      "population": "Not provided",
+      "threshold": "Not provided",
+      "retention": "Not provided",
+      "exception_handling": "Proposal: giữ chờ, phân định mâu thuẫn, lưu disposition/authority; không coi exception approval là mặc nhiên miễn REQ-19.",
+      "escalation": "Authority/route/timeframe To be validated",
+      "control_nature": "To be validated",
+      "automation_level": "To be validated",
+      "key_control_status": "To be validated",
+      "assessment_status": "Not assessed",
+      "evidence_status": "Insufficient evidence",
+      "control_observation_id": "OBS-19-TS",
+      "control_id": "CTL-SHARED-19",
+      "analysis_layer": "Target-State",
+      "assessed_scope": "PROC-19A/PROC-19B; thay đổi tài khoản và lần thanh toán đầu tiên liên quan",
+      "assessed_period": "Tương lai; ngày hiệu lực Not provided",
+      "process_ids": [
+        "PROC-19A",
+        "PROC-19B"
+      ],
+      "step_ids": [
+        "STEP-19A-02",
+        "STEP-19B-04"
+      ],
+      "control_description": "Đề xuất củng cố cùng control: xác nhận qua kênh độc lập đã được quy định, lưu locator truy xuất được với beneficiary/phiên bản tài khoản/case/thời điểm/kết quả; trước lần thanh toán đầu tiên đối chiếu bằng chứng này và trạng thái. Nếu thiếu bằng chứng, PENDING_REVIEW hoặc bất nhất, giữ chờ xử lý theo route được phê duyệt; chỉ chuyển sang đủ điều kiện khi tiêu chí đã đáp ứng.",
+      "performer": "To be validated theo phân công được phê duyệt",
+      "trigger": "Xác nhận thay đổi tài khoản; kiểm tra điều kiện trước lần thanh toán đầu tiên. Điểm gọi trước phát lệnh hiện có giữ riêng theo SOP.",
+      "data_source": "Yêu cầu thay đổi, kênh liên hệ độc lập, locator hồ sơ, status và lệnh/phiên bản tài khoản; design proposal",
+      "precision": "Cùng beneficiary, cùng phiên bản thay đổi và confirmation trước mốc yêu cầu; định nghĩa trạng thái final To be validated",
+      "design_assessment": "Proposal hướng tới COBJ-19-01/02, chưa xác minh khả năng triển khai.",
+      "source_ids": [
+        "REQ-19",
+        "SOP-19A",
+        "SOP-19B",
+        "EVD-19A",
+        "EVD-19B"
+      ],
+      "source_reference": [
+        "/Users/thiendeptrainhat/Documents/Thien's Skills Library/Thien-Risk-Process-Control/tests/phase-3/fixtures/P1-U19-V01/input.md:4",
+        "/Users/thiendeptrainhat/Documents/Thien's Skills Library/Thien-Risk-Process-Control/tests/phase-3/fixtures/P1-U19-V01/input.md:5",
+        "/Users/thiendeptrainhat/Documents/Thien's Skills Library/Thien-Risk-Process-Control/tests/phase-3/fixtures/P1-U19-V01/input.md:6",
+        "/Users/thiendeptrainhat/Documents/Thien's Skills Library/Thien-Risk-Process-Control/tests/phase-3/fixtures/P1-U19-V01/input.md:7",
+        "/Users/thiendeptrainhat/Documents/Thien's Skills Library/Thien-Risk-Process-Control/tests/phase-3/fixtures/P1-U19-V01/input.md:8"
+      ],
+      "evidence_ids": [],
+      "confidence": "Medium",
+      "confirmation_status": "Inferred",
+      "limitations": [
+        "Chi tiết cơ chế triển khai là analyst proposal, không phải nguyên văn yêu cầu nội bộ.",
+        "Không yêu cầu xác nhận bằng cuộc gọi mới cho mọi hóa đơn nếu approved rule không yêu cầu."
+      ]
+    },
+    {
+      "review_status": "Not reviewed",
+      "status": "Draft",
+      "assumptions": [],
+      "control_owner": "Not provided",
+      "reviewer": "Not provided",
+      "approver": "Not provided",
+      "population": "Not provided",
+      "threshold": "Not provided",
+      "retention": "Not provided",
+      "exception_handling": "Proposal: điều tra dữ liệu và disposition trước khi dùng xác nhận có mâu thuẫn; fallback không được bỏ yêu cầu xác nhận độc lập.",
+      "escalation": "Owner/authority/timeframe To be validated",
+      "control_nature": "To be validated",
+      "automation_level": "To be validated",
+      "key_control_status": "To be validated",
+      "assessment_status": "Not assessed",
+      "evidence_status": "Insufficient evidence",
+      "control_observation_id": "OBS-19-TM",
+      "control_id": "CTL-19-MON",
+      "analysis_layer": "Target-State",
+      "assessed_scope": "Hai điểm gọi của CTL-SHARED-19",
+      "assessed_period": "Tương lai; ngày hiệu lực Not provided",
+      "process_ids": [
+        "PROC-19A",
+        "PROC-19B"
+      ],
+      "step_ids": [
+        "STEP-19A-02",
+        "STEP-19B-04"
+      ],
+      "control_description": "Đề xuất đối soát status/locator giữa hồ sơ xác nhận, dịch vụ và quyết định phát lệnh; ghi nhận bất nhất hoặc dịch vụ không sẵn sàng, giao xử lý và lưu closure evidence theo governance được duyệt.",
+      "performer": "To be validated; người review cần đủ độc lập với việc sửa status",
+      "trigger": "To be validated; có thể event-driven nếu dữ liệu đáp ứng",
+      "data_source": "Controlled confirmation record, service trace và payment-release records",
+      "precision": "Beneficiary + phiên bản tài khoản + case/invocation + timestamp; khóa thực tế To be validated",
+      "design_assessment": "Monitoring proposal; không tự là cơ chế backup hoặc thay thế xác nhận độc lập.",
+      "source_ids": [
+        "SOP-19A",
+        "SOP-19B",
+        "EVD-19A",
+        "EVD-19B"
+      ],
+      "source_reference": [
+        "/Users/thiendeptrainhat/Documents/Thien's Skills Library/Thien-Risk-Process-Control/tests/phase-3/fixtures/P1-U19-V01/input.md:5",
+        "/Users/thiendeptrainhat/Documents/Thien's Skills Library/Thien-Risk-Process-Control/tests/phase-3/fixtures/P1-U19-V01/input.md:6",
+        "/Users/thiendeptrainhat/Documents/Thien's Skills Library/Thien-Risk-Process-Control/tests/phase-3/fixtures/P1-U19-V01/input.md:7",
+        "/Users/thiendeptrainhat/Documents/Thien's Skills Library/Thien-Risk-Process-Control/tests/phase-3/fixtures/P1-U19-V01/input.md:8"
+      ],
+      "evidence_ids": [],
+      "confidence": "Medium",
+      "confirmation_status": "Inferred"
+    }
+  ],
+  "key_control_assessments": [
+    {
+      "control_id": "CTL-SHARED-19",
+      "observation_id": "OBS-19-DA",
+      "assessed_scope": "PROC-19A; thiết kế được mô tả",
+      "assessed_period": "Not provided",
+      "proposal": "Key-control candidate",
+      "requirement_ids": [
+        "REQ-19"
+      ],
+      "control_objective_ids": [
+        "COBJ-19-01",
+        "COBJ-19-02"
+      ],
+      "risk_ids": [
+        "RSK-19-01",
+        "RSK-19-03"
+      ],
+      "rationale": "Cơ chế chính được mô tả để xác nhận tài khoản và cung cấp status cho dữ liệu dùng ở thanh toán; thất bại có thể ảnh hưởng cả hai objective.",
+      "alternatives": "Chưa có control thay thế tương đương được chứng minh; điểm gọi ở PROC-19B dùng cùng cơ chế, không tự là lớp bảo vệ độc lập.",
+      "methodology_status": "Not provided",
+      "approval_reference": "Not provided",
+      "reviewer": "Not provided",
+      "approver": "Not provided",
+      "review_status": "Not reviewed",
+      "confidence": "Medium"
+    },
+    {
+      "control_id": "CTL-SHARED-19",
+      "observation_id": "OBS-19-DB",
+      "assessed_scope": "PROC-19B; thiết kế được mô tả",
+      "assessed_period": "Not provided",
+      "proposal": "Key-control candidate",
+      "requirement_ids": [
+        "REQ-19"
+      ],
+      "control_objective_ids": [
+        "COBJ-19-01",
+        "COBJ-19-02"
+      ],
+      "risk_ids": [
+        "RSK-19-01",
+        "RSK-19-03"
+      ],
+      "rationale": "Điểm gọi trước phát lệnh là reliance trực tiếp cho beneficiary verification; chỉ gọi chưa đủ chứng minh điều kiện xác nhận hoàn tất.",
+      "alternatives": "CTL-19-MATCH và CTL-19-SOD xử lý nghĩa vụ/ủy quyền, chưa chứng minh xác nhận kênh độc lập; không được coi là compensating tương đương.",
+      "methodology_status": "Not provided",
+      "approval_reference": "Not provided",
+      "reviewer": "Not provided",
+      "approver": "Not provided",
+      "review_status": "Not reviewed",
+      "confidence": "Medium"
+    }
+  ],
+  "baseline_links": [
+    {
+      "review_status": "Not reviewed",
+      "status": "Draft",
+      "assumptions": [],
+      "assessed_scope": "Phạm vi hồ sơ PROC-19A/PROC-19B; thu hẹp theo control tương ứng",
+      "assessed_period": "Not provided",
+      "confidence": "Medium",
+      "baseline_link_id": "CBL-19-01",
+      "source_id": "REQ-19",
+      "requirement_ids": [
+        "REQ-19"
+      ],
+      "baseline_basis": "Source-derived requirement",
+      "description": "Xác nhận thay đổi bằng kênh độc lập trước lần thanh toán đầu tiên",
+      "control_objective_ids": [
+        "COBJ-19-01"
+      ],
+      "risk_ids": [
+        "RSK-19-01"
+      ],
+      "candidate_control_ids": [
+        "CTL-SHARED-19"
+      ],
+      "mandatory_or_advisory": "Mandatory internally theo nội dung cung cấp",
+      "source_reference": "/Users/thiendeptrainhat/Documents/Thien's Skills Library/Thien-Risk-Process-Control/tests/phase-3/fixtures/P1-U19-V01/input.md:4",
+      "baseline_status": "Content/applicability read in supplied record; historical currency To be validated"
+    },
+    {
+      "review_status": "Not reviewed",
+      "status": "Draft",
+      "assumptions": [],
+      "assessed_scope": "Phạm vi hồ sơ PROC-19A/PROC-19B; thu hẹp theo control tương ứng",
+      "assessed_period": "Not provided",
+      "confidence": "Medium",
+      "baseline_link_id": "CBL-19-02",
+      "source_id": "REQ-19",
+      "requirement_ids": [
+        "REQ-19"
+      ],
+      "baseline_basis": "Source-derived requirement",
+      "description": "Hồ sơ xác nhận có locator",
+      "control_objective_ids": [
+        "COBJ-19-02"
+      ],
+      "risk_ids": [
+        "RSK-19-03"
+      ],
+      "candidate_control_ids": [
+        "CTL-SHARED-19"
+      ],
+      "mandatory_or_advisory": "Mandatory internally theo nội dung cung cấp",
+      "source_reference": "/Users/thiendeptrainhat/Documents/Thien's Skills Library/Thien-Risk-Process-Control/tests/phase-3/fixtures/P1-U19-V01/input.md:4",
+      "baseline_status": "Content/applicability read in supplied record; historical currency To be validated"
+    },
+    {
+      "review_status": "Not reviewed",
+      "status": "Draft",
+      "assumptions": [],
+      "assessed_scope": "Phạm vi hồ sơ PROC-19A/PROC-19B; thu hẹp theo control tương ứng",
+      "assessed_period": "Not provided",
+      "confidence": "Medium",
+      "baseline_link_id": "CBL-19-03",
+      "source_id": "SOP-19B",
+      "requirement_ids": [],
+      "baseline_basis": "Documented procedure",
+      "description": "Đối chiếu PO/nhận hàng/hóa đơn trước lập lệnh",
+      "control_objective_ids": [
+        "COBJ-19-03"
+      ],
+      "risk_ids": [
+        "RSK-19-02"
+      ],
+      "candidate_control_ids": [
+        "CTL-19-MATCH"
+      ],
+      "mandatory_or_advisory": "Nội dung SOP được cung cấp; approval/effective status To be validated",
+      "source_reference": "/Users/thiendeptrainhat/Documents/Thien's Skills Library/Thien-Risk-Process-Control/tests/phase-3/fixtures/P1-U19-V01/input.md:6"
+    },
+    {
+      "review_status": "Not reviewed",
+      "status": "Draft",
+      "assumptions": [],
+      "assessed_scope": "Phạm vi hồ sơ PROC-19A/PROC-19B; thu hẹp theo control tương ứng",
+      "assessed_period": "Not provided",
+      "confidence": "Medium",
+      "baseline_link_id": "CBL-19-04",
+      "source_id": "SOP-19B",
+      "requirement_ids": [],
+      "baseline_basis": "Documented procedure",
+      "description": "Người phát lệnh khác người lập",
+      "control_objective_ids": [
+        "COBJ-19-03"
+      ],
+      "risk_ids": [
+        "RSK-19-02"
+      ],
+      "candidate_control_ids": [
+        "CTL-19-SOD"
+      ],
+      "mandatory_or_advisory": "Nội dung SOP được cung cấp; approval/effective status To be validated",
+      "source_reference": "/Users/thiendeptrainhat/Documents/Thien's Skills Library/Thien-Risk-Process-Control/tests/phase-3/fixtures/P1-U19-V01/input.md:6"
+    },
+    {
+      "review_status": "Not reviewed",
+      "status": "Draft",
+      "assumptions": [],
+      "assessed_scope": "Phạm vi hồ sơ PROC-19A/PROC-19B; thu hẹp theo control tương ứng",
+      "assessed_period": "Not provided",
+      "confidence": "Medium",
+      "baseline_link_id": "CBL-19-05",
+      "source_id": null,
+      "requirement_ids": [],
+      "baseline_basis": "Analyst proposal",
+      "description": "Quản trị tính nhất quán và dependency của dịch vụ dùng chung",
+      "control_objective_ids": [
+        "COBJ-19-02",
+        "COBJ-19-04"
+      ],
+      "risk_ids": [
+        "RSK-19-03",
+        "RSK-19-04"
+      ],
+      "candidate_control_ids": [
+        "CTL-19-MON"
+      ],
+      "mandatory_or_advisory": "Advisory proposal, không standard-derived",
+      "source_reference": [
+        "/Users/thiendeptrainhat/Documents/Thien's Skills Library/Thien-Risk-Process-Control/tests/phase-3/fixtures/P1-U19-V01/input.md:5",
+        "/Users/thiendeptrainhat/Documents/Thien's Skills Library/Thien-Risk-Process-Control/tests/phase-3/fixtures/P1-U19-V01/input.md:6",
+        "/Users/thiendeptrainhat/Documents/Thien's Skills Library/Thien-Risk-Process-Control/tests/phase-3/fixtures/P1-U19-V01/input.md:7",
+        "/Users/thiendeptrainhat/Documents/Thien's Skills Library/Thien-Risk-Process-Control/tests/phase-3/fixtures/P1-U19-V01/input.md:8"
+      ],
+      "baseline_status": "Proposed"
+    }
+  ],
+  "comparisons": [
+    {
+      "review_status": "Not reviewed",
+      "status": "Draft",
+      "assumptions": [],
+      "assessed_scope": "Hai quy trình theo hồ sơ; evidence B-19/TX-19 chỉ một trường hợp, checklist chưa gắn được điểm gọi cụ thể",
+      "assessed_period": "Documented effective period Not provided; evidence case 2026-07-10; Target-State chưa hiệu lực",
+      "source_reference": "/Users/thiendeptrainhat/Documents/Thien's Skills Library/Thien-Risk-Process-Control/tests/phase-3/fixtures/P1-U19-V01/input.md:1",
+      "limitations": [
+        "Không ghép khác layer thành cùng fact; không suy nguồn SOP chứng minh thực tế."
+      ],
+      "comparison_id": "CMP-19-01",
+      "objective_ids": [
+        "OBJ-19A",
+        "OBJ-19B"
+      ],
+      "process_ids": [
+        "PROC-19A",
+        "PROC-19B"
+      ],
+      "control_objective_ids": [
+        "COBJ-19-01"
+      ],
+      "risk_ids": [
+        "RSK-19-01"
+      ],
+      "baseline_link_ids": [
+        "CBL-19-01"
+      ],
+      "logical_control_ids": [
+        "CTL-SHARED-19"
+      ],
+      "documented_observation_ids": [
+        "OBS-19-DA",
+        "OBS-19-DB"
+      ],
+      "designed_observation_ids": [],
+      "performed_observation_ids": [
+        "OBS-19-PA",
+        "OBS-19-PB"
+      ],
+      "target_observation_ids": [
+        "OBS-19-TS"
+      ],
+      "context_evidence_ids": [
+        "EVD-19C"
+      ],
+      "coverage_assessment": "conflicting_evidence",
+      "rationale": "Có control và điểm gọi; chưa chứng minh independent confirmation hoàn tất đúng mốc. Hai status mâu thuẫn, chưa có timeline/phiên bản/first-payment marker; lệnh phát không phải bằng chứng thanh toán sai.",
+      "gap_ids": [
+        "GAP-19-02",
+        "GAP-19-03"
+      ],
+      "recommendation_ids": [
+        "REC-19-01",
+        "REC-19-02"
+      ],
+      "no_change_scenario_ids": [
+        "NCS-19-01"
+      ],
+      "confidence": "Unresolved"
+    },
+    {
+      "review_status": "Not reviewed",
+      "status": "Draft",
+      "assumptions": [],
+      "assessed_scope": "Hai quy trình theo hồ sơ; evidence B-19/TX-19 chỉ một trường hợp, checklist chưa gắn được điểm gọi cụ thể",
+      "assessed_period": "Documented effective period Not provided; evidence case 2026-07-10; Target-State chưa hiệu lực",
+      "source_reference": "/Users/thiendeptrainhat/Documents/Thien's Skills Library/Thien-Risk-Process-Control/tests/phase-3/fixtures/P1-U19-V01/input.md:1",
+      "limitations": [
+        "Không ghép khác layer thành cùng fact; không suy nguồn SOP chứng minh thực tế."
+      ],
+      "comparison_id": "CMP-19-02",
+      "objective_ids": [
+        "OBJ-19A",
+        "OBJ-19B"
+      ],
+      "process_ids": [
+        "PROC-19A",
+        "PROC-19B"
+      ],
+      "control_objective_ids": [
+        "COBJ-19-02"
+      ],
+      "risk_ids": [
+        "RSK-19-03"
+      ],
+      "baseline_link_ids": [
+        "CBL-19-02",
+        "CBL-19-05"
+      ],
+      "logical_control_ids": [
+        "CTL-SHARED-19",
+        "CTL-19-MON"
+      ],
+      "documented_observation_ids": [
+        "OBS-19-DA",
+        "OBS-19-DB"
+      ],
+      "designed_observation_ids": [],
+      "performed_observation_ids": [
+        "OBS-19-PA",
+        "OBS-19-PB"
+      ],
+      "target_observation_ids": [
+        "OBS-19-TS",
+        "OBS-19-TM"
+      ],
+      "context_evidence_ids": [],
+      "coverage_assessment": "evidence_insufficient",
+      "rationale": "Checklist có ô nguồn cuộc gọi trống; chưa có locator khác. Thiếu locator được cung cấp không chứng minh không tồn tại hồ sơ xác nhận ở nơi khác.",
+      "gap_ids": [
+        "GAP-19-01",
+        "GAP-19-02",
+        "GAP-19-03"
+      ],
+      "recommendation_ids": [
+        "REC-19-01",
+        "REC-19-02"
+      ],
+      "no_change_scenario_ids": [
+        "NCS-19-01"
+      ],
+      "confidence": "Unresolved"
+    },
+    {
+      "review_status": "Not reviewed",
+      "status": "Draft",
+      "assumptions": [],
+      "assessed_scope": "Hai quy trình theo hồ sơ; evidence B-19/TX-19 chỉ một trường hợp, checklist chưa gắn được điểm gọi cụ thể",
+      "assessed_period": "Documented effective period Not provided; evidence case 2026-07-10; Target-State chưa hiệu lực",
+      "source_reference": "/Users/thiendeptrainhat/Documents/Thien's Skills Library/Thien-Risk-Process-Control/tests/phase-3/fixtures/P1-U19-V01/input.md:1",
+      "limitations": [
+        "Không ghép khác layer thành cùng fact; không suy nguồn SOP chứng minh thực tế."
+      ],
+      "comparison_id": "CMP-19-03",
+      "objective_ids": [
+        "OBJ-19B"
+      ],
+      "process_ids": [
+        "PROC-19B"
+      ],
+      "control_objective_ids": [
+        "COBJ-19-03"
+      ],
+      "risk_ids": [
+        "RSK-19-02"
+      ],
+      "baseline_link_ids": [
+        "CBL-19-03",
+        "CBL-19-04"
+      ],
+      "logical_control_ids": [
+        "CTL-19-MATCH",
+        "CTL-19-SOD"
+      ],
+      "documented_observation_ids": [
+        "OBS-19-DM",
+        "OBS-19-DS"
+      ],
+      "designed_observation_ids": [],
+      "performed_observation_ids": [],
+      "target_observation_ids": [],
+      "context_evidence_ids": [
+        "EVD-19C"
+      ],
+      "coverage_assessment": "evidence_insufficient",
+      "rationale": "Có coverage lý thuyết cho đối chiếu nghĩa vụ và phân tách lập–phát. Không có bằng chứng thực hiện, authority hoặc kết quả đối chiếu/settlement; không kết luận thiếu control hoặc control failed.",
+      "gap_ids": [
+        "GAP-19-04"
+      ],
+      "recommendation_ids": [
+        "REC-19-03"
+      ],
+      "no_change_scenario_ids": [
+        "NCS-19-02"
+      ],
+      "confidence": "Medium cho tài liệu; thực tế chưa đánh giá"
+    },
+    {
+      "review_status": "Not reviewed",
+      "status": "Draft",
+      "assumptions": [],
+      "assessed_scope": "Hai quy trình theo hồ sơ; evidence B-19/TX-19 chỉ một trường hợp, checklist chưa gắn được điểm gọi cụ thể",
+      "assessed_period": "Documented effective period Not provided; evidence case 2026-07-10; Target-State chưa hiệu lực",
+      "source_reference": "/Users/thiendeptrainhat/Documents/Thien's Skills Library/Thien-Risk-Process-Control/tests/phase-3/fixtures/P1-U19-V01/input.md:1",
+      "limitations": [
+        "Không ghép khác layer thành cùng fact; không suy nguồn SOP chứng minh thực tế."
+      ],
+      "comparison_id": "CMP-19-04",
+      "objective_ids": [
+        "OBJ-19A",
+        "OBJ-19B"
+      ],
+      "process_ids": [
+        "PROC-19A",
+        "PROC-19B"
+      ],
+      "control_objective_ids": [
+        "COBJ-19-04"
+      ],
+      "risk_ids": [
+        "RSK-19-04"
+      ],
+      "baseline_link_ids": [
+        "CBL-19-05"
+      ],
+      "logical_control_ids": [
+        "CTL-19-MON"
+      ],
+      "documented_observation_ids": [],
+      "designed_observation_ids": [],
+      "performed_observation_ids": [],
+      "target_observation_ids": [
+        "OBS-19-TM"
+      ],
+      "context_evidence_ids": [],
+      "coverage_assessment": "evidence_insufficient",
+      "rationale": "Baseline là đề xuất; current monitoring/backup chưa cung cấp. Shared-service dependency có căn cứ, SPOF hoặc missing control chưa được chứng minh.",
+      "gap_ids": [],
+      "design_opportunity_ids": [
+        "OPP-19-01"
+      ],
+      "recommendation_ids": [
+        "REC-19-04"
+      ],
+      "no_change_scenario_ids": [
+        "NCS-19-03"
+      ],
+      "confidence": "Medium cho dependency; SPOF To be validated"
+    }
+  ],
+  "gaps": [
+    {
+      "review_status": "Not reviewed",
+      "status": "Draft",
+      "assumptions": [],
+      "owner": "Not provided",
+      "root_cause": "Unresolved",
+      "severity": "Not assessed",
+      "assessed_period": "2026-07-10 cho evidence case; effective period tài liệu Not provided",
+      "gap_id": "GAP-19-01",
+      "classification": "Evidence limitation / ghi nhận thiếu trường trên hồ sơ cung cấp",
+      "gap_type": "No Evidence",
+      "analysis_layer": "As-Performed",
+      "control_ids": [
+        "CTL-SHARED-19"
+      ],
+      "risk_ids": [
+        "RSK-19-03"
+      ],
+      "requirement_ids": [
+        "REQ-19"
+      ],
+      "comparison_ids": [
+        "CMP-19-02"
+      ],
+      "description": "EVD-19A có ô nguồn cuộc gọi trống; chưa có locator xác nhận độc lập nào khác được cung cấp.",
+      "limitation": "Xác nhận được trường trống trong nguồn tổng hợp, không xác nhận toàn hồ sơ không có locator; chưa là compliance finding chính thức.",
+      "source_ids": [
+        "REQ-19",
+        "EVD-19A"
+      ],
+      "source_reference": [
+        "/Users/thiendeptrainhat/Documents/Thien's Skills Library/Thien-Risk-Process-Control/tests/phase-3/fixtures/P1-U19-V01/input.md:4",
+        "/Users/thiendeptrainhat/Documents/Thien's Skills Library/Thien-Risk-Process-Control/tests/phase-3/fixtures/P1-U19-V01/input.md:7"
+      ],
+      "validation_needed": "Thu hồ sơ gốc và locator có thể truy xuất; không điền hồi tố như thể evidence đã có ở thời điểm giao dịch.",
+      "confidence": "Medium"
+    },
+    {
+      "review_status": "Not reviewed",
+      "status": "Draft",
+      "assumptions": [],
+      "owner": "Not provided",
+      "root_cause": "Unresolved",
+      "severity": "Not assessed",
+      "assessed_period": "2026-07-10 cho evidence case; effective period tài liệu Not provided",
+      "gap_id": "GAP-19-02",
+      "classification": "Conflicting evidence / Observation",
+      "gap_type": "Unreliable Data — To be validated",
+      "analysis_layer": "As-Performed",
+      "control_ids": [
+        "CTL-SHARED-19"
+      ],
+      "risk_ids": [
+        "RSK-19-01",
+        "RSK-19-03"
+      ],
+      "requirement_ids": [
+        "REQ-19"
+      ],
+      "comparison_ids": [
+        "CMP-19-01",
+        "CMP-19-02"
+      ],
+      "description": "Checklist VERIFIED và trace PENDING_REVIEW chưa được chủ nguồn giải thích; trạng thái xác nhận cuối cùng Unresolved.",
+      "limitation": "Không biết nguyên nhân, status semantics, timestamps, account version hay exception; không suy deliberate bypass/fraud hoặc control failure toàn kỳ.",
+      "source_ids": [
+        "EVD-19A",
+        "EVD-19B",
+        "EVD-19C"
+      ],
+      "source_reference": [
+        "/Users/thiendeptrainhat/Documents/Thien's Skills Library/Thien-Risk-Process-Control/tests/phase-3/fixtures/P1-U19-V01/input.md:7",
+        "/Users/thiendeptrainhat/Documents/Thien's Skills Library/Thien-Risk-Process-Control/tests/phase-3/fixtures/P1-U19-V01/input.md:8",
+        "/Users/thiendeptrainhat/Documents/Thien's Skills Library/Thien-Risk-Process-Control/tests/phase-3/fixtures/P1-U19-V01/input.md:9"
+      ],
+      "validation_needed": "Hòa giải raw records qua beneficiary/account version/case/invocation/timezone, history, release và payment events.",
+      "confidence": "Unresolved"
+    },
+    {
+      "review_status": "Not reviewed",
+      "status": "Draft",
+      "assumptions": [],
+      "owner": "Not provided",
+      "root_cause": "Unresolved",
+      "severity": "Not assessed",
+      "assessed_period": "2026-07-10 cho evidence case; effective period tài liệu Not provided",
+      "gap_id": "GAP-19-03",
+      "classification": "Documentation gap trong phạm vi các đoạn SOP được đọc",
+      "gap_type": "Unclear Control",
+      "analysis_layer": "As-Documented",
+      "control_ids": [
+        "CTL-SHARED-19"
+      ],
+      "risk_ids": [
+        "RSK-19-01",
+        "RSK-19-03"
+      ],
+      "requirement_ids": [
+        "REQ-19"
+      ],
+      "comparison_ids": [
+        "CMP-19-01",
+        "CMP-19-02"
+      ],
+      "description": "Gọi dịch vụ và lưu status chưa mô tả đủ kênh độc lập, locator, tiêu chí được phép thanh toán, xử lý PENDING/bất nhất, override/escalation, owner và retention.",
+      "limitation": "Not described in reviewed scope; không chứng minh thiết kế thực tế không có các thuộc tính này. Potential design gap phải xác minh.",
+      "source_ids": [
+        "REQ-19",
+        "SOP-19A",
+        "SOP-19B"
+      ],
+      "source_reference": [
+        "/Users/thiendeptrainhat/Documents/Thien's Skills Library/Thien-Risk-Process-Control/tests/phase-3/fixtures/P1-U19-V01/input.md:4",
+        "/Users/thiendeptrainhat/Documents/Thien's Skills Library/Thien-Risk-Process-Control/tests/phase-3/fixtures/P1-U19-V01/input.md:5",
+        "/Users/thiendeptrainhat/Documents/Thien's Skills Library/Thien-Risk-Process-Control/tests/phase-3/fixtures/P1-U19-V01/input.md:6"
+      ],
+      "validation_needed": "Thu specification, full SOP, approval/effective version, decision/exception rules và design evidence có thẩm quyền.",
+      "confidence": "Medium"
+    },
+    {
+      "review_status": "Not reviewed",
+      "status": "Draft",
+      "assumptions": [],
+      "owner": "Not provided",
+      "root_cause": "Unresolved",
+      "severity": "Not assessed",
+      "assessed_period": "2026-07-10 cho evidence case; effective period tài liệu Not provided",
+      "gap_id": "GAP-19-04",
+      "classification": "Evidence limitation; không phải observed operating deviation",
+      "gap_type": "No Evidence",
+      "analysis_layer": null,
+      "analysis_layer_status": "Chưa có As-Performed evidence cho các controls ngoài beneficiary",
+      "control_ids": [
+        "CTL-19-MATCH",
+        "CTL-19-SOD"
+      ],
+      "risk_ids": [
+        "RSK-19-02"
+      ],
+      "requirement_ids": [],
+      "comparison_ids": [
+        "CMP-19-03"
+      ],
+      "description": "Chưa có bằng chứng matching, phê duyệt nghĩa vụ, actual maker/releaser hoặc thanh toán/đối chiếu sổ của TX-19.",
+      "limitation": "EVD-19C chỉ nói lệnh đã phát. Không coi evidence thiếu là control vắng mặt/thất bại.",
+      "source_ids": [
+        "SOP-19B",
+        "EVD-19C"
+      ],
+      "source_reference": [
+        "/Users/thiendeptrainhat/Documents/Thien's Skills Library/Thien-Risk-Process-Control/tests/phase-3/fixtures/P1-U19-V01/input.md:3",
+        "/Users/thiendeptrainhat/Documents/Thien's Skills Library/Thien-Risk-Process-Control/tests/phase-3/fixtures/P1-U19-V01/input.md:6",
+        "/Users/thiendeptrainhat/Documents/Thien's Skills Library/Thien-Risk-Process-Control/tests/phase-3/fixtures/P1-U19-V01/input.md:9"
+      ],
+      "validation_needed": "Thu hồ sơ matching, authority, người lập/phát, effective permissions và settlement/reconciliation.",
+      "confidence": "Medium"
+    }
+  ],
+  "dependencies": [
+    {
+      "dependency_id": "DEP-19-01",
+      "dependency_type": "Shared service",
+      "provider": "Dịch vụ trung tâm CTL-SHARED-19; service owner Not provided",
+      "consumer_process_ids": [
+        "PROC-19A",
+        "PROC-19B"
+      ],
+      "consumer_step_ids": [
+        "STEP-19A-02",
+        "STEP-19B-04"
+      ],
+      "control_id": "CTL-SHARED-19",
+      "risk_ids": [
+        "RSK-19-04"
+      ],
+      "analysis_layer": "As-Documented",
+      "common_mode_basis": "SOP-19B xác nhận cùng cấu hình và cơ chế vận hành.",
+      "backup": "Not provided",
+      "capacity": "Not provided",
+      "substitute_available": "Not provided",
+      "substitution_lead_time": "Not provided",
+      "recovery_time": "Not provided",
+      "maximum_outage_tolerance": "Not provided",
+      "manual_workaround": "Not provided",
+      "spof_status": "To be validated",
+      "source_ids": [
+        "SOP-19A",
+        "SOP-19B"
+      ],
+      "source_reference": [
+        "/Users/thiendeptrainhat/Documents/Thien's Skills Library/Thien-Risk-Process-Control/tests/phase-3/fixtures/P1-U19-V01/input.md:5",
+        "/Users/thiendeptrainhat/Documents/Thien's Skills Library/Thien-Risk-Process-Control/tests/phase-3/fixtures/P1-U19-V01/input.md:6"
+      ],
+      "confidence": "Medium",
+      "review_status": "Not reviewed"
+    }
+  ],
+  "sod_assessment": {
+    "analysis_layer": "As-Documented",
+    "process_role": "Người lập và người phát được yêu cầu khác nhau (OBS-19-DS).",
+    "system_access": "Not provided",
+    "actual_user": "Not provided",
+    "actual_conflict_status": "Not assessed",
+    "conflict_exercised": "Not assessed",
+    "scope_extension": "Quan hệ giữa người cập nhật master data, người xác nhận, lập/phát lệnh chưa được cung cấp; chỉ là điểm cần xác minh, không phải conflict đã xác nhận.",
+    "source_reference": "/Users/thiendeptrainhat/Documents/Thien's Skills Library/Thien-Risk-Process-Control/tests/phase-3/fixtures/P1-U19-V01/input.md:6"
+  },
+  "design_opportunities": [
+    {
+      "design_opportunity_id": "OPP-19-01",
+      "analysis_layer": "Target-State",
+      "objective_ids": [
+        "OBJ-19A",
+        "OBJ-19B"
+      ],
+      "process_ids": [
+        "PROC-19A",
+        "PROC-19B"
+      ],
+      "risk_ids": [
+        "RSK-19-04"
+      ],
+      "dependency_ids": [
+        "DEP-19-01"
+      ],
+      "description": "Làm rõ common-mode dependency, an toàn xử lý trạng thái và khả năng thay thế trước khi quyết định automation/monitoring.",
+      "source_reference": [
+        "/Users/thiendeptrainhat/Documents/Thien's Skills Library/Thien-Risk-Process-Control/tests/phase-3/fixtures/P1-U19-V01/input.md:5",
+        "/Users/thiendeptrainhat/Documents/Thien's Skills Library/Thien-Risk-Process-Control/tests/phase-3/fixtures/P1-U19-V01/input.md:6"
+      ],
+      "confidence": "Medium",
+      "review_status": "Not reviewed"
+    }
+  ],
+  "no_change_scenarios": [
+    {
+      "review_status": "Not reviewed",
+      "status": "Draft",
+      "assumptions": [],
+      "analysis_layer": "Target-State",
+      "horizon": null,
+      "probability": "Not assessed",
+      "loss": "Not assessed",
+      "source_reference": "/Users/thiendeptrainhat/Documents/Thien's Skills Library/Thien-Risk-Process-Control/tests/phase-3/fixtures/P1-U19-V01/input.md:1",
+      "no_change_scenario_id": "NCS-19-01",
+      "comparison_ids": [
+        "CMP-19-01",
+        "CMP-19-02"
+      ],
+      "gap_ids": [
+        "GAP-19-01",
+        "GAP-19-02",
+        "GAP-19-03"
+      ],
+      "risk_ids": [
+        "RSK-19-01",
+        "RSK-19-03"
+      ],
+      "objective_ids": [
+        "OBJ-19A",
+        "OBJ-19B"
+      ],
+      "scenario_basis": "Condition có căn cứ: hồ sơ thiếu trường nguồn và status mâu thuẫn. Việc không xác nhận thật/sai tài khoản vẫn là hypothesis.",
+      "cause": "Nếu tiếp tục dựa vào status không hòa giải và hồ sơ chưa truy nguyên",
+      "event": "Có thể cho phép sử dụng/xuất lệnh với xác nhận không đủ căn cứ",
+      "impact": "Trả sai beneficiary, không hoàn thành nghĩa vụ hoặc không chứng minh tuân thủ yêu cầu nội bộ",
+      "existing_protection": {
+        "logical_control_ids": [
+          "CTL-SHARED-19",
+          "CTL-19-MATCH",
+          "CTL-19-SOD"
+        ],
+        "control_observation_ids": [
+          "OBS-19-DA",
+          "OBS-19-DB",
+          "OBS-19-DM",
+          "OBS-19-DS"
+        ],
+        "summary": "Các control được mô tả; hai điểm gọi shared không độc lập. Match/SoD không chứng minh kênh xác nhận beneficiary độc lập.",
+        "evidence_status": "Insufficient evidence"
+      },
+      "unmitigated_exposure": "Tính đúng thời điểm, đúng tài khoản, độc lập và truy xuất của xác nhận chưa được chứng minh.",
+      "uncertainty": [
+        "Final status, first-payment flag, actual settlement và root cause chưa rõ."
+      ],
+      "validation_needed": [
+        "ACT-19-01",
+        "ACT-19-02"
+      ],
+      "source_ids": [
+        "REQ-19",
+        "SOP-19A",
+        "SOP-19B",
+        "EVD-19A",
+        "EVD-19B",
+        "EVD-19C"
+      ],
+      "confidence": "Unresolved"
+    },
+    {
+      "review_status": "Not reviewed",
+      "status": "Draft",
+      "assumptions": [],
+      "analysis_layer": "Target-State",
+      "horizon": null,
+      "probability": "Not assessed",
+      "loss": "Not assessed",
+      "source_reference": "/Users/thiendeptrainhat/Documents/Thien's Skills Library/Thien-Risk-Process-Control/tests/phase-3/fixtures/P1-U19-V01/input.md:1",
+      "no_change_scenario_id": "NCS-19-02",
+      "comparison_ids": [
+        "CMP-19-03"
+      ],
+      "gap_ids": [
+        "GAP-19-04"
+      ],
+      "risk_ids": [
+        "RSK-19-02"
+      ],
+      "objective_ids": [
+        "OBJ-19B"
+      ],
+      "scenario_basis": "Hypothesis; chỉ có evidence limitation, chưa chứng minh control yếu hoặc không hoạt động.",
+      "cause": "Nếu coverage đối chiếu/ủy quyền/SoD thực tế không đầy đủ và không được kiểm chứng",
+      "event": "Lệnh không phù hợp nghĩa vụ có thể được phát hoặc sai lệch sau thanh toán không được phát hiện",
+      "impact": "Chi sai/thừa hoặc sổ không khớp nghĩa vụ",
+      "existing_protection": {
+        "logical_control_ids": [
+          "CTL-19-MATCH",
+          "CTL-19-SOD"
+        ],
+        "control_observation_ids": [
+          "OBS-19-DM",
+          "OBS-19-DS"
+        ],
+        "summary": "Coverage được SOP mô tả; approval/reconciliation mới là boundary, chưa đủ chi tiết để tính như control đã xác minh.",
+        "evidence_status": "Insufficient evidence"
+      },
+      "unmitigated_exposure": "Không thể lượng hóa hoặc kết luận residual risk từ thiếu evidence.",
+      "uncertainty": [
+        "Chưa có hồ sơ giao dịch, access và reconciliation."
+      ],
+      "validation_needed": [
+        "ACT-19-03"
+      ],
+      "source_ids": [
+        "SOP-19B",
+        "EVD-19C"
+      ],
+      "confidence": "Medium"
+    },
+    {
+      "review_status": "Not reviewed",
+      "status": "Draft",
+      "assumptions": [],
+      "analysis_layer": "Target-State",
+      "horizon": null,
+      "probability": "Not assessed",
+      "loss": "Not assessed",
+      "source_reference": "/Users/thiendeptrainhat/Documents/Thien's Skills Library/Thien-Risk-Process-Control/tests/phase-3/fixtures/P1-U19-V01/input.md:1",
+      "no_change_scenario_id": "NCS-19-03",
+      "comparison_ids": [
+        "CMP-19-04"
+      ],
+      "gap_ids": [],
+      "design_opportunity_ids": [
+        "OPP-19-01"
+      ],
+      "risk_ids": [
+        "RSK-19-04"
+      ],
+      "objective_ids": [
+        "OBJ-19A",
+        "OBJ-19B"
+      ],
+      "scenario_basis": "Common-mode hypothesis từ cùng dịch vụ/cấu hình; không phải incident/SPOF đã xác nhận.",
+      "cause": "Nếu dependency chung có lỗi hoặc gián đoạn",
+      "event": "Hai quy trình có thể bị tác động đồng thời, tái dùng cùng kết quả sai hoặc chờ xử lý",
+      "impact": "Xác nhận/thanh toán không đáng tin cậy hoặc trì hoãn outcome",
+      "existing_protection": {
+        "logical_control_ids": [],
+        "control_observation_ids": [],
+        "summary": "Biện pháp backup/substitute/monitoring hiện tại Not provided; không đồng nghĩa không tồn tại.",
+        "evidence_status": "Insufficient evidence"
+      },
+      "unmitigated_exposure": "Chưa biết common-mode mitigation, capacity và thời gian thay thế.",
+      "uncertainty": [
+        "Chưa có tolerance, recovery, workaround hay test."
+      ],
+      "validation_needed": [
+        "ACT-19-04"
+      ],
+      "source_ids": [
+        "SOP-19A",
+        "SOP-19B"
+      ],
+      "confidence": "Medium"
+    }
+  ],
+  "recommendations": [
+    {
+      "review_status": "Not reviewed",
+      "status": "Draft",
+      "assumptions": [],
+      "analysis_layer": "Target-State",
+      "confidence": "Medium",
+      "recommendation_id": "REC-19-01",
+      "gap_ids": [
+        "GAP-19-01",
+        "GAP-19-02"
+      ],
+      "comparison_ids": [
+        "CMP-19-01",
+        "CMP-19-02"
+      ],
+      "no_change_scenario_ids": [
+        "NCS-19-01"
+      ],
+      "control_objective_ids": [
+        "COBJ-19-01",
+        "COBJ-19-02"
+      ],
+      "risk_ids": [
+        "RSK-19-01",
+        "RSK-19-03"
+      ],
+      "description": "Hòa giải hồ sơ B-19/TX-19 và truy nguyên xác nhận; giữ nguyên hai raw status, yêu cầu chủ nguồn giải thích bằng chứng và phân định trạng thái theo thời điểm.",
+      "source_ids": [
+        "EVD-19A",
+        "EVD-19B",
+        "EVD-19C",
+        "REQ-19"
+      ],
+      "source_reference": [
+        "/Users/thiendeptrainhat/Documents/Thien's Skills Library/Thien-Risk-Process-Control/tests/phase-3/fixtures/P1-U19-V01/input.md:4",
+        "/Users/thiendeptrainhat/Documents/Thien's Skills Library/Thien-Risk-Process-Control/tests/phase-3/fixtures/P1-U19-V01/input.md:7",
+        "/Users/thiendeptrainhat/Documents/Thien's Skills Library/Thien-Risk-Process-Control/tests/phase-3/fixtures/P1-U19-V01/input.md:8",
+        "/Users/thiendeptrainhat/Documents/Thien's Skills Library/Thien-Risk-Process-Control/tests/phase-3/fixtures/P1-U19-V01/input.md:9"
+      ],
+      "mandatory_or_discretionary": "Validation cho yêu cầu nội bộ; chưa là kết luận vi phạm",
+      "decision_status": "Unresolved"
+    },
+    {
+      "review_status": "Not reviewed",
+      "status": "Draft",
+      "assumptions": [],
+      "analysis_layer": "Target-State",
+      "confidence": "Medium",
+      "recommendation_id": "REC-19-02",
+      "gap_ids": [
+        "GAP-19-01",
+        "GAP-19-02",
+        "GAP-19-03"
+      ],
+      "comparison_ids": [
+        "CMP-19-01",
+        "CMP-19-02"
+      ],
+      "no_change_scenario_ids": [
+        "NCS-19-01"
+      ],
+      "control_objective_ids": [
+        "COBJ-19-01",
+        "COBJ-19-02"
+      ],
+      "risk_ids": [
+        "RSK-19-01",
+        "RSK-19-03"
+      ],
+      "description": "Chuẩn hóa một logical CTL-SHARED-19, quy tắc status/locator, independent channel, điều kiện đủ để thanh toán và exception route; duy trì điểm gọi cần thiết đến khi chứng minh coverage và được phê duyệt.",
+      "source_ids": [
+        "REQ-19",
+        "SOP-19A",
+        "SOP-19B"
+      ],
+      "source_reference": [
+        "/Users/thiendeptrainhat/Documents/Thien's Skills Library/Thien-Risk-Process-Control/tests/phase-3/fixtures/P1-U19-V01/input.md:4",
+        "/Users/thiendeptrainhat/Documents/Thien's Skills Library/Thien-Risk-Process-Control/tests/phase-3/fixtures/P1-U19-V01/input.md:5",
+        "/Users/thiendeptrainhat/Documents/Thien's Skills Library/Thien-Risk-Process-Control/tests/phase-3/fixtures/P1-U19-V01/input.md:6"
+      ],
+      "mandatory_or_discretionary": "Outcome từ REQ-19; cơ chế cụ thể là analyst proposal",
+      "decision_status": "Unresolved"
+    },
+    {
+      "review_status": "Not reviewed",
+      "status": "Draft",
+      "assumptions": [],
+      "analysis_layer": "Target-State",
+      "confidence": "Medium",
+      "recommendation_id": "REC-19-03",
+      "gap_ids": [
+        "GAP-19-04"
+      ],
+      "comparison_ids": [
+        "CMP-19-03"
+      ],
+      "no_change_scenario_ids": [
+        "NCS-19-02"
+      ],
+      "control_objective_ids": [
+        "COBJ-19-03"
+      ],
+      "risk_ids": [
+        "RSK-19-02"
+      ],
+      "description": "Bổ sung specification/evidence của matching, approval, maker–releaser và payment/reconciliation; xác minh vai trò/quyền trên cùng scope/kỳ trước khi kết luận.",
+      "source_ids": [
+        "SOP-19B",
+        "EVD-19C"
+      ],
+      "source_reference": [
+        "/Users/thiendeptrainhat/Documents/Thien's Skills Library/Thien-Risk-Process-Control/tests/phase-3/fixtures/P1-U19-V01/input.md:3",
+        "/Users/thiendeptrainhat/Documents/Thien's Skills Library/Thien-Risk-Process-Control/tests/phase-3/fixtures/P1-U19-V01/input.md:6",
+        "/Users/thiendeptrainhat/Documents/Thien's Skills Library/Thien-Risk-Process-Control/tests/phase-3/fixtures/P1-U19-V01/input.md:9"
+      ],
+      "mandatory_or_discretionary": "Validation và documentation proposal",
+      "decision_status": "Unresolved"
+    },
+    {
+      "review_status": "Not reviewed",
+      "status": "Draft",
+      "assumptions": [],
+      "analysis_layer": "Target-State",
+      "confidence": "Medium",
+      "recommendation_id": "REC-19-04",
+      "gap_ids": [],
+      "design_opportunity_ids": [
+        "OPP-19-01"
+      ],
+      "comparison_ids": [
+        "CMP-19-04"
+      ],
+      "no_change_scenario_ids": [
+        "NCS-19-03"
+      ],
+      "control_objective_ids": [
+        "COBJ-19-04"
+      ],
+      "risk_ids": [
+        "RSK-19-04"
+      ],
+      "description": "Đánh giá dependency chung, backup/substitution và response an toàn; chỉ pilot monitoring/automation sau khi chốt nguồn dữ liệu, rules, exception và governance.",
+      "source_ids": [
+        "SOP-19A",
+        "SOP-19B"
+      ],
+      "source_reference": [
+        "/Users/thiendeptrainhat/Documents/Thien's Skills Library/Thien-Risk-Process-Control/tests/phase-3/fixtures/P1-U19-V01/input.md:5",
+        "/Users/thiendeptrainhat/Documents/Thien's Skills Library/Thien-Risk-Process-Control/tests/phase-3/fixtures/P1-U19-V01/input.md:6"
+      ],
+      "mandatory_or_discretionary": "Discretionary design proposal; không phải baseline compliance",
+      "decision_status": "Unresolved"
+    }
+  ],
+  "actions": [
+    {
+      "review_status": "Not reviewed",
+      "status": "Draft",
+      "assumptions": [],
+      "analysis_layer": "Target-State",
+      "owner": "Not provided",
+      "owner_status": "Not provided",
+      "accountable_executive": "Not provided",
+      "target_date": null,
+      "target_date_basis": "Not provided",
+      "priority": "Not assessed",
+      "priority_basis": "Chỉ sắp theo dependency/giá trị xác minh, không phải risk rating",
+      "budget": "Not provided",
+      "approval_reference": "Not provided",
+      "confidence": "Medium",
+      "action_id": "ACT-19-01",
+      "recommendation_id": "REC-19-01",
+      "gap_ids": [
+        "GAP-19-01",
+        "GAP-19-02"
+      ],
+      "comparison_ids": [
+        "CMP-19-01",
+        "CMP-19-02"
+      ],
+      "no_change_scenario_ids": [
+        "NCS-19-01"
+      ],
+      "description": "Thu và hòa giải original checklist/trace, độc lập kênh, locator, beneficiary/account version, case/invocation IDs, timestamps/timezone/status history, first-payment flag và release/settlement.",
+      "dependencies": [],
+      "suggested_participants": "Chủ nguồn checklist, trace và quy trình thanh toán; danh tính/quyền xác nhận To be validated",
+      "success_measure": "Có kết luận theo thời điểm kèm locator, bảo toàn raw evidence và nêu khác biệt còn mở; không coi chữ ký mới là bằng chứng xác nhận đã có trước lệnh.",
+      "approval_gate": "Người có authority được xác minh phân định nguồn/exception; analyst không tự chọn nguồn thắng.",
+      "closure_evidence_ids": [],
+      "source_ids": [
+        "EVD-19A",
+        "EVD-19B",
+        "EVD-19C",
+        "REQ-19"
+      ],
+      "source_reference": [
+        "/Users/thiendeptrainhat/Documents/Thien's Skills Library/Thien-Risk-Process-Control/tests/phase-3/fixtures/P1-U19-V01/input.md:4",
+        "/Users/thiendeptrainhat/Documents/Thien's Skills Library/Thien-Risk-Process-Control/tests/phase-3/fixtures/P1-U19-V01/input.md:7",
+        "/Users/thiendeptrainhat/Documents/Thien's Skills Library/Thien-Risk-Process-Control/tests/phase-3/fixtures/P1-U19-V01/input.md:8",
+        "/Users/thiendeptrainhat/Documents/Thien's Skills Library/Thien-Risk-Process-Control/tests/phase-3/fixtures/P1-U19-V01/input.md:9"
+      ],
+      "risk_ids": [
+        "RSK-19-01",
+        "RSK-19-03"
+      ],
+      "control_objective_ids": [
+        "COBJ-19-01",
+        "COBJ-19-02"
+      ]
+    },
+    {
+      "review_status": "Not reviewed",
+      "status": "Draft",
+      "assumptions": [],
+      "analysis_layer": "Target-State",
+      "owner": "Not provided",
+      "owner_status": "Not provided",
+      "accountable_executive": "Not provided",
+      "target_date": null,
+      "target_date_basis": "Not provided",
+      "priority": "Not assessed",
+      "priority_basis": "Chỉ sắp theo dependency/giá trị xác minh, không phải risk rating",
+      "budget": "Not provided",
+      "approval_reference": "Not provided",
+      "confidence": "Medium",
+      "action_id": "ACT-19-02",
+      "recommendation_id": "REC-19-02",
+      "gap_ids": [
+        "GAP-19-01",
+        "GAP-19-02",
+        "GAP-19-03"
+      ],
+      "comparison_ids": [
+        "CMP-19-01",
+        "CMP-19-02"
+      ],
+      "no_change_scenario_ids": [
+        "NCS-19-01"
+      ],
+      "description": "Đề xuất specification và hồ sơ xác nhận liên kết dùng chung; thiết kế release eligibility/hold/escalation cho thiếu locator, PENDING hoặc bất nhất; cập nhật SOP/form sau approval.",
+      "dependencies": [
+        "ACT-19-01"
+      ],
+      "suggested_participants": "Process/Control/Data/System/Policy authority theo thực tế; chưa gán owner",
+      "success_measure": "Requirement-to-rule-to-evidence map được phê duyệt; walkthrough/UAT cả đủ điều kiện, pending, thiếu locator, version mismatch, override và fallback có bằng chứng; chưa thực hiện các tests này.",
+      "approval_gate": "Phê duyệt target state, role/authority, policy/SOP, key designation, access và production changes trước triển khai.",
+      "closure_evidence_ids": [],
+      "source_ids": [
+        "REQ-19",
+        "SOP-19A",
+        "SOP-19B"
+      ],
+      "source_reference": [
+        "/Users/thiendeptrainhat/Documents/Thien's Skills Library/Thien-Risk-Process-Control/tests/phase-3/fixtures/P1-U19-V01/input.md:4",
+        "/Users/thiendeptrainhat/Documents/Thien's Skills Library/Thien-Risk-Process-Control/tests/phase-3/fixtures/P1-U19-V01/input.md:5",
+        "/Users/thiendeptrainhat/Documents/Thien's Skills Library/Thien-Risk-Process-Control/tests/phase-3/fixtures/P1-U19-V01/input.md:6"
+      ],
+      "risk_ids": [
+        "RSK-19-01",
+        "RSK-19-03"
+      ],
+      "control_objective_ids": [
+        "COBJ-19-01",
+        "COBJ-19-02"
+      ]
+    },
+    {
+      "review_status": "Not reviewed",
+      "status": "Draft",
+      "assumptions": [],
+      "analysis_layer": "Target-State",
+      "owner": "Not provided",
+      "owner_status": "Not provided",
+      "accountable_executive": "Not provided",
+      "target_date": null,
+      "target_date_basis": "Not provided",
+      "priority": "Not assessed",
+      "priority_basis": "Chỉ sắp theo dependency/giá trị xác minh, không phải risk rating",
+      "budget": "Not provided",
+      "approval_reference": "Not provided",
+      "confidence": "Medium",
+      "action_id": "ACT-19-03",
+      "recommendation_id": "REC-19-03",
+      "gap_ids": [
+        "GAP-19-04"
+      ],
+      "comparison_ids": [
+        "CMP-19-03"
+      ],
+      "no_change_scenario_ids": [
+        "NCS-19-02"
+      ],
+      "description": "Kiểm chứng hồ sơ nghĩa vụ/đối chiếu, phê duyệt, user/role/effective access và lập–phát; đối chiếu đến bank/ledger result nếu được cấp nguồn.",
+      "dependencies": [],
+      "suggested_participants": "Chủ quy trình, hồ sơ và quyền truy cập; danh tính To be validated",
+      "success_measure": "Phân biệt design/evidence/transaction observations; population và kỳ được xác định trước mọi mở rộng kiểm thử.",
+      "approval_gate": "Assurance owner có thẩm quyền duyệt objective, methodology, population, sampling/execution và mọi kết luận OE.",
+      "closure_evidence_ids": [],
+      "source_ids": [
+        "SOP-19B",
+        "EVD-19C"
+      ],
+      "source_reference": [
+        "/Users/thiendeptrainhat/Documents/Thien's Skills Library/Thien-Risk-Process-Control/tests/phase-3/fixtures/P1-U19-V01/input.md:3",
+        "/Users/thiendeptrainhat/Documents/Thien's Skills Library/Thien-Risk-Process-Control/tests/phase-3/fixtures/P1-U19-V01/input.md:6",
+        "/Users/thiendeptrainhat/Documents/Thien's Skills Library/Thien-Risk-Process-Control/tests/phase-3/fixtures/P1-U19-V01/input.md:9"
+      ],
+      "risk_ids": [
+        "RSK-19-02"
+      ],
+      "control_objective_ids": [
+        "COBJ-19-03"
+      ]
+    },
+    {
+      "review_status": "Not reviewed",
+      "status": "Draft",
+      "assumptions": [],
+      "analysis_layer": "Target-State",
+      "owner": "Not provided",
+      "owner_status": "Not provided",
+      "accountable_executive": "Not provided",
+      "target_date": null,
+      "target_date_basis": "Not provided",
+      "priority": "Not assessed",
+      "priority_basis": "Chỉ sắp theo dependency/giá trị xác minh, không phải risk rating",
+      "budget": "Not provided",
+      "approval_reference": "Not provided",
+      "confidence": "Medium",
+      "action_id": "ACT-19-04",
+      "recommendation_id": "REC-19-04",
+      "gap_ids": [],
+      "design_opportunity_ids": [
+        "OPP-19-01"
+      ],
+      "comparison_ids": [
+        "CMP-19-04"
+      ],
+      "no_change_scenario_ids": [
+        "NCS-19-03"
+      ],
+      "description": "Xác minh common-mode dependency và phương án thay thế có authority/capacity; lập business case các option; pilot CTL-19-MON khi dữ liệu/rules đạt điều kiện.",
+      "dependencies": [
+        "ACT-19-01",
+        "ACT-19-02"
+      ],
+      "suggested_participants": "Chủ dịch vụ và hai quy trình; chưa có owner được xác nhận",
+      "success_measure": "Dependency/substitute evidence được ghi nhận; monitoring/fallback có route xử lý và evidence theo design được duyệt; không tự kết luận SPOF.",
+      "approval_gate": "Owner/authority phê duyệt option, resources, residual-risk acceptance và thay đổi hệ thống.",
+      "closure_evidence_ids": [],
+      "source_ids": [
+        "SOP-19A",
+        "SOP-19B"
+      ],
+      "source_reference": [
+        "/Users/thiendeptrainhat/Documents/Thien's Skills Library/Thien-Risk-Process-Control/tests/phase-3/fixtures/P1-U19-V01/input.md:5",
+        "/Users/thiendeptrainhat/Documents/Thien's Skills Library/Thien-Risk-Process-Control/tests/phase-3/fixtures/P1-U19-V01/input.md:6"
+      ],
+      "risk_ids": [
+        "RSK-19-04"
+      ],
+      "control_objective_ids": [
+        "COBJ-19-04"
+      ]
+    }
+  ],
+  "test_attributes": [
+    {
+      "review_status": "Not reviewed",
+      "status": "Draft",
+      "assumptions": [],
+      "analysis_layer": "Target-State",
+      "sampling_consideration": "Không chốt sample size; assurance owner cần population, kỳ, phương pháp và reliance strategy",
+      "confidence": "Medium",
+      "test_attribute_id": "TST-19-01",
+      "control_ids": [
+        "CTL-SHARED-19"
+      ],
+      "comparison_ids": [
+        "CMP-19-01",
+        "CMP-19-02"
+      ],
+      "description": "Occurrence/independence/timeliness/evidence: xác minh correct beneficiary/account version, kênh độc lập, locator truy xuất được và confirmation trước first-payment event.",
+      "evidence_needed": [
+        "Original confirmation source",
+        "Change record",
+        "First-payment marker",
+        "Release/settlement history"
+      ],
+      "execution_status": "Not run"
+    },
+    {
+      "review_status": "Not reviewed",
+      "status": "Draft",
+      "assumptions": [],
+      "analysis_layer": "Target-State",
+      "sampling_consideration": "Không chốt sample size; assurance owner cần population, kỳ, phương pháp và reliance strategy",
+      "confidence": "Medium",
+      "test_attribute_id": "TST-19-02",
+      "control_ids": [
+        "CTL-SHARED-19",
+        "CTL-19-MON"
+      ],
+      "comparison_ids": [
+        "CMP-19-01",
+        "CMP-19-02",
+        "CMP-19-04"
+      ],
+      "description": "Data reliability/consistency: hòa giải raw status, event semantics, time zone, completeness và invocation/account-version keys; rà exception/override authority.",
+      "evidence_needed": [
+        "Service history",
+        "Checklist locator",
+        "Field/status definitions",
+        "Exception history"
+      ],
+      "execution_status": "Not run"
+    },
+    {
+      "review_status": "Not reviewed",
+      "status": "Draft",
+      "assumptions": [],
+      "analysis_layer": "Target-State",
+      "sampling_consideration": "Không chốt sample size; assurance owner cần population, kỳ, phương pháp và reliance strategy",
+      "confidence": "Medium",
+      "test_attribute_id": "TST-19-03",
+      "control_ids": [
+        "CTL-19-MATCH",
+        "CTL-19-SOD"
+      ],
+      "comparison_ids": [
+        "CMP-19-03"
+      ],
+      "description": "Accuracy/authorization/independence: match chứng từ, approval basis, distinct actual users, effective access tại ngày giao dịch và payment/reconciliation evidence.",
+      "evidence_needed": [
+        "PO/receiving/invoice",
+        "Approval and delegation",
+        "User/role/access history",
+        "Release/bank/ledger records"
+      ],
+      "execution_status": "Not run"
+    }
+  ],
+  "metric_proposals": [
+    {
+      "review_status": "Not reviewed",
+      "status": "Draft",
+      "assumptions": [],
+      "analysis_layer": "Target-State",
+      "owner": "Not provided",
+      "frequency": "To be validated",
+      "target": "Not provided",
+      "thresholds": "Not provided",
+      "escalation": "Authority/route To be validated",
+      "actual_value": null,
+      "limitations": [
+        "Chưa có population đủ để tính; denominator rỗng/không rõ phải giữ unavailable, không đặt bằng 0.",
+        "Một case không cho tỷ lệ sai phạm population."
+      ],
+      "data_quality_check": "Đối soát completeness, uniqueness, khóa phiên bản/case, event semantics và timezone với các nguồn đầy đủ.",
+      "confidence": "Medium",
+      "metric_id": "MET-19-01",
+      "metric_type": "KCI",
+      "title": "Coverage xác nhận độc lập có locator trước lần thanh toán đầu tiên",
+      "formula": "Số first-payment cases sau đổi tài khoản có xác nhận độc lập đúng phiên bản và locator truy xuất được trước mốc yêu cầu / tổng first-payment cases sau đổi tài khoản trong kỳ",
+      "unit": "Tỷ lệ",
+      "population": "First-payment cases sau đổi tài khoản; chưa cung cấp",
+      "control_ids": [
+        "CTL-SHARED-19"
+      ],
+      "risk_ids": [
+        "RSK-19-01",
+        "RSK-19-03"
+      ],
+      "source_data_needed": "Change, confirmation và payment event population được đối soát",
+      "response": "Investigate hồ sơ thiếu/không đúng thời điểm; authority phê duyệt cách xử lý",
+      "leading_or_lagging": "Lagging coverage indicator"
+    },
+    {
+      "review_status": "Not reviewed",
+      "status": "Draft",
+      "assumptions": [],
+      "analysis_layer": "Target-State",
+      "owner": "Not provided",
+      "frequency": "To be validated",
+      "target": "Not provided",
+      "thresholds": "Not provided",
+      "escalation": "Authority/route To be validated",
+      "actual_value": null,
+      "limitations": [
+        "Chưa có population đủ để tính; denominator rỗng/không rõ phải giữ unavailable, không đặt bằng 0.",
+        "Một case không cho tỷ lệ sai phạm population."
+      ],
+      "data_quality_check": "Đối soát completeness, uniqueness, khóa phiên bản/case, event semantics và timezone với các nguồn đầy đủ.",
+      "confidence": "Medium",
+      "metric_id": "MET-19-02",
+      "metric_type": "KRI",
+      "title": "Lệnh phát khi trạng thái xác nhận bất nhất/chưa hoàn tất",
+      "formula": "Đếm lệnh thuộc scope có raw status bất nhất hoặc PENDING tại mốc kiểm tra được định nghĩa",
+      "unit": "Số lệnh",
+      "population": "Lệnh thuộc scope, kỳ và status semantics được phê duyệt; chưa cung cấp",
+      "control_ids": [
+        "CTL-19-MON"
+      ],
+      "risk_ids": [
+        "RSK-19-01",
+        "RSK-19-03"
+      ],
+      "source_data_needed": "Complete release logs + confirmation history + account-version/invocation joins",
+      "response": "Triage từng indicator; không tự coi mọi exception là sai phạm",
+      "leading_or_lagging": "Lagging signal, leading cho giao dịch tương lai"
+    },
+    {
+      "review_status": "Not reviewed",
+      "status": "Draft",
+      "assumptions": [],
+      "analysis_layer": "Target-State",
+      "owner": "Not provided",
+      "frequency": "To be validated",
+      "target": "Not provided",
+      "thresholds": "Not provided",
+      "escalation": "Authority/route To be validated",
+      "actual_value": null,
+      "limitations": [
+        "Chưa có population đủ để tính; denominator rỗng/không rõ phải giữ unavailable, không đặt bằng 0.",
+        "Một case không cho tỷ lệ sai phạm population."
+      ],
+      "data_quality_check": "Đối soát completeness, uniqueness, khóa phiên bản/case, event semantics và timezone với các nguồn đầy đủ.",
+      "confidence": "Medium",
+      "metric_id": "MET-19-03",
+      "metric_type": "KPI",
+      "title": "Thời gian xử lý yêu cầu đổi tài khoản đến đủ điều kiện sử dụng",
+      "formula": "Thời điểm đủ điều kiện theo rule được duyệt trừ thời điểm nhận yêu cầu, theo từng case; cách tổng hợp To be validated",
+      "unit": "Thời gian; đơn vị To be validated",
+      "population": "Yêu cầu đổi tài khoản trong kỳ; chưa cung cấp",
+      "control_ids": [
+        "CTL-SHARED-19"
+      ],
+      "risk_ids": [
+        "RSK-19-04"
+      ],
+      "source_data_needed": "Change request và confirmation timestamps đã kiểm tra",
+      "response": "Xem queue/rework và capacity; không bỏ control để đạt KPI",
+      "leading_or_lagging": "Lagging performance indicator"
+    }
+  ],
+  "unresolved_items": [
+    {
+      "id": "U-19-01",
+      "issue": "Final confirmation status của B-19 và chronology chính xác",
+      "blocking_claim": "Không kết luận đã/ chưa xác nhận trước payment, intentional bypass hoặc control failed",
+      "action_ids": [
+        "ACT-19-01"
+      ]
+    },
+    {
+      "id": "U-19-02",
+      "issue": "Locator và evidence về kênh độc lập; account version/first-payment/settlement",
+      "blocking_claim": "Không kết luận hồ sơ không tồn tại, TX-19 trả sai hoặc là lần thanh toán đầu tiên",
+      "action_ids": [
+        "ACT-19-01"
+      ]
+    },
+    {
+      "id": "U-19-03",
+      "issue": "Version/effective status/authority của source tại ngày giao dịch, system design và exception rules",
+      "blocking_claim": "Không kết luận compliance lịch sử hoặc thiết kế đã enforced",
+      "action_ids": [
+        "ACT-19-02"
+      ]
+    },
+    {
+      "id": "U-19-04",
+      "issue": "Risk methodology, key designation approval, owner/budget/due dates",
+      "blocking_claim": "Không chấm risk/key chính thức, phân công hoặc đặt hạn cải tiến",
+      "action_ids": [
+        "ACT-19-02",
+        "ACT-19-04"
+      ]
+    },
+    {
+      "id": "U-19-05",
+      "issue": "Full population và reliability; matching/SoD/payment evidence; backup/capacity/tolerance",
+      "blocking_claim": "Không kết luận OE toàn kỳ, actual SoD conflict hoặc SPOF",
+      "action_ids": [
+        "ACT-19-03",
+        "ACT-19-04"
+      ]
+    }
+  ],
+  "relationships": [
+    {
+      "relationship_id": "REL-19-001",
+      "from_id": "PROC-19A",
+      "relationship_type": "supports_objective",
+      "to_id": "OBJ-19A",
+      "source_reference": [
+        "/Users/thiendeptrainhat/Documents/Thien's Skills Library/Thien-Risk-Process-Control/tests/phase-3/fixtures/P1-U19-V01/input.md:2",
+        "/Users/thiendeptrainhat/Documents/Thien's Skills Library/Thien-Risk-Process-Control/tests/phase-3/fixtures/P1-U19-V01/input.md:3",
+        "/Users/thiendeptrainhat/Documents/Thien's Skills Library/Thien-Risk-Process-Control/tests/phase-3/fixtures/P1-U19-V01/input.md:5"
+      ],
+      "analysis_layer": "As-Documented",
+      "review_status": "Not reviewed"
+    },
+    {
+      "relationship_id": "REL-19-002",
+      "from_id": "PROC-19A",
+      "relationship_type": "supports_objective",
+      "to_id": "OBJ-19B",
+      "source_reference": [
+        "/Users/thiendeptrainhat/Documents/Thien's Skills Library/Thien-Risk-Process-Control/tests/phase-3/fixtures/P1-U19-V01/input.md:2",
+        "/Users/thiendeptrainhat/Documents/Thien's Skills Library/Thien-Risk-Process-Control/tests/phase-3/fixtures/P1-U19-V01/input.md:3",
+        "/Users/thiendeptrainhat/Documents/Thien's Skills Library/Thien-Risk-Process-Control/tests/phase-3/fixtures/P1-U19-V01/input.md:5"
+      ],
+      "analysis_layer": "As-Documented",
+      "review_status": "Not reviewed"
+    },
+    {
+      "relationship_id": "REL-19-003",
+      "from_id": "PROC-19B",
+      "relationship_type": "supports_objective",
+      "to_id": "OBJ-19A",
+      "source_reference": [
+        "/Users/thiendeptrainhat/Documents/Thien's Skills Library/Thien-Risk-Process-Control/tests/phase-3/fixtures/P1-U19-V01/input.md:2",
+        "/Users/thiendeptrainhat/Documents/Thien's Skills Library/Thien-Risk-Process-Control/tests/phase-3/fixtures/P1-U19-V01/input.md:3",
+        "/Users/thiendeptrainhat/Documents/Thien's Skills Library/Thien-Risk-Process-Control/tests/phase-3/fixtures/P1-U19-V01/input.md:6"
+      ],
+      "analysis_layer": "As-Documented",
+      "review_status": "Not reviewed"
+    },
+    {
+      "relationship_id": "REL-19-004",
+      "from_id": "PROC-19B",
+      "relationship_type": "supports_objective",
+      "to_id": "OBJ-19B",
+      "source_reference": [
+        "/Users/thiendeptrainhat/Documents/Thien's Skills Library/Thien-Risk-Process-Control/tests/phase-3/fixtures/P1-U19-V01/input.md:2",
+        "/Users/thiendeptrainhat/Documents/Thien's Skills Library/Thien-Risk-Process-Control/tests/phase-3/fixtures/P1-U19-V01/input.md:3",
+        "/Users/thiendeptrainhat/Documents/Thien's Skills Library/Thien-Risk-Process-Control/tests/phase-3/fixtures/P1-U19-V01/input.md:6"
+      ],
+      "analysis_layer": "As-Documented",
+      "review_status": "Not reviewed"
+    },
+    {
+      "relationship_id": "REL-19-005",
+      "from_id": "STEP-19A-01",
+      "relationship_type": "part_of",
+      "to_id": "PROC-19A",
+      "source_reference": "/Users/thiendeptrainhat/Documents/Thien's Skills Library/Thien-Risk-Process-Control/tests/phase-3/fixtures/P1-U19-V01/input.md:3",
+      "analysis_layer": "As-Documented",
+      "review_status": "Not reviewed"
+    },
+    {
+      "relationship_id": "REL-19-006",
+      "from_id": "STEP-19A-02",
+      "relationship_type": "part_of",
+      "to_id": "PROC-19A",
+      "source_reference": "/Users/thiendeptrainhat/Documents/Thien's Skills Library/Thien-Risk-Process-Control/tests/phase-3/fixtures/P1-U19-V01/input.md:5",
+      "analysis_layer": "As-Documented",
+      "review_status": "Not reviewed"
+    },
+    {
+      "relationship_id": "REL-19-007",
+      "from_id": "CTL-SHARED-19",
+      "relationship_type": "located_at",
+      "to_id": "STEP-19A-02",
+      "source_reference": "/Users/thiendeptrainhat/Documents/Thien's Skills Library/Thien-Risk-Process-Control/tests/phase-3/fixtures/P1-U19-V01/input.md:5",
+      "analysis_layer": "As-Documented",
+      "review_status": "Not reviewed"
+    },
+    {
+      "relationship_id": "REL-19-008",
+      "from_id": "STEP-19A-03",
+      "relationship_type": "part_of",
+      "to_id": "PROC-19A",
+      "source_reference": "/Users/thiendeptrainhat/Documents/Thien's Skills Library/Thien-Risk-Process-Control/tests/phase-3/fixtures/P1-U19-V01/input.md:3",
+      "analysis_layer": "As-Documented",
+      "review_status": "Not reviewed"
+    },
+    {
+      "relationship_id": "REL-19-009",
+      "from_id": "STEP-19B-01",
+      "relationship_type": "part_of",
+      "to_id": "PROC-19B",
+      "source_reference": "/Users/thiendeptrainhat/Documents/Thien's Skills Library/Thien-Risk-Process-Control/tests/phase-3/fixtures/P1-U19-V01/input.md:3",
+      "analysis_layer": "As-Documented",
+      "review_status": "Not reviewed"
+    },
+    {
+      "relationship_id": "REL-19-010",
+      "from_id": "STEP-19B-02",
+      "relationship_type": "part_of",
+      "to_id": "PROC-19B",
+      "source_reference": "/Users/thiendeptrainhat/Documents/Thien's Skills Library/Thien-Risk-Process-Control/tests/phase-3/fixtures/P1-U19-V01/input.md:6",
+      "analysis_layer": "As-Documented",
+      "review_status": "Not reviewed"
+    },
+    {
+      "relationship_id": "REL-19-011",
+      "from_id": "CTL-19-MATCH",
+      "relationship_type": "located_at",
+      "to_id": "STEP-19B-02",
+      "source_reference": "/Users/thiendeptrainhat/Documents/Thien's Skills Library/Thien-Risk-Process-Control/tests/phase-3/fixtures/P1-U19-V01/input.md:6",
+      "analysis_layer": "As-Documented",
+      "review_status": "Not reviewed"
+    },
+    {
+      "relationship_id": "REL-19-012",
+      "from_id": "STEP-19B-03",
+      "relationship_type": "part_of",
+      "to_id": "PROC-19B",
+      "source_reference": "/Users/thiendeptrainhat/Documents/Thien's Skills Library/Thien-Risk-Process-Control/tests/phase-3/fixtures/P1-U19-V01/input.md:6",
+      "analysis_layer": "As-Documented",
+      "review_status": "Not reviewed"
+    },
+    {
+      "relationship_id": "REL-19-013",
+      "from_id": "CTL-19-SOD",
+      "relationship_type": "located_at",
+      "to_id": "STEP-19B-03",
+      "source_reference": "/Users/thiendeptrainhat/Documents/Thien's Skills Library/Thien-Risk-Process-Control/tests/phase-3/fixtures/P1-U19-V01/input.md:6",
+      "analysis_layer": "As-Documented",
+      "review_status": "Not reviewed"
+    },
+    {
+      "relationship_id": "REL-19-014",
+      "from_id": "STEP-19B-04",
+      "relationship_type": "part_of",
+      "to_id": "PROC-19B",
+      "source_reference": "/Users/thiendeptrainhat/Documents/Thien's Skills Library/Thien-Risk-Process-Control/tests/phase-3/fixtures/P1-U19-V01/input.md:6",
+      "analysis_layer": "As-Documented",
+      "review_status": "Not reviewed"
+    },
+    {
+      "relationship_id": "REL-19-015",
+      "from_id": "CTL-SHARED-19",
+      "relationship_type": "located_at",
+      "to_id": "STEP-19B-04",
+      "source_reference": "/Users/thiendeptrainhat/Documents/Thien's Skills Library/Thien-Risk-Process-Control/tests/phase-3/fixtures/P1-U19-V01/input.md:6",
+      "analysis_layer": "As-Documented",
+      "review_status": "Not reviewed"
+    },
+    {
+      "relationship_id": "REL-19-016",
+      "from_id": "STEP-19B-05",
+      "relationship_type": "part_of",
+      "to_id": "PROC-19B",
+      "source_reference": "/Users/thiendeptrainhat/Documents/Thien's Skills Library/Thien-Risk-Process-Control/tests/phase-3/fixtures/P1-U19-V01/input.md:6",
+      "analysis_layer": "As-Documented",
+      "review_status": "Not reviewed"
+    },
+    {
+      "relationship_id": "REL-19-017",
+      "from_id": "CTL-19-SOD",
+      "relationship_type": "located_at",
+      "to_id": "STEP-19B-05",
+      "source_reference": "/Users/thiendeptrainhat/Documents/Thien's Skills Library/Thien-Risk-Process-Control/tests/phase-3/fixtures/P1-U19-V01/input.md:6",
+      "analysis_layer": "As-Documented",
+      "review_status": "Not reviewed"
+    },
+    {
+      "relationship_id": "REL-19-018",
+      "from_id": "STEP-19B-06",
+      "relationship_type": "part_of",
+      "to_id": "PROC-19B",
+      "source_reference": "/Users/thiendeptrainhat/Documents/Thien's Skills Library/Thien-Risk-Process-Control/tests/phase-3/fixtures/P1-U19-V01/input.md:3",
+      "analysis_layer": "As-Documented",
+      "review_status": "Not reviewed"
+    },
+    {
+      "relationship_id": "REL-19-019",
+      "from_id": "RSK-19-01",
+      "relationship_type": "threatens",
+      "to_id": "OBJ-19A",
+      "source_reference": [
+        "/Users/thiendeptrainhat/Documents/Thien's Skills Library/Thien-Risk-Process-Control/tests/phase-3/fixtures/P1-U19-V01/input.md:4",
+        "/Users/thiendeptrainhat/Documents/Thien's Skills Library/Thien-Risk-Process-Control/tests/phase-3/fixtures/P1-U19-V01/input.md:5",
+        "/Users/thiendeptrainhat/Documents/Thien's Skills Library/Thien-Risk-Process-Control/tests/phase-3/fixtures/P1-U19-V01/input.md:6",
+        "/Users/thiendeptrainhat/Documents/Thien's Skills Library/Thien-Risk-Process-Control/tests/phase-3/fixtures/P1-U19-V01/input.md:7",
+        "/Users/thiendeptrainhat/Documents/Thien's Skills Library/Thien-Risk-Process-Control/tests/phase-3/fixtures/P1-U19-V01/input.md:8",
+        "/Users/thiendeptrainhat/Documents/Thien's Skills Library/Thien-Risk-Process-Control/tests/phase-3/fixtures/P1-U19-V01/input.md:9"
+      ],
+      "analysis_layer": null,
+      "review_status": "Not reviewed"
+    },
+    {
+      "relationship_id": "REL-19-020",
+      "from_id": "RSK-19-01",
+      "relationship_type": "threatens",
+      "to_id": "OBJ-19B",
+      "source_reference": [
+        "/Users/thiendeptrainhat/Documents/Thien's Skills Library/Thien-Risk-Process-Control/tests/phase-3/fixtures/P1-U19-V01/input.md:4",
+        "/Users/thiendeptrainhat/Documents/Thien's Skills Library/Thien-Risk-Process-Control/tests/phase-3/fixtures/P1-U19-V01/input.md:5",
+        "/Users/thiendeptrainhat/Documents/Thien's Skills Library/Thien-Risk-Process-Control/tests/phase-3/fixtures/P1-U19-V01/input.md:6",
+        "/Users/thiendeptrainhat/Documents/Thien's Skills Library/Thien-Risk-Process-Control/tests/phase-3/fixtures/P1-U19-V01/input.md:7",
+        "/Users/thiendeptrainhat/Documents/Thien's Skills Library/Thien-Risk-Process-Control/tests/phase-3/fixtures/P1-U19-V01/input.md:8",
+        "/Users/thiendeptrainhat/Documents/Thien's Skills Library/Thien-Risk-Process-Control/tests/phase-3/fixtures/P1-U19-V01/input.md:9"
+      ],
+      "analysis_layer": null,
+      "review_status": "Not reviewed"
+    },
+    {
+      "relationship_id": "REL-19-021",
+      "from_id": "RSK-19-01",
+      "relationship_type": "arises_at_or_affects",
+      "to_id": "STEP-19A-02",
+      "source_reference": [
+        "/Users/thiendeptrainhat/Documents/Thien's Skills Library/Thien-Risk-Process-Control/tests/phase-3/fixtures/P1-U19-V01/input.md:4",
+        "/Users/thiendeptrainhat/Documents/Thien's Skills Library/Thien-Risk-Process-Control/tests/phase-3/fixtures/P1-U19-V01/input.md:5",
+        "/Users/thiendeptrainhat/Documents/Thien's Skills Library/Thien-Risk-Process-Control/tests/phase-3/fixtures/P1-U19-V01/input.md:6",
+        "/Users/thiendeptrainhat/Documents/Thien's Skills Library/Thien-Risk-Process-Control/tests/phase-3/fixtures/P1-U19-V01/input.md:7",
+        "/Users/thiendeptrainhat/Documents/Thien's Skills Library/Thien-Risk-Process-Control/tests/phase-3/fixtures/P1-U19-V01/input.md:8",
+        "/Users/thiendeptrainhat/Documents/Thien's Skills Library/Thien-Risk-Process-Control/tests/phase-3/fixtures/P1-U19-V01/input.md:9"
+      ],
+      "analysis_layer": null,
+      "review_status": "Not reviewed"
+    },
+    {
+      "relationship_id": "REL-19-022",
+      "from_id": "RSK-19-01",
+      "relationship_type": "arises_at_or_affects",
+      "to_id": "STEP-19B-04",
+      "source_reference": [
+        "/Users/thiendeptrainhat/Documents/Thien's Skills Library/Thien-Risk-Process-Control/tests/phase-3/fixtures/P1-U19-V01/input.md:4",
+        "/Users/thiendeptrainhat/Documents/Thien's Skills Library/Thien-Risk-Process-Control/tests/phase-3/fixtures/P1-U19-V01/input.md:5",
+        "/Users/thiendeptrainhat/Documents/Thien's Skills Library/Thien-Risk-Process-Control/tests/phase-3/fixtures/P1-U19-V01/input.md:6",
+        "/Users/thiendeptrainhat/Documents/Thien's Skills Library/Thien-Risk-Process-Control/tests/phase-3/fixtures/P1-U19-V01/input.md:7",
+        "/Users/thiendeptrainhat/Documents/Thien's Skills Library/Thien-Risk-Process-Control/tests/phase-3/fixtures/P1-U19-V01/input.md:8",
+        "/Users/thiendeptrainhat/Documents/Thien's Skills Library/Thien-Risk-Process-Control/tests/phase-3/fixtures/P1-U19-V01/input.md:9"
+      ],
+      "analysis_layer": null,
+      "review_status": "Not reviewed"
+    },
+    {
+      "relationship_id": "REL-19-023",
+      "from_id": "RSK-19-01",
+      "relationship_type": "arises_at_or_affects",
+      "to_id": "STEP-19B-05",
+      "source_reference": [
+        "/Users/thiendeptrainhat/Documents/Thien's Skills Library/Thien-Risk-Process-Control/tests/phase-3/fixtures/P1-U19-V01/input.md:4",
+        "/Users/thiendeptrainhat/Documents/Thien's Skills Library/Thien-Risk-Process-Control/tests/phase-3/fixtures/P1-U19-V01/input.md:5",
+        "/Users/thiendeptrainhat/Documents/Thien's Skills Library/Thien-Risk-Process-Control/tests/phase-3/fixtures/P1-U19-V01/input.md:6",
+        "/Users/thiendeptrainhat/Documents/Thien's Skills Library/Thien-Risk-Process-Control/tests/phase-3/fixtures/P1-U19-V01/input.md:7",
+        "/Users/thiendeptrainhat/Documents/Thien's Skills Library/Thien-Risk-Process-Control/tests/phase-3/fixtures/P1-U19-V01/input.md:8",
+        "/Users/thiendeptrainhat/Documents/Thien's Skills Library/Thien-Risk-Process-Control/tests/phase-3/fixtures/P1-U19-V01/input.md:9"
+      ],
+      "analysis_layer": null,
+      "review_status": "Not reviewed"
+    },
+    {
+      "relationship_id": "REL-19-024",
+      "from_id": "RSK-19-02",
+      "relationship_type": "threatens",
+      "to_id": "OBJ-19B",
+      "source_reference": [
+        "/Users/thiendeptrainhat/Documents/Thien's Skills Library/Thien-Risk-Process-Control/tests/phase-3/fixtures/P1-U19-V01/input.md:2",
+        "/Users/thiendeptrainhat/Documents/Thien's Skills Library/Thien-Risk-Process-Control/tests/phase-3/fixtures/P1-U19-V01/input.md:3",
+        "/Users/thiendeptrainhat/Documents/Thien's Skills Library/Thien-Risk-Process-Control/tests/phase-3/fixtures/P1-U19-V01/input.md:6"
+      ],
+      "analysis_layer": null,
+      "review_status": "Not reviewed"
+    },
+    {
+      "relationship_id": "REL-19-025",
+      "from_id": "RSK-19-02",
+      "relationship_type": "arises_at_or_affects",
+      "to_id": "STEP-19B-01",
+      "source_reference": [
+        "/Users/thiendeptrainhat/Documents/Thien's Skills Library/Thien-Risk-Process-Control/tests/phase-3/fixtures/P1-U19-V01/input.md:2",
+        "/Users/thiendeptrainhat/Documents/Thien's Skills Library/Thien-Risk-Process-Control/tests/phase-3/fixtures/P1-U19-V01/input.md:3",
+        "/Users/thiendeptrainhat/Documents/Thien's Skills Library/Thien-Risk-Process-Control/tests/phase-3/fixtures/P1-U19-V01/input.md:6"
+      ],
+      "analysis_layer": null,
+      "review_status": "Not reviewed"
+    },
+    {
+      "relationship_id": "REL-19-026",
+      "from_id": "RSK-19-02",
+      "relationship_type": "arises_at_or_affects",
+      "to_id": "STEP-19B-02",
+      "source_reference": [
+        "/Users/thiendeptrainhat/Documents/Thien's Skills Library/Thien-Risk-Process-Control/tests/phase-3/fixtures/P1-U19-V01/input.md:2",
+        "/Users/thiendeptrainhat/Documents/Thien's Skills Library/Thien-Risk-Process-Control/tests/phase-3/fixtures/P1-U19-V01/input.md:3",
+        "/Users/thiendeptrainhat/Documents/Thien's Skills Library/Thien-Risk-Process-Control/tests/phase-3/fixtures/P1-U19-V01/input.md:6"
+      ],
+      "analysis_layer": null,
+      "review_status": "Not reviewed"
+    },
+    {
+      "relationship_id": "REL-19-027",
+      "from_id": "RSK-19-02",
+      "relationship_type": "arises_at_or_affects",
+      "to_id": "STEP-19B-03",
+      "source_reference": [
+        "/Users/thiendeptrainhat/Documents/Thien's Skills Library/Thien-Risk-Process-Control/tests/phase-3/fixtures/P1-U19-V01/input.md:2",
+        "/Users/thiendeptrainhat/Documents/Thien's Skills Library/Thien-Risk-Process-Control/tests/phase-3/fixtures/P1-U19-V01/input.md:3",
+        "/Users/thiendeptrainhat/Documents/Thien's Skills Library/Thien-Risk-Process-Control/tests/phase-3/fixtures/P1-U19-V01/input.md:6"
+      ],
+      "analysis_layer": null,
+      "review_status": "Not reviewed"
+    },
+    {
+      "relationship_id": "REL-19-028",
+      "from_id": "RSK-19-02",
+      "relationship_type": "arises_at_or_affects",
+      "to_id": "STEP-19B-05",
+      "source_reference": [
+        "/Users/thiendeptrainhat/Documents/Thien's Skills Library/Thien-Risk-Process-Control/tests/phase-3/fixtures/P1-U19-V01/input.md:2",
+        "/Users/thiendeptrainhat/Documents/Thien's Skills Library/Thien-Risk-Process-Control/tests/phase-3/fixtures/P1-U19-V01/input.md:3",
+        "/Users/thiendeptrainhat/Documents/Thien's Skills Library/Thien-Risk-Process-Control/tests/phase-3/fixtures/P1-U19-V01/input.md:6"
+      ],
+      "analysis_layer": null,
+      "review_status": "Not reviewed"
+    },
+    {
+      "relationship_id": "REL-19-029",
+      "from_id": "RSK-19-02",
+      "relationship_type": "arises_at_or_affects",
+      "to_id": "STEP-19B-06",
+      "source_reference": [
+        "/Users/thiendeptrainhat/Documents/Thien's Skills Library/Thien-Risk-Process-Control/tests/phase-3/fixtures/P1-U19-V01/input.md:2",
+        "/Users/thiendeptrainhat/Documents/Thien's Skills Library/Thien-Risk-Process-Control/tests/phase-3/fixtures/P1-U19-V01/input.md:3",
+        "/Users/thiendeptrainhat/Documents/Thien's Skills Library/Thien-Risk-Process-Control/tests/phase-3/fixtures/P1-U19-V01/input.md:6"
+      ],
+      "analysis_layer": null,
+      "review_status": "Not reviewed"
+    },
+    {
+      "relationship_id": "REL-19-030",
+      "from_id": "RSK-19-03",
+      "relationship_type": "threatens",
+      "to_id": "OBJ-19A",
+      "source_reference": [
+        "/Users/thiendeptrainhat/Documents/Thien's Skills Library/Thien-Risk-Process-Control/tests/phase-3/fixtures/P1-U19-V01/input.md:4",
+        "/Users/thiendeptrainhat/Documents/Thien's Skills Library/Thien-Risk-Process-Control/tests/phase-3/fixtures/P1-U19-V01/input.md:7",
+        "/Users/thiendeptrainhat/Documents/Thien's Skills Library/Thien-Risk-Process-Control/tests/phase-3/fixtures/P1-U19-V01/input.md:8"
+      ],
+      "analysis_layer": null,
+      "review_status": "Not reviewed"
+    },
+    {
+      "relationship_id": "REL-19-031",
+      "from_id": "RSK-19-03",
+      "relationship_type": "threatens",
+      "to_id": "OBJ-19B",
+      "source_reference": [
+        "/Users/thiendeptrainhat/Documents/Thien's Skills Library/Thien-Risk-Process-Control/tests/phase-3/fixtures/P1-U19-V01/input.md:4",
+        "/Users/thiendeptrainhat/Documents/Thien's Skills Library/Thien-Risk-Process-Control/tests/phase-3/fixtures/P1-U19-V01/input.md:7",
+        "/Users/thiendeptrainhat/Documents/Thien's Skills Library/Thien-Risk-Process-Control/tests/phase-3/fixtures/P1-U19-V01/input.md:8"
+      ],
+      "analysis_layer": null,
+      "review_status": "Not reviewed"
+    },
+    {
+      "relationship_id": "REL-19-032",
+      "from_id": "RSK-19-03",
+      "relationship_type": "arises_at_or_affects",
+      "to_id": "STEP-19A-02",
+      "source_reference": [
+        "/Users/thiendeptrainhat/Documents/Thien's Skills Library/Thien-Risk-Process-Control/tests/phase-3/fixtures/P1-U19-V01/input.md:4",
+        "/Users/thiendeptrainhat/Documents/Thien's Skills Library/Thien-Risk-Process-Control/tests/phase-3/fixtures/P1-U19-V01/input.md:7",
+        "/Users/thiendeptrainhat/Documents/Thien's Skills Library/Thien-Risk-Process-Control/tests/phase-3/fixtures/P1-U19-V01/input.md:8"
+      ],
+      "analysis_layer": null,
+      "review_status": "Not reviewed"
+    },
+    {
+      "relationship_id": "REL-19-033",
+      "from_id": "RSK-19-03",
+      "relationship_type": "arises_at_or_affects",
+      "to_id": "STEP-19B-04",
+      "source_reference": [
+        "/Users/thiendeptrainhat/Documents/Thien's Skills Library/Thien-Risk-Process-Control/tests/phase-3/fixtures/P1-U19-V01/input.md:4",
+        "/Users/thiendeptrainhat/Documents/Thien's Skills Library/Thien-Risk-Process-Control/tests/phase-3/fixtures/P1-U19-V01/input.md:7",
+        "/Users/thiendeptrainhat/Documents/Thien's Skills Library/Thien-Risk-Process-Control/tests/phase-3/fixtures/P1-U19-V01/input.md:8"
+      ],
+      "analysis_layer": null,
+      "review_status": "Not reviewed"
+    },
+    {
+      "relationship_id": "REL-19-034",
+      "from_id": "RSK-19-04",
+      "relationship_type": "threatens",
+      "to_id": "OBJ-19A",
+      "source_reference": [
+        "/Users/thiendeptrainhat/Documents/Thien's Skills Library/Thien-Risk-Process-Control/tests/phase-3/fixtures/P1-U19-V01/input.md:5",
+        "/Users/thiendeptrainhat/Documents/Thien's Skills Library/Thien-Risk-Process-Control/tests/phase-3/fixtures/P1-U19-V01/input.md:6"
+      ],
+      "analysis_layer": null,
+      "review_status": "Not reviewed"
+    },
+    {
+      "relationship_id": "REL-19-035",
+      "from_id": "RSK-19-04",
+      "relationship_type": "threatens",
+      "to_id": "OBJ-19B",
+      "source_reference": [
+        "/Users/thiendeptrainhat/Documents/Thien's Skills Library/Thien-Risk-Process-Control/tests/phase-3/fixtures/P1-U19-V01/input.md:5",
+        "/Users/thiendeptrainhat/Documents/Thien's Skills Library/Thien-Risk-Process-Control/tests/phase-3/fixtures/P1-U19-V01/input.md:6"
+      ],
+      "analysis_layer": null,
+      "review_status": "Not reviewed"
+    },
+    {
+      "relationship_id": "REL-19-036",
+      "from_id": "RSK-19-04",
+      "relationship_type": "arises_at_or_affects",
+      "to_id": "STEP-19A-02",
+      "source_reference": [
+        "/Users/thiendeptrainhat/Documents/Thien's Skills Library/Thien-Risk-Process-Control/tests/phase-3/fixtures/P1-U19-V01/input.md:5",
+        "/Users/thiendeptrainhat/Documents/Thien's Skills Library/Thien-Risk-Process-Control/tests/phase-3/fixtures/P1-U19-V01/input.md:6"
+      ],
+      "analysis_layer": null,
+      "review_status": "Not reviewed"
+    },
+    {
+      "relationship_id": "REL-19-037",
+      "from_id": "RSK-19-04",
+      "relationship_type": "arises_at_or_affects",
+      "to_id": "STEP-19B-04",
+      "source_reference": [
+        "/Users/thiendeptrainhat/Documents/Thien's Skills Library/Thien-Risk-Process-Control/tests/phase-3/fixtures/P1-U19-V01/input.md:5",
+        "/Users/thiendeptrainhat/Documents/Thien's Skills Library/Thien-Risk-Process-Control/tests/phase-3/fixtures/P1-U19-V01/input.md:6"
+      ],
+      "analysis_layer": null,
+      "review_status": "Not reviewed"
+    },
+    {
+      "relationship_id": "REL-19-038",
+      "from_id": "CTL-SHARED-19",
+      "relationship_type": "addresses_risk",
+      "to_id": "RSK-19-01",
+      "source_reference": [
+        "/Users/thiendeptrainhat/Documents/Thien's Skills Library/Thien-Risk-Process-Control/tests/phase-3/fixtures/P1-U19-V01/input.md:5",
+        "/Users/thiendeptrainhat/Documents/Thien's Skills Library/Thien-Risk-Process-Control/tests/phase-3/fixtures/P1-U19-V01/input.md:6"
+      ],
+      "analysis_layer": "As-Documented",
+      "review_status": "Not reviewed"
+    },
+    {
+      "relationship_id": "REL-19-039",
+      "from_id": "CTL-SHARED-19",
+      "relationship_type": "addresses_risk",
+      "to_id": "RSK-19-03",
+      "source_reference": [
+        "/Users/thiendeptrainhat/Documents/Thien's Skills Library/Thien-Risk-Process-Control/tests/phase-3/fixtures/P1-U19-V01/input.md:5",
+        "/Users/thiendeptrainhat/Documents/Thien's Skills Library/Thien-Risk-Process-Control/tests/phase-3/fixtures/P1-U19-V01/input.md:6"
+      ],
+      "analysis_layer": "As-Documented",
+      "review_status": "Not reviewed"
+    },
+    {
+      "relationship_id": "REL-19-040",
+      "from_id": "CTL-SHARED-19",
+      "relationship_type": "supports_control_objective",
+      "to_id": "COBJ-19-01",
+      "source_reference": [
+        "/Users/thiendeptrainhat/Documents/Thien's Skills Library/Thien-Risk-Process-Control/tests/phase-3/fixtures/P1-U19-V01/input.md:5",
+        "/Users/thiendeptrainhat/Documents/Thien's Skills Library/Thien-Risk-Process-Control/tests/phase-3/fixtures/P1-U19-V01/input.md:6"
+      ],
+      "analysis_layer": null,
+      "review_status": "Not reviewed"
+    },
+    {
+      "relationship_id": "REL-19-041",
+      "from_id": "CTL-SHARED-19",
+      "relationship_type": "supports_control_objective",
+      "to_id": "COBJ-19-02",
+      "source_reference": [
+        "/Users/thiendeptrainhat/Documents/Thien's Skills Library/Thien-Risk-Process-Control/tests/phase-3/fixtures/P1-U19-V01/input.md:5",
+        "/Users/thiendeptrainhat/Documents/Thien's Skills Library/Thien-Risk-Process-Control/tests/phase-3/fixtures/P1-U19-V01/input.md:6"
+      ],
+      "analysis_layer": null,
+      "review_status": "Not reviewed"
+    },
+    {
+      "relationship_id": "REL-19-042",
+      "from_id": "CTL-19-MATCH",
+      "relationship_type": "addresses_risk",
+      "to_id": "RSK-19-02",
+      "source_reference": "/Users/thiendeptrainhat/Documents/Thien's Skills Library/Thien-Risk-Process-Control/tests/phase-3/fixtures/P1-U19-V01/input.md:6",
+      "analysis_layer": "As-Documented",
+      "review_status": "Not reviewed"
+    },
+    {
+      "relationship_id": "REL-19-043",
+      "from_id": "CTL-19-MATCH",
+      "relationship_type": "supports_control_objective",
+      "to_id": "COBJ-19-03",
+      "source_reference": "/Users/thiendeptrainhat/Documents/Thien's Skills Library/Thien-Risk-Process-Control/tests/phase-3/fixtures/P1-U19-V01/input.md:6",
+      "analysis_layer": null,
+      "review_status": "Not reviewed"
+    },
+    {
+      "relationship_id": "REL-19-044",
+      "from_id": "CTL-19-SOD",
+      "relationship_type": "addresses_risk",
+      "to_id": "RSK-19-02",
+      "source_reference": "/Users/thiendeptrainhat/Documents/Thien's Skills Library/Thien-Risk-Process-Control/tests/phase-3/fixtures/P1-U19-V01/input.md:6",
+      "analysis_layer": "As-Documented",
+      "review_status": "Not reviewed"
+    },
+    {
+      "relationship_id": "REL-19-045",
+      "from_id": "CTL-19-SOD",
+      "relationship_type": "supports_control_objective",
+      "to_id": "COBJ-19-03",
+      "source_reference": "/Users/thiendeptrainhat/Documents/Thien's Skills Library/Thien-Risk-Process-Control/tests/phase-3/fixtures/P1-U19-V01/input.md:6",
+      "analysis_layer": null,
+      "review_status": "Not reviewed"
+    },
+    {
+      "relationship_id": "REL-19-046",
+      "from_id": "CTL-19-MON",
+      "relationship_type": "addresses_risk",
+      "to_id": "RSK-19-03",
+      "source_reference": [
+        "/Users/thiendeptrainhat/Documents/Thien's Skills Library/Thien-Risk-Process-Control/tests/phase-3/fixtures/P1-U19-V01/input.md:5",
+        "/Users/thiendeptrainhat/Documents/Thien's Skills Library/Thien-Risk-Process-Control/tests/phase-3/fixtures/P1-U19-V01/input.md:6",
+        "/Users/thiendeptrainhat/Documents/Thien's Skills Library/Thien-Risk-Process-Control/tests/phase-3/fixtures/P1-U19-V01/input.md:7",
+        "/Users/thiendeptrainhat/Documents/Thien's Skills Library/Thien-Risk-Process-Control/tests/phase-3/fixtures/P1-U19-V01/input.md:8"
+      ],
+      "analysis_layer": "Target-State",
+      "review_status": "Not reviewed"
+    },
+    {
+      "relationship_id": "REL-19-047",
+      "from_id": "CTL-19-MON",
+      "relationship_type": "addresses_risk",
+      "to_id": "RSK-19-04",
+      "source_reference": [
+        "/Users/thiendeptrainhat/Documents/Thien's Skills Library/Thien-Risk-Process-Control/tests/phase-3/fixtures/P1-U19-V01/input.md:5",
+        "/Users/thiendeptrainhat/Documents/Thien's Skills Library/Thien-Risk-Process-Control/tests/phase-3/fixtures/P1-U19-V01/input.md:6",
+        "/Users/thiendeptrainhat/Documents/Thien's Skills Library/Thien-Risk-Process-Control/tests/phase-3/fixtures/P1-U19-V01/input.md:7",
+        "/Users/thiendeptrainhat/Documents/Thien's Skills Library/Thien-Risk-Process-Control/tests/phase-3/fixtures/P1-U19-V01/input.md:8"
+      ],
+      "analysis_layer": "Target-State",
+      "review_status": "Not reviewed"
+    },
+    {
+      "relationship_id": "REL-19-048",
+      "from_id": "CTL-19-MON",
+      "relationship_type": "supports_control_objective",
+      "to_id": "COBJ-19-02",
+      "source_reference": [
+        "/Users/thiendeptrainhat/Documents/Thien's Skills Library/Thien-Risk-Process-Control/tests/phase-3/fixtures/P1-U19-V01/input.md:5",
+        "/Users/thiendeptrainhat/Documents/Thien's Skills Library/Thien-Risk-Process-Control/tests/phase-3/fixtures/P1-U19-V01/input.md:6",
+        "/Users/thiendeptrainhat/Documents/Thien's Skills Library/Thien-Risk-Process-Control/tests/phase-3/fixtures/P1-U19-V01/input.md:7",
+        "/Users/thiendeptrainhat/Documents/Thien's Skills Library/Thien-Risk-Process-Control/tests/phase-3/fixtures/P1-U19-V01/input.md:8"
+      ],
+      "analysis_layer": null,
+      "review_status": "Not reviewed"
+    },
+    {
+      "relationship_id": "REL-19-049",
+      "from_id": "CTL-19-MON",
+      "relationship_type": "supports_control_objective",
+      "to_id": "COBJ-19-04",
+      "source_reference": [
+        "/Users/thiendeptrainhat/Documents/Thien's Skills Library/Thien-Risk-Process-Control/tests/phase-3/fixtures/P1-U19-V01/input.md:5",
+        "/Users/thiendeptrainhat/Documents/Thien's Skills Library/Thien-Risk-Process-Control/tests/phase-3/fixtures/P1-U19-V01/input.md:6",
+        "/Users/thiendeptrainhat/Documents/Thien's Skills Library/Thien-Risk-Process-Control/tests/phase-3/fixtures/P1-U19-V01/input.md:7",
+        "/Users/thiendeptrainhat/Documents/Thien's Skills Library/Thien-Risk-Process-Control/tests/phase-3/fixtures/P1-U19-V01/input.md:8"
+      ],
+      "analysis_layer": null,
+      "review_status": "Not reviewed"
+    },
+    {
+      "relationship_id": "REL-19-050",
+      "from_id": "OBS-19-DA",
+      "relationship_type": "observes",
+      "to_id": "CTL-SHARED-19",
+      "source_reference": "/Users/thiendeptrainhat/Documents/Thien's Skills Library/Thien-Risk-Process-Control/tests/phase-3/fixtures/P1-U19-V01/input.md:5",
+      "analysis_layer": "As-Documented",
+      "review_status": "Not reviewed"
+    },
+    {
+      "relationship_id": "REL-19-051",
+      "from_id": "OBS-19-DB",
+      "relationship_type": "observes",
+      "to_id": "CTL-SHARED-19",
+      "source_reference": "/Users/thiendeptrainhat/Documents/Thien's Skills Library/Thien-Risk-Process-Control/tests/phase-3/fixtures/P1-U19-V01/input.md:6",
+      "analysis_layer": "As-Documented",
+      "review_status": "Not reviewed"
+    },
+    {
+      "relationship_id": "REL-19-052",
+      "from_id": "OBS-19-PA",
+      "relationship_type": "observes",
+      "to_id": "CTL-SHARED-19",
+      "source_reference": "/Users/thiendeptrainhat/Documents/Thien's Skills Library/Thien-Risk-Process-Control/tests/phase-3/fixtures/P1-U19-V01/input.md:7",
+      "analysis_layer": "As-Performed",
+      "review_status": "Not reviewed"
+    },
+    {
+      "relationship_id": "REL-19-053",
+      "from_id": "OBS-19-PA",
+      "relationship_type": "supported_by",
+      "to_id": "EVD-19A",
+      "source_reference": "/Users/thiendeptrainhat/Documents/Thien's Skills Library/Thien-Risk-Process-Control/tests/phase-3/fixtures/P1-U19-V01/input.md:7",
+      "analysis_layer": "As-Performed",
+      "review_status": "Not reviewed"
+    },
+    {
+      "relationship_id": "REL-19-054",
+      "from_id": "OBS-19-PB",
+      "relationship_type": "observes",
+      "to_id": "CTL-SHARED-19",
+      "source_reference": "/Users/thiendeptrainhat/Documents/Thien's Skills Library/Thien-Risk-Process-Control/tests/phase-3/fixtures/P1-U19-V01/input.md:8",
+      "analysis_layer": "As-Performed",
+      "review_status": "Not reviewed"
+    },
+    {
+      "relationship_id": "REL-19-055",
+      "from_id": "OBS-19-PB",
+      "relationship_type": "supported_by",
+      "to_id": "EVD-19B",
+      "source_reference": "/Users/thiendeptrainhat/Documents/Thien's Skills Library/Thien-Risk-Process-Control/tests/phase-3/fixtures/P1-U19-V01/input.md:8",
+      "analysis_layer": "As-Performed",
+      "review_status": "Not reviewed"
+    },
+    {
+      "relationship_id": "REL-19-056",
+      "from_id": "OBS-19-DM",
+      "relationship_type": "observes",
+      "to_id": "CTL-19-MATCH",
+      "source_reference": "/Users/thiendeptrainhat/Documents/Thien's Skills Library/Thien-Risk-Process-Control/tests/phase-3/fixtures/P1-U19-V01/input.md:6",
+      "analysis_layer": "As-Documented",
+      "review_status": "Not reviewed"
+    },
+    {
+      "relationship_id": "REL-19-057",
+      "from_id": "OBS-19-DS",
+      "relationship_type": "observes",
+      "to_id": "CTL-19-SOD",
+      "source_reference": "/Users/thiendeptrainhat/Documents/Thien's Skills Library/Thien-Risk-Process-Control/tests/phase-3/fixtures/P1-U19-V01/input.md:6",
+      "analysis_layer": "As-Documented",
+      "review_status": "Not reviewed"
+    },
+    {
+      "relationship_id": "REL-19-058",
+      "from_id": "OBS-19-TS",
+      "relationship_type": "observes",
+      "to_id": "CTL-SHARED-19",
+      "source_reference": [
+        "/Users/thiendeptrainhat/Documents/Thien's Skills Library/Thien-Risk-Process-Control/tests/phase-3/fixtures/P1-U19-V01/input.md:4",
+        "/Users/thiendeptrainhat/Documents/Thien's Skills Library/Thien-Risk-Process-Control/tests/phase-3/fixtures/P1-U19-V01/input.md:5",
+        "/Users/thiendeptrainhat/Documents/Thien's Skills Library/Thien-Risk-Process-Control/tests/phase-3/fixtures/P1-U19-V01/input.md:6",
+        "/Users/thiendeptrainhat/Documents/Thien's Skills Library/Thien-Risk-Process-Control/tests/phase-3/fixtures/P1-U19-V01/input.md:7",
+        "/Users/thiendeptrainhat/Documents/Thien's Skills Library/Thien-Risk-Process-Control/tests/phase-3/fixtures/P1-U19-V01/input.md:8"
+      ],
+      "analysis_layer": "Target-State",
+      "review_status": "Not reviewed"
+    },
+    {
+      "relationship_id": "REL-19-059",
+      "from_id": "OBS-19-TM",
+      "relationship_type": "observes",
+      "to_id": "CTL-19-MON",
+      "source_reference": [
+        "/Users/thiendeptrainhat/Documents/Thien's Skills Library/Thien-Risk-Process-Control/tests/phase-3/fixtures/P1-U19-V01/input.md:5",
+        "/Users/thiendeptrainhat/Documents/Thien's Skills Library/Thien-Risk-Process-Control/tests/phase-3/fixtures/P1-U19-V01/input.md:6",
+        "/Users/thiendeptrainhat/Documents/Thien's Skills Library/Thien-Risk-Process-Control/tests/phase-3/fixtures/P1-U19-V01/input.md:7",
+        "/Users/thiendeptrainhat/Documents/Thien's Skills Library/Thien-Risk-Process-Control/tests/phase-3/fixtures/P1-U19-V01/input.md:8"
+      ],
+      "analysis_layer": "Target-State",
+      "review_status": "Not reviewed"
+    },
+    {
+      "relationship_id": "REL-19-060",
+      "from_id": "ACT-19-01",
+      "relationship_type": "implements_recommendation",
+      "to_id": "REC-19-01",
+      "source_reference": "/Users/thiendeptrainhat/Documents/Thien's Skills Library/Thien-Risk-Process-Control/tests/phase-3/fixtures/P1-U19-V01/input.md:1",
+      "analysis_layer": "Target-State",
+      "review_status": "Not reviewed"
+    },
+    {
+      "relationship_id": "REL-19-061",
+      "from_id": "ACT-19-01",
+      "relationship_type": "responds_to",
+      "to_id": "GAP-19-01",
+      "source_reference": "/Users/thiendeptrainhat/Documents/Thien's Skills Library/Thien-Risk-Process-Control/tests/phase-3/fixtures/P1-U19-V01/input.md:1",
+      "analysis_layer": "Target-State",
+      "review_status": "Not reviewed"
+    },
+    {
+      "relationship_id": "REL-19-062",
+      "from_id": "ACT-19-01",
+      "relationship_type": "responds_to",
+      "to_id": "GAP-19-02",
+      "source_reference": "/Users/thiendeptrainhat/Documents/Thien's Skills Library/Thien-Risk-Process-Control/tests/phase-3/fixtures/P1-U19-V01/input.md:1",
+      "analysis_layer": "Target-State",
+      "review_status": "Not reviewed"
+    },
+    {
+      "relationship_id": "REL-19-063",
+      "from_id": "ACT-19-02",
+      "relationship_type": "implements_recommendation",
+      "to_id": "REC-19-02",
+      "source_reference": "/Users/thiendeptrainhat/Documents/Thien's Skills Library/Thien-Risk-Process-Control/tests/phase-3/fixtures/P1-U19-V01/input.md:1",
+      "analysis_layer": "Target-State",
+      "review_status": "Not reviewed"
+    },
+    {
+      "relationship_id": "REL-19-064",
+      "from_id": "ACT-19-02",
+      "relationship_type": "responds_to",
+      "to_id": "GAP-19-01",
+      "source_reference": "/Users/thiendeptrainhat/Documents/Thien's Skills Library/Thien-Risk-Process-Control/tests/phase-3/fixtures/P1-U19-V01/input.md:1",
+      "analysis_layer": "Target-State",
+      "review_status": "Not reviewed"
+    },
+    {
+      "relationship_id": "REL-19-065",
+      "from_id": "ACT-19-02",
+      "relationship_type": "responds_to",
+      "to_id": "GAP-19-02",
+      "source_reference": "/Users/thiendeptrainhat/Documents/Thien's Skills Library/Thien-Risk-Process-Control/tests/phase-3/fixtures/P1-U19-V01/input.md:1",
+      "analysis_layer": "Target-State",
+      "review_status": "Not reviewed"
+    },
+    {
+      "relationship_id": "REL-19-066",
+      "from_id": "ACT-19-02",
+      "relationship_type": "responds_to",
+      "to_id": "GAP-19-03",
+      "source_reference": "/Users/thiendeptrainhat/Documents/Thien's Skills Library/Thien-Risk-Process-Control/tests/phase-3/fixtures/P1-U19-V01/input.md:1",
+      "analysis_layer": "Target-State",
+      "review_status": "Not reviewed"
+    },
+    {
+      "relationship_id": "REL-19-067",
+      "from_id": "ACT-19-03",
+      "relationship_type": "implements_recommendation",
+      "to_id": "REC-19-03",
+      "source_reference": "/Users/thiendeptrainhat/Documents/Thien's Skills Library/Thien-Risk-Process-Control/tests/phase-3/fixtures/P1-U19-V01/input.md:1",
+      "analysis_layer": "Target-State",
+      "review_status": "Not reviewed"
+    },
+    {
+      "relationship_id": "REL-19-068",
+      "from_id": "ACT-19-03",
+      "relationship_type": "responds_to",
+      "to_id": "GAP-19-04",
+      "source_reference": "/Users/thiendeptrainhat/Documents/Thien's Skills Library/Thien-Risk-Process-Control/tests/phase-3/fixtures/P1-U19-V01/input.md:1",
+      "analysis_layer": "Target-State",
+      "review_status": "Not reviewed"
+    },
+    {
+      "relationship_id": "REL-19-069",
+      "from_id": "ACT-19-04",
+      "relationship_type": "implements_recommendation",
+      "to_id": "REC-19-04",
+      "source_reference": "/Users/thiendeptrainhat/Documents/Thien's Skills Library/Thien-Risk-Process-Control/tests/phase-3/fixtures/P1-U19-V01/input.md:1",
+      "analysis_layer": "Target-State",
+      "review_status": "Not reviewed"
+    }
+  ],
+  "rcm_relationships": [
+    {
+      "rcm_id": "RCM-19-01",
+      "analysis_layer": "As-Documented",
+      "process_id": "PROC-19A",
+      "step_id": "STEP-19A-02",
+      "scope_note": "Theo observation được chọn",
+      "risk_id": "RSK-19-01",
+      "control_objective_id": "COBJ-19-01",
+      "control_id": "CTL-SHARED-19",
+      "control_observation_id": "OBS-19-DA",
+      "assessed_scope": "PROC-19A, nội dung SOP-19A §3 được cung cấp",
+      "assessed_period": "Not provided",
+      "baseline_link_ids": [
+        "CBL-19-01"
+      ],
+      "comparison_ids": [
+        "CMP-19-01"
+      ],
+      "gap_ids": [
+        "GAP-19-02",
+        "GAP-19-03"
+      ],
+      "source_ids": [
+        "SOP-19A"
+      ],
+      "evidence_ids": [],
+      "source_reference": "/Users/thiendeptrainhat/Documents/Thien's Skills Library/Thien-Risk-Process-Control/tests/phase-3/fixtures/P1-U19-V01/input.md:5",
+      "confidence": "Medium",
+      "review_status": "Not reviewed"
+    },
+    {
+      "rcm_id": "RCM-19-02",
+      "analysis_layer": "As-Documented",
+      "process_id": "PROC-19B",
+      "step_id": "STEP-19B-04",
+      "scope_note": "Theo observation được chọn",
+      "risk_id": "RSK-19-01",
+      "control_objective_id": "COBJ-19-01",
+      "control_id": "CTL-SHARED-19",
+      "control_observation_id": "OBS-19-DB",
+      "assessed_scope": "PROC-19B, nội dung SOP-19B §4 được cung cấp",
+      "assessed_period": "Not provided",
+      "baseline_link_ids": [
+        "CBL-19-01"
+      ],
+      "comparison_ids": [
+        "CMP-19-01"
+      ],
+      "gap_ids": [
+        "GAP-19-02",
+        "GAP-19-03"
+      ],
+      "source_ids": [
+        "SOP-19B"
+      ],
+      "evidence_ids": [],
+      "source_reference": "/Users/thiendeptrainhat/Documents/Thien's Skills Library/Thien-Risk-Process-Control/tests/phase-3/fixtures/P1-U19-V01/input.md:6",
+      "confidence": "Medium",
+      "review_status": "Not reviewed"
+    },
+    {
+      "rcm_id": "RCM-19-03",
+      "analysis_layer": "As-Documented",
+      "process_id": "PROC-19A",
+      "step_id": "STEP-19A-02",
+      "scope_note": "Theo observation được chọn",
+      "risk_id": "RSK-19-03",
+      "control_objective_id": "COBJ-19-02",
+      "control_id": "CTL-SHARED-19",
+      "control_observation_id": "OBS-19-DA",
+      "assessed_scope": "PROC-19A, nội dung SOP-19A §3 được cung cấp",
+      "assessed_period": "Not provided",
+      "baseline_link_ids": [
+        "CBL-19-02"
+      ],
+      "comparison_ids": [
+        "CMP-19-02"
+      ],
+      "gap_ids": [
+        "GAP-19-01",
+        "GAP-19-02",
+        "GAP-19-03"
+      ],
+      "source_ids": [
+        "SOP-19A"
+      ],
+      "evidence_ids": [],
+      "source_reference": "/Users/thiendeptrainhat/Documents/Thien's Skills Library/Thien-Risk-Process-Control/tests/phase-3/fixtures/P1-U19-V01/input.md:5",
+      "confidence": "Medium",
+      "review_status": "Not reviewed"
+    },
+    {
+      "rcm_id": "RCM-19-04",
+      "analysis_layer": "As-Documented",
+      "process_id": "PROC-19B",
+      "step_id": "STEP-19B-04",
+      "scope_note": "Theo observation được chọn",
+      "risk_id": "RSK-19-03",
+      "control_objective_id": "COBJ-19-02",
+      "control_id": "CTL-SHARED-19",
+      "control_observation_id": "OBS-19-DB",
+      "assessed_scope": "PROC-19B, nội dung SOP-19B §4 được cung cấp",
+      "assessed_period": "Not provided",
+      "baseline_link_ids": [
+        "CBL-19-02"
+      ],
+      "comparison_ids": [
+        "CMP-19-02"
+      ],
+      "gap_ids": [
+        "GAP-19-01",
+        "GAP-19-02",
+        "GAP-19-03"
+      ],
+      "source_ids": [
+        "SOP-19B"
+      ],
+      "evidence_ids": [],
+      "source_reference": "/Users/thiendeptrainhat/Documents/Thien's Skills Library/Thien-Risk-Process-Control/tests/phase-3/fixtures/P1-U19-V01/input.md:6",
+      "confidence": "Medium",
+      "review_status": "Not reviewed"
+    },
+    {
+      "rcm_id": "RCM-19-05",
+      "analysis_layer": "As-Documented",
+      "process_id": "PROC-19B",
+      "step_id": "STEP-19B-02",
+      "scope_note": "Theo observation được chọn",
+      "risk_id": "RSK-19-02",
+      "control_objective_id": "COBJ-19-03",
+      "control_id": "CTL-19-MATCH",
+      "control_observation_id": "OBS-19-DM",
+      "assessed_scope": "PROC-19B, SOP-19B §4",
+      "assessed_period": "Not provided",
+      "baseline_link_ids": [
+        "CBL-19-03"
+      ],
+      "comparison_ids": [
+        "CMP-19-03"
+      ],
+      "gap_ids": [
+        "GAP-19-04"
+      ],
+      "source_ids": [
+        "SOP-19B"
+      ],
+      "evidence_ids": [],
+      "source_reference": "/Users/thiendeptrainhat/Documents/Thien's Skills Library/Thien-Risk-Process-Control/tests/phase-3/fixtures/P1-U19-V01/input.md:6",
+      "confidence": "Medium",
+      "review_status": "Not reviewed"
+    },
+    {
+      "rcm_id": "RCM-19-06",
+      "analysis_layer": "As-Documented",
+      "process_id": "PROC-19B",
+      "step_id": "STEP-19B-05",
+      "scope_note": "Theo observation được chọn",
+      "risk_id": "RSK-19-02",
+      "control_objective_id": "COBJ-19-03",
+      "control_id": "CTL-19-SOD",
+      "control_observation_id": "OBS-19-DS",
+      "assessed_scope": "PROC-19B, SOP-19B §4",
+      "assessed_period": "Not provided",
+      "baseline_link_ids": [
+        "CBL-19-04"
+      ],
+      "comparison_ids": [
+        "CMP-19-03"
+      ],
+      "gap_ids": [
+        "GAP-19-04"
+      ],
+      "source_ids": [
+        "SOP-19B"
+      ],
+      "evidence_ids": [],
+      "source_reference": "/Users/thiendeptrainhat/Documents/Thien's Skills Library/Thien-Risk-Process-Control/tests/phase-3/fixtures/P1-U19-V01/input.md:6",
+      "confidence": "Medium",
+      "review_status": "Not reviewed"
+    },
+    {
+      "rcm_id": "RCM-19-07",
+      "analysis_layer": "As-Performed",
+      "process_id": null,
+      "step_id": null,
+      "scope_note": "Checklist chưa xác định điểm gọi/nhánh process; không suy từ tên EVD.",
+      "risk_id": "RSK-19-01",
+      "control_objective_id": "COBJ-19-01",
+      "control_id": "CTL-SHARED-19",
+      "control_observation_id": "OBS-19-PA",
+      "assessed_scope": "Checklist B-19; chưa xác định được invocation/step cụ thể",
+      "assessed_period": "2026-07-10",
+      "baseline_link_ids": [
+        "CBL-19-01"
+      ],
+      "comparison_ids": [
+        "CMP-19-01"
+      ],
+      "gap_ids": [
+        "GAP-19-02",
+        "GAP-19-03"
+      ],
+      "source_ids": [
+        "EVD-19A"
+      ],
+      "evidence_ids": [
+        "EVD-19A"
+      ],
+      "source_reference": "/Users/thiendeptrainhat/Documents/Thien's Skills Library/Thien-Risk-Process-Control/tests/phase-3/fixtures/P1-U19-V01/input.md:7",
+      "confidence": "Medium cho ghi nhận trên hồ sơ; Unresolved cho kết quả xác nhận",
+      "review_status": "Not reviewed"
+    },
+    {
+      "rcm_id": "RCM-19-08",
+      "analysis_layer": "As-Performed",
+      "process_id": "PROC-19B",
+      "step_id": "STEP-19B-04",
+      "scope_note": "Theo observation được chọn",
+      "risk_id": "RSK-19-01",
+      "control_objective_id": "COBJ-19-01",
+      "control_id": "CTL-SHARED-19",
+      "control_observation_id": "OBS-19-PB",
+      "assessed_scope": "Trace trung tâm B-19 ở thời điểm trước phát lệnh; invocation/version cần xác minh",
+      "assessed_period": "2026-07-10",
+      "baseline_link_ids": [
+        "CBL-19-01"
+      ],
+      "comparison_ids": [
+        "CMP-19-01"
+      ],
+      "gap_ids": [
+        "GAP-19-02",
+        "GAP-19-03"
+      ],
+      "source_ids": [
+        "EVD-19B"
+      ],
+      "evidence_ids": [
+        "EVD-19B"
+      ],
+      "source_reference": "/Users/thiendeptrainhat/Documents/Thien's Skills Library/Thien-Risk-Process-Control/tests/phase-3/fixtures/P1-U19-V01/input.md:8",
+      "confidence": "Medium cho ghi nhận trên hồ sơ; Unresolved cho kết quả xác nhận",
+      "review_status": "Not reviewed"
+    },
+    {
+      "rcm_id": "RCM-19-09",
+      "analysis_layer": "As-Performed",
+      "process_id": null,
+      "step_id": null,
+      "scope_note": "Checklist chưa xác định điểm gọi/nhánh process; không suy từ tên EVD.",
+      "risk_id": "RSK-19-03",
+      "control_objective_id": "COBJ-19-02",
+      "control_id": "CTL-SHARED-19",
+      "control_observation_id": "OBS-19-PA",
+      "assessed_scope": "Checklist B-19; chưa xác định được invocation/step cụ thể",
+      "assessed_period": "2026-07-10",
+      "baseline_link_ids": [
+        "CBL-19-02"
+      ],
+      "comparison_ids": [
+        "CMP-19-02"
+      ],
+      "gap_ids": [
+        "GAP-19-01",
+        "GAP-19-02",
+        "GAP-19-03"
+      ],
+      "source_ids": [
+        "EVD-19A"
+      ],
+      "evidence_ids": [
+        "EVD-19A"
+      ],
+      "source_reference": "/Users/thiendeptrainhat/Documents/Thien's Skills Library/Thien-Risk-Process-Control/tests/phase-3/fixtures/P1-U19-V01/input.md:7",
+      "confidence": "Medium cho ghi nhận trên hồ sơ; Unresolved cho kết quả xác nhận",
+      "review_status": "Not reviewed"
+    },
+    {
+      "rcm_id": "RCM-19-10",
+      "analysis_layer": "As-Performed",
+      "process_id": "PROC-19B",
+      "step_id": "STEP-19B-04",
+      "scope_note": "Theo observation được chọn",
+      "risk_id": "RSK-19-03",
+      "control_objective_id": "COBJ-19-02",
+      "control_id": "CTL-SHARED-19",
+      "control_observation_id": "OBS-19-PB",
+      "assessed_scope": "Trace trung tâm B-19 ở thời điểm trước phát lệnh; invocation/version cần xác minh",
+      "assessed_period": "2026-07-10",
+      "baseline_link_ids": [
+        "CBL-19-02"
+      ],
+      "comparison_ids": [
+        "CMP-19-02"
+      ],
+      "gap_ids": [
+        "GAP-19-01",
+        "GAP-19-02",
+        "GAP-19-03"
+      ],
+      "source_ids": [
+        "EVD-19B"
+      ],
+      "evidence_ids": [
+        "EVD-19B"
+      ],
+      "source_reference": "/Users/thiendeptrainhat/Documents/Thien's Skills Library/Thien-Risk-Process-Control/tests/phase-3/fixtures/P1-U19-V01/input.md:8",
+      "confidence": "Medium cho ghi nhận trên hồ sơ; Unresolved cho kết quả xác nhận",
+      "review_status": "Not reviewed"
+    },
+    {
+      "rcm_id": "RCM-19-11",
+      "analysis_layer": "Target-State",
+      "process_id": "PROC-19B",
+      "step_id": "STEP-19B-04",
+      "scope_note": "Theo observation được chọn",
+      "risk_id": "RSK-19-01",
+      "control_objective_id": "COBJ-19-01",
+      "control_id": "CTL-SHARED-19",
+      "control_observation_id": "OBS-19-TS",
+      "assessed_scope": "PROC-19A/PROC-19B; thay đổi tài khoản và lần thanh toán đầu tiên liên quan",
+      "assessed_period": "Tương lai; ngày hiệu lực Not provided",
+      "baseline_link_ids": [
+        "CBL-19-01"
+      ],
+      "comparison_ids": [
+        "CMP-19-01"
+      ],
+      "gap_ids": [
+        "GAP-19-02",
+        "GAP-19-03"
+      ],
+      "source_ids": [
+        "REQ-19",
+        "SOP-19A",
+        "SOP-19B",
+        "EVD-19A",
+        "EVD-19B"
+      ],
+      "evidence_ids": [],
+      "source_reference": [
+        "/Users/thiendeptrainhat/Documents/Thien's Skills Library/Thien-Risk-Process-Control/tests/phase-3/fixtures/P1-U19-V01/input.md:4",
+        "/Users/thiendeptrainhat/Documents/Thien's Skills Library/Thien-Risk-Process-Control/tests/phase-3/fixtures/P1-U19-V01/input.md:5",
+        "/Users/thiendeptrainhat/Documents/Thien's Skills Library/Thien-Risk-Process-Control/tests/phase-3/fixtures/P1-U19-V01/input.md:6",
+        "/Users/thiendeptrainhat/Documents/Thien's Skills Library/Thien-Risk-Process-Control/tests/phase-3/fixtures/P1-U19-V01/input.md:7",
+        "/Users/thiendeptrainhat/Documents/Thien's Skills Library/Thien-Risk-Process-Control/tests/phase-3/fixtures/P1-U19-V01/input.md:8"
+      ],
+      "confidence": "Medium",
+      "review_status": "Not reviewed"
+    },
+    {
+      "rcm_id": "RCM-19-12",
+      "analysis_layer": "Target-State",
+      "process_id": "PROC-19B",
+      "step_id": "STEP-19B-04",
+      "scope_note": "Theo observation được chọn",
+      "risk_id": "RSK-19-03",
+      "control_objective_id": "COBJ-19-02",
+      "control_id": "CTL-SHARED-19",
+      "control_observation_id": "OBS-19-TS",
+      "assessed_scope": "PROC-19A/PROC-19B; thay đổi tài khoản và lần thanh toán đầu tiên liên quan",
+      "assessed_period": "Tương lai; ngày hiệu lực Not provided",
+      "baseline_link_ids": [
+        "CBL-19-02"
+      ],
+      "comparison_ids": [
+        "CMP-19-02"
+      ],
+      "gap_ids": [
+        "GAP-19-01",
+        "GAP-19-02",
+        "GAP-19-03"
+      ],
+      "source_ids": [
+        "REQ-19",
+        "SOP-19A",
+        "SOP-19B",
+        "EVD-19A",
+        "EVD-19B"
+      ],
+      "evidence_ids": [],
+      "source_reference": [
+        "/Users/thiendeptrainhat/Documents/Thien's Skills Library/Thien-Risk-Process-Control/tests/phase-3/fixtures/P1-U19-V01/input.md:4",
+        "/Users/thiendeptrainhat/Documents/Thien's Skills Library/Thien-Risk-Process-Control/tests/phase-3/fixtures/P1-U19-V01/input.md:5",
+        "/Users/thiendeptrainhat/Documents/Thien's Skills Library/Thien-Risk-Process-Control/tests/phase-3/fixtures/P1-U19-V01/input.md:6",
+        "/Users/thiendeptrainhat/Documents/Thien's Skills Library/Thien-Risk-Process-Control/tests/phase-3/fixtures/P1-U19-V01/input.md:7",
+        "/Users/thiendeptrainhat/Documents/Thien's Skills Library/Thien-Risk-Process-Control/tests/phase-3/fixtures/P1-U19-V01/input.md:8"
+      ],
+      "confidence": "Medium",
+      "review_status": "Not reviewed"
+    },
+    {
+      "rcm_id": "RCM-19-13",
+      "analysis_layer": "Target-State",
+      "process_id": "PROC-19B",
+      "step_id": "STEP-19B-04",
+      "scope_note": "Theo observation được chọn",
+      "risk_id": "RSK-19-03",
+      "control_objective_id": "COBJ-19-02",
+      "control_id": "CTL-19-MON",
+      "control_observation_id": "OBS-19-TM",
+      "assessed_scope": "Hai điểm gọi của CTL-SHARED-19",
+      "assessed_period": "Tương lai; ngày hiệu lực Not provided",
+      "baseline_link_ids": [
+        "CBL-19-05"
+      ],
+      "comparison_ids": [
+        "CMP-19-02"
+      ],
+      "gap_ids": [
+        "GAP-19-01",
+        "GAP-19-02",
+        "GAP-19-03"
+      ],
+      "source_ids": [
+        "SOP-19A",
+        "SOP-19B",
+        "EVD-19A",
+        "EVD-19B"
+      ],
+      "evidence_ids": [],
+      "source_reference": [
+        "/Users/thiendeptrainhat/Documents/Thien's Skills Library/Thien-Risk-Process-Control/tests/phase-3/fixtures/P1-U19-V01/input.md:5",
+        "/Users/thiendeptrainhat/Documents/Thien's Skills Library/Thien-Risk-Process-Control/tests/phase-3/fixtures/P1-U19-V01/input.md:6",
+        "/Users/thiendeptrainhat/Documents/Thien's Skills Library/Thien-Risk-Process-Control/tests/phase-3/fixtures/P1-U19-V01/input.md:7",
+        "/Users/thiendeptrainhat/Documents/Thien's Skills Library/Thien-Risk-Process-Control/tests/phase-3/fixtures/P1-U19-V01/input.md:8"
+      ],
+      "confidence": "Medium",
+      "review_status": "Not reviewed"
+    },
+    {
+      "rcm_id": "RCM-19-14",
+      "analysis_layer": "Target-State",
+      "process_id": "PROC-19B",
+      "step_id": "STEP-19B-04",
+      "scope_note": "Theo observation được chọn",
+      "risk_id": "RSK-19-04",
+      "control_objective_id": "COBJ-19-04",
+      "control_id": "CTL-19-MON",
+      "control_observation_id": "OBS-19-TM",
+      "assessed_scope": "Hai điểm gọi của CTL-SHARED-19",
+      "assessed_period": "Tương lai; ngày hiệu lực Not provided",
+      "baseline_link_ids": [
+        "CBL-19-05"
+      ],
+      "comparison_ids": [
+        "CMP-19-04"
+      ],
+      "gap_ids": [],
+      "source_ids": [
+        "SOP-19A",
+        "SOP-19B",
+        "EVD-19A",
+        "EVD-19B"
+      ],
+      "evidence_ids": [],
+      "source_reference": [
+        "/Users/thiendeptrainhat/Documents/Thien's Skills Library/Thien-Risk-Process-Control/tests/phase-3/fixtures/P1-U19-V01/input.md:5",
+        "/Users/thiendeptrainhat/Documents/Thien's Skills Library/Thien-Risk-Process-Control/tests/phase-3/fixtures/P1-U19-V01/input.md:6",
+        "/Users/thiendeptrainhat/Documents/Thien's Skills Library/Thien-Risk-Process-Control/tests/phase-3/fixtures/P1-U19-V01/input.md:7",
+        "/Users/thiendeptrainhat/Documents/Thien's Skills Library/Thien-Risk-Process-Control/tests/phase-3/fixtures/P1-U19-V01/input.md:8"
+      ],
+      "confidence": "Medium",
+      "review_status": "Not reviewed"
+    },
+    {
+      "rcm_id": "RCM-19-15",
+      "analysis_layer": "Target-State",
+      "process_id": "PROC-19A",
+      "step_id": "STEP-19A-02",
+      "scope_note": "Theo observation Target-State; chưa áp dụng hiện tại",
+      "risk_id": "RSK-19-01",
+      "control_objective_id": "COBJ-19-01",
+      "control_id": "CTL-SHARED-19",
+      "control_observation_id": "OBS-19-TS",
+      "assessed_scope": "PROC-19A/PROC-19B; thay đổi tài khoản và lần thanh toán đầu tiên liên quan",
+      "assessed_period": "Tương lai; ngày hiệu lực Not provided",
+      "baseline_link_ids": [
+        "CBL-19-01"
+      ],
+      "comparison_ids": [
+        "CMP-19-01"
+      ],
+      "gap_ids": [
+        "GAP-19-02",
+        "GAP-19-03"
+      ],
+      "source_ids": [
+        "REQ-19",
+        "SOP-19A",
+        "SOP-19B",
+        "EVD-19A",
+        "EVD-19B"
+      ],
+      "evidence_ids": [],
+      "source_reference": [
+        "/Users/thiendeptrainhat/Documents/Thien's Skills Library/Thien-Risk-Process-Control/tests/phase-3/fixtures/P1-U19-V01/input.md:4",
+        "/Users/thiendeptrainhat/Documents/Thien's Skills Library/Thien-Risk-Process-Control/tests/phase-3/fixtures/P1-U19-V01/input.md:5",
+        "/Users/thiendeptrainhat/Documents/Thien's Skills Library/Thien-Risk-Process-Control/tests/phase-3/fixtures/P1-U19-V01/input.md:6",
+        "/Users/thiendeptrainhat/Documents/Thien's Skills Library/Thien-Risk-Process-Control/tests/phase-3/fixtures/P1-U19-V01/input.md:7",
+        "/Users/thiendeptrainhat/Documents/Thien's Skills Library/Thien-Risk-Process-Control/tests/phase-3/fixtures/P1-U19-V01/input.md:8"
+      ],
+      "confidence": "Medium",
+      "review_status": "Not reviewed"
+    },
+    {
+      "rcm_id": "RCM-19-16",
+      "analysis_layer": "Target-State",
+      "process_id": "PROC-19A",
+      "step_id": "STEP-19A-02",
+      "scope_note": "Theo observation Target-State; chưa áp dụng hiện tại",
+      "risk_id": "RSK-19-03",
+      "control_objective_id": "COBJ-19-02",
+      "control_id": "CTL-SHARED-19",
+      "control_observation_id": "OBS-19-TS",
+      "assessed_scope": "PROC-19A/PROC-19B; thay đổi tài khoản và lần thanh toán đầu tiên liên quan",
+      "assessed_period": "Tương lai; ngày hiệu lực Not provided",
+      "baseline_link_ids": [
+        "CBL-19-02"
+      ],
+      "comparison_ids": [
+        "CMP-19-02"
+      ],
+      "gap_ids": [
+        "GAP-19-01",
+        "GAP-19-02",
+        "GAP-19-03"
+      ],
+      "source_ids": [
+        "REQ-19",
+        "SOP-19A",
+        "SOP-19B",
+        "EVD-19A",
+        "EVD-19B"
+      ],
+      "evidence_ids": [],
+      "source_reference": [
+        "/Users/thiendeptrainhat/Documents/Thien's Skills Library/Thien-Risk-Process-Control/tests/phase-3/fixtures/P1-U19-V01/input.md:4",
+        "/Users/thiendeptrainhat/Documents/Thien's Skills Library/Thien-Risk-Process-Control/tests/phase-3/fixtures/P1-U19-V01/input.md:5",
+        "/Users/thiendeptrainhat/Documents/Thien's Skills Library/Thien-Risk-Process-Control/tests/phase-3/fixtures/P1-U19-V01/input.md:6",
+        "/Users/thiendeptrainhat/Documents/Thien's Skills Library/Thien-Risk-Process-Control/tests/phase-3/fixtures/P1-U19-V01/input.md:7",
+        "/Users/thiendeptrainhat/Documents/Thien's Skills Library/Thien-Risk-Process-Control/tests/phase-3/fixtures/P1-U19-V01/input.md:8"
+      ],
+      "confidence": "Medium",
+      "review_status": "Not reviewed"
+    },
+    {
+      "rcm_id": "RCM-19-17",
+      "analysis_layer": "Target-State",
+      "process_id": "PROC-19A",
+      "step_id": "STEP-19A-02",
+      "scope_note": "Theo observation Target-State; chưa áp dụng hiện tại",
+      "risk_id": "RSK-19-03",
+      "control_objective_id": "COBJ-19-02",
+      "control_id": "CTL-19-MON",
+      "control_observation_id": "OBS-19-TM",
+      "assessed_scope": "Hai điểm gọi của CTL-SHARED-19",
+      "assessed_period": "Tương lai; ngày hiệu lực Not provided",
+      "baseline_link_ids": [
+        "CBL-19-05"
+      ],
+      "comparison_ids": [
+        "CMP-19-02"
+      ],
+      "gap_ids": [
+        "GAP-19-01",
+        "GAP-19-02",
+        "GAP-19-03"
+      ],
+      "source_ids": [
+        "SOP-19A",
+        "SOP-19B",
+        "EVD-19A",
+        "EVD-19B"
+      ],
+      "evidence_ids": [],
+      "source_reference": [
+        "/Users/thiendeptrainhat/Documents/Thien's Skills Library/Thien-Risk-Process-Control/tests/phase-3/fixtures/P1-U19-V01/input.md:5",
+        "/Users/thiendeptrainhat/Documents/Thien's Skills Library/Thien-Risk-Process-Control/tests/phase-3/fixtures/P1-U19-V01/input.md:6",
+        "/Users/thiendeptrainhat/Documents/Thien's Skills Library/Thien-Risk-Process-Control/tests/phase-3/fixtures/P1-U19-V01/input.md:7",
+        "/Users/thiendeptrainhat/Documents/Thien's Skills Library/Thien-Risk-Process-Control/tests/phase-3/fixtures/P1-U19-V01/input.md:8"
+      ],
+      "confidence": "Medium",
+      "review_status": "Not reviewed"
+    },
+    {
+      "rcm_id": "RCM-19-18",
+      "analysis_layer": "Target-State",
+      "process_id": "PROC-19A",
+      "step_id": "STEP-19A-02",
+      "scope_note": "Theo observation Target-State; chưa áp dụng hiện tại",
+      "risk_id": "RSK-19-04",
+      "control_objective_id": "COBJ-19-04",
+      "control_id": "CTL-19-MON",
+      "control_observation_id": "OBS-19-TM",
+      "assessed_scope": "Hai điểm gọi của CTL-SHARED-19",
+      "assessed_period": "Tương lai; ngày hiệu lực Not provided",
+      "baseline_link_ids": [
+        "CBL-19-05"
+      ],
+      "comparison_ids": [
+        "CMP-19-04"
+      ],
+      "gap_ids": [],
+      "source_ids": [
+        "SOP-19A",
+        "SOP-19B",
+        "EVD-19A",
+        "EVD-19B"
+      ],
+      "evidence_ids": [],
+      "source_reference": [
+        "/Users/thiendeptrainhat/Documents/Thien's Skills Library/Thien-Risk-Process-Control/tests/phase-3/fixtures/P1-U19-V01/input.md:5",
+        "/Users/thiendeptrainhat/Documents/Thien's Skills Library/Thien-Risk-Process-Control/tests/phase-3/fixtures/P1-U19-V01/input.md:6",
+        "/Users/thiendeptrainhat/Documents/Thien's Skills Library/Thien-Risk-Process-Control/tests/phase-3/fixtures/P1-U19-V01/input.md:7",
+        "/Users/thiendeptrainhat/Documents/Thien's Skills Library/Thien-Risk-Process-Control/tests/phase-3/fixtures/P1-U19-V01/input.md:8"
+      ],
+      "confidence": "Medium",
+      "review_status": "Not reviewed"
+    }
+  ],
+  "view_rules": {
+    "grain": "Một rcm_id = một association risk–control–observation–scope; control_description lấy từ đúng observation, không chọn observation mới nhất.",
+    "control_count": "COUNT DISTINCT control_id theo lifecycle_scope. Có 3 current logical controls và 1 target-only proposal; CTL-SHARED-19 tính 1, không tính 2 điểm gọi thành 2 controls.",
+    "comparisons": "Xuyên layer chỉ qua CMP; As-Designed observations rỗng vì chưa có nguồn xác nhận.",
+    "management_action_view": "Join actions -> recommendations -> gaps/design_opportunities -> comparisons -> no_change_scenarios bằng ID; owner/date/priority thiếu phải giữ nguyên.",
+    "evidence_limit": "Không tính Target-State vào existing protection; không suy performance/compliance từ số dòng, status VERIFIED, doc hoặc một case.",
+    "subsystem_limits": "CTL-19-MON chỉ monitoring proposal, không chứng minh recovery/availability đạt yêu cầu."
+  }
+}

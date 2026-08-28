@@ -1,0 +1,50 @@
+{
+  "reader": "pypdf",
+  "reader_version": "6.10.0",
+  "mode": "LOCAL_STATIC_READ_ONLY",
+  "source_path": "/private/tmp/thien-rpc-phase3.xGeed0/P1-U16-V01-R1/document-evidence/working.pdf",
+  "size_bytes": 60623,
+  "sha256": "9182b8b70c2027a5c81675365c6afd7383e2fbb9fa1cd7498aaf9b02f264714a",
+  "is_encrypted": false,
+  "metadata": {
+    "/Author": "anonymous",
+    "/CreationDate": "D:20000101000000+00'00'",
+    "/Creator": "anonymous",
+    "/Keywords": "",
+    "/ModDate": "D:20000101000000+00'00'",
+    "/Producer": "ReportLab PDF Library - (opensource)",
+    "/Subject": "unspecified",
+    "/Title": "Synthetic degraded scan SOP-SYN-16",
+    "/Trapped": "/False"
+  },
+  "page_count": 1,
+  "active_content_key_hits": [],
+  "visited_indirect_objects": 8,
+  "limitations": [
+    "Static parsed-key inspection, not malware scanning or authentication; no action executed.",
+    "Does not identify page-rendered warnings without visual inspection."
+  ],
+  "pages": [
+    {
+      "page": 1,
+      "media_box_points": [
+        0.0,
+        0.0,
+        612.0,
+        792.0
+      ],
+      "rotation": 0,
+      "raw_native_text": "",
+      "native_text_char_count": 0,
+      "images": [
+        {
+          "name": "/FormXob.9f7136f73380ab870ce4d13c697c876a",
+          "width": 1200,
+          "height": 1600,
+          "filter": "['/ASCII85Decode', '/FlateDecode']",
+          "bits_per_component": 8
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,76 @@
+{
+  "run_id": "P1-P03-V01-R2",
+  "reviewer": {
+    "name": "/root Codex task",
+    "role": "Author of updated documentation performing a bounded P03 static self-check",
+    "relationship": "self_check"
+  },
+  "timestamp": "2026-08-28T02:39:18.164Z",
+  "rubric_source_sha256": "69db89db1ccd63703526aee9c0bc6305a5499905ec75f656a754ecce5840fbcb",
+  "result": "pass",
+  "checks": {
+    "case.must_observe.1": {
+      "result": "pass",
+      "rationale": "The reviewed docs preserve separate current model, tooling, packaging and native-platform claims. Actual 61 tooling tests, 13 content checks and unchanged builder result are retained, without increasing the 29 behavioral passes.",
+      "evidence_refs": [
+        {
+          "artifact": "raw_output",
+          "locator": "L10-L12"
+        },
+        {
+          "artifact": "tool_trace",
+          "locator": "entire_artifact"
+        }
+      ]
+    },
+    "case.must_observe.2": {
+      "result": "pass",
+      "rationale": "Native surfaces and installation remain not_run, historical round-1 remains executed_unreviewed. The old input relocation and stale-index failure/recovery are explicit. New-doc acceptance remains conditional on the post-review derived gate.",
+      "evidence_refs": [
+        {
+          "artifact": "raw_output",
+          "locator": "L14-L17"
+        },
+        {
+          "artifact": "tool_trace",
+          "locator": "entire_artifact"
+        }
+      ]
+    },
+    "case.must_observe.3": {
+      "result": "pass",
+      "rationale": "104 registry and 28 provisional historical summaries are not counted as 1.1.0 behavioral passes. Actual baseline-preservation checks and byte-identical old documentation/evidence retention support this distinction.",
+      "evidence_refs": [
+        {
+          "artifact": "raw_output",
+          "locator": "L19-L21"
+        },
+        {
+          "artifact": "tool_trace",
+          "locator": "entire_artifact"
+        }
+      ]
+    },
+    "case.must_not_observe.1": {
+      "result": "pass",
+      "rationale": "Docs distinguish artifact, discovery, activation and behavior; capability simulations and one Codex runtime do not establish cross-platform verification. Test acceptance is separate from the later user-authorized Git push.",
+      "evidence_refs": [
+        {
+          "artifact": "raw_output",
+          "locator": "L23-L26"
+        },
+        {
+          "artifact": "tool_trace",
+          "locator": "entire_artifact"
+        }
+      ]
+    }
+  },
+  "limitations": [
+    "Same-author bounded documentation self-check; not a new model business-case execution or third-party review.",
+    "Only README presentation and project handoff changed in this follow-up; runtime/ZIP contents remain as reviewed in Phase 3.",
+    "Historical README input relocated byte-identically with provenance; original receipt/index/results retained, old output/trace/review untouched.",
+    "Initial stale-index failure and successful index-refresh recovery are retained; neither pre-awards acceptance to this new review.",
+    "No native platform discovery, installation, security/legal certification or Git push success is claimed by this retest."
+  ]
+}

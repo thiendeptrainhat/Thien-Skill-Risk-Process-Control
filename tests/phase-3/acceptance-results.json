@@ -1,0 +1,3363 @@
+{
+  "acceptance_status": "evidence_complete",
+  "claims_by_context": [
+    {
+      "claims": {
+        "backward_compatibility": {
+          "contains_simulated_capabilities": false,
+          "eligible_for_current_release": true,
+          "group_review_ids": [],
+          "limitations": [],
+          "platform_verification_eligible": true,
+          "required_variant_ids": [
+            "P1-U22-V01"
+          ],
+          "selected_run_ids": [
+            "P1-U22-V01-R1"
+          ],
+          "status": "verified"
+        },
+        "core_business_logic": {
+          "contains_simulated_capabilities": true,
+          "eligible_for_current_release": true,
+          "group_review_ids": [],
+          "limitations": [],
+          "platform_verification_eligible": false,
+          "required_variant_ids": [
+            "P1-U01-V01",
+            "P1-U02-V01",
+            "P1-U03-V01",
+            "P1-U04-V01",
+            "P1-U05-V01",
+            "P1-U07-V01",
+            "P1-U08-V01",
+            "P1-U08-V02",
+            "P1-U08-V03",
+            "P1-U09-V01",
+            "P1-U10-V01",
+            "P1-U11-V01",
+            "P1-U12-V01",
+            "P1-U13-V01",
+            "P1-U14-V01",
+            "P1-U16-V02",
+            "P1-U17-V01",
+            "P1-U17-V02",
+            "P1-U18-V01",
+            "P1-U19-V01",
+            "P1-U20-V01",
+            "P1-U20-V02",
+            "P1-U21-V01"
+          ],
+          "selected_run_ids": [
+            "P1-U01-V01-R2",
+            "P1-U02-V01-R2",
+            "P1-U03-V01-R1",
+            "P1-U04-V01-R2",
+            "P1-U05-V01-R1",
+            "P1-U07-V01-R1",
+            "P1-U08-V01-R1",
+            "P1-U08-V02-R1",
+            "P1-U08-V03-R1",
+            "P1-U09-V01-R1",
+            "P1-U10-V01-R1",
+            "P1-U11-V01-R1",
+            "P1-U12-V01-R1",
+            "P1-U13-V01-R1",
+            "P1-U14-V01-R1",
+            "P1-U16-V02-R1",
+            "P1-U17-V01-R1",
+            "P1-U17-V02-R1",
+            "P1-U18-V01-R1",
+            "P1-U19-V01-R2",
+            "P1-U20-V01-R1",
+            "P1-U20-V02-R1",
+            "P1-U21-V01-R1"
+          ],
+          "status": "verified"
+        },
+        "distribution_integrity": {
+          "eligible_for_current_release": false,
+          "status": "not_applicable"
+        },
+        "document_evidence_packet_consumption": {
+          "contains_simulated_capabilities": false,
+          "eligible_for_current_release": true,
+          "group_review_ids": [],
+          "limitations": [],
+          "platform_verification_eligible": true,
+          "required_variant_ids": [
+            "P1-U16-V02"
+          ],
+          "selected_run_ids": [
+            "P1-U16-V02-R1"
+          ],
+          "status": "verified"
+        },
+        "file_input_parity": {
+          "contains_simulated_capabilities": false,
+          "eligible_for_current_release": true,
+          "group_review_ids": [
+            "P1-U15-GROUP-R1"
+          ],
+          "limitations": [],
+          "platform_verification_eligible": true,
+          "required_variant_ids": [
+            "P1-U15-V01",
+            "P1-U15-V02",
+            "P1-U15-V03"
+          ],
+          "selected_run_ids": [
+            "P1-U15-V01-R1",
+            "P1-U15-V02-R1",
+            "P1-U15-V03-R1"
+          ],
+          "status": "verified"
+        },
+        "live_document_evidence_handoff": {
+          "contains_simulated_capabilities": false,
+          "eligible_for_current_release": true,
+          "group_review_ids": [],
+          "limitations": [],
+          "platform_verification_eligible": true,
+          "required_variant_ids": [
+            "P1-U16-V01"
+          ],
+          "selected_run_ids": [
+            "P1-U16-V01-R1"
+          ],
+          "status": "verified"
+        },
+        "live_external_lookup": {
+          "contains_simulated_capabilities": false,
+          "eligible_for_current_release": true,
+          "group_review_ids": [],
+          "limitations": [],
+          "platform_verification_eligible": true,
+          "required_variant_ids": [
+            "P1-U06-V01"
+          ],
+          "selected_run_ids": [
+            "P1-U06-V01-R1"
+          ],
+          "status": "verified"
+        }
+      },
+      "context_id": "0303a497434fb718",
+      "model": null,
+      "model_identifier_status": "not_available",
+      "platform": "Codex",
+      "runtime": "collaboration.spawn_agent",
+      "snapshot": {
+        "canonical_differences": [],
+        "canonical_source": "skills/thien-skill-risk-process-control",
+        "content_sha256": "c438e1c23ea70b5ea14e5092841580cb3938a14e49499f870db0eb6aaf9adc2a",
+        "file_count": 49,
+        "manifest_path": "tests/phase-3/snapshots/round-2/manifest.json",
+        "manifest_sha256": "a15ee9c18e5f76ec9711098fe9cf6c6dce6dddf870d7bc528df9a39c23017113",
+        "matches_current_canonical": true,
+        "skill_id": "thien-skill-risk-process-control",
+        "skill_version": "1.1.0",
+        "source_root": "tests/phase-3/snapshots/round-2/skill",
+        "valid": true
+      },
+      "snapshot_manifest_sha256": "a15ee9c18e5f76ec9711098fe9cf6c6dce6dddf870d7bc528df9a39c23017113",
+      "surface": "Codex desktop delegated local runtime",
+      "verification_mode": "model"
+    },
+    {
+      "claims": {
+        "backward_compatibility": {
+          "eligible_for_current_release": false,
+          "status": "not_applicable"
+        },
+        "core_business_logic": {
+          "eligible_for_current_release": false,
+          "status": "not_applicable"
+        },
+        "distribution_integrity": {
+          "contains_simulated_capabilities": false,
+          "eligible_for_current_release": true,
+          "group_review_ids": [],
+          "limitations": [],
+          "platform_verification_eligible": false,
+          "required_variant_ids": [
+            "P1-P01-V01",
+            "P1-P02-V01",
+            "P1-P03-V01"
+          ],
+          "selected_run_ids": [
+            "P1-P01-V01-R1",
+            "P1-P02-V01-R1",
+            "P1-P03-V01-R2"
+          ],
+          "status": "verified"
+        },
+        "document_evidence_packet_consumption": {
+          "eligible_for_current_release": false,
+          "status": "not_applicable"
+        },
+        "file_input_parity": {
+          "eligible_for_current_release": false,
+          "status": "not_applicable"
+        },
+        "live_document_evidence_handoff": {
+          "eligible_for_current_release": false,
+          "status": "not_applicable"
+        },
+        "live_external_lookup": {
+          "eligible_for_current_release": false,
+          "status": "not_applicable"
+        }
+      },
+      "context_id": "4a134d99a9f37949",
+      "model": null,
+      "model_identifier_status": "not_applicable",
+      "platform": "local",
+      "runtime": "Python/Ruby/ZIP read-only checks",
+      "snapshot": {
+        "canonical_differences": [],
+        "canonical_source": "skills/thien-skill-risk-process-control",
+        "content_sha256": "c438e1c23ea70b5ea14e5092841580cb3938a14e49499f870db0eb6aaf9adc2a",
+        "file_count": 49,
+        "manifest_path": "tests/phase-3/snapshots/round-2/manifest.json",
+        "manifest_sha256": "a15ee9c18e5f76ec9711098fe9cf6c6dce6dddf870d7bc528df9a39c23017113",
+        "matches_current_canonical": true,
+        "skill_id": "thien-skill-risk-process-control",
+        "skill_version": "1.1.0",
+        "source_root": "tests/phase-3/snapshots/round-2/skill",
+        "valid": true
+      },
+      "snapshot_manifest_sha256": "a15ee9c18e5f76ec9711098fe9cf6c6dce6dddf870d7bc528df9a39c23017113",
+      "surface": "Local release tooling",
+      "verification_mode": "static"
+    },
+    {
+      "claims": {
+        "backward_compatibility": {
+          "contains_simulated_capabilities": false,
+          "eligible_for_current_release": false,
+          "group_review_ids": [],
+          "limitations": [],
+          "platform_verification_eligible": false,
+          "required_variant_ids": [
+            "P1-U22-V01"
+          ],
+          "selected_run_ids": [],
+          "status": "not_run"
+        },
+        "core_business_logic": {
+          "contains_simulated_capabilities": false,
+          "eligible_for_current_release": false,
+          "group_review_ids": [],
+          "limitations": [],
+          "platform_verification_eligible": false,
+          "required_variant_ids": [
+            "P1-U01-V01",
+            "P1-U02-V01",
+            "P1-U03-V01",
+            "P1-U04-V01",
+            "P1-U05-V01",
+            "P1-U07-V01",
+            "P1-U08-V01",
+            "P1-U08-V02",
+            "P1-U08-V03",
+            "P1-U09-V01",
+            "P1-U10-V01",
+            "P1-U11-V01",
+            "P1-U12-V01",
+            "P1-U13-V01",
+            "P1-U14-V01",
+            "P1-U16-V02",
+            "P1-U17-V01",
+            "P1-U17-V02",
+            "P1-U18-V01",
+            "P1-U19-V01",
+            "P1-U20-V01",
+            "P1-U20-V02",
+            "P1-U21-V01"
+          ],
+          "selected_run_ids": [
+            "P1-U01-V01-R1",
+            "P1-U02-V01-R1",
+            "P1-U04-V01-R1",
+            "P1-U19-V01-R1"
+          ],
+          "status": "executed_unreviewed"
+        },
+        "distribution_integrity": {
+          "eligible_for_current_release": false,
+          "status": "not_applicable"
+        },
+        "document_evidence_packet_consumption": {
+          "contains_simulated_capabilities": false,
+          "eligible_for_current_release": false,
+          "group_review_ids": [],
+          "limitations": [],
+          "platform_verification_eligible": false,
+          "required_variant_ids": [
+            "P1-U16-V02"
+          ],
+          "selected_run_ids": [],
+          "status": "not_run"
+        },
+        "file_input_parity": {
+          "contains_simulated_capabilities": false,
+          "eligible_for_current_release": false,
+          "group_review_ids": [],
+          "limitations": [
+            "No group review for the selected P1-U15 run set."
+          ],
+          "platform_verification_eligible": false,
+          "required_variant_ids": [
+            "P1-U15-V01",
+            "P1-U15-V02",
+            "P1-U15-V03"
+          ],
+          "selected_run_ids": [],
+          "status": "not_run"
+        },
+        "live_document_evidence_handoff": {
+          "contains_simulated_capabilities": false,
+          "eligible_for_current_release": false,
+          "group_review_ids": [],
+          "limitations": [],
+          "platform_verification_eligible": false,
+          "required_variant_ids": [
+            "P1-U16-V01"
+          ],
+          "selected_run_ids": [],
+          "status": "not_run"
+        },
+        "live_external_lookup": {
+          "contains_simulated_capabilities": false,
+          "eligible_for_current_release": false,
+          "group_review_ids": [],
+          "limitations": [],
+          "platform_verification_eligible": false,
+          "required_variant_ids": [
+            "P1-U06-V01"
+          ],
+          "selected_run_ids": [],
+          "status": "not_run"
+        }
+      },
+      "context_id": "d75393cebb190432",
+      "model": null,
+      "model_identifier_status": "not_available",
+      "platform": "Codex",
+      "runtime": "collaboration.spawn_agent",
+      "snapshot": {
+        "canonical_differences": [
+          "integration/master-orchestrator-registry-entry.yaml"
+        ],
+        "canonical_source": "skills/thien-skill-risk-process-control",
+        "content_sha256": "3496231922b76c3f3c8263eeed74f2c4bdab57a933d02012a87be4e359af8ac2",
+        "file_count": 49,
+        "manifest_path": "tests/phase-3/snapshots/round-1/manifest.json",
+        "manifest_sha256": "615bf303fbdebee10ebc8bb17a63961504c592f4040f3aa4a3f20202cd527d8b",
+        "matches_current_canonical": false,
+        "skill_id": "thien-skill-risk-process-control",
+        "skill_version": "1.1.0",
+        "source_root": "tests/phase-3/snapshots/round-1/skill",
+        "valid": true
+      },
+      "snapshot_manifest_sha256": "615bf303fbdebee10ebc8bb17a63961504c592f4040f3aa4a3f20202cd527d8b",
+      "surface": "Codex desktop delegated local runtime",
+      "verification_mode": "model"
+    }
+  ],
+  "current_release_gate": {
+    "human_approval": "not_assessed",
+    "installation": "not_run",
+    "legacy_static_registry_status": "pass",
+    "publication": "not_authorized_by_test_results",
+    "qualified_context_ids": [
+      "0303a497434fb718"
+    ],
+    "required_claims": [
+      "core_business_logic",
+      "backward_compatibility",
+      "distribution_integrity"
+    ],
+    "status": "evidence_complete"
+  },
+  "error_count": 0,
+  "errors": [],
+  "evidence_counts": {
+    "group_reviews": 1,
+    "retained_runs": 37,
+    "run_statuses": {
+      "executed_unreviewed": 4,
+      "pass": 33
+    },
+    "snapshots": 2
+  },
+  "generated_at": "2026-08-28T02:39:20+00:00",
+  "group_reviews": [
+    {
+      "case_id": "P1-U15",
+      "context_id": "0303a497434fb718",
+      "group_review_id": "P1-U15-GROUP-R1",
+      "reviewer": {
+        "name": "/root Codex task",
+        "relationship": "independent",
+        "role": "Acceptance reviewer; did not produce the run answers"
+      },
+      "run_ids": [
+        "P1-U15-V01-R1",
+        "P1-U15-V02-R1",
+        "P1-U15-V03-R1"
+      ],
+      "status": "pass",
+      "valid": true
+    }
+  ],
+  "integrity_status": "pass",
+  "legacy_static_registry": {
+    "behavioral": {
+      "executed": 0,
+      "note": "Behavioral selection is defined but this deterministic runner does not execute model tests.",
+      "selected": 28,
+      "status": "not_run"
+    },
+    "case_count": 104,
+    "case_results": [
+      {
+        "behavioral_status": "not_selected",
+        "deterministic_status": "pass",
+        "id": "A01"
+      },
+      {
+        "behavioral_status": "not_selected",
+        "deterministic_status": "pass",
+        "id": "A02"
+      },
+      {
+        "behavioral_status": "not_run",
+        "deterministic_status": "pass",
+        "id": "A03"
+      },
+      {
+        "behavioral_status": "not_run",
+        "deterministic_status": "pass",
+        "id": "A04"
+      },
+      {
+        "behavioral_status": "not_selected",
+        "deterministic_status": "pass",
+        "id": "A05"
+      },
+      {
+        "behavioral_status": "not_selected",
+        "deterministic_status": "pass",
+        "id": "A06"
+      },
+      {
+        "behavioral_status": "not_selected",
+        "deterministic_status": "pass",
+        "id": "A07"
+      },
+      {
+        "behavioral_status": "not_run",
+        "deterministic_status": "pass",
+        "id": "A08"
+      },
+      {
+        "behavioral_status": "not_selected",
+        "deterministic_status": "pass",
+        "id": "A09"
+      },
+      {
+        "behavioral_status": "not_selected",
+        "deterministic_status": "pass",
+        "id": "A10"
+      },
+      {
+        "behavioral_status": "not_selected",
+        "deterministic_status": "pass",
+        "id": "B01"
+      },
+      {
+        "behavioral_status": "not_selected",
+        "deterministic_status": "pass",
+        "id": "B02"
+      },
+      {
+        "behavioral_status": "not_selected",
+        "deterministic_status": "pass",
+        "id": "B03"
+      },
+      {
+        "behavioral_status": "not_selected",
+        "deterministic_status": "pass",
+        "id": "B04"
+      },
+      {
+        "behavioral_status": "not_run",
+        "deterministic_status": "pass",
+        "id": "B05"
+      },
+      {
+        "behavioral_status": "not_run",
+        "deterministic_status": "pass",
+        "id": "B06"
+      },
+      {
+        "behavioral_status": "not_selected",
+        "deterministic_status": "pass",
+        "id": "B07"
+      },
+      {
+        "behavioral_status": "not_selected",
+        "deterministic_status": "pass",
+        "id": "B08"
+      },
+      {
+        "behavioral_status": "not_selected",
+        "deterministic_status": "pass",
+        "id": "C01"
+      },
+      {
+        "behavioral_status": "not_selected",
+        "deterministic_status": "pass",
+        "id": "C02"
+      },
+      {
+        "behavioral_status": "not_selected",
+        "deterministic_status": "pass",
+        "id": "C03"
+      },
+      {
+        "behavioral_status": "not_selected",
+        "deterministic_status": "pass",
+        "id": "C04"
+      },
+      {
+        "behavioral_status": "not_run",
+        "deterministic_status": "pass",
+        "id": "C05"
+      },
+      {
+        "behavioral_status": "not_run",
+        "deterministic_status": "pass",
+        "id": "C06"
+      },
+      {
+        "behavioral_status": "not_selected",
+        "deterministic_status": "pass",
+        "id": "C07"
+      },
+      {
+        "behavioral_status": "not_run",
+        "deterministic_status": "pass",
+        "id": "C08"
+      },
+      {
+        "behavioral_status": "not_selected",
+        "deterministic_status": "pass",
+        "id": "D01"
+      },
+      {
+        "behavioral_status": "not_selected",
+        "deterministic_status": "pass",
+        "id": "D02"
+      },
+      {
+        "behavioral_status": "not_selected",
+        "deterministic_status": "pass",
+        "id": "D03"
+      },
+      {
+        "behavioral_status": "not_selected",
+        "deterministic_status": "pass",
+        "id": "D04"
+      },
+      {
+        "behavioral_status": "not_selected",
+        "deterministic_status": "pass",
+        "id": "D05"
+      },
+      {
+        "behavioral_status": "not_run",
+        "deterministic_status": "pass",
+        "id": "D06"
+      },
+      {
+        "behavioral_status": "not_run",
+        "deterministic_status": "pass",
+        "id": "D07"
+      },
+      {
+        "behavioral_status": "not_selected",
+        "deterministic_status": "pass",
+        "id": "D08"
+      },
+      {
+        "behavioral_status": "not_selected",
+        "deterministic_status": "pass",
+        "id": "D09"
+      },
+      {
+        "behavioral_status": "not_run",
+        "deterministic_status": "pass",
+        "id": "D10"
+      },
+      {
+        "behavioral_status": "not_run",
+        "deterministic_status": "pass",
+        "id": "E01"
+      },
+      {
+        "behavioral_status": "not_run",
+        "deterministic_status": "pass",
+        "id": "E02"
+      },
+      {
+        "behavioral_status": "not_selected",
+        "deterministic_status": "pass",
+        "id": "E03"
+      },
+      {
+        "behavioral_status": "not_selected",
+        "deterministic_status": "pass",
+        "id": "E04"
+      },
+      {
+        "behavioral_status": "not_selected",
+        "deterministic_status": "pass",
+        "id": "E05"
+      },
+      {
+        "behavioral_status": "not_selected",
+        "deterministic_status": "pass",
+        "id": "E06"
+      },
+      {
+        "behavioral_status": "not_run",
+        "deterministic_status": "pass",
+        "id": "F01"
+      },
+      {
+        "behavioral_status": "not_run",
+        "deterministic_status": "pass",
+        "id": "F02"
+      },
+      {
+        "behavioral_status": "not_selected",
+        "deterministic_status": "pass",
+        "id": "F03"
+      },
+      {
+        "behavioral_status": "not_selected",
+        "deterministic_status": "pass",
+        "id": "F04"
+      },
+      {
+        "behavioral_status": "not_selected",
+        "deterministic_status": "pass",
+        "id": "F05"
+      },
+      {
+        "behavioral_status": "not_selected",
+        "deterministic_status": "pass",
+        "id": "F06"
+      },
+      {
+        "behavioral_status": "not_selected",
+        "deterministic_status": "pass",
+        "id": "G01"
+      },
+      {
+        "behavioral_status": "not_selected",
+        "deterministic_status": "pass",
+        "id": "G02"
+      },
+      {
+        "behavioral_status": "not_selected",
+        "deterministic_status": "pass",
+        "id": "G03"
+      },
+      {
+        "behavioral_status": "not_selected",
+        "deterministic_status": "pass",
+        "id": "G04"
+      },
+      {
+        "behavioral_status": "not_run",
+        "deterministic_status": "pass",
+        "id": "G05"
+      },
+      {
+        "behavioral_status": "not_selected",
+        "deterministic_status": "pass",
+        "id": "G06"
+      },
+      {
+        "behavioral_status": "not_run",
+        "deterministic_status": "pass",
+        "id": "G07"
+      },
+      {
+        "behavioral_status": "not_selected",
+        "deterministic_status": "pass",
+        "id": "G08"
+      },
+      {
+        "behavioral_status": "not_run",
+        "deterministic_status": "pass",
+        "id": "H01"
+      },
+      {
+        "behavioral_status": "not_selected",
+        "deterministic_status": "pass",
+        "id": "H02"
+      },
+      {
+        "behavioral_status": "not_selected",
+        "deterministic_status": "pass",
+        "id": "H03"
+      },
+      {
+        "behavioral_status": "not_run",
+        "deterministic_status": "pass",
+        "id": "H04"
+      },
+      {
+        "behavioral_status": "not_selected",
+        "deterministic_status": "pass",
+        "id": "H05"
+      },
+      {
+        "behavioral_status": "not_selected",
+        "deterministic_status": "pass",
+        "id": "H06"
+      },
+      {
+        "behavioral_status": "not_selected",
+        "deterministic_status": "pass",
+        "id": "H07"
+      },
+      {
+        "behavioral_status": "not_selected",
+        "deterministic_status": "pass",
+        "id": "H08"
+      },
+      {
+        "behavioral_status": "not_selected",
+        "deterministic_status": "pass",
+        "id": "I01"
+      },
+      {
+        "behavioral_status": "not_selected",
+        "deterministic_status": "pass",
+        "id": "I02"
+      },
+      {
+        "behavioral_status": "not_run",
+        "deterministic_status": "pass",
+        "id": "I03"
+      },
+      {
+        "behavioral_status": "not_selected",
+        "deterministic_status": "pass",
+        "id": "I04"
+      },
+      {
+        "behavioral_status": "not_selected",
+        "deterministic_status": "pass",
+        "id": "I05"
+      },
+      {
+        "behavioral_status": "not_selected",
+        "deterministic_status": "pass",
+        "id": "I06"
+      },
+      {
+        "behavioral_status": "not_selected",
+        "deterministic_status": "pass",
+        "id": "I07"
+      },
+      {
+        "behavioral_status": "not_selected",
+        "deterministic_status": "pass",
+        "id": "I08"
+      },
+      {
+        "behavioral_status": "not_selected",
+        "deterministic_status": "pass",
+        "id": "J01"
+      },
+      {
+        "behavioral_status": "not_run",
+        "deterministic_status": "pass",
+        "id": "J02"
+      },
+      {
+        "behavioral_status": "not_selected",
+        "deterministic_status": "pass",
+        "id": "J03"
+      },
+      {
+        "behavioral_status": "not_selected",
+        "deterministic_status": "pass",
+        "id": "J04"
+      },
+      {
+        "behavioral_status": "not_selected",
+        "deterministic_status": "pass",
+        "id": "J05"
+      },
+      {
+        "behavioral_status": "not_run",
+        "deterministic_status": "pass",
+        "id": "J06"
+      },
+      {
+        "behavioral_status": "not_selected",
+        "deterministic_status": "pass",
+        "id": "J07"
+      },
+      {
+        "behavioral_status": "not_selected",
+        "deterministic_status": "pass",
+        "id": "J08"
+      },
+      {
+        "behavioral_status": "not_selected",
+        "deterministic_status": "pass",
+        "id": "K01"
+      },
+      {
+        "behavioral_status": "not_selected",
+        "deterministic_status": "pass",
+        "id": "K02"
+      },
+      {
+        "behavioral_status": "not_selected",
+        "deterministic_status": "pass",
+        "id": "K03"
+      },
+      {
+        "behavioral_status": "not_run",
+        "deterministic_status": "pass",
+        "id": "K04"
+      },
+      {
+        "behavioral_status": "not_selected",
+        "deterministic_status": "pass",
+        "id": "K05"
+      },
+      {
+        "behavioral_status": "not_selected",
+        "deterministic_status": "pass",
+        "id": "K06"
+      },
+      {
+        "behavioral_status": "not_selected",
+        "deterministic_status": "pass",
+        "id": "K07"
+      },
+      {
+        "behavioral_status": "not_selected",
+        "deterministic_status": "pass",
+        "id": "K08"
+      },
+      {
+        "behavioral_status": "not_run",
+        "deterministic_status": "pass",
+        "id": "K09"
+      },
+      {
+        "behavioral_status": "not_selected",
+        "deterministic_status": "pass",
+        "id": "K10"
+      },
+      {
+        "behavioral_status": "not_run",
+        "deterministic_status": "pass",
+        "id": "L01"
+      },
+      {
+        "behavioral_status": "not_run",
+        "deterministic_status": "pass",
+        "id": "L02"
+      },
+      {
+        "behavioral_status": "not_selected",
+        "deterministic_status": "pass",
+        "id": "L03"
+      },
+      {
+        "behavioral_status": "not_selected",
+        "deterministic_status": "pass",
+        "id": "L04"
+      },
+      {
+        "behavioral_status": "not_selected",
+        "deterministic_status": "pass",
+        "id": "L05"
+      },
+      {
+        "behavioral_status": "not_selected",
+        "deterministic_status": "pass",
+        "id": "M01"
+      },
+      {
+        "behavioral_status": "not_selected",
+        "deterministic_status": "pass",
+        "id": "M02"
+      },
+      {
+        "behavioral_status": "not_selected",
+        "deterministic_status": "pass",
+        "id": "M03"
+      },
+      {
+        "behavioral_status": "not_selected",
+        "deterministic_status": "pass",
+        "id": "M04"
+      },
+      {
+        "behavioral_status": "not_selected",
+        "deterministic_status": "pass",
+        "id": "M05"
+      },
+      {
+        "behavioral_status": "not_run",
+        "deterministic_status": "pass",
+        "id": "M06"
+      },
+      {
+        "behavioral_status": "not_selected",
+        "deterministic_status": "pass",
+        "id": "M07"
+      },
+      {
+        "behavioral_status": "not_run",
+        "deterministic_status": "pass",
+        "id": "M08"
+      },
+      {
+        "behavioral_status": "not_selected",
+        "deterministic_status": "pass",
+        "id": "M09"
+      }
+    ],
+    "checks": {
+      "behavioral_selection": "pass",
+      "exact_case_count": "pass",
+      "family_counts": "pass",
+      "ids_fields_and_values": "pass",
+      "package_validator": "pass",
+      "requirement_coverage": "pass"
+    },
+    "error_count": 0,
+    "errors": [],
+    "expected_case_count": 104,
+    "family_counts": {
+      "A": 10,
+      "B": 8,
+      "C": 8,
+      "D": 10,
+      "E": 6,
+      "F": 6,
+      "G": 8,
+      "H": 8,
+      "I": 8,
+      "J": 8,
+      "K": 10,
+      "L": 5,
+      "M": 9
+    },
+    "generated_at": "2026-08-28T02:39:19+00:00",
+    "package_validator": {
+      "checks": {
+        "assets": "pass",
+        "license_copies": "pass",
+        "no_symlinks": "pass",
+        "relative_markdown_links": "pass",
+        "release_safe_text": "pass",
+        "required_structure": "pass",
+        "skill_frontmatter": "pass",
+        "structured_file_syntax": "pass",
+        "template_ids_and_relationships": "pass"
+      },
+      "error_count": 0,
+      "errors": [],
+      "skill_id": "thien-skill-risk-process-control",
+      "status": "pass",
+      "target": "canonical",
+      "validator": "validate_package.py",
+      "warning_count": 0,
+      "warnings": []
+    },
+    "status": "pass",
+    "suite": "Thien-Skill-Risk-Process-Control deterministic acceptance"
+  },
+  "limitations": [
+    "This validator does not execute models, authenticate executor identity, reconstruct hidden context, or independently establish review accuracy. It verifies retained bytes, metadata and attributed per-invariant reviews.",
+    "A review pass for must_not_observe means the prohibited behavior was not observed. All mandatory checks are required; case counts, fixture existence and static passes are not behavioral acceptance.",
+    "Claims apply only to the recorded runtime/model/capability conditions and exact skill snapshot. A simulated capability profile is not platform verification; historical snapshot results do not verify changed canonical content.",
+    "Untested surfaces remain not_run. Valid ZIPs do not establish installation or cross-platform behavior, operating effectiveness, legal compliance, user approval or publication authority.",
+    "A zero exit code indicates valid evidence structure, not complete acceptance. Check acceptance_status, individual claims, snapshot currency and current_release_gate separately."
+  ],
+  "matrix": {
+    "case_count": 25,
+    "requirement_ids": [
+      "R01",
+      "R02",
+      "R03",
+      "R04",
+      "R05",
+      "R06",
+      "R07",
+      "X01",
+      "X02",
+      "X03",
+      "X04",
+      "X05",
+      "X06"
+    ],
+    "source_path": "docs/phase-1/ACCEPTANCE-MATRIX.yaml",
+    "source_sha256": "69db89db1ccd63703526aee9c0bc6305a5499905ec75f656a754ecce5840fbcb",
+    "variant_count": 32
+  },
+  "mode": "phase3_evidence_validation",
+  "per_platform": [
+    {
+      "actual_model_runs": 0,
+      "context_ids": [],
+      "simulated_capability_runs": 0,
+      "status": "not_run",
+      "surface": "Codex runtime thực sự dùng để test",
+      "unverified_execution_records": 0
+    },
+    {
+      "actual_model_runs": 0,
+      "context_ids": [],
+      "simulated_capability_runs": 0,
+      "status": "not_run",
+      "surface": "Claude Desktop",
+      "unverified_execution_records": 0
+    },
+    {
+      "actual_model_runs": 0,
+      "context_ids": [],
+      "simulated_capability_runs": 0,
+      "status": "not_run",
+      "surface": "Claude Web",
+      "unverified_execution_records": 0
+    },
+    {
+      "actual_model_runs": 0,
+      "context_ids": [],
+      "simulated_capability_runs": 0,
+      "status": "not_run",
+      "surface": "ChatGPT Desktop",
+      "unverified_execution_records": 0
+    },
+    {
+      "actual_model_runs": 0,
+      "context_ids": [],
+      "simulated_capability_runs": 0,
+      "status": "not_run",
+      "surface": "ChatGPT Web",
+      "unverified_execution_records": 0
+    },
+    {
+      "actual_model_runs": 27,
+      "context_ids": [
+        "d75393cebb190432",
+        "0303a497434fb718"
+      ],
+      "simulated_capability_runs": 6,
+      "status": "tested_partial",
+      "surface": "Codex desktop delegated local runtime",
+      "unverified_execution_records": 0
+    }
+  ],
+  "runs": [
+    {
+      "artifact_refs": {
+        "execution_record": {
+          "path": "tests/phase-3/runs/P1-P01-V01-R1/execution-record.json",
+          "sha256": "74f2e7f8dcb1d24d283ccb210a4f2d65391465525828f84320fc110a7d3806d5"
+        },
+        "raw_output": {
+          "path": "tests/phase-3/runs/P1-P01-V01-R1/artifacts/output.json",
+          "sha256": "c5174f96e12b61f47f0132e9d9f8280413d1d97f8f639acdba03e7842f51ed30"
+        },
+        "raw_prompt": {
+          "path": "tests/phase-3/runs/P1-P01-V01-R1/prompt.txt",
+          "sha256": "1087abf731f19ce7b3330d801642cb3b4c442fccbc5536d59d1a2b706856fe5e"
+        },
+        "review": {
+          "path": "tests/phase-3/reviews/P1-P01-V01-R1.json",
+          "sha256": "d2ed6e6b8052e626f269bcf736501b361e87b73d39a70effee6eaa08e010e5e5"
+        },
+        "skill_snapshot": {
+          "path": "tests/phase-3/snapshots/round-2/manifest.json",
+          "sha256": "a15ee9c18e5f76ec9711098fe9cf6c6dce6dddf870d7bc528df9a39c23017113"
+        },
+        "tool_trace": {
+          "path": "tests/phase-3/runs/P1-P01-V01-R1/artifacts/tool-trace.json",
+          "sha256": "cb8221ce40738f304ae725d1ea93595b6654796b394442d38b58fdfcad2cabfb"
+        }
+      },
+      "case_id": "P1-P01",
+      "context_id": "4a134d99a9f37949",
+      "execution_status": "executed",
+      "limitations": [
+        "Actual static content checks, not model behavior or platform installation.",
+        "Root authored the independent-from-builder checker and reviewed its output; this is self-check, not third-party assurance.",
+        "Bounded credential patterns and content provenance review do not establish absence of every secret or legal/malware certification."
+      ],
+      "retest_of": [],
+      "review_metadata": {
+        "mandatory_checks": 4,
+        "reviewed_checks": 4,
+        "reviewer": {
+          "name": "/root Codex task",
+          "relationship": "self_check",
+          "role": "Release-content reviewer and static-check executor"
+        }
+      },
+      "run_id": "P1-P01-V01-R1",
+      "status": "pass",
+      "valid": true,
+      "variant_id": "P1-P01-V01",
+      "verification_mode": "static"
+    },
+    {
+      "artifact_refs": {
+        "execution_record": {
+          "path": "tests/phase-3/runs/P1-P02-V01-R1/execution-record.json",
+          "sha256": "44c1c7d3d87dcc57750b2c2be236e7e7918eaef7264128362ced1ac2a212781e"
+        },
+        "raw_output": {
+          "path": "tests/phase-3/runs/P1-P02-V01-R1/artifacts/output.json",
+          "sha256": "80143ed381be3eb8480174c47ce4c59d5227da65881d552002249945b0588f8d"
+        },
+        "raw_prompt": {
+          "path": "tests/phase-3/runs/P1-P02-V01-R1/prompt.txt",
+          "sha256": "74a9f61363682486701fb16c69e764b49ec42630767a173d349a631a98a0f7a0"
+        },
+        "review": {
+          "path": "tests/phase-3/reviews/P1-P02-V01-R1.json",
+          "sha256": "c491d92ded43adf41550bddee587cd009a663d7415a9ffbe1c81561d1cd4c859"
+        },
+        "skill_snapshot": {
+          "path": "tests/phase-3/snapshots/round-2/manifest.json",
+          "sha256": "a15ee9c18e5f76ec9711098fe9cf6c6dce6dddf870d7bc528df9a39c23017113"
+        },
+        "tool_trace": {
+          "path": "tests/phase-3/runs/P1-P02-V01-R1/artifacts/tool-trace.json",
+          "sha256": "375df5568c2f4ed9b8a67ad42010e0066ee7063715d0d05c8110edf3e227a213"
+        }
+      },
+      "case_id": "P1-P02",
+      "context_id": "4a134d99a9f37949",
+      "execution_status": "executed",
+      "limitations": [
+        "Actual static content checks, not model behavior or platform installation.",
+        "Root authored the independent-from-builder checker and reviewed its output; this is self-check, not third-party assurance.",
+        "Bounded credential patterns and content provenance review do not establish absence of every secret or legal/malware certification."
+      ],
+      "retest_of": [],
+      "review_metadata": {
+        "mandatory_checks": 3,
+        "reviewed_checks": 3,
+        "reviewer": {
+          "name": "/root Codex task",
+          "relationship": "self_check",
+          "role": "Release-content reviewer and static-check executor"
+        }
+      },
+      "run_id": "P1-P02-V01-R1",
+      "status": "pass",
+      "valid": true,
+      "variant_id": "P1-P02-V01",
+      "verification_mode": "static"
+    },
+    {
+      "artifact_refs": {
+        "execution_record": {
+          "path": "tests/phase-3/runs/P1-P03-V01-R1/execution-record.json",
+          "sha256": "cac0ac6df31ba7373a71e83b9028577e298d7850901ccacc703d9fb62e3036b7"
+        },
+        "raw_output": {
+          "path": "tests/phase-3/runs/P1-P03-V01-R1/artifacts/output.md",
+          "sha256": "e86deacff9d3b6f42c00e580fa56d8d7e41eaad0393739f1d5bddc404a95fa5f"
+        },
+        "raw_prompt": {
+          "path": "tests/phase-3/runs/P1-P03-V01-R1/dispatch-record.json",
+          "sha256": "79241903d4337b433a83cca20d83338a6183dd06adccb83a715c7f6c123a64a7"
+        },
+        "review": {
+          "path": "tests/phase-3/reviews/P1-P03-V01-R1.json",
+          "sha256": "1fcb260e9cb4011dca0c32fea4579b11d8722e74c9dd608b47a54b3e49ddfd3d"
+        },
+        "skill_snapshot": {
+          "path": "tests/phase-3/snapshots/round-2/manifest.json",
+          "sha256": "a15ee9c18e5f76ec9711098fe9cf6c6dce6dddf870d7bc528df9a39c23017113"
+        },
+        "tool_trace": {
+          "path": "tests/phase-3/runs/P1-P03-V01-R1/artifacts/tool-trace.json",
+          "sha256": "3f000542b0fe7d533d54bb4871c58a7600cec8dd5b880011b833a1de0e189019"
+        }
+      },
+      "case_id": "P1-P03",
+      "context_id": "4a134d99a9f37949",
+      "execution_status": "executed",
+      "limitations": [
+        "Static evidence/documentation review, not another model business-case execution or platform installation.",
+        "Peer audit did not author the reviewed documents, but remains same-team; root owns the release docs and final acceptance check.",
+        "Initial dispatch was truncated and immediately clarified; exact messages, actual clarified task and scope limits are retained.",
+        "Executor-maintained trace is not a full host transcript. Complete parsed validator stdout is retained with original result values; human approval/publication authority is separate.",
+        "After the user-requested README update, its historical input pointer was relocated to byte-identical tests/phase-3/documentation-snapshots/pre-handoff-update-2026-08-28/README.md; source path/hash and the original run record are retained in tests/phase-3/documentation-snapshots/pre-handoff-update-2026-08-28/manifest.json. Raw audit output, trace and review were not rewritten."
+      ],
+      "retest_of": [],
+      "review_metadata": {
+        "mandatory_checks": 4,
+        "reviewed_checks": 4,
+        "reviewer": {
+          "name": "/root Codex task",
+          "relationship": "self_check",
+          "role": "Final release-evidence reviewer; release-doc author, not author of peer audit output"
+        }
+      },
+      "run_id": "P1-P03-V01-R1",
+      "status": "pass",
+      "valid": true,
+      "variant_id": "P1-P03-V01",
+      "verification_mode": "static"
+    },
+    {
+      "artifact_refs": {
+        "execution_record": {
+          "path": "tests/phase-3/runs/P1-P03-V01-R2/execution-record.json",
+          "sha256": "e0c88c4fed6d8e896d4b371e5a06900010cd78ccc2f4c61e86ebd8ff548829ab"
+        },
+        "raw_output": {
+          "path": "tests/phase-3/runs/P1-P03-V01-R2/artifacts/output.md",
+          "sha256": "b9b70ba42d64b61ed514f362207b612077a3a81d52a78b54f0f24dbd37ef0e15"
+        },
+        "raw_prompt": {
+          "path": "tests/phase-3/runs/P1-P03-V01-R2/prompt.md",
+          "sha256": "80c42889f2866f7a6e900762899102e3261fd50897ad6d1d22ef3d2b57c81250"
+        },
+        "review": {
+          "path": "tests/phase-3/reviews/P1-P03-V01-R2.json",
+          "sha256": "0ede4b3143b0c142266db9c39286a2895388bed55c7166468e54ab496f0fa11f"
+        },
+        "skill_snapshot": {
+          "path": "tests/phase-3/snapshots/round-2/manifest.json",
+          "sha256": "a15ee9c18e5f76ec9711098fe9cf6c6dce6dddf870d7bc528df9a39c23017113"
+        },
+        "tool_trace": {
+          "path": "tests/phase-3/runs/P1-P03-V01-R2/artifacts/tool-trace.json",
+          "sha256": "b516d43586a1e8aa2f78dd0019227d6c8359409d895c448892665d5eb93434f6"
+        }
+      },
+      "case_id": "P1-P03",
+      "context_id": "4a134d99a9f37949",
+      "execution_status": "executed",
+      "limitations": [
+        "Same-author bounded documentation self-check; not a new model business-case execution or third-party review.",
+        "Only README presentation and project handoff changed in this follow-up; runtime/ZIP contents remain as reviewed in Phase 3.",
+        "Historical README input relocated byte-identically with provenance; original receipt/index/results retained, old output/trace/review untouched.",
+        "Initial stale-index failure and successful index-refresh recovery are retained; neither pre-awards acceptance to this new review.",
+        "No native platform discovery, installation, security/legal certification or Git push success is claimed by this retest."
+      ],
+      "retest_of": [
+        "P1-P03-V01-R1"
+      ],
+      "review_metadata": {
+        "mandatory_checks": 4,
+        "reviewed_checks": 4,
+        "reviewer": {
+          "name": "/root Codex task",
+          "relationship": "self_check",
+          "role": "Author of updated documentation performing a bounded P03 static self-check"
+        }
+      },
+      "run_id": "P1-P03-V01-R2",
+      "status": "pass",
+      "valid": true,
+      "variant_id": "P1-P03-V01",
+      "verification_mode": "static"
+    },
+    {
+      "artifact_refs": {
+        "execution_record": {
+          "path": "tests/phase-3/runs/P1-U01-V01-R1/execution-record.json",
+          "sha256": "4e2c6aaa8176834aaec1281c6761ff5bac41607144df4ef99b5f31655478c7ac"
+        },
+        "raw_output": {
+          "path": "tests/phase-3/runs/P1-U01-V01-R1/artifacts/output.md",
+          "sha256": "2f5fe25d5d5f3aa324f5bfcb3f781dfd1df3c634eb8f31fbae8f87943ab18a4b"
+        },
+        "raw_prompt": {
+          "path": "tests/phase-3/runs/P1-U01-V01-R1/prompt.txt",
+          "sha256": "ee4171b1f96affa1e89621c0fabb3af7d5eba538573db936cedaee9f0ff3200f"
+        },
+        "review": null,
+        "skill_snapshot": {
+          "path": "tests/phase-3/snapshots/round-1/manifest.json",
+          "sha256": "615bf303fbdebee10ebc8bb17a63961504c592f4040f3aa4a3f20202cd527d8b"
+        },
+        "tool_trace": {
+          "path": "tests/phase-3/runs/P1-U01-V01-R1/artifacts/tool-trace.json",
+          "sha256": "e7a8d485931aaad83f7e628303dd1ffd535ac3ec23511b70bf2829c0178787c4"
+        }
+      },
+      "case_id": "P1-U01",
+      "context_id": "d75393cebb190432",
+      "execution_status": "executed",
+      "limitations": [
+        "Synthetic business inputs, not real-organization assurance.",
+        "Executor-maintained trace, not a complete exported host transcript.",
+        "Exact model identifier is not exposed by this delegation interface."
+      ],
+      "retest_of": [],
+      "review_metadata": null,
+      "run_id": "P1-U01-V01-R1",
+      "status": "executed_unreviewed",
+      "valid": true,
+      "variant_id": "P1-U01-V01",
+      "verification_mode": "model"
+    },
+    {
+      "artifact_refs": {
+        "execution_record": {
+          "path": "tests/phase-3/runs/P1-U01-V01-R2/execution-record.json",
+          "sha256": "78348277e76b10a1f59879b643df76c49833c0dc918f030b156635ce3a0835aa"
+        },
+        "raw_output": {
+          "path": "tests/phase-3/runs/P1-U01-V01-R2/artifacts/output.md",
+          "sha256": "40f617853496ed36fb78ae954e68697f602f216174e855a63342cccff8a814f9"
+        },
+        "raw_prompt": {
+          "path": "tests/phase-3/runs/P1-U01-V01-R2/prompt.txt",
+          "sha256": "87f4191202f30211d7cf7387a37f4e0e8d082d282ef8058e6dc1ce01b24130da"
+        },
+        "review": {
+          "path": "tests/phase-3/reviews/P1-U01-V01-R2.json",
+          "sha256": "c85bf72f801fd8e95d57de72cec692d73f53ae2429f8f4cca1ec380cc215dbce"
+        },
+        "skill_snapshot": {
+          "path": "tests/phase-3/snapshots/round-2/manifest.json",
+          "sha256": "a15ee9c18e5f76ec9711098fe9cf6c6dce6dddf870d7bc528df9a39c23017113"
+        },
+        "tool_trace": {
+          "path": "tests/phase-3/runs/P1-U01-V01-R2/artifacts/tool-trace.json",
+          "sha256": "5e4dd78dd63cc83def19355a6f232683a991dda78589a6243b053900c7d2f510"
+        }
+      },
+      "case_id": "P1-U01",
+      "context_id": "0303a497434fb718",
+      "execution_status": "executed",
+      "limitations": [
+        "Synthetic business inputs, not real-organization assurance.",
+        "Executor-maintained trace, not a complete exported host transcript.",
+        "Exact model identifier is not exposed by this delegation interface."
+      ],
+      "retest_of": [
+        "P1-U01-V01-R1"
+      ],
+      "review_metadata": {
+        "mandatory_checks": 4,
+        "reviewed_checks": 4,
+        "reviewer": {
+          "name": "/root Codex task",
+          "relationship": "independent",
+          "role": "Acceptance reviewer; did not produce the run answer"
+        }
+      },
+      "run_id": "P1-U01-V01-R2",
+      "status": "pass",
+      "valid": true,
+      "variant_id": "P1-U01-V01",
+      "verification_mode": "model"
+    },
+    {
+      "artifact_refs": {
+        "execution_record": {
+          "path": "tests/phase-3/runs/P1-U02-V01-R1/execution-record.json",
+          "sha256": "f31dffb4c1c969b925b599e1e40a1aad718baf54fb2457194c0b0e8e4c462ef5"
+        },
+        "raw_output": {
+          "path": "tests/phase-3/runs/P1-U02-V01-R1/artifacts/output.md",
+          "sha256": "03a6aa4295f80c5981b3180feabe26dcb776293d6e1813e7118f95d989c57899"
+        },
+        "raw_prompt": {
+          "path": "tests/phase-3/runs/P1-U02-V01-R1/prompt.txt",
+          "sha256": "044bd611d04c867e047ea9d913d7a1037199492471525c86189005e454c501a1"
+        },
+        "review": null,
+        "skill_snapshot": {
+          "path": "tests/phase-3/snapshots/round-1/manifest.json",
+          "sha256": "615bf303fbdebee10ebc8bb17a63961504c592f4040f3aa4a3f20202cd527d8b"
+        },
+        "tool_trace": {
+          "path": "tests/phase-3/runs/P1-U02-V01-R1/artifacts/tool-trace.json",
+          "sha256": "8bfad8089ec43616a70d90089a78dfbb227c663e93a93dc680c465c802129802"
+        }
+      },
+      "case_id": "P1-U02",
+      "context_id": "d75393cebb190432",
+      "execution_status": "executed",
+      "limitations": [
+        "Synthetic business inputs, not real-organization assurance.",
+        "Executor-maintained trace, not a complete exported host transcript.",
+        "Exact model identifier is not exposed by this delegation interface."
+      ],
+      "retest_of": [],
+      "review_metadata": null,
+      "run_id": "P1-U02-V01-R1",
+      "status": "executed_unreviewed",
+      "valid": true,
+      "variant_id": "P1-U02-V01",
+      "verification_mode": "model"
+    },
+    {
+      "artifact_refs": {
+        "execution_record": {
+          "path": "tests/phase-3/runs/P1-U02-V01-R2/execution-record.json",
+          "sha256": "cd5bcc14364b503f990a0032efb12353e8462cd6fdeda0d5bd1070407d176e4a"
+        },
+        "raw_output": {
+          "path": "tests/phase-3/runs/P1-U02-V01-R2/artifacts/output.md",
+          "sha256": "28e3b7fdb13db89369e72c300d6c6c3d79485b0b439ed108de5451ecc1383e41"
+        },
+        "raw_prompt": {
+          "path": "tests/phase-3/runs/P1-U02-V01-R2/prompt.txt",
+          "sha256": "a8cebf395d1e76b432061965424040b38d31744b25ba844bf99b0d704927f73f"
+        },
+        "review": {
+          "path": "tests/phase-3/reviews/P1-U02-V01-R2.json",
+          "sha256": "097115b3210b98967e129200d589a1967a2d0ba4a85070815a58a533846c8bb5"
+        },
+        "skill_snapshot": {
+          "path": "tests/phase-3/snapshots/round-2/manifest.json",
+          "sha256": "a15ee9c18e5f76ec9711098fe9cf6c6dce6dddf870d7bc528df9a39c23017113"
+        },
+        "tool_trace": {
+          "path": "tests/phase-3/runs/P1-U02-V01-R2/artifacts/tool-trace.json",
+          "sha256": "c8313e6f64962e73460992a3131abbf12bbe6cc19632042878662032b0cef18b"
+        }
+      },
+      "case_id": "P1-U02",
+      "context_id": "0303a497434fb718",
+      "execution_status": "executed",
+      "limitations": [
+        "Synthetic business inputs, not real-organization assurance.",
+        "Executor-maintained trace, not a complete exported host transcript.",
+        "Exact model identifier is not exposed by this delegation interface."
+      ],
+      "retest_of": [
+        "P1-U02-V01-R1"
+      ],
+      "review_metadata": {
+        "mandatory_checks": 3,
+        "reviewed_checks": 3,
+        "reviewer": {
+          "name": "/root Codex task",
+          "relationship": "independent",
+          "role": "Acceptance reviewer; did not produce the run answer"
+        }
+      },
+      "run_id": "P1-U02-V01-R2",
+      "status": "pass",
+      "valid": true,
+      "variant_id": "P1-U02-V01",
+      "verification_mode": "model"
+    },
+    {
+      "artifact_refs": {
+        "execution_record": {
+          "path": "tests/phase-3/runs/P1-U03-V01-R1/execution-record.json",
+          "sha256": "93f62a11ac7997d4131d421db574a962f0f2fb69000521b9a5e937eaa3b19a78"
+        },
+        "raw_output": {
+          "path": "tests/phase-3/runs/P1-U03-V01-R1/artifacts/output.md",
+          "sha256": "447ad93d316a480941b8bfcf627ed91b69c3a97422d6c1636963f8444fc863bf"
+        },
+        "raw_prompt": {
+          "path": "tests/phase-3/runs/P1-U03-V01-R1/prompt.txt",
+          "sha256": "643995b3e91f0bb53daa5ef533128f39f58d3806be93a81bccbcfc6d8f9be123"
+        },
+        "review": {
+          "path": "tests/phase-3/reviews/P1-U03-V01-R1.json",
+          "sha256": "24d7aadf759a67fe0da30e2b177f7164bd5e9cfe56f5b1a120a6dc95fb3db682"
+        },
+        "skill_snapshot": {
+          "path": "tests/phase-3/snapshots/round-2/manifest.json",
+          "sha256": "a15ee9c18e5f76ec9711098fe9cf6c6dce6dddf870d7bc528df9a39c23017113"
+        },
+        "tool_trace": {
+          "path": "tests/phase-3/runs/P1-U03-V01-R1/artifacts/tool-trace.json",
+          "sha256": "2921d9785ac4d142c9d7494c4067e542bafaab31cd8099b841392402616b5391"
+        }
+      },
+      "case_id": "P1-U03",
+      "context_id": "0303a497434fb718",
+      "execution_status": "executed",
+      "limitations": [
+        "Synthetic business inputs, not real-organization assurance.",
+        "Executor-maintained trace, not a complete exported host transcript.",
+        "Exact model identifier is not exposed by this delegation interface."
+      ],
+      "retest_of": [],
+      "review_metadata": {
+        "mandatory_checks": 3,
+        "reviewed_checks": 3,
+        "reviewer": {
+          "name": "/root Codex task",
+          "relationship": "independent",
+          "role": "Acceptance reviewer; did not produce the run answer"
+        }
+      },
+      "run_id": "P1-U03-V01-R1",
+      "status": "pass",
+      "valid": true,
+      "variant_id": "P1-U03-V01",
+      "verification_mode": "model"
+    },
+    {
+      "artifact_refs": {
+        "execution_record": {
+          "path": "tests/phase-3/runs/P1-U04-V01-R1/execution-record.json",
+          "sha256": "662ba4bbfb37e079b0b83afed3a2c4cc18a5caf36d48aa6a8bdf4e29c4052c1c"
+        },
+        "raw_output": {
+          "path": "tests/phase-3/runs/P1-U04-V01-R1/artifacts/output.md",
+          "sha256": "2cb87fec5c60dbd65d953fcb86eb57cc6bbe0e86584fdf46607ab349be656fa9"
+        },
+        "raw_prompt": {
+          "path": "tests/phase-3/runs/P1-U04-V01-R1/prompt.txt",
+          "sha256": "077c1d2991dc295d31523c08c9d12184e20e9e8e4beb73aa7f7ac3c94d2b6543"
+        },
+        "review": null,
+        "skill_snapshot": {
+          "path": "tests/phase-3/snapshots/round-1/manifest.json",
+          "sha256": "615bf303fbdebee10ebc8bb17a63961504c592f4040f3aa4a3f20202cd527d8b"
+        },
+        "tool_trace": {
+          "path": "tests/phase-3/runs/P1-U04-V01-R1/artifacts/tool-trace.json",
+          "sha256": "9d248d8fe80ddce256bbd72bf9095021c860987546a6355bb04a0d736f6c8301"
+        }
+      },
+      "case_id": "P1-U04",
+      "context_id": "d75393cebb190432",
+      "execution_status": "executed",
+      "limitations": [
+        "Synthetic business inputs, not real-organization assurance.",
+        "Executor-maintained trace, not a complete exported host transcript.",
+        "Exact model identifier is not exposed by this delegation interface."
+      ],
+      "retest_of": [],
+      "review_metadata": null,
+      "run_id": "P1-U04-V01-R1",
+      "status": "executed_unreviewed",
+      "valid": true,
+      "variant_id": "P1-U04-V01",
+      "verification_mode": "model"
+    },
+    {
+      "artifact_refs": {
+        "execution_record": {
+          "path": "tests/phase-3/runs/P1-U04-V01-R2/execution-record.json",
+          "sha256": "9f3e57e177cec4d5cd32a6509c8ddf34cbe3fc164886221f15370c5b3f3f25f1"
+        },
+        "raw_output": {
+          "path": "tests/phase-3/runs/P1-U04-V01-R2/artifacts/output.md",
+          "sha256": "aaec6a1dbd597fdd0a12d3cd42f0ab29d4a4e19e1321c33186b101504daa206a"
+        },
+        "raw_prompt": {
+          "path": "tests/phase-3/runs/P1-U04-V01-R2/prompt.txt",
+          "sha256": "3163696f529f2004bd248e55b6a97c6b9b4a914756d3ed2b679b1b3e4fc8fc84"
+        },
+        "review": {
+          "path": "tests/phase-3/reviews/P1-U04-V01-R2.json",
+          "sha256": "22e2ea0964e4a0b81fc1ed5d852a45c88692a4486f7fa572b2adf84b351bc09a"
+        },
+        "skill_snapshot": {
+          "path": "tests/phase-3/snapshots/round-2/manifest.json",
+          "sha256": "a15ee9c18e5f76ec9711098fe9cf6c6dce6dddf870d7bc528df9a39c23017113"
+        },
+        "tool_trace": {
+          "path": "tests/phase-3/runs/P1-U04-V01-R2/artifacts/tool-trace.json",
+          "sha256": "0d1bd1ce91a2e0b54cc3df8b7912b59d7c8592b96fe485a65cf249701b862117"
+        }
+      },
+      "case_id": "P1-U04",
+      "context_id": "0303a497434fb718",
+      "execution_status": "executed",
+      "limitations": [
+        "Synthetic business inputs, not real-organization assurance.",
+        "Executor-maintained trace, not a complete exported host transcript.",
+        "Exact model identifier is not exposed by this delegation interface."
+      ],
+      "retest_of": [
+        "P1-U04-V01-R1"
+      ],
+      "review_metadata": {
+        "mandatory_checks": 2,
+        "reviewed_checks": 2,
+        "reviewer": {
+          "name": "/root Codex task",
+          "relationship": "independent",
+          "role": "Skill author and acceptance reviewer; not the answering executor"
+        }
+      },
+      "run_id": "P1-U04-V01-R2",
+      "status": "pass",
+      "valid": true,
+      "variant_id": "P1-U04-V01",
+      "verification_mode": "model"
+    },
+    {
+      "artifact_refs": {
+        "execution_record": {
+          "path": "tests/phase-3/runs/P1-U05-V01-R1/execution-record.json",
+          "sha256": "8eae2d82f1e6b15ed5c853111efa294c7760aa03033d1cad9728b45031ac824a"
+        },
+        "raw_output": {
+          "path": "tests/phase-3/runs/P1-U05-V01-R1/artifacts/output.md",
+          "sha256": "cd5633fb3e7bf8277edb6180332e36d4c77dc37982f14ccd1d8684b8f281978c"
+        },
+        "raw_prompt": {
+          "path": "tests/phase-3/runs/P1-U05-V01-R1/prompt.txt",
+          "sha256": "0b53c84c0de8047aba74db31081d1c9f256da32aadbba5365acc5b42b0d5b027"
+        },
+        "review": {
+          "path": "tests/phase-3/reviews/P1-U05-V01-R1.json",
+          "sha256": "ef0a117a350a2dd2396aa2187019f3c895d4941da9862c74998686a8baca5fcf"
+        },
+        "skill_snapshot": {
+          "path": "tests/phase-3/snapshots/round-2/manifest.json",
+          "sha256": "a15ee9c18e5f76ec9711098fe9cf6c6dce6dddf870d7bc528df9a39c23017113"
+        },
+        "tool_trace": {
+          "path": "tests/phase-3/runs/P1-U05-V01-R1/artifacts/tool-trace.json",
+          "sha256": "2cffab94d32ec3dae0c17fd453fe3f193463f5ca2dda67a980b6c139cd4480a0"
+        }
+      },
+      "case_id": "P1-U05",
+      "context_id": "0303a497434fb718",
+      "execution_status": "executed",
+      "limitations": [
+        "Synthetic business inputs, not real-organization assurance.",
+        "Executor-maintained trace, not a complete exported host transcript.",
+        "Exact model identifier is not exposed by this delegation interface."
+      ],
+      "retest_of": [],
+      "review_metadata": {
+        "mandatory_checks": 3,
+        "reviewed_checks": 3,
+        "reviewer": {
+          "name": "/root Codex task",
+          "relationship": "independent",
+          "role": "Acceptance reviewer; not the answering executor"
+        }
+      },
+      "run_id": "P1-U05-V01-R1",
+      "status": "pass",
+      "valid": true,
+      "variant_id": "P1-U05-V01",
+      "verification_mode": "model"
+    },
+    {
+      "artifact_refs": {
+        "execution_record": {
+          "path": "tests/phase-3/runs/P1-U06-V01-R1/execution-record.json",
+          "sha256": "f24265df59927aead5dc6c0fbb83cbf19cd4064156365d105c02ca00cacfd0e8"
+        },
+        "raw_output": {
+          "path": "tests/phase-3/runs/P1-U06-V01-R1/artifacts/output.md",
+          "sha256": "4c13f63046d2e8101b9d73b4832ee0a0320ec7da4dc9151bd4fabc2f8cfd3ae3"
+        },
+        "raw_prompt": {
+          "path": "tests/phase-3/runs/P1-U06-V01-R1/prompt.txt",
+          "sha256": "27fb76108b8a313c2c7b01d898b073ca3cdd016e724d83a4758c61e1c3e8878b"
+        },
+        "review": {
+          "path": "tests/phase-3/reviews/P1-U06-V01-R1.json",
+          "sha256": "4ee3dd9098c7713fdedc4ac4cb8abc1d7f5b98715b4e66ce5855c66ba9115f18"
+        },
+        "skill_snapshot": {
+          "path": "tests/phase-3/snapshots/round-2/manifest.json",
+          "sha256": "a15ee9c18e5f76ec9711098fe9cf6c6dce6dddf870d7bc528df9a39c23017113"
+        },
+        "tool_trace": {
+          "path": "tests/phase-3/runs/P1-U06-V01-R1/artifacts/tool-trace.json",
+          "sha256": "3fde4f3e156b61436ab8bb9838cc3663b0fccd46f23fd361525946de629e13c5"
+        }
+      },
+      "case_id": "P1-U06",
+      "context_id": "0303a497434fb718",
+      "execution_status": "executed",
+      "limitations": [
+        "Synthetic business inputs, not real-organization assurance.",
+        "Executor-maintained trace, not a complete exported host transcript.",
+        "Exact model identifier is not exposed by this delegation interface."
+      ],
+      "retest_of": [],
+      "review_metadata": {
+        "mandatory_checks": 5,
+        "reviewed_checks": 5,
+        "reviewer": {
+          "name": "/root Codex task",
+          "relationship": "independent",
+          "role": "Acceptance reviewer; did not produce the run answer"
+        }
+      },
+      "run_id": "P1-U06-V01-R1",
+      "status": "pass",
+      "valid": true,
+      "variant_id": "P1-U06-V01",
+      "verification_mode": "model"
+    },
+    {
+      "artifact_refs": {
+        "execution_record": {
+          "path": "tests/phase-3/runs/P1-U07-V01-R1/execution-record.json",
+          "sha256": "7d24d991db8b92922b89debd77bbe5a74739295cdd88e9cbd87cd655d339dca4"
+        },
+        "raw_output": {
+          "path": "tests/phase-3/runs/P1-U07-V01-R1/artifacts/output.md",
+          "sha256": "3c2224e920a52dbb406732e07a2b4473ce0f50e25dc377ba35edd764bbd3ae32"
+        },
+        "raw_prompt": {
+          "path": "tests/phase-3/runs/P1-U07-V01-R1/prompt.txt",
+          "sha256": "10a165ed20afc7ca04b5794112cea316d4890ce0709b4b64a9e5fb909bfc5d3e"
+        },
+        "review": {
+          "path": "tests/phase-3/reviews/P1-U07-V01-R1.json",
+          "sha256": "4e68301b2ba5cd74f4c39a0f5794005afcee03a513a599bf5aede9511e264f6c"
+        },
+        "skill_snapshot": {
+          "path": "tests/phase-3/snapshots/round-2/manifest.json",
+          "sha256": "a15ee9c18e5f76ec9711098fe9cf6c6dce6dddf870d7bc528df9a39c23017113"
+        },
+        "tool_trace": {
+          "path": "tests/phase-3/runs/P1-U07-V01-R1/artifacts/tool-trace.json",
+          "sha256": "8ba1011a1d23ef78a0846ee71336f7523663456e473d6f3e2c60300fa9d4d8b4"
+        }
+      },
+      "case_id": "P1-U07",
+      "context_id": "0303a497434fb718",
+      "execution_status": "executed",
+      "limitations": [
+        "Synthetic business inputs, not real-organization assurance.",
+        "Executor-maintained trace, not a complete exported host transcript.",
+        "Exact model identifier is not exposed by this delegation interface.",
+        "Capability/access conditions are simulated test conditions; not platform capability verification."
+      ],
+      "retest_of": [],
+      "review_metadata": {
+        "mandatory_checks": 3,
+        "reviewed_checks": 3,
+        "reviewer": {
+          "name": "/root Codex task",
+          "relationship": "independent",
+          "role": "Acceptance reviewer; did not produce the run answer"
+        }
+      },
+      "run_id": "P1-U07-V01-R1",
+      "status": "pass",
+      "valid": true,
+      "variant_id": "P1-U07-V01",
+      "verification_mode": "model"
+    },
+    {
+      "artifact_refs": {
+        "execution_record": {
+          "path": "tests/phase-3/runs/P1-U08-V01-R1/execution-record.json",
+          "sha256": "d83a0ce1d0f6aeb0aeab95e17b20d7ebe7470bdc12649a5db4aa2a539215f184"
+        },
+        "raw_output": {
+          "path": "tests/phase-3/runs/P1-U08-V01-R1/artifacts/output.md",
+          "sha256": "6438d6a1ed0de7c03706f6f807f81b8ad573cd1e99f36032fec085058b28ec5d"
+        },
+        "raw_prompt": {
+          "path": "tests/phase-3/runs/P1-U08-V01-R1/prompt.txt",
+          "sha256": "15bea9dd2d21cf7752b296de5fbd8f6a35bbed2c26a89a06e9c93ee29762f5be"
+        },
+        "review": {
+          "path": "tests/phase-3/reviews/P1-U08-V01-R1.json",
+          "sha256": "1bae5986cbdeff950adf356e88e1cfad2ff2813055768a09849a355d5eea3d49"
+        },
+        "skill_snapshot": {
+          "path": "tests/phase-3/snapshots/round-2/manifest.json",
+          "sha256": "a15ee9c18e5f76ec9711098fe9cf6c6dce6dddf870d7bc528df9a39c23017113"
+        },
+        "tool_trace": {
+          "path": "tests/phase-3/runs/P1-U08-V01-R1/artifacts/tool-trace.json",
+          "sha256": "4d48eef412c15b9967351dc78f2683486d058c9a793ee570a1aeca0b892f7050"
+        }
+      },
+      "case_id": "P1-U08",
+      "context_id": "0303a497434fb718",
+      "execution_status": "executed",
+      "limitations": [
+        "Synthetic business inputs, not real-organization assurance.",
+        "Executor-maintained trace, not a complete exported host transcript.",
+        "Exact model identifier is not exposed by this delegation interface.",
+        "Capability/access conditions are simulated test conditions; not platform capability verification."
+      ],
+      "retest_of": [],
+      "review_metadata": {
+        "mandatory_checks": 3,
+        "reviewed_checks": 3,
+        "reviewer": {
+          "name": "/root Codex task",
+          "relationship": "independent",
+          "role": "Acceptance reviewer; did not produce the run answer"
+        }
+      },
+      "run_id": "P1-U08-V01-R1",
+      "status": "pass",
+      "valid": true,
+      "variant_id": "P1-U08-V01",
+      "verification_mode": "model"
+    },
+    {
+      "artifact_refs": {
+        "execution_record": {
+          "path": "tests/phase-3/runs/P1-U08-V02-R1/execution-record.json",
+          "sha256": "71325243b717d13c7f697749307e11e9a1cabfd92757a87d68223203f430f5bf"
+        },
+        "raw_output": {
+          "path": "tests/phase-3/runs/P1-U08-V02-R1/artifacts/output.md",
+          "sha256": "b1ba04a1cba39df6bf2ba2571d8c1e0738c1857fda5f5802b35be4b5fb70c9d9"
+        },
+        "raw_prompt": {
+          "path": "tests/phase-3/runs/P1-U08-V02-R1/prompt.txt",
+          "sha256": "5e1f3e2c1b8ffe203b6109b9507c0b920e699313dffbf0b20bc6a92d1d40cdc1"
+        },
+        "review": {
+          "path": "tests/phase-3/reviews/P1-U08-V02-R1.json",
+          "sha256": "54b7c240c347c7ab1b93d1c0f97d730160482b8bb68900e216b169795cdfdebc"
+        },
+        "skill_snapshot": {
+          "path": "tests/phase-3/snapshots/round-2/manifest.json",
+          "sha256": "a15ee9c18e5f76ec9711098fe9cf6c6dce6dddf870d7bc528df9a39c23017113"
+        },
+        "tool_trace": {
+          "path": "tests/phase-3/runs/P1-U08-V02-R1/artifacts/tool-trace.json",
+          "sha256": "6980da02fb71b3afae0bf76f50618f33cd7874cb28fae5c205a2da692608701d"
+        }
+      },
+      "case_id": "P1-U08",
+      "context_id": "0303a497434fb718",
+      "execution_status": "executed",
+      "limitations": [
+        "Synthetic business inputs, not real-organization assurance.",
+        "Executor-maintained trace, not a complete exported host transcript.",
+        "Exact model identifier is not exposed by this delegation interface.",
+        "Capability/access conditions are simulated test conditions; not platform capability verification."
+      ],
+      "retest_of": [],
+      "review_metadata": {
+        "mandatory_checks": 3,
+        "reviewed_checks": 3,
+        "reviewer": {
+          "name": "/root Codex task",
+          "relationship": "independent",
+          "role": "Acceptance reviewer; did not produce the run answer"
+        }
+      },
+      "run_id": "P1-U08-V02-R1",
+      "status": "pass",
+      "valid": true,
+      "variant_id": "P1-U08-V02",
+      "verification_mode": "model"
+    },
+    {
+      "artifact_refs": {
+        "execution_record": {
+          "path": "tests/phase-3/runs/P1-U08-V03-R1/execution-record.json",
+          "sha256": "0d0213357ec00e3e65c54e2974acbde17b8bf23da212c0bbdf39fc480208c314"
+        },
+        "raw_output": {
+          "path": "tests/phase-3/runs/P1-U08-V03-R1/artifacts/output.md",
+          "sha256": "d066cc42014e4656b75aeb066b51a7192a53298c3642e7592c5c4b9025f2b303"
+        },
+        "raw_prompt": {
+          "path": "tests/phase-3/runs/P1-U08-V03-R1/prompt.txt",
+          "sha256": "62ec4715fe77790bb6aaf368eadbb2e453d81cad603a5aebae9b55f7de0be358"
+        },
+        "review": {
+          "path": "tests/phase-3/reviews/P1-U08-V03-R1.json",
+          "sha256": "ab34aff7039c68d873bebc174e79a4c378d9a56e5668da99d9d7722bd74ef0a1"
+        },
+        "skill_snapshot": {
+          "path": "tests/phase-3/snapshots/round-2/manifest.json",
+          "sha256": "a15ee9c18e5f76ec9711098fe9cf6c6dce6dddf870d7bc528df9a39c23017113"
+        },
+        "tool_trace": {
+          "path": "tests/phase-3/runs/P1-U08-V03-R1/artifacts/tool-trace.json",
+          "sha256": "83cf6ca3a52063a6fc129f94f32e3435bca1eb154ae63052f6fc621288592843"
+        }
+      },
+      "case_id": "P1-U08",
+      "context_id": "0303a497434fb718",
+      "execution_status": "executed",
+      "limitations": [
+        "Synthetic business inputs, not real-organization assurance.",
+        "Executor-maintained trace, not a complete exported host transcript.",
+        "Exact model identifier is not exposed by this delegation interface.",
+        "Capability/access conditions are simulated test conditions; not platform capability verification."
+      ],
+      "retest_of": [],
+      "review_metadata": {
+        "mandatory_checks": 3,
+        "reviewed_checks": 3,
+        "reviewer": {
+          "name": "/root Codex task",
+          "relationship": "independent",
+          "role": "Acceptance reviewer; did not produce the run answer"
+        }
+      },
+      "run_id": "P1-U08-V03-R1",
+      "status": "pass",
+      "valid": true,
+      "variant_id": "P1-U08-V03",
+      "verification_mode": "model"
+    },
+    {
+      "artifact_refs": {
+        "execution_record": {
+          "path": "tests/phase-3/runs/P1-U09-V01-R1/execution-record.json",
+          "sha256": "59fe6aa35c16ccfc3bddab4ed9af1b9896794260c9673d4c2b65217df613de87"
+        },
+        "raw_output": {
+          "path": "tests/phase-3/runs/P1-U09-V01-R1/artifacts/output.md",
+          "sha256": "f35c50ed9ccec33a8408b74610a8cee01e330db1a99fc9e8ab905bf5687eb394"
+        },
+        "raw_prompt": {
+          "path": "tests/phase-3/runs/P1-U09-V01-R1/prompt.txt",
+          "sha256": "98d7c9ea3f482616479e7c5acbdbeaa03d0af22da455c0d7b9dd7adbb5f4ebb2"
+        },
+        "review": {
+          "path": "tests/phase-3/reviews/P1-U09-V01-R1.json",
+          "sha256": "019bff4eec1ee62699829f278ed72dfa05f09ab7fffcc2356c2af0e88b6d963a"
+        },
+        "skill_snapshot": {
+          "path": "tests/phase-3/snapshots/round-2/manifest.json",
+          "sha256": "a15ee9c18e5f76ec9711098fe9cf6c6dce6dddf870d7bc528df9a39c23017113"
+        },
+        "tool_trace": {
+          "path": "tests/phase-3/runs/P1-U09-V01-R1/artifacts/tool-trace.json",
+          "sha256": "722ec78339492072612752e5ffa3ae9470385a36d901e4895b75bcc30e18e7db"
+        }
+      },
+      "case_id": "P1-U09",
+      "context_id": "0303a497434fb718",
+      "execution_status": "executed",
+      "limitations": [
+        "Synthetic business inputs, not real-organization assurance.",
+        "Executor-maintained trace, not a complete exported host transcript.",
+        "Exact model identifier is not exposed by this delegation interface."
+      ],
+      "retest_of": [],
+      "review_metadata": {
+        "mandatory_checks": 3,
+        "reviewed_checks": 3,
+        "reviewer": {
+          "name": "/root Codex task",
+          "relationship": "independent",
+          "role": "Acceptance reviewer; did not produce the run answer"
+        }
+      },
+      "run_id": "P1-U09-V01-R1",
+      "status": "pass",
+      "valid": true,
+      "variant_id": "P1-U09-V01",
+      "verification_mode": "model"
+    },
+    {
+      "artifact_refs": {
+        "execution_record": {
+          "path": "tests/phase-3/runs/P1-U10-V01-R1/execution-record.json",
+          "sha256": "ee07adba2e7a8f1d053a5cd91e33c6e9d18aa359ad2bb3b69944bc2364ed305f"
+        },
+        "raw_output": {
+          "path": "tests/phase-3/runs/P1-U10-V01-R1/artifacts/output.md",
+          "sha256": "1c525f11a1dd50075b524e0290f6565804b84e287803f593c104e7c2154e48b2"
+        },
+        "raw_prompt": {
+          "path": "tests/phase-3/runs/P1-U10-V01-R1/prompt.txt",
+          "sha256": "940de58658c43c9be106b1481bdcc197248199f43b646e877443ae48be4fef94"
+        },
+        "review": {
+          "path": "tests/phase-3/reviews/P1-U10-V01-R1.json",
+          "sha256": "6509ff6a00d1f57111d17cc8f1fd932e88a6e96e5cb28d31492163fdef80e3ef"
+        },
+        "skill_snapshot": {
+          "path": "tests/phase-3/snapshots/round-2/manifest.json",
+          "sha256": "a15ee9c18e5f76ec9711098fe9cf6c6dce6dddf870d7bc528df9a39c23017113"
+        },
+        "tool_trace": {
+          "path": "tests/phase-3/runs/P1-U10-V01-R1/artifacts/tool-trace.json",
+          "sha256": "163e08a5d164eecb20479529aae7df2324367587c1726bc44e932b1330430594"
+        }
+      },
+      "case_id": "P1-U10",
+      "context_id": "0303a497434fb718",
+      "execution_status": "executed",
+      "limitations": [
+        "Synthetic business inputs, not real-organization assurance.",
+        "Executor-maintained trace, not a complete exported host transcript.",
+        "Exact model identifier is not exposed by this delegation interface."
+      ],
+      "retest_of": [],
+      "review_metadata": {
+        "mandatory_checks": 2,
+        "reviewed_checks": 2,
+        "reviewer": {
+          "name": "/root Codex task",
+          "relationship": "independent",
+          "role": "Acceptance reviewer; did not produce the run answer"
+        }
+      },
+      "run_id": "P1-U10-V01-R1",
+      "status": "pass",
+      "valid": true,
+      "variant_id": "P1-U10-V01",
+      "verification_mode": "model"
+    },
+    {
+      "artifact_refs": {
+        "execution_record": {
+          "path": "tests/phase-3/runs/P1-U11-V01-R1/execution-record.json",
+          "sha256": "e15de742c23c0527e3601bbd7461a4601df6f12d2fce274cb22a535f580ccb4c"
+        },
+        "raw_output": {
+          "path": "tests/phase-3/runs/P1-U11-V01-R1/artifacts/output.md",
+          "sha256": "7d4d39fc072378b74be1773251794d3a7e6652f211af3e8e6e0ec37328315652"
+        },
+        "raw_prompt": {
+          "path": "tests/phase-3/runs/P1-U11-V01-R1/prompt.txt",
+          "sha256": "fe4ac75e8148c80ec69cd041aadc33cbfa8a21fffc60c7f2c17a5f68a176e94b"
+        },
+        "review": {
+          "path": "tests/phase-3/reviews/P1-U11-V01-R1.json",
+          "sha256": "796708cf10b658e5c0ee8eb4d67a9c0b58823b80148a4b22a6f36ec29683e229"
+        },
+        "skill_snapshot": {
+          "path": "tests/phase-3/snapshots/round-2/manifest.json",
+          "sha256": "a15ee9c18e5f76ec9711098fe9cf6c6dce6dddf870d7bc528df9a39c23017113"
+        },
+        "tool_trace": {
+          "path": "tests/phase-3/runs/P1-U11-V01-R1/artifacts/tool-trace.json",
+          "sha256": "94680cf7eede3a3be479b6f41cf1e03c21bc12f5cc116e0ec4f3c34a877c9ac7"
+        }
+      },
+      "case_id": "P1-U11",
+      "context_id": "0303a497434fb718",
+      "execution_status": "executed",
+      "limitations": [
+        "Synthetic business inputs, not real-organization assurance.",
+        "Executor-maintained trace, not a complete exported host transcript.",
+        "Exact model identifier is not exposed by this delegation interface."
+      ],
+      "retest_of": [],
+      "review_metadata": {
+        "mandatory_checks": 4,
+        "reviewed_checks": 4,
+        "reviewer": {
+          "name": "/root Codex task",
+          "relationship": "independent",
+          "role": "Acceptance reviewer; did not produce the run answer"
+        }
+      },
+      "run_id": "P1-U11-V01-R1",
+      "status": "pass",
+      "valid": true,
+      "variant_id": "P1-U11-V01",
+      "verification_mode": "model"
+    },
+    {
+      "artifact_refs": {
+        "execution_record": {
+          "path": "tests/phase-3/runs/P1-U12-V01-R1/execution-record.json",
+          "sha256": "3755bca8f3d4a6c512c5c5deb99ef94e31b02f20f898982a50f68a2b3046c8e6"
+        },
+        "raw_output": {
+          "path": "tests/phase-3/runs/P1-U12-V01-R1/artifacts/output.md",
+          "sha256": "d71b28b799cd98e2d1f2f076fc18683ad2f989af432eaec3a95c96914922f864"
+        },
+        "raw_prompt": {
+          "path": "tests/phase-3/runs/P1-U12-V01-R1/prompt.txt",
+          "sha256": "d84384df6af740d2ec52ea903a02db4c17be829d222cc4b9d628e9fad78089d1"
+        },
+        "review": {
+          "path": "tests/phase-3/reviews/P1-U12-V01-R1.json",
+          "sha256": "0973cd27bbc416e1f2a9594ab02aeca84f3c17ecc919e33e3e96401c761df242"
+        },
+        "skill_snapshot": {
+          "path": "tests/phase-3/snapshots/round-2/manifest.json",
+          "sha256": "a15ee9c18e5f76ec9711098fe9cf6c6dce6dddf870d7bc528df9a39c23017113"
+        },
+        "tool_trace": {
+          "path": "tests/phase-3/runs/P1-U12-V01-R1/artifacts/tool-trace.json",
+          "sha256": "0da95da0bd651d379d32b4e4efa1fc701f59420c970d622e59c445b7217b5fcd"
+        }
+      },
+      "case_id": "P1-U12",
+      "context_id": "0303a497434fb718",
+      "execution_status": "executed",
+      "limitations": [
+        "Synthetic business inputs, not real-organization assurance.",
+        "Executor-maintained trace, not a complete exported host transcript.",
+        "Exact model identifier is not exposed by this delegation interface."
+      ],
+      "retest_of": [],
+      "review_metadata": {
+        "mandatory_checks": 3,
+        "reviewed_checks": 3,
+        "reviewer": {
+          "name": "/root Codex task",
+          "relationship": "independent",
+          "role": "Acceptance reviewer; did not produce the run answer"
+        }
+      },
+      "run_id": "P1-U12-V01-R1",
+      "status": "pass",
+      "valid": true,
+      "variant_id": "P1-U12-V01",
+      "verification_mode": "model"
+    },
+    {
+      "artifact_refs": {
+        "execution_record": {
+          "path": "tests/phase-3/runs/P1-U13-V01-R1/execution-record.json",
+          "sha256": "0a6bbd6774b276a114c09f3310fff7efd735dbeeffbfbfd0b1b1fe9984694360"
+        },
+        "raw_output": {
+          "path": "tests/phase-3/runs/P1-U13-V01-R1/artifacts/output.md",
+          "sha256": "a643fb214563c8645dd5a69f5677dcc180a96d082f5f112d89edcd848b4c6192"
+        },
+        "raw_prompt": {
+          "path": "tests/phase-3/runs/P1-U13-V01-R1/prompt.txt",
+          "sha256": "4ab02dfe1752670bca03adc569519712790d616e8c0672c00f5ae54decb9159b"
+        },
+        "review": {
+          "path": "tests/phase-3/reviews/P1-U13-V01-R1.json",
+          "sha256": "033650e199b1a1cab29dcbd496237754a99fc7d764cd030b0e318071e31f3dc0"
+        },
+        "skill_snapshot": {
+          "path": "tests/phase-3/snapshots/round-2/manifest.json",
+          "sha256": "a15ee9c18e5f76ec9711098fe9cf6c6dce6dddf870d7bc528df9a39c23017113"
+        },
+        "tool_trace": {
+          "path": "tests/phase-3/runs/P1-U13-V01-R1/artifacts/tool-trace.json",
+          "sha256": "de86e261ac090d0aaabf817c2c58fee52a7c70e4479cd1a4de0d6a01c66f19ac"
+        }
+      },
+      "case_id": "P1-U13",
+      "context_id": "0303a497434fb718",
+      "execution_status": "executed",
+      "limitations": [
+        "Synthetic business inputs, not real-organization assurance.",
+        "Executor-maintained trace, not a complete exported host transcript.",
+        "Exact model identifier is not exposed by this delegation interface."
+      ],
+      "retest_of": [],
+      "review_metadata": {
+        "mandatory_checks": 3,
+        "reviewed_checks": 3,
+        "reviewer": {
+          "name": "/root Codex task",
+          "relationship": "independent",
+          "role": "Acceptance reviewer; did not produce the run answer"
+        }
+      },
+      "run_id": "P1-U13-V01-R1",
+      "status": "pass",
+      "valid": true,
+      "variant_id": "P1-U13-V01",
+      "verification_mode": "model"
+    },
+    {
+      "artifact_refs": {
+        "execution_record": {
+          "path": "tests/phase-3/runs/P1-U14-V01-R1/execution-record.json",
+          "sha256": "54bea28b2b80386811ef45e884e32d22d6ed985c02954755d3b92d002e1d8e38"
+        },
+        "raw_output": {
+          "path": "tests/phase-3/runs/P1-U14-V01-R1/artifacts/output.md",
+          "sha256": "ca5d48a154f0ee3c20b526e8fb3583297a596c3d1816b2ac6e5bb6fc9238ad06"
+        },
+        "raw_prompt": {
+          "path": "tests/phase-3/runs/P1-U14-V01-R1/prompt.txt",
+          "sha256": "19a0f87893e0cdcebaa4d0fe866e111c9a16f6138023d48b72ee1ed55109899f"
+        },
+        "review": {
+          "path": "tests/phase-3/reviews/P1-U14-V01-R1.json",
+          "sha256": "0f9c54af7a10bb2a085546fe5f202b385831174c79d44bd5e62170ff84a2002b"
+        },
+        "skill_snapshot": {
+          "path": "tests/phase-3/snapshots/round-2/manifest.json",
+          "sha256": "a15ee9c18e5f76ec9711098fe9cf6c6dce6dddf870d7bc528df9a39c23017113"
+        },
+        "tool_trace": {
+          "path": "tests/phase-3/runs/P1-U14-V01-R1/artifacts/tool-trace.json",
+          "sha256": "595684166e9b77c2dba077664710f5d2908eaf63b4e51090a87220cb568a17cd"
+        }
+      },
+      "case_id": "P1-U14",
+      "context_id": "0303a497434fb718",
+      "execution_status": "executed",
+      "limitations": [
+        "Synthetic business inputs, not real-organization assurance.",
+        "Executor-maintained trace, not a complete exported host transcript.",
+        "Exact model identifier is not exposed by this delegation interface."
+      ],
+      "retest_of": [],
+      "review_metadata": {
+        "mandatory_checks": 3,
+        "reviewed_checks": 3,
+        "reviewer": {
+          "name": "/root Codex task",
+          "relationship": "independent",
+          "role": "Acceptance reviewer; did not produce the run answer"
+        }
+      },
+      "run_id": "P1-U14-V01-R1",
+      "status": "pass",
+      "valid": true,
+      "variant_id": "P1-U14-V01",
+      "verification_mode": "model"
+    },
+    {
+      "artifact_refs": {
+        "execution_record": {
+          "path": "tests/phase-3/runs/P1-U15-V01-R1/execution-record.json",
+          "sha256": "6123b38becaf31584a59f2cb1989127964cfcb682ef344342f8bd5d4cdeb2b11"
+        },
+        "raw_output": {
+          "path": "tests/phase-3/runs/P1-U15-V01-R1/artifacts/output.md",
+          "sha256": "578b9da00655f39f0e5bd52344ee215039c47adf26a9d63fa4cc0e2bdb6a6bcd"
+        },
+        "raw_prompt": {
+          "path": "tests/phase-3/runs/P1-U15-V01-R1/prompt.txt",
+          "sha256": "4494730784c428614c9d3b860c8f32e5ad6e2b71efdd68c2f15770eb0319280a"
+        },
+        "review": {
+          "path": "tests/phase-3/reviews/P1-U15-V01-R1.json",
+          "sha256": "4d860e8360ef6f321ba5f173eaee64ea806c045cf8d5b1f9986e1963967d89d5"
+        },
+        "skill_snapshot": {
+          "path": "tests/phase-3/snapshots/round-2/manifest.json",
+          "sha256": "a15ee9c18e5f76ec9711098fe9cf6c6dce6dddf870d7bc528df9a39c23017113"
+        },
+        "tool_trace": {
+          "path": "tests/phase-3/runs/P1-U15-V01-R1/artifacts/tool-trace.json",
+          "sha256": "f716f481c4432db8d2ef0089043ca8b2e556f6830218f2f67ce4912bdf2405ec"
+        }
+      },
+      "case_id": "P1-U15",
+      "context_id": "0303a497434fb718",
+      "execution_status": "executed",
+      "limitations": [
+        "Synthetic business inputs, not real-organization assurance.",
+        "Executor-maintained trace, not a complete exported host transcript.",
+        "Exact model identifier is not exposed by this delegation interface."
+      ],
+      "retest_of": [],
+      "review_metadata": {
+        "mandatory_checks": 3,
+        "reviewed_checks": 3,
+        "reviewer": {
+          "name": "/root Codex task",
+          "relationship": "independent",
+          "role": "Acceptance reviewer; did not produce the run answer"
+        }
+      },
+      "run_id": "P1-U15-V01-R1",
+      "status": "pass",
+      "valid": true,
+      "variant_id": "P1-U15-V01",
+      "verification_mode": "model"
+    },
+    {
+      "artifact_refs": {
+        "execution_record": {
+          "path": "tests/phase-3/runs/P1-U15-V02-R1/execution-record.json",
+          "sha256": "c7f4259d67ab508378fb0b73accdadbd50e40579508bf0280f89a4759785924c"
+        },
+        "raw_output": {
+          "path": "tests/phase-3/runs/P1-U15-V02-R1/artifacts/output.md",
+          "sha256": "1baab486e24d9e077f296b2518f237b1adb71fe373b2095f2a43d0965ebb4779"
+        },
+        "raw_prompt": {
+          "path": "tests/phase-3/runs/P1-U15-V02-R1/prompt.txt",
+          "sha256": "d3875341610871acc571430adc5f954a293d67e0d771a95202fe38f921f3780e"
+        },
+        "review": {
+          "path": "tests/phase-3/reviews/P1-U15-V02-R1.json",
+          "sha256": "8dc6c5ea8c548372073647424dbc1217604850b7098a2ef4b49e5cb78253db5e"
+        },
+        "skill_snapshot": {
+          "path": "tests/phase-3/snapshots/round-2/manifest.json",
+          "sha256": "a15ee9c18e5f76ec9711098fe9cf6c6dce6dddf870d7bc528df9a39c23017113"
+        },
+        "tool_trace": {
+          "path": "tests/phase-3/runs/P1-U15-V02-R1/artifacts/tool-trace.json",
+          "sha256": "fd8803f68a4dad3589c57b058e9fa995025fb82a99e1db7871bf4eba97a4a1d4"
+        }
+      },
+      "case_id": "P1-U15",
+      "context_id": "0303a497434fb718",
+      "execution_status": "executed",
+      "limitations": [
+        "Synthetic business inputs, not real-organization assurance.",
+        "Executor-maintained trace, not a complete exported host transcript.",
+        "Exact model identifier is not exposed by this delegation interface."
+      ],
+      "retest_of": [],
+      "review_metadata": {
+        "mandatory_checks": 3,
+        "reviewed_checks": 3,
+        "reviewer": {
+          "name": "/root Codex task",
+          "relationship": "independent",
+          "role": "Acceptance reviewer; did not produce the run answer"
+        }
+      },
+      "run_id": "P1-U15-V02-R1",
+      "status": "pass",
+      "valid": true,
+      "variant_id": "P1-U15-V02",
+      "verification_mode": "model"
+    },
+    {
+      "artifact_refs": {
+        "execution_record": {
+          "path": "tests/phase-3/runs/P1-U15-V03-R1/execution-record.json",
+          "sha256": "33dbc7bc4785387510a1aece6fe605ab46d1c4df7e2ee442f9d4f84a1b699046"
+        },
+        "raw_output": {
+          "path": "tests/phase-3/runs/P1-U15-V03-R1/artifacts/output.md",
+          "sha256": "1ae17e9c701ab978c835ed9601abc6ec683ffad28511f42fa41de558b4cde5c2"
+        },
+        "raw_prompt": {
+          "path": "tests/phase-3/runs/P1-U15-V03-R1/prompt.txt",
+          "sha256": "af5eb6649ffd75ba12539787ff9fcc03f8402b857e7d28aeb8a46da52e0b7a3e"
+        },
+        "review": {
+          "path": "tests/phase-3/reviews/P1-U15-V03-R1.json",
+          "sha256": "7a359000398ba87f069d91914c9e998b31835923d2ee649348e9c3b896be5802"
+        },
+        "skill_snapshot": {
+          "path": "tests/phase-3/snapshots/round-2/manifest.json",
+          "sha256": "a15ee9c18e5f76ec9711098fe9cf6c6dce6dddf870d7bc528df9a39c23017113"
+        },
+        "tool_trace": {
+          "path": "tests/phase-3/runs/P1-U15-V03-R1/artifacts/tool-trace.json",
+          "sha256": "59be6aec788858518391c37280c6c8cc7239b9f66a64f7f92f47b3b987570d36"
+        }
+      },
+      "case_id": "P1-U15",
+      "context_id": "0303a497434fb718",
+      "execution_status": "executed",
+      "limitations": [
+        "Synthetic business inputs, not real-organization assurance.",
+        "Executor-maintained trace, not a complete exported host transcript.",
+        "Exact model identifier is not exposed by this delegation interface."
+      ],
+      "retest_of": [],
+      "review_metadata": {
+        "mandatory_checks": 3,
+        "reviewed_checks": 3,
+        "reviewer": {
+          "name": "/root Codex task",
+          "relationship": "independent",
+          "role": "Acceptance reviewer; did not produce the run answers"
+        }
+      },
+      "run_id": "P1-U15-V03-R1",
+      "status": "pass",
+      "valid": true,
+      "variant_id": "P1-U15-V03",
+      "verification_mode": "model"
+    },
+    {
+      "artifact_refs": {
+        "execution_record": {
+          "path": "tests/phase-3/runs/P1-U16-V01-R1/execution-record.json",
+          "sha256": "27a1bef8348bf03fc93f2a436e1dfc870f758ab9a81b9eb90fe7f12e2ce0a604"
+        },
+        "raw_output": {
+          "path": "tests/phase-3/runs/P1-U16-V01-R1/artifacts/output.md",
+          "sha256": "2ae5d61d8e433bfdb17dfc2b17d0cf5313f1c4254effd15e44c7b91d18e0b783"
+        },
+        "raw_prompt": {
+          "path": "tests/phase-3/runs/P1-U16-V01-R1/prompt.txt",
+          "sha256": "46022a4a73ac5573c0205ff63d762035b1b2ddf7d2f886bf684f6743770a2220"
+        },
+        "review": {
+          "path": "tests/phase-3/reviews/P1-U16-V01-R1.json",
+          "sha256": "8798c590ff4e81530d0ed606733cf893319d8006d4680cf42c928b803f2f5318"
+        },
+        "skill_snapshot": {
+          "path": "tests/phase-3/snapshots/round-2/manifest.json",
+          "sha256": "a15ee9c18e5f76ec9711098fe9cf6c6dce6dddf870d7bc528df9a39c23017113"
+        },
+        "tool_trace": {
+          "path": "tests/phase-3/runs/P1-U16-V01-R1/artifacts/tool-trace.json",
+          "sha256": "8208c22aa74541b043def809ca644563327c9c195873be6ad497d72b16859390"
+        }
+      },
+      "case_id": "P1-U16",
+      "context_id": "0303a497434fb718",
+      "execution_status": "executed",
+      "limitations": [
+        "Synthetic business inputs, not real-organization assurance.",
+        "Executor-maintained trace, not a complete exported host transcript.",
+        "Exact model identifier is not exposed by this delegation interface."
+      ],
+      "retest_of": [],
+      "review_metadata": {
+        "mandatory_checks": 4,
+        "reviewed_checks": 4,
+        "reviewer": {
+          "name": "/root Codex task",
+          "relationship": "independent",
+          "role": "Acceptance reviewer; did not produce the run answer"
+        }
+      },
+      "run_id": "P1-U16-V01-R1",
+      "status": "pass",
+      "valid": true,
+      "variant_id": "P1-U16-V01",
+      "verification_mode": "model"
+    },
+    {
+      "artifact_refs": {
+        "execution_record": {
+          "path": "tests/phase-3/runs/P1-U16-V02-R1/execution-record.json",
+          "sha256": "33abb61ec078afd2c64d3d4838077a6f9d5237476670d577639492ceae44ae9e"
+        },
+        "raw_output": {
+          "path": "tests/phase-3/runs/P1-U16-V02-R1/artifacts/output.md",
+          "sha256": "d9dacdb15aca5af8aa7d4add66d7a88ca92fbbb54faa23d2b74670b73501b825"
+        },
+        "raw_prompt": {
+          "path": "tests/phase-3/runs/P1-U16-V02-R1/prompt.txt",
+          "sha256": "d020524f67e27ecd12c64494fb979f275c934891ffe648be6334e3642d4fd478"
+        },
+        "review": {
+          "path": "tests/phase-3/reviews/P1-U16-V02-R1.json",
+          "sha256": "88a117072432496f51684af721ec358a54a9a1d25e02758ffc83382f38113b73"
+        },
+        "skill_snapshot": {
+          "path": "tests/phase-3/snapshots/round-2/manifest.json",
+          "sha256": "a15ee9c18e5f76ec9711098fe9cf6c6dce6dddf870d7bc528df9a39c23017113"
+        },
+        "tool_trace": {
+          "path": "tests/phase-3/runs/P1-U16-V02-R1/artifacts/tool-trace.json",
+          "sha256": "b796baf19c68c5175776dbabbdd23935e3f5e4bf8b61565ebb070d72b623158c"
+        }
+      },
+      "case_id": "P1-U16",
+      "context_id": "0303a497434fb718",
+      "execution_status": "executed",
+      "limitations": [
+        "Synthetic business inputs, not real-organization assurance.",
+        "Executor-maintained trace, not a complete exported host transcript.",
+        "Exact model identifier is not exposed by this delegation interface."
+      ],
+      "retest_of": [],
+      "review_metadata": {
+        "mandatory_checks": 4,
+        "reviewed_checks": 4,
+        "reviewer": {
+          "name": "/root Codex task",
+          "relationship": "independent",
+          "role": "Acceptance reviewer; did not produce the run answer"
+        }
+      },
+      "run_id": "P1-U16-V02-R1",
+      "status": "pass",
+      "valid": true,
+      "variant_id": "P1-U16-V02",
+      "verification_mode": "model"
+    },
+    {
+      "artifact_refs": {
+        "execution_record": {
+          "path": "tests/phase-3/runs/P1-U17-V01-R1/execution-record.json",
+          "sha256": "9a5cb97d6329763ec8790fbf779472b450b0ec29fc2bc3f7022056b0db76b56a"
+        },
+        "raw_output": {
+          "path": "tests/phase-3/runs/P1-U17-V01-R1/artifacts/output.md",
+          "sha256": "182828d87b1cd0b08cae581c1d010c4fac7163aa737c8aeeea7be7c449b0a81e"
+        },
+        "raw_prompt": {
+          "path": "tests/phase-3/runs/P1-U17-V01-R1/prompt.txt",
+          "sha256": "000ffe662db94a36d8b3b474b34aaed23ab5b06e7fc6428a7a8df6eaecfb0c93"
+        },
+        "review": {
+          "path": "tests/phase-3/reviews/P1-U17-V01-R1.json",
+          "sha256": "71089cba58b378a7f8aab5c725efebd2fd2f7541a0ac3b55ff3d02df4b65f111"
+        },
+        "skill_snapshot": {
+          "path": "tests/phase-3/snapshots/round-2/manifest.json",
+          "sha256": "a15ee9c18e5f76ec9711098fe9cf6c6dce6dddf870d7bc528df9a39c23017113"
+        },
+        "tool_trace": {
+          "path": "tests/phase-3/runs/P1-U17-V01-R1/artifacts/tool-trace.json",
+          "sha256": "e55ff853a609db5b6ab819e38c10c5118a9e2242e7ebd4c009e93b5e37ea805c"
+        }
+      },
+      "case_id": "P1-U17",
+      "context_id": "0303a497434fb718",
+      "execution_status": "executed",
+      "limitations": [
+        "Synthetic business inputs, not real-organization assurance.",
+        "Executor-maintained trace, not a complete exported host transcript.",
+        "Exact model identifier is not exposed by this delegation interface.",
+        "Capability/access conditions are simulated test conditions; not platform capability verification."
+      ],
+      "retest_of": [],
+      "review_metadata": {
+        "mandatory_checks": 3,
+        "reviewed_checks": 3,
+        "reviewer": {
+          "name": "/root Codex task",
+          "relationship": "independent",
+          "role": "Acceptance reviewer; did not produce the run answer"
+        }
+      },
+      "run_id": "P1-U17-V01-R1",
+      "status": "pass",
+      "valid": true,
+      "variant_id": "P1-U17-V01",
+      "verification_mode": "model"
+    },
+    {
+      "artifact_refs": {
+        "execution_record": {
+          "path": "tests/phase-3/runs/P1-U17-V02-R1/execution-record.json",
+          "sha256": "29d76a4de422f5c3e2afb42c60a74a046b447055689fc9e95085814c17d74aa5"
+        },
+        "raw_output": {
+          "path": "tests/phase-3/runs/P1-U17-V02-R1/artifacts/output.md",
+          "sha256": "57ac9a0c4cd6e5fb58f831f323185cb5bdf4b293f5e8091c9d362462452dee6c"
+        },
+        "raw_prompt": {
+          "path": "tests/phase-3/runs/P1-U17-V02-R1/prompt.txt",
+          "sha256": "bc5d9e9af59d3e9041d04e808f18f043982a730943b2c1761d35232dd99c51a9"
+        },
+        "review": {
+          "path": "tests/phase-3/reviews/P1-U17-V02-R1.json",
+          "sha256": "7a8be3c373028c1b877b6e8720fd3aabfcde27adea289debb3153a036b75c15e"
+        },
+        "skill_snapshot": {
+          "path": "tests/phase-3/snapshots/round-2/manifest.json",
+          "sha256": "a15ee9c18e5f76ec9711098fe9cf6c6dce6dddf870d7bc528df9a39c23017113"
+        },
+        "tool_trace": {
+          "path": "tests/phase-3/runs/P1-U17-V02-R1/artifacts/tool-trace.json",
+          "sha256": "53854a3eafef2bfa4983e6d63ac6a2a986b0a69abb920726c5a728fbd7935215"
+        }
+      },
+      "case_id": "P1-U17",
+      "context_id": "0303a497434fb718",
+      "execution_status": "executed",
+      "limitations": [
+        "Synthetic business inputs, not real-organization assurance.",
+        "Executor-maintained trace, not a complete exported host transcript.",
+        "Exact model identifier is not exposed by this delegation interface.",
+        "Capability/access conditions are simulated test conditions; not platform capability verification."
+      ],
+      "retest_of": [],
+      "review_metadata": {
+        "mandatory_checks": 3,
+        "reviewed_checks": 3,
+        "reviewer": {
+          "name": "/root Codex task",
+          "relationship": "independent",
+          "role": "Acceptance reviewer; did not produce the run answer"
+        }
+      },
+      "run_id": "P1-U17-V02-R1",
+      "status": "pass",
+      "valid": true,
+      "variant_id": "P1-U17-V02",
+      "verification_mode": "model"
+    },
+    {
+      "artifact_refs": {
+        "execution_record": {
+          "path": "tests/phase-3/runs/P1-U18-V01-R1/execution-record.json",
+          "sha256": "2911c6356d983b35c120d19aeb3b0a7084a645db6767b8f69ec709529a0bee1d"
+        },
+        "raw_output": {
+          "path": "tests/phase-3/runs/P1-U18-V01-R1/artifacts/output.md",
+          "sha256": "dd759fab9babdf262839398744fc056c3385c086c4bc8d07f0c2817a99b0b4a5"
+        },
+        "raw_prompt": {
+          "path": "tests/phase-3/runs/P1-U18-V01-R1/prompt.txt",
+          "sha256": "f776f6b3e1ea3df6325b1b76833a80c6871fe42994848981586d6d4f1078ccac"
+        },
+        "review": {
+          "path": "tests/phase-3/reviews/P1-U18-V01-R1.json",
+          "sha256": "39daa763ea31599603b0229c6c50c45354f5b3340695e3876d28f8d0486d2689"
+        },
+        "skill_snapshot": {
+          "path": "tests/phase-3/snapshots/round-2/manifest.json",
+          "sha256": "a15ee9c18e5f76ec9711098fe9cf6c6dce6dddf870d7bc528df9a39c23017113"
+        },
+        "tool_trace": {
+          "path": "tests/phase-3/runs/P1-U18-V01-R1/artifacts/tool-trace.json",
+          "sha256": "66ac21728b989cef7fd62c2275bf994fad46853557e448a57e0dd874e80bddf3"
+        }
+      },
+      "case_id": "P1-U18",
+      "context_id": "0303a497434fb718",
+      "execution_status": "executed",
+      "limitations": [
+        "Synthetic business inputs, not real-organization assurance.",
+        "Executor-maintained trace, not a complete exported host transcript.",
+        "Exact model identifier is not exposed by this delegation interface."
+      ],
+      "retest_of": [],
+      "review_metadata": {
+        "mandatory_checks": 3,
+        "reviewed_checks": 3,
+        "reviewer": {
+          "name": "/root Codex task",
+          "relationship": "independent",
+          "role": "Acceptance reviewer; did not produce the run answer"
+        }
+      },
+      "run_id": "P1-U18-V01-R1",
+      "status": "pass",
+      "valid": true,
+      "variant_id": "P1-U18-V01",
+      "verification_mode": "model"
+    },
+    {
+      "artifact_refs": {
+        "execution_record": {
+          "path": "tests/phase-3/runs/P1-U19-V01-R1/execution-record.json",
+          "sha256": "0a9c44cbd1eee545b4e0d4d71a8309316746a6ffadf611c93549f2728609ec6c"
+        },
+        "raw_output": {
+          "path": "tests/phase-3/runs/P1-U19-V01-R1/artifacts/output.md",
+          "sha256": "4976f3d924218e54b044fa659b2d17d317c2f83104bdff9ba6436a623427c368"
+        },
+        "raw_prompt": {
+          "path": "tests/phase-3/runs/P1-U19-V01-R1/prompt.txt",
+          "sha256": "577d481be6e96dee63f786b0b849fe9ef84478e9ea1d37eee67d348056043504"
+        },
+        "review": null,
+        "skill_snapshot": {
+          "path": "tests/phase-3/snapshots/round-1/manifest.json",
+          "sha256": "615bf303fbdebee10ebc8bb17a63961504c592f4040f3aa4a3f20202cd527d8b"
+        },
+        "tool_trace": {
+          "path": "tests/phase-3/runs/P1-U19-V01-R1/artifacts/tool-trace.json",
+          "sha256": "e613b40f4ee4a9240841bf663485a168a0167f9f3620fddb5b62f9201868bb7f"
+        }
+      },
+      "case_id": "P1-U19",
+      "context_id": "d75393cebb190432",
+      "execution_status": "executed",
+      "limitations": [
+        "Synthetic business inputs, not real-organization assurance.",
+        "Executor-maintained trace, not a complete exported host transcript.",
+        "Exact model identifier is not exposed by this delegation interface."
+      ],
+      "retest_of": [],
+      "review_metadata": null,
+      "run_id": "P1-U19-V01-R1",
+      "status": "executed_unreviewed",
+      "valid": true,
+      "variant_id": "P1-U19-V01",
+      "verification_mode": "model"
+    },
+    {
+      "artifact_refs": {
+        "execution_record": {
+          "path": "tests/phase-3/runs/P1-U19-V01-R2/execution-record.json",
+          "sha256": "a5008f8c5ac9de18d6cc73922437c2dffafc592358758f1117b2e55e50133887"
+        },
+        "raw_output": {
+          "path": "tests/phase-3/runs/P1-U19-V01-R2/artifacts/output.md",
+          "sha256": "800d4d7439a7efbc0f2b102c22903b55e1fb305e22a584554791aff772d7df9d"
+        },
+        "raw_prompt": {
+          "path": "tests/phase-3/runs/P1-U19-V01-R2/prompt.txt",
+          "sha256": "2cadc93f916f9ef4c53fb3dc28a31892d3f2556f2452fdfa38fd35c58a44b6e7"
+        },
+        "review": {
+          "path": "tests/phase-3/reviews/P1-U19-V01-R2.json",
+          "sha256": "761702a9e6c35272ebc7b412646cdeed86f7dfabedc2e2462e30e5c8d2430575"
+        },
+        "skill_snapshot": {
+          "path": "tests/phase-3/snapshots/round-2/manifest.json",
+          "sha256": "a15ee9c18e5f76ec9711098fe9cf6c6dce6dddf870d7bc528df9a39c23017113"
+        },
+        "tool_trace": {
+          "path": "tests/phase-3/runs/P1-U19-V01-R2/artifacts/tool-trace.json",
+          "sha256": "e27e912c99b362762151b5afe187185ef1e68ebd6cb3a252d72bdcf9c0e8b18c"
+        }
+      },
+      "case_id": "P1-U19",
+      "context_id": "0303a497434fb718",
+      "execution_status": "executed",
+      "limitations": [
+        "Synthetic business inputs, not real-organization assurance.",
+        "Executor-maintained trace, not a complete exported host transcript.",
+        "Exact model identifier is not exposed by this delegation interface."
+      ],
+      "retest_of": [
+        "P1-U19-V01-R1"
+      ],
+      "review_metadata": {
+        "mandatory_checks": 3,
+        "reviewed_checks": 3,
+        "reviewer": {
+          "name": "/root Codex task",
+          "relationship": "independent",
+          "role": "Acceptance reviewer; did not produce the run answer"
+        }
+      },
+      "run_id": "P1-U19-V01-R2",
+      "status": "pass",
+      "valid": true,
+      "variant_id": "P1-U19-V01",
+      "verification_mode": "model"
+    },
+    {
+      "artifact_refs": {
+        "execution_record": {
+          "path": "tests/phase-3/runs/P1-U20-V01-R1/execution-record.json",
+          "sha256": "c50cd8b8fc311307e492adc4d059830eadb3e50619ef2aa044a832b77060991b"
+        },
+        "raw_output": {
+          "path": "tests/phase-3/runs/P1-U20-V01-R1/artifacts/output.md",
+          "sha256": "e8bd5966177e772dfff95d705fea15b5453734f5dbd60fe3509ab7ddc6c49c76"
+        },
+        "raw_prompt": {
+          "path": "tests/phase-3/runs/P1-U20-V01-R1/prompt.txt",
+          "sha256": "a09de06d62f25a2e796406d4665da666f1c63d5cb98f8ed3e6afb34127233de4"
+        },
+        "review": {
+          "path": "tests/phase-3/reviews/P1-U20-V01-R1.json",
+          "sha256": "0f835512b4baa152871899fb3a05e14486c95a7135125569a394c41987efa4e4"
+        },
+        "skill_snapshot": {
+          "path": "tests/phase-3/snapshots/round-2/manifest.json",
+          "sha256": "a15ee9c18e5f76ec9711098fe9cf6c6dce6dddf870d7bc528df9a39c23017113"
+        },
+        "tool_trace": {
+          "path": "tests/phase-3/runs/P1-U20-V01-R1/artifacts/tool-trace.json",
+          "sha256": "622eed47c07fdd9acdffc6dd8fa157a87190ea9dc328a1a511d706bc9d540aa7"
+        }
+      },
+      "case_id": "P1-U20",
+      "context_id": "0303a497434fb718",
+      "execution_status": "executed",
+      "limitations": [
+        "Synthetic business inputs, not real-organization assurance.",
+        "Executor-maintained trace, not a complete exported host transcript.",
+        "Exact model identifier is not exposed by this delegation interface."
+      ],
+      "retest_of": [],
+      "review_metadata": {
+        "mandatory_checks": 3,
+        "reviewed_checks": 3,
+        "reviewer": {
+          "name": "/root Codex task",
+          "relationship": "independent",
+          "role": "Acceptance reviewer; did not produce the run answers"
+        }
+      },
+      "run_id": "P1-U20-V01-R1",
+      "status": "pass",
+      "valid": true,
+      "variant_id": "P1-U20-V01",
+      "verification_mode": "model"
+    },
+    {
+      "artifact_refs": {
+        "execution_record": {
+          "path": "tests/phase-3/runs/P1-U20-V02-R1/execution-record.json",
+          "sha256": "52bedcfbea2c8a6b7eabbe51aa7ea1c2566c24e4e1890c6585f3b0eabdd72c7b"
+        },
+        "raw_output": {
+          "path": "tests/phase-3/runs/P1-U20-V02-R1/artifacts/output.md",
+          "sha256": "dea703a9ae3aa2c2fa31b85717e9b8f2d264c2bf21f643dd0fd40f18414e01bc"
+        },
+        "raw_prompt": {
+          "path": "tests/phase-3/runs/P1-U20-V02-R1/prompt.txt",
+          "sha256": "500f2427655bc872ccdf5276266af0e2a1fac99ad2a06f7e2cf6a4a3f87e310b"
+        },
+        "review": {
+          "path": "tests/phase-3/reviews/P1-U20-V02-R1.json",
+          "sha256": "870eff2aed4fc0ecaacc11214bdea7845e6df91e9e520fd681baa2bfc58827bf"
+        },
+        "skill_snapshot": {
+          "path": "tests/phase-3/snapshots/round-2/manifest.json",
+          "sha256": "a15ee9c18e5f76ec9711098fe9cf6c6dce6dddf870d7bc528df9a39c23017113"
+        },
+        "tool_trace": {
+          "path": "tests/phase-3/runs/P1-U20-V02-R1/artifacts/tool-trace.json",
+          "sha256": "7f879a2c6b983220196435b891fd268addb1fad3e7fc177645a55fcc3d8e2fa9"
+        }
+      },
+      "case_id": "P1-U20",
+      "context_id": "0303a497434fb718",
+      "execution_status": "executed",
+      "limitations": [
+        "Synthetic business inputs, not real-organization assurance.",
+        "Executor-maintained trace, not a complete exported host transcript.",
+        "Exact model identifier is not exposed by this delegation interface."
+      ],
+      "retest_of": [],
+      "review_metadata": {
+        "mandatory_checks": 3,
+        "reviewed_checks": 3,
+        "reviewer": {
+          "name": "/root Codex task",
+          "relationship": "independent",
+          "role": "Acceptance reviewer; did not produce the run answer"
+        }
+      },
+      "run_id": "P1-U20-V02-R1",
+      "status": "pass",
+      "valid": true,
+      "variant_id": "P1-U20-V02",
+      "verification_mode": "model"
+    },
+    {
+      "artifact_refs": {
+        "execution_record": {
+          "path": "tests/phase-3/runs/P1-U21-V01-R1/execution-record.json",
+          "sha256": "1dbe8c31bb2d1ef11309202db8f29938cc421db9f845c27f0d6c2a5a6cf24700"
+        },
+        "raw_output": {
+          "path": "tests/phase-3/runs/P1-U21-V01-R1/artifacts/output.md",
+          "sha256": "91b7d113977e51674012b9db827bbe9d9e42390e7570d12724aa3013b17367dd"
+        },
+        "raw_prompt": {
+          "path": "tests/phase-3/runs/P1-U21-V01-R1/prompt.txt",
+          "sha256": "7ff306c77d4805dfe53456fe63b07df61390c12ebf80828190e986419964d11e"
+        },
+        "review": {
+          "path": "tests/phase-3/reviews/P1-U21-V01-R1.json",
+          "sha256": "8f1f109ee02726a3726373ae5072aabe2d714ccedb9ee4c8e4d7236043ce0dac"
+        },
+        "skill_snapshot": {
+          "path": "tests/phase-3/snapshots/round-2/manifest.json",
+          "sha256": "a15ee9c18e5f76ec9711098fe9cf6c6dce6dddf870d7bc528df9a39c23017113"
+        },
+        "tool_trace": {
+          "path": "tests/phase-3/runs/P1-U21-V01-R1/artifacts/tool-trace.json",
+          "sha256": "5ec6ad477b99a6c53ff477e839c1498b288220f13e24d5c212c5c0d807f867b8"
+        }
+      },
+      "case_id": "P1-U21",
+      "context_id": "0303a497434fb718",
+      "execution_status": "executed",
+      "limitations": [
+        "Synthetic business inputs, not real-organization assurance.",
+        "Executor-maintained trace, not a complete exported host transcript.",
+        "Exact model identifier is not exposed by this delegation interface."
+      ],
+      "retest_of": [],
+      "review_metadata": {
+        "mandatory_checks": 5,
+        "reviewed_checks": 5,
+        "reviewer": {
+          "name": "/root Codex task",
+          "relationship": "independent",
+          "role": "Acceptance reviewer; did not produce the run answer"
+        }
+      },
+      "run_id": "P1-U21-V01-R1",
+      "status": "pass",
+      "valid": true,
+      "variant_id": "P1-U21-V01",
+      "verification_mode": "model"
+    },
+    {
+      "artifact_refs": {
+        "execution_record": {
+          "path": "tests/phase-3/runs/P1-U22-V01-R1/execution-record.json",
+          "sha256": "c9a89490e37d767597127d286032448a31bb315840d69652cb342d462a44ebe6"
+        },
+        "raw_output": {
+          "path": "tests/phase-3/runs/P1-U22-V01-R1/artifacts/output.md",
+          "sha256": "caf9ef229df38f9431d8df28252d5865aef89d212095beef75ccdce220d66fa6"
+        },
+        "raw_prompt": {
+          "path": "tests/phase-3/runs/P1-U22-V01-R1/prompt.txt",
+          "sha256": "f2b4527039f3527187f9b9b391d36629afd04024f18eb632c45263b42fa6ece9"
+        },
+        "review": {
+          "path": "tests/phase-3/reviews/P1-U22-V01-R1.json",
+          "sha256": "0f413c771bc55ba834ffe80f23cee66db351aa4d82bd4cd626b7a26e4bc89960"
+        },
+        "skill_snapshot": {
+          "path": "tests/phase-3/snapshots/round-2/manifest.json",
+          "sha256": "a15ee9c18e5f76ec9711098fe9cf6c6dce6dddf870d7bc528df9a39c23017113"
+        },
+        "tool_trace": {
+          "path": "tests/phase-3/runs/P1-U22-V01-R1/artifacts/tool-trace.json",
+          "sha256": "4a6074d6c5b548523ee833f4350ab1f3e9a675855206bd723e9b9487670766b2"
+        }
+      },
+      "case_id": "P1-U22",
+      "context_id": "0303a497434fb718",
+      "execution_status": "executed",
+      "limitations": [
+        "Synthetic business inputs, not real-organization assurance.",
+        "Executor-maintained trace, not a complete exported host transcript.",
+        "Exact model identifier is not exposed by this delegation interface."
+      ],
+      "retest_of": [],
+      "review_metadata": {
+        "mandatory_checks": 5,
+        "reviewed_checks": 5,
+        "reviewer": {
+          "name": "/root Codex task",
+          "relationship": "independent",
+          "role": "Acceptance reviewer and independent preservation recheck; not answering executor"
+        }
+      },
+      "run_id": "P1-U22-V01-R1",
+      "status": "pass",
+      "valid": true,
+      "variant_id": "P1-U22-V01",
+      "verification_mode": "model"
+    }
+  ],
+  "suite": "Thien-Skill-Risk-Process-Control Phase 3 retained evidence",
+  "variant_coverage": [
+    {
+      "case_id": "P1-U01",
+      "execution_status": "executed",
+      "recorded_results": [
+        {
+          "context_id": "d75393cebb190432",
+          "run_id": "P1-U01-V01-R1",
+          "status": "executed_unreviewed"
+        },
+        {
+          "context_id": "0303a497434fb718",
+          "run_id": "P1-U01-V01-R2",
+          "status": "pass"
+        }
+      ],
+      "variant_id": "P1-U01-V01"
+    },
+    {
+      "case_id": "P1-U02",
+      "execution_status": "executed",
+      "recorded_results": [
+        {
+          "context_id": "d75393cebb190432",
+          "run_id": "P1-U02-V01-R1",
+          "status": "executed_unreviewed"
+        },
+        {
+          "context_id": "0303a497434fb718",
+          "run_id": "P1-U02-V01-R2",
+          "status": "pass"
+        }
+      ],
+      "variant_id": "P1-U02-V01"
+    },
+    {
+      "case_id": "P1-U03",
+      "execution_status": "executed",
+      "recorded_results": [
+        {
+          "context_id": "0303a497434fb718",
+          "run_id": "P1-U03-V01-R1",
+          "status": "pass"
+        }
+      ],
+      "variant_id": "P1-U03-V01"
+    },
+    {
+      "case_id": "P1-U04",
+      "execution_status": "executed",
+      "recorded_results": [
+        {
+          "context_id": "d75393cebb190432",
+          "run_id": "P1-U04-V01-R1",
+          "status": "executed_unreviewed"
+        },
+        {
+          "context_id": "0303a497434fb718",
+          "run_id": "P1-U04-V01-R2",
+          "status": "pass"
+        }
+      ],
+      "variant_id": "P1-U04-V01"
+    },
+    {
+      "case_id": "P1-U05",
+      "execution_status": "executed",
+      "recorded_results": [
+        {
+          "context_id": "0303a497434fb718",
+          "run_id": "P1-U05-V01-R1",
+          "status": "pass"
+        }
+      ],
+      "variant_id": "P1-U05-V01"
+    },
+    {
+      "case_id": "P1-U06",
+      "execution_status": "executed",
+      "recorded_results": [
+        {
+          "context_id": "0303a497434fb718",
+          "run_id": "P1-U06-V01-R1",
+          "status": "pass"
+        }
+      ],
+      "variant_id": "P1-U06-V01"
+    },
+    {
+      "case_id": "P1-U07",
+      "execution_status": "executed",
+      "recorded_results": [
+        {
+          "context_id": "0303a497434fb718",
+          "run_id": "P1-U07-V01-R1",
+          "status": "pass"
+        }
+      ],
+      "variant_id": "P1-U07-V01"
+    },
+    {
+      "case_id": "P1-U08",
+      "execution_status": "executed",
+      "recorded_results": [
+        {
+          "context_id": "0303a497434fb718",
+          "run_id": "P1-U08-V01-R1",
+          "status": "pass"
+        }
+      ],
+      "variant_id": "P1-U08-V01"
+    },
+    {
+      "case_id": "P1-U08",
+      "execution_status": "executed",
+      "recorded_results": [
+        {
+          "context_id": "0303a497434fb718",
+          "run_id": "P1-U08-V02-R1",
+          "status": "pass"
+        }
+      ],
+      "variant_id": "P1-U08-V02"
+    },
+    {
+      "case_id": "P1-U08",
+      "execution_status": "executed",
+      "recorded_results": [
+        {
+          "context_id": "0303a497434fb718",
+          "run_id": "P1-U08-V03-R1",
+          "status": "pass"
+        }
+      ],
+      "variant_id": "P1-U08-V03"
+    },
+    {
+      "case_id": "P1-U09",
+      "execution_status": "executed",
+      "recorded_results": [
+        {
+          "context_id": "0303a497434fb718",
+          "run_id": "P1-U09-V01-R1",
+          "status": "pass"
+        }
+      ],
+      "variant_id": "P1-U09-V01"
+    },
+    {
+      "case_id": "P1-U10",
+      "execution_status": "executed",
+      "recorded_results": [
+        {
+          "context_id": "0303a497434fb718",
+          "run_id": "P1-U10-V01-R1",
+          "status": "pass"
+        }
+      ],
+      "variant_id": "P1-U10-V01"
+    },
+    {
+      "case_id": "P1-U11",
+      "execution_status": "executed",
+      "recorded_results": [
+        {
+          "context_id": "0303a497434fb718",
+          "run_id": "P1-U11-V01-R1",
+          "status": "pass"
+        }
+      ],
+      "variant_id": "P1-U11-V01"
+    },
+    {
+      "case_id": "P1-U12",
+      "execution_status": "executed",
+      "recorded_results": [
+        {
+          "context_id": "0303a497434fb718",
+          "run_id": "P1-U12-V01-R1",
+          "status": "pass"
+        }
+      ],
+      "variant_id": "P1-U12-V01"
+    },
+    {
+      "case_id": "P1-U13",
+      "execution_status": "executed",
+      "recorded_results": [
+        {
+          "context_id": "0303a497434fb718",
+          "run_id": "P1-U13-V01-R1",
+          "status": "pass"
+        }
+      ],
+      "variant_id": "P1-U13-V01"
+    },
+    {
+      "case_id": "P1-U14",
+      "execution_status": "executed",
+      "recorded_results": [
+        {
+          "context_id": "0303a497434fb718",
+          "run_id": "P1-U14-V01-R1",
+          "status": "pass"
+        }
+      ],
+      "variant_id": "P1-U14-V01"
+    },
+    {
+      "case_id": "P1-U15",
+      "execution_status": "executed",
+      "recorded_results": [
+        {
+          "context_id": "0303a497434fb718",
+          "run_id": "P1-U15-V01-R1",
+          "status": "pass"
+        }
+      ],
+      "variant_id": "P1-U15-V01"
+    },
+    {
+      "case_id": "P1-U15",
+      "execution_status": "executed",
+      "recorded_results": [
+        {
+          "context_id": "0303a497434fb718",
+          "run_id": "P1-U15-V02-R1",
+          "status": "pass"
+        }
+      ],
+      "variant_id": "P1-U15-V02"
+    },
+    {
+      "case_id": "P1-U15",
+      "execution_status": "executed",
+      "recorded_results": [
+        {
+          "context_id": "0303a497434fb718",
+          "run_id": "P1-U15-V03-R1",
+          "status": "pass"
+        }
+      ],
+      "variant_id": "P1-U15-V03"
+    },
+    {
+      "case_id": "P1-U16",
+      "execution_status": "executed",
+      "recorded_results": [
+        {
+          "context_id": "0303a497434fb718",
+          "run_id": "P1-U16-V01-R1",
+          "status": "pass"
+        }
+      ],
+      "variant_id": "P1-U16-V01"
+    },
+    {
+      "case_id": "P1-U16",
+      "execution_status": "executed",
+      "recorded_results": [
+        {
+          "context_id": "0303a497434fb718",
+          "run_id": "P1-U16-V02-R1",
+          "status": "pass"
+        }
+      ],
+      "variant_id": "P1-U16-V02"
+    },
+    {
+      "case_id": "P1-U17",
+      "execution_status": "executed",
+      "recorded_results": [
+        {
+          "context_id": "0303a497434fb718",
+          "run_id": "P1-U17-V01-R1",
+          "status": "pass"
+        }
+      ],
+      "variant_id": "P1-U17-V01"
+    },
+    {
+      "case_id": "P1-U17",
+      "execution_status": "executed",
+      "recorded_results": [
+        {
+          "context_id": "0303a497434fb718",
+          "run_id": "P1-U17-V02-R1",
+          "status": "pass"
+        }
+      ],
+      "variant_id": "P1-U17-V02"
+    },
+    {
+      "case_id": "P1-U18",
+      "execution_status": "executed",
+      "recorded_results": [
+        {
+          "context_id": "0303a497434fb718",
+          "run_id": "P1-U18-V01-R1",
+          "status": "pass"
+        }
+      ],
+      "variant_id": "P1-U18-V01"
+    },
+    {
+      "case_id": "P1-U19",
+      "execution_status": "executed",
+      "recorded_results": [
+        {
+          "context_id": "d75393cebb190432",
+          "run_id": "P1-U19-V01-R1",
+          "status": "executed_unreviewed"
+        },
+        {
+          "context_id": "0303a497434fb718",
+          "run_id": "P1-U19-V01-R2",
+          "status": "pass"
+        }
+      ],
+      "variant_id": "P1-U19-V01"
+    },
+    {
+      "case_id": "P1-U20",
+      "execution_status": "executed",
+      "recorded_results": [
+        {
+          "context_id": "0303a497434fb718",
+          "run_id": "P1-U20-V01-R1",
+          "status": "pass"
+        }
+      ],
+      "variant_id": "P1-U20-V01"
+    },
+    {
+      "case_id": "P1-U20",
+      "execution_status": "executed",
+      "recorded_results": [
+        {
+          "context_id": "0303a497434fb718",
+          "run_id": "P1-U20-V02-R1",
+          "status": "pass"
+        }
+      ],
+      "variant_id": "P1-U20-V02"
+    },
+    {
+      "case_id": "P1-U21",
+      "execution_status": "executed",
+      "recorded_results": [
+        {
+          "context_id": "0303a497434fb718",
+          "run_id": "P1-U21-V01-R1",
+          "status": "pass"
+        }
+      ],
+      "variant_id": "P1-U21-V01"
+    },
+    {
+      "case_id": "P1-U22",
+      "execution_status": "executed",
+      "recorded_results": [
+        {
+          "context_id": "0303a497434fb718",
+          "run_id": "P1-U22-V01-R1",
+          "status": "pass"
+        }
+      ],
+      "variant_id": "P1-U22-V01"
+    },
+    {
+      "case_id": "P1-P01",
+      "execution_status": "executed",
+      "recorded_results": [
+        {
+          "context_id": "4a134d99a9f37949",
+          "run_id": "P1-P01-V01-R1",
+          "status": "pass"
+        }
+      ],
+      "variant_id": "P1-P01-V01"
+    },
+    {
+      "case_id": "P1-P02",
+      "execution_status": "executed",
+      "recorded_results": [
+        {
+          "context_id": "4a134d99a9f37949",
+          "run_id": "P1-P02-V01-R1",
+          "status": "pass"
+        }
+      ],
+      "variant_id": "P1-P02-V01"
+    },
+    {
+      "case_id": "P1-P03",
+      "execution_status": "executed",
+      "recorded_results": [
+        {
+          "context_id": "4a134d99a9f37949",
+          "run_id": "P1-P03-V01-R1",
+          "status": "pass"
+        },
+        {
+          "context_id": "4a134d99a9f37949",
+          "run_id": "P1-P03-V01-R2",
+          "status": "pass"
+        }
+      ],
+      "variant_id": "P1-P03-V01"
+    }
+  ],
+  "warnings": [
+    {
+      "code": "snapshot-not-current",
+      "message": "Historical snapshot is not identical to current canonical content; its runs cannot verify the current release.",
+      "where": "run:P1-U01-V01-R1.skill_snapshot"
+    }
+  ]
+}

@@ -1,0 +1,60 @@
+{
+  "run_id": "P1-U05-V01-R1",
+  "reviewer": {
+    "name": "/root Codex task",
+    "role": "Acceptance reviewer; not the answering executor",
+    "relationship": "independent"
+  },
+  "timestamp": "2026-08-27T19:08:35.180Z",
+  "rubric_source_sha256": "69db89db1ccd63703526aee9c0bc6305a5499905ec75f656a754ecce5840fbcb",
+  "checks": {
+    "case.must_observe.1": {
+      "result": "pass",
+      "rationale": "The answer provides a labelled Target-State discussion draft, objective/trigger/outcome, risk-linked control proposals and alternatives. It identifies technical scope, authority, budget, SLA and other decisions to settle; only the authorized synthetic brief is used and no external-standard authority is fabricated.",
+      "evidence_refs": [
+        {
+          "artifact": "raw_output",
+          "locator": "L3-L25"
+        },
+        {
+          "artifact": "raw_output",
+          "locator": "L67-L86"
+        },
+        {
+          "artifact": "tool_trace",
+          "locator": "entire_artifact"
+        }
+      ]
+    },
+    "case.must_observe.2": {
+      "result": "pass",
+      "rationale": "The answer explicitly states that the service has not operated, there is no current operating baseline, approved design is Not provided, and no current-control/gap conclusion can be drawn. Every proposed control is Target-State rather than actual-state evidence.",
+      "evidence_refs": [
+        {
+          "artifact": "raw_output",
+          "locator": "L5-L12"
+        },
+        {
+          "artifact": "raw_output",
+          "locator": "L40-L42"
+        }
+      ]
+    },
+    "case.must_not_observe.1": {
+      "result": "pass",
+      "rationale": "No invented existing system, current owner, operating record or fake actual gap is used to fill a table. Proposed roles are identified as suggestions; resources, targets and technical/legal verification remain open.",
+      "evidence_refs": [
+        {
+          "artifact": "raw_output",
+          "locator": "L65-L90"
+        }
+      ]
+    }
+  },
+  "result": "pass",
+  "limitations": [
+    "Fixture/skill author reviews an independently produced answer; not third-party assurance.",
+    "Feasibility, equipment-specific safety and legal requirements are explicitly unverified; this test does not approve operating the proposed service.",
+    "No external lookup, OCR or specialist execution occurred; exact model identifier is unavailable."
+  ]
+}

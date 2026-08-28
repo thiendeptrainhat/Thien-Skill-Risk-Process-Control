@@ -1,0 +1,14 @@
+Perform the P1-P03-V01-R1 read-only release-evidence audit in /Users/thiendeptrainhat/Documents/Thien's Skills Library/Thien-Risk-Process-Control.
+Use the instructions in tests/phase-3/runs/P1-P03-V01-R1/prompt.txt.
+Review README.md, INSTALL.md, RELEASE-MANIFEST.yaml, docs/phase-3/REPORT.md and docs/phase-3/PLATFORM-GUIDANCE.md against the retained evidence, with particular attention to tests/phase-3/static/pre-release-report-review-results.json, tests/phase-3/evidence-index.json, the P01/P02 actual outputs, current model run reviews and legacy history. You may inspect selected raw answers/traces to substantiate doubtful claims. The applicable P03 invariants are in docs/phase-1/ACCEPTANCE-MATRIX.yaml / tests/phase-3/acceptance-matrix.json. This is a static evidence review, NOT a new model-behavior/installation test.
+
+Run the actual evidence validator read-only and retain its output if feasible. Its overall gate is expected to lack P03 until this audit and a separate root review are registered; that alone is not a defect. Do not call the gate complete before it has evidence. The report deliberately delegates final gate status to acceptance-results.json; that derived file will be regenerated after P03. For immutable inputs use the pre-release-report-review-results.json snapshot, not the mutable acceptance-results.json or evidence-index.json as hashed receipt inputs.
+
+Write ONLY under /private/tmp/thien-rpc-phase3.xGeed0/P1-P03-V01-R1 using apply_patch for authored text:
+- output.md: actual findings and one explicit conclusion for each P03 invariant, with source/evidence locators. If a problem exists report it; do not repair source docs or rubber-stamp.
+- tool-trace.json: actual command/read list, timestamps, tool outcomes, limitations. It is executor-maintained, not a complete host transcript.
+- inputs.json: exact repo-relative input paths actually relied on and SHA-256 (omit mutable evidence-index/acceptance-results from receipt inputs; record read in trace instead). Include the reviewed root docs, pre-review result, matrix, and key actual static evidence.
+- validator-output.json: actual parsed validator stdout if retained. Never invent missing results.
+
+No network, installation, connectors, Git mutations/publication, source/fixture/snapshot/doc edits, or new behavioral runs. Do not read unrelated files or other installed skills unnecessarily. You are not asked to assess all business answers afresh: assess honest release claims. Your independent role is reviewer of documentation you did not author, not third-party assurance. Tell the parent when artifacts are complete.
+

@@ -1,0 +1,49 @@
+{
+  "record_kind": "actual_static_preflight_commands",
+  "commands": [
+    {
+      "file": "tooling-tests.txt",
+      "cmd": "python3 -B -m unittest discover -s tests/phase-3/tooling -v",
+      "started_at": "2026-08-27T19:44:18.990Z",
+      "finished_at": "2026-08-27T19:44:20.989Z",
+      "chunk_id": "fede00",
+      "wall_time_seconds": 1.473170042,
+      "exit_code": 0,
+      "original_token_count": 2483
+    },
+    {
+      "file": "canonical-structure.json",
+      "cmd": "python3 -B skills/thien-skill-risk-process-control/scripts/validate_package.py skills/thien-skill-risk-process-control --repo-root . --json",
+      "started_at": "2026-08-27T19:44:18.990Z",
+      "finished_at": "2026-08-27T19:44:19.537Z",
+      "chunk_id": "2e5512",
+      "wall_time_seconds": 0.000001417,
+      "exit_code": 0,
+      "original_token_count": 146
+    },
+    {
+      "file": "legacy-registry.json",
+      "cmd": "python3 -B scripts/run_tests.py --json",
+      "started_at": "2026-08-27T19:44:18.990Z",
+      "finished_at": "2026-08-27T19:44:19.517Z",
+      "chunk_id": "6545d1",
+      "wall_time_seconds": 0.000004167,
+      "exit_code": 0,
+      "original_token_count": 3239
+    },
+    {
+      "file": "canonical-yaml.json",
+      "cmd": "ruby -ryaml -rjson -rdate -e 'root=\"skills/thien-skill-risk-process-control\"; paths=Dir.glob(root+\"/**/*.yaml\"); paths.each { |p| YAML.safe_load(File.read(p), permitted_classes: [Date, Time], aliases: false) }; front=File.read(root+\"/SKILL.md\").split(/^---\\s*$/,3)[1]; meta=YAML.safe_load(front, aliases: false); raise \"description too long\" if meta.fetch(\"description\").length > 200; puts JSON.pretty_generate({status:\"pass\",yaml_files:paths.length,frontmatter:true,description_characters:meta.fetch(\"description\").length})'",
+      "started_at": "2026-08-27T19:44:18.990Z",
+      "finished_at": "2026-08-27T19:44:19.674Z",
+      "chunk_id": "3fb6a1",
+      "wall_time_seconds": 0.000001417,
+      "exit_code": 0,
+      "original_token_count": 25
+    }
+  ],
+  "limitations": [
+    "Tooling/structural/registry checks are not behavioral runs or native installation.",
+    "The historical registry output is freshly executed without overwriting historical result files."
+  ]
+}

@@ -1,0 +1,27 @@
+{
+  "run_id": "P1-P03-V01-R1",
+  "executor": "/root/p1_p03_v01_r1",
+  "executor_role": "Same-team peer reviewer of release docs, not a new business-model run",
+  "mechanism": "collaboration.spawn_agent with immediate clarification; actual local read-only validator and artifact review",
+  "started_at": "2026-08-27T20:14:32Z",
+  "finished_at": "2026-08-27T20:26:07.089Z",
+  "timestamp_note": "started_at is the first actual captured clock checkpoint after initial discovery/instruction reads, not an invented exact dispatch time. Later tool calls have JS Date UTC timestamps. Initial missing timestamps remain null. Final serialization is not recursively logged.",
+  "captured_at": "2026-08-27T20:28:18.784Z",
+  "capture_mechanism": "cp -p of four completed regular-file artifacts from the assigned temporary directory into the run artifacts directory; original bytes retained",
+  "dispatch_record": "tests/phase-3/runs/P1-P03-V01-R1/dispatch-record.json",
+  "complete_specification": "tests/phase-3/runs/P1-P03-V01-R1/dispatch-prompt.txt",
+  "actual_validator": {
+    "command": "python3 -B scripts/run_tests.py --phase3 --json",
+    "exit_code": 0,
+    "generated_at": "2026-08-27T20:17:08+00:00",
+    "integrity_status": "pass",
+    "error_count": 0,
+    "acceptance_status": "incomplete",
+    "current_release_gate": "incomplete",
+    "expected_missing_case": "P1-P03-V01",
+    "retained_artifact": "validator-output.json",
+    "retention": "Complete parsed actual stdout retained via apply_patch; no result fields invented, removed or substituted."
+  },
+  "scope": "Static documentation/evidence audit; P03 review is separate from prior 29 model runs. Root has inspected its audit output and actual event trace. No installation, network or Git mutation."
+}
+

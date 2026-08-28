@@ -1,0 +1,33 @@
+template: "sod-conflict-register"
+schema_version: "1.0.0"
+output_metadata:
+  analysis_layers: []
+  source_references: []
+  data_classification: null
+  assumptions: []
+  confidence: "Unresolved"
+  unresolved_items: []
+  review_status: "Not reviewed"
+
+conflicts:
+  - sod_conflict_id: null
+    analysis_layer: null
+    analysis_level: null
+    activity_a: null
+    activity_b: null
+    risk: null
+    role_ids: []
+    user_ids: []
+    system: null
+    severity: null
+    actual_or_potential: "To be validated"
+    evidence_ids: []
+    business_justification: null
+    mitigating_control_ids: []
+    mitigation_owner: null
+    monitoring: null
+    approval: null
+    review_frequency: null
+    source_reference: null
+    confidence: "Unresolved"
+    review_status: "Not reviewed"

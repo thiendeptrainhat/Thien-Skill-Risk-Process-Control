@@ -1,0 +1,88 @@
+template: "control-baseline-comparison"
+schema_version: "1.1.0"
+output_metadata:
+  analysis_layers: []
+  source_references: []
+  data_classification: null
+  assumptions: []
+  confidence: "Unresolved"
+  unresolved_items: []
+  review_status: "Not reviewed"
+
+comparisons:
+  - comparison_id: null
+    process_ids: []
+    step_ids: []
+    objective_ids: []
+    risk_ids: []
+    control_objective_ids: []
+    assessed_scope: null
+    assessed_period: null
+    baseline_link_ids: []
+    logical_control_ids: []
+    documented_observation_ids: []
+    designed_observation_ids: []
+    performed_observation_ids: []
+    target_observation_ids: []
+    source_ids: []
+    evidence_ids: []
+    coverage_assessment: null
+    comparison_criteria:
+      control_objective: null
+      coverage: null
+      timing: null
+      precision: null
+      independence: null
+      evidence: null
+      dependencies: null
+    equivalence_rationale: null
+    alternative_control_ids: []
+    compensating_control_ids: []
+    gap_ids: []
+    gap_rationale: null
+    recommendation_ids: []
+    no_change_scenario_ids: []
+    source_reference: null
+    limitations: []
+    confidence: "Unresolved"
+    review_status: "Not reviewed"
+
+no_change_scenarios:
+  - no_change_scenario_id: null
+    comparison_ids: []
+    risk_ids: []
+    gap_ids: []
+    design_opportunity_ids: []
+    objective_ids: []
+    assessed_scope: null
+    scenario_basis: null
+    cause: null
+    event: null
+    impact: null
+    existing_protection:
+      logical_control_ids: []
+      control_observation_ids: []
+      protection_summary: null
+      evidence_status: "Not checked"
+    unmitigated_exposure: null
+    horizon: null
+    uncertainty: []
+    validation_needed: []
+    interim_treatment_options: []
+    source_ids: []
+    evidence_ids: []
+    source_reference: null
+    limitations: []
+    confidence: "Unresolved"
+    review_status: "Not reviewed"
+
+comparison_rules:
+  references: "Resolve baseline_link_ids in control-register and source_ids in source_register. Reuse scoped observations; do not duplicate or overwrite their facts in this view."
+  layers: "Documented/designed/performed/target observation lists must contain the corresponding analysis_layer and compatible scope/period. Logical CTL IDs alone do not establish coverage."
+  baseline: "An analyst proposal without a verified source is permissible when labeled, but is not a mandatory standard or a compliance baseline."
+  equivalence: "Compare objective/coverage/timing/precision/independence/evidence/dependencies; different wording or automation level does not itself create a gap."
+  gap: "Missing description, evidence limitation, design weakness and an observed operating deviation are distinct. Absence in reviewed scope is not proof of nonexistence."
+  unknown: "Keep coverage_assessment null when not assessed, or evidence_insufficient/conflicting_evidence when supported; neither is an automatic failed control."
+  no_change: "scenario_basis distinguishes a substantiated gap from a hypothesis/design opportunity. A future scenario is not an actual incident; protection and exposure inherit the evidence limits."
+  quantification: "Do not invent probability, loss, score or horizon. Quantification needs supplied/approved methodology and data; missing horizon remains null."
+  proportionality: "Use only relevant comparisons/scenarios; do not force a full register for a narrow question or fake a current-state gap for greenfield advice."

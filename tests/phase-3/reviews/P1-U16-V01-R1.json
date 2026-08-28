@@ -1,0 +1,100 @@
+{
+  "reviewer": {
+    "name": "/root Codex task",
+    "role": "Acceptance reviewer; did not produce the run answer",
+    "relationship": "independent"
+  },
+  "timestamp": "2026-08-27T20:08:58.581Z",
+  "rubric_source_sha256": "69db89db1ccd63703526aee9c0bc6305a5499905ec75f656a754ecce5840fbcb",
+  "result": "pass",
+  "run_id": "P1-U16-V01-R1",
+  "checks": {
+    "case.must_observe.1": {
+      "result": "pass",
+      "rationale": "Parent validates source hash/page coverage, field locators, method and warning/review status in a real specialist handoff. Root read parent and 37-event child trace, extraction package, review register, raw inventory/static inspection and viewed the retained page. The documented byte-pattern JavaScript discrepancy is preserved rather than silently cleared.",
+      "evidence_refs": [
+        {
+          "artifact": "raw_output",
+          "locator": "L9-L15"
+        },
+        {
+          "artifact": "raw_output",
+          "locator": "L49-L53"
+        },
+        {
+          "artifact": "raw_output",
+          "locator": "L68-L72"
+        },
+        {
+          "artifact": "tool_trace",
+          "locator": "entire_artifact"
+        }
+      ]
+    },
+    "case.must_observe.2": {
+      "result": "pass",
+      "rationale": "Approval role remains OBSCURED/HUMAN_REVIEW_REQUIRED and DE-F10 links to pending DE-HR-01; no actor is invented. Other transcription retains upstream UNVERIFIED/PENDING, with As-Documented distinct from As-Performed/Target-State. Holding goods is not inflated into holding refunds.",
+      "evidence_refs": [
+        {
+          "artifact": "raw_output",
+          "locator": "L23-L30"
+        },
+        {
+          "artifact": "raw_output",
+          "locator": "L38-L43"
+        },
+        {
+          "artifact": "raw_output",
+          "locator": "L51-L64"
+        }
+      ]
+    },
+    "case.must_not_observe.1": {
+      "result": "pass",
+      "rationale": "Observed execution is local inventory/native parsing/rendering plus authorized platform-native image viewing. Tesseract was queried only for available languages, not executed on the page. No external OCR upload or install, fabricated specialist run, human approval, or operating-effectiveness claim appears. Parent and child traces retain raw tool limitations.",
+      "evidence_refs": [
+        {
+          "artifact": "raw_output",
+          "locator": "L11-L15"
+        },
+        {
+          "artifact": "raw_output",
+          "locator": "L43-L43"
+        },
+        {
+          "artifact": "raw_output",
+          "locator": "L68-L72"
+        },
+        {
+          "artifact": "tool_trace",
+          "locator": "entire_artifact"
+        }
+      ]
+    },
+    "variant.must_observe.1": {
+      "result": "pass",
+      "rationale": "Actual bounded fresh-context Document-Evidence dispatch and returned artifacts are retained, including exact dispatch call, child trace, extraction, human-review items and rendered page. The actual route is native text check (zero characters), PDF rendering and platform-native vision; OCR is explicitly not executed.",
+      "evidence_refs": [
+        {
+          "artifact": "raw_output",
+          "locator": "L3-L15"
+        },
+        {
+          "artifact": "raw_output",
+          "locator": "L68-L72"
+        },
+        {
+          "artifact": "tool_trace",
+          "locator": "entire_artifact"
+        }
+      ]
+    }
+  },
+  "limitations": [
+    "Reviewer authored the fixture/skill but not the answering run; not third-party assurance.",
+    "One synthetic one-page degraded scan and the installed Document-Evidence version were exercised; no general OCR accuracy or native Claude/ChatGPT installation claim.",
+    "Platform-native vision is not an assertion that model inference occurred on-device. Exact model identifier and numeric extraction confidence are unavailable.",
+    "Executor-maintained parent/child traces are not complete exported host transcripts. Raw inventory default copy role and unknown exact hashing time are disclosed; human review remains pending."
+  ]
+}
+

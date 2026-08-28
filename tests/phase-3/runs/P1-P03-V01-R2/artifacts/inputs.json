@@ -1,0 +1,55 @@
+{
+  "run_id": "P1-P03-V01-R2",
+  "recorded_at": "2026-08-28T02:38:26.449Z",
+  "relative_links_resolve_from": "original_path, not relocated snapshot path",
+  "inputs": [
+    {
+      "original_path": "README.md",
+      "artifact": {
+        "path": "tests/phase-3/runs/P1-P03-V01-R2/artifacts/inputs/README.md",
+        "sha256": "debf908f4153d64372210bb1652ea07a124dbbd89aa487c01bd29fa9cee935d0"
+      },
+      "byte_identical_to_original": true
+    },
+    {
+      "original_path": "docs/HANDOFF.md",
+      "artifact": {
+        "path": "tests/phase-3/runs/P1-P03-V01-R2/artifacts/inputs/docs/HANDOFF.md",
+        "sha256": "adbeff16785df9ae77b11f4b5fba700a4e38e5e16f0b65c8cea9c5eff71fd184"
+      },
+      "byte_identical_to_original": true
+    },
+    {
+      "original_path": "INSTALL.md",
+      "artifact": {
+        "path": "tests/phase-3/runs/P1-P03-V01-R2/artifacts/inputs/INSTALL.md",
+        "sha256": "7d9a1e7d780ed4bdab6d83d2f49fa433a8f148db57134b2240a50f2991f661d8"
+      },
+      "byte_identical_to_original": true
+    },
+    {
+      "original_path": "docs/phase-3/REPORT.md",
+      "artifact": {
+        "path": "tests/phase-3/runs/P1-P03-V01-R2/artifacts/inputs/docs/phase-3/REPORT.md",
+        "sha256": "5cb6c3057455613ed6281168793d0ebd38d27b7c6a4f47a89ef354dcf23bfd7c"
+      },
+      "byte_identical_to_original": true
+    },
+    {
+      "original_path": "docs/phase-3/PLATFORM-GUIDANCE.md",
+      "artifact": {
+        "path": "tests/phase-3/runs/P1-P03-V01-R2/artifacts/inputs/docs/phase-3/PLATFORM-GUIDANCE.md",
+        "sha256": "30762ab5a85323516d0a9e375e83bd751df427ba60f235cc568f0232ba14dfce"
+      },
+      "byte_identical_to_original": true
+    },
+    {
+      "original_path": "RELEASE-MANIFEST.yaml",
+      "artifact": {
+        "path": "tests/phase-3/runs/P1-P03-V01-R2/artifacts/inputs/RELEASE-MANIFEST.yaml",
+        "sha256": "4ec2f316e1f83284841df2d512af6e6ca3b12705a9b1df0ee27b5beccef4a899"
+      },
+      "byte_identical_to_original": true
+    }
+  ]
+}

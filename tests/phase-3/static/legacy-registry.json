@@ -1,0 +1,581 @@
+{
+  "behavioral": {
+    "executed": 0,
+    "note": "Behavioral selection is defined but this deterministic runner does not execute model tests.",
+    "selected": 28,
+    "status": "not_run"
+  },
+  "case_count": 104,
+  "case_results": [
+    {
+      "behavioral_status": "not_selected",
+      "deterministic_status": "pass",
+      "id": "A01"
+    },
+    {
+      "behavioral_status": "not_selected",
+      "deterministic_status": "pass",
+      "id": "A02"
+    },
+    {
+      "behavioral_status": "not_run",
+      "deterministic_status": "pass",
+      "id": "A03"
+    },
+    {
+      "behavioral_status": "not_run",
+      "deterministic_status": "pass",
+      "id": "A04"
+    },
+    {
+      "behavioral_status": "not_selected",
+      "deterministic_status": "pass",
+      "id": "A05"
+    },
+    {
+      "behavioral_status": "not_selected",
+      "deterministic_status": "pass",
+      "id": "A06"
+    },
+    {
+      "behavioral_status": "not_selected",
+      "deterministic_status": "pass",
+      "id": "A07"
+    },
+    {
+      "behavioral_status": "not_run",
+      "deterministic_status": "pass",
+      "id": "A08"
+    },
+    {
+      "behavioral_status": "not_selected",
+      "deterministic_status": "pass",
+      "id": "A09"
+    },
+    {
+      "behavioral_status": "not_selected",
+      "deterministic_status": "pass",
+      "id": "A10"
+    },
+    {
+      "behavioral_status": "not_selected",
+      "deterministic_status": "pass",
+      "id": "B01"
+    },
+    {
+      "behavioral_status": "not_selected",
+      "deterministic_status": "pass",
+      "id": "B02"
+    },
+    {
+      "behavioral_status": "not_selected",
+      "deterministic_status": "pass",
+      "id": "B03"
+    },
+    {
+      "behavioral_status": "not_selected",
+      "deterministic_status": "pass",
+      "id": "B04"
+    },
+    {
+      "behavioral_status": "not_run",
+      "deterministic_status": "pass",
+      "id": "B05"
+    },
+    {
+      "behavioral_status": "not_run",
+      "deterministic_status": "pass",
+      "id": "B06"
+    },
+    {
+      "behavioral_status": "not_selected",
+      "deterministic_status": "pass",
+      "id": "B07"
+    },
+    {
+      "behavioral_status": "not_selected",
+      "deterministic_status": "pass",
+      "id": "B08"
+    },
+    {
+      "behavioral_status": "not_selected",
+      "deterministic_status": "pass",
+      "id": "C01"
+    },
+    {
+      "behavioral_status": "not_selected",
+      "deterministic_status": "pass",
+      "id": "C02"
+    },
+    {
+      "behavioral_status": "not_selected",
+      "deterministic_status": "pass",
+      "id": "C03"
+    },
+    {
+      "behavioral_status": "not_selected",
+      "deterministic_status": "pass",
+      "id": "C04"
+    },
+    {
+      "behavioral_status": "not_run",
+      "deterministic_status": "pass",
+      "id": "C05"
+    },
+    {
+      "behavioral_status": "not_run",
+      "deterministic_status": "pass",
+      "id": "C06"
+    },
+    {
+      "behavioral_status": "not_selected",
+      "deterministic_status": "pass",
+      "id": "C07"
+    },
+    {
+      "behavioral_status": "not_run",
+      "deterministic_status": "pass",
+      "id": "C08"
+    },
+    {
+      "behavioral_status": "not_selected",
+      "deterministic_status": "pass",
+      "id": "D01"
+    },
+    {
+      "behavioral_status": "not_selected",
+      "deterministic_status": "pass",
+      "id": "D02"
+    },
+    {
+      "behavioral_status": "not_selected",
+      "deterministic_status": "pass",
+      "id": "D03"
+    },
+    {
+      "behavioral_status": "not_selected",
+      "deterministic_status": "pass",
+      "id": "D04"
+    },
+    {
+      "behavioral_status": "not_selected",
+      "deterministic_status": "pass",
+      "id": "D05"
+    },
+    {
+      "behavioral_status": "not_run",
+      "deterministic_status": "pass",
+      "id": "D06"
+    },
+    {
+      "behavioral_status": "not_run",
+      "deterministic_status": "pass",
+      "id": "D07"
+    },
+    {
+      "behavioral_status": "not_selected",
+      "deterministic_status": "pass",
+      "id": "D08"
+    },
+    {
+      "behavioral_status": "not_selected",
+      "deterministic_status": "pass",
+      "id": "D09"
+    },
+    {
+      "behavioral_status": "not_run",
+      "deterministic_status": "pass",
+      "id": "D10"
+    },
+    {
+      "behavioral_status": "not_run",
+      "deterministic_status": "pass",
+      "id": "E01"
+    },
+    {
+      "behavioral_status": "not_run",
+      "deterministic_status": "pass",
+      "id": "E02"
+    },
+    {
+      "behavioral_status": "not_selected",
+      "deterministic_status": "pass",
+      "id": "E03"
+    },
+    {
+      "behavioral_status": "not_selected",
+      "deterministic_status": "pass",
+      "id": "E04"
+    },
+    {
+      "behavioral_status": "not_selected",
+      "deterministic_status": "pass",
+      "id": "E05"
+    },
+    {
+      "behavioral_status": "not_selected",
+      "deterministic_status": "pass",
+      "id": "E06"
+    },
+    {
+      "behavioral_status": "not_run",
+      "deterministic_status": "pass",
+      "id": "F01"
+    },
+    {
+      "behavioral_status": "not_run",
+      "deterministic_status": "pass",
+      "id": "F02"
+    },
+    {
+      "behavioral_status": "not_selected",
+      "deterministic_status": "pass",
+      "id": "F03"
+    },
+    {
+      "behavioral_status": "not_selected",
+      "deterministic_status": "pass",
+      "id": "F04"
+    },
+    {
+      "behavioral_status": "not_selected",
+      "deterministic_status": "pass",
+      "id": "F05"
+    },
+    {
+      "behavioral_status": "not_selected",
+      "deterministic_status": "pass",
+      "id": "F06"
+    },
+    {
+      "behavioral_status": "not_selected",
+      "deterministic_status": "pass",
+      "id": "G01"
+    },
+    {
+      "behavioral_status": "not_selected",
+      "deterministic_status": "pass",
+      "id": "G02"
+    },
+    {
+      "behavioral_status": "not_selected",
+      "deterministic_status": "pass",
+      "id": "G03"
+    },
+    {
+      "behavioral_status": "not_selected",
+      "deterministic_status": "pass",
+      "id": "G04"
+    },
+    {
+      "behavioral_status": "not_run",
+      "deterministic_status": "pass",
+      "id": "G05"
+    },
+    {
+      "behavioral_status": "not_selected",
+      "deterministic_status": "pass",
+      "id": "G06"
+    },
+    {
+      "behavioral_status": "not_run",
+      "deterministic_status": "pass",
+      "id": "G07"
+    },
+    {
+      "behavioral_status": "not_selected",
+      "deterministic_status": "pass",
+      "id": "G08"
+    },
+    {
+      "behavioral_status": "not_run",
+      "deterministic_status": "pass",
+      "id": "H01"
+    },
+    {
+      "behavioral_status": "not_selected",
+      "deterministic_status": "pass",
+      "id": "H02"
+    },
+    {
+      "behavioral_status": "not_selected",
+      "deterministic_status": "pass",
+      "id": "H03"
+    },
+    {
+      "behavioral_status": "not_run",
+      "deterministic_status": "pass",
+      "id": "H04"
+    },
+    {
+      "behavioral_status": "not_selected",
+      "deterministic_status": "pass",
+      "id": "H05"
+    },
+    {
+      "behavioral_status": "not_selected",
+      "deterministic_status": "pass",
+      "id": "H06"
+    },
+    {
+      "behavioral_status": "not_selected",
+      "deterministic_status": "pass",
+      "id": "H07"
+    },
+    {
+      "behavioral_status": "not_selected",
+      "deterministic_status": "pass",
+      "id": "H08"
+    },
+    {
+      "behavioral_status": "not_selected",
+      "deterministic_status": "pass",
+      "id": "I01"
+    },
+    {
+      "behavioral_status": "not_selected",
+      "deterministic_status": "pass",
+      "id": "I02"
+    },
+    {
+      "behavioral_status": "not_run",
+      "deterministic_status": "pass",
+      "id": "I03"
+    },
+    {
+      "behavioral_status": "not_selected",
+      "deterministic_status": "pass",
+      "id": "I04"
+    },
+    {
+      "behavioral_status": "not_selected",
+      "deterministic_status": "pass",
+      "id": "I05"
+    },
+    {
+      "behavioral_status": "not_selected",
+      "deterministic_status": "pass",
+      "id": "I06"
+    },
+    {
+      "behavioral_status": "not_selected",
+      "deterministic_status": "pass",
+      "id": "I07"
+    },
+    {
+      "behavioral_status": "not_selected",
+      "deterministic_status": "pass",
+      "id": "I08"
+    },
+    {
+      "behavioral_status": "not_selected",
+      "deterministic_status": "pass",
+      "id": "J01"
+    },
+    {
+      "behavioral_status": "not_run",
+      "deterministic_status": "pass",
+      "id": "J02"
+    },
+    {
+      "behavioral_status": "not_selected",
+      "deterministic_status": "pass",
+      "id": "J03"
+    },
+    {
+      "behavioral_status": "not_selected",
+      "deterministic_status": "pass",
+      "id": "J04"
+    },
+    {
+      "behavioral_status": "not_selected",
+      "deterministic_status": "pass",
+      "id": "J05"
+    },
+    {
+      "behavioral_status": "not_run",
+      "deterministic_status": "pass",
+      "id": "J06"
+    },
+    {
+      "behavioral_status": "not_selected",
+      "deterministic_status": "pass",
+      "id": "J07"
+    },
+    {
+      "behavioral_status": "not_selected",
+      "deterministic_status": "pass",
+      "id": "J08"
+    },
+    {
+      "behavioral_status": "not_selected",
+      "deterministic_status": "pass",
+      "id": "K01"
+    },
+    {
+      "behavioral_status": "not_selected",
+      "deterministic_status": "pass",
+      "id": "K02"
+    },
+    {
+      "behavioral_status": "not_selected",
+      "deterministic_status": "pass",
+      "id": "K03"
+    },
+    {
+      "behavioral_status": "not_run",
+      "deterministic_status": "pass",
+      "id": "K04"
+    },
+    {
+      "behavioral_status": "not_selected",
+      "deterministic_status": "pass",
+      "id": "K05"
+    },
+    {
+      "behavioral_status": "not_selected",
+      "deterministic_status": "pass",
+      "id": "K06"
+    },
+    {
+      "behavioral_status": "not_selected",
+      "deterministic_status": "pass",
+      "id": "K07"
+    },
+    {
+      "behavioral_status": "not_selected",
+      "deterministic_status": "pass",
+      "id": "K08"
+    },
+    {
+      "behavioral_status": "not_run",
+      "deterministic_status": "pass",
+      "id": "K09"
+    },
+    {
+      "behavioral_status": "not_selected",
+      "deterministic_status": "pass",
+      "id": "K10"
+    },
+    {
+      "behavioral_status": "not_run",
+      "deterministic_status": "pass",
+      "id": "L01"
+    },
+    {
+      "behavioral_status": "not_run",
+      "deterministic_status": "pass",
+      "id": "L02"
+    },
+    {
+      "behavioral_status": "not_selected",
+      "deterministic_status": "pass",
+      "id": "L03"
+    },
+    {
+      "behavioral_status": "not_selected",
+      "deterministic_status": "pass",
+      "id": "L04"
+    },
+    {
+      "behavioral_status": "not_selected",
+      "deterministic_status": "pass",
+      "id": "L05"
+    },
+    {
+      "behavioral_status": "not_selected",
+      "deterministic_status": "pass",
+      "id": "M01"
+    },
+    {
+      "behavioral_status": "not_selected",
+      "deterministic_status": "pass",
+      "id": "M02"
+    },
+    {
+      "behavioral_status": "not_selected",
+      "deterministic_status": "pass",
+      "id": "M03"
+    },
+    {
+      "behavioral_status": "not_selected",
+      "deterministic_status": "pass",
+      "id": "M04"
+    },
+    {
+      "behavioral_status": "not_selected",
+      "deterministic_status": "pass",
+      "id": "M05"
+    },
+    {
+      "behavioral_status": "not_run",
+      "deterministic_status": "pass",
+      "id": "M06"
+    },
+    {
+      "behavioral_status": "not_selected",
+      "deterministic_status": "pass",
+      "id": "M07"
+    },
+    {
+      "behavioral_status": "not_run",
+      "deterministic_status": "pass",
+      "id": "M08"
+    },
+    {
+      "behavioral_status": "not_selected",
+      "deterministic_status": "pass",
+      "id": "M09"
+    }
+  ],
+  "checks": {
+    "behavioral_selection": "pass",
+    "exact_case_count": "pass",
+    "family_counts": "pass",
+    "ids_fields_and_values": "pass",
+    "package_validator": "pass",
+    "requirement_coverage": "pass"
+  },
+  "error_count": 0,
+  "errors": [],
+  "expected_case_count": 104,
+  "family_counts": {
+    "A": 10,
+    "B": 8,
+    "C": 8,
+    "D": 10,
+    "E": 6,
+    "F": 6,
+    "G": 8,
+    "H": 8,
+    "I": 8,
+    "J": 8,
+    "K": 10,
+    "L": 5,
+    "M": 9
+  },
+  "generated_at": "2026-08-27T19:44:19+00:00",
+  "package_validator": {
+    "checks": {
+      "assets": "pass",
+      "license_copies": "pass",
+      "no_symlinks": "pass",
+      "relative_markdown_links": "pass",
+      "release_safe_text": "pass",
+      "required_structure": "pass",
+      "skill_frontmatter": "pass",
+      "structured_file_syntax": "pass",
+      "template_ids_and_relationships": "pass"
+    },
+    "error_count": 0,
+    "errors": [],
+    "skill_id": "thien-skill-risk-process-control",
+    "status": "pass",
+    "target": "canonical",
+    "validator": "validate_package.py",
+    "warning_count": 0,
+    "warnings": []
+  },
+  "status": "pass",
+  "suite": "Thien-Skill-Risk-Process-Control deterministic acceptance"
+}

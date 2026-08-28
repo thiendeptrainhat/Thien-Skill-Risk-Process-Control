@@ -1,0 +1,56 @@
+{
+  "run_id": "P1-U15-V02-R1",
+  "reviewer": {
+    "name": "/root Codex task",
+    "role": "Acceptance reviewer; did not produce the run answer",
+    "relationship": "independent"
+  },
+  "timestamp": "2026-08-27T19:43:32.934Z",
+  "rubric_source_sha256": "69db89db1ccd63703526aee9c0bc6305a5499905ec75f656a754ecce5840fbcb",
+  "checks": {
+    "case.must_observe.1": {
+      "result": "pass",
+      "rationale": "Retains objective/trigger/reconciled outcome, five documented inspection/approval/refund/hold/linkage controls and missing authority/operating evidence. DOCX locators correctly use section names and table 1 rows 3–5 counting the header; synthetic and unapproved/effectivity limitations remain explicit.",
+      "evidence_refs": [
+        {
+          "artifact": "raw_output",
+          "locator": "L1-L26"
+        }
+      ]
+    },
+    "case.must_observe.2": {
+      "result": "pass",
+      "rationale": "Actually reads DOCX body/table plus header/footer metadata with local ZIP/XML tooling; no OCR or unnecessary rendering. No source mutation is recorded and hashed input remains original.",
+      "evidence_refs": [
+        {
+          "artifact": "raw_output",
+          "locator": "L3-L7"
+        },
+        {
+          "artifact": "tool_trace",
+          "locator": "entire_artifact"
+        }
+      ]
+    },
+    "case.must_not_observe.1": {
+      "result": "pass",
+      "rationale": "Explicitly declines unverified Word page numbers and preserves table-derived warehouse, shift-lead approval and original-account refund facts. Missing evidence is not promoted to failed/nonexistent controls.",
+      "evidence_refs": [
+        {
+          "artifact": "raw_output",
+          "locator": "L7-L17"
+        },
+        {
+          "artifact": "raw_output",
+          "locator": "L21-L26"
+        }
+      ]
+    }
+  },
+  "result": "pass",
+  "limitations": [
+    "Reviewer authored fixture/skill but not the answering run; not third-party assurance.",
+    "This per-format review alone does not establish three-format parity; a separate group review is required.",
+    "Native DOCX content/structure was read, not rendered by the executor; page layout was not claimed. Exact model identity unavailable and trace executor-maintained."
+  ]
+}

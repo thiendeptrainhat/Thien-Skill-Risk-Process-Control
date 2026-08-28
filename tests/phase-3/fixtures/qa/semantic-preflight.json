@@ -1,0 +1,42 @@
+{
+  "report_kind": "fixture_preflight_not_model_acceptance",
+  "timestamp": "2026-08-28T01:56:50.169882+07:00",
+  "semantic_parity": {
+    "chat": {
+      "path": "/Users/thiendeptrainhat/Documents/Thien's Skills Library/Thien-Risk-Process-Control/tests/phase-3/fixtures/P1-U15-V01/input.md",
+      "sha256": "a12ecb0be0ed757050b0aea02ca67b3991f7d4b441e6af21f58d3cf283f56040",
+      "content_units": 30,
+      "missing_units": [],
+      "status": "pass"
+    },
+    "docx": {
+      "path": "/Users/thiendeptrainhat/Documents/Thien's Skills Library/Thien-Risk-Process-Control/tests/phase-3/fixtures/P1-U15-V02/input.docx",
+      "sha256": "c45b694e278e1eb82d4aa6b955794f7ce93c76b5f8ddb35f4990e0ba39512532",
+      "content_units": 30,
+      "missing_units": [],
+      "status": "pass"
+    },
+    "pdf_native": {
+      "path": "/Users/thiendeptrainhat/Documents/Thien's Skills Library/Thien-Risk-Process-Control/tests/phase-3/fixtures/P1-U15-V03/input.pdf",
+      "sha256": "fc81e4b84e0195a2c421553f1713e1d78231fe78ec02f40118146361da4a1371",
+      "content_units": 30,
+      "missing_units": [],
+      "status": "pass"
+    }
+  },
+  "docx_table_count": 1,
+  "native_pdf_page_count": 1,
+  "scan": {
+    "path": "/Users/thiendeptrainhat/Documents/Thien's Skills Library/Thien-Risk-Process-Control/tests/phase-3/fixtures/P1-U16-V01/input.pdf",
+    "sha256": "9182b8b70c2027a5c81675365c6afd7383e2fbb9fa1cd7498aaf9b02f264714a",
+    "pages": 1,
+    "native_text_characters": 0,
+    "status": "pass"
+  },
+  "status": "pass",
+  "limitations": [
+    "Checks fixture bytes/text units, not model extraction or answer parity.",
+    "Visual quality requires a separate actual render review.",
+    "Deliberately unreadable scan region has no hidden recoverable original value."
+  ]
+}

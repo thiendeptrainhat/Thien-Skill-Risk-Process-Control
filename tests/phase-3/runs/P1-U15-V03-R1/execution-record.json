@@ -1,0 +1,14 @@
+{
+  "run_id": "P1-U15-V03-R1",
+  "task_name": "/root/p1_u15_v03_r1",
+  "dispatch_mechanism": "collaboration.spawn_agent",
+  "fork_turns": "none",
+  "recorded_at": "2026-08-28T02:45:35.849396+07:00",
+  "execution_observed_by": "root Codex task",
+  "retention_method": "Copy actual files written by the delegated executor after completion",
+  "model_identifier": "not_available",
+  "limitations": [
+    "No full exported host transcript is available; tool-trace.json is executor-maintained.",
+    "Fresh context is from fork_turns=none; inherited system/developer instructions still apply."
+  ]
+}

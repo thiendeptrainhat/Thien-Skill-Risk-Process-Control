@@ -1,0 +1,74 @@
+{
+  "run_id": "P1-U16-V02-R1",
+  "reviewer": {
+    "name": "/root Codex task",
+    "role": "Acceptance reviewer; did not produce the run answer",
+    "relationship": "independent"
+  },
+  "timestamp": "2026-08-27T19:52:12.347Z",
+  "rubric_source_sha256": "69db89db1ccd63703526aee9c0bc6305a5499905ec75f656a754ecce5840fbcb",
+  "checks": {
+    "case.must_observe.1": {
+      "result": "pass",
+      "rationale": "Retains all upstream packet/extraction/source/document IDs, synthetic_manual_transcription method, AI-use conditions, objective-section-only/full versus approval-table-partial coverage, warnings and UNVERIFIED status. Locators and upstream evidence ID stay attached to interpreted facts.",
+      "evidence_refs": [
+        {
+          "artifact": "raw_output",
+          "locator": "L9-L33"
+        }
+      ]
+    },
+    "case.must_observe.2": {
+      "result": "pass",
+      "rationale": "Keeps the blurred approver raw value G... đốc, normalized null, HUMAN_REVIEW_REQUIRED and unresolved authority. Legible statements are only provisional documented activities; shift-lead review is not silently upgraded to approval authority or performed control.",
+      "evidence_refs": [
+        {
+          "artifact": "raw_output",
+          "locator": "L23-L44"
+        },
+        {
+          "artifact": "raw_output",
+          "locator": "L48-L58"
+        }
+      ]
+    },
+    "case.must_not_observe.1": {
+      "result": "pass",
+      "rationale": "No claimed specialist/OCR execution, cloud upload or promotion of upstream UNVERIFIED data. Local trace confirms consumer-only reading; proposals and business approvals remain distinct from extraction status.",
+      "evidence_refs": [
+        {
+          "artifact": "raw_output",
+          "locator": "L12-L19"
+        },
+        {
+          "artifact": "raw_output",
+          "locator": "L50-L58"
+        },
+        {
+          "artifact": "tool_trace",
+          "locator": "entire_artifact"
+        }
+      ]
+    },
+    "variant.must_observe.1": {
+      "result": "pass",
+      "rationale": "Explicitly identifies the packet as fictional consumer-only data rather than output of a real Document-Evidence/OCR run and does not invoke either capability.",
+      "evidence_refs": [
+        {
+          "artifact": "raw_output",
+          "locator": "L11-L19"
+        },
+        {
+          "artifact": "tool_trace",
+          "locator": "entire_artifact"
+        }
+      ]
+    }
+  },
+  "result": "pass",
+  "limitations": [
+    "Reviewer authored fixture/skill but not the answering run; not third-party assurance.",
+    "Validates consumption of a synthetic packet only; it cannot establish live specialist extraction or OCR capability.",
+    "Exact model identity unavailable; executor-maintained trace is not a complete host transcript."
+  ]
+}

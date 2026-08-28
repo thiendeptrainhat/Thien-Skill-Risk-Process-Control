@@ -1,0 +1,10 @@
+{
+  "run_id": "P1-P01-V01-R1",
+  "executor": "/root Codex task",
+  "mechanism": "functions.exec -> tools.exec_command",
+  "executed_command": "python3 -B tests/phase-3/tooling/inspect_release.py --repo-root .",
+  "started_at": "2026-08-27T20:02:27.145Z",
+  "finished_at": "2026-08-27T20:02:28.066Z",
+  "exit_code": 0,
+  "scope": "Actual local read-only release check; no model execution, installation or external publication."
+}

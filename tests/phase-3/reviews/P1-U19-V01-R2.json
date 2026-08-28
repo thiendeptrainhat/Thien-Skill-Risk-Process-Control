@@ -1,0 +1,77 @@
+{
+  "run_id": "P1-U19-V01-R2",
+  "reviewer": {
+    "name": "/root Codex task",
+    "role": "Acceptance reviewer; did not produce the run answer",
+    "relationship": "independent"
+  },
+  "timestamp": "2026-08-27T19:23:35.527Z",
+  "rubric_source_sha256": "69db89db1ccd63703526aee9c0bc6305a5499905ec75f656a754ecce5840fbcb",
+  "checks": {
+    "case.must_observe.1": {
+      "result": "pass",
+      "rationale": "The narrative and retained JSON cover R01–R07: objective-based E2E candidates, causal risks, source-bound baseline/keyness candidates, scoped current observations, comparison/gap classification, options/actions and conditional no-change scenarios. Shared IDs connect the E2E/risk/control/baseline/comparison/action views; the full structured object set was reviewed.",
+      "evidence_refs": [
+        {
+          "artifact": "raw_output",
+          "locator": "L17-L36"
+        },
+        {
+          "artifact": "raw_output",
+          "locator": "L54-L134"
+        },
+        {
+          "artifact": "raw_output",
+          "locator": "L136-L150"
+        },
+        {
+          "artifact": "tool_trace",
+          "locator": "entire_artifact"
+        }
+      ]
+    },
+    "case.must_observe.2": {
+      "result": "pass",
+      "rationale": "One CTL-SHARED-19 retains both consumers and distinct documented/performed/target observations. VERIFIED versus PENDING_REVIEW is not reconciled by fiat; the checklist's unknown process attribution remains unassigned. Missing owner/date/budget/approval and scenario probability/loss/horizon remain null with semantics. Thirteen association rows preserve many-to-many coverage without counting observations as controls.",
+      "evidence_refs": [
+        {
+          "artifact": "raw_output",
+          "locator": "L5-L15"
+        },
+        {
+          "artifact": "raw_output",
+          "locator": "L71-L101"
+        },
+        {
+          "artifact": "raw_output",
+          "locator": "L115-L148"
+        }
+      ]
+    },
+    "case.must_not_observe.1": {
+      "result": "pass",
+      "rationale": "No orphan IDs or material narrative/data contradictions found. An independent root recheck executed 1,112 typed-reference, uniqueness, RCM observation-field, comparison-layer and null-preservation checks with zero failures. Semantic review confirms no invented operating result, rating, owner, deadline, budget, approval or resolved source conflict. RCM rows are associations to observations, not new facts.",
+      "evidence_refs": [
+        {
+          "artifact": "raw_output",
+          "locator": "L73-L101"
+        },
+        {
+          "artifact": "raw_output",
+          "locator": "L119-L150"
+        },
+        {
+          "artifact": "tool_trace",
+          "locator": "entire_artifact"
+        }
+      ]
+    }
+  },
+  "result": "pass",
+  "limitations": [
+    "Reviewer authored the fixture/skill update but not the fresh answering run; not third-party assurance.",
+    "analysis-data.json was reviewed in full by object groups, recovering truncated views; root structural recheck is retained separately under reviews/support.",
+    "Adapted JSON supports the requested RCM/action views; no claim of formal full-schema certification or compatibility with every consumer.",
+    "One synthetic case, no full population or real-organization assurance. Exact model identity unavailable; executor-maintained trace is not a full host transcript."
+  ]
+}

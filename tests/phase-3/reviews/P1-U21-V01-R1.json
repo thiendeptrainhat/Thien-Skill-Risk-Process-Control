@@ -1,0 +1,81 @@
+{
+  "run_id": "P1-U21-V01-R1",
+  "reviewer": {
+    "name": "/root Codex task",
+    "role": "Acceptance reviewer; did not produce the run answer",
+    "relationship": "independent"
+  },
+  "timestamp": "2026-08-27T19:58:20.085Z",
+  "rubric_source_sha256": "69db89db1ccd63703526aee9c0bc6305a5499905ec75f656a754ecce5840fbcb",
+  "checks": {
+    "case.must_observe.1": {
+      "result": "pass",
+      "rationale": "Explicitly links REF-21 section 3 advisory outcome to verified-payee control objective, stated significant fraudulent-account-change risk, C-21A independent callback and scope-dependent keyness. Preserves the need to validate release reliance, contact governance and other controls.",
+      "evidence_refs": [
+        {
+          "artifact": "raw_output",
+          "locator": "L5-L25"
+        }
+      ]
+    },
+    "case.must_observe.2": {
+      "result": "pass",
+      "rationale": "Distinguishes A key candidate, B reporting/presentation support and C proposed alternative. It correctly refuses to assume B is a risk-mitigating supporting control without criteria/reliance, and allows a separate data-quality supporting-control assessment if established. Explains A removal exposure, why B cannot compensate and what C must demonstrate for equivalent coverage.",
+      "evidence_refs": [
+        {
+          "artifact": "raw_output",
+          "locator": "L19-L23"
+        },
+        {
+          "artifact": "raw_output",
+          "locator": "L27-L44"
+        }
+      ]
+    },
+    "case.must_observe.3": {
+      "result": "pass",
+      "rationale": "States designations are analyst proposals awaiting organization review/approval; fictional REF-21 remains advisory, not a real standard, adopted obligation or compliance conclusion.",
+      "evidence_refs": [
+        {
+          "artifact": "raw_output",
+          "locator": "L3-L15"
+        },
+        {
+          "artifact": "raw_output",
+          "locator": "L36-L44"
+        }
+      ]
+    },
+    "case.must_not_observe.1": {
+      "result": "pass",
+      "rationale": "Does not label all activities key or approved. A is only a candidate; B is not key for the significant risk; C remains untested Target-State and is not counted as current protection.",
+      "evidence_refs": [
+        {
+          "artifact": "raw_output",
+          "locator": "L19-L25"
+        },
+        {
+          "artifact": "raw_output",
+          "locator": "L44"
+        }
+      ]
+    },
+    "case.must_not_observe.2": {
+      "result": "pass",
+      "rationale": "Does not reject C for having a different name/technology. Evaluates potential equivalence through coverage, precision, timing, independence, common-mode failure, exceptions, evidence and authorized transition.",
+      "evidence_refs": [
+        {
+          "artifact": "raw_output",
+          "locator": "L27-L42"
+        }
+      ]
+    }
+  },
+  "result": "pass",
+  "limitations": [
+    "Reviewer authored fixture/skill but not the answering run; not third-party assurance.",
+    "The fixture's report-legibility activity lacks a validated risk objective/reliance; the answer's non-key presentation-support classification is more precise than automatically calling it a supporting risk control.",
+    "Only synthetic supplied source excerpts; no actual control testing, designation approval or real standard verification.",
+    "Exact model identity unavailable; executor-maintained trace retains failed command/syntax attempts and successful recovery."
+  ]
+}

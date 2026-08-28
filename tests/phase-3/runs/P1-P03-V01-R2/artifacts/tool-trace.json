@@ -1,0 +1,157 @@
+{
+  "run_id": "P1-P03-V01-R2",
+  "kind": "actual_local_documentation_retest",
+  "scope": "Read-only checks, an idempotent builder invocation (publication=unchanged), and explicit derived-index refresh. No business-model runs or installation. Git publication is a subsequent user-authorized operation, not a test result.",
+  "events": [
+    {
+      "id": "docs_links_order",
+      "cmd": "python3 -B -c 'import hashlib,json,re,unicodedata\nfrom pathlib import Path\nfrom urllib.parse import unquote\nroot=Path.cwd()\npaths=[\"README.md\",\"docs/HANDOFF.md\",\"INSTALL.md\"]\ndef slug(text):\n    text=re.sub(r\"<[^>]*>\",\"\",text).lower().strip()\n    text=re.sub(r\"[\\\\`*]\",\"\",text)\n    return \"\".join(c for c in text if c.isalnum() or c in \" _-\").replace(\" \",\"-\")\ndef anchors(path):\n    ids=set(); seen={}; fenced=False\n    for line in path.read_text().splitlines():\n        if line.startswith(\"```\"): fenced=not fenced; continue\n        if not fenced and re.match(r\"^#{1,6} \",line):\n            key=slug(re.sub(r\"^#{1,6} \",\"\",line)); n=seen.get(key,0);seen[key]=n+1\n            ids.add(key if n==0 else f\"{key}-{n}\")\n    ids.update(re.findall(r\"\"\"id=[\"'\\'']([^\"'\\'']+)[\"'\\'']\"\"\",path.read_text()))\n    return ids\nerrors=[]; counts={}\nfor name in paths:\n    path=root/name;links=re.findall(r\"\\[[^\\]]*\\]\\(([^)]+)\\)\",path.read_text()); counts[name]=len(links)\n    for link in links:\n        raw=link.strip().strip(\"<>\")\n        if raw.startswith((\"https://\",\"http://\",\"mailto:\")): continue\n        target,sep,fragment=raw.partition(\"#\")\n        resolved=(path.parent/unquote(target)).resolve() if target else path.resolve()\n        if not resolved.is_relative_to(root) or not resolved.exists(): errors.append({\"file\":name,\"link\":link,\"error\":\"missing_or_outside_target\"});continue\n        if fragment and resolved.is_file() and resolved.suffix==\".md\" and unquote(fragment) not in anchors(resolved):\n            errors.append({\"file\":name,\"link\":link,\"error\":\"missing_heading_anchor\"})\nheaders=re.findall(r\"^## (.+)$\",(root/\"README.md\").read_text(),re.M)\norder=all(headers.index(x)<headers.index(\"Cài đặt\") for x in [\"Vai trò của skill\",\"Skill giúp trả lời bảy câu hỏi gì?\",\"Lợi ích và tính năng khi kích hoạt\",\"Cách sử dụng skill\"])\nprint(json.dumps({\"status\":\"pass\" if not errors and order else \"fail\",\"readme_order\":headers,\"requested_sections_before_install\":order,\"link_counts\":counts,\"errors\":errors,\"limitations\":[\"Checks local links/heading anchors and layout order only; does not fetch URLs or validate model behavior.\"]},ensure_ascii=False,indent=2))\nraise SystemExit(0 if not errors and order else 1)\n'",
+      "started_at": "2026-08-28T02:22:09.540Z",
+      "finished_at": "2026-08-28T02:22:10.510Z",
+      "chunk_id": "007cad",
+      "wall_time_seconds": 0.000007666,
+      "exit_code": 0,
+      "original_token_count": 189,
+      "stdout_artifact": "tests/phase-3/runs/P1-P03-V01-R2/artifacts/check-01-docs_links_order.txt"
+    },
+    {
+      "id": "tooling",
+      "cmd": "python3 -B -m unittest discover -s tests/phase-3/tooling -v",
+      "started_at": "2026-08-28T02:22:09.540Z",
+      "finished_at": "2026-08-28T02:22:12.235Z",
+      "chunk_id": "dc9afd",
+      "wall_time_seconds": 1.725761958,
+      "exit_code": 0,
+      "original_token_count": 2483,
+      "stdout_artifact": "tests/phase-3/runs/P1-P03-V01-R2/artifacts/check-02-tooling.txt"
+    },
+    {
+      "id": "release_content",
+      "cmd": "python3 -B tests/phase-3/tooling/inspect_release.py --repo-root .",
+      "started_at": "2026-08-28T02:22:09.540Z",
+      "finished_at": "2026-08-28T02:22:10.958Z",
+      "chunk_id": "38de2e",
+      "wall_time_seconds": 0.448495583,
+      "exit_code": 0,
+      "original_token_count": 2348,
+      "stdout_artifact": "tests/phase-3/runs/P1-P03-V01-R2/artifacts/check-03-release_content.txt"
+    },
+    {
+      "id": "builder_idempotence",
+      "cmd": "python3 -B scripts/build_release.py --write --json",
+      "started_at": "2026-08-28T02:22:09.540Z",
+      "finished_at": "2026-08-28T02:22:11.655Z",
+      "chunk_id": "c8ce3f",
+      "wall_time_seconds": 1.1452219590000001,
+      "exit_code": 0,
+      "original_token_count": 6010,
+      "stdout_artifact": "tests/phase-3/runs/P1-P03-V01-R2/artifacts/check-04-builder_idempotence.txt"
+    },
+    {
+      "id": "evidence_before_retest",
+      "cmd": "python3 -B scripts/run_tests.py --phase3 --json",
+      "started_at": "2026-08-28T02:22:09.540Z",
+      "finished_at": "2026-08-28T02:22:11.347Z",
+      "chunk_id": "9f949f",
+      "wall_time_seconds": 0.836031125,
+      "exit_code": 1,
+      "original_token_count": 28284,
+      "stdout_artifact": "tests/phase-3/runs/P1-P03-V01-R2/artifacts/check-05-evidence_before_retest.txt"
+    },
+    {
+      "id": "diff_check",
+      "cmd": "git diff --check",
+      "started_at": "2026-08-28T02:22:09.540Z",
+      "finished_at": "2026-08-28T02:22:10.615Z",
+      "chunk_id": "833b78",
+      "wall_time_seconds": 0.00000175,
+      "exit_code": 0,
+      "original_token_count": 0,
+      "stdout_artifact": "tests/phase-3/runs/P1-P03-V01-R2/artifacts/check-06-diff_check.txt"
+    },
+    {
+      "id": "refresh_relocated_inputs",
+      "cmd": "python3 -B scripts/assemble_phase3_evidence.py --write",
+      "started_at": "2026-08-28T02:22:47.477Z",
+      "finished_at": "2026-08-28T02:22:47.896Z",
+      "chunk_id": "73090f",
+      "wall_time_seconds": 0.000005083,
+      "exit_code": 0,
+      "original_token_count": 26,
+      "stdout_artifact": "tests/phase-3/runs/P1-P03-V01-R2/artifacts/check-07-refresh_relocated_inputs.txt"
+    },
+    {
+      "id": "evidence_after_index_refresh",
+      "cmd": "python3 -B scripts/run_tests.py --phase3 --json",
+      "started_at": "2026-08-28T02:22:47.896Z",
+      "finished_at": "2026-08-28T02:22:49.068Z",
+      "chunk_id": "b602eb",
+      "wall_time_seconds": 0.820890125,
+      "exit_code": 0,
+      "original_token_count": 28338,
+      "stdout_artifact": "tests/phase-3/runs/P1-P03-V01-R2/artifacts/check-08-evidence_after_index_refresh.txt"
+    }
+  ],
+  "documentation_readbacks": [
+    {
+      "id": "readme",
+      "cmd": "nl -ba README.md",
+      "exit_code": 0,
+      "chunk_id": "511f44"
+    },
+    {
+      "id": "handoff",
+      "cmd": "nl -ba docs/HANDOFF.md",
+      "exit_code": 0,
+      "chunk_id": "3c78b0"
+    },
+    {
+      "id": "p03_tail",
+      "cmd": "sed -n '310,520p' tests/phase-3/runs/P1-P03-V01-R1/run.json",
+      "exit_code": 0,
+      "chunk_id": "c9a9b4"
+    },
+    {
+      "id": "execution",
+      "cmd": "sed -n '1,200p' tests/phase-3/runs/P1-P03-V01-R1/execution-record.json",
+      "exit_code": 0,
+      "chunk_id": "2084da"
+    },
+    {
+      "id": "guidance",
+      "cmd": "nl -ba docs/phase-3/PLATFORM-GUIDANCE.md",
+      "exit_code": 0,
+      "chunk_id": "da61e3"
+    },
+    {
+      "id": "manifest",
+      "cmd": "nl -ba RELEASE-MANIFEST.yaml",
+      "exit_code": 0,
+      "chunk_id": "0d99fc"
+    },
+    {
+      "id": "install",
+      "cmd": "nl -ba INSTALL.md",
+      "exit_code": 0,
+      "chunk_id": "bbb3c3"
+    },
+    {
+      "id": "report",
+      "cmd": "nl -ba docs/phase-3/REPORT.md",
+      "exit_code": 0,
+      "chunk_id": "545c42"
+    },
+    {
+      "id": "matrix",
+      "cmd": "rg -n -A 46 -B 5 'case_id: P1-P03|case_id: \"P1-P03\"|id: P1-P03|id: \"P1-P03\"' docs/phase-1/ACCEPTANCE-MATRIX.yaml",
+      "exit_code": 0,
+      "chunk_id": "49f748"
+    }
+  ],
+  "limitations": [
+    "Executor-maintained receipt, not a full host transcript.",
+    "Readback commands were not individually timestamped; no timestamps invented.",
+    "The initial validation failure is retained: the old P03 README input path had moved but the derived index was stale. Reassembling the index corrected it without changing its SHA, old output, trace or review.",
+    "The final captured validator precedes this new P03 review. It confirms existing evidence integrity, not pre-awarded acceptance of these updated docs."
+  ]
+}

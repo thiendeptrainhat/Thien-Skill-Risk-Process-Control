@@ -1,0 +1,53 @@
+{
+  "reviewer": {
+    "name": "/root Codex task",
+    "role": "Acceptance reviewer; did not produce the run answer",
+    "relationship": "independent"
+  },
+  "timestamp": "2026-08-27T20:08:58.581Z",
+  "rubric_source_sha256": "69db89db1ccd63703526aee9c0bc6305a5499905ec75f656a754ecce5840fbcb",
+  "result": "pass",
+  "run_id": "P1-U20-V02-R1",
+  "checks": {
+    "case.must_observe.1": {
+      "result": "pass",
+      "rationale": "The answer follows the English request and preserves SOP-20 §2 and As-Documented/As-Performed terminology without unnecessary language switching.",
+      "evidence_refs": [
+        {
+          "artifact": "raw_output",
+          "locator": "L1-L3"
+        }
+      ]
+    },
+    "case.must_observe.2": {
+      "result": "pass",
+      "rationale": "Directly answers the narrow evidence-gap question with the supplied section source and precise limits: absent logs do not establish absent/failed controls, actual execution unverified, operating effectiveness Not assessed. Requests only approval authority/timing evidence; a separate retention gap is conditional, not asserted.",
+      "evidence_refs": [
+        {
+          "artifact": "raw_output",
+          "locator": "L1-L3"
+        }
+      ]
+    },
+    "case.must_not_observe.1": {
+      "result": "pass",
+      "rationale": "Only two short paragraphs are produced. No full RCM, broad workflow, external search, specialist invocation or unnecessary dossier is forced on the user.",
+      "evidence_refs": [
+        {
+          "artifact": "raw_output",
+          "locator": "L1-L3"
+        },
+        {
+          "artifact": "tool_trace",
+          "locator": "entire_artifact"
+        }
+      ]
+    }
+  },
+  "limitations": [
+    "Reviewer authored fixture/skill but not the answering run; not third-party assurance.",
+    "Single narrow English synthetic question; not a general multilingual quality guarantee.",
+    "Exact model identity unavailable; executor-maintained trace notes the first timestamp was captured after the initial source read."
+  ]
+}
+

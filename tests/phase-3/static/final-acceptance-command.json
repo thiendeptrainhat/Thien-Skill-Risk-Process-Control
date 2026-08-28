@@ -1,0 +1,27 @@
+{
+  "cmd": "python3 -B scripts/run_tests.py --phase3 --json",
+  "started_at": "2026-08-27T20:28:49.586Z",
+  "finished_at": "2026-08-27T20:28:50.537Z",
+  "exit_code": 0,
+  "original_token_count": 28241,
+  "retained_result": "tests/phase-3/acceptance-results.json",
+  "current_release_gate": {
+    "human_approval": "not_assessed",
+    "installation": "not_run",
+    "legacy_static_registry_status": "pass",
+    "publication": "not_authorized_by_test_results",
+    "qualified_context_ids": [
+      "0303a497434fb718"
+    ],
+    "required_claims": [
+      "core_business_logic",
+      "backward_compatibility",
+      "distribution_integrity"
+    ],
+    "status": "evidence_complete"
+  },
+  "limitations": [
+    "A derived evidence-complete gate is scoped to the qualified context/snapshot and approved rubric; it does not grant installation, native-platform acceptance, human approval or Git publication authority."
+  ]
+}
+

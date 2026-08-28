@@ -1,0 +1,41 @@
+{
+  "handoff_id": "HANDOFF-P1-U16-V01-R1-DE",
+  "task_id": "P1-U16-V01-R1-DE",
+  "from_capability": "thien-skill-risk-process-control",
+  "to_capability": "thien-skill-document-evidence",
+  "dispatch_tool": "collaboration.spawn_agent",
+  "observed_agent_name": "/root/p1_u16_v01_r1/document_evidence",
+  "dispatch_status": "spawn_agent returned canonical task name; specialist execution initiated",
+  "source_document": "/Users/thiendeptrainhat/Documents/Thien's Skills Library/Thien-Risk-Process-Control/tests/phase-3/fixtures/P1-U16-V01/input.pdf",
+  "skill": "/Users/thiendeptrainhat/.agents/skills/thien-skill-document-evidence/SKILL.md",
+  "objective": "Local integrity, scan extraction, source-indexed steps/roles/decisions/controls and human-review queue only; process/risk/control interpretation remains with sending agent.",
+  "authorization": "User requested Document-Evidence cooperation and local-only processing of one supplied PDF; no network/external lookup/installation/upload/original mutation.",
+  "data_classification": "UNKNOWN; handled as CONFIDENTIAL",
+  "expected_output_directory": "/private/tmp/thien-rpc-phase3.xGeed0/P1-U16-V01-R1/document-evidence",
+  "expected_outputs": [
+    "extraction.md or warranted JSON extraction",
+    "source inventory and hash",
+    "page/region/snippet provenance",
+    "coverage/warnings/uncertainty",
+    "human review queue",
+    "actual specialist tool-trace.json"
+  ],
+  "success_criteria": [
+    "Entire supplied PDF addressed or partial coverage explicit",
+    "No unreadable threshold/date/role/sequence guessed",
+    "Raw and normalized values distinct",
+    "Source restrictions retained",
+    "Actual tool execution only"
+  ],
+  "stop_conditions": [
+    "Insufficient authorization or unsafe path",
+    "Affected source-use restriction",
+    "External processing or installation required",
+    "Active-content execution required",
+    "Unreadable critical field: hold field pending human confirmation, complete safe remainder"
+  ],
+  "retry_limit": 2,
+  "status": "OUTPUT_AND_TRACE_RECEIVED; CRITICAL_FIELD_PENDING_HUMAN_REVIEW",
+  "actual_dispatch_record": "specialist-dispatch-tool-call.json",
+  "received_outputs": ["document-evidence/extraction.md", "document-evidence/human-review.json", "document-evidence/raw-inventory.json", "document-evidence/native-inspection.json", "document-evidence/page-1-180dpi.png"]
+}

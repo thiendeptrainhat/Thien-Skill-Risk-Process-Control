@@ -1,0 +1,56 @@
+{
+  "reviewer": {
+    "name": "/root Codex task",
+    "role": "Acceptance reviewer; did not produce the run answer",
+    "relationship": "independent"
+  },
+  "timestamp": "2026-08-27T20:04:39.074Z",
+  "rubric_source_sha256": "69db89db1ccd63703526aee9c0bc6305a5499905ec75f656a754ecce5840fbcb",
+  "result": "pass",
+  "run_id": "P1-U17-V02-R1",
+  "checks": {
+    "case.must_observe.1": {
+      "result": "pass",
+      "rationale": "Coverage table distinguishes supplied readable page 1/page 3 excerpts from unavailable page 2 approval decisions, while continuing supported flow/control identification. It does not imply the original whole document was inspected.",
+      "evidence_refs": [
+        {
+          "artifact": "raw_output",
+          "locator": "L9-L34"
+        }
+      ]
+    },
+    "case.must_not_observe.1": {
+      "result": "pass",
+      "rationale": "No installation, fake OCR or guessed approver/threshold/approval route. Customer handover confirmation is not treated as quotation approval or quality acceptance; unobserved fee controls are not declared nonexistent.",
+      "evidence_refs": [
+        {
+          "artifact": "raw_output",
+          "locator": "L29-L44"
+        },
+        {
+          "artifact": "tool_trace",
+          "locator": "entire_artifact"
+        }
+      ]
+    },
+    "variant.must_observe.1": {
+      "result": "pass",
+      "rationale": "Leaves the critical decision table Unresolved, requests human review/clear authoritative source and continues the independent two documented mechanisms rather than stopping all analysis.",
+      "evidence_refs": [
+        {
+          "artifact": "raw_output",
+          "locator": "L17-L21"
+        },
+        {
+          "artifact": "raw_output",
+          "locator": "L36-L44"
+        }
+      ]
+    }
+  },
+  "limitations": [
+    "Reviewer authored fixture/skill but not the answering run; not third-party assurance.",
+    "Unreadability/specialist absence are simulated capability conditions in the provided transcript, not a scan-reading benchmark.",
+    "Exact model identity unavailable; trace is executor-maintained."
+  ]
+}

@@ -1,0 +1,31 @@
+template: "training-exercise"
+schema_version: "1.0.0"
+output_metadata:
+  analysis_layers: []
+  source_references: []
+  data_classification: null
+  assumptions: []
+  confidence: "Unresolved"
+  unresolved_items: []
+  review_status: "Not reviewed"
+
+exercise:
+  exercise_id: null
+  analysis_layer: null
+  exercise_type: null
+  audience: []
+  learning_objectives: []
+  prerequisites: []
+  source_references: []
+  scenario: null
+  fictional_or_deidentified_data: "To be validated"
+  participant_tasks: []
+  facilitator_notes: []
+  scoring_rubric: []
+  debrief_questions: []
+  prohibited_actions:
+    - "Do not operate on production systems or live restricted data."
+    - "Do not present exercise results as assurance or formal approval."
+  assumptions: []
+  limitations: []
+  review_status: "Not reviewed"

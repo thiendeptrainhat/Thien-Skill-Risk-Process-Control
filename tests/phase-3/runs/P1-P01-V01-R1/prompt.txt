@@ -1,0 +1,1 @@
+Perform actual read-only parity, archive-root, entry-safety and CRC checks on the three 1.1.0 ZIPs built from the current canonical skill. Compare normalized per-file bytes/hashes with the explicit Claude agents/openai.yaml exclusion. Retain the actual command output; do not treat ZIP integrity as model behavior or installation.

@@ -1,0 +1,48 @@
+{
+  "reviewer": {
+    "name": "/root Codex task",
+    "role": "Acceptance reviewer; did not produce the run answers",
+    "relationship": "independent"
+  },
+  "timestamp": "2026-08-27T19:46:36.877Z",
+  "rubric_source_sha256": "69db89db1ccd63703526aee9c0bc6305a5499905ec75f656a754ecce5840fbcb",
+  "result": "pass",
+  "run_id": "P1-U20-V01-R1",
+  "checks": {
+    "case.must_observe.1": {
+      "result": "pass",
+      "rationale": "Answers in Vietnamese while preserving SOP-20 and documented/performed layer identifiers.",
+      "evidence_refs": [
+        {
+          "artifact": "raw_output",
+          "locator": "L1-L3"
+        }
+      ]
+    },
+    "case.must_observe.2": {
+      "result": "pass",
+      "rationale": "Directly answers that unprovided logs are an evidence limitation, cites SOP-20 section 2, and requests only relevant approval/log evidence. Conditional missing-approval/evidence findings are not asserted as current facts.",
+      "evidence_refs": [
+        {
+          "artifact": "raw_output",
+          "locator": "L1-L3"
+        }
+      ]
+    },
+    "case.must_not_observe.1": {
+      "result": "pass",
+      "rationale": "Two short paragraphs address the narrow question; no full workflow, large register or unnecessary intake questionnaire.",
+      "evidence_refs": [
+        {
+          "artifact": "raw_output",
+          "locator": "L1-L3"
+        }
+      ]
+    }
+  },
+  "limitations": [
+    "Reviewer authored fixture/skill but not the answering run; not third-party assurance.",
+    "One short synthetic Vietnamese question; not a general multilingual capability guarantee.",
+    "Exact model identity unavailable; trace is executor-maintained."
+  ]
+}

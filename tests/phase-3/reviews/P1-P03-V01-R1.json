@@ -1,0 +1,76 @@
+{
+  "run_id": "P1-P03-V01-R1",
+  "reviewer": {
+    "name": "/root Codex task",
+    "role": "Final release-evidence reviewer; release-doc author, not author of peer audit output",
+    "relationship": "self_check"
+  },
+  "timestamp": "2026-08-27T20:28:48.879Z",
+  "rubric_source_sha256": "69db89db1ccd63703526aee9c0bc6305a5499905ec75f656a754ecce5840fbcb",
+  "result": "pass",
+  "checks": {
+    "case.must_observe.1": {
+      "result": "pass",
+      "rationale": "Root reconciled the peer audit with the reviewed docs and actual results: 29 current model passes (95 per-run judgments), 61 separate tooling tests, normalized ZIP checks and per-platform not_run/partial statuses are explicitly separate. No installation or native-platform conclusion is inferred from static checks.",
+      "evidence_refs": [
+        {
+          "artifact": "raw_output",
+          "locator": "L24-L33"
+        },
+        {
+          "artifact": "tool_trace",
+          "locator": "entire_artifact"
+        }
+      ]
+    },
+    "case.must_observe.2": {
+      "result": "pass",
+      "rationale": "The audit and docs preserve all four historical runs as executed_unreviewed and all native Claude/ChatGPT surfaces as not_run. Its actual validator output correctly remains incomplete with P03 absent, rather than pre-awarding this review. Current report inputs are hash-verified unchanged; final gate is delegated to a later derived result.",
+      "evidence_refs": [
+        {
+          "artifact": "raw_output",
+          "locator": "L34-L43"
+        },
+        {
+          "artifact": "tool_trace",
+          "locator": "entire_artifact"
+        }
+      ]
+    },
+    "case.must_observe.3": {
+      "result": "pass",
+      "rationale": "Historical 104 registry checks and 28 provisional summaries remain separate from current model acceptance. Root's actual read-only baseline comparison independently confirmed historical bytes; the peer reviewer inspected those retained results and expressly did not claim independent Git reperformance.",
+      "evidence_refs": [
+        {
+          "artifact": "raw_output",
+          "locator": "L44-L53"
+        },
+        {
+          "artifact": "tool_trace",
+          "locator": "entire_artifact"
+        }
+      ]
+    },
+    "case.must_not_observe.1": {
+      "result": "pass",
+      "rationale": "No cross-platform verification or test-specification pass is claimed. Root reviewed the peer audit's 55-event trace and core result/limitation metadata, and had already inspected the underlying U06/U16 raw evidence. Actual lookup versus unavailable catalog, live handoff versus OCR not executed, synthetic-capability versus native-platform behavior, and approval/publication authority remain distinct.",
+      "evidence_refs": [
+        {
+          "artifact": "raw_output",
+          "locator": "L54-L64"
+        },
+        {
+          "artifact": "tool_trace",
+          "locator": "entire_artifact"
+        }
+      ]
+    }
+  },
+  "limitations": [
+    "Same-team peer audit followed by root self-check, not third-party assurance or human approval.",
+    "Bounded P03 release-language/evidence review, not fresh regrading of every business answer, native-platform installation or general security/legal certification.",
+    "The peer trace's supplementary QA inventory is retained but not asserted to have passed a separate schema-certification audit.",
+    "Pre-P03 validator output remains incomplete in the historical audit artifact by design; only the subsequently regenerated current release gate determines completion."
+  ]
+}
+

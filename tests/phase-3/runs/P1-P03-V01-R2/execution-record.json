@@ -1,0 +1,34 @@
+{
+  "run_id": "P1-P03-V01-R2",
+  "executor": "/root",
+  "executor_role": "Document author performing a bounded static self-check",
+  "mechanism": "Actual root task document readback, local validation commands, hash comparison and approved P03 invariant review",
+  "started_at": "2026-08-28T02:22:09.540Z",
+  "finished_at": "2026-08-28T02:38:26.449Z",
+  "timestamp_note": "Started_at is the first retained validation-command timestamp, not an invented task start. Later document readbacks/hash comparison lack individually captured timestamps.",
+  "captured_at": "2026-08-28T02:38:26.449Z",
+  "retest_of": "P1-P03-V01-R1",
+  "documentation_input_manifest": "tests/phase-3/runs/P1-P03-V01-R2/artifacts/inputs.json",
+  "scope": "No new model business run, live-platform test, installation, Git mutation or runtime/ZIP content change in this static retest. Git publication follows separately.",
+  "input_integrity": {
+    "status": "pass",
+    "method": "shasum -a 256 of each current source and retained copy",
+    "matched_documents": 6,
+    "actual_stdout": "debf908f4153d64372210bb1652ea07a124dbbd89aa487c01bd29fa9cee935d0  README.md\ndebf908f4153d64372210bb1652ea07a124dbbd89aa487c01bd29fa9cee935d0  tests/phase-3/runs/P1-P03-V01-R2/artifacts/inputs/README.md\nadbeff16785df9ae77b11f4b5fba700a4e38e5e16f0b65c8cea9c5eff71fd184  docs/HANDOFF.md\nadbeff16785df9ae77b11f4b5fba700a4e38e5e16f0b65c8cea9c5eff71fd184  tests/phase-3/runs/P1-P03-V01-R2/artifacts/inputs/docs/HANDOFF.md\n7d9a1e7d780ed4bdab6d83d2f49fa433a8f148db57134b2240a50f2991f661d8  INSTALL.md\n7d9a1e7d780ed4bdab6d83d2f49fa433a8f148db57134b2240a50f2991f661d8  tests/phase-3/runs/P1-P03-V01-R2/artifacts/inputs/INSTALL.md\n5cb6c3057455613ed6281168793d0ebd38d27b7c6a4f47a89ef354dcf23bfd7c  docs/phase-3/REPORT.md\n5cb6c3057455613ed6281168793d0ebd38d27b7c6a4f47a89ef354dcf23bfd7c  tests/phase-3/runs/P1-P03-V01-R2/artifacts/inputs/docs/phase-3/REPORT.md\n30762ab5a85323516d0a9e375e83bd751df427ba60f235cc568f0232ba14dfce  docs/phase-3/PLATFORM-GUIDANCE.md\n30762ab5a85323516d0a9e375e83bd751df427ba60f235cc568f0232ba14dfce  tests/phase-3/runs/P1-P03-V01-R2/artifacts/inputs/docs/phase-3/PLATFORM-GUIDANCE.md\n4ec2f316e1f83284841df2d512af6e6ca3b12705a9b1df0ee27b5beccef4a899  RELEASE-MANIFEST.yaml\n4ec2f316e1f83284841df2d512af6e6ca3b12705a9b1df0ee27b5beccef4a899  tests/phase-3/runs/P1-P03-V01-R2/artifacts/inputs/RELEASE-MANIFEST.yaml\n80c42889f2866f7a6e900762899102e3261fd50897ad6d1d22ef3d2b57c81250  tests/phase-3/runs/P1-P03-V01-R2/prompt.md\nb516d43586a1e8aa2f78dd0019227d6c8359409d895c448892665d5eb93434f6  tests/phase-3/runs/P1-P03-V01-R2/artifacts/tool-trace.json\n6a721c75a8bffb94a1ae5c9b44afc78ddaf0b86f183393e33b73957e55f7f21c  tests/phase-3/runs/P1-P03-V01-R2/artifacts/check-01-docs_links_order.txt\nfcfe947064c3f6a3bc11c8f67ca74d784f2b8476f095a9e2133a05efb1f71ba8  tests/phase-3/runs/P1-P03-V01-R2/artifacts/check-02-tooling.txt\na8ced8f7ac474feb0fd83e1fcc7b61ad82b66512b0624c58cb1238503ee2e693  tests/phase-3/runs/P1-P03-V01-R2/artifacts/check-03-release_content.txt\n487a31a966a923691bd7cec2e6f5b968dccfedd8c40763f6a00955c6879e5115  tests/phase-3/runs/P1-P03-V01-R2/artifacts/check-04-builder_idempotence.txt\nf4e55fc3ffcea9dda10c90efe07255db6a115f2b6186f4fc028f90537124319d  tests/phase-3/runs/P1-P03-V01-R2/artifacts/check-05-evidence_before_retest.txt\n01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b  tests/phase-3/runs/P1-P03-V01-R2/artifacts/check-06-diff_check.txt\n74f9abd79426a95f9d9cb26170a415af30638a00226758b44245d8aa3e367c58  tests/phase-3/runs/P1-P03-V01-R2/artifacts/check-07-refresh_relocated_inputs.txt\n7329a2e7f40a216800ab51bfd73262d9d913fa555c360aa18a73f3de67c3920b  tests/phase-3/runs/P1-P03-V01-R2/artifacts/check-08-evidence_after_index_refresh.txt\n69db89db1ccd63703526aee9c0bc6305a5499905ec75f656a754ecce5840fbcb  docs/phase-1/ACCEPTANCE-MATRIX.yaml\na15ee9c18e5f76ec9711098fe9cf6c6dce6dddf870d7bc528df9a39c23017113  tests/phase-3/snapshots/round-2/manifest.json\ndfe1bbfa5ada2cafe78c61c12351605ec708e925f2fdee75dbd17d22e6832662  tests/phase-3/documentation-snapshots/pre-handoff-update-2026-08-28/manifest.json\n1fcb260e9cb4011dca0c32fea4579b11d8722e74c9dd608b47a54b3e49ddfd3d  tests/phase-3/reviews/P1-P03-V01-R1.json\n"
+  },
+  "prior_validation": {
+    "initial_exit_code": 1,
+    "initial_issue": "Stale derived index pointed at pre-edit README location",
+    "recovery": "Reassembled index after exact historical input relocation",
+    "subsequent_exit_code": 0,
+    "integrity_status": "pass",
+    "error_count": 0,
+    "gate": "evidence_complete",
+    "note": "Precedes this new review; not its acceptance result."
+  },
+  "limitations": [
+    "Same-author self-check, not independent third-party assurance.",
+    "Executor-maintained receipts and local command stdout, not a full host transcript.",
+    "No follow-up Git success is pre-claimed."
+  ]
+}

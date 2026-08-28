@@ -1,0 +1,26 @@
+{
+  "status": "pass",
+  "readme_order": [
+    "Vai trò của skill",
+    "Skill giúp trả lời bảy câu hỏi gì?",
+    "Lợi ích và tính năng khi kích hoạt",
+    "Cách sử dụng skill",
+    "Guardrails và giới hạn",
+    "Phiên bản và trạng thái",
+    "Kiểm thử và mức độ tin cậy",
+    "Cài đặt",
+    "Cập nhật phiên bản đã cài",
+    "License và quyền sử dụng",
+    "Tài liệu trong repository"
+  ],
+  "requested_sections_before_install": true,
+  "link_counts": {
+    "README.md": 41,
+    "docs/HANDOFF.md": 16,
+    "INSTALL.md": 21
+  },
+  "errors": [],
+  "limitations": [
+    "Checks local links/heading anchors and layout order only; does not fetch URLs or validate model behavior."
+  ]
+}

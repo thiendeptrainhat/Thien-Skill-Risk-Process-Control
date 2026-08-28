@@ -1,0 +1,46 @@
+{
+  "run_id": "P1-U10-V01-R1",
+  "reviewer": {
+    "name": "/root Codex task",
+    "role": "Acceptance reviewer; did not produce the run answer",
+    "relationship": "independent"
+  },
+  "timestamp": "2026-08-27T19:35:06.277Z",
+  "rubric_source_sha256": "69db89db1ccd63703526aee9c0bc6305a5499905ec75f656a754ecce5840fbcb",
+  "checks": {
+    "case.must_observe.1": {
+      "result": "pass",
+      "rationale": "Extracts four documented controls with SOP section locators and separate logical-control/documented-observation IDs; preserves unknown owner, effective scope, period and keyness. Identifies evidence requests and design-only assessment scope rather than converting the SOP to performance evidence.",
+      "evidence_refs": [
+        {
+          "artifact": "raw_output",
+          "locator": "L3-L22"
+        },
+        {
+          "artifact": "raw_output",
+          "locator": "L26-L44"
+        }
+      ]
+    },
+    "case.must_not_observe.1": {
+      "result": "pass",
+      "rationale": "Explicitly marks operation Not assessed/evidence insufficient, not failed. Does not infer actual control existence, nonexistence, frequency of execution, period-wide effectiveness, actual SoD or residual-risk ratings from the SOP alone.",
+      "evidence_refs": [
+        {
+          "artifact": "raw_output",
+          "locator": "L20-L34"
+        },
+        {
+          "artifact": "raw_output",
+          "locator": "L39-L44"
+        }
+      ]
+    }
+  },
+  "result": "pass",
+  "limitations": [
+    "Reviewer authored fixture/skill but not the answering run; not third-party assurance.",
+    "Native synthetic SOP only; no transaction test or organization-wide operating-effectiveness assurance.",
+    "Exact model identity unavailable; tool trace is executor-maintained rather than a complete host transcript."
+  ]
+}

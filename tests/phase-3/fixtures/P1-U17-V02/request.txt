@@ -1,0 +1,1 @@
+Phân tích quy trình này và cho biết những kiểm soát có thể xác định được.

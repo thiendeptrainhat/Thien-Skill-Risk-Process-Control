@@ -1,0 +1,1 @@
+SOP yêu cầu hai người duyệt, nhưng tôi chưa đưa log. Chỉ riêng việc chưa có log có phải là gap kiểm soát không? Trả lời ngắn.

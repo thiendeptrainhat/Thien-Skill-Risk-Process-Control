@@ -1,0 +1,33 @@
+template: "process-deviation-register"
+schema_version: "1.0.0"
+output_metadata:
+  analysis_layers:
+    - "As-Documented"
+    - "As-Performed"
+  source_references: []
+  data_classification: null
+  assumptions: []
+  confidence: "Unresolved"
+  unresolved_items: []
+  review_status: "Not reviewed"
+deviations:
+  - deviation_id: null
+    analysis_layers:
+      documented: "As-Documented"
+      performed: "As-Performed"
+    process_id: null
+    step_id: null
+    documented_step: null
+    performed_step: null
+    documented_source: null
+    performed_source: null
+    frequency: null
+    reason: null
+    risk_ids: []
+    control_impact: null
+    authorized_or_unauthorized: "To be validated"
+    owner: null
+    recommended_action: null
+    evidence_ids: []
+    confidence: "Unresolved"
+    review_status: "Not reviewed"

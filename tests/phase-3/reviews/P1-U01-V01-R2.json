@@ -1,0 +1,66 @@
+{
+  "run_id": "P1-U01-V01-R2",
+  "reviewer": {
+    "name": "/root Codex task",
+    "role": "Acceptance reviewer; did not produce the run answer",
+    "relationship": "independent"
+  },
+  "timestamp": "2026-08-27T19:15:11.460Z",
+  "rubric_source_sha256": "69db89db1ccd63703526aee9c0bc6305a5499905ec75f656a754ecce5840fbcb",
+  "checks": {
+    "case.must_observe.1": {
+      "result": "pass",
+      "rationale": "Uses the stated purchase objective, need trigger and receiving/payment/recording/exception-closure outcome to select P2P. Steps 01–05 retain the supplied sequence and separately identify undeclared interfaces without forcing all architecture levels.",
+      "evidence_refs": [
+        {
+          "artifact": "raw_output",
+          "locator": "L18-L32"
+        }
+      ]
+    },
+    "case.must_observe.2": {
+      "result": "pass",
+      "rationale": "CTL-01–05 are documented observations with SOP section locators; RSK-01–07 link steps, objectives, current protection, gaps and target proposals. Proposed CTL-06–08 are explicitly excluded from current protection.",
+      "evidence_refs": [
+        {
+          "artifact": "raw_output",
+          "locator": "L34-L64"
+        }
+      ]
+    },
+    "case.must_not_observe.1": {
+      "result": "pass",
+      "rationale": "The familiar procurement flow still receives objective-based mapping, sourced control extraction, risk/control relationships and concrete clarification/action proposals. Open-taxonomy support does not displace the baseline procurement analysis in this fixture.",
+      "evidence_refs": [
+        {
+          "artifact": "raw_output",
+          "locator": "L18-L72"
+        }
+      ]
+    },
+    "case.must_not_observe.2": {
+      "result": "pass",
+      "rationale": "Explicitly labels the source As-Documented and operating effectiveness Not assessed, does not treat required records as received evidence, and conditions no-change consequences on actual protection that remains unverified.",
+      "evidence_refs": [
+        {
+          "artifact": "raw_output",
+          "locator": "L3-L16"
+        },
+        {
+          "artifact": "raw_output",
+          "locator": "L34-L36"
+        },
+        {
+          "artifact": "raw_output",
+          "locator": "L62-L74"
+        }
+      ]
+    }
+  },
+  "result": "pass",
+  "limitations": [
+    "Reviewer authored the synthetic fixture and skill update but did not produce this fresh-run answer; not third-party assurance.",
+    "One procurement fixture is a bounded regression check, not evidence of exhaustive process coverage.",
+    "Executor-maintained trace is not a complete exported host transcript; exact model identity unavailable; first timestamp follows four intake reads as disclosed in the trace."
+  ]
+}

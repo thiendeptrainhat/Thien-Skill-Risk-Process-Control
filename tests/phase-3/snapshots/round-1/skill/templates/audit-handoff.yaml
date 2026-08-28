@@ -1,0 +1,31 @@
+template: "audit-handoff"
+schema_version: "1.0.0"
+output_metadata:
+  analysis_layers: []
+  source_references: []
+  data_classification: null
+  assumptions: []
+  confidence: "Unresolved"
+  unresolved_items: []
+  review_status: "Not reviewed"
+
+handoff:
+  process_scope: null
+  analysis_layers: []
+  objective_ids: []
+  risk_ids: []
+  control_ids: []
+  key_control_ids: []
+  walkthrough_questions: []
+  design_test_steps: []
+  potential_operating_effectiveness_tests: []
+  evidence_requests: []
+  data_analytics_opportunities: []
+  population_requirements: []
+  sampling_considerations: []
+  unresolved_items: []
+  assumptions: []
+  limitations:
+    - "No audit opinion is issued by this handoff."
+    - "Final sampling and reliance decisions require the audit methodology and responsible auditor."
+  human_review_required: true

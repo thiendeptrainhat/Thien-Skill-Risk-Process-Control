@@ -1,10 +1,12 @@
 #!/usr/bin/env python3
-"""Run the deterministic acceptance checks for the 104-case test catalog.
+"""Run legacy static checks, or validate separately retained Phase 3 evidence.
 
 `tests/cases.yaml` is deliberately JSON-compatible YAML so it can be validated
 without third-party dependencies.  This runner never executes behavioral model
 tests.  Selected behavioral cases remain explicitly `not_run` until a separate
-forward-testing activity records real observations.
+forward-testing activity records real observations. --phase3 validates receipts
+against the approved upgrade matrix; it does not execute models or replace the
+104-case registry, 28 historical summaries, or old result files.
 """
 
 from __future__ import annotations
@@ -415,11 +417,31 @@ def build_parser() -> argparse.ArgumentParser:
         help="Write tests/deterministic-results.json and tests/acceptance-report.md.",
     )
     parser.add_argument("--json", action="store_true", help="Print the complete JSON result.")
+    parser.add_argument(
+        "--phase3", action="store_true",
+        help="Validate retained Phase 3 evidence separately; never execute a model or overwrite historical results.",
+    )
+    parser.add_argument(
+        "--phase3-matrix", default="tests/phase-3/acceptance-matrix.json",
+        help="Repository-relative JSON envelope of the approved Phase 1 matrix (requires --phase3).",
+    )
+    parser.add_argument(
+        "--phase3-evidence", default="tests/phase-3/evidence-index.json",
+        help="Repository-relative retained evidence index (requires --phase3).",
+    )
     return parser
 
 
 def main(argv: list[str] | None = None) -> int:
-    args = build_parser().parse_args(argv)
+    parser = build_parser()
+    args = parser.parse_args(argv)
+    if args.phase3 and args.write_results:
+        parser.error("--phase3 cannot use --write-results: historical acceptance/results must remain unchanged.")
+    if not args.phase3 and (
+        args.phase3_matrix != "tests/phase-3/acceptance-matrix.json"
+        or args.phase3_evidence != "tests/phase-3/evidence-index.json"
+    ):
+        parser.error("--phase3-matrix and --phase3-evidence require --phase3.")
     repo_root = args.repo_root.resolve()
     report = TestReport()
     cases = load_cases(repo_root / "tests" / "cases.yaml", report)
@@ -427,6 +449,31 @@ def main(argv: list[str] | None = None) -> int:
     validate_coverage_matrix(repo_root, normalized, report)
     run_package_validator(repo_root, report)
     payload = result_payload(report, normalized)
+
+    if args.phase3:
+        # The default branch and its status=pass contract remain unchanged for
+        # the builder. Receipt integrity and model acceptance are separate here.
+        from phase3_evidence import evaluate_phase3
+
+        evidence = evaluate_phase3(
+            repo_root, args.phase3_matrix, args.phase3_evidence,
+            legacy_static_registry=payload,
+        )
+        if args.json:
+            print(json.dumps(evidence, ensure_ascii=False, indent=2, sort_keys=True))
+        else:
+            print(f"Phase 3 evidence integrity: {evidence['integrity_status'].upper()}")
+            print(f"Phase 3 acceptance: {evidence['acceptance_status'].upper()}")
+            print(f"Legacy static/registry: {payload['status'].upper()}")
+            for context in evidence["claims_by_context"]:
+                print(f"Context {context['context_id']}: {context['surface']} / {context['verification_mode']}")
+                for claim_id, claim in context["claims"].items():
+                    if claim["status"] != "not_applicable":
+                        print(f"  {claim_id}: {claim['status']}")
+            for item in evidence["errors"]:
+                print(f"ERROR {item['code']} [{item['where']}]: {item['message']}")
+            print("A zero exit code means valid structure, not complete behavioral acceptance.")
+        return 0 if not report.errors and evidence["integrity_status"] == "pass" else 1
 
     if args.write_results:
         try:

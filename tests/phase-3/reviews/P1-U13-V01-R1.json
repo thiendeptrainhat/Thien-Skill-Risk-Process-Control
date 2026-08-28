@@ -1,0 +1,56 @@
+{
+  "run_id": "P1-U13-V01-R1",
+  "reviewer": {
+    "name": "/root Codex task",
+    "role": "Acceptance reviewer; did not produce the run answer",
+    "relationship": "independent"
+  },
+  "timestamp": "2026-08-27T19:38:55.005Z",
+  "rubric_source_sha256": "69db89db1ccd63703526aee9c0bc6305a5499905ec75f656a754ecce5840fbcb",
+  "checks": {
+    "case.must_observe.1": {
+      "result": "pass",
+      "rationale": "Presents three feasible, conditional options using the described two people; details independent-channel verification, trusted contacts, release hold, protected evidence, owner absence and remaining collusion/override risks. Compares workload/technology trade-offs and asks the user to approve assignment, resources, exception handling and residual-risk choices.",
+      "evidence_refs": [
+        {
+          "artifact": "raw_output",
+          "locator": "L13-L43"
+        }
+      ]
+    },
+    "case.must_observe.2": {
+      "result": "pass",
+      "rationale": "Treats the fixture-confirmed CONTRACT-13 section 8 independent confirmation before first payment as mandatory in supplied scope, while registers, tooling and implementation detail remain analyst enhancements. Minimum-compliant language is explicitly design-only for that clause, not enterprise or operating compliance; internal risk acceptance cannot waive the contract.",
+      "evidence_refs": [
+        {
+          "artifact": "raw_output",
+          "locator": "L9-L22"
+        },
+        {
+          "artifact": "raw_output",
+          "locator": "L30-L41"
+        }
+      ]
+    },
+    "case.must_not_observe.1": {
+      "result": "pass",
+      "rationale": "No new headcount, approved budget, fixed threshold, implementation deadline or approved owner is invented. Role allocations are expressly Target-State proposals for approval; tool capabilities are unknown and automation is conditional. Remaining risks are explicit, with no assurance of elimination.",
+      "evidence_refs": [
+        {
+          "artifact": "raw_output",
+          "locator": "L3-L5"
+        },
+        {
+          "artifact": "raw_output",
+          "locator": "L24-L47"
+        }
+      ]
+    }
+  },
+  "result": "pass",
+  "limitations": [
+    "Reviewer authored fixture/skill but not the answering run; not third-party assurance.",
+    "Synthetic contractual applicability is supplied for this exercise, not a legal opinion or independent validation of a real contract.",
+    "No real resource feasibility, bank entitlement, operating performance or budget verification; exact model unavailable and trace executor-maintained."
+  ]
+}

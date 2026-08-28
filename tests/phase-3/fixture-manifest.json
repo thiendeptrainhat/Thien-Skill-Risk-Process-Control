@@ -1,0 +1,273 @@
+{
+  "schema_version": "1",
+  "fixture_set_version": "1",
+  "kind": "synthetic_inputs_not_expected_answers",
+  "created_on": "2026-08-28",
+  "authorization": "Synthetic data authored for authorized Phase 3; not real personal/organization data.",
+  "variant_count": 29,
+  "source_of_rubric": "docs/phase-1/ACCEPTANCE-MATRIX.yaml",
+  "files": [
+    {
+      "path": "tests/phase-3/fixtures/P1-U01-V01/input.md",
+      "sha256": "5ee6ad69e51533e8147f0008c2b14540e900120765080f8b3f3c8f3e24244416"
+    },
+    {
+      "path": "tests/phase-3/fixtures/P1-U01-V01/request.txt",
+      "sha256": "81cd867788b58a39e509f3d8edafa0a8f18710c8404d364b9bd8c0f7ba3d16d9"
+    },
+    {
+      "path": "tests/phase-3/fixtures/P1-U02-V01/input.md",
+      "sha256": "43cb26aab192e79dae0900eaa38e3ad3a850c9a2ef9f914b66d06c40f21ec4b0"
+    },
+    {
+      "path": "tests/phase-3/fixtures/P1-U02-V01/request.txt",
+      "sha256": "37a4f16f46f202bb1b6254e7ab9860a577c95eaf486368b6dafe207d5a2119d1"
+    },
+    {
+      "path": "tests/phase-3/fixtures/P1-U03-V01/input.md",
+      "sha256": "b22d8a29ae5b8bbeccf7f6bdd5c5e9218cfd412caffc666105c83ff71eac78f0"
+    },
+    {
+      "path": "tests/phase-3/fixtures/P1-U03-V01/request.txt",
+      "sha256": "d00d5e061b533387cd0504269298402ad18da1c134eef989b9e3cb3688112738"
+    },
+    {
+      "path": "tests/phase-3/fixtures/P1-U04-V01/input.md",
+      "sha256": "87e0ecc0e376d1ce36ec5638ed670a61a258aa64ec0ac051a8981709aae4fb7b"
+    },
+    {
+      "path": "tests/phase-3/fixtures/P1-U04-V01/request.txt",
+      "sha256": "19f9e45f1b164c80e7eabf1ffc6f1d75b6c5f193fd219ed0285c035fd5d9afd2"
+    },
+    {
+      "path": "tests/phase-3/fixtures/P1-U05-V01/input.md",
+      "sha256": "8377212bea10caf007ba516750bb36e5f9a71c6dc5afe0e8a2b4df36e1caf98c"
+    },
+    {
+      "path": "tests/phase-3/fixtures/P1-U05-V01/request.txt",
+      "sha256": "e1c0d01a0df3cfd1cace51dfaa8ad6888874c454be8952cbd17831c92cc5d0e6"
+    },
+    {
+      "path": "tests/phase-3/fixtures/P1-U06-V01/input.md",
+      "sha256": "a947a287751ce3a6b3a0f82c7ebe96dd7c811d3c9fc01e4a76799a5f627e321f"
+    },
+    {
+      "path": "tests/phase-3/fixtures/P1-U06-V01/request.txt",
+      "sha256": "015b9ddc0938fd9915c82b9b7e46da0c14cdb852d63bdd05483f416c11e275ee"
+    },
+    {
+      "path": "tests/phase-3/fixtures/P1-U07-V01/input.md",
+      "sha256": "0a1accd0acb591bb0bd94c5c1adeb23b1e1cdb0f767f21957ed3ad616ffae796"
+    },
+    {
+      "path": "tests/phase-3/fixtures/P1-U07-V01/request.txt",
+      "sha256": "c9c1da59acb905d6e832265aa7fe835edb1e76edde5db4571d425595c0eaf7c0"
+    },
+    {
+      "path": "tests/phase-3/fixtures/P1-U08-V01/input.md",
+      "sha256": "6e622b1e9a7951d449a2a2df57c563e157fad28601335340392f2963166c7808"
+    },
+    {
+      "path": "tests/phase-3/fixtures/P1-U08-V01/request.txt",
+      "sha256": "84282568e18ed0018371bed2e020b4e5f69bdbf566b93f359a0add1fb89835b3"
+    },
+    {
+      "path": "tests/phase-3/fixtures/P1-U08-V02/input.md",
+      "sha256": "5bb15db8e94d2ba0d77e0074cefd7cb927058255e69c7ffcbb612999c65e9390"
+    },
+    {
+      "path": "tests/phase-3/fixtures/P1-U08-V02/request.txt",
+      "sha256": "a47e612a64b9bad0b680a09ff8f95a4fcdea666e53cc3769472da58bf6df5e53"
+    },
+    {
+      "path": "tests/phase-3/fixtures/P1-U08-V03/input.md",
+      "sha256": "1d1b4d0a3a7405df5e690f18989ed9415a11839c6e2e97e4093cc2a1bb9f8812"
+    },
+    {
+      "path": "tests/phase-3/fixtures/P1-U08-V03/request.txt",
+      "sha256": "98df94e76fc674cb7d360e053cbf1e3f41e9ed6120e0c9c2f19fa9eefd791809"
+    },
+    {
+      "path": "tests/phase-3/fixtures/P1-U09-V01/input.md",
+      "sha256": "2df690b91c2fb5128c6a953c04df3dd1ee41b2fa030d98f92cdbb7e0568c7e1d"
+    },
+    {
+      "path": "tests/phase-3/fixtures/P1-U09-V01/request.txt",
+      "sha256": "9c7cffad505f98789ca27ce6d56277f3ca3b823a07ba29d9722f803722764a76"
+    },
+    {
+      "path": "tests/phase-3/fixtures/P1-U10-V01/input.md",
+      "sha256": "ad1f9f0a6a6afa27ae4cd9c1f63d45bf0b6568dba78a29d897de1db260a7309a"
+    },
+    {
+      "path": "tests/phase-3/fixtures/P1-U10-V01/request.txt",
+      "sha256": "a998208ba0f8ef53752ce64b73f62377f0f41fa8f9ca30a2f6991253253e27b4"
+    },
+    {
+      "path": "tests/phase-3/fixtures/P1-U11-V01/input.md",
+      "sha256": "c3f053013f50921f84a37469ad63baa5bc685773588e6fc0bb619a8e7226edad"
+    },
+    {
+      "path": "tests/phase-3/fixtures/P1-U11-V01/request.txt",
+      "sha256": "03fa02f828bbbb87c5df71a1aa1f1b4a34e45bc64050669d65a8658d94ab242f"
+    },
+    {
+      "path": "tests/phase-3/fixtures/P1-U12-V01/input.md",
+      "sha256": "0331fa4567d615effeaa5e04a01c09b80e3a02e9d5ef5b95f3ef0b2fdfefdc0e"
+    },
+    {
+      "path": "tests/phase-3/fixtures/P1-U12-V01/request.txt",
+      "sha256": "25e305ece7f86663111457529ebbd255f7d8ed839cc73548b47d73b0e655de62"
+    },
+    {
+      "path": "tests/phase-3/fixtures/P1-U13-V01/input.md",
+      "sha256": "498a43ac7a69d7a4edc601bb8a52b49c00fd27c0d05d9d9d96d69859b3b8fe44"
+    },
+    {
+      "path": "tests/phase-3/fixtures/P1-U13-V01/request.txt",
+      "sha256": "13908598ede7e1f0c351a7c1df60b337d4fc554092a8c301a15f57d8ba9e463f"
+    },
+    {
+      "path": "tests/phase-3/fixtures/P1-U14-V01/input.md",
+      "sha256": "b2fddc0cbe5364b02a7a1e269a67ca89c30a9c239dca6a2dbeb84281f431116c"
+    },
+    {
+      "path": "tests/phase-3/fixtures/P1-U14-V01/request.txt",
+      "sha256": "faf8f778c6c226560c1acd735ed7d125c812c2b917a5686435c4f434b5de1e97"
+    },
+    {
+      "path": "tests/phase-3/fixtures/P1-U15-V01/input.md",
+      "sha256": "a12ecb0be0ed757050b0aea02ca67b3991f7d4b441e6af21f58d3cf283f56040"
+    },
+    {
+      "path": "tests/phase-3/fixtures/P1-U15-V01/request.txt",
+      "sha256": "faf7da1aa10af3038fc509003aed7380034df7a2215de075df8d94f8bf0c8655"
+    },
+    {
+      "path": "tests/phase-3/fixtures/P1-U15-V02/input.docx",
+      "sha256": "c45b694e278e1eb82d4aa6b955794f7ce93c76b5f8ddb35f4990e0ba39512532"
+    },
+    {
+      "path": "tests/phase-3/fixtures/P1-U15-V02/request.txt",
+      "sha256": "faf7da1aa10af3038fc509003aed7380034df7a2215de075df8d94f8bf0c8655"
+    },
+    {
+      "path": "tests/phase-3/fixtures/P1-U15-V03/input.pdf",
+      "sha256": "fc81e4b84e0195a2c421553f1713e1d78231fe78ec02f40118146361da4a1371"
+    },
+    {
+      "path": "tests/phase-3/fixtures/P1-U15-V03/request.txt",
+      "sha256": "faf7da1aa10af3038fc509003aed7380034df7a2215de075df8d94f8bf0c8655"
+    },
+    {
+      "path": "tests/phase-3/fixtures/P1-U16-V01/input.pdf",
+      "sha256": "9182b8b70c2027a5c81675365c6afd7383e2fbb9fa1cd7498aaf9b02f264714a"
+    },
+    {
+      "path": "tests/phase-3/fixtures/P1-U16-V01/request.txt",
+      "sha256": "fdeaf1e1c4372ca64a6cec47af6bcd04fc4c700f9245c5750170e87b7e329399"
+    },
+    {
+      "path": "tests/phase-3/fixtures/P1-U16-V02/input.md",
+      "sha256": "c57b8cb4879ce40fe740ce7226aa89e68063416fbba635e5be2032e20d90440d"
+    },
+    {
+      "path": "tests/phase-3/fixtures/P1-U16-V02/request.txt",
+      "sha256": "94145ed92b6ba0d39b64bbb2b0e5735b1038bc9a8db3bc08de82e3c7ac130e17"
+    },
+    {
+      "path": "tests/phase-3/fixtures/P1-U17-V01/input.md",
+      "sha256": "6660dd2735589f5fa73fe710b9850de1bb89a072b08cf319a9e0b9d6b37390ab"
+    },
+    {
+      "path": "tests/phase-3/fixtures/P1-U17-V01/request.txt",
+      "sha256": "93a9c7f38ac67fbaf7ce6791dd3453971178277b717de79baa51c1148708eb2e"
+    },
+    {
+      "path": "tests/phase-3/fixtures/P1-U17-V02/input.md",
+      "sha256": "be03453b0f5aeec3a5f1c2bc67d20c26dbce9e14801ed30e7c951015cc7520fe"
+    },
+    {
+      "path": "tests/phase-3/fixtures/P1-U17-V02/request.txt",
+      "sha256": "6c35b998f822c81f67aec780721321c56275a1ff709ff3be8297f80705ec25ca"
+    },
+    {
+      "path": "tests/phase-3/fixtures/P1-U18-V01/input.md",
+      "sha256": "b0699d40067f88bdfafe21289791a89b53313e376a237ca4ec22c16d76ebe290"
+    },
+    {
+      "path": "tests/phase-3/fixtures/P1-U18-V01/request.txt",
+      "sha256": "16c9b077ba3c6da42aa1a5b8ad2f256191f1fff6dd8f5090a7618328eef841ef"
+    },
+    {
+      "path": "tests/phase-3/fixtures/P1-U19-V01/input.md",
+      "sha256": "2e12837369855492b98c0a50984ebbacf33d42275c90ccbde9c745f787e2b407"
+    },
+    {
+      "path": "tests/phase-3/fixtures/P1-U19-V01/request.txt",
+      "sha256": "747cea52fce67002b91d3c8ad1a22c11d4ebeb93771297a7425b15161938323d"
+    },
+    {
+      "path": "tests/phase-3/fixtures/P1-U20-V01/input.md",
+      "sha256": "403bc84a3a7938c220a8a70e90f54053de3e2f3ba7a841b233969d0921e04afb"
+    },
+    {
+      "path": "tests/phase-3/fixtures/P1-U20-V01/request.txt",
+      "sha256": "df684151c37c79dd26d6422a10f3214f00f0c4cdc2a9e9ca66e742dfd87b78f1"
+    },
+    {
+      "path": "tests/phase-3/fixtures/P1-U20-V02/input.md",
+      "sha256": "8bebb4d0ccba608ce0483379240870b69285b8e0b8caadd4bb4e5961fcbf12e0"
+    },
+    {
+      "path": "tests/phase-3/fixtures/P1-U20-V02/request.txt",
+      "sha256": "db416f272d243f45574fcfdf0d6974d50d53d644cac7e18847fc4ec3db5e7491"
+    },
+    {
+      "path": "tests/phase-3/fixtures/P1-U21-V01/input.md",
+      "sha256": "990736b92c3752a300b02531e025b3461e1f2ff410a4798cfab2dcdfc35d89e0"
+    },
+    {
+      "path": "tests/phase-3/fixtures/P1-U21-V01/request.txt",
+      "sha256": "4119786fab7d09468a397037ed0917464bc30cf34bbba3acad090edd57ec9afd"
+    },
+    {
+      "path": "tests/phase-3/fixtures/P1-U22-V01/input.md",
+      "sha256": "710e54d279ea626461e397e3e078692a66892a17604123e293df618042c7a47e"
+    },
+    {
+      "path": "tests/phase-3/fixtures/P1-U22-V01/request.txt",
+      "sha256": "bbef05b197f783b0e77fadcb89f11ce05b12520e37b6773066604c38c2daecf1"
+    },
+    {
+      "path": "tests/phase-3/fixtures/document-source.json",
+      "sha256": "8e06f0740025e391a9d43996ff4e617d09c71da86709180fdd77cc1b90cbfd7d"
+    },
+    {
+      "path": "tests/phase-3/fixtures/qa/docx-page-1.png",
+      "sha256": "165186effe1c4b977ed1696df09885c19d1ef42159d1b60bf5948226c33fc847"
+    },
+    {
+      "path": "tests/phase-3/fixtures/qa/pdf-native-page-1.png",
+      "sha256": "489c050f9919d40a54bfd11c1a9f77118446c110c4efc67a2156d50b43a3d789"
+    },
+    {
+      "path": "tests/phase-3/fixtures/qa/pdf-scan-page-1.png",
+      "sha256": "f6ddbd62e9f17015ddecbb01e31dc75f1835469aceba39667ec5b4a8a4da67c4"
+    },
+    {
+      "path": "tests/phase-3/fixtures/qa/semantic-preflight.json",
+      "sha256": "f94e33c71e09bcedcc8c9e103e80b344b1a2ac322f64a0d795f47237cde8560a"
+    },
+    {
+      "path": "tests/phase-3/fixtures/qa/visual-review.json",
+      "sha256": "895d759d19b81b3a3e1158bd42f788992d408535bd65b75e80a6c976fb84e313"
+    }
+  ],
+  "limitations": [
+    "File QA does not prove behavioral acceptance.",
+    "U07/U08/U17 model capability profiles are simulations.",
+    "Only U06 authorizes read-only public official-source web lookup.",
+    "Only U16-V01 authorizes actual local Document-Evidence cooperation; U16-V02 is consumer-only."
+  ]
+}

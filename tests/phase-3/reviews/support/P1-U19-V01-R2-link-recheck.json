@@ -1,0 +1,52 @@
+{
+  "run_id": "P1-U19-V01-R2",
+  "check_kind": "root_independent_structured_link_recheck",
+  "timestamp": "2026-08-27T19:23:12.372Z",
+  "input": "tests/phase-3/runs/P1-U19-V01-R2/artifacts/analysis-data.json",
+  "execution_environment": "functions.exec JavaScript over JSON parsed from retained actual artifact",
+  "checks_executed": 1112,
+  "failures": [],
+  "status": "pass",
+  "entity_counts": {
+    "source_register": 7,
+    "objectives": 2,
+    "requirements": 1,
+    "end_to_end_processes": 3,
+    "process_reference_mappings": 4,
+    "processes": 2,
+    "steps": 10,
+    "process_observations": 1,
+    "risks": 4,
+    "control_objectives": 4,
+    "controls": 3,
+    "baseline_links": 4,
+    "control_observations": 7,
+    "comparisons": 3,
+    "gaps": 3,
+    "dependencies": 1,
+    "sod_assessments": 1,
+    "design_opportunities": 2,
+    "no_change_scenarios": 3,
+    "recommendations": 4,
+    "actions": 4,
+    "metrics": 3,
+    "test_attributes": 6,
+    "relationships": 65,
+    "rcm_relationships": 13,
+    "target_options": 3,
+    "evidence": 3
+  },
+  "scope": [
+    "Typed ID references and relationship endpoints",
+    "Unique IDs within every declared entity list",
+    "All 13 RCM rows match referenced observation identity, layer, process/step scope, period, source, evidence and confidence",
+    "Comparison layer/control membership",
+    "Null owner/date/budget/priority/approval and no-change probability/loss/horizon",
+    "Distinct raw statuses and unresolved checklist process attribution"
+  ],
+  "limitations": [
+    "Supplemental deterministic recheck, not a model run or a substitute for semantic review.",
+    "Shared requirement/source IDs intentionally reuse identity; per-entity uniqueness is checked.",
+    "Adapted JSON view, not formal validation of every optional common-schema field."
+  ]
+}

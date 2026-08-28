@@ -1,0 +1,40 @@
+{
+  "record_kind": "historical_documentation_byte_preservation",
+  "created_at": "2026-08-28T02:19:30.224Z",
+  "reason": "User requested README reordering, updated project handoff and commit/push after Phase 3 completion. Preserve the exact inputs/results read by P03-R1 before changing the live README.",
+  "files": [
+    {
+      "original_path": "README.md",
+      "retained_path": "tests/phase-3/documentation-snapshots/pre-handoff-update-2026-08-28/README.md",
+      "sha256": "9d904d7e02175946b7828d86bb1148cc264a449c8bea54df2d91d5bf2fef4106"
+    },
+    {
+      "original_path": "tests/phase-3/runs/P1-P03-V01-R1/run.json",
+      "retained_path": "tests/phase-3/documentation-snapshots/pre-handoff-update-2026-08-28/P1-P03-V01-R1-run.json",
+      "sha256": "53d861a795c6b3661aa5307e325273ef217a094a2f7798f3425657f9962a1c52"
+    },
+    {
+      "original_path": "tests/phase-3/acceptance-results.json",
+      "retained_path": "tests/phase-3/documentation-snapshots/pre-handoff-update-2026-08-28/acceptance-results.json",
+      "sha256": "c4525ab067753accc9df36ab4fa56d2dee89de39024a952707f2af0a02294f8e"
+    },
+    {
+      "original_path": "tests/phase-3/evidence-index.json",
+      "retained_path": "tests/phase-3/documentation-snapshots/pre-handoff-update-2026-08-28/evidence-index.json",
+      "sha256": "81e6fd087107b44eb3e1bce68f9caad8d06a2963168842deaa1acf4b71dab759"
+    }
+  ],
+  "input_relocations": [
+    {
+      "run_id": "P1-P03-V01-R1",
+      "original_path": "README.md",
+      "retained_path": "tests/phase-3/documentation-snapshots/pre-handoff-update-2026-08-28/README.md",
+      "sha256": "9d904d7e02175946b7828d86bb1148cc264a449c8bea54df2d91d5bf2fef4106"
+    }
+  ],
+  "invariants": [
+    "Raw answers, tool traces, review judgments and their hashes are unchanged.",
+    "Only the historical run input pointer is relocated to the exact same bytes; the original run record is retained here.",
+    "The updated README receives a new documentation-only P03 retest; existing business-model runs and ZIPs are not relabelled as newly executed."
+  ]
+}

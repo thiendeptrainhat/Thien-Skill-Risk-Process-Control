@@ -1,0 +1,75 @@
+{
+  "run_id": "P1-P01-V01-R1",
+  "reviewer": {
+    "name": "/root Codex task",
+    "role": "Release-content reviewer and static-check executor",
+    "relationship": "self_check"
+  },
+  "timestamp": "2026-08-27T20:11:28.118Z",
+  "rubric_source_sha256": "69db89db1ccd63703526aee9c0bc6305a5499905ec75f656a754ecce5840fbcb",
+  "result": "pass",
+  "checks": {
+    "case.must_observe.1": {
+      "result": "pass",
+      "rationale": "All canonical payload hashes match after root normalization. Claude has 48 files and only the explicit agents/openai.yaml exclusion; ChatGPT and Universal have all 49. No business resource divergence is observed.",
+      "evidence_refs": [
+        {
+          "artifact": "raw_output",
+          "locator": "entire_artifact"
+        },
+        {
+          "artifact": "execution_record",
+          "locator": "entire_artifact"
+        }
+      ]
+    },
+    "case.must_observe.2": {
+      "result": "pass",
+      "rationale": "The new external-process-control-libraries reference and control-baseline-comparison template exist in canonical and every normalized archive. The complete 49-file inventory contains no docs/phase-1, phase-3 fixtures, tests or evidence payload in runtime.",
+      "evidence_refs": [
+        {
+          "artifact": "raw_output",
+          "locator": "entire_artifact"
+        },
+        {
+          "artifact": "execution_record",
+          "locator": "entire_artifact"
+        }
+      ]
+    },
+    "case.must_observe.3": {
+      "result": "pass",
+      "rationale": "Archive roots match the release manifest; all entries are regular safe paths, no traversal, duplicate normalized aliases or symlinks, and CRC checks pass.",
+      "evidence_refs": [
+        {
+          "artifact": "raw_output",
+          "locator": "entire_artifact"
+        },
+        {
+          "artifact": "execution_record",
+          "locator": "entire_artifact"
+        }
+      ]
+    },
+    "case.must_not_observe.1": {
+      "result": "pass",
+      "rationale": "Three distinct archive SHA-256 values are expected from root/metadata layout differences and remain checksum-verified. The checker compares normalized file bytes against the canonical allowlist rather than treating whole-ZIP differences as business-content gaps.",
+      "evidence_refs": [
+        {
+          "artifact": "raw_output",
+          "locator": "entire_artifact"
+        },
+        {
+          "artifact": "execution_record",
+          "locator": "entire_artifact"
+        }
+      ]
+    }
+  },
+  "limitations": [
+    "Actual static checks plus root content review; not model behavior, installation, platform verification or third-party assurance.",
+    "ZIPs intentionally have different root/metadata/hash. Content parity is normalized per manifest, not whole-archive equality.",
+    "Bounded pattern scan and provenance review do not certify absence of every secret, malware or third-party-rights issue."
+  ]
+}
+

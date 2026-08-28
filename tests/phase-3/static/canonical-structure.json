@@ -1,0 +1,22 @@
+{
+  "checks": {
+    "assets": "pass",
+    "license_copies": "pass",
+    "no_symlinks": "pass",
+    "relative_markdown_links": "pass",
+    "release_safe_text": "pass",
+    "required_structure": "pass",
+    "skill_frontmatter": "pass",
+    "structured_file_syntax": "pass",
+    "template_ids_and_relationships": "pass"
+  },
+  "error_count": 0,
+  "errors": [],
+  "skill_id": "thien-skill-risk-process-control",
+  "skill_path": "thien-skill-risk-process-control",
+  "status": "pass",
+  "target": "canonical",
+  "validator": "validate_package.py",
+  "warning_count": 0,
+  "warnings": []
+}

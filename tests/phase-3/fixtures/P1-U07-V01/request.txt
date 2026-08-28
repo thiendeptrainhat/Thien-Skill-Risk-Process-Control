@@ -1,0 +1,1 @@
+Gợi ý E2E và các kiểm soát nên có theo best practice cho mô tả này.

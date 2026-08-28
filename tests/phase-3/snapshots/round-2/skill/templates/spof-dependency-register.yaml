@@ -1,0 +1,40 @@
+template: "spof-and-dependency-register"
+schema_version: "1.0.0"
+output_metadata:
+  analysis_layers: []
+  source_references: []
+  data_classification: null
+  assumptions: []
+  confidence: "Unresolved"
+  unresolved_items: []
+  review_status: "Not reviewed"
+
+dependencies:
+  - dependency_id: null
+    analysis_layer: null
+    dependency_type: null
+    provider: null
+    consumer: null
+    process_id: null
+    step_id: null
+    minimum_requirement: null
+    capacity: null
+    substitute_available: "To be validated"
+    substitution_lead_time: null
+    recovery_time: null
+    maximum_outage_tolerance: null
+    documentation_available: "To be validated"
+    cross_training: "To be validated"
+    backup: null
+    manual_workaround: null
+    workaround_test_status: "To be validated"
+    common_mode_failure: null
+    geographic_concentration: null
+    competing_demand: null
+    spof_status: "To be validated"
+    risk_ids: []
+    owner: null
+    evidence_ids: []
+    source_reference: null
+    confidence: "Unresolved"
+    review_status: "Not reviewed"

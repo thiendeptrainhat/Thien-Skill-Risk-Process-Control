@@ -1,0 +1,105 @@
+{
+  "artifact_kind": "phase_2_static_validation_record",
+  "date": "2026-08-28",
+  "phase": 2,
+  "skill_id": "thien-skill-risk-process-control",
+  "working_source_version": "1.1.0",
+  "release_state": "unreleased",
+  "scope": "Source structure, metadata, traceability instructions and preservation of legacy template fields; not behavioral or platform acceptance.",
+  "snapshot": {
+    "baseline_commit": "d65fad595e0265dbe665477b6a5747faa5811139",
+    "canonical_files_hashed": 49,
+    "canonical_snapshot_sha256": "d630e3214f185b9d0b601a91cd7ebf562332604e20528c0e42ff810befd019d0",
+    "snapshot_algorithm": "SHA256 of sorted UTF-8 relative_path + NUL + file_sha256 + LF records for every canonical file",
+    "protected_tracked_paths_changed": []
+  },
+  "canonical_package_validation": {
+    "checks": {
+      "assets": "pass",
+      "license_copies": "pass",
+      "no_symlinks": "pass",
+      "relative_markdown_links": "pass",
+      "release_safe_text": "pass",
+      "required_structure": "pass",
+      "skill_frontmatter": "pass",
+      "structured_file_syntax": "pass",
+      "template_ids_and_relationships": "pass"
+    },
+    "error_count": 0,
+    "errors": [],
+    "skill_id": "thien-skill-risk-process-control",
+    "skill_path": "thien-skill-risk-process-control",
+    "status": "pass",
+    "target": "canonical",
+    "validator": "validate_package.py",
+    "warning_count": 0,
+    "warnings": []
+  },
+  "yaml_and_legacy_field_validation": {
+    "check_kind": "static_structure_and_legacy_field_preservation",
+    "status": "pass",
+    "yaml_files_parsed": 21,
+    "frontmatter_parsed": true,
+    "duplicate_keys": [],
+    "legacy_yaml_templates_checked": 18,
+    "removed_or_changed_legacy_fields": [],
+    "schema_versions_updated": [
+      "action-plan.yaml",
+      "common-data-model.yaml",
+      "control-register.yaml",
+      "process-architecture-step-register.yaml",
+      "process-intake.yaml",
+      "qa-checklist.yaml",
+      "rcm.yaml",
+      "source-document-assessment.yaml"
+    ],
+    "id_prefixes_unique": true,
+    "original_seed_profile_content": "unchanged",
+    "errors": [],
+    "behavioral_migration_test": "not_run"
+  },
+  "yaml_validation_method": "Ruby/Psych safe_load and duplicate mapping-key AST checks; recursive comparison of all 18 existing templates against baseline Git objects, permitting declared schema_version updates.",
+  "skill_creator_quick_validate": {
+    "status": "unavailable",
+    "reason": "ModuleNotFoundError: No module named 'yaml'",
+    "dependency_installed": false,
+    "fallback": "Repository canonical validator plus Ruby/Psych frontmatter parsing and naming, description, UI metadata and unresolved-TODO checks."
+  },
+  "local_markdown_review": {
+    "status": "pass",
+    "markdown_files_checked": 20,
+    "local_links_checked": 211,
+    "anchor_links_checked": 120,
+    "missing_targets_or_anchors": [],
+    "method": "Independent static review"
+  },
+  "independent_instruction_contract_review": {
+    "status": "completed",
+    "findings_resolved": 4,
+    "resolved_topics": [
+      "Workflow routing anchor",
+      "Per-source access and AI-use conditions in extraction handoff receipt",
+      "Prospective test design versus executed test-results/OE evidence",
+      "Preservation of Unresolved null semantics"
+    ],
+    "remaining_identified_blockers": [],
+    "limitation": "Static review only; absence of identified blockers does not establish runtime correctness."
+  },
+  "git_diff_check": "pass",
+  "phase_3_work": {
+    "behavioral_tests": "not_run",
+    "behavioral_migration_tests": "not_run",
+    "live_lookup_and_document_ingestion_tests": "not_run",
+    "cross_platform_verification": "not_run",
+    "release_build": "not_run",
+    "installation": "not_run",
+    "commit_and_push": "not_run"
+  },
+  "preserved_release": {
+    "version": "1.0.0",
+    "legacy_tests_and_results": "unchanged",
+    "source_seed_profiles": "unchanged",
+    "zip_manifest_checksums": "unchanged",
+    "license_and_assets": "unchanged"
+  }
+}

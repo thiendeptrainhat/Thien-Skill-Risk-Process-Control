@@ -1,0 +1,56 @@
+{
+  "reviewer": {
+    "name": "/root Codex task",
+    "role": "Acceptance reviewer; did not produce the run answers",
+    "relationship": "independent"
+  },
+  "timestamp": "2026-08-27T19:46:36.877Z",
+  "rubric_source_sha256": "69db89db1ccd63703526aee9c0bc6305a5499905ec75f656a754ecce5840fbcb",
+  "result": "pass",
+  "run_id": "P1-U15-V03-R1",
+  "checks": {
+    "case.must_observe.1": {
+      "result": "pass",
+      "rationale": "Reads the one-page native PDF and preserves request-to-refund/reconciliation boundary, warehouse count/condition, shift-lead approval, original-account refund after approval, mismatch hold, linked records and missing operating evidence. Page 1 and named table/section locators match the actual supplied PDF and retained page render.",
+      "evidence_refs": [
+        {
+          "artifact": "raw_output",
+          "locator": "L1-L24"
+        }
+      ]
+    },
+    "case.must_observe.2": {
+      "result": "pass",
+      "rationale": "Uses existing pypdf native extraction plus local visual verification; no OCR, external upload or specialist. Source is preserved and a derived page render is separately retained.",
+      "evidence_refs": [
+        {
+          "artifact": "tool_trace",
+          "locator": "entire_artifact"
+        },
+        {
+          "artifact": "raw_output",
+          "locator": "L3-L3"
+        }
+      ]
+    },
+    "case.must_not_observe.1": {
+      "result": "pass",
+      "rationale": "The one page is actually confirmed by pdfinfo/pypdf and rendered; table controls are preserved rather than lost. This run does not invent chat/Word pages or imply operating performance from the SOP.",
+      "evidence_refs": [
+        {
+          "artifact": "raw_output",
+          "locator": "L7-L24"
+        },
+        {
+          "artifact": "tool_trace",
+          "locator": "entire_artifact"
+        }
+      ]
+    }
+  },
+  "limitations": [
+    "Reviewer authored fixture/skill but not the answering run; not third-party assurance.",
+    "Root viewed the retained page render and compared it to the raw answer. Per-format pass is distinct from the group parity review.",
+    "Trace retains malformed command attempts followed by successful local retries; exact model unavailable and no complete host transcript retained."
+  ]
+}

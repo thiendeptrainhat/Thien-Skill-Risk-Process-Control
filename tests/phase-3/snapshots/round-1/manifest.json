@@ -1,0 +1,204 @@
+{
+  "skill_id": "thien-skill-risk-process-control",
+  "skill_version": "1.1.0",
+  "source_root": "tests/phase-3/snapshots/round-1/skill",
+  "canonical_source": "skills/thien-skill-risk-process-control",
+  "files": [
+    {
+      "path": "tests/phase-3/snapshots/round-1/skill/LICENSE",
+      "sha256": "ced33214d371fabe382d3ca303042af7219ad96fb98acdd1b858d0d89478d4b5"
+    },
+    {
+      "path": "tests/phase-3/snapshots/round-1/skill/LICENSE-APPLICATION.md",
+      "sha256": "28ceb23401ba90144760b2b20e8f613aac2bcc20d45ed8b40c4f1a316cf61db3"
+    },
+    {
+      "path": "tests/phase-3/snapshots/round-1/skill/LICENSE-VERSION",
+      "sha256": "d526eb4e878a23ef26ae190031b4efd2d58ed66789ac049ea3dbaf74c9df7402"
+    },
+    {
+      "path": "tests/phase-3/snapshots/round-1/skill/NOTICE",
+      "sha256": "eac9a408692aa433df5e287b98ed2c87120507c6374f1f468d4149c972d3e341"
+    },
+    {
+      "path": "tests/phase-3/snapshots/round-1/skill/SKILL.md",
+      "sha256": "39fcc24c5556c809021b92d28c38443cf4c769b1918c76171b2e4fbdfff7275f"
+    },
+    {
+      "path": "tests/phase-3/snapshots/round-1/skill/THIRD-PARTY-NOTICES.md",
+      "sha256": "bb584d4a2e42fb39d6e45eb04d257446469186f1199f68a1a893fcf3c3b08c47"
+    },
+    {
+      "path": "tests/phase-3/snapshots/round-1/skill/agents/openai.yaml",
+      "sha256": "0d27961fc745cbf65922acbe87ae0f14d30f03aa51090fe3dfcfd96dc9119481"
+    },
+    {
+      "path": "tests/phase-3/snapshots/round-1/skill/assets/PROVENANCE.md",
+      "sha256": "e8512f7b582e2ee0e0f736f5d3f5d178e6f71d08e222df2c0127fbc761863b32"
+    },
+    {
+      "path": "tests/phase-3/snapshots/round-1/skill/assets/icon-128.png",
+      "sha256": "58695db66aa845d5b58631fc97ee0303d100cd1d0b1b81fd0bbf89b933d4ee12"
+    },
+    {
+      "path": "tests/phase-3/snapshots/round-1/skill/assets/icon-512.png",
+      "sha256": "be8ef61706db7ea9d0d8a6911d41a09b8f368e9d27d5ab02fbf44b000799c220"
+    },
+    {
+      "path": "tests/phase-3/snapshots/round-1/skill/assets/logo-1100.png",
+      "sha256": "020a47a3c831664c700c9e4491c7ae00cf5a8f330e6c3c57422ee246df56d69e"
+    },
+    {
+      "path": "tests/phase-3/snapshots/round-1/skill/assets/logo-original.png",
+      "sha256": "020a47a3c831664c700c9e4491c7ae00cf5a8f330e6c3c57422ee246df56d69e"
+    },
+    {
+      "path": "tests/phase-3/snapshots/round-1/skill/examples/catalog.md",
+      "sha256": "3e9df95248fa536ff001988a40cfe094c09bd47a8a75db6183b517674670dc7f"
+    },
+    {
+      "path": "tests/phase-3/snapshots/round-1/skill/integration/master-orchestrator-registry-entry.yaml",
+      "sha256": "4e6c272b92ce6f51c9b6f4f973717af0492eaa361b16a4237c013987eeb9076e"
+    },
+    {
+      "path": "tests/phase-3/snapshots/round-1/skill/references/architecture-layers-taxonomy.md",
+      "sha256": "b9e070ef3a82f1b524c58498ea23f133dd316a62e81095dc20a759904161c5ed"
+    },
+    {
+      "path": "tests/phase-3/snapshots/round-1/skill/references/data-model-qa-execution.md",
+      "sha256": "dbedfd25835c13076efd9f7cfd72f68a162ee20ba8cbe0b6cac0045e7adaf1d7"
+    },
+    {
+      "path": "tests/phase-3/snapshots/round-1/skill/references/document-analysis-and-discovery.md",
+      "sha256": "a4797b19d8b150631719f36da236fc46a866346125d4bbd4e20746a4491afa43"
+    },
+    {
+      "path": "tests/phase-3/snapshots/round-1/skill/references/end-to-end-process-profiles.md",
+      "sha256": "fe0f3b9320cfb183f554dafd79c5d046dbdcb9f8f80e5a15f6a6d64be0575d1b"
+    },
+    {
+      "path": "tests/phase-3/snapshots/round-1/skill/references/external-process-control-libraries.md",
+      "sha256": "78ba83ee7c124a82a992fdf0072032d4b071c71a54df8b426150965f3ba3fea7"
+    },
+    {
+      "path": "tests/phase-3/snapshots/round-1/skill/references/gaps-rationalization-rcm.md",
+      "sha256": "2efbb50cac5fac05c6526e6aef7a8ed219665163ed9ff7d6c1f406050fa20553"
+    },
+    {
+      "path": "tests/phase-3/snapshots/round-1/skill/references/governance-security-handoffs.md",
+      "sha256": "c31d50aba343f9cb4100bb13a1b548c4846ee36b7b48fcb5ce1d598e73f01b2a"
+    },
+    {
+      "path": "tests/phase-3/snapshots/round-1/skill/references/requirement-coverage-matrix.md",
+      "sha256": "8dc7d79bf18eabe708ba9408da32a1242a02ef9d7be6fa0cf9849fc73320fba0"
+    },
+    {
+      "path": "tests/phase-3/snapshots/round-1/skill/references/risk-control-key-control.md",
+      "sha256": "7f622ffe435c8131b761cc7c7236e2661f64ba08b1008eb8ed678d9c92d2a1ff"
+    },
+    {
+      "path": "tests/phase-3/snapshots/round-1/skill/references/sod-spof-dependencies.md",
+      "sha256": "eadacd9844439e749ceec9eff2d4032d9c090d75b76c92945ffb1db753c197ff"
+    },
+    {
+      "path": "tests/phase-3/snapshots/round-1/skill/references/source-skill-inventory.md",
+      "sha256": "f4178acd356161e2c02effdd6299db91c078bc2eda988e2bf62cce76a982db17"
+    },
+    {
+      "path": "tests/phase-3/snapshots/round-1/skill/references/source-skill-map.md",
+      "sha256": "055ff07af4aec45c77dbdaa857895cd3ae5f99906f46f7fcfe76dabfc1d21095"
+    },
+    {
+      "path": "tests/phase-3/snapshots/round-1/skill/references/standards-sources-applicability.md",
+      "sha256": "ae4b1d44f36a02702844f202c201d9482237147d4fee416bb1054af57ecfb31a"
+    },
+    {
+      "path": "tests/phase-3/snapshots/round-1/skill/references/target-state-and-improvement.md",
+      "sha256": "d76061b2ee8240414c1811dfda0afd241f1adb1683ffbd92bb3cc09d8e5b9026"
+    },
+    {
+      "path": "tests/phase-3/snapshots/round-1/skill/references/workflow-metrics-mining-audit.md",
+      "sha256": "99fb6ff57eb7dc640734ea5f2189397f329e2d886eada7d392e3e5da216e74f5"
+    },
+    {
+      "path": "tests/phase-3/snapshots/round-1/skill/scripts/validate_package.py",
+      "sha256": "5126daf6e92d5895a03bc20bbf7fe6ca14da8decd4eb1a609b48b57d928b8b16"
+    },
+    {
+      "path": "tests/phase-3/snapshots/round-1/skill/templates/action-plan.yaml",
+      "sha256": "1710fb54554944059e74c664f620378b08fac3225a672097a46a3b4704d0fc08"
+    },
+    {
+      "path": "tests/phase-3/snapshots/round-1/skill/templates/assessment-scorecard.yaml",
+      "sha256": "9d4b9d2b1d4350f144f16465b3987871236d5f74d57e1d81bd97be800a37496c"
+    },
+    {
+      "path": "tests/phase-3/snapshots/round-1/skill/templates/audit-handoff.yaml",
+      "sha256": "c22e26945e7f8482a7efad08aed48f1f99211a74b945a25a5e32a714998ccb02"
+    },
+    {
+      "path": "tests/phase-3/snapshots/round-1/skill/templates/common-data-model.yaml",
+      "sha256": "63630831572da45153ca89fb96501542d1da1e015ee70625436ce35fff9354e1"
+    },
+    {
+      "path": "tests/phase-3/snapshots/round-1/skill/templates/control-baseline-comparison.yaml",
+      "sha256": "626dd87b20db6fa82213a47ab65d656b59e35e3961c06050ea7eaa1796cf9900"
+    },
+    {
+      "path": "tests/phase-3/snapshots/round-1/skill/templates/control-register.yaml",
+      "sha256": "931162229aadd85db97d9fd3fe19b7d4bacfef6f9996b376fc0a982d1656619a"
+    },
+    {
+      "path": "tests/phase-3/snapshots/round-1/skill/templates/metric-register.yaml",
+      "sha256": "d8492c014a4a85ff2ec84203c69d19c7c19c5d4a264f4ec20036fccfd8d9a45e"
+    },
+    {
+      "path": "tests/phase-3/snapshots/round-1/skill/templates/process-architecture-step-register.yaml",
+      "sha256": "3846d33c6503d0a71767cacba28aa9d838d544a412785f37b7c20b821aac442b"
+    },
+    {
+      "path": "tests/phase-3/snapshots/round-1/skill/templates/process-deviation-register.yaml",
+      "sha256": "ffc7b45fc7f02f35953772ece883cf8fe245fe074dfa01331b99de1c0ff6d1ca"
+    },
+    {
+      "path": "tests/phase-3/snapshots/round-1/skill/templates/process-intake.yaml",
+      "sha256": "151364d6e78b1187e9f0e93f3292cc31b7d8fa013a39cc7ea053457f2d68f655"
+    },
+    {
+      "path": "tests/phase-3/snapshots/round-1/skill/templates/qa-checklist.yaml",
+      "sha256": "aa00d5e2c13ddb1ce5eefded52be428842144f57c6fdc07937803530e29a6b88"
+    },
+    {
+      "path": "tests/phase-3/snapshots/round-1/skill/templates/rcm.yaml",
+      "sha256": "6b276556ce1a5ad116023c7ecd84f5a379706a8021a62407e68c44db10c5b34a"
+    },
+    {
+      "path": "tests/phase-3/snapshots/round-1/skill/templates/risk-register.yaml",
+      "sha256": "f74ea16e0e0e71d11606f62c5e2accdc1e1b8ad474d46630fb0b723795d9ff70"
+    },
+    {
+      "path": "tests/phase-3/snapshots/round-1/skill/templates/sod-conflict-register.yaml",
+      "sha256": "0223a7839f3b662eb189cda87d91eb0efb7007ced1da73d6c5caaf2564c012ee"
+    },
+    {
+      "path": "tests/phase-3/snapshots/round-1/skill/templates/source-document-assessment.yaml",
+      "sha256": "fbdd3351843529396744bfba5f744efa4853327e766fa0b4749fbb3ecf43510d"
+    },
+    {
+      "path": "tests/phase-3/snapshots/round-1/skill/templates/spof-dependency-register.yaml",
+      "sha256": "831ded38fa63e064d5a5f089d1b3ef39682a4df9dc1f6c7543339702470dd22a"
+    },
+    {
+      "path": "tests/phase-3/snapshots/round-1/skill/templates/target-state-options.yaml",
+      "sha256": "3b7373a79313d01acc7600aaf170749c0350a078965b519c07fe6f7bb1fc4797"
+    },
+    {
+      "path": "tests/phase-3/snapshots/round-1/skill/templates/training-exercise.yaml",
+      "sha256": "0280e7a0685f8ec19cdb67f23edd938d0b26ade1ba2a852e456535aeef1cdb42"
+    },
+    {
+      "path": "tests/phase-3/snapshots/round-1/skill/templates/workflow-definition.yaml",
+      "sha256": "0759f378391074a7c9bcd3e1532a4407e20c4f686a5fb1781da0a3f4c268c667"
+    }
+  ]
+}

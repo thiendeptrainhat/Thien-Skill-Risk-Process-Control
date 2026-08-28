@@ -1,0 +1,1 @@
+Dùng thư viện này làm chuẩn đánh giá SOP giao thiết bị: nhân viên lập phiếu, giao hàng và ghi nhận trả hàng.

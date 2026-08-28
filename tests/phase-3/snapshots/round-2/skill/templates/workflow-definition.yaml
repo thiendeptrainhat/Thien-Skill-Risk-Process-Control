@@ -1,0 +1,44 @@
+template: "workflow-definition"
+schema_version: "1.0.0"
+output_metadata:
+  analysis_layers: []
+  source_references: []
+  data_classification: null
+  assumptions: []
+  confidence: "Unresolved"
+  unresolved_items: []
+  review_status: "Not reviewed"
+
+workflow:
+  workflow_id: null
+  process_id: null
+  title: null
+  analysis_layer: null
+  notation: null
+  conceptual_model: true
+  lanes: []
+  nodes:
+    - node_id: null
+      node_type: null
+      label: null
+      owner_lane: null
+      system: null
+      risk_ids: []
+      control_ids: []
+      sla: null
+      source_reference: null
+  flows:
+    - flow_id: null
+      from_node: null
+      to_node: null
+      condition: null
+      exception_path: false
+  legend: []
+  validation:
+    start_present: false
+    end_present: false
+    orphan_nodes: []
+    incomplete_decisions: []
+    loop_termination_checked: false
+    syntax_validated: false
+    visually_verified: false

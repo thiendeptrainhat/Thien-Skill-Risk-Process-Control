@@ -1,0 +1,12 @@
+{
+  "record_kind": "bounded_pattern_scan",
+  "timestamp": "2026-08-27T19:47:47.601Z",
+  "command": "rg -l --hidden '(-----BEGIN (RSA |EC |OPENSSH )?PRIVATE KEY-----|gh[pousr]_[A-Za-z0-9]{30,}|github_pat_[A-Za-z0-9_]{30,}|sk-[A-Za-z0-9]{32,}|AKIA[0-9A-Z]{16})' skills/thien-skill-risk-process-control",
+  "exit_code": 1,
+  "output": "",
+  "interpretation": "No matching filenames for the listed patterns",
+  "limitations": [
+    "Pattern-only check, not a guarantee that no sensitive data, malware or secrets exist.",
+    "Only canonical runtime files are scanned; synthetic fixtures and raw test evidence are not installed."
+  ]
+}

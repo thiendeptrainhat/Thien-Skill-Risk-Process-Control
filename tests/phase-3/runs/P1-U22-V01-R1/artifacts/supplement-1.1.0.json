@@ -1,0 +1,172 @@
+{
+  "format": "legacy-additive-sidecar",
+  "status": "Draft",
+  "target_model_schema_name": "thien-process-risk-control-common-data-model",
+  "target_model_schema_version": "1.1.0",
+  "compatibility_scope": "Phần bổ sung riêng cho reader 1.1.0; envelope sidecar là đề xuất, chưa kiểm chứng với consumer cụ thể. Không sửa hay tăng schema_version của legacy.",
+  "original_artifact_reference": "legacy-1.0.0.json",
+  "source_warning": "SYNTHETIC TEST DATA; authorized for AI processing. These are retained legacy records, not new source evidence.",
+  "output_metadata": {
+    "analysis_layers": [],
+    "source_references": [
+      "/Users/thiendeptrainhat/Documents/Thien's Skills Library/Thien-Risk-Process-Control/tests/phase-3/fixtures/P1-U22-V01/input.md",
+      "Legacy.xlsx:Controls!D7 / SOP-5 section 4.2"
+    ],
+    "data_classification": null,
+    "assumptions": [],
+    "confidence": "Unresolved",
+    "confidence_basis": [
+      "Unresolved"
+    ],
+    "unresolved_items": [
+      "Chưa có cơ sở xác định analysis_layer, assessed_scope hoặc assessed_period. Nhắc đến review năm 2025 không xác định kỳ control observation.",
+      "Chưa xác nhận control_owner, performer/reviewer có thẩm quyền, vận hành thực tế, evidence hoặc hiệu lực hiện tại của đánh giá thiết kế.",
+      "Chưa đọc Legacy.xlsx, SOP-5 hoặc hồ sơ review 2025; locator không phải bằng chứng nội dung nguồn đã được xác minh.",
+      "RSK-L001, RSK-L002 và COBJ-L001 chỉ có ID tham chiếu; chưa có object định nghĩa để kiểm tra đầy đủ referential integrity.",
+      "Chưa có approved risk methodology hoặc căn cứ residual risk.",
+      "Chưa kiểm thử tích hợp hoặc strict-schema compatibility của consumer cụ thể."
+    ],
+    "review_status": "Not reviewed"
+  },
+  "control_extensions": [
+    {
+      "control_id": "CTL-L001",
+      "legacy_record_reference": "legacy-1.0.0.json#/control_register/controls/0",
+      "control_objective_ids": [
+        "COBJ-L001"
+      ],
+      "control_observation_ids": [],
+      "legacy_projection_observation_id": null,
+      "assessment_status": "Not assessed",
+      "evidence_status": "Not checked",
+      "assessment_scope_note": "Trạng thái của đánh giá mới: chưa tái đánh giá thiết kế và chưa kiểm thử vận hành. Không thay thế design_assessment gốc về review 2025.",
+      "source_ids": [
+        "SRC-LEGACY-INPUT"
+      ],
+      "source_reference": "/Users/thiendeptrainhat/Documents/Thien's Skills Library/Thien-Risk-Process-Control/tests/phase-3/fixtures/P1-U22-V01/input.md#/control_register/controls/0",
+      "analysis_layer": null,
+      "confidence": "Unresolved",
+      "review_status": "Not reviewed"
+    }
+  ],
+  "control_observations": [],
+  "rcm_relationships": [
+    {
+      "rcm_id": "RCM-ADD-001",
+      "relationship_id": "RCM-ADD-001",
+      "from_id": "RSK-L001",
+      "relationship_type": "legacy_risk_control_mapping",
+      "to_id": "CTL-L001",
+      "risk_id": "RSK-L001",
+      "control_id": "CTL-L001",
+      "control_observation_id": null,
+      "analysis_layer": null,
+      "assessed_scope": null,
+      "assessed_period": null,
+      "source_ids": [
+        "SRC-LEGACY-INPUT"
+      ],
+      "source_reference": "/Users/thiendeptrainhat/Documents/Thien's Skills Library/Thien-Risk-Process-Control/tests/phase-3/fixtures/P1-U22-V01/input.md#/rcm/rows/0",
+      "legacy_record_reference": "legacy-1.0.0.json#/rcm/rows/0",
+      "legacy_source_reference": "Legacy.xlsx:Controls!D7 / SOP-5 section 4.2",
+      "confidence": "Unresolved",
+      "review_status": "Not reviewed"
+    },
+    {
+      "rcm_id": "RCM-ADD-002",
+      "relationship_id": "RCM-ADD-002",
+      "from_id": "RSK-L002",
+      "relationship_type": "legacy_risk_control_mapping",
+      "to_id": "CTL-L001",
+      "risk_id": "RSK-L002",
+      "control_id": "CTL-L001",
+      "control_observation_id": null,
+      "analysis_layer": null,
+      "assessed_scope": null,
+      "assessed_period": null,
+      "source_ids": [
+        "SRC-LEGACY-INPUT"
+      ],
+      "source_reference": "/Users/thiendeptrainhat/Documents/Thien's Skills Library/Thien-Risk-Process-Control/tests/phase-3/fixtures/P1-U22-V01/input.md#/rcm/rows/1",
+      "legacy_record_reference": "legacy-1.0.0.json#/rcm/rows/1",
+      "legacy_source_reference": "Legacy.xlsx:Controls!D7 / SOP-5 section 4.2",
+      "confidence": "Unresolved",
+      "review_status": "Not reviewed"
+    }
+  ],
+  "source_register": [
+    {
+      "source_id": "SRC-LEGACY-INPUT",
+      "title": "Bản ghi legacy do người dùng cung cấp",
+      "source_type": "retained_legacy_output",
+      "source_reference": "/Users/thiendeptrainhat/Documents/Thien's Skills Library/Thien-Risk-Process-Control/tests/phase-3/fixtures/P1-U22-V01/input.md",
+      "version": null,
+      "current_status": "To be validated",
+      "analysis_layer": null,
+      "content_verification_status": "content_verified",
+      "content_checked_scope": [
+        "Nội dung native text, cảnh báo nguồn và JSON được cung cấp; không xác minh sự thật nghiệp vụ hoặc tài liệu được trích dẫn bên trong."
+      ],
+      "date_checked": "2026-08-28",
+      "date_verified": "2026-08-28",
+      "access_status": "available",
+      "access_basis_reference": "Tệp đầu vào được cung cấp và đã đọc trong phạm vi được cho phép.",
+      "ai_use_status": "permission_evidenced",
+      "ai_use_basis_reference": "Cảnh báo đầu tệp: authorized for AI processing.",
+      "redistribution_status": "not_assessed",
+      "confidence": "Unresolved",
+      "review_status": "Not reviewed"
+    },
+    {
+      "source_id": "SRC-LEGACY-WORKBOOK",
+      "title": "Legacy.xlsx",
+      "source_type": "legacy_cited_document",
+      "source_reference": "Legacy.xlsx:Controls!D7",
+      "version": null,
+      "current_status": "To be validated",
+      "analysis_layer": null,
+      "content_verification_status": "not_checked",
+      "content_checked_scope": [],
+      "date_checked": null,
+      "date_verified": null,
+      "access_status": "not_checked",
+      "ai_use_status": "not_assessed",
+      "redistribution_status": "not_assessed",
+      "limitations": [
+        "Chỉ nhận locator trong retained legacy record; chưa được cung cấp hoặc đọc nội dung gốc."
+      ],
+      "confidence": "Unresolved",
+      "review_status": "Not reviewed"
+    },
+    {
+      "source_id": "SRC-LEGACY-SOP",
+      "title": "SOP-5",
+      "source_type": "legacy_cited_document",
+      "source_reference": "SOP-5 section 4.2",
+      "version": null,
+      "current_status": "To be validated",
+      "analysis_layer": null,
+      "content_verification_status": "not_checked",
+      "content_checked_scope": [],
+      "date_checked": null,
+      "date_verified": null,
+      "access_status": "not_checked",
+      "ai_use_status": "not_assessed",
+      "redistribution_status": "not_assessed",
+      "limitations": [
+        "Chỉ nhận locator trong retained legacy record; chưa được cung cấp hoặc đọc nội dung gốc."
+      ],
+      "confidence": "Unresolved",
+      "review_status": "Not reviewed"
+    }
+  ],
+  "interpretation_rules": [
+    "Đọc cùng bản legacy; không merge ghi đè field gốc. control_extensions chỉ bổ sung bằng control_id khớp chính xác.",
+    "control_objective_ids là ánh xạ bổ sung từ control_objective_id gốc, không thay trường singular.",
+    "RCM-ADD-001 và RCM-ADD-002 là ID mới cho quan hệ ánh xạ, không phải control/risk/observation mới hay bằng chứng mitigation.",
+    "Danh sách observation rỗng nghĩa chưa tạo được observation đủ căn cứ, không chứng minh control không tồn tại hoặc không thực hiện.",
+    "Không tạo baseline link, comparison, Evidence, Gap hay rating để lấp field thiếu.",
+    "Chỉ tạo observation và điền projection ID khi có căn cứ layer/phạm vi/kỳ, source và identity rõ; giữ riêng observation về sau.",
+    "Consumer 1.0.0 strict-schema chỉ nhận legacy-1.0.0.json. Giữ sidecar riêng; nếu cần merge/export làm mất nghĩa, dừng để xin quyết định schema."
+  ]
+}

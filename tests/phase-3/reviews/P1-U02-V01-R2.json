@@ -1,0 +1,56 @@
+{
+  "run_id": "P1-U02-V01-R2",
+  "reviewer": {
+    "name": "/root Codex task",
+    "role": "Acceptance reviewer; did not produce the run answer",
+    "relationship": "independent"
+  },
+  "timestamp": "2026-08-27T19:21:34.286Z",
+  "rubric_source_sha256": "69db89db1ccd63703526aee9c0bc6305a5499905ec75f656a754ecce5840fbcb",
+  "checks": {
+    "case.must_observe.1": {
+      "result": "pass",
+      "rationale": "Proposes an end-to-end name grounded in museum-loan purpose, request trigger, return/condition/responsibility outcome and handoffs; explicitly says the name is an analyst working proposal, not a publisher taxonomy item.",
+      "evidence_refs": [
+        {
+          "artifact": "raw_output",
+          "locator": "L3-L25"
+        }
+      ]
+    },
+    "case.must_observe.2": {
+      "result": "pass",
+      "rationale": "Keeps specialist-library benchmarking for a later authorized source selection, with no current verification/compliance claim. Identifies material decisions requiring confirmation—acceptance criteria, damage handling, handoff evidence, closure and authority—without filling them with assumptions. These are expressed as confirmation items rather than interrogative sentences; the present generic framing is not made contingent on an unavailable source.",
+      "evidence_refs": [
+        {
+          "artifact": "raw_output",
+          "locator": "L19-L25"
+        },
+        {
+          "artifact": "raw_output",
+          "locator": "L39-L49"
+        }
+      ]
+    },
+    "case.must_not_observe.1": {
+      "result": "pass",
+      "rationale": "Does not force the loan process into procurement, sales, transport alone or another approximate seed; uses a custom outcome-based candidate and supplies no fabricated external library reference ID.",
+      "evidence_refs": [
+        {
+          "artifact": "raw_output",
+          "locator": "L3-L11"
+        },
+        {
+          "artifact": "raw_output",
+          "locator": "L47-L49"
+        }
+      ]
+    }
+  },
+  "result": "pass",
+  "limitations": [
+    "Reviewer authored the fixture and skill update but not the fresh answering run; not third-party assurance.",
+    "One outside-seed museum process establishes this scenario only, not universal E2E coverage.",
+    "No specialist source or external baseline was verified; exact model identity unavailable and trace executor-maintained."
+  ]
+}

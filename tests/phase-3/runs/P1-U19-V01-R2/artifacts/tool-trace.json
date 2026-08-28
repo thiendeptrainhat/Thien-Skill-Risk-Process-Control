@@ -1,0 +1,203 @@
+{
+  "run_id": "P1-U19-V01-R2",
+  "started_at": "2026-08-28T02:03:34+07:00",
+  "finished_at": "2026-08-28T02:20:29+07:00",
+  "timestamp_note": "started_at là timestamp shell đầu tiên được ghi trong intake; lượt đọc harness/skill/fixture đầu tiên ngay trước đó không có timestamp riêng được lưu. finished_at là thời điểm final JSON/artifact validation thành công; cập nhật bookkeeping của trace được thực hiện ngay sau đó.",
+  "trace_type": "Executor-maintained record, not a complete exported host transcript.",
+  "source_files_read": [
+    "/Users/thiendeptrainhat/Documents/Thien's Skills Library/Thien-Risk-Process-Control/tests/phase-3/harness.md",
+    "/Users/thiendeptrainhat/Documents/Thien's Skills Library/Thien-Risk-Process-Control/tests/phase-3/snapshots/round-2/skill/SKILL.md",
+    "/Users/thiendeptrainhat/Documents/Thien's Skills Library/Thien-Risk-Process-Control/tests/phase-3/fixtures/P1-U19-V01/request.txt",
+    "/Users/thiendeptrainhat/Documents/Thien's Skills Library/Thien-Risk-Process-Control/tests/phase-3/fixtures/P1-U19-V01/input.md",
+    "/Users/thiendeptrainhat/Documents/Thien's Skills Library/Thien-Risk-Process-Control/tests/phase-3/snapshots/round-2/skill/references/architecture-layers-taxonomy.md",
+    "/Users/thiendeptrainhat/Documents/Thien's Skills Library/Thien-Risk-Process-Control/tests/phase-3/snapshots/round-2/skill/references/document-analysis-and-discovery.md",
+    "/Users/thiendeptrainhat/Documents/Thien's Skills Library/Thien-Risk-Process-Control/tests/phase-3/snapshots/round-2/skill/references/risk-control-key-control.md",
+    "/Users/thiendeptrainhat/Documents/Thien's Skills Library/Thien-Risk-Process-Control/tests/phase-3/snapshots/round-2/skill/references/gaps-rationalization-rcm.md",
+    "/Users/thiendeptrainhat/Documents/Thien's Skills Library/Thien-Risk-Process-Control/tests/phase-3/snapshots/round-2/skill/references/sod-spof-dependencies.md",
+    "/Users/thiendeptrainhat/Documents/Thien's Skills Library/Thien-Risk-Process-Control/tests/phase-3/snapshots/round-2/skill/references/target-state-and-improvement.md",
+    "/Users/thiendeptrainhat/Documents/Thien's Skills Library/Thien-Risk-Process-Control/tests/phase-3/snapshots/round-2/skill/references/standards-sources-applicability.md",
+    "/Users/thiendeptrainhat/Documents/Thien's Skills Library/Thien-Risk-Process-Control/tests/phase-3/snapshots/round-2/skill/references/workflow-metrics-mining-audit.md",
+    "/Users/thiendeptrainhat/Documents/Thien's Skills Library/Thien-Risk-Process-Control/tests/phase-3/snapshots/round-2/skill/references/governance-security-handoffs.md",
+    "/Users/thiendeptrainhat/Documents/Thien's Skills Library/Thien-Risk-Process-Control/tests/phase-3/snapshots/round-2/skill/references/data-model-qa-execution.md",
+    "/Users/thiendeptrainhat/Documents/Thien's Skills Library/Thien-Risk-Process-Control/tests/phase-3/snapshots/round-2/skill/templates/qa-checklist.yaml",
+    "/Users/thiendeptrainhat/Documents/Thien's Skills Library/Thien-Risk-Process-Control/tests/phase-3/snapshots/round-2/skill/templates/control-register.yaml",
+    "/Users/thiendeptrainhat/Documents/Thien's Skills Library/Thien-Risk-Process-Control/tests/phase-3/snapshots/round-2/skill/templates/control-baseline-comparison.yaml",
+    "/Users/thiendeptrainhat/Documents/Thien's Skills Library/Thien-Risk-Process-Control/tests/phase-3/snapshots/round-2/skill/templates/rcm.yaml",
+    "/Users/thiendeptrainhat/Documents/Thien's Skills Library/Thien-Risk-Process-Control/tests/phase-3/snapshots/round-2/skill/templates/process-architecture-step-register.yaml",
+    "/Users/thiendeptrainhat/Documents/Thien's Skills Library/Thien-Risk-Process-Control/tests/phase-3/snapshots/round-2/skill/templates/action-plan.yaml",
+    "/Users/thiendeptrainhat/Documents/Thien's Skills Library/Thien-Risk-Process-Control/tests/phase-3/snapshots/round-2/skill/templates/common-data-model.yaml"
+  ],
+  "tool_calls": [
+    {
+      "tool": "tools.update_plan",
+      "phase": "Intake",
+      "action": "Three-step plan: read frozen skill/case, execute analysis, verify/save artifacts.",
+      "observed_result": "Returned {}."
+    },
+    {
+      "tool": "tools.exec_command",
+      "cmd": "pwd && sed -n '1,260p' tests/phase-3/harness.md && sed -n '1,300p' tests/phase-3/snapshots/round-2/skill/SKILL.md && sed -n '1,260p' tests/phase-3/fixtures/P1-U19-V01/request.txt && sed -n '1,300p' tests/phase-3/fixtures/P1-U19-V01/input.md",
+      "cwd": "/Users/thiendeptrainhat/Documents/Thien's Skills Library/Thien-Risk-Process-Control",
+      "observed_result": "Exit 0; read full harness, frozen SKILL.md, request and native-text input. No source writes."
+    },
+    {
+      "tool": "tools.exec_command",
+      "cmd": "date '+%Y-%m-%dT%H:%M:%S%z' && wc -l tests/phase-3/snapshots/round-2/skill/SKILL.md tests/phase-3/harness.md tests/phase-3/fixtures/P1-U19-V01/request.txt tests/phase-3/fixtures/P1-U19-V01/input.md tests/phase-3/snapshots/round-2/skill/references/architecture-layers-taxonomy.md tests/phase-3/snapshots/round-2/skill/references/document-analysis-and-discovery.md tests/phase-3/snapshots/round-2/skill/references/risk-control-key-control.md tests/phase-3/snapshots/round-2/skill/references/gaps-rationalization-rcm.md tests/phase-3/snapshots/round-2/skill/references/sod-spof-dependencies.md tests/phase-3/snapshots/round-2/skill/references/target-state-and-improvement.md tests/phase-3/snapshots/round-2/skill/references/workflow-metrics-mining-audit.md tests/phase-3/snapshots/round-2/skill/references/standards-sources-applicability.md tests/phase-3/snapshots/round-2/skill/references/governance-security-handoffs.md tests/phase-3/snapshots/round-2/skill/references/data-model-qa-execution.md tests/phase-3/snapshots/round-2/skill/templates/qa-checklist.yaml",
+      "observed_result": "Exit 0; first timestamp 2026-08-28T02:03:34+0700; SKILL 199 lines, harness 14, request 1, input 10. Reference/template lengths determined before full reads."
+    },
+    {
+      "tool": "tools.exec_command via functions.exec",
+      "commands": [
+        "sed -n '1,500p' \"tests/phase-3/snapshots/round-2/skill/references/architecture-layers-taxonomy.md\"",
+        "sed -n '1,500p' \"tests/phase-3/snapshots/round-2/skill/references/document-analysis-and-discovery.md\"",
+        "sed -n '1,500p' \"tests/phase-3/snapshots/round-2/skill/references/risk-control-key-control.md\""
+      ],
+      "observed_result": "Commands exited 0. Combined returned display truncated; architecture was complete, missing document/risk display was re-read in next call."
+    },
+    {
+      "tool": "tools.exec_command via functions.exec",
+      "commands": [
+        "sed -n '1,500p' tests/phase-3/snapshots/round-2/skill/references/document-analysis-and-discovery.md",
+        "sed -n '1,500p' tests/phase-3/snapshots/round-2/skill/references/risk-control-key-control.md"
+      ],
+      "observed_result": "Exit 0 for both. Full relevant instructions available across this read and prior overlapping output; no business-source retrieval occurred."
+    },
+    {
+      "tool": "tools.exec_command via functions.exec",
+      "commands": [
+        "sed -n '1,500p' tests/phase-3/snapshots/round-2/skill/references/gaps-rationalization-rcm.md",
+        "sed -n '1,500p' tests/phase-3/snapshots/round-2/skill/references/sod-spof-dependencies.md"
+      ],
+      "observed_result": "Exit 0. Gaps module read; small displayed SoD excerpt truncation subsequently recovered with sed 185,225."
+    },
+    {
+      "tool": "tools.exec_command via functions.exec",
+      "commands": [
+        "sed -n '1,500p' tests/phase-3/snapshots/round-2/skill/references/target-state-and-improvement.md",
+        "sed -n '1,500p' tests/phase-3/snapshots/round-2/skill/references/standards-sources-applicability.md",
+        "sed -n '1,500p' tests/phase-3/snapshots/round-2/skill/references/workflow-metrics-mining-audit.md"
+      ],
+      "observed_result": "Exit 0; target/standards text read. Combined output truncated the workflow module, re-read next. No external standard content used."
+    },
+    {
+      "tool": "tools.exec_command",
+      "cmd": "sed -n '1,500p' tests/phase-3/snapshots/round-2/skill/references/workflow-metrics-mining-audit.md && sed -n '1,500p' tests/phase-3/snapshots/round-2/skill/references/governance-security-handoffs.md",
+      "observed_result": "Exit 0; full workflow and governance modules read."
+    },
+    {
+      "tool": "tools.exec_command",
+      "cmd": "sed -n '1,500p' tests/phase-3/snapshots/round-2/skill/references/data-model-qa-execution.md && sed -n '1,150p' tests/phase-3/snapshots/round-2/skill/templates/qa-checklist.yaml && sed -n '185,225p' tests/phase-3/snapshots/round-2/skill/references/sod-spof-dependencies.md && wc -l tests/phase-3/snapshots/round-2/skill/templates/control-register.yaml tests/phase-3/snapshots/round-2/skill/templates/control-baseline-comparison.yaml tests/phase-3/snapshots/round-2/skill/templates/rcm.yaml tests/phase-3/snapshots/round-2/skill/templates/process-architecture-step-register.yaml",
+      "observed_result": "Exit 0; full data-model module and QA template read; missing SoD display recovered; template lengths recorded."
+    },
+    {
+      "tool": "tools.exec_command",
+      "cmd": "sed -n '1,200p' tests/phase-3/snapshots/round-2/skill/templates/control-register.yaml && sed -n '1,150p' tests/phase-3/snapshots/round-2/skill/templates/control-baseline-comparison.yaml && sed -n '1,120p' tests/phase-3/snapshots/round-2/skill/templates/rcm.yaml && sed -n '1,150p' tests/phase-3/snapshots/round-2/skill/templates/process-architecture-step-register.yaml && sed -n '1,200p' tests/phase-3/snapshots/round-2/skill/templates/action-plan.yaml && wc -l tests/phase-3/snapshots/round-2/skill/templates/common-data-model.yaml",
+      "observed_result": "Exit 0; full selected view templates read; common-data-model 183 lines."
+    },
+    {
+      "tool": "tools.exec_command",
+      "cmd": "sed -n '1,220p' tests/phase-3/snapshots/round-2/skill/templates/common-data-model.yaml && nl -ba tests/phase-3/fixtures/P1-U19-V01/input.md && date '+%Y-%m-%dT%H:%M:%S%z'",
+      "observed_result": "Exit 0; full model read; actual input line locators 1–10 checked; timestamp 2026-08-28T02:04:56+0700."
+    },
+    {
+      "tool": "tools.update_plan",
+      "phase": "Analysis",
+      "action": "Marked source/skill reading complete; scoped analysis in progress.",
+      "observed_result": "Returned {}."
+    },
+    {
+      "tool": "tools.exec_command",
+      "cmd": "mkdir -p /private/tmp/thien-rpc-phase3.xGeed0/P1-U19-V01-R2 && command -v node && date '+%Y-%m-%dT%H:%M:%S%z'",
+      "observed_result": "Exit 0; permitted isolated output directory available; Node at /Users/thiendeptrainhat/.local/bin/node; timestamp 2026-08-28T02:07:42+0700."
+    },
+    {
+      "tool": "tools.apply_patch via functions.exec",
+      "action": "Authored analysis-data.json using structured objects and JSON.stringify through apply_patch.",
+      "output_file": "/private/tmp/thien-rpc-phase3.xGeed0/P1-U19-V01-R2/analysis-data.json",
+      "observed_result": "Returned {}; 3 logical controls, 7 control observations, 4 risks, 3 gaps, 4 actions, 65 typed relationships, 13 RCM rows."
+    },
+    {
+      "tool": "tools.apply_patch via functions.exec",
+      "action": "Authored Vietnamese user-facing output.md.",
+      "output_file": "/private/tmp/thien-rpc-phase3.xGeed0/P1-U19-V01-R2/output.md",
+      "observed_result": "Returned {}."
+    },
+    {
+      "tool": "tools.update_plan",
+      "phase": "Verification",
+      "action": "Marked scoped analysis complete; artifact/ID verification in progress.",
+      "observed_result": "Returned {}."
+    },
+    {
+      "tool": "collaboration.send_message",
+      "target": "/root",
+      "action": "Answered parent status request with progress and remaining validation/trace work; no outside recipient or new task.",
+      "observed_result": "Delivered to parent."
+    },
+    {
+      "tool": "tools.exec_command",
+      "cmd": "node -e '\nconst fs = require(\"node:fs\");\nconst assert = require(\"node:assert/strict\");\nconst dir = process.argv[1];\nconst d = JSON.parse(fs.readFileSync(dir + \"/analysis-data.json\", \"utf8\"));\nconst report = fs.readFileSync(dir + \"/output.md\", \"utf8\");\nconst lists = [\n[\"source_register\",\"source_id\"],[\"objectives\",\"objective_id\"],[\"requirements\",\"requirement_id\"],\n[\"end_to_end_processes\",\"end_to_end_process_id\"],[\"process_reference_mappings\",\"process_reference_mapping_id\"],\n[\"processes\",\"process_id\"],[\"steps\",\"step_id\"],[\"process_observations\",\"observation_id\"],\n[\"risks\",\"risk_id\"],[\"control_objectives\",\"control_objective_id\"],[\"controls\",\"control_id\"],\n[\"baseline_links\",\"baseline_link_id\"],[\"control_observations\",\"control_observation_id\"],\n[\"comparisons\",\"comparison_id\"],[\"gaps\",\"gap_id\"],[\"dependencies\",\"dependency_id\"],\n[\"sod_assessments\",\"sod_conflict_id\"],[\"design_opportunities\",\"design_opportunity_id\"],\n[\"no_change_scenarios\",\"no_change_scenario_id\"],[\"recommendations\",\"recommendation_id\"],\n[\"actions\",\"action_id\"],[\"metrics\",\"metric_id\"],[\"test_attributes\",\"test_attribute_id\"],\n[\"relationships\",\"relationship_id\"],[\"rcm_relationships\",\"rcm_id\"]\n];\nconst allIds = new Set();\nfor (const [list,key] of lists) {\n const ids = d[list].map(x=>x[key]);\n assert.equal(new Set(ids).size, ids.length, \"duplicate in \" + list);\n ids.forEach(id=>{assert.ok(id); allIds.add(id);});\n}\nconst sources = new Set(d.source_register.map(x=>x.source_id));\nconst controls = new Map(d.controls.map(x=>[x.control_id,x]));\nconst risks = new Set(d.risks.map(x=>x.risk_id));\nconst observations = new Map(d.control_observations.map(x=>[x.control_observation_id,x]));\nconst evidence = new Set(d.source_register.filter(x=>x.evidence_id).map(x=>x.evidence_id));\nfunction scan(x) {\n if(!x || typeof x !== \"object\") return;\n if(Array.isArray(x)){x.forEach(scan);return;}\n for (const [k,v] of Object.entries(x)) {\n  if(k===\"source_ids\") v.forEach(id=>assert.ok(sources.has(id),\"unknown source \"+id));\n  if(k===\"evidence_ids\") v.forEach(id=>assert.ok(evidence.has(id),\"unknown evidence \"+id));\n  scan(v);\n }\n}\nscan(d);\nfor(const o of observations.values()) {\n assert.ok(controls.has(o.control_id));\n o.risk_ids.forEach(id=>assert.ok(risks.has(id)));\n if(o.analysis_layer===\"As-Performed\") assert.ok(o.evidence_ids.length>0);\n}\nfor(const row of d.rcm_relationships) {\n const o=observations.get(row.control_observation_id);\n assert.ok(o);\n assert.equal(row.control_id,o.control_id);\n assert.equal(row.analysis_layer,o.analysis_layer);\n assert.equal(row.assessed_scope,o.assessed_scope);\n assert.equal(row.assessed_period,o.assessed_period);\n assert.ok(o.risk_ids.includes(row.risk_id));\n}\nfor(const c of d.comparisons) {\n for(const [key,layer] of Object.entries({\n documented_observation_ids:\"As-Documented\",\n designed_observation_ids:\"As-Designed\",\n performed_observation_ids:\"As-Performed\",\n target_observation_ids:\"Target-State\"\n })) for(const id of c[key]){\n  const o=observations.get(id); assert.ok(o); assert.equal(o.analysis_layer,layer);\n  assert.ok(c.logical_control_ids.includes(o.control_id));\n }\n}\nfor(const r of d.relationships) {\n assert.ok(allIds.has(r.from_id),\"unknown from \"+r.from_id);\n assert.ok(allIds.has(r.to_id),\"unknown to \"+r.to_id);\n}\nfor(const a of d.actions) {\n assert.equal(a.owner,null); assert.equal(a.target_date,null);\n assert.equal(a.budget,null); assert.equal(a.status,\"Draft\");\n for(const id of [...a.gap_ids,...(a.design_opportunity_ids||[]),...a.comparison_ids,...a.no_change_scenario_ids,...a.dependencies]) assert.ok(allIds.has(id));\n}\nfor(const n of d.no_change_scenarios) {\n assert.equal(n.horizon,null); assert.equal(n.probability,null); assert.equal(n.loss,null);\n}\nassert.equal(d.controls.filter(c=>c.control_id===\"CTL-SHARED-19\").length,1);\nassert.equal(d.controls.length,3);\nassert.equal(d.control_observations.length,7);\nassert.equal(d.rcm_relationships.length,13);\nassert.equal(observations.get(\"OBS-19-P01\").raw_status,\"VERIFIED\");\nassert.equal(observations.get(\"OBS-19-P02\").raw_status,\"PENDING_REVIEW\");\nassert.deepEqual(observations.get(\"OBS-19-P01\").process_ids,[]);\nfor(const id of [\"CTL-SHARED-19\",\"OBS-19-P01\",\"OBS-19-P02\",\"ACT-19-01\",\"NCS-19-01\"]) assert.ok(report.includes(id),\"missing report reference \"+id);\nconsole.log(JSON.stringify({json_parse:\"ok\",id_uniqueness:\"ok\",source_evidence_links:\"ok\",relationship_endpoints:\"ok\",rcm_observation_identity_layer_scope_period:\"ok\",comparison_layers:\"ok\",raw_status_preservation:\"ok\",null_owner_dates_budget_horizon:\"ok\",counts:{controls:d.controls.length,control_observations:d.control_observations.length,risks:d.risks.length,gaps:d.gaps.length,actions:d.actions.length,rcm_rows:d.rcm_relationships.length,relationships:d.relationships.length},limitations:\"Structural checks only; no business/OE assurance or source reconciliation.\"},null,2));\n' /private/tmp/thien-rpc-phase3.xGeed0/P1-U19-V01-R2",
+      "observed_result": {
+        "chunk_id": "4330ac",
+        "wall_time_seconds": 0.053480291,
+        "exit_code": 0,
+        "original_token_count": 134,
+        "output": "{\n  \"json_parse\": \"ok\",\n  \"id_uniqueness\": \"ok\",\n  \"source_evidence_links\": \"ok\",\n  \"relationship_endpoints\": \"ok\",\n  \"rcm_observation_identity_layer_scope_period\": \"ok\",\n  \"comparison_layers\": \"ok\",\n  \"raw_status_preservation\": \"ok\",\n  \"null_owner_dates_budget_horizon\": \"ok\",\n  \"counts\": {\n    \"controls\": 3,\n    \"control_observations\": 7,\n    \"risks\": 4,\n    \"gaps\": 3,\n    \"actions\": 4,\n    \"rcm_rows\": 13,\n    \"relationships\": 65\n  },\n  \"limitations\": \"Structural checks only; no business/OE assurance or source reconciliation.\"\n}\n"
+      }
+    },
+    {
+      "tool": "tools.exec_command",
+      "cmd": "wc -l /private/tmp/thien-rpc-phase3.xGeed0/P1-U19-V01-R2/output.md /private/tmp/thien-rpc-phase3.xGeed0/P1-U19-V01-R2/analysis-data.json && date '+%Y-%m-%dT%H:%M:%S%z'",
+      "observed_result": "Exit 0; output.md 151 lines; analysis-data.json 3675 lines; timestamp 2026-08-28T02:18:11+0700."
+    },
+    {
+      "tool": "tools.exec_command",
+      "cmd": "date '+%Y-%m-%dT%H:%M:%S%z'",
+      "observed_result": "2026-08-28T02:19:53+0700"
+    },
+    {
+      "tool": "tools.apply_patch",
+      "action": "Created tool-trace.json from executor-maintained observations.",
+      "output_file": "/private/tmp/thien-rpc-phase3.xGeed0/P1-U19-V01-R2/tool-trace.json",
+      "observed_result": "Returned {}."
+    },
+    {
+      "tool": "tools.exec_command",
+      "cmd": "node -e 'const fs=require(\"node:fs\");const assert=require(\"node:assert/strict\");const dir=process.argv[1];const trace=JSON.parse(fs.readFileSync(dir+\"/tool-trace.json\",\"utf8\"));JSON.parse(fs.readFileSync(dir+\"/analysis-data.json\",\"utf8\"));for(const key of [\"started_at\",\"finished_at\",\"source_files_read\",\"tool_calls\",\"external_sources\",\"capability_limitations\",\"artifact_paths\"])assert.ok(Object.hasOwn(trace,key),key);assert.ok(Number.isFinite(Date.parse(trace.started_at)));assert.ok(Number.isFinite(Date.parse(trace.finished_at)));for(const path of trace.artifact_paths)assert.ok(fs.statSync(path).size>0);assert.equal(trace.external_sources.length,0);console.log(JSON.stringify({trace_json:\"ok\",analysis_json:\"ok\",required_trace_fields:\"present\",nonempty_artifact_count:trace.artifact_paths.length,external_source_count:trace.external_sources.length}));' /private/tmp/thien-rpc-phase3.xGeed0/P1-U19-V01-R2 && date '+%Y-%m-%dT%H:%M:%S%z'",
+      "observed_result": {
+        "chunk_id": "516aee",
+        "wall_time_seconds": 0.000003541,
+        "exit_code": 0,
+        "original_token_count": 39,
+        "output": "{\"trace_json\":\"ok\",\"analysis_json\":\"ok\",\"required_trace_fields\":\"present\",\"nonempty_artifact_count\":3,\"external_source_count\":0}\n2026-08-28T02:20:29+0700\n"
+      }
+    },
+    {
+      "tool": "tools.update_plan",
+      "action": "Marked three scoped work steps completed after artifact checks; substantive source conflicts remain unresolved in the deliverables.",
+      "observed_result": {}
+    }
+  ],
+  "external_sources": [],
+  "capability_limitations": [
+    "No network/external lookup authorized or attempted.",
+    "No specialist delegation authorized, needed or performed.",
+    "Only supplied native text was read; original checklist, raw central trace, transaction log and configuration were not provided or independently accessed.",
+    "No OCR, document rendering, diagram rendering, production access or business-control testing performed.",
+    "Node structural checks do not establish business truth, source reconciliation, operating effectiveness or formal assurance.",
+    "No rating methodology, full population, sampling method, budget, assigned action owner/due date or approved key-control designation supplied.",
+    "Precise initial wall-clock time before the first recorded shell timestamp is unavailable."
+  ],
+  "source_warnings_preserved": [
+    "EVD-19A: VERIFIED is the checklist raw status, with call-source field blank.",
+    "EVD-19B: PENDING_REVIEW before release; source owner has not explained difference.",
+    "EVD-19C: one provided case, not full population.",
+    "No risk methodology, budget, action owners/dates or key-control approval provided.",
+    "Do not infer TX-19 first-payment/account-version linkage, fraud, loss, actual SoD conflict, confirmed SPOF or period-wide control effectiveness."
+  ],
+  "artifact_paths": [
+    "/private/tmp/thien-rpc-phase3.xGeed0/P1-U19-V01-R2/output.md",
+    "/private/tmp/thien-rpc-phase3.xGeed0/P1-U19-V01-R2/analysis-data.json",
+    "/private/tmp/thien-rpc-phase3.xGeed0/P1-U19-V01-R2/tool-trace.json"
+  ]
+}

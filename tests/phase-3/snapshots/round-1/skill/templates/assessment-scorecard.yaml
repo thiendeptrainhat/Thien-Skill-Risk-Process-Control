@@ -1,0 +1,31 @@
+template: "assessment-scorecard"
+schema_version: "1.0.0"
+output_metadata:
+  analysis_layers: []
+  source_references: []
+  data_classification: null
+  assumptions: []
+  confidence: "Unresolved"
+  unresolved_items: []
+  review_status: "Not reviewed"
+
+assessment:
+  assessment_id: null
+  analysis_layer: null
+  scope: null
+  methodology_reference: null
+  scale_status: "To be validated"
+  dimensions:
+    - dimension_id: null
+      dimension_type: null
+      criteria: null
+      evidence_ids: []
+      rating: null
+      rationale: null
+      confidence: "Unresolved"
+  critical_exposures_kept_separate: []
+  target_state_gap_ids: []
+  assumptions: []
+  limitations: []
+  human_approval_required: true
+  review_status: "Not reviewed"

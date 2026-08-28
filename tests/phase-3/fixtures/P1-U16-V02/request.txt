@@ -1,0 +1,1 @@
+Dùng extraction packet dưới đây để phân tích quy trình và kiểm soát. Đây chỉ là packet đã cung cấp, không cần chạy specialist.

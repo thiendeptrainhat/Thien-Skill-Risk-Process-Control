@@ -1,0 +1,1 @@
+Đọc quy trình này và tra cứu nguồn chính thức công khai phù hợp để tham khảo thiết kế E2E và control objectives. Cho biết nguồn nào thực sự hỗ trợ từng đề xuất.

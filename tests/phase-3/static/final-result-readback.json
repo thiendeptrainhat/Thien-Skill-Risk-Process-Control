@@ -1,0 +1,16 @@
+{
+  "record_kind": "final_saved_result_readback",
+  "checked_at": "2026-08-27T20:30:23.996Z",
+  "saved_result_matches_fresh": true,
+  "excluded_volatile_fields": [
+    "generated_at",
+    "legacy_static_registry.generated_at"
+  ],
+  "exclusion_reason": "Both fields record the actual time a new read-only validator/legacy-registry run was executed; all other fields were compared without normalization.",
+  "saved_generated_at": "2026-08-27T20:28:50+00:00",
+  "fresh_generated_at": "2026-08-27T20:30:04+00:00",
+  "gate": "evidence_complete",
+  "integrity": "pass",
+  "error_count": 0
+}
+

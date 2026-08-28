@@ -1,0 +1,7 @@
+Use $thien-skill-risk-process-control to execute the user request independently. Read harness: /Users/thiendeptrainhat/Documents/Thien's Skills Library/Thien-Risk-Process-Control/tests/phase-3/harness.md
+Frozen skill: /Users/thiendeptrainhat/Documents/Thien's Skills Library/Thien-Risk-Process-Control/tests/phase-3/snapshots/round-2/skill/SKILL.md
+Request and source input: /Users/thiendeptrainhat/Documents/Thien's Skills Library/Thien-Risk-Process-Control/tests/phase-3/fixtures/P1-U20-V02/request.txt and input.md
+Output directory: /private/tmp/thien-rpc-phase3.xGeed0/P1-U20-V02-R1
+Run ID: P1-U20-V02-R1
+No network or external lookup is authorized in this run.
+No specialist delegation is authorized or needed for the supplied native-text task.

@@ -1,0 +1,52 @@
+{
+  "run_id": "P1-U14-V01-R1",
+  "reviewer": {
+    "name": "/root Codex task",
+    "role": "Acceptance reviewer; did not produce the run answer",
+    "relationship": "independent"
+  },
+  "timestamp": "2026-08-27T19:41:21.522Z",
+  "rubric_source_sha256": "69db89db1ccd63703526aee9c0bc6305a5499905ec75f656a754ecce5840fbcb",
+  "checks": {
+    "case.must_observe.1": {
+      "result": "pass",
+      "rationale": "Links the evidenced E-14 enabled-state exception to conditional unauthorized-access and repeat-delay scenarios, objectives/impacts, documented protections and unverified safeguards. Bounds evidence to one account/time and explicitly avoids assuming continuous enablement or actual misuse/loss.",
+      "evidence_refs": [
+        {
+          "artifact": "raw_output",
+          "locator": "L3-L28"
+        }
+      ]
+    },
+    "case.must_observe.2": {
+      "result": "pass",
+      "rationale": "Provides conditional interim proposals for authorized status confirmation, disablement or approved substitute blocking, evidence preservation and deadline tracking; distinguishes proposals from current controls and requests authorized owners/closure evidence.",
+      "evidence_refs": [
+        {
+          "artifact": "raw_output",
+          "locator": "L30-L46"
+        }
+      ]
+    },
+    "case.must_not_observe.1": {
+      "result": "pass",
+      "rationale": "Keeps probability, loss, rating method, appetite and horizon Not provided; no invented scores or certainty that an incident occurred/will occur. Urgency follows an evidenced policy-state mismatch rather than a fabricated rating.",
+      "evidence_refs": [
+        {
+          "artifact": "raw_output",
+          "locator": "L20-L28"
+        },
+        {
+          "artifact": "raw_output",
+          "locator": "L41-L46"
+        }
+      ]
+    }
+  },
+  "result": "pass",
+  "limitations": [
+    "Reviewer authored fixture/skill but not the answering run; not third-party assurance.",
+    "Single synthetic observation, not live account investigation or population-wide OE.",
+    "Exact model identifier unavailable; executor-maintained trace retains quoting/date-format recovery and reference-read truncation recovery."
+  ]
+}

@@ -1,0 +1,61 @@
+{
+  "run_id": "P1-P02-V01-R1",
+  "reviewer": {
+    "name": "/root Codex task",
+    "role": "Release-content reviewer and static-check executor",
+    "relationship": "self_check"
+  },
+  "timestamp": "2026-08-27T20:11:28.118Z",
+  "rubric_source_sha256": "69db89db1ccd63703526aee9c0bc6305a5499905ec75f656a754ecce5840fbcb",
+  "result": "pass",
+  "checks": {
+    "case.must_observe.1": {
+      "result": "pass",
+      "rationale": "Actual archive hashes equal both versioned SHA256SUMS and the inspected manifest snapshot. All three names/directory, registry version and license-application declaration are 1.1.0; README/INSTALL/platform-guidance local targets resolve, with host runtime verification still false.",
+      "evidence_refs": [
+        {
+          "artifact": "raw_output",
+          "locator": "entire_artifact"
+        },
+        {
+          "artifact": "execution_record",
+          "locator": "entire_artifact"
+        }
+      ]
+    },
+    "case.must_observe.2": {
+      "result": "pass",
+      "rationale": "Controlling license/notice/provenance and original/derived logo bytes are identical to baseline. Only license-application release version/date changed. Root read the canonical resources and provenance notices: authored methods, paraphrases and official-source pointers, no imported full standards/library texts or real business fixture data. The separate bounded secret-pattern scan found no matching filenames within its documented limits; no blanket security or rights certification is inferred.",
+      "evidence_refs": [
+        {
+          "artifact": "raw_output",
+          "locator": "entire_artifact"
+        },
+        {
+          "artifact": "execution_record",
+          "locator": "entire_artifact"
+        }
+      ]
+    },
+    "case.must_not_observe.1": {
+      "result": "pass",
+      "rationale": "Registry dependencies remains empty, Document-Evidence instructions are optional handoff only, and its installed skill is absent from the 49-file archive inventory. The actual checker and local builder do not write installed skill directories; installation and external publication were not performed.",
+      "evidence_refs": [
+        {
+          "artifact": "raw_output",
+          "locator": "entire_artifact"
+        },
+        {
+          "artifact": "execution_record",
+          "locator": "entire_artifact"
+        }
+      ]
+    }
+  },
+  "limitations": [
+    "Actual static checks plus root content review; not model behavior, installation, platform verification or third-party assurance.",
+    "ZIPs intentionally have different root/metadata/hash. Content parity is normalized per manifest, not whole-archive equality.",
+    "Bounded pattern scan and provenance review do not certify absence of every secret, malware or third-party-rights issue."
+  ]
+}
+

@@ -1,0 +1,1 @@
+Phối hợp Thien-Skill-Document-Evidence đọc tài liệu scan này, sau đó phân tích luồng quy trình và kiểm soát. Giữ nguồn và những phần cần người đọc xác nhận; chỉ xử lý cục bộ.

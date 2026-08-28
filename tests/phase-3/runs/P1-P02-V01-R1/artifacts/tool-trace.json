@@ -1,0 +1,13 @@
+{
+  "record_kind": "actual_static_command_trace",
+  "run_id": "P1-P02-V01-R1",
+  "command": "python3 -B tests/phase-3/tooling/inspect_release.py --repo-root .",
+  "started_at": "2026-08-27T20:03:19.271Z",
+  "finished_at": "2026-08-27T20:03:20.136Z",
+  "exit_code": 0,
+  "output": "artifacts/output.json",
+  "limitations": [
+    "Read-only Python/Ruby/Git/ZIP inspection, not model execution or installation.",
+    "Checker written separately from the builder; not third-party assurance."
+  ]
+}

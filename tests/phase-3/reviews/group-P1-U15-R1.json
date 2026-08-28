@@ -1,0 +1,46 @@
+{
+  "reviewer": {
+    "name": "/root Codex task",
+    "role": "Acceptance reviewer; did not produce the run answers",
+    "relationship": "independent"
+  },
+  "timestamp": "2026-08-27T19:46:36.877Z",
+  "rubric_source_sha256": "69db89db1ccd63703526aee9c0bc6305a5499905ec75f656a754ecce5840fbcb",
+  "result": "pass",
+  "group_review_id": "P1-U15-GROUP-R1",
+  "case_id": "P1-U15",
+  "run_ids": [
+    "P1-U15-V01-R1",
+    "P1-U15-V02-R1",
+    "P1-U15-V03-R1"
+  ],
+  "checks": {
+    "case.group_must_observe.1": {
+      "result": "pass",
+      "rationale": "Compared all three actual raw answers: the same request-to-return/refund/reconciled-goods-money-receivable boundary; warehouse count/condition with receipt/photos; shift-lead eligibility approval before release; accountant refunds original account after approval; mismatches held before refund; linked records by order ID; only documented evidence and missing authority matrix. All retain five equivalent controls and the same core clarification areas. Chat cites actual text lines (17/19/21/25/29); Word cites section and table rows (3/4/5 counting header); native PDF cites verified page 1 and named rows/sections. Word adds CTL labels and a conditional original-account exception question, PDF adds an analyst English label and original-account verification question; these are presentation/proposal differences, not conflicting source facts.",
+      "evidence_refs": [
+        {
+          "run_id": "P1-U15-V01-R1",
+          "artifact": "raw_output",
+          "locator": "L1-L26"
+        },
+        {
+          "run_id": "P1-U15-V02-R1",
+          "artifact": "raw_output",
+          "locator": "L1-L26"
+        },
+        {
+          "run_id": "P1-U15-V03-R1",
+          "artifact": "raw_output",
+          "locator": "L1-L24"
+        }
+      ]
+    }
+  },
+  "limitations": [
+    "Root compared the three fresh-context answers but authored the fixtures/skill; not third-party independent assurance.",
+    "One synthetic SOP with a small table and readable native text; not parity for every PDF/Word layout, scan or document complexity.",
+    "Format-specific locators and optional analytical wording are intentionally not required to be byte-identical.",
+    "Root fixture semantic/render preflight and this model-output comparison are separate checks."
+  ]
+}
