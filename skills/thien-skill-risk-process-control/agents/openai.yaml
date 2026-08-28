@@ -1,6 +1,0 @@
-interface:
-  display_name: "Thien-Skill-Risk-Process-Control"
-  short_description: "E2E mở: rủi ro, kiểm soát, gap và cải tiến"
-  icon_small: "./assets/icon-128.png"
-  icon_large: "./assets/logo-1100.png"
-  default_prompt: "Use $thien-skill-risk-process-control to map this process end-to-end, compare sourced expected controls with evidenced current controls, and explain gaps, improvements, and no-change risks."

@@ -23,8 +23,8 @@ from pathlib import Path, PurePosixPath
 from typing import Any
 
 
-SKILL_ID = "thien-skill-risk-process-control"
-DISPLAY_NAME = "Thien-Skill-Risk-Process-Control"
+SKILL_ID = "thien-skill-risk-control-process"
+DISPLAY_NAME = "Thien-Skill-Risk-Control-Process"
 FIXED_ZIP_TIME = (2026, 8, 13, 0, 0, 0)
 PACKAGE_LABELS = {
     "claude": "Claude",

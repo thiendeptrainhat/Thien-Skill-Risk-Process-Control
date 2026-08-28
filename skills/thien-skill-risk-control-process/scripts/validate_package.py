@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Read-only structural validator for Thien-Skill-Risk-Process-Control.
+"""Read-only structural validator for Thien-Skill-Risk-Control-Process.
 
 The validator intentionally uses only the Python standard library.  It does not
 attempt to be a complete YAML parser; JSON-compatible YAML is parsed as JSON and
@@ -19,7 +19,7 @@ from typing import Any, Iterable
 from urllib.parse import unquote
 
 
-SKILL_ID = "thien-skill-risk-process-control"
+SKILL_ID = "thien-skill-risk-control-process"
 BASE_REQUIRED_DIRECTORIES = (
     "assets",
     "examples",

@@ -1,8 +1,8 @@
 <p align="center">
-  <img src="skills/thien-skill-risk-process-control/assets/logo-1100.png" alt="Logo TDTN" width="220">
+  <img src="skills/thien-skill-risk-control-process/assets/logo-1100.png" alt="Logo TDTN" width="220">
 </p>
 
-# Thien-Skill-Risk-Process-Control
+# Thien-Skill-Risk-Control-Process
 
 Skill phân tích và tư vấn một hoặc nhiều quy trình từ chat, PDF, Word, SOP và bằng chứng liên quan: xác định E2E phù hợp, risks, expected/current controls, gaps, cải tiến và rủi ro nếu giữ nguyên.
 
@@ -14,7 +14,7 @@ Skill là trợ lý phân tích quy trình, rủi ro và thiết kế kiểm so�
 
 Giá trị chính là nối **mục tiêu kinh doanh → quy trình E2E → risks → expected/current controls → gaps → cải tiến và rủi ro nếu giữ nguyên**, kèm nguồn và giới hạn bằng chứng. Skill hỗ trợ người sở hữu quy trình, quản lý rủi ro, kiểm soát nội bộ và kiểm toán ra quyết định; không tự phê duyệt SOP, thay người có thẩm quyền hoặc phát hành ý kiến bảo đảm.
 
-Với tài liệu khó đọc, Risk-Process-Control phụ trách diễn giải nghiệp vụ; Document-Evidence có thể hỗ trợ trích xuất và truy nguyên khi khả dụng, được phép và thực sự cần. Không phải cài một bộ OCR mới để dùng skill cho mọi câu hỏi.
+Với tài liệu khó đọc, Risk-Control-Process phụ trách diễn giải nghiệp vụ; Document-Evidence có thể hỗ trợ trích xuất và truy nguyên khi khả dụng, được phép và thực sự cần. Không phải cài một bộ OCR mới để dùng skill cho mọi câu hỏi.
 
 ## Skill giúp trả lời bảy câu hỏi gì?
 
@@ -38,7 +38,7 @@ Với tài liệu khó đọc, Risk-Process-Control phụ trách diễn giải n
 
 Khi cần tham khảo ngoài seeds, skill hướng dẫn tra cứu nguồn phù hợp bằng capability thực sự được phép: taxonomy, process reference model, vendor blueprint, control framework hoặc notation. APQC taxonomy không tự là thứ tự workflow; vendor blueprint không tự là yêu cầu kiểm soát bắt buộc.
 
-Catalog đi kèm là các đầu mối/metadata có ngày quan sát, không phải kho full-text đã nạp hay connector đã kết nối. Không có web hoặc thiếu quyền đọc nguồn thì vẫn có thể đưa design proposal có nhãn; không gọi proposal đó là standard-derived hay compliant. Xem [external library guide](skills/thien-skill-risk-process-control/references/external-process-control-libraries.md).
+Catalog đi kèm là các đầu mối/metadata có ngày quan sát, không phải kho full-text đã nạp hay connector đã kết nối. Không có web hoặc thiếu quyền đọc nguồn thì vẫn có thể đưa design proposal có nhãn; không gọi proposal đó là standard-derived hay compliant. Xem [external library guide](skills/thien-skill-risk-control-process/references/external-process-control-libraries.md).
 
 ### 2. Phân biệt tài liệu, thiết kế và thực tế vận hành
 
@@ -75,7 +75,7 @@ Contract `1.1.0` bổ sung fields/objects khi đọc output `1.0.0`, giữ IDs, 
 
 Chat và PDF/Word đọc được có thể phân tích bằng capability của host. Scan, bảng/sơ đồ khó hoặc provenance chưa đủ có thể cần **Thien-Skill-Document-Evidence**, nhưng đây là handoff tùy chọn, không phải dependency bắt buộc cho mọi task.
 
-Risk-Process-Control sở hữu diễn giải process/risk/control; Document-Evidence sở hữu extraction/integrity/provenance. Handoff giữ locators, coverage, warnings, review status và điều kiện quyền sử dụng liên quan. Extraction verified không chứng minh control đã vận hành hiệu quả. Skill không bổ sung OCR engine, tự cài specialist hay giả rằng specialist đã chạy.
+Risk-Control-Process sở hữu diễn giải process/risk/control; Document-Evidence sở hữu extraction/integrity/provenance. Handoff giữ locators, coverage, warnings, review status và điều kiện quyền sử dụng liên quan. Extraction verified không chứng minh control đã vận hành hiệu quả. Skill không bổ sung OCR engine, tự cài specialist hay giả rằng specialist đã chạy.
 
 ### 7. Các năng lực hỗ trợ khác
 
@@ -98,7 +98,7 @@ References được nạp theo nhu cầu. Khung 14 bước dành cho engagement 
 
 ### 1. Gọi skill và giao đúng phạm vi
 
-Sau khi host đã nhận diện skill, chọn hoặc gọi **Thien-Skill-Risk-Process-Control** bằng cơ chế của nền tảng. Nếu chưa cài, xem [phần cài đặt bên dưới](#cài-đặt). Không dùng lời tự nhận “đã kích hoạt” của model làm bằng chứng duy nhất về phiên bản được nạp.
+Sau khi host đã nhận diện skill, chọn hoặc gọi **Thien-Skill-Risk-Control-Process** bằng cơ chế của nền tảng. Nếu chưa cài, xem [phần cài đặt bên dưới](#cài-đặt). Không dùng lời tự nhận “đã kích hoạt” của model làm bằng chứng duy nhất về phiên bản được nạp.
 
 Cho biết bạn muốn đọc/đánh giá quy trình hiện có, thiết kế quy trình mới, phân tích một nhóm E2E hay chỉ xử lý một vấn đề hẹp. Không cần yêu cầu toàn bộ bộ hồ sơ khi chỉ muốn xem một gap.
 
@@ -153,25 +153,25 @@ Không đủ nguồn chỉ chặn kết luận phụ thuộc nguồn đó; phầ
 
 | Thuộc tính | Giá trị |
 |---|---|
-| Tên hiển thị | `Thien-Skill-Risk-Process-Control` |
-| Skill ID | `thien-skill-risk-process-control` |
-| Phiên bản | `1.1.0` |
-| Trạng thái | Đã tạo ba ZIP; 29/29 biến thể model đạt trong phạm vi runtime được kiểm thử; xem gate và giới hạn trong báo cáo |
-| Repository | Private |
+| Tên hiển thị | `Thien-Skill-Risk-Control-Process` |
+| Skill ID | `thien-skill-risk-control-process` |
+| Phiên bản | `1.1.1` — chỉ đổi tên từ `1.1.0` |
+| Trạng thái | Bản đổi tên; kiểm tra định danh, nội dung không đổi và packaging riêng, không công bố model runs mới |
+| Repository | [Public — Thien-Skill-Risk-Control-Process](https://github.com/thiendeptrainhat/Thien-Skill-Risk-Control-Process) |
 | Ngôn ngữ trả lời | Theo ngôn ngữ người dùng |
 | License | Tran Ngoc Thien's Skills Commercial Source-Available License 2.0 |
 
-Ba ZIP `1.1.0` bên dưới đã được tạo và đối chiếu với cùng canonical snapshot. Version và checksum nằm trong [release manifest](RELEASE-MANIFEST.yaml); kết quả và giới hạn tại [báo cáo Phase 3](docs/phase-3/REPORT.md). Xem [handoff hiện hành](docs/HANDOFF.md) để phân biệt kết quả Phase 3 với bước commit/push và các phần triển khai còn ngoài phạm vi. Không dùng kết quả kiểm thử `1.0.0` để suy ra `1.1.0` đã đạt.
+Ba ZIP `1.1.1` bên dưới mang tên mới, giữ nội dung nghiệp vụ của `1.1.0`. Version và checksum tại [release manifest](RELEASE-MANIFEST.yaml); phạm vi đổi tên và kết quả kiểm tra tại [handoff hiện hành](docs/HANDOFF.md). Điều khoản license và logo giữ nguyên. Người dùng đã chuyển repository sang public và yêu cầu đổi URL theo tên skill mới. ZIP và bằng chứng `1.1.0` vẫn được giữ làm lịch sử.
 
 ## Kiểm thử và mức độ tin cậy
 
-Trên snapshot `1.1.0`, **29/29 biến thể model** đã chạy trong các context mới và được review theo từng invariant tại `Codex desktop delegated local runtime`. Bao gồm ba dạng chat/Word/PDF của một SOP tổng hợp, một ca tra cứu NIST thực tế và một handoff Document-Evidence thực tế. Có **61/61 kiểm tra công cụ** riêng và ba ZIP đã kiểm tra checksum, cấu trúc, parity; không cộng các loại kiểm tra này thành behavioral passes.
+Trên snapshot **tên cũ** `1.1.0`, **29/29 biến thể model** đã chạy trong các context mới và được review theo từng invariant tại `Codex desktop delegated local runtime`. Bao gồm ba dạng chat/Word/PDF của một SOP tổng hợp, một ca tra cứu NIST thực tế và một handoff Document-Evidence thực tế. Có **61/61 kiểm tra công cụ** riêng và ba ZIP đã kiểm tra checksum, cấu trúc, parity; không cộng các loại kiểm tra này thành behavioral passes.
 
-Đọc [báo cáo Phase 3](docs/phase-3/REPORT.md) và trường `current_release_gate` trong [kết quả máy](tests/phase-3/acceptance-results.json). Claude Desktop/Web, ChatGPT Desktop/Web và cài đặt/discovery thực tế vẫn **not_run**. Kết quả trên dữ liệu tổng hợp không bảo đảm mọi quy trình, tài liệu hoặc mô hình đều đạt.
+[Báo cáo Phase 3](docs/phase-3/REPORT.md) và `current_release_gate` trong [kết quả máy](tests/phase-3/acceptance-results.json) là hồ sơ **1.1.0**, không phải gate cho tên/ZIP `1.1.1`. Bản đổi tên chỉ được kiểm tra tĩnh và đối chiếu nội dung; không chạy lại 29 model variants, không chứng nhận discovery của ID mới. Claude Desktop/Web, ChatGPT Desktop/Web và cài đặt/discovery thực tế vẫn **not_run**. Kết quả trên dữ liệu tổng hợp không bảo đảm mọi quy trình, tài liệu hoặc mô hình đều đạt.
 
 Tách riêng structural checks, deterministic invariants, model behavioral runs và live-platform acceptance. ZIP hợp lệ, schema đọc được hoặc docs có hướng dẫn cài không chứng minh behavior đã đạt trên Claude/ChatGPT/Codex.
 
-Theo dõi bằng chứng mới tại [Phase 3 test records](tests/phase-3/README.md), [release manifest](RELEASE-MANIFEST.yaml) và [platform evidence](docs/phase-3/PLATFORM-GUIDANCE.md). [Acceptance report 1.0.0](tests/acceptance-report.md) và [behavioral report 1.0.0](tests/behavioral-report.md) chỉ là lịch sử: 104 registry cases và 28 provisional cases không được cộng thành behavioral passes của 1.1.0. Luôn đối chiếu version, ngày, scope và giới hạn của từng kết quả.
+Đọc hồ sơ lịch sử tại [cây Git trước đổi tên](https://github.com/thiendeptrainhat/Thien-Skill-Risk-Control-Process/tree/db9b0f42c1a2ce0938abc888a03699d401b9fd41) để các đường dẫn tương đối đúng phiên bản, gồm [Phase 3 test records](tests/phase-3/README.md) và [platform evidence](docs/phase-3/PLATFORM-GUIDANCE.md). [Acceptance report 1.0.0](tests/acceptance-report.md) và [behavioral report 1.0.0](tests/behavioral-report.md) chỉ là lịch sử: 104 registry cases và 28 provisional cases không được cộng thành behavioral passes của 1.1.0 hay 1.1.1. Luôn đối chiếu version, ngày, scope và giới hạn của từng kết quả.
 
 ## Cài đặt
 
@@ -182,15 +182,15 @@ Theo dõi bằng chứng mới tại [Phase 3 test records](tests/phase-3/README
 
 | Gói | Bên trong ZIP | Dùng như thế nào |
 |---|---|---|
-| [Claude ZIP](dist/1.1.0/Thien-Skill-Risk-Process-Control-v1.1.0-Claude.zip) | `thien-skill-risk-process-control/` | Upload custom skill trong Claude; hoặc giải nén cho Claude Code |
-| [ChatGPT ZIP](dist/1.1.0/Thien-Skill-Risk-Process-Control-v1.1.0-ChatGPT.zip) | Thư mục skill, có `agents/openai.yaml` | Gói thư mục không có wrapper `.agents`; dùng cho local discovery phù hợp, không mặc định là ZIP importer của ChatGPT |
-| [Universal ZIP](dist/1.1.0/Thien-Skill-Risk-Process-Control-v1.1.0-Universal.zip) | `.agents/skills/thien-skill-risk-process-control/` | Gói giải nén `.agents` đã chọn cho môi trường local; xem điều kiện riêng của ChatGPT Desktop |
+| [Claude ZIP](dist/1.1.1/Thien-Skill-Risk-Control-Process-v1.1.1-Claude.zip) | `thien-skill-risk-control-process/` | Upload custom skill trong Claude; hoặc giải nén cho Claude Code |
+| [ChatGPT ZIP](dist/1.1.1/Thien-Skill-Risk-Control-Process-v1.1.1-ChatGPT.zip) | Thư mục skill, có `agents/openai.yaml` | Gói thư mục không có wrapper `.agents`; dùng cho local discovery phù hợp, không mặc định là ZIP importer của ChatGPT |
+| [Universal ZIP](dist/1.1.1/Thien-Skill-Risk-Control-Process-v1.1.1-Universal.zip) | `.agents/skills/thien-skill-risk-control-process/` | Gói giải nén `.agents` đã chọn cho môi trường local; xem điều kiện riêng của ChatGPT Desktop |
 
 Không cần cài cả ba gói vào cùng một môi trường. Chúng không phải ba skill khác nhau, plugin, OCR engine hay bộ connector.
 
 ### Tải và kiểm tra
 
-1. Dùng tài khoản được cấp quyền vào repository private, mở [`dist/1.1.0/`](dist/1.1.0/) và tải đúng ZIP cùng checksum của phiên bản đó. ZIP từ **Code > Download ZIP** là toàn repository, không phải gói upload Claude.
+1. Trong repository public, mở [`dist/1.1.1/`](dist/1.1.1/) và tải đúng ZIP cùng checksum của phiên bản đó. ZIP từ **Code > Download ZIP** là toàn repository, không phải gói upload Claude.
 2. Đọc [license và quyền sử dụng](#license-và-quyền-sử-dụng), xem nội dung ZIP trước khi cài.
 3. Nếu có đủ ba gói trong cùng thư mục với `SHA256SUMS`, chạy kiểm tra sau trên macOS:
 
@@ -220,7 +220,7 @@ Kiểm tra skill xuất hiện trong danh sách của host và có bằng chứn
 Prompt thử, dùng dữ liệu không nhạy cảm:
 
 ```text
-Hãy dùng Thien-Skill-Risk-Process-Control để phân tích quy trình dưới đây.
+Hãy dùng Thien-Skill-Risk-Control-Process để phân tích quy trình dưới đây.
 Xác định objective, trigger, outcome, E2E candidate và điểm chưa đủ cơ sở.
 Tách control được mô tả khỏi control có evidence vận hành.
 Chỉ hỏi thông tin còn thiếu làm thay đổi trọng yếu kết luận; không tự đặt score.
@@ -230,11 +230,15 @@ Xem [INSTALL.md](INSTALL.md) để tránh giải nén lồng thư mục, xử l�
 
 ## Cập nhật phiên bản đã cài
 
+Bản `1.1.1` đổi ID từ `thien-skill-risk-process-control` sang `thien-skill-risk-control-process`. Sau khi sao lưu tùy chỉnh, dùng cơ chế của host để thay/tắt bản cũ rồi cài đúng một bản mới; không giữ cả hai ID cùng kích hoạt. Chưa có thao tác cài đặt hoặc tự đổi bản đã cài trong lần đổi tên này.
+
 Tải đúng ZIP/version mới, kiểm tra checksum, giữ bản sao tùy chỉnh cũ ngoài thư mục discovery rồi cập nhật đúng một vị trí cài. Không trộn file cũ/mới hoặc cài đồng thời nhiều bản cùng skill ID. Xem [quy trình cập nhật](INSTALL.md#8-cập-nhật-và-gỡ-lỗi).
 
 GitHub không tự cập nhật các bản đã upload hoặc giải nén; phải dùng cơ chế cập nhật của host và kiểm tra lại bản thực sự được nạp.
 
 ## License và quyền sử dụng
+
+Repository hiện public; trạng thái hiển thị này không thay điều khoản license. URL cũ và nhãn PRIVATE trong `LICENSE-APPLICATION.md`/ZIP là metadata tại thời điểm tạo gói trước thay đổi repository; giữ nguyên các bản đó để bảo toàn checksum. URL và trạng thái hiện hành nằm trong [release manifest](RELEASE-MANIFEST.yaml).
 
 Đọc đầy đủ:
 
@@ -248,11 +252,11 @@ Việc có quyền truy cập repository, tải ZIP hoặc cài đặt thành c�
 ## Tài liệu trong repository
 
 - [Handoff dự án và trạng thái bàn giao](docs/HANDOFF.md)
-- [Báo cáo nghiệm thu Phase 3](docs/phase-3/REPORT.md)
+- [Báo cáo nghiệm thu Phase 3 — lịch sử 1.1.0](docs/phase-3/REPORT.md)
 - [Hướng dẫn cài đặt](INSTALL.md)
 - [Bằng chứng hướng dẫn nền tảng — 28/08/2026](docs/phase-3/PLATFORM-GUIDANCE.md)
-- [Canonical SKILL.md](skills/thien-skill-risk-process-control/SKILL.md)
-- [External process/control libraries](skills/thien-skill-risk-process-control/references/external-process-control-libraries.md)
-- [Common data model và QA](skills/thien-skill-risk-process-control/references/data-model-qa-execution.md)
-- [Requirement coverage matrix](skills/thien-skill-risk-process-control/references/requirement-coverage-matrix.md)
-- [Source provenance](skills/thien-skill-risk-process-control/references/source-skill-inventory.md)
+- [Canonical SKILL.md](skills/thien-skill-risk-control-process/SKILL.md)
+- [External process/control libraries](skills/thien-skill-risk-control-process/references/external-process-control-libraries.md)
+- [Common data model và QA](skills/thien-skill-risk-control-process/references/data-model-qa-execution.md)
+- [Requirement coverage matrix](skills/thien-skill-risk-control-process/references/requirement-coverage-matrix.md)
+- [Source provenance](skills/thien-skill-risk-control-process/references/source-skill-inventory.md)

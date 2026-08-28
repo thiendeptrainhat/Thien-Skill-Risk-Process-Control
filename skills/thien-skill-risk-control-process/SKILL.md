@@ -1,10 +1,10 @@
 ---
-name: thien-skill-risk-process-control
+name: thien-skill-risk-control-process
 description: "Phân tích, tư vấn quy trình từ chat/PDF/Word/SOP: E2E mở, risk, expected/current controls, gaps và cải tiến. Dùng cho process design, RCM, SoD, SPOF; không làm OCR thuần túy."
 license: LicenseRef-Tran-Ngoc-Thien-Skills-2.0; see LICENSE
 ---
 
-# Thien-Skill-Risk-Process-Control
+# Thien-Skill-Risk-Control-Process
 
 ## Mục đích
 

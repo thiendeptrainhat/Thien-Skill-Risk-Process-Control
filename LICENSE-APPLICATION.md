@@ -3,9 +3,9 @@
 ## Bản tiếng Việt (ưu tiên áp dụng)
 
 - **Licence chung:** `Tran Ngoc Thien's Skills Commercial Source-Available License 2.0`.
-- **Skill:** `Thien-Skill-Risk-Process-Control`.
-- **Mã định danh:** `thien-skill-risk-process-control`.
-- **Phiên bản skill được áp dụng:** `1.1.0`.
+- **Skill:** `Thien-Skill-Risk-Control-Process`.
+- **Mã định danh:** `thien-skill-risk-control-process`.
+- **Phiên bản skill được áp dụng:** `1.1.1`.
 - **Ngày áp dụng:** `28 August 2026`.
 - **Tình trạng repository tại ngày áp dụng:** PRIVATE — `https://github.com/thiendeptrainhat/Thien-Skill-Risk-Process-Control`. Không được chuyển repository thành public, sao chép công khai hoặc phân phối lại nếu chưa có Văn bản chấp thuận hoặc Thỏa thuận thương mại hợp lệ của Tran Ngoc Thien.
 - **Nền tảng dự kiến:** các bề mặt tương thích của Anthropic Claude, OpenAI ChatGPT, OpenAI Codex và nền tảng triển khai Agent Skills khác. Việc nêu nền tảng hoặc cung cấp package ZIP không tự cấp quyền tải lên, cài đặt hoặc sử dụng trên nền tảng đó.
@@ -20,9 +20,9 @@ Tuyên bố này chỉ xác định Tài liệu được cấp phép; nó không
 ## English version (Vietnamese version prevails)
 
 - **Master license:** `Tran Ngoc Thien's Skills Commercial Source-Available License 2.0`.
-- **Skill:** `Thien-Skill-Risk-Process-Control`.
-- **Identifier:** `thien-skill-risk-process-control`.
-- **Covered skill versions:** `1.1.0`.
+- **Skill:** `Thien-Skill-Risk-Control-Process`.
+- **Identifier:** `thien-skill-risk-control-process`.
+- **Covered skill versions:** `1.1.1`.
 - **Application date:** `28 August 2026`.
 - **Repository status on the application date:** PRIVATE — `https://github.com/thiendeptrainhat/Thien-Skill-Risk-Process-Control`. The repository may not be made public, publicly copied, or redistributed without a valid Written Permission or Commercial Agreement from Tran Ngoc Thien.
 - **Intended platforms:** compatible surfaces of Anthropic Claude, OpenAI ChatGPT, OpenAI Codex, and other Agent Skills implementations. Naming a platform or providing a ZIP package does not itself grant upload, installation, or usage rights on that platform.

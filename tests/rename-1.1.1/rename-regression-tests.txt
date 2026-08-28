@@ -1,0 +1,11 @@
+test_business_instruction_change_is_rejected (test_verify_rename.RenameVerifierTests.test_business_instruction_change_is_rejected) ... ok
+test_identity_only_change_passes_without_changing_url_or_schema (test_verify_rename.RenameVerifierTests.test_identity_only_change_passes_without_changing_url_or_schema) ... ok
+test_license_change_is_rejected (test_verify_rename.RenameVerifierTests.test_license_change_is_rejected) ... ok
+test_old_zip_change_is_rejected (test_verify_rename.RenameVerifierTests.test_old_zip_change_is_rejected) ... ok
+test_repository_url_change_is_rejected (test_verify_rename.RenameVerifierTests.test_repository_url_change_is_rejected) ... ok
+test_schema_change_is_rejected (test_verify_rename.RenameVerifierTests.test_schema_change_is_rejected) ... ok
+
+----------------------------------------------------------------------
+Ran 6 tests in 0.047s
+
+OK

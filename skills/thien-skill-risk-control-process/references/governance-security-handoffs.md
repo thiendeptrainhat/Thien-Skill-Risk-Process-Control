@@ -176,7 +176,7 @@ Gửi tối thiểu:
 handoff_id: <stable ID>
 engagement_id: <ID>
 task_id: <ID>
-from_capability: thien-skill-risk-process-control
+from_capability: thien-skill-risk-control-process
 to_capability: <verified specialist or human role>
 objective: <single bounded objective>
 scope:
@@ -212,7 +212,7 @@ Từ chối hoặc trả correction task khi output mất ID, không có provena
 
 ### 6.1 Document-Evidence handoff tùy chọn
 
-Risk-Process-Control sở hữu diễn giải process, risk và controls; Document-Evidence sở hữu integrity/extraction/provenance. Handoff có thể là phần việc trong cùng session hoặc chuyển capability được host hỗ trợ; không giả có cơ chế skill-gọi-skill tự động hoặc liên nền tảng.
+Risk-Control-Process sở hữu diễn giải process, risk và controls; Document-Evidence sở hữu integrity/extraction/provenance. Handoff có thể là phần việc trong cùng session hoặc chuyển capability được host hỗ trợ; không giả có cơ chế skill-gọi-skill tự động hoặc liên nền tảng.
 
 Gửi một yêu cầu bounded, chỉ các field cần thiết cho extraction:
 

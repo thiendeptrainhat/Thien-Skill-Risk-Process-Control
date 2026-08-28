@@ -1,16 +1,16 @@
-# Cài đặt Thien-Skill-Risk-Process-Control 1.1.0
+# Cài đặt Thien-Skill-Risk-Control-Process 1.1.1
 
-Hướng dẫn cho ba ZIP `1.1.0` đã tạo tại `dist/1.1.0/`. Đối chiếu ZIP và checksum/version trong [RELEASE-MANIFEST.yaml](RELEASE-MANIFEST.yaml) trước khi dùng. Phase 3 chưa cài các gói vào tài khoản hoặc môi trường của người dùng; xem [báo cáo và giới hạn nghiệm thu](docs/phase-3/REPORT.md).
+Hướng dẫn cho ba ZIP `1.1.1` đã tạo tại `dist/1.1.1/`. Đối chiếu ZIP và checksum/version trong [RELEASE-MANIFEST.yaml](RELEASE-MANIFEST.yaml) trước khi dùng. Đây là bản chỉ đổi tên từ `1.1.0`; chưa cài ID mới vào tài khoản hoặc môi trường của người dùng. [Báo cáo Phase 3](docs/phase-3/REPORT.md) chỉ phản ánh tên cũ `1.1.0`; xem [handoff đổi tên](docs/HANDOFF.md) cho bản hiện tại.
 
 ## 1. Chuẩn bị và hiểu cấu trúc ZIP
 
-Repository là private; tải bằng tài khoản được cấp quyền. Chọn **file ZIP trong `dist/1.1.0/`**, không upload nguyên ZIP repository từ GitHub. Các file `1.0.0` trong `dist/` được giữ riêng làm lịch sử.
+Repository hiện [public](https://github.com/thiendeptrainhat/Thien-Skill-Risk-Control-Process); việc công khai không thay điều khoản license. Chọn **file ZIP trong `dist/1.1.1/`**, không upload nguyên ZIP repository từ GitHub. Các file `1.0.0` trong `dist/` được giữ riêng làm lịch sử.
 
 | File | Đường dẫn đến entrypoint bên trong archive |
 |---|---|
-| `Thien-Skill-Risk-Process-Control-v1.1.0-Claude.zip` | `thien-skill-risk-process-control/SKILL.md` |
-| `Thien-Skill-Risk-Process-Control-v1.1.0-ChatGPT.zip` | `thien-skill-risk-process-control/SKILL.md` |
-| `Thien-Skill-Risk-Process-Control-v1.1.0-Universal.zip` | `.agents/skills/thien-skill-risk-process-control/SKILL.md` |
+| `Thien-Skill-Risk-Control-Process-v1.1.1-Claude.zip` | `thien-skill-risk-control-process/SKILL.md` |
+| `Thien-Skill-Risk-Control-Process-v1.1.1-ChatGPT.zip` | `thien-skill-risk-control-process/SKILL.md` |
+| `Thien-Skill-Risk-Control-Process-v1.1.1-Universal.zip` | `.agents/skills/thien-skill-risk-control-process/SKILL.md` |
 
 Claude không có `agents/` metadata OpenAI; ChatGPT và Universal có. Nội dung process/risk/control, license và assets cùng lấy từ một canonical skill.
 
@@ -20,13 +20,13 @@ Trước khi cài:
 2. So SHA-256 với checksum đúng phiên bản. Ví dụ trên macOS:
 
 ```bash
-shasum -a 256 "/path/to/Thien-Skill-Risk-Process-Control-v1.1.0-Claude.zip"
+shasum -a 256 "/path/to/Thien-Skill-Risk-Control-Process-v1.1.1-Claude.zip"
 ```
 
 3. Xem danh sách file nếu cài local:
 
 ```bash
-unzip -l "/path/to/Thien-Skill-Risk-Process-Control-v1.1.0-Universal.zip"
+unzip -l "/path/to/Thien-Skill-Risk-Control-Process-v1.1.1-Universal.zip"
 ```
 
 4. Chọn một scope cài. Nếu đã có thư mục cùng skill ID, dừng bước giải nén và làm theo [mục cập nhật](#8-cập-nhật-và-gỡ-lỗi); không ghi đè hoặc trộn bản cũ.
@@ -57,13 +57,13 @@ OpenAI mô tả local discovery ở `.agents/skills` trong repository và `~/.ag
 Giải nén **tại project root**, không phải bên trong `.agents/skills`:
 
 ```bash
-unzip "/path/to/Thien-Skill-Risk-Process-Control-v1.1.0-Universal.zip" -d "/path/to/project"
+unzip "/path/to/Thien-Skill-Risk-Control-Process-v1.1.1-Universal.zip" -d "/path/to/project"
 ```
 
 Entry point phải là:
 
 ```text
-/path/to/project/.agents/skills/thien-skill-risk-process-control/SKILL.md
+/path/to/project/.agents/skills/thien-skill-risk-control-process/SKILL.md
 ```
 
 ### User scope — ChatGPT ZIP
@@ -72,16 +72,16 @@ Gói ChatGPT không có wrapper `.agents`, nên dùng đích là thư mục skil
 
 ```bash
 mkdir -p ~/.agents/skills
-unzip "/path/to/Thien-Skill-Risk-Process-Control-v1.1.0-ChatGPT.zip" -d ~/.agents/skills
+unzip "/path/to/Thien-Skill-Risk-Control-Process-v1.1.1-ChatGPT.zip" -d ~/.agents/skills
 ```
 
 Entry point phải là:
 
 ```text
-~/.agents/skills/thien-skill-risk-process-control/SKILL.md
+~/.agents/skills/thien-skill-risk-control-process/SKILL.md
 ```
 
-Mở phiên Codex local sử dụng scope đó; kiểm tra bằng `/skills` hoặc `$thien-skill-risk-process-control`. Nếu thay đổi chưa xuất hiện, khởi động lại Codex. [Build skills](https://learn.chatgpt.com/docs/build-skills).
+Mở phiên Codex local sử dụng scope đó; kiểm tra bằng `/skills` hoặc `$thien-skill-risk-control-process`. Nếu thay đổi chưa xuất hiện, khởi động lại Codex. [Build skills](https://learn.chatgpt.com/docs/build-skills).
 
 Không tự chuyển hướng dẫn local này thành hướng dẫn cho Codex cloud, remote host hoặc ChatGPT Web; mỗi môi trường cần tài nguyên và quyền riêng.
 
@@ -93,7 +93,7 @@ Phương án đã thống nhất cho repository này vẫn là **Universal ZIP �
 
 1. Xác định đang dùng Codex local trong ứng dụng hay một bề mặt ChatGPT khác. Tài liệu ứng dụng phân biệt các lựa chọn này. [ChatGPT desktop app](https://learn.chatgpt.com/docs/app).
 2. Với Codex local, làm theo [mục 3](#3-codex-local). Với host khác có cơ chế đọc local skills đã được xác nhận, đặt nguyên skill vào thư mục discovery của host đó; không mặc định đường dẫn chỉ từ tên ứng dụng.
-3. Với Universal, giải nén vào **thư mục cha của `.agents`**. Nếu đã có `.agents`, không tạo thêm `.agents` lồng bên trong. Cho user scope, kết quả cuối là `~/.agents/skills/thien-skill-risk-process-control/SKILL.md`.
+3. Với Universal, giải nén vào **thư mục cha của `.agents`**. Nếu đã có `.agents`, không tạo thêm `.agents` lồng bên trong. Cho user scope, kết quả cuối là `~/.agents/skills/thien-skill-risk-control-process/SKILL.md`.
 4. Mở Skills và xác nhận skill thực sự được nhận. Chọn bằng `@` khi bề mặt hỗ trợ; [cách gọi của ChatGPT](https://learn.chatgpt.com/docs/skills-and-plugins).
 
 Nếu chỉ thấy file trên đĩa nhưng không có skill trong host, trạng thái mới là **đã giải nén**, chưa phải **đã cài/kích hoạt**. Không đổi đuôi ZIP, đoán nút import hoặc upload vào chat để thay cho native installation. Gói ChatGPT có thể cung cấp cùng thư mục skill khi host yêu cầu folder; định dạng import cụ thể phải theo hướng dẫn của chính host.
@@ -117,17 +117,17 @@ Claude Code dùng `.claude/skills`, khác `.agents/skills` của Codex. Chọn p
 
 ```bash
 mkdir -p "/path/to/project/.claude/skills"
-unzip "/path/to/Thien-Skill-Risk-Process-Control-v1.1.0-Claude.zip" -d "/path/to/project/.claude/skills"
+unzip "/path/to/Thien-Skill-Risk-Control-Process-v1.1.1-Claude.zip" -d "/path/to/project/.claude/skills"
 ```
 
 Hoặc user scope:
 
 ```bash
 mkdir -p ~/.claude/skills
-unzip "/path/to/Thien-Skill-Risk-Process-Control-v1.1.0-Claude.zip" -d ~/.claude/skills
+unzip "/path/to/Thien-Skill-Risk-Control-Process-v1.1.1-Claude.zip" -d ~/.claude/skills
 ```
 
-Kết quả là `<scope>/.claude/skills/thien-skill-risk-process-control/SKILL.md`. Gọi `/thien-skill-risk-process-control`. Nếu thư mục skills chưa tồn tại khi phiên bắt đầu, khởi động lại để host nhận vị trí mới. [Claude Code — skills](https://code.claude.com/docs/en/skills).
+Kết quả là `<scope>/.claude/skills/thien-skill-risk-control-process/SKILL.md`. Gọi `/thien-skill-risk-control-process`. Nếu thư mục skills chưa tồn tại khi phiên bắt đầu, khởi động lại để host nhận vị trí mới. [Claude Code — skills](https://code.claude.com/docs/en/skills).
 
 Cài thư mục Claude Code trên máy không phải thao tác upload custom skill của Claude Web/Desktop.
 
@@ -143,7 +143,7 @@ Cài thư mục Claude Code trên máy không phải thao tác upload custom ski
 Prompt thử:
 
 ```text
-Dùng Thien-Skill-Risk-Process-Control. Đây là mô tả giả lập: nhân viên gửi
+Dùng Thien-Skill-Risk-Control-Process. Đây là mô tả giả lập: nhân viên gửi
 yêu cầu mua hàng, quản lý duyệt trên email, kế toán thanh toán theo hóa đơn.
 Chỉ có mô tả này, chưa có log/evidence vận hành hoặc baseline được xác minh.
 Phân tích E2E candidates, risk/control questions và phần cần xác nhận.
@@ -153,6 +153,8 @@ Không coi thiếu thông tin là control không tồn tại; không tự tạo 
 Kết quả cần giữ được giới hạn đầu vào, tách documented/performed, không bịa baseline và không tự mở rộng quyền. Một prompt smoke test chưa phải nghiệm thu đầy đủ.
 
 ## 8. Cập nhật và gỡ lỗi
+
+Khi cập nhật từ `1.1.0`, ID cũ là `thien-skill-risk-process-control`, ID mới là `thien-skill-risk-control-process`. Sao lưu tùy chỉnh, dùng cơ chế quản lý skill của host để thay hoặc tắt bản cũ; không giữ hai ID cùng kích hoạt và không tự xóa bản cũ chưa đối chiếu.
 
 Khi cập nhật:
 

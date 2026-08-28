@@ -3,7 +3,7 @@
 ## Mục đích và phạm vi
 
 Tài liệu này ghi nhận các skill nguồn đã được xem xét để thiết kế
-`thien-skill-risk-process-control`. Đây là inventory có chọn lọc theo mức độ liên quan,
+`thien-skill-risk-control-process`. Đây là inventory có chọn lọc theo mức độ liên quan,
 không phải danh mục toàn bộ thư viện tham khảo.
 
 - Ngày xem xét: `2026-08-13`.
@@ -66,5 +66,5 @@ minh theo năng lực và test ID thay vì theo số lượng file gốc.
 
 Inventory này không tuyên bố quyền sở hữu hoặc quyền cấp phép lại đối với các skill nguồn. Tên
 nguồn chỉ dùng để ghi nhận provenance ở mức thiết kế. License của
-`thien-skill-risk-process-control` chỉ điều chỉnh nội dung nguyên gốc của package này; không mở
+`thien-skill-risk-control-process` chỉ điều chỉnh nội dung nguyên gốc của package này; không mở
 rộng sang phần mềm, standard, framework, logo, connector hoặc nội dung bên thứ ba.

@@ -1,72 +1,54 @@
-# Handoff — Thien-Skill-Risk-Process-Control 1.1.0
+# Handoff — Thien-Skill-Risk-Control-Process 1.1.1
 
-Cập nhật: **28/08/2026**. Đây là hồ sơ bàn giao dự án sau Phase 3, không phải contract giao việc nghiệp vụ cho Document-Evidence.
+Cập nhật: **28/08/2026**. Bản này chỉ đổi tên skill từ `Thien-Skill-Risk-Process-Control` sang `Thien-Skill-Risk-Control-Process`; không thay nội dung nghiệp vụ.
 
-## Trạng thái bàn giao
+## Phạm vi đã thống nhất
 
-Ba phase nâng cấp đã hoàn tất trong phạm vi được người dùng chấp thuận: thiết kế; cập nhật nội dung vận hành; kiểm thử và tạo ba ZIP 1.1.0. Gate tổng hợp tại thời điểm khép Phase 3 là `evidence_complete`; xem [kết quả hiện hành](../tests/phase-3/acceptance-results.json) để xác nhận `current_release_gate` sau các cập nhật tài liệu.
+- Tên hiển thị mới: `Thien-Skill-Risk-Control-Process`.
+- Skill ID và thư mục mới: `thien-skill-risk-control-process`.
+- Phiên bản package: `1.1.1`; schema nghiệp vụ vẫn giữ version đã có, không tăng đồng loạt.
+- Giữ nguyên điều khoản `LICENSE`, `LICENSE-VERSION`, third-party notices và toàn bộ logo/assets. Trong `NOTICE` chỉ đổi tên sản phẩm; `LICENSE-APPLICATION.md` chỉ đồng bộ tên, ID và phiên bản được áp dụng, không sửa điều khoản cấp phép.
+- Repository hiện là [thiendeptrainhat/Thien-Skill-Risk-Control-Process](https://github.com/thiendeptrainhat/Thien-Skill-Risk-Control-Process), **public**. Người dùng xác nhận đã tự chuyển sang public và yêu cầu đổi URL, commit/push. Không đổi chủ sở hữu, thư mục workspace, bản đã cài hoặc quyền/tài khoản khác.
+- Commit/push được người dùng yêu cầu riêng trong bước publication tiếp nối; đối chiếu Git history và remote để xác nhận commit thực tế. Không cài đặt, tạo GitHub Release/tag, thêm OCR hay connector.
 
-| Hạng mục | Trạng thái và căn cứ |
-|---|---|
-| Lõi skill | Một canonical skill 1.1.0, 49 files; [SKILL.md](../skills/thien-skill-risk-process-control/SKILL.md) |
-| Phạm vi nghiệp vụ | E2E mở; risk; expected/key controls; current controls; gaps; improvement; no-change exposure |
-| Model testing | 29/29 biến thể hiện hành đạt review, 95 per-run invariant judgments, trong `Codex desktop delegated local runtime` |
-| Công cụ kiểm tra | 61/61 tests của tooling; không phải 61 lần kiểm thử nghiệp vụ |
-| File / nguồn ngoài / specialist | Có ba biến thể chat/Word/PDF, một live lookup NIST và một handoff Document-Evidence thực; xem [báo cáo Phase 3](phase-3/REPORT.md) |
-| Phân phối | Ba ZIP dùng cùng nội dung nghiệp vụ, checksum và parity đã kiểm tra; chưa cài vào host |
-| Claude/ChatGPT native, ZIP discovery/activation | `not_run`; không suy từ kết quả delegated Codex |
-| License và thương hiệu | Giữ điều khoản license, notices và logo; khai báo phạm vi phiên bản là 1.1.0 |
-
-Các hồ sơ [Phase 1](phase-1/README.md) và [Phase 2](phase-2/README.md) ghi trạng thái tại thời điểm của từng phase, không phải trạng thái hiện tại. Bộ 104 registry / 28 provisional summaries cũ, ZIP 1.0.0 và bốn runs round-1 `executed_unreviewed` được giữ nguyên, không cộng vào 29 passes của bản mới.
-
-## Nội dung cần tiếp nhận
+## Tài nguyên hiện hành
 
 | Tài nguyên | Mục đích |
 |---|---|
-| [README](../README.md) | Vai trò, lợi ích, hướng dẫn sử dụng ở trước; cài đặt ở dưới |
-| [INSTALL](../INSTALL.md) | Thao tác và giới hạn cài theo từng host |
-| [Release manifest](../RELEASE-MANIFEST.yaml) | Version, ba tên ZIP, archive roots và checksum |
-| [Thư mục ZIP 1.1.0](../dist/1.1.0/) | Claude, ChatGPT, Universal; không dùng ZIP toàn repository để upload Claude |
-| [SHA256SUMS](../dist/1.1.0/SHA256SUMS) / [packaging report](../dist/1.1.0/packaging-report.json) | Kiểm tra bytes và khác biệt wrapper/metadata được phép |
-| [Bằng chứng Phase 3](../tests/phase-3/README.md) | Fixtures, snapshots, raw outputs, traces, reviews và cách chạy validator |
-| [Platform guidance](phase-3/PLATFORM-GUIDANCE.md) | Nguồn chính thức đã đọc và giới hạn suy luận về cài đặt |
+| [README](../README.md) | Vai trò, lợi ích và cách dùng ở trước; cài đặt ở dưới |
+| [INSTALL](../INSTALL.md) | Đường dẫn và cách gọi ID mới; lưu ý thay/tắt ID cũ |
+| [Canonical SKILL.md](../skills/thien-skill-risk-control-process/SKILL.md) | Một lõi skill, 49 files |
+| [Release manifest](../RELEASE-MANIFEST.yaml) | Version 1.1.1, tên ZIP, roots và SHA-256 |
+| [Ba ZIP 1.1.1](../dist/1.1.1/) | Claude / ChatGPT / Universal, cùng nội dung nghiệp vụ |
+| [SHA256SUMS](../dist/1.1.1/SHA256SUMS) / [packaging report](../dist/1.1.1/packaging-report.json) | Kiểm tra archive và parity |
+| [Kiểm tra đổi tên](../tests/rename-1.1.1/) | Kết quả thực, tooling output và giới hạn |
 
-Canonical content SHA-256: `c438e1c23ea70b5ea14e5092841580cb3938a14e49499f870db0eb6aaf9adc2a`. Snapshot dùng cho 29 runs: [round-2 manifest](../tests/phase-3/snapshots/round-2/manifest.json); context ID `0303a497434fb718`. Exact model ID không được giao diện cung cấp, giữ `null / not_available`.
+## Kiểm tra và ranh giới kết luận
 
-## Cập nhật tài liệu và giữ bằng chứng
+Ba ZIP mới được tạo từ cùng nguồn và qua validator, kiểm tra roots/parity/CRC/checksum. Bộ 61 tooling tests và sáu regression tests riêng cho phép kiểm tra đổi tên đã chạy đạt. `scripts/verify_rename.py` đối chiếu từng file với baseline Git: chỉ cho phép các thay thế định danh đã liệt kê và version package; mọi thay đổi nghiệp vụ, schema, điều khoản license, logo hoặc lịch sử đều phải bị báo lỗi. Kết quả trước publication giữ tại `tests/rename-1.1.1/results.json`; kiểm tra sau cập nhật URL/trạng thái hiện hành tại `tests/rename-1.1.1/publication-results.json`.
 
-Yêu cầu tiếp nối của người dùng: cập nhật handoff, đưa vai trò/lợi ích/cách dùng lên đầu README, đưa cài đặt xuống dưới, sau đó commit và push. Cập nhật này không thay runtime instructions, templates nghiệp vụ, license hoặc ba ZIP; không phát sinh một bộ model tests mới.
+Trình `quick_validate.py` của skill-creator không chạy được với Python mặc định vì thiếu PyYAML; không cài thêm dependency. Dùng validator đi kèm và kiểm tra YAML của môi trường sẵn có; không trình bày lỗi môi trường đó thành một pass của quick-validator.
 
-README mà P03-R1 đã đọc được lưu **byte-identical** cùng result/index/run-record cũ tại [documentation snapshot](../tests/phase-3/documentation-snapshots/pre-handoff-update-2026-08-28/manifest.json). Chỉ đổi nơi lưu con trỏ input của receipt cũ; raw output, trace và review cũ không bị viết lại.
+Không chạy lại model behavioral tests hoặc native discovery/activation cho ID mới. Kết quả Phase 3 — 29 model variants / 95 judgments, sáu capability-simulation profiles và các ca chat/Word/PDF, NIST, Document-Evidence — chỉ thuộc snapshot **tên cũ 1.1.0**. Static equivalence không phải một lần thực thi model mới hoặc bảo đảm mọi nền tảng.
 
-README mới và handoff cần lượt P03 tài liệu riêng trước khi bàn giao. Kết quả chính thức nằm ở evidence index và acceptance-results sau khi gắn review; không tự gán pass từ việc file đã tồn tại. Retest tài liệu không được cộng thành model behavioral passes.
+## Giữ nguyên và đọc lại lịch sử
 
-## GitHub và ranh giới quyền
+URL cũ và nhãn PRIVATE trong `LICENSE-APPLICATION.md`, ZIP và bằng chứng đã tạo được giữ như metadata lịch sử trước khi người dùng chuyển public/đổi tên repository. Không sửa điều khoản license hoặc ghi đè ZIP 1.1.1. README, INSTALL, manifest và remote phản ánh URL/trạng thái mới. Việc công khai không tự chuyển license thành open-source hoặc cấp quyền sử dụng ngoài các điều khoản đã có.
 
-Repository đích: [thiendeptrainhat/Thien-Skill-Risk-Process-Control](https://github.com/thiendeptrainhat/Thien-Skill-Risk-Process-Control), private; nhánh `main`, remote `origin`. Người dùng đã yêu cầu riêng việc commit/push cho lần bàn giao này, sau khi Phase 3 khép mà chưa thực hiện Git publication.
+Baseline trước đổi tên là commit [db9b0f4](https://github.com/thiendeptrainhat/Thien-Skill-Risk-Control-Process/tree/db9b0f42c1a2ce0938abc888a03699d401b9fd41). Bản 1.0.0/1.1.0 trong `dist`, toàn bộ hồ sơ Phase 1–3, raw outputs, reviews, snapshots và các kết quả cũ được giữ nguyên byte. Không đổi input path/hash hay gán pass mới cho receipt cũ.
 
-Trạng thái commit/push thực tế phải đối chiếu Git history và remote; gate kiểm thử không phải quyền publication hoặc bằng chứng đã push. Không hard-code SHA của chính commit chứa tài liệu này. GitHub commit/push không đồng nghĩa đã tạo GitHub Release/tag hoặc cài skill vào Claude/ChatGPT/Codex.
+Do các tài liệu/receipts lịch sử tham chiếu tên và nguồn cũ, hãy đọc tại cây Git baseline để các liên kết tương đối đúng phiên bản. [Báo cáo Phase 3 tại baseline](https://github.com/thiendeptrainhat/Thien-Skill-Risk-Control-Process/blob/db9b0f42c1a2ce0938abc888a03699d401b9fd41/docs/phase-3/REPORT.md) và [handoff trước đổi tên](https://github.com/thiendeptrainhat/Thien-Skill-Risk-Control-Process/blob/db9b0f42c1a2ce0938abc888a03699d401b9fd41/docs/HANDOFF.md) giữ bối cảnh đầy đủ.
 
-Giữ repository private khi lưu raw evidence có metadata đường dẫn local. Không đưa `.DS_Store`, credentials hoặc file ngoài phạm vi vào commit. Việc cài đặt, đổi quyền/tài khoản, tạo connector/plugin hoặc live-platform acceptance chưa được thực hiện trong lần bàn giao này.
+`scripts/verify_rename.py --historical` dựng cây baseline đó trong thư mục tạm và chạy lại validator cũ. Gate `evidence_complete` nếu đạt chỉ là gate **1.1.0**; không áp dụng cho tên/ZIP mới. Không chạy mặc định `--phase3` hay assemble lại evidence index cũ trên cây đã đổi tên.
 
-## Kiểm tra khi tiếp tục công việc
-
-Từ repository root:
+## Lệnh kiểm tra
 
 ```sh
-python3 -B scripts/assemble_phase3_evidence.py --write
-python3 -B scripts/run_tests.py --phase3 --json
+python3 -B scripts/run_tests.py --json
 python3 -B -m unittest discover -s tests/phase-3/tooling -v
-python3 -B tests/phase-3/tooling/inspect_release.py --repo-root .
+python3 -B -m unittest discover -s tests/rename-1.1.1 -v
+python3 -B scripts/verify_rename.py --historical
+python3 -B scripts/build_release.py --write --json
 ```
 
-Đọc `current_release_gate` và claims theo đúng context/snapshot; exit code 0 chỉ xác nhận integrity. Không dùng `--write-results` với Phase 3 và không ghi đè lịch sử 104/28. Không sửa fixture/snapshot/raw output để làm test đạt; nếu đổi lõi skill, cần snapshot và phạm vi retest phù hợp trước khi đóng ZIP mới.
-
-## Giới hạn cần giữ và việc chỉ làm khi được yêu cầu
-
-- Phạm vi E2E mở là phương pháp discovery, không phải bảo đảm một catalog đầy đủ cho mọi ngành. Tra cứu nguồn theo quyền và applicability của từng engagement; catalog pointers không phải các connector đã cài.
-- Document-Evidence là tùy chọn. Handoff đã thử dùng local parse/render và platform-native vision trên một scan tổng hợp; không chạy OCR engine và ô bị che vẫn pending human review.
-- Sáu profile kiểm thử có điều kiện capability mô phỏng. Cả bộ dùng dữ liệu tổng hợp hữu hạn; không suy thành tỷ lệ chính xác trên mọi tài liệu/model hoặc bảo đảm độc lập thứ ba.
-- Giữ `release_candidate` và `runtime_verification.verified: false` của metadata: gate nghiệp vụ/packaging không chứng minh native discovery hay phê duyệt nghiệp vụ.
-- Nếu cần cài thử trên Claude Desktop/Web, ChatGPT Desktop/Web hoặc triển khai web qua plugin, phải thống nhất phạm vi, tài khoản/quyền và tiêu chí riêng. Không tự tạo thêm “Phase 4”, plugin hay dependency OCR.
-- Policy/SOP/RCM/target-state do skill hỗ trợ vẫn là draft cho đến khi người có thẩm quyền phê duyệt.
+Lệnh build chỉ xác nhận `unchanged` nếu ZIP đã có khớp tuyệt đối; không ghi đè bản phát hành khác. Xem [INSTALL](../INSTALL.md#8-cập-nhật-và-gỡ-lỗi) để chuyển từ ID cũ sang ID mới mà không kích hoạt trùng. Policy/SOP/RCM/target-state vẫn là draft, Document-Evidence vẫn tùy chọn và các giới hạn nghiệp vụ không thay đổi.

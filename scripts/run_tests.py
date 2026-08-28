@@ -233,7 +233,7 @@ def validate_coverage_matrix(repo_root: Path, normalized: list[tuple[str, dict[s
     path = (
         repo_root
         / "skills"
-        / "thien-skill-risk-process-control"
+        / "thien-skill-risk-control-process"
         / "references"
         / "requirement-coverage-matrix.md"
     )
@@ -259,7 +259,7 @@ def validate_coverage_matrix(repo_root: Path, normalized: list[tuple[str, dict[s
 
 def run_package_validator(repo_root: Path, report: TestReport) -> None:
     before = len(report.errors)
-    skill_path = repo_root / "skills" / "thien-skill-risk-process-control"
+    skill_path = repo_root / "skills" / "thien-skill-risk-control-process"
     validator = skill_path / "scripts" / "validate_package.py"
     command = [
         sys.executable,
@@ -313,7 +313,7 @@ def result_payload(
         )
     report.case_results = case_results
     return {
-        "suite": "Thien-Skill-Risk-Process-Control deterministic acceptance",
+        "suite": "Thien-Skill-Risk-Control-Process deterministic acceptance",
         "generated_at": datetime.now(timezone.utc).replace(microsecond=0).isoformat(),
         "status": deterministic_status,
         "case_count": len(normalized),
@@ -443,6 +443,15 @@ def main(argv: list[str] | None = None) -> int:
     ):
         parser.error("--phase3-matrix and --phase3-evidence require --phase3.")
     repo_root = args.repo_root.resolve()
+    if (args.phase3
+            and args.phase3_matrix == "tests/phase-3/acceptance-matrix.json"
+            and (repo_root / "skills/thien-skill-risk-control-process").is_dir()
+            and not (repo_root / "skills/thien-skill-risk-process-control").exists()):
+        parser.error(
+            "Default Phase 3 records belong to the pre-rename 1.1.0 tree. "
+            "Use python3 -B scripts/verify_rename.py --historical to validate "
+            "that frozen baseline; do not re-label historical runs as 1.1.1 evidence."
+        )
     report = TestReport()
     cases = load_cases(repo_root / "tests" / "cases.yaml", report)
     normalized = validate_catalog(cases, report)

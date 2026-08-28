@@ -1,0 +1,104 @@
+{
+  "scope": "Identity-only rename 1.1.0 to 1.1.1; no new model or installation acceptance.",
+  "commands": [
+    {
+      "id": "preservation",
+      "cmd": "python3 -B scripts/verify_rename.py --historical",
+      "started_at": "2026-08-28T04:19:34.479Z",
+      "finished_at": "2026-08-28T04:19:36.114Z",
+      "chunk_id": "6159b4",
+      "wall_time_seconds": 0.658797084,
+      "exit_code": 0,
+      "original_token_count": 1746,
+      "output": "See results.json (actual complete stdout, retained separately)"
+    },
+    {
+      "id": "yaml",
+      "cmd": "ruby -e 'require \"yaml\"; paths = Dir[\"skills/thien-skill-risk-control-process/**/*.yaml\"] + [\"RELEASE-MANIFEST.yaml\"]; paths.each { |path| YAML.safe_load(File.read(path), aliases: false) }; text = File.read(\"skills/thien-skill-risk-control-process/SKILL.md\"); YAML.safe_load(text.split(\"---\", 3)[1], aliases: false); puts \"PASS: #{paths.size} YAML files and SKILL frontmatter\"'",
+      "started_at": "2026-08-28T04:19:34.479Z",
+      "finished_at": "2026-08-28T04:19:35.456Z",
+      "chunk_id": "d24c57",
+      "wall_time_seconds": 0.0000045,
+      "exit_code": 0,
+      "original_token_count": 11,
+      "output": "PASS: 22 YAML files and SKILL frontmatter\n"
+    },
+    {
+      "id": "whitespace",
+      "cmd": "git diff --check",
+      "started_at": "2026-08-28T04:19:34.479Z",
+      "finished_at": "2026-08-28T04:19:35.455Z",
+      "chunk_id": "93c8cf",
+      "wall_time_seconds": 3.34e-7,
+      "exit_code": 0,
+      "original_token_count": 0,
+      "output": ""
+    },
+    {
+      "id": "new_checks_style",
+      "cmd": "git diff --no-index --check /dev/null scripts/verify_rename.py",
+      "started_at": "2026-08-28T04:19:34.479Z",
+      "finished_at": "2026-08-28T04:19:35.455Z",
+      "chunk_id": "f4e0b6",
+      "wall_time_seconds": 0.000004292,
+      "exit_code": 1,
+      "original_token_count": 0,
+      "output": ""
+    },
+    {
+      "id": "zip_checksums",
+      "cmd": "shasum -a 256 -c SHA256SUMS",
+      "started_at": "2026-08-28T04:19:34.479Z",
+      "finished_at": "2026-08-28T04:19:35.456Z",
+      "chunk_id": "d2550d",
+      "wall_time_seconds": 5.42e-7,
+      "exit_code": 0,
+      "original_token_count": 43,
+      "output": "Thien-Skill-Risk-Control-Process-v1.1.1-Claude.zip: OK\nThien-Skill-Risk-Control-Process-v1.1.1-ChatGPT.zip: OK\nThien-Skill-Risk-Control-Process-v1.1.1-Universal.zip: OK\n"
+    },
+    {
+      "id": "history_guard",
+      "cmd": "python3 -B scripts/run_tests.py --phase3 --json",
+      "started_at": "2026-08-28T04:19:34.479Z",
+      "finished_at": "2026-08-28T04:19:35.550Z",
+      "chunk_id": "6cee1a",
+      "wall_time_seconds": 0.000001542,
+      "exit_code": 2,
+      "original_token_count": 104,
+      "output": "usage: run_tests.py [-h] [--repo-root REPO_ROOT] [--write-results] [--json]\n                    [--phase3] [--phase3-matrix PHASE3_MATRIX]\n                    [--phase3-evidence PHASE3_EVIDENCE]\nrun_tests.py: error: Default Phase 3 records belong to the pre-rename 1.1.0 tree. Use python3 -B scripts/verify_rename.py --historical to validate that frozen baseline; do not re-label historical runs as 1.1.1 evidence.\n"
+    }
+  ],
+  "prior_checks": [
+    {
+      "command": "python3 -B /Users/thiendeptrainhat/.codex/skills/.system/skill-creator/scripts/quick_validate.py skills/thien-skill-risk-control-process",
+      "exit_code": 1,
+      "output_file": "quick-validator.txt",
+      "status": "could_not_run_missing_PyYAML"
+    },
+    {
+      "command": "python3 -B -m unittest discover -s tests/phase-3/tooling -v",
+      "exit_code": 0,
+      "output_file": "tooling-tests.txt"
+    },
+    {
+      "command": "python3 -B -m unittest discover -s tests/rename-1.1.1 -v",
+      "exit_code": 0,
+      "output_file": "rename-regression-tests.txt"
+    },
+    {
+      "command": "python3 -B scripts/build_release.py --write --json",
+      "exit_code": 0,
+      "output_file": "build-output.json"
+    },
+    {
+      "command": "python3 -B scripts/build_release.py --write --json",
+      "exit_code": 0,
+      "output_file": "rebuild-output.json"
+    }
+  ],
+  "limitations": [
+    "Command receipt maintained by the executing task, not a full host transcript.",
+    "history_guard exit 2 is the expected refusal to mix old Phase 3 receipts with renamed current source.",
+    "The historical validator ran only in a reconstructed local Git baseline and did not execute models."
+  ]
+}
