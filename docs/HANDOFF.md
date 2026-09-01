@@ -44,7 +44,7 @@ Ba ZIP, [`SHA256SUMS`](../dist/1.2.0/SHA256SUMS) và [`packaging-report.json`](.
 - Không phát hành legal/compliance certification, audit opinion hoặc bảo đảm mọi ngành/quy trình. Policy/SOP/RCM/target-state vẫn là draft cho đến khi người có thẩm quyền phê duyệt.
 - Không cài hoặc sửa skill đang cài trên máy/tài khoản. Không thêm OCR, connector, plugin hoặc external runtime dependency.
 - Commit/push của source release được ghi nhận bằng Git history thay vì hard-code commit tự tham chiếu trong tài liệu này.
-- Repository chưa có convention bằng chứng cho Git tag hoặc GitHub Release. Không tự suy đoán tag, title, draft/prerelease/latest; chỉ tạo sau khi owner xác nhận chính xác.
+- Owner đã xác nhận ngày 01/09/2026: tag `v1.2.0`, title `Thien-Skill-Risk-Control-Process v1.2.0`, publish ngay dưới dạng normal release, không prerelease và đánh dấu latest. Đối chiếu tag và Release URL trong Git/GitHub sau publication.
 
 ## Lệnh xác minh 1.2.0
 

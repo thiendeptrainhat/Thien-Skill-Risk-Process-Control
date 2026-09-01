@@ -4,11 +4,25 @@
 
 # Thien-Skill-Risk-Control-Process
 
-Skill phân tích và tư vấn một hoặc nhiều quy trình từ chat, PDF, Word, SOP và bằng chứng liên quan: xác định E2E phù hợp, risks, expected/current controls, gaps, cải tiến và rủi ro nếu giữ nguyên.
+## Giới thiệu skill và điểm mới trong 1.2.0
 
-Một skill lõi, không giới hạn ở một nhóm E2E cố định. Ba gói Claude, ChatGPT và Universal dùng chung nội dung nghiệp vụ; khác wrapper thư mục và metadata nền tảng.
+**Thien-Skill-Risk-Control-Process** là skill phân tích và tư vấn một hoặc nhiều quy trình từ chat, PDF, Word, SOP và bằng chứng liên quan. Skill giúp xác định quy trình E2E phù hợp, risks, expected/current controls, gaps, phương án cải tiến và rủi ro nếu giữ nguyên.
 
-## Vai trò của skill
+Đây là một skill lõi có phạm vi E2E mở, không bị giới hạn bởi một danh mục quy trình cố định. Ba gói Claude, ChatGPT và Universal dùng chung canonical business content; chúng chỉ khác wrapper thư mục và metadata nền tảng.
+
+### Cải tiến chính của bản 1.2.0
+
+| Cải tiến | Giá trị thực tế |
+|---|---|
+| R07/no-change bắt buộc trong engagement đầy đủ | Luôn làm rõ điều có thể xảy ra nếu không cải tiến; với greenfield hoặc gap chưa được chứng minh, giữ đúng nhãn `design/no-change hypothesis` thay vì tạo fake deficiency |
+| Guard cho compliance label | Chỉ dùng nhãn `Minimum compliant` hoặc kết luận compliance gap khi mandatory baseline đã được xác minh và có comparison evidence; nếu chưa đủ, dùng proposal có nhãn compliance unverified |
+| Evidence-aware analysis | Tách rõ `As-Documented`, `As-Designed`, `As-Performed` và `Target-State`; thiếu log hoặc bằng chứng được ghi là evidence limitation, không tự đổi thành control failure |
+| Artifact hygiene | Chỉ giữ deliverable được yêu cầu hoặc tài nguyên tái sử dụng có mục đích; hạn chế cache, file tạm, export trùng, archive rebuild và binary lớn không được quản lý |
+| Release qualification độc lập | Có ba fresh-context scenarios được review độc lập, deterministic/tooling regressions, checksum/parity/CRC và policy bảo toàn bằng chứng lịch sử |
+
+Phiên bản `1.2.0` không thay skill thành công cụ phê duyệt, certification hoặc audit opinion. Kết quả vẫn là phân tích/đề xuất có nguồn, assumptions và giới hạn bằng chứng để người có thẩm quyền xem xét.
+
+## Lợi ích và vai trò của skill
 
 Skill là trợ lý phân tích quy trình, rủi ro và thiết kế kiểm soát: giúp đọc hiểu một quy trình đang có, tư vấn quy trình mới hoặc xem xét một nhóm quy trình liên kết từ đầu đến cuối.
 
@@ -98,6 +112,13 @@ References được nạp theo nhu cầu. Khung 14 bước dành cho engagement 
 
 ## Cách sử dụng skill
 
+Luồng sử dụng ngắn gọn:
+
+1. **Chọn phạm vi:** đánh giá quy trình hiện có, thiết kế greenfield, phân tích một nhóm E2E hoặc xử lý một vấn đề hẹp.
+2. **Cung cấp context:** mục tiêu, trigger/outcome, phạm vi, tài liệu, baseline và evidence đang có; thông tin chưa có có thể ghi rõ `chưa cung cấp`.
+3. **Yêu cầu output:** với engagement đầy đủ, yêu cầu R01–R07; với câu hỏi hẹp, chỉ chọn phần cần thiết và nêu rõ phạm vi loại trừ.
+4. **Review trước khi áp dụng:** kiểm tra source/locator, evidence layer, assumptions, uncertainty và approval gates; không xem output dự thảo là quyết định đã phê duyệt.
+
 ### 1. Gọi skill và giao đúng phạm vi
 
 Sau khi host đã nhận diện skill, chọn hoặc gọi **Thien-Skill-Risk-Control-Process** bằng cơ chế của nền tảng. Nếu chưa cài, xem [phần cài đặt bên dưới](#cài-đặt). Không dùng lời tự nhận “đã kích hoạt” của model làm bằng chứng duy nhất về phiên bản được nạp.
@@ -170,6 +191,7 @@ Phase 1–3, receipts, snapshots và ZIP lịch sử là immutable records, khô
 | Phiên bản | `1.2.0` |
 | Trạng thái | Minor functional release; qualified trong phạm vi evidence được công bố, không phải live-platform certification |
 | Repository | [Public — Thien-Skill-Risk-Control-Process](https://github.com/thiendeptrainhat/Thien-Skill-Risk-Control-Process) |
+| GitHub Release | [v1.2.0](https://github.com/thiendeptrainhat/Thien-Skill-Risk-Control-Process/releases/tag/v1.2.0) |
 | Ngôn ngữ trả lời | Theo ngôn ngữ người dùng |
 | License | Tran Ngoc Thien's Skills Commercial Source-Available License 2.0 |
 
@@ -191,6 +213,13 @@ Tách riêng structural checks, deterministic invariants, model behavioral runs 
 
 > [!IMPORTANT]
 > GitHub lưu mã nguồn và ZIP, không kích hoạt skill trong tài khoản AI. Tải ZIP, đặt file đúng chỗ, được nền tảng nhận diện và kiểm thử tác vụ là những bước khác nhau. Tên gói “ChatGPT” hoặc “Universal” không bảo đảm mọi bề mặt nhận ZIP trực tiếp.
+
+Luồng cài đặt chuẩn gồm bốn bước:
+
+1. Chọn đúng ZIP theo host và scope sử dụng.
+2. Kiểm tra SHA-256 và đọc license trước khi cài.
+3. Upload hoặc giải nén đúng vị trí discovery của nền tảng; không trộn nhiều version hoặc hai skill ID lịch sử.
+4. Xác nhận riêng các mức artifact → discovery → activation → behavior; không suy mức sau chỉ từ mức trước.
 
 ### Chọn đúng ZIP
 

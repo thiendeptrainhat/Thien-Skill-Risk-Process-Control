@@ -49,6 +49,6 @@ release:
   publication:
     local_artifacts: "created_and_verified_in_release_tree"
     github_commit_push: "recorded_in_git_history"
-    git_tag: "pending_owner_confirmation"
-    github_release: "not_created_pending_owner_confirmation"
+    git_tag: "v1.2.0"
+    github_release: "https://github.com/thiendeptrainhat/Thien-Skill-Risk-Control-Process/releases/tag/v1.2.0"
     installed_skills: "not_modified"
