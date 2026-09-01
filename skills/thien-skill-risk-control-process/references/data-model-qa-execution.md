@@ -293,6 +293,12 @@ Kiểm tra criticality, backup, substitute capacity, lead time, recovery time, d
 
 Kiểm tra start/end, no orphan node, decision routes, owner/lane, exception path, loop termination, IDs và layer legend. Chỉ ghi `syntax_validated: true` khi parser thực sự chạy; chỉ ghi `visually_verified: true` khi đã render và kiểm tra.
 
+### Artifact và output hygiene
+
+Chỉ tạo file phục vụ deliverable đã yêu cầu hoặc tài nguyên tái sử dụng có owner/purpose rõ. Giữ một canonical dataset/model rồi sinh view thay vì nhân bản facts; không persist cache, file tạm, raw tool output, export trung gian hoặc archive rebuild nếu chưa được phép. Dùng thư mục tạm ngoài deliverable cho intermediate work và dọn theo cơ chế của host.
+
+Tuân theo size, allowlist và retention policy của project. Nếu project chưa có ngưỡng được phê duyệt, không tự biến một con số thành policy: báo trước khi thêm binary/artifact lớn và xin quyết định nếu việc đó làm thay đổi đáng kể dung lượng hoặc phạm vi lưu giữ. Trước handoff, đối chiếu file inventory, purpose, source/provenance, version, duplicate status và retention; không gọi file lịch sử/evidence đã freeze là rác chỉ vì lớn hoặc ít được mở.
+
 ## 8. Cross-document tie-out
 
 Trong scope của engagement, đối chiếu các cặp liên quan sau; cặp không áp dụng không buộc tạo thêm tài liệu:

@@ -129,6 +129,8 @@ So sánh benefits, risks, cost, complexity, technology, people, implementation t
 
 Với material gap, nêu nếu giữ nguyên: cause–event–impact, existing protection, exposure chưa xử lý, uncertainty và validation needed. Không tự tạo probability, loss, score, horizon, owner hoặc deadline; chưa chứng minh gap thì giữ scenario là hypothesis.
 
+Với engagement đầy đủ yêu cầu bảy mục tiêu, luôn trả lời riêng R07. Nếu là greenfield hoặc chưa chứng minh material gap, mô tả hệ quả của việc không triển khai dưới nhãn `design/no-change hypothesis`, nêu protection hiện có là `Not provided` khi phù hợp và giữ nguyên uncertainty; không được bỏ mục chỉ vì current state chưa có.
+
 ### 7. RCM, diagram và metrics
 
 Duy trì quan hệ many-to-many giữa risks và controls bằng ID ổn định. Tạo risk-centric, control-centric, process-step, requirement-centric, audit-test hoặc management-action view từ cùng dữ liệu chuẩn.
@@ -140,6 +142,8 @@ Khi không có diagram tool, tạo Mermaid source, swimlane table và step regis
 Kiểm tra objective, boundaries, orphan steps, decision routes, owners, evidence, ID links, source applicability, null semantics, diagram syntax và cross-document tie-out. Gửi phần chuyên môn ngoài phạm vi sang skill phù hợp nếu có; handoff phải chứa context, structured inputs, unresolved items và expected output.
 
 Tạo nội dung có cấu trúc trước khi chuyển sang công cụ/skill Word, Excel, PowerPoint hoặc dashboard. Không biến format đẹp thành bằng chứng rằng nội dung đúng.
+
+Khi tạo artifact, chỉ giữ output người dùng yêu cầu hoặc tài nguyên tái sử dụng có mục đích rõ. Dùng một nguồn dữ liệu chuẩn để sinh các view; không lưu cache, file tạm, export trùng, raw tool output hoặc archive rebuild ngoài phạm vi đã được phép. Tôn trọng size/retention policy của project; nếu chưa có ngưỡng, không tự đặt ngưỡng ngầm và phải cảnh báo trước khi thêm binary hoặc artifact lớn. Trước handoff, kiểm kê file đã tạo/thay đổi, mục đích, nguồn, version và retention; đánh dấu duplicate hoặc file lớn cần owner quyết định.
 
 ### 9. Assessment và training
 

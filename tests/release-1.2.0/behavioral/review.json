@@ -1,0 +1,473 @@
+{
+  "schema_version": "1.0",
+  "release_version": "1.2.0",
+  "review_type": "behavioral_raw_output_review",
+  "reviewer_relation": "independent",
+  "independent_reviewer": true,
+  "reviewed_at": "2026-09-01T10:16:46+07:00",
+  "overall_status": "pass",
+  "overall_rationale": "Đủ ba raw outputs; SHA-256 và byte size đã được tính lại. Mọi judgment có applicable=true đều pass; các judgment inconclusive chỉ là tiêu chí không áp dụng cho scope của case tương ứng.",
+  "decision_rule": "overall_status is pass only when all three bound outputs exist and every judgment with applicable=true has status=pass",
+  "source_bindings": [
+    {
+      "path": "skills/thien-skill-risk-control-process/SKILL.md",
+      "sha256": "2c45f791db61b456a98645d7fb4d728d6634886067cb76d2b0d98f6dcc5eaab6",
+      "binding_role": "governing_skill"
+    },
+    {
+      "path": "skills/thien-skill-risk-control-process/references/architecture-layers-taxonomy.md",
+      "sha256": "b9e070ef3a82f1b524c58498ea23f133dd316a62e81095dc20a759904161c5ed",
+      "binding_role": "analysis_layers_and_process_architecture"
+    },
+    {
+      "path": "skills/thien-skill-risk-control-process/references/document-analysis-and-discovery.md",
+      "sha256": "a4797b19d8b150631719f36da236fc46a866346125d4bbd4e20746a4491afa43",
+      "binding_role": "document_and_evidence_limits"
+    },
+    {
+      "path": "skills/thien-skill-risk-control-process/references/risk-control-key-control.md",
+      "sha256": "7f622ffe435c8131b761cc7c7236e2661f64ba08b1008eb8ed678d9c92d2a1ff",
+      "binding_role": "risk_control_and_keyness"
+    },
+    {
+      "path": "skills/thien-skill-risk-control-process/references/gaps-rationalization-rcm.md",
+      "sha256": "4e3a9a0358e00741d4d873fe58afdf8c612c9ef2dc4094a7f28b3c67a432b50c",
+      "binding_role": "gap_rcm_and_no_change"
+    },
+    {
+      "path": "skills/thien-skill-risk-control-process/references/sod-spof-dependencies.md",
+      "sha256": "eadacd9844439e749ceec9eff2d4032d9c090d75b76c92945ffb1db753c197ff",
+      "binding_role": "sod_and_dependency_truth"
+    },
+    {
+      "path": "skills/thien-skill-risk-control-process/references/target-state-and-improvement.md",
+      "sha256": "69d39058a562a08902e6aca055473ba53305fe470f807ca5816a12d07ce160bd",
+      "binding_role": "target_state_options_and_r07"
+    },
+    {
+      "path": "skills/thien-skill-risk-control-process/references/standards-sources-applicability.md",
+      "sha256": "ae4b1d44f36a02702844f202c201d9482237147d4fee416bb1054af57ecfb31a",
+      "binding_role": "standard_verification_and_applicability"
+    },
+    {
+      "path": "skills/thien-skill-risk-control-process/references/governance-security-handoffs.md",
+      "sha256": "c27ca1bbfcffb1319880ad766c660f8d115df2aaabd4b645bfea94d4e81168c6",
+      "binding_role": "approval_and_governance"
+    },
+    {
+      "path": "skills/thien-skill-risk-control-process/references/data-model-qa-execution.md",
+      "sha256": "6bd1f3f543feb6568f168c1740ed95aa8253f57e74a170ef9db83740b825db9d",
+      "binding_role": "data_model_proportionality_and_behavioral_qa"
+    },
+    {
+      "path": "skills/thien-skill-risk-control-process/templates/common-data-model.yaml",
+      "sha256": "63630831572da45153ca89fb96501542d1da1e015ee70625436ce35fff9354e1",
+      "binding_role": "common_object_and_null_semantics"
+    },
+    {
+      "path": "skills/thien-skill-risk-control-process/templates/qa-checklist.yaml",
+      "sha256": "d54fa04c78732e2db41dbae64812376146487f725e361ab8da507c32114a629c",
+      "binding_role": "qa_judgment_reference"
+    },
+    {
+      "path": "skills/thien-skill-risk-control-process/templates/rcm.yaml",
+      "sha256": "6b276556ce1a5ad116023c7ecd84f5a379706a8021a62407e68c44db10c5b34a",
+      "binding_role": "rcm_relationship_view"
+    },
+    {
+      "path": "skills/thien-skill-risk-control-process/templates/target-state-options.yaml",
+      "sha256": "925c49e772afe2d2d0cc7000fbdfcbd32a2d2834fd3cc0298dbbcb7e144c60f2",
+      "binding_role": "option_and_no_change_requirements"
+    },
+    {
+      "path": "skills/thien-skill-risk-control-process/templates/action-plan.yaml",
+      "sha256": "1710fb54554944059e74c664f620378b08fac3225a672097a46a3b4704d0fc08",
+      "binding_role": "owner_date_approval_basis"
+    },
+    {
+      "path": "skills/thien-skill-risk-control-process/templates/control-baseline-comparison.yaml",
+      "sha256": "626dd87b20db6fa82213a47ab65d656b59e35e3961c06050ea7eaa1796cf9900",
+      "binding_role": "current_target_gap_and_no_change_separation"
+    },
+    {
+      "path": "skills/thien-skill-risk-control-process/templates/process-intake.yaml",
+      "sha256": "151364d6e78b1187e9f0e93f3292cc31b7d8fa013a39cc7ea053457f2d68f655",
+      "binding_role": "scope_and_proportionality"
+    },
+    {
+      "path": "skills/thien-skill-risk-control-process/templates/process-architecture-step-register.yaml",
+      "sha256": "3846d33c6503d0a71767cacba28aa9d838d544a412785f37b7c20b821aac442b",
+      "binding_role": "boundary_step_and_mapping_traceability"
+    },
+    {
+      "path": "skills/thien-skill-risk-control-process/templates/control-register.yaml",
+      "sha256": "931162229aadd85db97d9fd3fe19b7d4bacfef6f9996b376fc0a982d1656619a",
+      "binding_role": "logical_control_and_scoped_observation"
+    }
+  ],
+  "cases": [
+    {
+      "case_id": "R120-BEH-001",
+      "output_path": "tests/release-1.2.0/behavioral/greenfield-supplier-bank-change.md",
+      "sha256": "f430ad8158196296bf02dda69283e97745952d971d3833210d18c33a15d194f0",
+      "byte_size": 36149,
+      "status": "pass",
+      "status_rationale": "Full-scope greenfield response answers R01-R07, supplies options and an RCM view, and consistently keeps current state, evidence, gaps and compliance unverified.",
+      "judgments": [
+        {
+          "criterion": "scope_and_proportionality",
+          "applicable": true,
+          "status": "pass",
+          "rationale": "The full greenfield scope is bounded, exclusions are stated, and detail is proportionate to the requested full analysis.",
+          "evidence_locators": [
+            "## Intake và source status — intake table and source register",
+            "## R01 — Objective, boundary và E2E mapping — Boundary dự thảo"
+          ]
+        },
+        {
+          "criterion": "facts_vs_inference_or_proposal",
+          "applicable": true,
+          "status": "pass",
+          "rationale": "Input facts, analyst proposals, hypotheses and unresolved items are explicitly separated.",
+          "evidence_locators": [
+            "## Kết luận điều hành — disclaimer beginning 'Đây không phải'",
+            "## Intake và source status — SRC-001 and SRC-002 descriptions"
+          ]
+        },
+        {
+          "criterion": "analysis_layer_and_evidence_truth",
+          "applicable": true,
+          "status": "pass",
+          "rationale": "Target-State observations are isolated from unavailable As-Documented, As-Designed and As-Performed evidence.",
+          "evidence_locators": [
+            "## R03 — Expected/key controls có căn cứ — Target-State control register preface",
+            "## R04 — Current controls theo mức bằng chứng — full table and status bullets"
+          ]
+        },
+        {
+          "criterion": "no_fabricated_current_control_gap_or_operating_effectiveness",
+          "applicable": true,
+          "status": "pass",
+          "rationale": "Current observation and gap arrays remain empty; operating effectiveness is expressly not assessed.",
+          "evidence_locators": [
+            "## R04 — Current controls theo mức bằng chứng — bullets after the layer table",
+            "## R05 — Gaps và design opportunities — opening paragraph and empty IDs"
+          ]
+        },
+        {
+          "criterion": "no_compliance_claim_without_verified_baseline",
+          "applicable": true,
+          "status": "pass",
+          "rationale": "No baseline is claimed; the minimum option is labelled compliance unverified.",
+          "evidence_locators": [
+            "## R03 — Expected/key controls có căn cứ — Giới hạn baseline",
+            "## R06 — Ba phương án và working recommendation — So sánh options"
+          ]
+        },
+        {
+          "criterion": "full_scope_r01_r07_rcm_and_options",
+          "applicable": true,
+          "status": "pass",
+          "rationale": "All R01-R07 sections, three option profiles and a many-to-many RCM skeleton are present.",
+          "evidence_locators": [
+            "## R01 through ## R07",
+            "## RCM skeleton truy nguyên"
+          ]
+        },
+        {
+          "criterion": "r07_no_change_basis",
+          "applicable": true,
+          "status": "pass",
+          "rationale": "R07 is a Design hypothesis with protection Not provided, empty current-control IDs, null horizon and explicit uncertainty/validation needs.",
+          "evidence_locators": [
+            "## R07 — Design/no-change hypothesis — NCS-001 metadata, causal scenario and validation list"
+          ]
+        },
+        {
+          "criterion": "narrow_scope_not_forced_to_full_workflow",
+          "applicable": false,
+          "status": "inconclusive",
+          "rationale": "Not applicable because this case is expressly a full-scope greenfield analysis.",
+          "evidence_locators": [
+            "## Intake và source status — Mode row"
+          ]
+        },
+        {
+          "criterion": "roles_thresholds_scores_owners_and_deadlines",
+          "applicable": true,
+          "status": "pass",
+          "rationale": "Official roles, thresholds, scores, owners and deadlines are not invented; generic design duties are proposals and unresolved fields are marked for validation.",
+          "evidence_locators": [
+            "## Kết luận điều hành — final paragraph",
+            "## RCM skeleton truy nguyên — RCM-wide nulls và limitations"
+          ]
+        },
+        {
+          "criterion": "approval_and_limitations",
+          "applicable": true,
+          "status": "pass",
+          "rationale": "Limitations and all material human approval gates are visible before adoption or production change.",
+          "evidence_locators": [
+            "## R06 — Ba phương án và working recommendation — Điều kiện trước khi phê duyệt hoặc triển khai",
+            "## QA và approval gates — Human approval list"
+          ]
+        },
+        {
+          "criterion": "no_private_path",
+          "applicable": true,
+          "status": "pass",
+          "rationale": "No absolute private filesystem path is present; self-disclosure uses repository-relative paths only.",
+          "evidence_locators": [
+            "## (2) Tự kê khai file đã đọc và giới hạn môi trường — paragraph 1",
+            "Whole-file private-path pattern scan"
+          ]
+        }
+      ]
+    },
+    {
+      "case_id": "R120-BEH-002",
+      "output_path": "tests/release-1.2.0/behavioral/document-evidence-limitation.md",
+      "sha256": "e5fd66b1366443402d0a707ed46830e112c80e0d225c3cafddb966298ea92340",
+      "byte_size": 1259,
+      "status": "pass",
+      "status_rationale": "The narrow response correctly treats a missing supplied log as an evidence limitation and does not inflate the task into a full engagement.",
+      "judgments": [
+        {
+          "criterion": "scope_and_proportionality",
+          "applicable": true,
+          "status": "pass",
+          "rationale": "The answer directly resolves the narrow evidence question and asks only for the records needed to validate it.",
+          "evidence_locators": [
+            "### (1) Business response — paragraphs 1-2"
+          ]
+        },
+        {
+          "criterion": "facts_vs_inference_or_proposal",
+          "applicable": true,
+          "status": "pass",
+          "rationale": "The SOP requirement is distinguished from the unsupported inference that the control failed.",
+          "evidence_locators": [
+            "### (1) Business response — paragraph 1"
+          ]
+        },
+        {
+          "criterion": "analysis_layer_and_evidence_truth",
+          "applicable": true,
+          "status": "pass",
+          "rationale": "As-Documented requirement and unassessed As-Performed status are kept separate.",
+          "evidence_locators": [
+            "### (1) Business response — paragraph 1"
+          ]
+        },
+        {
+          "criterion": "no_fabricated_current_control_gap_or_operating_effectiveness",
+          "applicable": true,
+          "status": "pass",
+          "rationale": "The response refuses to infer a gap, failure or operating-effectiveness result from the absent supplied log.",
+          "evidence_locators": [
+            "### (1) Business response — paragraphs 1-2"
+          ]
+        },
+        {
+          "criterion": "no_compliance_claim_without_verified_baseline",
+          "applicable": true,
+          "status": "pass",
+          "rationale": "No compliance conclusion or external baseline claim is made.",
+          "evidence_locators": [
+            "### (1) Business response — full response"
+          ]
+        },
+        {
+          "criterion": "full_scope_r01_r07_rcm_and_options",
+          "applicable": false,
+          "status": "inconclusive",
+          "rationale": "Not applicable to this narrow evidence-limitation question.",
+          "evidence_locators": [
+            "### (2) Self-disclosure — final sentence"
+          ]
+        },
+        {
+          "criterion": "r07_no_change_basis",
+          "applicable": false,
+          "status": "inconclusive",
+          "rationale": "No material verified gap or full R01-R07 scope requires a no-change scenario here.",
+          "evidence_locators": [
+            "### (1) Business response — paragraph 1"
+          ]
+        },
+        {
+          "criterion": "narrow_scope_not_forced_to_full_workflow",
+          "applicable": true,
+          "status": "pass",
+          "rationale": "No registers, RCM, options or unrelated workflow sections are forced into the answer.",
+          "evidence_locators": [
+            "### (1) Business response — full two-paragraph response"
+          ]
+        },
+        {
+          "criterion": "roles_thresholds_scores_owners_and_deadlines",
+          "applicable": true,
+          "status": "pass",
+          "rationale": "The only numeric requirement, two approvals, is attributed to SOP-20 §2; no owner, score, threshold or deadline is invented.",
+          "evidence_locators": [
+            "### (1) Business response — paragraph 1"
+          ]
+        },
+        {
+          "criterion": "approval_and_limitations",
+          "applicable": true,
+          "status": "pass",
+          "rationale": "The evidence, population and operating-effectiveness limitations are explicit; no change requiring a separate approval gate is proposed.",
+          "evidence_locators": [
+            "### (2) Self-disclosure — final sentence"
+          ]
+        },
+        {
+          "criterion": "no_private_path",
+          "applicable": true,
+          "status": "pass",
+          "rationale": "No private absolute path appears in the output.",
+          "evidence_locators": [
+            "### (2) Self-disclosure — full paragraph",
+            "Whole-file private-path pattern scan"
+          ]
+        }
+      ]
+    },
+    {
+      "case_id": "R120-BEH-003",
+      "output_path": "tests/release-1.2.0/behavioral/standards-applicability.md",
+      "sha256": "5154e74199182532828861f75600a3b8e7759a16460d8f1646afa0e985aafd20",
+      "byte_size": 12826,
+      "status": "pass",
+      "status_rationale": "The response refuses unsupported NIST/COBIT compliance and operating conclusions, keeps the chat description as a low-confidence hypothesis, and gives only labelled candidate design proposals.",
+      "judgments": [
+        {
+          "criterion": "scope_and_proportionality",
+          "applicable": true,
+          "status": "pass",
+          "rationale": "The response is bounded to description completeness/testability, candidate risks and provisional design; it identifies the exact evidence needed for a later assessment.",
+          "evidence_locators": [
+            "### Kết luận điều hành — paragraphs 1-3",
+            "### Thông tin cần thu thập để hoàn tất đánh giá"
+          ]
+        },
+        {
+          "criterion": "facts_vs_inference_or_proposal",
+          "applicable": true,
+          "status": "pass",
+          "rationale": "Chat facts, current-state hypotheses, candidate gaps and analyst Target-State proposals are labelled separately.",
+          "evidence_locators": [
+            "### Phạm vi và căn cứ",
+            "### Current-state hypothesis",
+            "### Target-State đề xuất — opening sentence"
+          ]
+        },
+        {
+          "criterion": "analysis_layer_and_evidence_truth",
+          "applicable": true,
+          "status": "pass",
+          "rationale": "The current design is only a hypothesis from management representation; As-Performed is Not assessed and operating evidence is requested rather than assumed.",
+          "evidence_locators": [
+            "### Phạm vi và căn cứ — source/layer/confidence bullets",
+            "### Điều gì có thể và không thể gọi là gap/issue"
+          ]
+        },
+        {
+          "criterion": "no_fabricated_current_control_gap_or_operating_effectiveness",
+          "applicable": true,
+          "status": "pass",
+          "rationale": "Potential gaps, SoD concerns and evidence limitations are not promoted to missing controls, deviations, failures or findings.",
+          "evidence_locators": [
+            "### Candidate risks và control coverage — Phân loại an toàn column",
+            "### Điều gì có thể và không thể gọi là gap/issue — 'Chưa thể gọi' list"
+          ]
+        },
+        {
+          "criterion": "no_compliance_claim_without_verified_baseline",
+          "applicable": true,
+          "status": "pass",
+          "rationale": "The response explicitly requires exact publication/version, clause, adoption, scope and evidence before any NIST/COBIT compliance conclusion.",
+          "evidence_locators": [
+            "### Kết luận điều hành — opening paragraph",
+            "### Điều gì có thể và không thể gọi là gap/issue — NIST/COBIT bullet",
+            "### Thông tin cần thu thập để hoàn tất đánh giá — items 1-2"
+          ]
+        },
+        {
+          "criterion": "full_scope_r01_r07_rcm_and_options",
+          "applicable": false,
+          "status": "inconclusive",
+          "rationale": "This is a limited standards/applicability diagnostic, not a full R01-R07 engagement; omission of a full RCM is proportionate.",
+          "evidence_locators": [
+            "### Kết luận điều hành — paragraph 3"
+          ]
+        },
+        {
+          "criterion": "r07_no_change_basis",
+          "applicable": true,
+          "status": "pass",
+          "rationale": "The voluntarily included no-change section is explicitly a design hypothesis, conditions its premise and acknowledges unknown protections that could materially change exposure.",
+          "evidence_locators": [
+            "### Kịch bản nếu giữ nguyên — all paragraphs"
+          ]
+        },
+        {
+          "criterion": "narrow_scope_not_forced_to_full_workflow",
+          "applicable": true,
+          "status": "pass",
+          "rationale": "The answer does not manufacture a full R01-R07/RCM package; additional risks, options and evidence requests remain tied to the standards/applicability decision.",
+          "evidence_locators": [
+            "### Kết luận điều hành — paragraph 3",
+            "### Target-State đề xuất — Ba mức triển khai"
+          ]
+        },
+        {
+          "criterion": "roles_thresholds_scores_owners_and_deadlines",
+          "applicable": true,
+          "status": "pass",
+          "rationale": "The response does not invent severity, residual score, keyness, frequency, threshold, sample size, owner assignment or deadline; roles in the target design are proposals.",
+          "evidence_locators": [
+            "### Phạm vi và căn cứ — final bullet",
+            "### Target-State đề xuất — items 2 and 8",
+            "### Thông tin cần thu thập để hoàn tất đánh giá — item 7"
+          ]
+        },
+        {
+          "criterion": "approval_and_limitations",
+          "applicable": true,
+          "status": "pass",
+          "rationale": "Authority, SoD, role and ERP/IAM changes are gated by approval; source, evidence, methodology and intended-use limitations are explicit.",
+          "evidence_locators": [
+            "### Target-State đề xuất — paragraph after the three options",
+            "### Thông tin cần thu thập để hoàn tất đánh giá — final paragraph"
+          ]
+        },
+        {
+          "criterion": "no_private_path",
+          "applicable": true,
+          "status": "pass",
+          "rationale": "No absolute private filesystem path is present; self-disclosure uses repository-relative paths.",
+          "evidence_locators": [
+            "## (2) Self-disclosure — file list",
+            "Whole-file private-path pattern scan"
+          ]
+        }
+      ]
+    }
+  ],
+  "limitations": [
+    "Review is limited to the three bound raw outputs and the listed skill/reference/template sources; the model executor was not rerun.",
+    "Underlying business facts, ERP/IAM configuration, transaction populations, operating evidence and management assertions were not independently verified.",
+    "No authoritative NIST/COBIT content or organization-specific adoption evidence was retrieved; BEH-003 is passed for correctly preserving that limitation, not for proving compliance.",
+    "Self-disclosed tool/source traces were reviewed for internal consistency but were not reconstructed from external telemetry."
+  ],
+  "untested_surfaces": [
+    "Cross-host, cross-model and repeated-run behavioral variance",
+    "Formal legal, regulatory, contractual, certification or compliance conclusions",
+    "Operating-effectiveness testing, sampling and full-population analytics",
+    "Live ERP/IAM configuration, access, logging, interface and data-reliability validation",
+    "Structural and deterministic package tests outside these three behavioral raw outputs",
+    "Machine-readable ingestion of the narrative Markdown tables into every optional 1.1.0 template view"
+  ]
+}

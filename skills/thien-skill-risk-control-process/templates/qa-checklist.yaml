@@ -40,6 +40,11 @@ checks:
     assumptions_and_confidence_visible: false
     human_approval_gates_visible: false
     cross_document_tie_out_complete: false
+    full_engagement_includes_r07: false
+    narrow_scope_r07_omission_has_rationale: false
+    only_requested_or_reusable_artifacts_created: false
+    temporary_cache_and_duplicate_exports_not_persisted: false
+    large_artifacts_follow_project_policy_or_are_disclosed: false
   open_world_and_sources:
     seeds_not_treated_as_exhaustive: false
     mapping_scope_and_rationale_visible: false

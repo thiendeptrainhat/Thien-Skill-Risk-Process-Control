@@ -32,6 +32,7 @@ SHA_RE = re.compile(r"^[0-9a-f]{64}$")
 LINE_RE = re.compile(r"^L([1-9][0-9]*)(?:-L([1-9][0-9]*))?$")
 REVIEW_RESULTS = {"pass", "fail", "inconclusive"}
 ACTUAL_ARTIFACTS = {"raw_output", "tool_trace", "execution_record"}
+RUN_ARTIFACT_FIELDS = ("raw_prompt", "raw_output", "tool_trace", "execution_record")
 STATIC_KINDS = {"packaging", "release_evidence"}
 CAPABILITY_CLAIMS = {
     "live_external_lookup", "file_input_parity", "live_document_evidence_handoff",
@@ -596,10 +597,31 @@ class EvidenceValidator:
                 input_keys.add(key)
         snapshot = self.snapshot(raw.get("skill_snapshot"), where + ".skill_snapshot")
         record["snapshot"] = snapshot
-        for field in ("raw_prompt", "raw_output", "tool_trace", "execution_record"):
+        artifact_paths: dict[str, str] = {}
+        artifact_hashes: dict[str, str] = {}
+        for field in RUN_ARTIFACT_FIELDS:
             data = self.artifact(raw.get(field), where + "." + field, text=True)
             if data is not None:
                 record["artifacts"][field] = data
+                pointer = raw[field]
+                resolved = self.root.joinpath(*PurePosixPath(pointer["path"]).parts).resolve()
+                artifact_paths[field] = resolved.relative_to(self.root).as_posix()
+                artifact_hashes[field] = digest(data)
+        for aliases, code, basis in (
+            (artifact_paths, "run-artifact-path-alias", "resolved repository-relative path"),
+            (artifact_hashes, "run-artifact-content-alias", "SHA-256 content hash"),
+        ):
+            grouped: dict[str, list[str]] = {}
+            for field, identity in aliases.items():
+                grouped.setdefault(identity, []).append(field)
+            for identity, fields in grouped.items():
+                if len(fields) > 1:
+                    self.error(
+                        code,
+                        f"Execution artifacts must be pairwise distinct by {basis}; "
+                        f"{', '.join(fields)} alias {identity}.",
+                        where,
+                    )
         # Structured data, extraction packets and supporting images are retained
         # evidence too. Their hashes must not silently escape validation merely
         # because review locators refer to the accompanying narrative/trace.
@@ -615,9 +637,6 @@ class EvidenceValidator:
                 if path in supplemental_paths:
                     self.error("run-additional-duplicate", "Supplementary artifact is listed more than once.", where)
                 supplemental_paths.add(path)
-        prompt_pointer, output_pointer = raw.get("raw_prompt"), raw.get("raw_output")
-        if isinstance(prompt_pointer, dict) and isinstance(output_pointer, dict) and prompt_pointer.get("path") == output_pointer.get("path"):
-            self.error("run-artifact-alias", "Raw output must be retained separately from the raw prompt.", where)
         if "execution_record" in record["artifacts"]:
             try:
                 receipt = strict_json(record["artifacts"]["execution_record"].decode("utf-8"))
@@ -651,14 +670,50 @@ class EvidenceValidator:
             record["status"] = "inconclusive"
 
     def check_retests(self) -> None:
+        structurally_valid: list[tuple[dict[str, Any], dict[str, Any], str]] = []
+
+        def reject(run: dict[str, Any], code: str, message: str) -> None:
+            self.error(code, message, "run:" + run["run_id"])
+            run["valid"], run["status"] = False, "inconclusive"
+
         for run in self.runs.values():
             for prior_id in run["retest_of"]:
                 prior = self.runs.get(prior_id)
-                if (prior is None or prior_id == run["run_id"]
-                        or (prior["case_id"], prior["variant_id"]) != (run["case_id"], run["variant_id"])
-                        or (run["timestamp"] is not None and prior["timestamp"] is not None and run["timestamp"] <= prior["timestamp"])):
-                    self.error("run-retest-link", "Retest must refer to an earlier retained run of the same case/variant.", "run:" + run["run_id"])
-                    run["valid"], run["status"] = False, "inconclusive"
+                if prior is None:
+                    reject(run, "run-retest-link", "Retest refers to a run_id that is not retained in this evidence index.")
+                    continue
+                if prior_id == run["run_id"]:
+                    reject(run, "run-retest-self", "A run cannot be a retest of itself.")
+                    continue
+                if (prior["case_id"], prior["variant_id"]) != (run["case_id"], run["variant_id"]):
+                    reject(run, "run-retest-scope", "Retest and prior run must use the same approved case and variant.")
+                    continue
+                if run["execution_status"] != "executed" or prior["execution_status"] != "executed":
+                    reject(run, "run-retest-execution", "Retest and prior run must both have execution_status=executed.")
+                    continue
+                if run["timestamp"] is None or prior["timestamp"] is None:
+                    reject(run, "run-retest-timestamp", "Retest and prior executed run must both have valid timestamps.")
+                    continue
+                if run["timestamp"] <= prior["timestamp"]:
+                    reject(run, "run-retest-order", "Retest timestamp must be later than its prior executed run.")
+                    continue
+                structurally_valid.append((run, prior, prior_id))
+
+        # A prior record can become invalid while validating its own retest link,
+        # regardless of index order. Propagate that invalidity through the acyclic
+        # (strictly time-ordered) retest graph instead of trusting list position.
+        reported: set[tuple[str, str]] = set()
+        changed = True
+        while changed:
+            changed = False
+            for run, prior, prior_id in structurally_valid:
+                link = (run["run_id"], prior_id)
+                if not prior["valid"] and link not in reported:
+                    was_valid = run["valid"]
+                    reject(run, "run-retest-prior-invalid",
+                           "Retest cannot rely on a prior record that failed evidence validation.")
+                    reported.add(link)
+                    changed = changed or was_valid
 
     def read_group(self, pointer: Any, number: int) -> None:
         where = f"group_reviews[{number}]"

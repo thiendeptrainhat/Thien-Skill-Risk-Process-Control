@@ -180,6 +180,11 @@ class Phase3EvidenceValidatorTests(unittest.TestCase):
         self.assertIn(code, [error["code"] for error in report["errors"]], report["errors"])
         self.assertEqual(report["acceptance_status"], "incomplete")
 
+    def new_fixture(self) -> SyntheticReceiptFixture:
+        temporary = tempfile.TemporaryDirectory(prefix="rpc-evidence-verifier-only-")
+        self.addCleanup(temporary.cleanup)
+        return SyntheticReceiptFixture(Path(temporary.name))
+
     def claim(self, report: dict, name: str = "core_business_logic", index: int = 0) -> dict:
         return report["claims_by_context"][index]["claims"][name]
 
@@ -324,6 +329,24 @@ class Phase3EvidenceValidatorTests(unittest.TestCase):
         run["raw_output"]["path"] = link.relative_to(self.fixture.root).as_posix()
         self.assertError(self.fixture.result(), "artifact-symlink")
 
+    def test_execution_artifacts_must_have_pairwise_distinct_resolved_paths(self) -> None:
+        fields = ("raw_prompt", "raw_output", "tool_trace", "execution_record")
+        for left_number, left in enumerate(fields):
+            for right in fields[left_number + 1:]:
+                with self.subTest(left=left, right=right):
+                    fixture = self.new_fixture()
+                    run = fixture.add_run()
+                    run[right] = copy.deepcopy(run[left])
+                    self.assertError(fixture.result(), "run-artifact-path-alias")
+
+    def test_execution_artifacts_must_have_distinct_hashes_even_at_different_paths(self) -> None:
+        run = self.fixture.add_run()
+        output_bytes = (self.fixture.root / run["raw_output"]["path"]).read_text(encoding="utf-8")
+        run["tool_trace"] = self.fixture.write(run["tool_trace"]["path"], output_bytes)
+        report = self.fixture.result()
+        self.assertError(report, "run-artifact-content-alias")
+        self.assertNotIn("run-artifact-path-alias", [error["code"] for error in report["errors"]])
+
     def test_model_case_requires_recorded_fresh_context(self) -> None:
         run = self.fixture.add_run()
         run["runtime"]["fresh_context"] = False
@@ -355,6 +378,79 @@ class Phase3EvidenceValidatorTests(unittest.TestCase):
         run = self.fixture.add_run()
         run["retest_of"] = ["a-missing-run"]
         self.assertError(self.fixture.result(), "run-retest-link")
+
+    def test_retest_cannot_self_reference(self) -> None:
+        run = self.fixture.add_run()
+        run["retest_of"] = [run["run_id"]]
+        self.assertError(self.fixture.result(), "run-retest-self")
+
+    def test_retest_must_use_same_case_and_variant(self) -> None:
+        case = self.fixture.find_case("P1-U01")
+        case["variants"] = [{"variant_id": "P1-U01-V01"}, {"variant_id": "P1-U01-V02"}]
+        self.fixture.save_matrix()
+        self.fixture.add_run("synthetic-prior", variant_id="P1-U01-V01", minute=0)
+        current = self.fixture.add_run("synthetic-current", variant_id="P1-U01-V02", minute=1)
+        current["retest_of"] = ["synthetic-prior"]
+        self.assertError(self.fixture.result(), "run-retest-scope")
+
+    def test_retest_rejects_blocked_prior(self) -> None:
+        prior = self.fixture.add_run("synthetic-prior", minute=0)
+        prior.update(execution_status="blocked", review=None)
+        current = self.fixture.add_run("synthetic-current", minute=1)
+        current["retest_of"] = ["synthetic-prior"]
+        self.assertError(self.fixture.result(), "run-retest-execution")
+
+    def test_retest_rejects_not_run_prior(self) -> None:
+        prior = self.fixture.add_run("synthetic-prior", minute=0)
+        prior.update(execution_status="not_run", review=None)
+        current = self.fixture.add_run("synthetic-current", minute=1)
+        current["retest_of"] = ["synthetic-prior"]
+        self.assertError(self.fixture.result(), "run-retest-execution")
+
+    def test_retest_rejects_invalid_prior_record(self) -> None:
+        prior = self.fixture.add_run("synthetic-prior", minute=0)
+        self.fixture.write(prior["raw_output"]["path"], "Changed prior bytes.\n")
+        current = self.fixture.add_run("synthetic-current", minute=1)
+        current["retest_of"] = ["synthetic-prior"]
+        self.assertError(self.fixture.result(), "run-retest-prior-invalid")
+
+    def test_retest_propagates_prior_link_invalidity_independent_of_index_order(self) -> None:
+        current = self.fixture.add_run("synthetic-current", minute=2)
+        current["retest_of"] = ["synthetic-prior"]
+        prior = self.fixture.add_run("synthetic-prior", minute=1)
+        prior["retest_of"] = ["a-missing-run"]
+        self.assertError(self.fixture.result(), "run-retest-prior-invalid")
+
+    def test_retest_rejects_prior_without_timestamp(self) -> None:
+        prior = self.fixture.add_run("synthetic-prior", minute=0)
+        prior.pop("timestamp")
+        current = self.fixture.add_run("synthetic-current", minute=1)
+        current["retest_of"] = ["synthetic-prior"]
+        self.assertError(self.fixture.result(), "run-retest-timestamp")
+
+    def test_retest_rejects_current_without_timestamp(self) -> None:
+        self.fixture.add_run("synthetic-prior", minute=0)
+        current = self.fixture.add_run("synthetic-current", minute=1)
+        current.pop("timestamp")
+        current["retest_of"] = ["synthetic-prior"]
+        self.assertError(self.fixture.result(), "run-retest-timestamp")
+
+    def test_retest_rejects_non_later_timestamp(self) -> None:
+        self.fixture.add_run("synthetic-prior", minute=1)
+        current = self.fixture.add_run("synthetic-current", minute=0)
+        current["retest_of"] = ["synthetic-prior"]
+        self.assertError(self.fixture.result(), "run-retest-order")
+
+    def test_retest_allows_valid_executed_prior_with_failed_or_missing_review(self) -> None:
+        for result in ("fail", None):
+            with self.subTest(prior_review_result=result):
+                fixture = self.new_fixture()
+                fixture.add_run("synthetic-prior", result=result, minute=0)
+                current = fixture.add_run("synthetic-current", minute=1)
+                current["retest_of"] = ["synthetic-prior"]
+                report = fixture.result()
+                self.assertEqual(report["integrity_status"], "pass", report["errors"])
+                self.assertEqual(self.claim(report)["status"], "verified")
 
     def test_same_time_retests_are_not_cherry_picked(self) -> None:
         self.fixture.add_run("synthetic-pass", result="pass")

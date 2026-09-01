@@ -1,10 +1,10 @@
 skill_id: thien-skill-risk-control-process
 skill_name: thien-skill-risk-control-process
 display_name: Thien-Skill-Risk-Control-Process
-version: "1.1.1"
+version: "1.2.0"
 baseline_release: "1.0.0"
-release_state: release_candidate
-status: provisional
+release_state: released
+status: active
 owner: Tran Ngoc Thien
 domain: governance-risk-and-control
 subdomains:
@@ -174,8 +174,8 @@ failure_modes:
   - prohibited-production-or-external-action
   - specialist-capability-unavailable
 fallback_skill: null
-last_reviewed: "2026-08-28"
-metadata_state: provisional
+last_reviewed: "2026-09-01"
+metadata_state: reviewed
 runtime_verification:
   verified: false
   evidence: >-

@@ -1,0 +1,64 @@
+{
+  "schema_version": "1.0",
+  "policy_status": "project_default_requires_owner_review_when_changed",
+  "junk_names": [
+    ".DS_Store",
+    "__pycache__",
+    ".pytest_cache",
+    ".mypy_cache",
+    ".ruff_cache",
+    ".coverage",
+    "htmlcov"
+  ],
+  "junk_suffixes": [
+    ".pyc",
+    ".pyo"
+  ],
+  "excluded_roots": [
+    ".git"
+  ],
+  "private_path_patterns": [
+    "/Users/",
+    "C:\\Users\\"
+  ],
+  "allowed_private_path_files": [
+    "tests/rename-1.1.1/quick-validator.txt",
+    "tests/rename-1.1.1/validation-record.json"
+  ],
+  "limits": {
+    "max_file_bytes": 3145728,
+    "max_release_directory_bytes": 8388608,
+    "max_dist_bytes": 33554432
+  },
+  "retention": {
+    "immutable_historical_prefixes": [
+      "docs/phase-1/",
+      "docs/phase-2/",
+      "docs/phase-3/",
+      "tests/phase-3/documentation-snapshots/",
+      "tests/phase-3/fixtures/",
+      "tests/phase-3/reviews/",
+      "tests/phase-3/runs/",
+      "tests/phase-3/snapshots/",
+      "tests/phase-3/static/",
+      "tests/release-1.2.0/",
+      "dist/"
+    ],
+    "immutable_historical_files": [
+      "tests/acceptance-report.md",
+      "tests/behavioral-report.md",
+      "tests/deterministic-results.json",
+      "tests/forward-test-results.json",
+      "tests/phase-3/README.md",
+      "tests/phase-3/acceptance-matrix.json",
+      "tests/phase-3/acceptance-results.json",
+      "tests/phase-3/evidence-index.json",
+      "tests/phase-3/fixture-manifest.json",
+      "tests/phase-3/harness.md"
+    ],
+    "rule": "Do not delete, rewrite, relabel, or compact frozen historical evidence or release artifacts without explicit owner approval and a replacement provenance plan."
+  },
+  "new_file_rule": "Every new retained file needs a clear purpose, discoverability path, provenance where relevant, and retention decision. Temporary and duplicate outputs stay outside the repository.",
+  "public_receipt_rule": "New public receipts must redact local usernames and absolute host paths. Frozen Phase 3 evidence from 1.1.0 and the two allowlisted 1.1.1 receipts are historical exceptions and must not be silently rewritten.",
+  "threshold_basis": "The limits provide controlled headroom above the 1.1.1 baseline: files under 2.36 MB, release directories about 7.1 MB, and dist about 21.2 MB. Changing a limit requires explicit owner review."
+}

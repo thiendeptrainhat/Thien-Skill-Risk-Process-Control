@@ -338,6 +338,8 @@ Không triển khai automation trước khi chốt requirement, process standard
 
 Đối chiếu cải tiến với trường hợp giữ nguyên: risk driver, protection hiện có, exposure còn lại và điều kiện cần xác minh. Dùng no-change scenario trong [gaps-rationalization-rcm.md](gaps-rationalization-rcm.md); không tự lượng hóa loss/probability hoặc coi sự cố tương lai là chắc chắn. Chỉ gán owner, due date và resources khi có căn cứ.
 
+Nếu người dùng yêu cầu engagement đầy đủ theo R01–R07, luôn có một kết quả riêng cho R07. Với greenfield hoặc khi current gap chưa được chứng minh, dùng `scenario_basis: Design hypothesis` hoặc `Unverified gap hypothesis`: mô tả điều có thể xảy ra nếu không thiết lập thiết kế tối thiểu, ghi existing protection là `Not provided` khi chưa có dữ kiện, và nêu uncertainty/validation needed. Không biến giả thuyết này thành current deficiency hoặc incident.
+
 ## 9. Approval và tiêu chí chấp nhận
 
 Yêu cầu human approval trước khi:

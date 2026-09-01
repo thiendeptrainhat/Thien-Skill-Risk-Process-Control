@@ -226,6 +226,8 @@ For each material gap, use `no_change_scenarios` in [control-baseline-comparison
 
 An unverified gap supports a labelled hypothesis, not a confirmed current deficiency. A future risk is not evidence of an incident. For greenfield work without current-state evidence, state that no current baseline is available; assess defined design options without fabricating a weak current state.
 
+When a full R01–R07 engagement is requested, do not omit R07 merely because the work is greenfield or no material current gap is proven. Provide a separate design/no-change hypothesis with current protections marked `Not provided` where appropriate, causal exposure, uncertainty and validation needs. For a narrow request, omit it when not applicable and state the scope rather than expanding the engagement.
+
 ## 7. Thiết kế RCM nhiều-nhiều
 
 Bảo toàn các quan hệ sau:

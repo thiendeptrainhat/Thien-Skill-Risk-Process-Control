@@ -11,7 +11,9 @@ from __future__ import annotations
 import argparse
 import hashlib
 import json
+import os
 import re
+import stat
 import struct
 import sys
 from pathlib import Path
@@ -112,9 +114,38 @@ def display_path(path: Path, skill_path: Path) -> str:
         return path.name
 
 
+def absolute_no_resolve(path: Path) -> Path:
+    return Path(os.path.abspath(os.fspath(path)))
+
+
+def symlink_component(path: Path) -> Path | None:
+    path = absolute_no_resolve(path)
+    for component in [*reversed(path.parents), path]:
+        try:
+            if stat.S_ISLNK(component.lstat().st_mode):
+                return component
+        except FileNotFoundError:
+            return None
+    return None
+
+
+def read_binary(path: Path) -> bytes:
+    if symlink_component(path) is not None:
+        raise OSError(f"symbolic-link path is not readable: {path}")
+    flags = os.O_RDONLY | getattr(os, "O_CLOEXEC", 0) | getattr(os, "O_NOFOLLOW", 0)
+    descriptor = os.open(path, flags)
+    try:
+        if not stat.S_ISREG(os.fstat(descriptor).st_mode):
+            raise OSError(f"not a regular file: {path}")
+        with os.fdopen(descriptor, "rb", closefd=False) as handle:
+            return handle.read()
+    finally:
+        os.close(descriptor)
+
+
 def read_text(path: Path, report: Report) -> str | None:
     try:
-        return path.read_text(encoding="utf-8")
+        return read_binary(path).decode("utf-8")
     except (OSError, UnicodeError) as exc:
         report.error("read-error", f"Cannot read UTF-8 text: {exc}", path)
         return None
@@ -413,8 +444,7 @@ def validate_template_ids(skill_path: Path, report: Report) -> None:
 
 
 def png_dimensions(path: Path) -> tuple[int, int]:
-    with path.open("rb") as handle:
-        header = handle.read(24)
+    header = read_binary(path)[:24]
     if len(header) < 24 or header[:8] != b"\x89PNG\r\n\x1a\n" or header[12:16] != b"IHDR":
         raise ValueError("not a valid PNG header")
     return struct.unpack(">II", header[16:24])
@@ -441,11 +471,7 @@ def validate_assets(skill_path: Path, report: Report) -> None:
 
 
 def sha256(path: Path) -> str:
-    digest = hashlib.sha256()
-    with path.open("rb") as handle:
-        for chunk in iter(lambda: handle.read(1024 * 1024), b""):
-            digest.update(chunk)
-    return digest.hexdigest()
+    return hashlib.sha256(read_binary(path)).hexdigest()
 
 
 def validate_license_copies(skill_path: Path, repo_root: Path | None, report: Report) -> None:
@@ -453,7 +479,7 @@ def validate_license_copies(skill_path: Path, repo_root: Path | None, report: Re
     if repo_root is None:
         report.checks["license_copies"] = "not_requested"
         return
-    repo_root = repo_root.resolve()
+    repo_root = absolute_no_resolve(repo_root)
     for relative in LICENSE_FILES:
         root_file = repo_root / relative
         skill_file = skill_path / relative
@@ -479,9 +505,39 @@ def validate_license_copies(skill_path: Path, repo_root: Path | None, report: Re
 
 def validate_symlinks(skill_path: Path, report: Report) -> None:
     before = len(report.errors)
-    for path in sorted(skill_path.rglob("*")):
-        if path.is_symlink():
+
+    try:
+        unsafe_parent = symlink_component(skill_path)
+    except OSError as exc:
+        report.error("symlink-scan", f"Cannot inspect package path: {exc}", skill_path)
+        report.mark("no_symlinks", before)
+        return
+    if unsafe_parent is not None:
+        report.error("symlink", "Release packages must not use a symbolic-link path.", unsafe_parent)
+        report.mark("no_symlinks", before)
+        return
+
+    def scan(path: Path) -> None:
+        try:
+            metadata = path.lstat()
+        except OSError as exc:
+            report.error("symlink-scan", f"Cannot inspect package entry: {exc}", path)
+            return
+        if stat.S_ISLNK(metadata.st_mode):
             report.error("symlink", "Release packages must not contain symbolic links.", path)
+            return
+        if not stat.S_ISDIR(metadata.st_mode):
+            return
+        try:
+            with os.scandir(path) as iterator:
+                children = sorted(iterator, key=lambda entry: entry.name)
+        except OSError as exc:
+            report.error("symlink-scan", f"Cannot inspect package directory: {exc}", path)
+            return
+        for child in children:
+            scan(path / child.name)
+
+    scan(skill_path)
     report.mark("no_symlinks", before)
 
 
@@ -511,20 +567,23 @@ def build_parser() -> argparse.ArgumentParser:
 
 def main(argv: list[str] | None = None) -> int:
     args = build_parser().parse_args(argv)
-    skill_path = args.skill_path.resolve()
-    target = resolve_target(skill_path, args.target)
-    report = Report(skill_path, target)
+    skill_path = absolute_no_resolve(args.skill_path)
+    report = Report(skill_path, args.target)
 
-    validate_required_structure(skill_path, report, target)
-    if skill_path.is_dir():
-        validate_frontmatter(skill_path, report)
-        validate_symlinks(skill_path, report)
-        validate_markdown_links(skill_path, report)
-        validate_sensitive_and_unfinished_text(skill_path, report)
-        validate_structured_files(skill_path, report)
-        validate_template_ids(skill_path, report)
-        validate_assets(skill_path, report)
-        validate_license_copies(skill_path, args.repo_root, report)
+    # This metadata-only preflight must precede target detection and every read.
+    validate_symlinks(skill_path, report)
+    if report.checks["no_symlinks"] == "pass":
+        target = resolve_target(skill_path, args.target)
+        report.target = target
+        validate_required_structure(skill_path, report, target)
+        if skill_path.is_dir():
+            validate_frontmatter(skill_path, report)
+            validate_markdown_links(skill_path, report)
+            validate_sensitive_and_unfinished_text(skill_path, report)
+            validate_structured_files(skill_path, report)
+            validate_template_ids(skill_path, report)
+            validate_assets(skill_path, report)
+            validate_license_copies(skill_path, args.repo_root, report)
 
     payload = report.payload()
     if args.json:

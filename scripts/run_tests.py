@@ -13,13 +13,19 @@ from __future__ import annotations
 
 import argparse
 import json
+import os
 import re
+import stat
 import subprocess
 import sys
 from collections import Counter
 from datetime import datetime, timezone
 from pathlib import Path
 from typing import Any
+
+from safe_filesystem import (
+    absolute_no_resolve, atomic_write_many, read_regular_bytes, reject_symlink_chain,
+)
 
 
 EXPECTED_COUNTS = {
@@ -69,6 +75,7 @@ ALLOWED_MODES = {
 ALLOWED_RISK_LEVELS = {"low", "medium", "high", "critical"}
 CASE_ID_RE = re.compile(r"^(?:RPC-|TC-)?([A-M])[-_]?(\d{2,3})$")
 COVERAGE_ROW_RE = re.compile(r"^\|\s*`([A-M]\d{2})`\s*\|", re.MULTILINE)
+HYGIENE_POLICY_NAME = "REPOSITORY-HYGIENE.json"
 
 
 class TestReport:
@@ -86,6 +93,183 @@ class TestReport:
 
     def mark(self, check: str, before: int) -> None:
         self.checks[check] = "pass" if len(self.errors) == before else "fail"
+
+
+def normalized_policy_path(value: Any, field: str) -> str:
+    if not isinstance(value, str) or not value or "\\" in value:
+        raise ValueError(f"{field} entries must be non-empty repository-relative POSIX paths")
+    path = Path(value)
+    if path.is_absolute() or value.startswith("/") or any(part in {"", ".", ".."} for part in path.parts):
+        raise ValueError(f"{field} contains an unsafe path: {value!r}")
+    normalized = path.as_posix()
+    if normalized != value:
+        raise ValueError(f"{field} path is not normalized: {value!r}")
+    return normalized
+
+
+def unique_string_list(value: Any, field: str, *, allow_empty: bool = False) -> list[str]:
+    if not isinstance(value, list) or not all(isinstance(item, str) for item in value):
+        raise ValueError(f"{field} must be an array of strings")
+    if (not allow_empty and not value) or any(not item or "\x00" in item for item in value):
+        raise ValueError(f"{field} entries must be non-empty strings")
+    if len(set(value)) != len(value):
+        raise ValueError(f"{field} must not contain duplicates")
+    return value
+
+
+def load_hygiene_policy(repo_root: Path) -> dict[str, Any]:
+    path = repo_root / HYGIENE_POLICY_NAME
+    data = read_regular_bytes(path, repo_root, "repository hygiene policy")
+
+    def reject_duplicates(pairs: list[tuple[str, Any]]) -> dict[str, Any]:
+        value: dict[str, Any] = {}
+        for key, item in pairs:
+            if key in value:
+                raise ValueError(f"Duplicate policy key: {key}")
+            value[key] = item
+        return value
+
+    def reject_constant(value: str) -> None:
+        raise ValueError(f"Non-finite policy value: {value}")
+
+    try:
+        policy = json.loads(
+            data,
+            object_pairs_hook=reject_duplicates,
+            parse_constant=reject_constant,
+        )
+    except (UnicodeError, json.JSONDecodeError) as exc:
+        raise ValueError(f"Malformed {HYGIENE_POLICY_NAME}: {exc}") from exc
+    if not isinstance(policy, dict):
+        raise ValueError(f"{HYGIENE_POLICY_NAME} root must be an object")
+    if policy.get("schema_version") != "1.0":
+        raise ValueError("schema_version must be exactly '1.0'")
+
+    junk_names = unique_string_list(policy.get("junk_names"), "junk_names", allow_empty=True)
+    junk_suffixes = unique_string_list(policy.get("junk_suffixes"), "junk_suffixes", allow_empty=True)
+    if any("/" in item or "\\" in item for item in [*junk_names, *junk_suffixes]):
+        raise ValueError("junk_names and junk_suffixes must contain basenames/suffixes, not paths")
+
+    excluded_raw = unique_string_list(policy.get("excluded_roots"), "excluded_roots", allow_empty=True)
+    excluded_roots = [normalized_policy_path(item, "excluded_roots") for item in excluded_raw]
+    private_patterns = unique_string_list(
+        policy.get("private_path_patterns", []),
+        "private_path_patterns",
+        allow_empty=True,
+    )
+    allowed_private_raw = unique_string_list(
+        policy.get("allowed_private_path_files", []),
+        "allowed_private_path_files",
+        allow_empty=True,
+    )
+    allowed_private = [
+        normalized_policy_path(item, "allowed_private_path_files") for item in allowed_private_raw
+    ]
+
+    limits = policy.get("limits")
+    if not isinstance(limits, dict):
+        raise ValueError("limits must be an object")
+    parsed_limits: dict[str, int] = {}
+    for name in ("max_file_bytes", "max_release_directory_bytes", "max_dist_bytes"):
+        value = limits.get(name)
+        if isinstance(value, bool) or not isinstance(value, int) or value <= 0:
+            raise ValueError(f"limits.{name} must be a positive integer")
+        parsed_limits[name] = value
+
+    return {
+        "junk_names": frozenset(junk_names),
+        "junk_suffixes": tuple(junk_suffixes),
+        "excluded_roots": frozenset(excluded_roots),
+        # These fields are validated for a future immutable-occurrence manifest.
+        # They are deliberately not used for a blanket content scan: the current
+        # repository contains frozen historical receipts that cannot be rewritten,
+        # while a broad Phase-3 exclusion would silently exempt future evidence.
+        "private_path_patterns": tuple(private_patterns),
+        "allowed_private_path_files": frozenset(allowed_private),
+        "limits": parsed_limits,
+    }
+
+
+def validate_repository_hygiene(repo_root: Path, report: TestReport) -> bool:
+    """Apply the root hygiene policy without following any symbolic link."""
+    before = len(report.errors)
+    repo_root = absolute_no_resolve(repo_root)
+    try:
+        reject_symlink_chain(repo_root, "repository root")
+        metadata = repo_root.lstat()
+        if not stat.S_ISDIR(metadata.st_mode):
+            raise ValueError(f"Repository root is not a directory: {repo_root}")
+        policy = load_hygiene_policy(repo_root)
+    except (OSError, ValueError) as exc:
+        report.error("hygiene-policy", str(exc))
+        report.mark("repository_hygiene", before)
+        return False
+
+    release_sizes: dict[str, int] = {}
+    dist_size = 0
+
+    def walk(directory: Path, relative: Path) -> None:
+        nonlocal dist_size
+        try:
+            with os.scandir(directory) as iterator:
+                entries = sorted(iterator, key=lambda entry: entry.name)
+        except OSError as exc:
+            report.error("hygiene-scan", f"Cannot inspect {relative.as_posix() or '.'}: {exc}")
+            return
+        for entry in entries:
+            child = directory / entry.name
+            child_relative = relative / entry.name
+            child_name = entry.name
+            child_key = child_relative.as_posix()
+            try:
+                child_metadata = entry.stat(follow_symlinks=False)
+            except OSError as exc:
+                report.error("hygiene-scan", f"Cannot inspect {child_key}: {exc}")
+                continue
+
+            if stat.S_ISLNK(child_metadata.st_mode):
+                report.error("hygiene-symlink", f"Symbolic link is not permitted: {child_key}")
+                continue
+            if child_name in policy["junk_names"] or any(
+                child_name.endswith(suffix) for suffix in policy["junk_suffixes"]
+            ):
+                report.error("hygiene-junk", f"Repository junk is not permitted: {child_key}")
+
+            if child_key in policy["excluded_roots"]:
+                continue
+            if stat.S_ISDIR(child_metadata.st_mode):
+                walk(child, child_relative)
+                continue
+            if not stat.S_ISREG(child_metadata.st_mode):
+                report.error("hygiene-special", f"Special file is not permitted: {child_key}")
+                continue
+
+            size = child_metadata.st_size
+            if size > policy["limits"]["max_file_bytes"]:
+                report.error(
+                    "hygiene-file-size",
+                    f"File exceeds limits.max_file_bytes ({size} bytes): {child_key}",
+                )
+            if child_relative.parts[:1] == ("dist",):
+                dist_size += size
+                if len(child_relative.parts) >= 3:
+                    release = child_relative.parts[1]
+                    release_sizes[release] = release_sizes.get(release, 0) + size
+
+    walk(repo_root, Path())
+    for release, size in sorted(release_sizes.items()):
+        if size > policy["limits"]["max_release_directory_bytes"]:
+            report.error(
+                "hygiene-release-size",
+                f"dist/{release} exceeds limits.max_release_directory_bytes ({size} bytes)",
+            )
+    if dist_size > policy["limits"]["max_dist_bytes"]:
+        report.error(
+            "hygiene-dist-size",
+            f"dist exceeds limits.max_dist_bytes ({dist_size} bytes)",
+        )
+    report.mark("repository_hygiene", before)
+    return len(report.errors) == before
 
 
 def expected_ids() -> set[str]:
@@ -391,16 +575,16 @@ def render_acceptance_report(payload: dict[str, Any]) -> str:
 
 
 def write_results(repo_root: Path, payload: dict[str, Any]) -> None:
+    """Publish both result files atomically per file, rolling back group failure."""
+    repo_root = absolute_no_resolve(repo_root)
     tests_dir = repo_root / "tests"
-    tests_dir.mkdir(parents=True, exist_ok=True)
-    (tests_dir / "deterministic-results.json").write_text(
-        json.dumps(payload, ensure_ascii=False, indent=2, sort_keys=True) + "\n",
-        encoding="utf-8",
-    )
-    (tests_dir / "acceptance-report.md").write_text(
-        render_acceptance_report(payload),
-        encoding="utf-8",
-    )
+    outputs = {
+        tests_dir / "deterministic-results.json": (
+            json.dumps(payload, ensure_ascii=False, indent=2, sort_keys=True) + "\n"
+        ).encode("utf-8"),
+        tests_dir / "acceptance-report.md": render_acceptance_report(payload).encode("utf-8"),
+    }
+    atomic_write_many(outputs, repo_root, "result destination")
 
 
 def build_parser() -> argparse.ArgumentParser:
@@ -442,7 +626,19 @@ def main(argv: list[str] | None = None) -> int:
         or args.phase3_evidence != "tests/phase-3/evidence-index.json"
     ):
         parser.error("--phase3-matrix and --phase3-evidence require --phase3.")
-    repo_root = args.repo_root.resolve()
+    repo_root = absolute_no_resolve(args.repo_root)
+    report = TestReport()
+    hygiene_ok = validate_repository_hygiene(repo_root, report)
+    if not hygiene_ok:
+        payload = result_payload(report, [])
+        if args.json:
+            print(json.dumps(payload, ensure_ascii=False, indent=2, sort_keys=True))
+        else:
+            print("Deterministic acceptance: FAIL")
+            print("Cases: 0 / 104 (payload checks blocked by repository hygiene)")
+            for item in report.errors:
+                print(f"ERROR {item['code']}: {item['message']}")
+        return 1
     if (args.phase3
             and args.phase3_matrix == "tests/phase-3/acceptance-matrix.json"
             and (repo_root / "skills/thien-skill-risk-control-process").is_dir()
@@ -452,7 +648,6 @@ def main(argv: list[str] | None = None) -> int:
             "Use python3 -B scripts/verify_rename.py --historical to validate "
             "that frozen baseline; do not re-label historical runs as 1.1.1 evidence."
         )
-    report = TestReport()
     cases = load_cases(repo_root / "tests" / "cases.yaml", report)
     normalized = validate_catalog(cases, report)
     validate_coverage_matrix(repo_root, normalized, report)
@@ -487,7 +682,7 @@ def main(argv: list[str] | None = None) -> int:
     if args.write_results:
         try:
             write_results(repo_root, payload)
-        except OSError as exc:
+        except (OSError, ValueError) as exc:
             print(f"ERROR result-write: {exc}", file=sys.stderr)
             return 2
 

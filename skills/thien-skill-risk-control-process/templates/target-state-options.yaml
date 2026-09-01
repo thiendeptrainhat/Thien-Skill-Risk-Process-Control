@@ -1,5 +1,5 @@
 template: "target-state-options"
-schema_version: "1.0.0"
+schema_version: "1.1.0"
 output_metadata:
   analysis_layers:
     - "Target-State"
@@ -21,11 +21,19 @@ design_context:
 option_requirement:
   material_tradeoff_exists: "To be validated"
   minimum_option_count: null
+  mandatory_baseline_status: "Not assessed"
+  mandatory_baseline_references: []
+  compliance_label_eligibility: "Not eligible until the mandatory baseline is verified and the option is compared against it"
   rationale: null
 candidate_option_profiles:
-  - "Minimum compliant"
+  - "Minimum-control proposal — compliance unverified"
   - "Balanced control and efficiency"
   - "Leading practice or automation-first"
+conditional_profile_labels:
+  minimum_compliant:
+    label: "Minimum compliant"
+    eligible_when: "mandatory_baseline_status is Verified and comparison evidence is linked"
+    fallback_label: "Minimum-control proposal — compliance unverified"
 options:
   - option_id: null
     analysis_layer: "Target-State"
@@ -52,3 +60,9 @@ recommendation:
   conditions: []
   human_approval_required: true
   review_status: "Not reviewed"
+no_change_requirement:
+  required_for_full_r01_r07_engagement: true
+  scenario_basis: null
+  existing_protection_status: "Not provided"
+  uncertainty_and_validation_needed: []
+  omission_rationale_if_narrow_scope: null

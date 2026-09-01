@@ -74,9 +74,9 @@ Trong cột module, `M01`–`M11` là mã module. Trong cột test hoặc bảng
 | `XLI` | Acceptance criteria | `M10` | `M01`–`M09` | Requirement coverage, validation result, test-status split, limitations and approval status | Toàn bộ `A01`–`M09` |
 | `XLII` | Completion report | `M10` | `M09` | Design/path/tree/files/sources/patterns/conflicts/tests/limits/registry/examples/security confirmations | `G03`, `M06`–`M09` |
 
-## Upgrade coverage: target 1.1.0 (unreleased)
+## Upgrade coverage inherited from the 1.1.0 design baseline
 
-This is an implementation trace, not a test result or a release approval. The 94 seed profiles remain a discovery aid, not a closed scope. Module and template links below describe the upgrade contract; behavioral, live-lookup, document-ingestion and cross-platform claims require their own retained execution evidence.
+This is the design trace inherited from the 1.1.0 design baseline by later releases, not a current test result or release approval. The 94 seed profiles remain a discovery aid, not a closed scope. Module and template links below describe the upgrade contract; behavioral, live-lookup, document-ingestion and cross-platform claims require their own retained execution evidence.
 
 | Requirement | Runtime modules | Templates / records | Trace to preserve |
 |---|---|---|---|

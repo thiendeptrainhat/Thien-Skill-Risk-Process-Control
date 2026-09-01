@@ -33,3 +33,19 @@ Tuyên bố này chỉ xác định Tài liệu được cấp phép; nó không
 - **Supersession:** License 2.0 supersedes all prior license texts that remained draft or unreleased for the covered skill version. This Declaration does not itself extinguish rights validly accrued under an effective agreement where applicable law does not permit that result.
 
 This Declaration identifies Licensed Material only; it does not itself grant usage rights. Rights arise only under a valid Paid Order, Written Permission, or Commercial Agreement under the master license.
+
+## Phụ lục áp dụng phát hành 1.2.0 / Release Application Addendum
+
+### Bản tiếng Việt (ưu tiên áp dụng)
+
+- **Phiên bản phát hành bổ sung được áp dụng:** `1.2.0`.
+- **Ngày áp dụng bổ sung:** `1 September 2026`.
+- **Tình trạng repository tại ngày áp dụng bổ sung:** PUBLIC — `https://github.com/thiendeptrainhat/Thien-Skill-Risk-Control-Process`.
+- **Điều khoản kiểm soát:** phụ lục này chỉ mở rộng phạm vi phiên bản được áp dụng; không sửa, thay thế hoặc diễn giải lại điều khoản của `LICENSE`, metadata lịch sử ngày `28 August 2026`, hay quyền đối với tài liệu bên thứ ba.
+
+### English version (Vietnamese version prevails)
+
+- **Current release covered version:** `1.2.0`.
+- **Additional application date:** `1 September 2026`.
+- **Repository status on the additional application date:** PUBLIC — `https://github.com/thiendeptrainhat/Thien-Skill-Risk-Control-Process`.
+- **Controlling terms:** this addendum only extends the covered release version; it does not amend, replace, or reinterpret `LICENSE`, the historical metadata dated `28 August 2026`, or rights in third-party material.
