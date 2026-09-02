@@ -1,7 +1,7 @@
 skill_id: thien-skill-risk-control-process
 skill_name: thien-skill-risk-control-process
-display_name: Thien-Skill-Risk-Control-Process
-version: "1.2.0"
+display_name: "Thiện's Skill — Risk-Control-Process Intelligence"
+version: "1.2.1"
 baseline_release: "1.0.0"
 release_state: released
 status: active
@@ -174,7 +174,7 @@ failure_modes:
   - prohibited-production-or-external-action
   - specialist-capability-unavailable
 fallback_skill: null
-last_reviewed: "2026-09-01"
+last_reviewed: "2026-09-02"
 metadata_state: reviewed
 runtime_verification:
   verified: false

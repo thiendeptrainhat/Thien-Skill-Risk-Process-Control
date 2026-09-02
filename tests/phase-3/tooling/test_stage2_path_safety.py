@@ -245,6 +245,17 @@ class Stage2PathSafetyTests(unittest.TestCase):
                 report.errors,
             )
 
+        with self.temporary() as name:
+            repo = Path(name) / "repo"
+            release = repo / "dist" / "1.0.0"
+            release.mkdir(parents=True)
+            (release / "a.bin").write_bytes(b"a" * 8)
+            policy = self.policy()
+            policy["limits"]["max_dist_bytes"] = None
+            (repo / "REPOSITORY-HYGIENE.json").write_text(json.dumps(policy))
+            report = run_tests.TestReport()
+            self.assertTrue(run_tests.validate_repository_hygiene(repo, report), report.errors)
+
         for policy_text in (
             None, "{", '{"junk_names": [], "junk_names": []}',
             json.dumps({key: value for key, value in self.policy().items() if key != "schema_version"}),

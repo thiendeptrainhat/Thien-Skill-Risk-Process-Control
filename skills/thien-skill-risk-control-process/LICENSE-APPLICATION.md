@@ -49,3 +49,23 @@ This Declaration identifies Licensed Material only; it does not itself grant usa
 - **Additional application date:** `1 September 2026`.
 - **Repository status on the additional application date:** PUBLIC — `https://github.com/thiendeptrainhat/Thien-Skill-Risk-Control-Process`.
 - **Controlling terms:** this addendum only extends the covered release version; it does not amend, replace, or reinterpret `LICENSE`, the historical metadata dated `28 August 2026`, or rights in third-party material.
+
+## Phụ lục áp dụng phát hành 1.2.1 / Release Application Addendum
+
+### Bản tiếng Việt (ưu tiên áp dụng)
+
+- **Phiên bản phát hành bổ sung được áp dụng:** `1.2.1`.
+- **Ngày áp dụng bổ sung:** `2 September 2026`.
+- **Tên hiển thị hiện hành:** `Thiện's Skill — Risk-Control-Process Intelligence`.
+- **Định danh kỹ thuật được giữ nguyên:** skill ID `thien-skill-risk-control-process`, repository và tên cơ sở của package `Thien-Skill-Risk-Control-Process`.
+- **Tình trạng repository tại ngày áp dụng bổ sung:** PUBLIC — `https://github.com/thiendeptrainhat/Thien-Skill-Risk-Control-Process`.
+- **Điều khoản kiểm soát:** phụ lục này chỉ mở rộng phạm vi phiên bản được áp dụng và ghi nhận tên hiển thị; không sửa, thay thế hoặc diễn giải lại điều khoản của `LICENSE`, các metadata lịch sử, hay quyền đối với tài liệu bên thứ ba.
+
+### English version (Vietnamese version prevails)
+
+- **Current release covered version:** `1.2.1`.
+- **Additional application date:** `2 September 2026`.
+- **Current display name:** `Thiện's Skill — Risk-Control-Process Intelligence`.
+- **Technical identity retained:** skill ID `thien-skill-risk-control-process`, repository, and package basename `Thien-Skill-Risk-Control-Process`.
+- **Repository status on the additional application date:** PUBLIC — `https://github.com/thiendeptrainhat/Thien-Skill-Risk-Control-Process`.
+- **Controlling terms:** this addendum only extends the covered release version and records the display name; it does not amend, replace, or reinterpret `LICENSE`, historical metadata, or rights in third-party material.

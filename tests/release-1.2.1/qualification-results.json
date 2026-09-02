@@ -1,0 +1,64 @@
+{
+  "behavioral_evaluations": [],
+  "deterministic_gates": {
+    "archive_integrity_and_normalized_parity": "pass",
+    "canonical_package_validator": "pass",
+    "display_name_and_technical_identity_regression": "pass",
+    "metadata_and_license_application_parity": "pass",
+    "release_builder_reproducibility": "pass",
+    "repository_hygiene_with_unlimited_aggregate_dist": "pass",
+    "tooling_unit_tests": "pass"
+  },
+  "inherited_behavioral_evidence": {
+    "qualification_report": "tests/release-1.2.0/qualification-results.json",
+    "qualification_report_sha256": "6ae1794e240bbb50ce1c437a1a004658bcf0c7d3898f415f7208e563f71c723b",
+    "relationship": "inherited_not_reexecuted_or_relabelled",
+    "source_release": "1.2.0"
+  },
+  "limitations": [
+    "No new behavioral model run was performed for release 1.2.1; the three retained scenarios remain attributed only to release 1.2.0.",
+    "The skill-creator quick validator was unavailable under the default Python because PyYAML is not installed; no dependency was installed.",
+    "Deterministic and packaging gates do not establish live-platform discovery, activation, or behavioral equivalence."
+  ],
+  "publication_authority": "owner_authorized",
+  "qualification_kind": "metadata_only_patch",
+  "release_version": "1.2.1",
+  "schema_version": "1.1",
+  "source_bindings": [
+    {
+      "path": "REPOSITORY-HYGIENE.json",
+      "sha256": "d87461810564ccbf984db1a50477b1615519a3e22321c5cac91617981dae35dc"
+    },
+    {
+      "path": "scripts/build_release.py",
+      "sha256": "9e63b71fd1f54ed5246181cc0c5e9ccbbf4b92f71a2043955a55a8c36b38754d"
+    },
+    {
+      "path": "scripts/run_tests.py",
+      "sha256": "5165889e979e4a2b8af428a387565712a656b72d85417c3a1ea46944a967e1bf"
+    },
+    {
+      "path": "skills/thien-skill-risk-control-process/LICENSE-APPLICATION.md",
+      "sha256": "9e29d62d99ec026bba9e4dd6d1f4295325ca9098941daedc6be90915d9d9df20"
+    },
+    {
+      "path": "skills/thien-skill-risk-control-process/SKILL.md",
+      "sha256": "12ffe085521c62df2c3a4545c53118e30384a6ed769ecbcf0475b61894d384d9"
+    },
+    {
+      "path": "skills/thien-skill-risk-control-process/agents/openai.yaml",
+      "sha256": "c42a8496283e9d655f60fedbce30a2eb87d923a6e7509c3ec18d9cb6c9f769bf"
+    },
+    {
+      "path": "skills/thien-skill-risk-control-process/integration/master-orchestrator-registry-entry.yaml",
+      "sha256": "825d5db837c77c6c63e0542d05e3a4f17be754704554647c3dca84f135549802"
+    }
+  ],
+  "status": "pass",
+  "untested_surfaces": [
+    "Claude live behavioral execution",
+    "ChatGPT live behavioral execution",
+    "Native installation and discovery",
+    "Cross-platform behavioral equivalence"
+  ]
+}

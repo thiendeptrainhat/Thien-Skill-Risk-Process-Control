@@ -82,7 +82,7 @@ class ReleaseBuilderTests(unittest.TestCase):
         self.staged = staged.start()
         self.addCleanup(staged.stop)
 
-    def write_hygiene_policy(self, **limit_overrides: int) -> None:
+    def write_hygiene_policy(self, **limit_overrides: int | None) -> None:
         limits = {
             "max_file_bytes": 4 * 1024 * 1024,
             "max_release_directory_bytes": 10 * 1024 * 1024,
@@ -197,7 +197,7 @@ class ReleaseBuilderTests(unittest.TestCase):
                     else f"{builder.SKILL_ID}/")
             lines.extend([
                 f'    - target: "{manifest_target}"',
-                f'      filename: "{builder.DISPLAY_NAME}-v1.2.0-'
+                f'      filename: "{builder.PACKAGE_BASENAME}-v1.2.0-'
                 f'{builder.PACKAGE_LABELS[target]}.zip"',
                 f'      archive_root: "{root}"',
                 f'      sha256: "{hashes[target]}"',
@@ -257,7 +257,7 @@ class ReleaseBuilderTests(unittest.TestCase):
             repository / "skills" / builder.SKILL_ID,
             allow_pending_hashes=True,
         )
-        self.assertEqual(declarations["version"], "1.2.0")
+        self.assertEqual(declarations["version"], "1.2.1")
         self.assertEqual(declarations["display_name"], builder.DISPLAY_NAME)
         self.assertEqual(set(declarations["packages"]), set(builder.PACKAGE_LABELS))
 
@@ -265,12 +265,12 @@ class ReleaseBuilderTests(unittest.TestCase):
         original = self.manifest_text
         claude_root = f'      archive_root: "{builder.SKILL_ID}/"\n'
         claude_filename = (
-            f'      filename: "{builder.DISPLAY_NAME}-v1.2.0-Claude.zip"\n'
+            f'      filename: "{builder.PACKAGE_BASENAME}-v1.2.0-Claude.zip"\n'
         )
         claude_hash = f'      sha256: "{self.package_hashes["claude"]}"\n'
         universal_block = (
             '    - target: "universal-agents"\n'
-            f'      filename: "{builder.DISPLAY_NAME}-v1.2.0-Universal.zip"\n'
+            f'      filename: "{builder.PACKAGE_BASENAME}-v1.2.0-Universal.zip"\n'
             f'      archive_root: ".agents/skills/{builder.SKILL_ID}/"\n'
             f'      sha256: "{self.package_hashes["universal"]}"\n'
         )
@@ -481,6 +481,10 @@ class ReleaseBuilderTests(unittest.TestCase):
         historical = '- **Covered skill versions:** `1.1.1`.\n'
         current = '- **Current release covered version:** `1.2.0`.\n'
         builder.validate_license_application_coverage(historical + current, "1.2.0")
+        builder.validate_license_application_coverage(
+            historical + current + '- **Current release covered version:** `1.2.1`.\n',
+            "1.2.1",
+        )
         builder.validate_license_application_coverage(historical, "1.1.1")
         builder.validate_license_application_coverage(
             historical + '- **Current release covered version:** `1.1.1`.\n',
@@ -510,9 +514,83 @@ class ReleaseBuilderTests(unittest.TestCase):
         declarations = builder.release_declarations(self.root, self.skill)
         qualification = declarations["qualification"]
         self.assertEqual(qualification["status"], "pass")
+        self.assertEqual(qualification["qualification_kind"], "full_behavioral")
         self.assertEqual(qualification["behavioral_evaluations_reviewed_pass"], 1)
         self.assertEqual(qualification["source_binding_count"], 1)
         self.assertEqual(qualification["publication_authority"], "owner_authorized")
+
+    def test_metadata_only_patch_preserves_prior_behavioral_attribution(self) -> None:
+        inherited_path = self.qualification_path
+        inherited_hash = hashlib.sha256(inherited_path.read_bytes()).hexdigest()
+        self.qualification_path = (
+            self.root / "tests" / "release-1.2.1" / "qualification-report.json"
+        )
+        source = self.skill / "SKILL.md"
+        payload: dict[str, object] = {
+            "schema_version": "1.1",
+            "release_version": "1.2.1",
+            "status": "pass",
+            "qualification_kind": "metadata_only_patch",
+            "source_bindings": [{
+                "path": source.relative_to(self.root).as_posix(),
+                "sha256": hashlib.sha256(source.read_bytes()).hexdigest(),
+            }],
+            "behavioral_evaluations": [],
+            "inherited_behavioral_evidence": {
+                "source_release": "1.2.0",
+                "qualification_report": inherited_path.relative_to(self.root).as_posix(),
+                "qualification_report_sha256": inherited_hash,
+                "relationship": "inherited_not_reexecuted_or_relabelled",
+            },
+            "deterministic_gates": {"metadata_parity": "pass"},
+            "untested_surfaces": ["No new behavioral model run for 1.2.1"],
+            "limitations": ["Prior evidence remains attributed to release 1.2.0."],
+            "publication_authority": "owner_authorized",
+        }
+        digest = self.write_qualification_report(payload)
+        manifest_121 = self.manifest_text.replace("1.2.0", "1.2.1")
+        manifest_121 = manifest_121.replace(self.qualification_hash, digest, 1)
+        manifest_121 = manifest_121.replace(
+            "fresh_context_behavioral_scenarios_reviewed_pass: 1",
+            "fresh_context_behavioral_scenarios_reviewed_pass: 0",
+            1,
+        )
+        self.manifest.write_text(manifest_121, encoding="utf-8")
+        registry = self.skill / "integration" / "master-orchestrator-registry-entry.yaml"
+        registry.write_text('version: "1.2.1"\n', encoding="utf-8")
+        application = self.root / "LICENSE-APPLICATION.md"
+        application.write_text(
+            '- **Covered skill versions:** `1.1.1`.\n'
+            '- **Current release covered version:** `1.2.0`.\n'
+            '- **Current release covered version:** `1.2.1`.\n',
+            encoding="utf-8",
+        )
+        (self.skill / application.name).write_bytes(application.read_bytes())
+
+        declarations = builder.release_declarations(self.root, self.skill)
+        qualification = declarations["qualification"]
+        self.assertEqual(qualification["qualification_kind"], "metadata_only_patch")
+        self.assertEqual(qualification["behavioral_evaluations_reviewed_pass"], 0)
+        self.assertEqual(
+            qualification["inherited_behavioral_evidence"]["source_release"], "1.2.0"
+        )
+        self.assertEqual(
+            qualification["inherited_behavioral_evidence"][
+                "behavioral_evaluations_in_source_report"
+            ],
+            1,
+        )
+
+        payload["inherited_behavioral_evidence"]["relationship"] = "relabelled"  # type: ignore[index]
+        digest = self.write_qualification_report(payload)
+        self.manifest.write_text(
+            manifest_121.replace(
+                declarations["qualification"]["sha256"], digest, 1
+            ),
+            encoding="utf-8",
+        )
+        with self.assertRaisesRegex(RuntimeError, "inherited_not_reexecuted_or_relabelled"):
+            builder.release_declarations(self.root, self.skill)
 
     def test_qualification_report_contract_rejections(self) -> None:
         mutations: list[tuple[str, dict[str, object], str]] = []
@@ -668,6 +746,10 @@ class ReleaseBuilderTests(unittest.TestCase):
         with self.assertRaisesRegex(RuntimeError, "max_dist_bytes"):
             builder.build_packages(self.root)
         self.assertFalse((self.root / "dist").exists())
+
+        self.write_hygiene_policy(max_dist_bytes=None)
+        report = builder.build_packages(self.root)
+        self.assertEqual(report["validation"]["staged_release_hygiene"], "pass")
 
     def test_hygiene_rejects_junk_symlink_special_and_strict_policy(self) -> None:
         artifacts = self.root / "staged"

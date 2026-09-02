@@ -4,7 +4,7 @@ description: "Phân tích, tư vấn quy trình từ chat/PDF/Word/SOP: E2E mở
 license: LicenseRef-Tran-Ngoc-Thien-Skills-2.0; see LICENSE
 ---
 
-# Thien-Skill-Risk-Control-Process
+# Thiện's Skill — Risk-Control-Process Intelligence
 
 ## Mục đích
 

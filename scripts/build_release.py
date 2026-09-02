@@ -29,7 +29,8 @@ from typing import Any
 
 
 SKILL_ID = "thien-skill-risk-control-process"
-DISPLAY_NAME = "Thien-Skill-Risk-Control-Process"
+DISPLAY_NAME = "Thiện's Skill — Risk-Control-Process Intelligence"
+PACKAGE_BASENAME = "Thien-Skill-Risk-Control-Process"
 FIXED_ZIP_TIME = (2026, 8, 13, 0, 0, 0)
 PACKAGE_LABELS = {
     "claude": "Claude",
@@ -97,10 +98,17 @@ PUBLICATION_FIELDS = {
     "github_release": str,
     "installed_skills": str,
 }
-QUALIFICATION_REPORT_FIELDS = {
+QUALIFICATION_REPORT_V10_FIELDS = {
     "schema_version", "release_version", "status", "source_bindings",
     "behavioral_evaluations", "deterministic_gates", "untested_surfaces",
     "limitations", "publication_authority",
+}
+QUALIFICATION_REPORT_V11_FIELDS = QUALIFICATION_REPORT_V10_FIELDS | {
+    "qualification_kind", "inherited_behavioral_evidence",
+}
+INHERITED_BEHAVIORAL_EVIDENCE_FIELDS = {
+    "source_release", "qualification_report", "qualification_report_sha256",
+    "relationship",
 }
 SOURCE_BINDING_FIELDS = {"path", "sha256"}
 BEHAVIORAL_EVALUATION_FIELDS = {
@@ -167,10 +175,29 @@ def validate_license_application_coverage(application_text: str, version: str) -
                 f"release version {version}."
             )
         return
-    if current != [expected_current]:
+    if not current or current[-1] != expected_current:
         raise RuntimeError(
-            "LICENSE-APPLICATION.md must contain exactly one Current release "
-            f"covered version declaration for {version}."
+            "LICENSE-APPLICATION.md final Current release covered version "
+            f"declaration must cover {version}."
+        )
+    current_versions: list[tuple[int, int, int]] = []
+    for declaration in current:
+        match = re.fullmatch(
+            r"- \*\*Current release covered version:\*\* `([0-9]+)\.([0-9]+)\.([0-9]+)`\.",
+            declaration,
+        )
+        if match is None:
+            raise RuntimeError(
+                "LICENSE-APPLICATION.md Current release covered version declarations "
+                "must use the exact version-label format."
+            )
+        current_versions.append(tuple(int(part) for part in match.groups()))
+    if len(current_versions) != len(set(current_versions)) or any(
+        later <= earlier for earlier, later in zip(current_versions, current_versions[1:])
+    ):
+        raise RuntimeError(
+            "LICENSE-APPLICATION.md Current release covered version declarations "
+            "must be unique and strictly increasing."
         )
 
 
@@ -465,7 +492,7 @@ def release_declarations(repo_root: Path, canonical: Path, *,
         target = MANIFEST_TARGETS[manifest_target]
         if target in declared_packages:
             raise RuntimeError(f"Duplicate release package target: {manifest_target!r}.")
-        expected_filename = f"{DISPLAY_NAME}-v{version}-{PACKAGE_LABELS[target]}.zip"
+        expected_filename = f"{PACKAGE_BASENAME}-v{version}-{PACKAGE_LABELS[target]}.zip"
         expected_root = (f".agents/skills/{SKILL_ID}/" if target == "universal"
                          else f"{SKILL_ID}/")
         if package["filename"] != expected_filename:
@@ -734,11 +761,15 @@ def load_hygiene_policy(repo_root: Path) -> dict[str, Any]:
             + ", ".join(sorted(HYGIENE_LIMIT_FIELDS))
             + "."
         )
-    parsed_limits: dict[str, int] = {}
+    parsed_limits: dict[str, int | None] = {}
     for field in HYGIENE_LIMIT_FIELDS:
         value = limits[field]
+        if field == "max_dist_bytes" and value is None:
+            parsed_limits[field] = None
+            continue
         if type(value) is not int or value <= 0:
-            raise RuntimeError(f"limits.{field} must be a positive integer.")
+            qualifier = "a positive integer or null" if field == "max_dist_bytes" else "a positive integer"
+            raise RuntimeError(f"limits.{field} must be {qualifier}.")
         parsed_limits[field] = value
     return {
         "junk_names": frozenset(junk_names),
@@ -766,7 +797,7 @@ def reject_private_path_bytes(data: bytes, patterns: tuple[str, ...], label: str
 
 def validate_qualification_report(repo_root: Path, version: str,
                                   verification: dict[str, Any]) -> dict[str, Any]:
-    """Bind a passing, independently reviewed qualification report to this release."""
+    """Bind full or explicitly inherited qualification evidence to this release."""
     policy = load_hygiene_policy(repo_root)
     report_path = verification["qualification_report"]
     _, raw = repository_file(repo_root, report_path, "qualification report")
@@ -775,14 +806,24 @@ def validate_qualification_report(repo_root: Path, version: str,
         raise RuntimeError("Qualification report SHA-256 does not match the manifest.")
     reject_private_path_bytes(raw, policy["private_path_patterns"], "qualification report")
     report = strict_json_bytes(raw, "qualification report")
-    if not isinstance(report, dict) or set(report) != QUALIFICATION_REPORT_FIELDS:
+    if not isinstance(report, dict):
+        raise RuntimeError("Qualification report must be a JSON object.")
+    schema_version = report.get("schema_version")
+    expected_fields = (
+        QUALIFICATION_REPORT_V10_FIELDS
+        if schema_version == "1.0"
+        else QUALIFICATION_REPORT_V11_FIELDS
+        if schema_version == "1.1"
+        else None
+    )
+    if expected_fields is None:
+        raise RuntimeError("Qualification report schema_version must be '1.0' or '1.1'.")
+    if set(report) != expected_fields:
         raise RuntimeError(
             "Qualification report must contain exactly: "
-            + ", ".join(sorted(QUALIFICATION_REPORT_FIELDS))
+            + ", ".join(sorted(expected_fields))
             + "."
         )
-    if report["schema_version"] != "1.0":
-        raise RuntimeError("Qualification report schema_version must be exactly '1.0'.")
     if report["release_version"] != version:
         raise RuntimeError("Qualification report release_version does not match the manifest.")
     if report["status"] != "pass":
@@ -812,13 +853,88 @@ def validate_qualification_report(repo_root: Path, version: str,
             raise RuntimeError(f"source_bindings[{index}] bytes do not match the recorded SHA-256.")
 
     evaluations = report["behavioral_evaluations"]
-    if not isinstance(evaluations, list) or not evaluations:
-        raise RuntimeError("Qualification report behavioral_evaluations must be a nonempty list.")
+    if not isinstance(evaluations, list):
+        raise RuntimeError("Qualification report behavioral_evaluations must be a list.")
+    if schema_version == "1.0" and not evaluations:
+        raise RuntimeError(
+            "Qualification report schema 1.0 behavioral_evaluations must be nonempty."
+        )
     expected_count = verification["fresh_context_behavioral_scenarios_reviewed_pass"]
     if len(evaluations) != expected_count:
         raise RuntimeError(
             "Qualification behavioral evaluation count does not match the manifest."
         )
+    qualification_kind = "full_behavioral"
+    inherited_summary: dict[str, Any] | None = None
+    if schema_version == "1.0":
+        pass
+    else:
+        qualification_kind = report["qualification_kind"]
+        if qualification_kind != "metadata_only_patch":
+            raise RuntimeError(
+                "Qualification report schema 1.1 qualification_kind must be "
+                "'metadata_only_patch'."
+            )
+        if evaluations or expected_count != 0:
+            raise RuntimeError(
+                "Metadata-only patch qualification must record zero new behavioral evaluations."
+            )
+        inherited = report["inherited_behavioral_evidence"]
+        if not isinstance(inherited, dict) or set(inherited) != INHERITED_BEHAVIORAL_EVIDENCE_FIELDS:
+            raise RuntimeError(
+                "inherited_behavioral_evidence must contain exactly: "
+                + ", ".join(sorted(INHERITED_BEHAVIORAL_EVIDENCE_FIELDS))
+                + "."
+            )
+        source_release = inherited["source_release"]
+        if (not isinstance(source_release, str)
+                or not re.fullmatch(r"(?:0|[1-9][0-9]*)\.(?:0|[1-9][0-9]*)\.(?:0|[1-9][0-9]*)", source_release)
+                or source_release == version):
+            raise RuntimeError(
+                "Metadata-only patch qualification source_release must be a different stable version."
+            )
+        if inherited["relationship"] != "inherited_not_reexecuted_or_relabelled":
+            raise RuntimeError(
+                "Metadata-only patch qualification relationship must be "
+                "'inherited_not_reexecuted_or_relabelled'."
+            )
+        inherited_path, inherited_raw = repository_file(
+            repo_root,
+            inherited["qualification_report"],
+            "inherited behavioral qualification report",
+        )
+        inherited_hash = inherited["qualification_report_sha256"]
+        if (not isinstance(inherited_hash, str)
+                or not re.fullmatch(r"[0-9a-f]{64}", inherited_hash)
+                or hashlib.sha256(inherited_raw).hexdigest() != inherited_hash):
+            raise RuntimeError("Inherited behavioral qualification report SHA-256 is invalid.")
+        reject_private_path_bytes(
+            inherited_raw,
+            policy["private_path_patterns"],
+            "inherited behavioral qualification report",
+        )
+        inherited_report = strict_json_bytes(
+            inherited_raw, "inherited behavioral qualification report"
+        )
+        if (not isinstance(inherited_report, dict)
+                or inherited_report.get("schema_version") != "1.0"
+                or inherited_report.get("release_version") != source_release
+                or inherited_report.get("status") != "pass"
+                or not isinstance(inherited_report.get("behavioral_evaluations"), list)
+                or not inherited_report["behavioral_evaluations"]):
+            raise RuntimeError(
+                "Inherited behavioral qualification report must be a passing schema 1.0 "
+                "report with nonempty behavioral evaluations for source_release."
+            )
+        inherited_summary = {
+            "source_release": source_release,
+            "qualification_report": inherited_path,
+            "qualification_report_sha256": inherited_hash,
+            "relationship": inherited["relationship"],
+            "behavioral_evaluations_in_source_report": len(
+                inherited_report["behavioral_evaluations"]
+            ),
+        }
     seen_ids: set[str] = set()
     seen_outputs: set[str] = set()
     for index, evaluation in enumerate(evaluations):
@@ -877,7 +993,9 @@ def validate_qualification_report(repo_root: Path, version: str,
         "report": report_path,
         "sha256": actual_hash,
         "source_binding_count": len(bindings),
+        "qualification_kind": qualification_kind,
         "behavioral_evaluations_reviewed_pass": len(evaluations),
+        "inherited_behavioral_evidence": inherited_summary,
         "deterministic_gates": dict(sorted(gates.items())),
         "untested_surfaces": untested,
         "limitations": limitations,
@@ -1125,7 +1243,8 @@ def validate_staged_release_hygiene(repo_root: Path, version: str,
                 existing, policy, f"existing dist/{version}"
             )
     prospective = current_dist_size - replaced_release_size + staged_size
-    if prospective > policy["limits"]["max_dist_bytes"]:
+    max_dist_bytes = policy["limits"]["max_dist_bytes"]
+    if max_dist_bytes is not None and prospective > max_dist_bytes:
         raise RuntimeError(
             "Prospective dist exceeds limits.max_dist_bytes "
             f"({prospective} bytes)."
@@ -1147,6 +1266,23 @@ def packaging_report(version: str, validation: dict[str, Any], packages: dict[st
     behavioral = registry.get("behavioral", {})
     if not isinstance(behavioral, dict):
         behavioral = {}
+    metadata_only = qualification["qualification_kind"] == "metadata_only_patch"
+    behavioral_status = (
+        "not_run_metadata_only_patch_with_inherited_prior_release_evidence"
+        if metadata_only else "pass_via_retained_qualification_report"
+    )
+    behavioral_note = (
+        "No new behavioral model run was performed for this metadata-only patch. "
+        "The referenced prior-release qualification remains attributed to its original release "
+        "and is neither re-executed nor relabelled."
+        if metadata_only else
+        "Builder verified retained report structure, hashes, independence flags and pass statuses; "
+        "it does not authenticate executor identity or independently re-grade semantics."
+    )
+    release_acceptance = (
+        "metadata_only_patch_qualified_with_prior_behavioral_evidence_preserved"
+        if metadata_only else "qualified_by_retained_report"
+    )
     return {
         "builder": "build_release.py",
         "report_kind": "packaging_verification",
@@ -1176,20 +1312,20 @@ def packaging_report(version: str, validation: dict[str, Any], packages: dict[st
             "scope": "Same canonical snapshot and Python/zlib runtime; byte-identical ZIPs.",
         },
         "behavioral": {
-            "status": "pass_via_retained_qualification_report",
-            "evidence_verified": True,
+            "status": behavioral_status,
+            "evidence_verified": not metadata_only,
             "qualification_report": qualification["report"],
             "qualification_report_sha256": qualification["sha256"],
             "fresh_context_scenarios_reviewed_pass": (
                 qualification["behavioral_evaluations_reviewed_pass"]
             ),
+            "inherited_behavioral_evidence": qualification[
+                "inherited_behavioral_evidence"
+            ],
             "registry_reported_status": behavioral.get("status", "not_provided"),
-            "note": (
-                "Builder verified retained report structure, hashes, independence flags and pass statuses; "
-                "it does not authenticate executor identity or independently re-grade semantics."
-            ),
+            "note": behavioral_note,
         },
-        "release_acceptance": "qualified_by_retained_report",
+        "release_acceptance": release_acceptance,
         "qualification": qualification,
         "canonical_file_sha256": canonical_hashes,
         "packages": packages,

@@ -1,3 +1,47 @@
+# Handoff — Thiện's Skill — Risk-Control-Process Intelligence 1.2.1
+
+Cập nhật: **02/09/2026**. Đây là patch metadata đổi Display Name từ `Thien-Skill-Risk-Control-Process` sang `Thiện's Skill — Risk-Control-Process Intelligence`. Skill ID `thien-skill-risk-control-process`, repository public, URL và basename package `Thien-Skill-Risk-Control-Process` giữ nguyên. Nội dung nghiệp vụ, license terms, logo và bằng chứng lịch sử không thay đổi.
+
+## Phạm vi 1.2.1
+
+- Cập nhật Display Name trong canonical skill, OpenAI UI metadata, registry, README và hướng dẫn cài đặt.
+- Nâng phiên bản hiện hành từ `1.2.0` lên `1.2.1`; nối phụ lục `LICENSE-APPLICATION.md` để mở rộng phạm vi phiên bản mà không sửa điều khoản hoặc metadata cũ.
+- Theo xác nhận của owner ngày 02/09/2026, `max_dist_bytes` là `null`: không giới hạn tổng `dist` vì các release bất biến được giữ tích lũy. Gate 3 MiB/file và 8 MiB/release directory vẫn giữ.
+- Qualification `1.2.1` là metadata-only: 0 behavioral model run mới. Ba scenario đã review vẫn chỉ thuộc `1.2.0`; hồ sơ `1.2.1` tham chiếu report cũ bằng path/hash với quan hệ `inherited_not_reexecuted_or_relabelled`.
+- Không cài skill vào runtime local và không thay đổi các release directory cũ.
+
+## Artifacts 1.2.1
+
+| Artifact | SHA-256 | Kích thước |
+|---|---|---:|
+| `Thien-Skill-Risk-Control-Process-v1.2.1-Claude.zip` | `d74630ef43541f50926f6f7b9bee5941bb84789f39c9691f778b82becaefc623` | 2,359,346 bytes |
+| `Thien-Skill-Risk-Control-Process-v1.2.1-ChatGPT.zip` | `f069348eec07d90788cc22083d91588d231c97074928859009a61533f7c23b20` | 2,359,836 bytes |
+| `Thien-Skill-Risk-Control-Process-v1.2.1-Universal.zip` | `6f8d848648d0c6da7cc552c0e7b77ae7cc73eb18320a886d4656066b61d65d64` | 2,361,306 bytes |
+
+Builder dựng lặp lại byte-identical và `dist/1.2.1/` được kiểm tra theo `SHA256SUMS`; tổng `dist` có thể vượt 32 MiB theo policy mới nhưng từng file/release vẫn trong ngưỡng.
+
+## Giới hạn
+
+- Live Claude/ChatGPT behavior, native installation/discovery và cross-platform equivalence không được chạy cho patch này.
+- Deterministic/package gates chỉ chứng minh metadata, cấu trúc, parity, checksum và policy trong phạm vi đã chạy; không biến bằng chứng `1.2.0` thành chứng nhận nghiệp vụ mới cho `1.2.1`.
+- `skill-creator` quick validator cần PyYAML nhưng Python mặc định không có dependency này; không tự cài thêm. Validator đi kèm skill và các gate dự án được ghi riêng.
+
+## Lệnh xác minh 1.2.1
+
+```bash
+python3 -B scripts/run_tests.py --json
+python3 -B tests/phase-3/tooling/inspect_release.py
+python3 -B skills/thien-skill-risk-control-process/scripts/validate_package.py \
+  skills/thien-skill-risk-control-process
+(cd dist/1.2.1 && shasum -a 256 -c SHA256SUMS)
+```
+
+Chi tiết package, checksum, qualification report và publication state hiện hành nằm trong `RELEASE-MANIFEST.yaml`, `tests/release-1.2.1/` và `dist/1.2.1/`.
+
+---
+
+> Phần dưới là handoff `1.2.0` được giữ làm lịch sử; không sửa hoặc diễn giải lại bằng chứng của release đó.
+
 # Handoff — Thien-Skill-Risk-Control-Process 1.2.0
 
 Cập nhật: **01/09/2026**. Đây là minor functional release sau ba giai đoạn baseline QA, hardening/tinh gọn và release qualification. Tên hiển thị vẫn là `Thien-Skill-Risk-Control-Process`, skill ID vẫn là `thien-skill-risk-control-process`, repository vẫn public. Nhánh `main` được qualification từ cây có baseline `38e30011371d1aafe1f4b715c65fdd74b76b6396`; trạng thái commit/push cuối cùng phải được đối chiếu trực tiếp bằng Git history.

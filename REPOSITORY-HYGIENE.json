@@ -28,7 +28,7 @@
   "limits": {
     "max_file_bytes": 3145728,
     "max_release_directory_bytes": 8388608,
-    "max_dist_bytes": 33554432
+    "max_dist_bytes": null
   },
   "retention": {
     "immutable_historical_prefixes": [
@@ -42,6 +42,7 @@
       "tests/phase-3/snapshots/",
       "tests/phase-3/static/",
       "tests/release-1.2.0/",
+      "tests/release-1.2.1/",
       "dist/"
     ],
     "immutable_historical_files": [
@@ -60,5 +61,5 @@
   },
   "new_file_rule": "Every new retained file needs a clear purpose, discoverability path, provenance where relevant, and retention decision. Temporary and duplicate outputs stay outside the repository.",
   "public_receipt_rule": "New public receipts must redact local usernames and absolute host paths. Frozen Phase 3 evidence from 1.1.0 and the two allowlisted 1.1.1 receipts are historical exceptions and must not be silently rewritten.",
-  "threshold_basis": "The limits provide controlled headroom above the 1.1.1 baseline: files under 2.36 MB, release directories about 7.1 MB, and dist about 21.2 MB. Changing a limit requires explicit owner review."
+  "threshold_basis": "Per-file and per-release-directory limits retain controlled headroom above the 1.1.1 baseline: files under 2.36 MB and release directories about 7.1 MB. The owner explicitly removed the aggregate dist-size cap on 2026-09-02 because retained immutable releases are expected to accumulate; max_dist_bytes null means unlimited. Future changes still require explicit owner review."
 }

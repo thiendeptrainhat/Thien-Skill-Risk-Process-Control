@@ -2,15 +2,21 @@
   <img src="skills/thien-skill-risk-control-process/assets/logo-1100.png" alt="Logo TDTN" width="220">
 </p>
 
-# Thien-Skill-Risk-Control-Process
+# Thiện's Skill — Risk-Control-Process Intelligence
 
-## Giới thiệu skill và điểm mới trong 1.2.0
+## Giới thiệu skill và điểm mới trong 1.2.1
 
-**Thien-Skill-Risk-Control-Process** là skill phân tích và tư vấn một hoặc nhiều quy trình từ chat, PDF, Word, SOP và bằng chứng liên quan. Skill giúp xác định quy trình E2E phù hợp, risks, expected/current controls, gaps, phương án cải tiến và rủi ro nếu giữ nguyên.
+**Thiện's Skill — Risk-Control-Process Intelligence** là skill phân tích và tư vấn một hoặc nhiều quy trình từ chat, PDF, Word, SOP và bằng chứng liên quan. Skill giúp xác định quy trình E2E phù hợp, risks, expected/current controls, gaps, phương án cải tiến và rủi ro nếu giữ nguyên.
 
 Đây là một skill lõi có phạm vi E2E mở, không bị giới hạn bởi một danh mục quy trình cố định. Ba gói Claude, ChatGPT và Universal dùng chung canonical business content; chúng chỉ khác wrapper thư mục và metadata nền tảng.
 
-### Cải tiến chính của bản 1.2.0
+### Thay đổi của bản 1.2.1
+
+`1.2.1` là patch metadata đổi Display Name sang **Thiện's Skill — Risk-Control-Process Intelligence**. Skill ID `thien-skill-risk-control-process`, repository và tên cơ sở của các ZIP `Thien-Skill-Risk-Control-Process` được giữ nguyên để bảo toàn discovery path, liên kết và tương thích nâng cấp. Nội dung nghiệp vụ, license, logo và bằng chứng `1.2.0` không bị diễn giải lại.
+
+Theo xác nhận của owner ngày 02/09/2026, tổng `dist` không còn bị chặn ở 32 MiB vì các release bất biến được giữ tích lũy. Giới hạn 3 MiB cho từng file và 8 MiB cho từng release directory vẫn được áp dụng.
+
+### Cải tiến nghiệp vụ nền của bản 1.2.0
 
 | Cải tiến | Giá trị thực tế |
 |---|---|
@@ -20,7 +26,7 @@
 | Artifact hygiene | Chỉ giữ deliverable được yêu cầu hoặc tài nguyên tái sử dụng có mục đích; hạn chế cache, file tạm, export trùng, archive rebuild và binary lớn không được quản lý |
 | Release qualification độc lập | Có ba fresh-context scenarios được review độc lập, deterministic/tooling regressions, checksum/parity/CRC và policy bảo toàn bằng chứng lịch sử |
 
-Phiên bản `1.2.0` không thay skill thành công cụ phê duyệt, certification hoặc audit opinion. Kết quả vẫn là phân tích/đề xuất có nguồn, assumptions và giới hạn bằng chứng để người có thẩm quyền xem xét.
+Phiên bản `1.2.1` không thay skill thành công cụ phê duyệt, certification hoặc audit opinion. Kết quả vẫn là phân tích/đề xuất có nguồn, assumptions và giới hạn bằng chứng để người có thẩm quyền xem xét.
 
 ## Lợi ích và vai trò của skill
 
@@ -121,7 +127,7 @@ Luồng sử dụng ngắn gọn:
 
 ### 1. Gọi skill và giao đúng phạm vi
 
-Sau khi host đã nhận diện skill, chọn hoặc gọi **Thien-Skill-Risk-Control-Process** bằng cơ chế của nền tảng. Nếu chưa cài, xem [phần cài đặt bên dưới](#cài-đặt). Không dùng lời tự nhận “đã kích hoạt” của model làm bằng chứng duy nhất về phiên bản được nạp.
+Sau khi host đã nhận diện skill, chọn hoặc gọi **Thiện's Skill — Risk-Control-Process Intelligence** bằng cơ chế của nền tảng. Nếu chưa cài, xem [phần cài đặt bên dưới](#cài-đặt). Không dùng lời tự nhận “đã kích hoạt” của model làm bằng chứng duy nhất về phiên bản được nạp.
 
 Cho biết bạn muốn đọc/đánh giá quy trình hiện có, thiết kế quy trình mới, phân tích một nhóm E2E hay chỉ xử lý một vấn đề hẹp. Không cần yêu cầu toàn bộ bộ hồ sơ khi chỉ muốn xem một gap.
 
@@ -176,30 +182,30 @@ Không đủ nguồn chỉ chặn kết luận phụ thuộc nguồn đó; phầ
 
 ## Repository hygiene và artifact retention
 
-[`REPOSITORY-HYGIENE.json`](REPOSITORY-HYGIENE.json) là policy máy đọc được cho source repository. Kiểm tra deterministic từ chối `.DS_Store`, cache Python/test, symlink không an toàn và file vượt ngưỡng; đồng thời kiểm soát dung lượng từng release directory và tổng `dist`. Ngưỡng mặc định hiện là 3 MiB/file, 8 MiB/release và 32 MiB cho toàn bộ `dist`, có headroom so với baseline `1.1.1`; thay đổi ngưỡng cần owner review thay vì âm thầm nới giới hạn.
+[`REPOSITORY-HYGIENE.json`](REPOSITORY-HYGIENE.json) là policy máy đọc được cho source repository. Kiểm tra deterministic từ chối `.DS_Store`, cache Python/test, symlink không an toàn và file vượt ngưỡng; đồng thời kiểm soát dung lượng từng release directory. Ngưỡng hiện là 3 MiB/file và 8 MiB/release. `max_dist_bytes: null` thể hiện xác nhận của owner ngày 02/09/2026 rằng tổng `dist` không giới hạn vì các release bất biến được giữ tích lũy; thay đổi policy vẫn cần owner review.
 
 Phase 1–3, receipts, snapshots và ZIP lịch sử là immutable records, không phải file rác. Không xóa, rewrite, relabel hoặc compact các vùng này nếu chưa có phê duyệt rõ và replacement-provenance plan. File mới phải có purpose, đường discoverability, provenance khi phù hợp và retention decision; intermediate/cache/duplicate output ở ngoài repository. Public receipt mới phải redact username và absolute host path; evidence Phase 3 của `1.1.0` cùng hai receipt `1.1.1` được allowlist là historical exceptions, không được âm thầm rewrite. Chạy `python3 -B scripts/run_tests.py --json` để kiểm tra policy cùng các deterministic gates khác.
 
 ## Phiên bản và trạng thái
 
-> **Release 1.2.0:** Giai đoạn 2–3 ngày 01/09/2026 bổ sung R07/no-change guidance, compliance-label guard, repository hygiene và hardening evidence/release tooling. Qualification riêng của release nằm tại [`tests/release-1.2.0/`](tests/release-1.2.0/); không dùng lại hoặc đổi nhãn model evidence lịch sử `1.1.0`/`1.1.1`.
+> **Release 1.2.1:** Patch ngày 02/09/2026 đổi Display Name và bỏ giới hạn tổng `dist` theo xác nhận của owner. Đây là metadata-only qualification, không có model run mới; behavioral evidence vẫn thuộc `1.2.0` và không bị đổi nhãn.
 
 | Thuộc tính | Giá trị |
 |---|---|
-| Tên hiển thị | `Thien-Skill-Risk-Control-Process` |
+| Tên hiển thị | `Thiện's Skill — Risk-Control-Process Intelligence` |
 | Skill ID | `thien-skill-risk-control-process` |
-| Phiên bản | `1.2.0` |
-| Trạng thái | Minor functional release; qualified trong phạm vi evidence được công bố, không phải live-platform certification |
+| Phiên bản | `1.2.1` |
+| Trạng thái | Metadata-only patch trên nền functional release `1.2.0`; không phải live-platform certification |
 | Repository | [Public — Thien-Skill-Risk-Control-Process](https://github.com/thiendeptrainhat/Thien-Skill-Risk-Control-Process) |
-| GitHub Release | [v1.2.0](https://github.com/thiendeptrainhat/Thien-Skill-Risk-Control-Process/releases/tag/v1.2.0) |
+| GitHub Release | [v1.2.1](https://github.com/thiendeptrainhat/Thien-Skill-Risk-Control-Process/releases/tag/v1.2.1) |
 | Ngôn ngữ trả lời | Theo ngôn ngữ người dùng |
 | License | Tran Ngoc Thien's Skills Commercial Source-Available License 2.0 |
 
-Ba ZIP `1.2.0` dùng cùng canonical business content, khác wrapper theo nền tảng. Version và checksum tại [release manifest](RELEASE-MANIFEST.yaml); thay đổi và giới hạn tại [handoff hiện hành](docs/HANDOFF.md). Điều khoản `LICENSE`, notices và logo giữ nguyên; `LICENSE-APPLICATION.md` chỉ có phụ lục mở rộng phạm vi phiên bản `1.2.0`. ZIP `1.1.1` và toàn bộ bằng chứng `1.0.0`/`1.1.0` vẫn được giữ làm lịch sử.
+Ba ZIP `1.2.1` dùng cùng canonical business content, khác wrapper theo nền tảng. Tên file vẫn dùng basename kỹ thuật `Thien-Skill-Risk-Control-Process`. Version và checksum tại [release manifest](RELEASE-MANIFEST.yaml); thay đổi và giới hạn tại [handoff hiện hành](docs/HANDOFF.md). Điều khoản `LICENSE`, notices và logo giữ nguyên; `LICENSE-APPLICATION.md` chỉ nối phụ lục mở rộng phạm vi phiên bản và ghi nhận Display Name. Các ZIP và bằng chứng cũ vẫn được giữ làm lịch sử.
 
 ## Kiểm thử và mức độ tin cậy
 
-Release `1.2.0` có qualification riêng gồm **3/3 fresh-context behavioral scenarios** được review độc lập (**29 applicable judgments, 0 non-pass**), **105/105 tooling tests**, **6/6 rename regressions**, 104 deterministic registry cases, package validation và archive parity/CRC/checksum/repository-hygiene gates. Registry cases là structural/deterministic checks, không phải 104 model runs. Chi tiết máy đọc được và raw behavioral outputs nằm tại [`tests/release-1.2.0/`](tests/release-1.2.0/). Các bề mặt Claude/ChatGPT live, native installation/discovery và cross-platform equivalence vẫn `not_run`; ZIP hợp lệ không chứng minh các bề mặt đó đã nhận hoặc kích hoạt skill.
+Release `1.2.1` chỉ chạy qualification deterministic cho patch metadata và ghi **0 fresh-context behavioral scenarios mới**. Bằng chứng nghiệp vụ vẫn là qualification `1.2.0`: **3/3 fresh-context behavioral scenarios** được review độc lập (**29 applicable judgments, 0 non-pass**), cùng các gate đã ghi tại [`tests/release-1.2.0/`](tests/release-1.2.0/). Hồ sơ `1.2.1` chỉ tham chiếu bằng hash và giữ nguyên attribution; không coi đó là lần chạy mới. Các bề mặt Claude/ChatGPT live, native installation/discovery và cross-platform equivalence vẫn `not_run`; ZIP hợp lệ không chứng minh các bề mặt đó đã nhận hoặc kích hoạt skill.
 
 Trên snapshot **tên cũ** `1.1.0`, **29/29 biến thể model** đã chạy trong các context mới và được review theo từng invariant tại `Codex desktop delegated local runtime`. Bao gồm ba dạng chat/Word/PDF của một SOP tổng hợp, một ca tra cứu NIST thực tế và một handoff Document-Evidence thực tế. Có **61/61 kiểm tra công cụ** riêng và ba ZIP đã kiểm tra checksum, cấu trúc, parity; không cộng các loại kiểm tra này thành behavioral passes của `1.2.0`.
 
@@ -225,15 +231,15 @@ Luồng cài đặt chuẩn gồm bốn bước:
 
 | Gói | Bên trong ZIP | Dùng như thế nào |
 |---|---|---|
-| [Claude ZIP](dist/1.2.0/Thien-Skill-Risk-Control-Process-v1.2.0-Claude.zip) | `thien-skill-risk-control-process/` | Upload custom skill trong Claude; hoặc giải nén cho Claude Code |
-| [ChatGPT ZIP](dist/1.2.0/Thien-Skill-Risk-Control-Process-v1.2.0-ChatGPT.zip) | Thư mục skill, có `agents/openai.yaml` | Gói thư mục không có wrapper `.agents`; dùng cho local discovery phù hợp, không mặc định là ZIP importer của ChatGPT |
-| [Universal ZIP](dist/1.2.0/Thien-Skill-Risk-Control-Process-v1.2.0-Universal.zip) | `.agents/skills/thien-skill-risk-control-process/` | Gói giải nén `.agents` đã chọn cho môi trường local; xem điều kiện riêng của ChatGPT Desktop |
+| [Claude ZIP](dist/1.2.1/Thien-Skill-Risk-Control-Process-v1.2.1-Claude.zip) | `thien-skill-risk-control-process/` | Upload custom skill trong Claude; hoặc giải nén cho Claude Code |
+| [ChatGPT ZIP](dist/1.2.1/Thien-Skill-Risk-Control-Process-v1.2.1-ChatGPT.zip) | Thư mục skill, có `agents/openai.yaml` | Gói thư mục không có wrapper `.agents`; dùng cho local discovery phù hợp, không mặc định là ZIP importer của ChatGPT |
+| [Universal ZIP](dist/1.2.1/Thien-Skill-Risk-Control-Process-v1.2.1-Universal.zip) | `.agents/skills/thien-skill-risk-control-process/` | Gói giải nén `.agents` đã chọn cho môi trường local; xem điều kiện riêng của ChatGPT Desktop |
 
 Không cần cài cả ba gói vào cùng một môi trường. Chúng không phải ba skill khác nhau, plugin, OCR engine hay bộ connector.
 
 ### Tải và kiểm tra
 
-1. Trong repository public, mở [`dist/1.2.0/`](dist/1.2.0/) và tải đúng ZIP cùng checksum của phiên bản đó. ZIP từ **Code > Download ZIP** là toàn repository, không phải gói upload Claude.
+1. Trong repository public, mở [`dist/1.2.1/`](dist/1.2.1/) và tải đúng ZIP cùng checksum của phiên bản đó. ZIP từ **Code > Download ZIP** là toàn repository, không phải gói upload Claude.
 2. Đọc [license và quyền sử dụng](#license-và-quyền-sử-dụng), xem nội dung ZIP trước khi cài.
 3. Nếu có đủ ba gói trong cùng thư mục với `SHA256SUMS`, chạy kiểm tra sau trên macOS:
 
@@ -263,7 +269,7 @@ Kiểm tra skill xuất hiện trong danh sách của host và có bằng chứn
 Prompt thử, dùng dữ liệu không nhạy cảm:
 
 ```text
-Hãy dùng Thien-Skill-Risk-Control-Process để phân tích quy trình dưới đây.
+Hãy dùng Thiện's Skill — Risk-Control-Process Intelligence để phân tích quy trình dưới đây.
 Xác định objective, trigger, outcome, E2E candidate và điểm chưa đủ cơ sở.
 Tách control được mô tả khỏi control có evidence vận hành.
 Chỉ hỏi thông tin còn thiếu làm thay đổi trọng yếu kết luận; không tự đặt score.
@@ -273,7 +279,7 @@ Xem [INSTALL.md](INSTALL.md) để tránh giải nén lồng thư mục, xử l�
 
 ## Cập nhật phiên bản đã cài
 
-Khi cập nhật từ `1.1.1` lên `1.2.0`, ID vẫn là `thien-skill-risk-control-process`. Sau khi sao lưu tùy chỉnh, dùng cơ chế của host để thay bản cũ bằng một cây `1.2.0` hoàn chỉnh; không trộn file hai phiên bản. Nếu nâng trực tiếp từ `1.1.0` hoặc cũ hơn, lưu ý `1.1.1` đã đổi ID từ `thien-skill-risk-process-control`; không giữ cả hai ID cùng kích hoạt.
+Khi cập nhật từ `1.2.0` lên `1.2.1`, ID vẫn là `thien-skill-risk-control-process`; chỉ Display Name đổi. Sau khi sao lưu tùy chỉnh, dùng cơ chế của host để thay bản cũ bằng một cây `1.2.1` hoàn chỉnh; không trộn file hai phiên bản. Nếu nâng trực tiếp từ `1.1.0` hoặc cũ hơn, lưu ý `1.1.1` đã đổi ID từ `thien-skill-risk-process-control`; không giữ cả hai ID cùng kích hoạt.
 
 Tải đúng ZIP/version mới, kiểm tra checksum, giữ bản sao tùy chỉnh cũ ngoài thư mục discovery rồi cập nhật đúng một vị trí cài. Không trộn file cũ/mới hoặc cài đồng thời nhiều bản cùng skill ID. Xem [quy trình cập nhật](INSTALL.md#8-cập-nhật-và-gỡ-lỗi).
 
@@ -281,7 +287,7 @@ GitHub không tự cập nhật các bản đã upload hoặc giải nén; phả
 
 ## License và quyền sử dụng
 
-Repository hiện public; trạng thái hiển thị này không thay điều khoản license. URL cũ và nhãn PRIVATE trong phần khai báo ngày 28/08/2026 của `LICENSE-APPLICATION.md`/ZIP cũ là metadata lịch sử và vẫn được giữ nguyên. Phụ lục `1.2.0` ghi trạng thái public tại ngày áp dụng mới nhưng không sửa điều khoản license. URL và trạng thái hiện hành nằm trong [release manifest](RELEASE-MANIFEST.yaml).
+Repository hiện public; trạng thái hiển thị này không thay điều khoản license. URL cũ và nhãn PRIVATE trong phần khai báo ngày 28/08/2026 của `LICENSE-APPLICATION.md`/ZIP cũ là metadata lịch sử và vẫn được giữ nguyên. Các phụ lục `1.2.0` và `1.2.1` ghi trạng thái public/phạm vi phiên bản tại ngày áp dụng tương ứng nhưng không sửa điều khoản license. URL và trạng thái hiện hành nằm trong [release manifest](RELEASE-MANIFEST.yaml).
 
 Đọc đầy đủ:
 
@@ -295,7 +301,8 @@ Việc có quyền truy cập repository, tải ZIP hoặc cài đặt thành c�
 ## Tài liệu trong repository
 
 - [Handoff dự án và trạng thái bàn giao](docs/HANDOFF.md)
-- [Qualification release 1.2.0](tests/release-1.2.0/README.md)
+- [Qualification metadata-only release 1.2.1](tests/release-1.2.1/README.md)
+- [Qualification nghiệp vụ release 1.2.0](tests/release-1.2.0/README.md)
 - [Báo cáo nghiệm thu Phase 3 — lịch sử 1.1.0](docs/phase-3/REPORT.md)
 - [Hướng dẫn cài đặt](INSTALL.md)
 - [Bằng chứng hướng dẫn nền tảng — 28/08/2026](docs/phase-3/PLATFORM-GUIDANCE.md)

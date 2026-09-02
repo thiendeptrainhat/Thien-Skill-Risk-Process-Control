@@ -169,11 +169,15 @@ def load_hygiene_policy(repo_root: Path) -> dict[str, Any]:
     limits = policy.get("limits")
     if not isinstance(limits, dict):
         raise ValueError("limits must be an object")
-    parsed_limits: dict[str, int] = {}
+    parsed_limits: dict[str, int | None] = {}
     for name in ("max_file_bytes", "max_release_directory_bytes", "max_dist_bytes"):
         value = limits.get(name)
+        if name == "max_dist_bytes" and value is None:
+            parsed_limits[name] = None
+            continue
         if isinstance(value, bool) or not isinstance(value, int) or value <= 0:
-            raise ValueError(f"limits.{name} must be a positive integer")
+            qualifier = "a positive integer or null" if name == "max_dist_bytes" else "a positive integer"
+            raise ValueError(f"limits.{name} must be {qualifier}")
         parsed_limits[name] = value
 
     return {
@@ -263,7 +267,8 @@ def validate_repository_hygiene(repo_root: Path, report: TestReport) -> bool:
                 "hygiene-release-size",
                 f"dist/{release} exceeds limits.max_release_directory_bytes ({size} bytes)",
             )
-    if dist_size > policy["limits"]["max_dist_bytes"]:
+    max_dist_bytes = policy["limits"]["max_dist_bytes"]
+    if max_dist_bytes is not None and dist_size > max_dist_bytes:
         report.error(
             "hygiene-dist-size",
             f"dist exceeds limits.max_dist_bytes ({dist_size} bytes)",

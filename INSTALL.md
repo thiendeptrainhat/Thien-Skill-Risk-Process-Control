@@ -1,16 +1,16 @@
-# Cài đặt Thien-Skill-Risk-Control-Process 1.2.0
+# Cài đặt Thiện's Skill — Risk-Control-Process Intelligence 1.2.1
 
-Hướng dẫn cho ba ZIP `1.2.0` tại `dist/1.2.0/`. Đối chiếu ZIP và checksum/version trong [RELEASE-MANIFEST.yaml](RELEASE-MANIFEST.yaml) trước khi dùng. Đây là minor release bổ sung hành vi R07, guard cho compliance label và hardening tooling/repository hygiene. [Báo cáo Phase 3](docs/phase-3/REPORT.md) vẫn chỉ phản ánh tên cũ `1.1.0`; qualification riêng của `1.2.0` nằm tại [tests/release-1.2.0](tests/release-1.2.0/README.md).
+Hướng dẫn cho ba ZIP `1.2.1` tại `dist/1.2.1/`. Đối chiếu ZIP và checksum/version trong [RELEASE-MANIFEST.yaml](RELEASE-MANIFEST.yaml) trước khi dùng. Đây là patch metadata đổi Display Name; skill ID, repository và basename ZIP vẫn giữ nguyên. Qualification nghiệp vụ vẫn thuộc `1.2.0`; `1.2.1` không có model run mới và không đổi nhãn bằng chứng cũ.
 
 ## 1. Chuẩn bị và hiểu cấu trúc ZIP
 
-Repository hiện [public](https://github.com/thiendeptrainhat/Thien-Skill-Risk-Control-Process); việc công khai không thay điều khoản license. Chọn **file ZIP trong `dist/1.2.0/`**, không upload nguyên ZIP repository từ GitHub. Các release cũ trong `dist/` được giữ riêng làm lịch sử.
+Repository hiện [public](https://github.com/thiendeptrainhat/Thien-Skill-Risk-Control-Process); việc công khai không thay điều khoản license. Chọn **file ZIP trong `dist/1.2.1/`**, không upload nguyên ZIP repository từ GitHub. Các release cũ trong `dist/` được giữ riêng làm lịch sử.
 
 | File | Đường dẫn đến entrypoint bên trong archive |
 |---|---|
-| `Thien-Skill-Risk-Control-Process-v1.2.0-Claude.zip` | `thien-skill-risk-control-process/SKILL.md` |
-| `Thien-Skill-Risk-Control-Process-v1.2.0-ChatGPT.zip` | `thien-skill-risk-control-process/SKILL.md` |
-| `Thien-Skill-Risk-Control-Process-v1.2.0-Universal.zip` | `.agents/skills/thien-skill-risk-control-process/SKILL.md` |
+| `Thien-Skill-Risk-Control-Process-v1.2.1-Claude.zip` | `thien-skill-risk-control-process/SKILL.md` |
+| `Thien-Skill-Risk-Control-Process-v1.2.1-ChatGPT.zip` | `thien-skill-risk-control-process/SKILL.md` |
+| `Thien-Skill-Risk-Control-Process-v1.2.1-Universal.zip` | `.agents/skills/thien-skill-risk-control-process/SKILL.md` |
 
 Claude không có `agents/` metadata OpenAI; ChatGPT và Universal có. Nội dung process/risk/control, license và assets cùng lấy từ một canonical skill.
 
@@ -20,13 +20,13 @@ Trước khi cài:
 2. So SHA-256 với checksum đúng phiên bản. Ví dụ trên macOS:
 
 ```bash
-shasum -a 256 "/path/to/Thien-Skill-Risk-Control-Process-v1.2.0-Claude.zip"
+shasum -a 256 "/path/to/Thien-Skill-Risk-Control-Process-v1.2.1-Claude.zip"
 ```
 
 3. Xem danh sách file nếu cài local:
 
 ```bash
-unzip -l "/path/to/Thien-Skill-Risk-Control-Process-v1.2.0-Universal.zip"
+unzip -l "/path/to/Thien-Skill-Risk-Control-Process-v1.2.1-Universal.zip"
 ```
 
 4. Chọn một scope cài. Nếu đã có thư mục cùng skill ID, dừng bước giải nén và làm theo [mục cập nhật](#8-cập-nhật-và-gỡ-lỗi); không ghi đè hoặc trộn bản cũ.
@@ -57,7 +57,7 @@ OpenAI mô tả local discovery ở `.agents/skills` trong repository và `~/.ag
 Giải nén **tại project root**, không phải bên trong `.agents/skills`:
 
 ```bash
-unzip "/path/to/Thien-Skill-Risk-Control-Process-v1.2.0-Universal.zip" -d "/path/to/project"
+unzip "/path/to/Thien-Skill-Risk-Control-Process-v1.2.1-Universal.zip" -d "/path/to/project"
 ```
 
 Entry point phải là:
@@ -72,7 +72,7 @@ Gói ChatGPT không có wrapper `.agents`, nên dùng đích là thư mục skil
 
 ```bash
 mkdir -p ~/.agents/skills
-unzip "/path/to/Thien-Skill-Risk-Control-Process-v1.2.0-ChatGPT.zip" -d ~/.agents/skills
+unzip "/path/to/Thien-Skill-Risk-Control-Process-v1.2.1-ChatGPT.zip" -d ~/.agents/skills
 ```
 
 Entry point phải là:
@@ -117,14 +117,14 @@ Claude Code dùng `.claude/skills`, khác `.agents/skills` của Codex. Chọn p
 
 ```bash
 mkdir -p "/path/to/project/.claude/skills"
-unzip "/path/to/Thien-Skill-Risk-Control-Process-v1.2.0-Claude.zip" -d "/path/to/project/.claude/skills"
+unzip "/path/to/Thien-Skill-Risk-Control-Process-v1.2.1-Claude.zip" -d "/path/to/project/.claude/skills"
 ```
 
 Hoặc user scope:
 
 ```bash
 mkdir -p ~/.claude/skills
-unzip "/path/to/Thien-Skill-Risk-Control-Process-v1.2.0-Claude.zip" -d ~/.claude/skills
+unzip "/path/to/Thien-Skill-Risk-Control-Process-v1.2.1-Claude.zip" -d ~/.claude/skills
 ```
 
 Kết quả là `<scope>/.claude/skills/thien-skill-risk-control-process/SKILL.md`. Gọi `/thien-skill-risk-control-process`. Nếu thư mục skills chưa tồn tại khi phiên bắt đầu, khởi động lại để host nhận vị trí mới. [Claude Code — skills](https://code.claude.com/docs/en/skills).
@@ -143,7 +143,7 @@ Cài thư mục Claude Code trên máy không phải thao tác upload custom ski
 Prompt thử:
 
 ```text
-Dùng Thien-Skill-Risk-Control-Process. Đây là mô tả giả lập: nhân viên gửi
+Dùng Thiện's Skill — Risk-Control-Process Intelligence. Đây là mô tả giả lập: nhân viên gửi
 yêu cầu mua hàng, quản lý duyệt trên email, kế toán thanh toán theo hóa đơn.
 Chỉ có mô tả này, chưa có log/evidence vận hành hoặc baseline được xác minh.
 Phân tích E2E candidates, risk/control questions và phần cần xác nhận.
@@ -154,7 +154,7 @@ Kết quả cần giữ được giới hạn đầu vào, tách documented/perf
 
 ## 8. Cập nhật và gỡ lỗi
 
-Khi cập nhật từ `1.1.1` lên `1.2.0`, skill ID vẫn là `thien-skill-risk-control-process`. Sao lưu tùy chỉnh, dùng cơ chế quản lý skill của host để thay bản cũ bằng một cây `1.2.0` hoàn chỉnh; không trộn file giữa hai phiên bản. Về lịch sử, bản `1.1.1` đã đổi ID cũ `thien-skill-risk-process-control` thành ID hiện tại; nếu nâng trực tiếp từ `1.1.0` hoặc cũ hơn, không giữ cả hai ID cùng kích hoạt và không tự xóa bản cũ chưa đối chiếu.
+Khi cập nhật từ `1.2.0` lên `1.2.1`, skill ID vẫn là `thien-skill-risk-control-process`; chỉ Display Name đổi. Sao lưu tùy chỉnh, dùng cơ chế quản lý skill của host để thay bản cũ bằng một cây `1.2.1` hoàn chỉnh; không trộn file giữa hai phiên bản. Về lịch sử, bản `1.1.1` đã đổi ID cũ `thien-skill-risk-process-control` thành ID hiện tại; nếu nâng trực tiếp từ `1.1.0` hoặc cũ hơn, không giữ cả hai ID cùng kích hoạt và không tự xóa bản cũ chưa đối chiếu.
 
 Khi cập nhật:
 
