@@ -26,6 +26,18 @@ REGULAR_GIT_MODES = {"100644", "100755"}
 PACKAGE_TARGETS = {"claude", "chatgpt", "universal-agents"}
 SHA256_RE = re.compile(r"[0-9a-f]{64}\Z")
 VERSION_RE = re.compile(r"[0-9]+\.[0-9]+\.[0-9]+\Z")
+APPROVED_HISTORICAL_RELOCATIONS = {
+    "dist/SHA256SUMS": "dist/1.0.0/SHA256SUMS",
+    "dist/Thien-Skill-Risk-Process-Control-v1.0.0-ChatGPT.zip": (
+        "dist/1.0.0/Thien-Skill-Risk-Process-Control-v1.0.0-ChatGPT.zip"
+    ),
+    "dist/Thien-Skill-Risk-Process-Control-v1.0.0-Claude.zip": (
+        "dist/1.0.0/Thien-Skill-Risk-Process-Control-v1.0.0-Claude.zip"
+    ),
+    "dist/Thien-Skill-Risk-Process-Control-v1.0.0-Universal.zip": (
+        "dist/1.0.0/Thien-Skill-Risk-Process-Control-v1.0.0-Universal.zip"
+    ),
+}
 
 
 def sha(data: bytes) -> str:
@@ -69,7 +81,7 @@ def _normalized_alias(value: str) -> str:
     return unicodedata.normalize("NFC", value).casefold()
 
 
-def parse_hygiene_policy(data: bytes) -> dict[str, tuple[str, ...]]:
+def parse_hygiene_policy(data: bytes) -> dict[str, object]:
     """Parse the preservation policy strictly and return its immutable selectors."""
     try:
         raw = json.loads(data.decode("utf-8"), object_pairs_hook=_reject_duplicate_json_keys)
@@ -82,8 +94,11 @@ def parse_hygiene_policy(data: bytes) -> dict[str, tuple[str, ...]]:
         raise ValueError("Malformed policy: retention must be an object")
     prefixes = retention.get("immutable_historical_prefixes")
     files = retention.get("immutable_historical_files")
+    relocations = raw.get("approved_historical_relocations", {})
     if type(prefixes) is not list or type(files) is not list:
         raise ValueError("Malformed policy: immutable prefixes/files must be arrays")
+    if type(relocations) is not dict:
+        raise ValueError("Malformed policy: approved_historical_relocations must be an object")
 
     validated_prefixes = tuple(safe_relative_name(item, prefix=True) for item in prefixes)
     validated_files = tuple(safe_relative_name(item) for item in files)
@@ -91,9 +106,19 @@ def parse_hygiene_policy(data: bytes) -> dict[str, tuple[str, ...]]:
         aliases = [_normalized_alias(value) for value in values]
         if len(aliases) != len(set(aliases)):
             raise ValueError(f"Malformed policy: duplicate immutable {label} selector")
+    validated_relocations = {
+        safe_relative_name(source): safe_relative_name(destination)
+        for source, destination in relocations.items()
+    }
+    destination_aliases = [
+        _normalized_alias(destination) for destination in validated_relocations.values()
+    ]
+    if len(destination_aliases) != len(set(destination_aliases)):
+        raise ValueError("Malformed policy: duplicate historical relocation destination")
     return {
         "immutable_historical_prefixes": validated_prefixes,
         "immutable_historical_files": validated_files,
+        "approved_historical_relocations": validated_relocations,
     }
 
 
@@ -347,11 +372,21 @@ def check_links(repo: Path, relative: str) -> dict:
     }
 
 
-def _preservation_map(repo: Path, paths: list[str]) -> dict[str, bool]:
-    return {
-        path: sha(repo_file_bytes(repo, path)) == sha(git_bytes(repo, path))
-        for path in paths
-    }
+def _preservation_map(
+    repo: Path,
+    paths: list[str],
+    relocations: dict[str, str] | None = None,
+) -> dict[str, bool]:
+    relocations = {} if relocations is None else relocations
+    result: dict[str, bool] = {}
+    for baseline_path in paths:
+        current_path = relocations.get(baseline_path, baseline_path)
+        if current_path in result:
+            raise ValueError(f"Duplicate preservation destination: {current_path}")
+        result[current_path] = (
+            sha(repo_file_bytes(repo, current_path)) == sha(git_bytes(repo, baseline_path))
+        )
+    return result
 
 
 def inspect(repo: Path) -> dict:
@@ -473,11 +508,29 @@ def inspect(repo: Path) -> dict:
         policy["immutable_historical_prefixes"],
         policy["immutable_historical_files"],
     )
+    relocations = dict(APPROVED_HISTORICAL_RELOCATIONS)
+    policy_relocations = policy["approved_historical_relocations"]
+    conflicts = {
+        source for source in relocations.keys() & policy_relocations.keys()
+        if relocations[source] != policy_relocations[source]
+    }
+    if conflicts:
+        raise ValueError(
+            "Policy conflicts with an approved historical relocation: "
+            + ", ".join(sorted(conflicts))
+        )
+    relocations.update(policy_relocations)
+    unexpected_relocations = sorted(set(relocations) - set(immutable_paths))
+    if unexpected_relocations:
+        raise ValueError(
+            "Historical relocation source is not an immutable baseline file: "
+            + ", ".join(unexpected_relocations)
+        )
     for path in immutable_paths:
         mode, object_type = tree[path]
         if mode not in REGULAR_GIT_MODES or object_type != "blob":
             raise ValueError(f"Unsafe special immutable baseline artifact: {path}")
-    preserved_history = _preservation_map(repo, immutable_paths)
+    preserved_history = _preservation_map(repo, immutable_paths, relocations)
     checks["baseline_archives_and_tests_unchanged"] = all(preserved_history.values())
 
     links = [
@@ -516,6 +569,7 @@ def inspect(repo: Path) -> dict:
         "preserved_historical_files": preserved_history,
         "immutable_historical_prefixes": list(policy["immutable_historical_prefixes"]),
         "immutable_historical_files": list(policy["immutable_historical_files"]),
+        "approved_historical_relocations": relocations,
         "local_link_checks": links,
         "canonical_file_sha256": expected,
         "limitations": [

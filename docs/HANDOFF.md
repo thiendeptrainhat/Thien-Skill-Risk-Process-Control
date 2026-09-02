@@ -2,6 +2,8 @@
 
 Cập nhật: **02/09/2026**. Đây là patch metadata đổi Display Name từ `Thien-Skill-Risk-Control-Process` sang `Thiện's Skill — Risk-Control-Process Intelligence`. Skill ID `thien-skill-risk-control-process`, repository public, URL và basename package `Thien-Skill-Risk-Control-Process` giữ nguyên. Nội dung nghiệp vụ, license terms, logo và bằng chứng lịch sử không thay đổi.
 
+Sau publication, owner đã phê duyệt tổ chức lại bốn artifact lịch sử `1.0.0`: ba ZIP cùng `SHA256SUMS` được chuyển nguyên byte từ root `dist/` vào `dist/1.0.0/`. Không sửa filename, checksum hoặc nội dung archive. Inspector có relocation map tường minh để tiếp tục so sánh các destination mới với baseline blob tại đường dẫn cũ; receipt Phase 1–3 vẫn giữ nguyên nội dung và đường dẫn ghi nhận lịch sử.
+
 ## Phạm vi 1.2.1
 
 - Cập nhật Display Name trong canonical skill, OpenAI UI metadata, registry, README và hướng dẫn cài đặt.

@@ -62,6 +62,9 @@ class ReleaseInspectorTests(unittest.TestCase):
     def test_policy_is_strict_and_does_not_infer_all_tests_are_frozen(self) -> None:
         policy = {
             "schema_version": "1.0",
+            "approved_historical_relocations": {
+                "dist/package.zip": "dist/1.0.0/package.zip",
+            },
             "retention": {
                 "immutable_historical_prefixes": ["tests/phase-3/static/", "dist/"],
                 "immutable_historical_files": ["tests/acceptance-report.md"],
@@ -71,6 +74,10 @@ class ReleaseInspectorTests(unittest.TestCase):
         self.assertEqual(
             parsed["immutable_historical_prefixes"],
             ("tests/phase-3/static/", "dist/"),
+        )
+        self.assertEqual(
+            parsed["approved_historical_relocations"],
+            {"dist/package.zip": "dist/1.0.0/package.zip"},
         )
         malformed = b'{"schema_version":"1.0","retention":{"immutable_historical_prefixes":["tests/"],"immutable_historical_prefixes":[],"immutable_historical_files":[]}}'
         with self.assertRaisesRegex(ValueError, "duplicate JSON key"):
